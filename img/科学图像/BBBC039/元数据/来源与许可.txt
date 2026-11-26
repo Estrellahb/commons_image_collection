@@ -1,0 +1,8 @@
+BBBC039v1 · Caicedo et al. 2018
+Broad Bioimage Benchmark Collection
+数据集及官方引用说明 https://bbbc.broadinstitute.org/BBBC039
+许可 CC0 1.0 https://creativecommons.org/publicdomain/zero/1.0/
+原图 https://data.broadinstitute.org/bbbc/BBBC039/images.zip
+掩膜 https://data.broadinstitute.org/bbbc/BBBC039/masks.zip
+元数据 https://data.broadinstitute.org/bbbc/BBBC039/metadata.zip
+原图与掩膜按文件主名配对。原图和掩膜均保留官方下载包中的文件格式。

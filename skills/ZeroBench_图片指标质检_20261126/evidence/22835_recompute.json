@@ -1,0 +1,36 @@
+{
+  "baseline": {
+    "distances": [
+      141.5,
+      51.0
+    ],
+    "costs": [
+      8,
+      6
+    ],
+    "reversal": true
+  },
+  "wrong_origin": {
+    "distances": [
+      50.0,
+      40.5
+    ],
+    "costs": [
+      3,
+      6
+    ],
+    "reversal": false
+  },
+  "wrong_tag_color": {
+    "distances": [
+      141.5,
+      51.0
+    ],
+    "costs": [
+      5,
+      6
+    ],
+    "reversal": false
+  },
+  "note": "作者反事实复算，不是模型实测；价签颜色依据已有目视记录，仍列本轮人工复核"
+}

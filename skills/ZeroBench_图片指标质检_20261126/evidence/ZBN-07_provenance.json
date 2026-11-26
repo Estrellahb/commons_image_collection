@@ -1,0 +1,49 @@
+{
+  "id": "ZBN-07",
+  "version": "v1",
+  "title": "五转录因子双链 PWM 扫描、12 泳道多重 EMSA 超迁移与顺式调控协同优化",
+  "source": {
+    "kind": "scientific_data_rendering",
+    "title": "ZBN-07 Five-Factor Double-Strand PWM & 12-Lane Multiplex EMSA Supershift Composite",
+    "creator": "ZeroBench Niche Domains authoring workflow",
+    "author": "ZeroBench author (models-b)",
+    "license": "CC BY 4.0 (underlying motif dataset) + original Pillow scientific rendering",
+    "source_file": "build.py",
+    "rendering": "Pillow RGB PNG, 2760x1980"
+  },
+  "image_provenance": {
+    "nature": "scientific_data_rendering",
+    "label": "真实科学数据渲染图",
+    "real_observation": false,
+    "authorization": "开源转录因子基序数据本地渲染（去身份化展示）",
+    "note": "公开题面与主图使用 TF-A..TF-E 去身份化命名，真实数据库编号详见 attribution 与 source_data.json。"
+  },
+  "attribution": {
+    "id": "ZBN-07",
+    "database": "JASPAR CORE 2024",
+    "license": "CC BY 4.0",
+    "alias_mapping": {
+      "TF-A": {
+        "name": "SP1",
+        "matrix_id": "MA0079.5"
+      },
+      "TF-B": {
+        "name": "NFKB1",
+        "matrix_id": "MA0105.4"
+      },
+      "TF-C": {
+        "name": "FOS::JUN",
+        "matrix_id": "MA0099.3"
+      },
+      "TF-D": {
+        "name": "CTCF",
+        "matrix_id": "MA0139.2"
+      },
+      "TF-E": {
+        "name": "TP53",
+        "matrix_id": "MA0106.3"
+      }
+    },
+    "raw_source_file": "../../scouting/sources/jaspar_5tfs_pwm.json"
+  }
+}

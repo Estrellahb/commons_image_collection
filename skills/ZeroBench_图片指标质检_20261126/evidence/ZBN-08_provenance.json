@@ -1,0 +1,46 @@
+{
+  "id": "ZBN-08",
+  "version": "v1",
+  "title": "未知双相陶瓷复合材料 Cu-Kα1/Kα2 粉末 XRD 消光与彩色金相面积分数守恒交叉鉴定",
+  "source": {
+    "kind": "scientific_data_rendering",
+    "title": "ZBN-08 Two-Phase Ceramic Cu-Ka1/Ka2 Powder XRD & Etched Micrograph Composite",
+    "creator": "ZeroBench Niche Domains authoring workflow",
+    "author": "ZeroBench author (models-b)",
+    "license": "CC0 (crystal lattice parameters) + CC BY 4.0 (etched alloy micrograph)",
+    "source_file": "build.py",
+    "rendering": "Pillow RGB PNG, 2760x1980"
+  },
+  "image_provenance": {
+    "nature": "scientific_data_rendering",
+    "label": "真实科学数据渲染图",
+    "real_observation": false,
+    "authorization": "开源晶体结构参数模拟 + 实拍彩色金相微区裁剪（去身份化展示）",
+    "note": "公开题面与主图使用相 I/相 II 去身份化命名，真实数据库编号及图片许可详见 attribution 与 source_data.json。"
+  },
+  "attribution": {
+    "id": "ZBN-08",
+    "databases": {
+      "COD": [
+        "1010369 (Fe3O4 Magnetite, Fd-3m)",
+        "1000032 (alpha-Al2O3 Corundum, R-3c)",
+        "1000053 (MgO Periclase, Fm-3m)"
+      ],
+      "Wikimedia_Commons": {
+        "title": "File:Color Metallography of Engineering Alloys.jpg",
+        "candidate_file": "microscopy_metal_01_metallography.jpg",
+        "license": "CC BY 4.0",
+        "crop_box_px": [
+          2590,
+          2177,
+          3820,
+          3201
+        ]
+      }
+    },
+    "raw_source_files": [
+      "../../scouting/sources/cod_phases.json",
+      "../../scouting/candidates/microscopy_metal_01_metallography.jpg"
+    ]
+  }
+}

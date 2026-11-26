@@ -1,0 +1,24 @@
+{
+  "id": "ZB10-10",
+  "version": "v2",
+  "title": "12 算子族消歧、3 轮电荷转移状态机与双工况优化（v2）",
+  "source": {
+    "kind": "original_programmatic_diagram",
+    "title": "ZB10-10 12-Operator Disambiguation, 3-Round Charge Transfer & Dual-Regime Optimization Board (v2 Software Model)",
+    "creator": "ZeroBench Batch10 iteration_v2 local authoring workflow",
+    "author": "ZeroBench Batch10 author (models-b)",
+    "license": "Original software-generated diagram created for ZeroBench Batch10 v2; no third-party source image",
+    "license_status": "original diagram created for this task; no third-party source image",
+    "source_file": "build.py",
+    "rendering": "Pillow RGB PNG, 2760x1980, 84 px/cm right board, 1 cm integer grid",
+    "scientific_scope": "Stipulated deterministic operator-disambiguation and cellular charge-transfer optimization puzzle board, not an empirical observation.",
+    "image_nature": "软件绘制题设规则盘面图，非真实观测照片"
+  },
+  "image_provenance": {
+    "nature": "software_generated_scientific_diagram",
+    "label": "软件绘制科学／题设示意图",
+    "real_observation": false,
+    "authorization": "用户允许本轮软件构造规则盘面示意图",
+    "note": "原创 Pillow 脚本按 v2 算子族、例图与 20 瓦片事实确定性绘制，明确标注为题设规则盘面图，非真实照片。"
+  }
+}

@@ -1,0 +1,4328 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><title>ZeroBench 图片质检</title><style>body{font:16px system-ui;margin:30px;background:#f4f4f1;color:#202020}article{background:white;margin:22px 0;padding:24px;border:1px solid #ddd;overflow:auto}img{max-width:48%;float:left;margin:0 24px 16px 0}pre{white-space:pre-wrap;font-size:13px}h1{font-size:28px}</style><h1>图片与题目证据质检</h1><p>代理指标用于筛选，不证明难度。缺失值不会自动通过；判定与试答证据分开。</p><article><h2>shelf-11640 · needs_review</h2><img src="001.jpg" loading="lazy"><pre>{
+  &quot;id&quot;: &quot;shelf-11640&quot;,
+  &quot;blockers&quot;: [],
+  &quot;review&quot;: [
+    &quot;critical_readability_pending:candidate-object&quot;,
+    &quot;chinese_text_coverage_unknown&quot;,
+    &quot;human_check_pending:source_fidelity&quot;,
+    &quot;human_check_pending:annotation_correct&quot;,
+    &quot;human_check_pending:critical_evidence_visible&quot;,
+    &quot;human_check_pending:no_answer_leakage&quot;,
+    &quot;human_check_pending:counting_rules_clear&quot;,
+    &quot;multi_region_dependencies_unproven&quot;,
+    &quot;wrong_pair_to_answer_effect_unproven&quot;,
+    &quot;bypass_review_pending_or_failed&quot;,
+    &quot;platform_points_expected_1_to_3&quot;
+  ],
+  &quot;advisory&quot;: [],
+  &quot;metrics&quot;: {
+    &quot;width&quot;: 1200,
+    &quot;height&quot;: 1600,
+    &quot;mode&quot;: &quot;RGB&quot;,
+    &quot;exif_orientation&quot;: 1,
+    &quot;frame_count&quot;: 1,
+    &quot;global_640_proxy&quot;: {
+      &quot;contrast_p90_p10&quot;: 85.0,
+      &quot;gray_entropy_bits&quot;: 6.912684694416235,
+      &quot;edge_fraction_16&quot;: 0.09073995564831724
+    },
+    &quot;object_count&quot;: 92,
+    &quot;objects_per_MP&quot;: 47.916666666666664,
+    &quot;class_count&quot;: 91,
+    &quot;known_fraction&quot;: 1.0,
+    &quot;repeated_classes&quot;: 1,
+    &quot;spatial_entropy_4x4&quot;: 0.951698413205603,
+    &quot;median_bbox_short_px&quot;: 44.0,
+    &quot;p10_bbox_short_px&quot;: 33.0,
+    &quot;edge_touching_count&quot;: 0,
+    &quot;nearcolor_pair_count&quot;: 12,
+    &quot;different_class_neighbor_pairs&quot;: 100,
+    &quot;nearcolor_neighbor_fraction&quot;: 0.12,
+    &quot;bbox_overlap_pair_count&quot;: 0,
+    &quot;distinct_dependency_regions&quot;: 0,
+    &quot;effective_counterfactuals&quot;: 0
+  },
+  &quot;source&quot;: {
+    &quot;kind&quot;: &quot;real_photo&quot;,
+    &quot;url&quot;: &quot;https://huggingface.co/datasets/shelfwise-by-form/SKUs_on_shelves_PL&quot;,
+    &quot;license_url&quot;: &quot;https://creativecommons.org/licenses/by/4.0/&quot;,
+    &quot;authorization&quot;: &quot;verified&quot;,
+    &quot;attribution&quot;: &quot;ShelfWise by FORM, SKUs_on_shelves_PL, v1.0 (2024)&quot;,
+    &quot;scene_id&quot;: &quot;ShelfWise:11640&quot;
+  },
+  &quot;difficulty_status&quot;: &quot;not_evaluated&quot;,
+  &quot;annotation_provenance&quot;: &quot;publisher_coco_unmodified&quot;,
+  &quot;preview&quot;: &quot;001.jpg&quot;,
+  &quot;nearcolor_pairs&quot;: [
+    {
+      &quot;a&quot;: &quot;1982659&quot;,
+      &quot;b&quot;: &quot;1982655&quot;,
+      &quot;deltaE76&quot;: 10.956234040014875
+    },
+    {
+      &quot;a&quot;: &quot;1982662&quot;,
+      &quot;b&quot;: &quot;1982660&quot;,
+      &quot;deltaE76&quot;: 8.913086298167299
+    },
+    {
+      &quot;a&quot;: &quot;1982670&quot;,
+      &quot;b&quot;: &quot;1982657&quot;,
+      &quot;deltaE76&quot;: 10.426879722915205
+    },
+    {
+      &quot;a&quot;: &quot;1982685&quot;,
+      &quot;b&quot;: &quot;1982682&quot;,
+      &quot;deltaE76&quot;: 11.4406116880782
+    },
+    {
+      &quot;a&quot;: &quot;1982696&quot;,
+      &quot;b&quot;: &quot;1982654&quot;,
+      &quot;deltaE76&quot;: 5.928951531975852
+    },
+    {
+      &quot;a&quot;: &quot;1982706&quot;,
+      &quot;b&quot;: &quot;1982705&quot;,
+      &quot;deltaE76&quot;: 10.368509372425667
+    },
+    {
+      &quot;a&quot;: &quot;1982714&quot;,
+      &quot;b&quot;: &quot;1982663&quot;,
+      &quot;deltaE76&quot;: 9.982050988284167
+    },
+    {
+      &quot;a&quot;: &quot;1982721&quot;,
+      &quot;b&quot;: &quot;1982667&quot;,
+      &quot;deltaE76&quot;: 7.336666085747571
+    },
+    {
+      &quot;a&quot;: &quot;1982724&quot;,
+      &quot;b&quot;: &quot;1982651&quot;,
+      &quot;deltaE76&quot;: 10.804379206158812
+    },
+    {
+      &quot;a&quot;: &quot;1982725&quot;,
+      &quot;b&quot;: &quot;1982681&quot;,
+      &quot;deltaE76&quot;: 8.455215016024606
+    },
+    {
+      &quot;a&quot;: &quot;1982726&quot;,
+      &quot;b&quot;: &quot;1982722&quot;,
+      &quot;deltaE76&quot;: 10.16819254453763
+    },
+    {
+      &quot;a&quot;: &quot;1982731&quot;,
+      &quot;b&quot;: &quot;1982658&quot;,
+      &quot;deltaE76&quot;: 11.68548919777568
+    }
+  ],
+  &quot;overlap_candidates&quot;: [],
+  &quot;roi_metrics&quot;: [
+    {
+      &quot;id&quot;: &quot;candidate-object&quot;,
+      &quot;file&quot;: &quot;001_roi1.png&quot;,
+      &quot;contrast_p90_p10&quot;: 100.0,
+      &quot;gray_entropy_bits&quot;: 7.119034709774062,
+      &quot;edge_fraction_16&quot;: 0.14640273311897106
+    }
+  ],
+  &quot;platform_points&quot;: [],
+  &quot;decision&quot;: &quot;needs_review&quot;
+}</pre></article><article><h2>shelf-12051 · needs_review</h2><img src="002.jpg" loading="lazy"><pre>{
+  &quot;id&quot;: &quot;shelf-12051&quot;,
+  &quot;blockers&quot;: [],
+  &quot;review&quot;: [
+    &quot;critical_readability_pending:candidate-object&quot;,
+    &quot;chinese_text_coverage_unknown&quot;,
+    &quot;human_check_pending:source_fidelity&quot;,
+    &quot;human_check_pending:annotation_correct&quot;,
+    &quot;human_check_pending:critical_evidence_visible&quot;,
+    &quot;human_check_pending:no_answer_leakage&quot;,
+    &quot;human_check_pending:counting_rules_clear&quot;,
+    &quot;multi_region_dependencies_unproven&quot;,
+    &quot;wrong_pair_to_answer_effect_unproven&quot;,
+    &quot;bypass_review_pending_or_failed&quot;,
+    &quot;platform_points_expected_1_to_3&quot;
+  ],
+  &quot;advisory&quot;: [],
+  &quot;metrics&quot;: {
+    &quot;width&quot;: 1200,
+    &quot;height&quot;: 1600,
+    &quot;mode&quot;: &quot;RGB&quot;,
+    &quot;exif_orientation&quot;: 1,
+    &quot;frame_count&quot;: 1,
+    &quot;global_640_proxy&quot;: {
+      &quot;contrast_p90_p10&quot;: 140.0,
+      &quot;gray_entropy_bits&quot;: 7.452017131818894,
+      &quot;edge_fraction_16&quot;: 0.11032154969997392
+    },
+    &quot;object_count&quot;: 103,
+    &quot;objects_per_MP&quot;: 53.645833333333336,
+    &quot;class_count&quot;: 102,
+    &quot;known_fraction&quot;: 1.0,
+    &quot;repeated_classes&quot;: 1,
+    &quot;spatial_entropy_4x4&quot;: 0.905369469734239,
+    &quot;median_bbox_short_px&quot;: 46.0,
+    &quot;p10_bbox_short_px&quot;: 38.0,
+    &quot;edge_touching_count&quot;: 3,
+    &quot;nearcolor_pair_count&quot;: 15,
+    &quot;different_class_neighbor_pairs&quot;: 101,
+    &quot;nearcolor_neighbor_fraction&quot;: 0.1485148514851485,
+    &quot;bbox_overlap_pair_count&quot;: 0,
+    &quot;distinct_dependency_regions&quot;: 0,
+    &quot;effective_counterfactuals&quot;: 0
+  },
+  &quot;source&quot;: {
+    &quot;kind&quot;: &quot;real_photo&quot;,
+    &quot;url&quot;: &quot;https://huggingface.co/datasets/shelfwise-by-form/SKUs_on_shelves_PL&quot;,
+    &quot;license_url&quot;: &quot;https://creativecommons.org/licenses/by/4.0/&quot;,
+    &quot;authorization&quot;: &quot;verified&quot;,
+    &quot;attribution&quot;: &quot;ShelfWise by FORM, SKUs_on_shelves_PL, v1.0 (2024)&quot;,
+    &quot;scene_id&quot;: &quot;ShelfWise:12051&quot;
+  },
+  &quot;difficulty_status&quot;: &quot;not_evaluated&quot;,
+  &quot;annotation_provenance&quot;: &quot;publisher_coco_unmodified&quot;,
+  &quot;preview&quot;: &quot;002.jpg&quot;,
+  &quot;nearcolor_pairs&quot;: [
+    {
+      &quot;a&quot;: &quot;1365791&quot;,
+      &quot;b&quot;: &quot;1365785&quot;,
+      &quot;deltaE76&quot;: 8.558841034480345
+    },
+    {
+      &quot;a&quot;: &quot;1365792&quot;,
+      &quot;b&quot;: &quot;1365788&quot;,
+      &quot;deltaE76&quot;: 8.40350369734041
+    },
+    {
+      &quot;a&quot;: &quot;1365793&quot;,
+      &quot;b&quot;: &quot;1365770&quot;,
+      &quot;deltaE76&quot;: 4.7237794845857595
+    },
+    {
+      &quot;a&quot;: &quot;1365799&quot;,
+      &quot;b&quot;: &quot;1365775&quot;,
+      &quot;deltaE76&quot;: 10.807095368612195
+    },
+    {
+      &quot;a&quot;: &quot;1365802&quot;,
+      &quot;b&quot;: &quot;1365772&quot;,
+      &quot;deltaE76&quot;: 3.01703598962349
+    },
+    {
+      &quot;a&quot;: &quot;1365802&quot;,
+      &quot;b&quot;: &quot;1365790&quot;,
+      &quot;deltaE76&quot;: 11.103199631446055
+    },
+    {
+      &quot;a&quot;: &quot;1365814&quot;,
+      &quot;b&quot;: &quot;1365783&quot;,
+      &quot;deltaE76&quot;: 8.724810890470298
+    },
+    {
+      &quot;a&quot;: &quot;1365833&quot;,
+      &quot;b&quot;: &quot;1365821&quot;,
+      &quot;deltaE76&quot;: 11.246548276170898
+    },
+    {
+      &quot;a&quot;: &quot;1365844&quot;,
+      &quot;b&quot;: &quot;1365836&quot;,
+      &quot;deltaE76&quot;: 10.698345511102115
+    },
+    {
+      &quot;a&quot;: &quot;1365852&quot;,
+      &quot;b&quot;: &quot;1365816&quot;,
+      &quot;deltaE76&quot;: 8.913043505602001
+    },
+    {
+      &quot;a&quot;: &quot;1365854&quot;,
+      &quot;b&quot;: &quot;1365836&quot;,
+      &quot;deltaE76&quot;: 7.981369101369501
+    },
+    {
+      &quot;a&quot;: &quot;1365857&quot;,
+      &quot;b&quot;: &quot;1365801&quot;,
+      &quot;deltaE76&quot;: 7.44635224945925
+    },
+    {
+      &quot;a&quot;: &quot;1365863&quot;,
+      &quot;b&quot;: &quot;1365852&quot;,
+      &quot;deltaE76&quot;: 10.909969023091428
+    },
+    {
+      &quot;a&quot;: &quot;1365867&quot;,
+      &quot;b&quot;: &quot;1365808&quot;,
+      &quot;deltaE76&quot;: 11.657205293749811
+    },
+    {
+      &quot;a&quot;: &quot;1365872&quot;,
+      &quot;b&quot;: &quot;1365811&quot;,
+      &quot;deltaE76&quot;: 8.32906631093498
+    }
+  ],
+  &quot;overlap_candidates&quot;: [],
+  &quot;roi_metrics&quot;: [
+    {
+      &quot;id&quot;: &quot;candidate-object&quot;,
+      &quot;file&quot;: &quot;002_roi1.png&quot;,
+      &quot;contrast_p90_p10&quot;: 94.0,
+      &quot;gray_entropy_bits&quot;: 7.102460646101736,
+      &quot;edge_fraction_16&quot;: 0.30539959070157946
+    }
+  ],
+  &quot;platform_points&quot;: [],
+  &quot;decision&quot;: &quot;needs_review&quot;
+}</pre></article><article><h2>shelf-12747 · needs_review</h2><img src="003.jpg" loading="lazy"><pre>{
+  &quot;id&quot;: &quot;shelf-12747&quot;,
+  &quot;blockers&quot;: [],
+  &quot;review&quot;: [
+    &quot;critical_readability_pending:candidate-object&quot;,
+    &quot;chinese_text_coverage_unknown&quot;,
+    &quot;human_check_pending:source_fidelity&quot;,
+    &quot;human_check_pending:annotation_correct&quot;,
+    &quot;human_check_pending:critical_evidence_visible&quot;,
+    &quot;human_check_pending:no_answer_leakage&quot;,
+    &quot;human_check_pending:counting_rules_clear&quot;,
+    &quot;multi_region_dependencies_unproven&quot;,
+    &quot;wrong_pair_to_answer_effect_unproven&quot;,
+    &quot;bypass_review_pending_or_failed&quot;,
+    &quot;platform_points_expected_1_to_3&quot;
+  ],
+  &quot;advisory&quot;: [],
+  &quot;metrics&quot;: {
+    &quot;width&quot;: 1200,
+    &quot;height&quot;: 1600,
+    &quot;mode&quot;: &quot;RGB&quot;,
+    &quot;exif_orientation&quot;: 1,
+    &quot;frame_count&quot;: 1,
+    &quot;global_640_proxy&quot;: {
+      &quot;contrast_p90_p10&quot;: 164.0,
+      &quot;gray_entropy_bits&quot;: 7.684674257293229,
+      &quot;edge_fraction_16&quot;: 0.13930504826506654
+    },
+    &quot;object_count&quot;: 88,
+    &quot;objects_per_MP&quot;: 45.833333333333336,
+    &quot;class_count&quot;: 87,
+    &quot;known_fraction&quot;: 0.9886363636363636,
+    &quot;repeated_classes&quot;: 0,
+    &quot;spatial_entropy_4x4&quot;: 0.9137527993432593,
+    &quot;median_bbox_short_px&quot;: 57.5,
+    &quot;p10_bbox_short_px&quot;: 36.7,
+    &quot;edge_touching_count&quot;: 2,
+    &quot;nearcolor_pair_count&quot;: 28,
+    &quot;different_class_neighbor_pairs&quot;: 153,
+    &quot;nearcolor_neighbor_fraction&quot;: 0.1830065359477124,
+    &quot;bbox_overlap_pair_count&quot;: 4,
+    &quot;distinct_dependency_regions&quot;: 0,
+    &quot;effective_counterfactuals&quot;: 0
+  },
+  &quot;source&quot;: {
+    &quot;kind&quot;: &quot;real_photo&quot;,
+    &quot;url&quot;: &quot;https://huggingface.co/datasets/shelfwise-by-form/SKUs_on_shelves_PL&quot;,
+    &quot;license_url&quot;: &quot;https://creativecommons.org/licenses/by/4.0/&quot;,
+    &quot;authorization&quot;: &quot;verified&quot;,
+    &quot;attribution&quot;: &quot;ShelfWise by FORM, SKUs_on_shelves_PL, v1.0 (2024)&quot;,
+    &quot;scene_id&quot;: &quot;ShelfWise:12747&quot;
+  },
+  &quot;difficulty_status&quot;: &quot;not_evaluated&quot;,
+  &quot;annotation_provenance&quot;: &quot;publisher_coco_unmodified&quot;,
+  &quot;preview&quot;: &quot;003.jpg&quot;,
+  &quot;nearcolor_pairs&quot;: [
+    {
+      &quot;a&quot;: &quot;596311&quot;,
+      &quot;b&quot;: &quot;596308&quot;,
+      &quot;deltaE76&quot;: 8.945805412387372
+    },
+    {
+      &quot;a&quot;: &quot;596320&quot;,
+      &quot;b&quot;: &quot;596319&quot;,
+      &quot;deltaE76&quot;: 5.371604396242834
+    },
+    {
+      &quot;a&quot;: &quot;596336&quot;,
+      &quot;b&quot;: &quot;596312&quot;,
+      &quot;deltaE76&quot;: 10.85127690598975
+    },
+    {
+      &quot;a&quot;: &quot;596337&quot;,
+      &quot;b&quot;: &quot;596325&quot;,
+      &quot;deltaE76&quot;: 9.074332750062405
+    },
+    {
+      &quot;a&quot;: &quot;596337&quot;,
+      &quot;b&quot;: &quot;596326&quot;,
+      &quot;deltaE76&quot;: 4.891748120798956
+    },
+    {
+      &quot;a&quot;: &quot;596339&quot;,
+      &quot;b&quot;: &quot;596307&quot;,
+      &quot;deltaE76&quot;: 8.272628224056195
+    },
+    {
+      &quot;a&quot;: &quot;596340&quot;,
+      &quot;b&quot;: &quot;596339&quot;,
+      &quot;deltaE76&quot;: 4.303730476962219
+    },
+    {
+      &quot;a&quot;: &quot;596346&quot;,
+      &quot;b&quot;: &quot;596332&quot;,
+      &quot;deltaE76&quot;: 8.564678986420438
+    },
+    {
+      &quot;a&quot;: &quot;596348&quot;,
+      &quot;b&quot;: &quot;596325&quot;,
+      &quot;deltaE76&quot;: 5.135972623010605
+    },
+    {
+      &quot;a&quot;: &quot;596348&quot;,
+      &quot;b&quot;: &quot;596346&quot;,
+      &quot;deltaE76&quot;: 9.874640455827308
+    },
+    {
+      &quot;a&quot;: &quot;596349&quot;,
+      &quot;b&quot;: &quot;596323&quot;,
+      &quot;deltaE76&quot;: 7.7716010754514295
+    },
+    {
+      &quot;a&quot;: &quot;596352&quot;,
+      &quot;b&quot;: &quot;596307&quot;,
+      &quot;deltaE76&quot;: 5.817105970773953
+    },
+    {
+      &quot;a&quot;: &quot;596352&quot;,
+      &quot;b&quot;: &quot;596319&quot;,
+      &quot;deltaE76&quot;: 8.847634148860688
+    },
+    {
+      &quot;a&quot;: &quot;596352&quot;,
+      &quot;b&quot;: &quot;596320&quot;,
+      &quot;deltaE76&quot;: 6.154951369977965
+    },
+    {
+      &quot;a&quot;: &quot;596354&quot;,
+      &quot;b&quot;: &quot;596325&quot;,
+      &quot;deltaE76&quot;: 10.924212639848413
+    },
+    {
+      &quot;a&quot;: &quot;596356&quot;,
+      &quot;b&quot;: &quot;596315&quot;,
+      &quot;deltaE76&quot;: 8.546948766928523
+    },
+    {
+      &quot;a&quot;: &quot;596358&quot;,
+      &quot;b&quot;: &quot;596319&quot;,
+      &quot;deltaE76&quot;: 8.242556802731563
+    },
+    {
+      &quot;a&quot;: &quot;596371&quot;,
+      &quot;b&quot;: &quot;596341&quot;,
+      &quot;deltaE76&quot;: 5.852629637262741
+    },
+    {
+      &quot;a&quot;: &quot;596372&quot;,
+      &quot;b&quot;: &quot;596330&quot;,
+      &quot;deltaE76&quot;: 6.658985775759409
+    },
+    {
+      &quot;a&quot;: &quot;596375&quot;,
+      &quot;b&quot;: &quot;596352&quot;,
+      &quot;deltaE76&quot;: 1.4679662830956022
+    },
+    {
+      &quot;a&quot;: &quot;596375&quot;,
+      &quot;b&quot;: &quot;596356&quot;,
+      &quot;deltaE76&quot;: 11.244203024194334
+    },
+    {
+      &quot;a&quot;: &quot;596382&quot;,
+      &quot;b&quot;: &quot;596366&quot;,
+      &quot;deltaE76&quot;: 7.822726104530938
+    },
+    {
+      &quot;a&quot;: &quot;596382&quot;,
+      &quot;b&quot;: &quot;596375&quot;,
+      &quot;deltaE76&quot;: 11.641820913332733
+    },
+    {
+      &quot;a&quot;: &quot;596383&quot;,
+      &quot;b&quot;: &quot;596352&quot;,
+      &quot;deltaE76&quot;: 10.492829377601007
+    },
+    {
+      &quot;a&quot;: &quot;596383&quot;,
+      &quot;b&quot;: &quot;596356&quot;,
+      &quot;deltaE76&quot;: 7.761609473680193
+    },
+    {
+      &quot;a&quot;: &quot;596383&quot;,
+      &quot;b&quot;: &quot;596375&quot;,
+      &quot;deltaE76&quot;: 9.264982712263471
+    },
+    {
+      &quot;a&quot;: &quot;596386&quot;,
+      &quot;b&quot;: &quot;596379&quot;,
+      &quot;deltaE76&quot;: 9.157237101796893
+    },
+    {
+      &quot;a&quot;: &quot;596391&quot;,
+      &quot;b&quot;: &quot;596367&quot;,
+      &quot;deltaE76&quot;: 7.914843766597807
+    }
+  ],
+  &quot;overlap_candidates&quot;: [
+    {
+      &quot;a&quot;: &quot;596324&quot;,
+      &quot;b&quot;: &quot;596321&quot;,
+      &quot;iom&quot;: 0.4919278252611586
+    },
+    {
+      &quot;a&quot;: &quot;596371&quot;,
+      &quot;b&quot;: &quot;596329&quot;,
+      &quot;iom&quot;: 0.3920412675018423
+    },
+    {
+      &quot;a&quot;: &quot;596391&quot;,
+      &quot;b&quot;: &quot;596390&quot;,
+      &quot;iom&quot;: 0.1623196448390677
+    },
+    {
+      &quot;a&quot;: &quot;596392&quot;,
+      &quot;b&quot;: &quot;596391&quot;,
+      &quot;iom&quot;: 0.23636363636363636
+    }
+  ],
+  &quot;roi_metrics&quot;: [
+    {
+      &quot;id&quot;: &quot;candidate-object&quot;,
+      &quot;file&quot;: &quot;003_roi1.png&quot;,
+      &quot;contrast_p90_p10&quot;: 93.0,
+      &quot;gray_entropy_bits&quot;: 6.898816779526912,
+      &quot;edge_fraction_16&quot;: 0.1525103909019048
+    }
+  ],
+  &quot;platform_points&quot;: [],
+  &quot;decision&quot;: &quot;needs_review&quot;
+}</pre></article><article><h2>shelf-13366 · needs_review</h2><img src="004.jpg" loading="lazy"><pre>{
+  &quot;id&quot;: &quot;shelf-13366&quot;,
+  &quot;blockers&quot;: [],
+  &quot;review&quot;: [
+    &quot;critical_readability_pending:candidate-object&quot;,
+    &quot;chinese_text_coverage_unknown&quot;,
+    &quot;human_check_pending:source_fidelity&quot;,
+    &quot;human_check_pending:annotation_correct&quot;,
+    &quot;human_check_pending:critical_evidence_visible&quot;,
+    &quot;human_check_pending:no_answer_leakage&quot;,
+    &quot;human_check_pending:counting_rules_clear&quot;,
+    &quot;multi_region_dependencies_unproven&quot;,
+    &quot;wrong_pair_to_answer_effect_unproven&quot;,
+    &quot;bypass_review_pending_or_failed&quot;,
+    &quot;platform_points_expected_1_to_3&quot;
+  ],
+  &quot;advisory&quot;: [],
+  &quot;metrics&quot;: {
+    &quot;width&quot;: 1200,
+    &quot;height&quot;: 1600,
+    &quot;mode&quot;: &quot;RGB&quot;,
+    &quot;exif_orientation&quot;: 1,
+    &quot;frame_count&quot;: 1,
+    &quot;global_640_proxy&quot;: {
+      &quot;contrast_p90_p10&quot;: 198.0,
+      &quot;gray_entropy_bits&quot;: 7.82332798151836,
+      &quot;edge_fraction_16&quot;: 0.19612085833550744
+    },
+    &quot;object_count&quot;: 104,
+    &quot;objects_per_MP&quot;: 54.166666666666664,
+    &quot;class_count&quot;: 34,
+    &quot;known_fraction&quot;: 1.0,
+    &quot;repeated_classes&quot;: 30,
+    &quot;spatial_entropy_4x4&quot;: 0.880138906693167,
+    &quot;median_bbox_short_px&quot;: 49.0,
+    &quot;p10_bbox_short_px&quot;: 27.3,
+    &quot;edge_touching_count&quot;: 2,
+    &quot;nearcolor_pair_count&quot;: 60,
+    &quot;different_class_neighbor_pairs&quot;: 199,
+    &quot;nearcolor_neighbor_fraction&quot;: 0.3015075376884422,
+    &quot;bbox_overlap_pair_count&quot;: 0,
+    &quot;distinct_dependency_regions&quot;: 0,
+    &quot;effective_counterfactuals&quot;: 0
+  },
+  &quot;source&quot;: {
+    &quot;kind&quot;: &quot;real_photo&quot;,
+    &quot;url&quot;: &quot;https://huggingface.co/datasets/shelfwise-by-form/SKUs_on_shelves_PL&quot;,
+    &quot;license_url&quot;: &quot;https://creativecommons.org/licenses/by/4.0/&quot;,
+    &quot;authorization&quot;: &quot;verified&quot;,
+    &quot;attribution&quot;: &quot;ShelfWise by FORM, SKUs_on_shelves_PL, v1.0 (2024)&quot;,
+    &quot;scene_id&quot;: &quot;ShelfWise:13366&quot;
+  },
+  &quot;difficulty_status&quot;: &quot;not_evaluated&quot;,
+  &quot;annotation_provenance&quot;: &quot;publisher_coco_unmodified&quot;,
+  &quot;preview&quot;: &quot;004.jpg&quot;,
+  &quot;nearcolor_pairs&quot;: [
+    {
+      &quot;a&quot;: &quot;782993&quot;,
+      &quot;b&quot;: &quot;782974&quot;,
+      &quot;deltaE76&quot;: 10.108135725301594
+    },
+    {
+      &quot;a&quot;: &quot;782993&quot;,
+      &quot;b&quot;: &quot;782975&quot;,
+      &quot;deltaE76&quot;: 9.725248487160691
+    },
+    {
+      &quot;a&quot;: &quot;782994&quot;,
+      &quot;b&quot;: &quot;782975&quot;,
+      &quot;deltaE76&quot;: 6.855282103872258
+    },
+    {
+      &quot;a&quot;: &quot;782995&quot;,
+      &quot;b&quot;: &quot;782976&quot;,
+      &quot;deltaE76&quot;: 4.341633648405095
+    },
+    {
+      &quot;a&quot;: &quot;782995&quot;,
+      &quot;b&quot;: &quot;782977&quot;,
+      &quot;deltaE76&quot;: 1.448281373639275
+    },
+    {
+      &quot;a&quot;: &quot;782996&quot;,
+      &quot;b&quot;: &quot;782977&quot;,
+      &quot;deltaE76&quot;: 0.96552826570448
+    },
+    {
+      &quot;a&quot;: &quot;783014&quot;,
+      &quot;b&quot;: &quot;782997&quot;,
+      &quot;deltaE76&quot;: 11.766103889521046
+    },
+    {
+      &quot;a&quot;: &quot;783029&quot;,
+      &quot;b&quot;: &quot;783011&quot;,
+      &quot;deltaE76&quot;: 8.438336548352181
+    },
+    {
+      &quot;a&quot;: &quot;783029&quot;,
+      &quot;b&quot;: &quot;783014&quot;,
+      &quot;deltaE76&quot;: 8.021977565161267
+    },
+    {
+      &quot;a&quot;: &quot;783031&quot;,
+      &quot;b&quot;: &quot;783014&quot;,
+      &quot;deltaE76&quot;: 11.034201106326906
+    },
+    {
+      &quot;a&quot;: &quot;783032&quot;,
+      &quot;b&quot;: &quot;783016&quot;,
+      &quot;deltaE76&quot;: 4.776454793244017
+    },
+    {
+      &quot;a&quot;: &quot;783032&quot;,
+      &quot;b&quot;: &quot;783017&quot;,
+      &quot;deltaE76&quot;: 6.586012556805847
+    },
+    {
+      &quot;a&quot;: &quot;783033&quot;,
+      &quot;b&quot;: &quot;783017&quot;,
+      &quot;deltaE76&quot;: 10.9312190798222
+    },
+    {
+      &quot;a&quot;: &quot;783033&quot;,
+      &quot;b&quot;: &quot;783018&quot;,
+      &quot;deltaE76&quot;: 11.981194049077756
+    },
+    {
+      &quot;a&quot;: &quot;783034&quot;,
+      &quot;b&quot;: &quot;783018&quot;,
+      &quot;deltaE76&quot;: 8.703158341077318
+    },
+    {
+      &quot;a&quot;: &quot;783034&quot;,
+      &quot;b&quot;: &quot;783019&quot;,
+      &quot;deltaE76&quot;: 9.329366284807826
+    },
+    {
+      &quot;a&quot;: &quot;783036&quot;,
+      &quot;b&quot;: &quot;783019&quot;,
+      &quot;deltaE76&quot;: 8.498983810755252
+    },
+    {
+      &quot;a&quot;: &quot;783039&quot;,
+      &quot;b&quot;: &quot;783026&quot;,
+      &quot;deltaE76&quot;: 8.624008185607405
+    },
+    {
+      &quot;a&quot;: &quot;783040&quot;,
+      &quot;b&quot;: &quot;783026&quot;,
+      &quot;deltaE76&quot;: 8.224923012237605
+    },
+    {
+      &quot;a&quot;: &quot;783040&quot;,
+      &quot;b&quot;: &quot;783027&quot;,
+      &quot;deltaE76&quot;: 10.112617202290615
+    },
+    {
+      &quot;a&quot;: &quot;783041&quot;,
+      &quot;b&quot;: &quot;783026&quot;,
+      &quot;deltaE76&quot;: 3.1309727950982933
+    },
+    {
+      &quot;a&quot;: &quot;783041&quot;,
+      &quot;b&quot;: &quot;783027&quot;,
+      &quot;deltaE76&quot;: 2.4463808362572115
+    },
+    {
+      &quot;a&quot;: &quot;783041&quot;,
+      &quot;b&quot;: &quot;783028&quot;,
+      &quot;deltaE76&quot;: 2.4365643093832308
+    },
+    {
+      &quot;a&quot;: &quot;783042&quot;,
+      &quot;b&quot;: &quot;783027&quot;,
+      &quot;deltaE76&quot;: 6.200557295993635
+    },
+    {
+      &quot;a&quot;: &quot;783042&quot;,
+      &quot;b&quot;: &quot;783028&quot;,
+      &quot;deltaE76&quot;: 4.407200626035185
+    },
+    {
+      &quot;a&quot;: &quot;783043&quot;,
+      &quot;b&quot;: &quot;783028&quot;,
+      &quot;deltaE76&quot;: 3.4315752056380964
+    },
+    {
+      &quot;a&quot;: &quot;783048&quot;,
+      &quot;b&quot;: &quot;783047&quot;,
+      &quot;deltaE76&quot;: 3.8621316899919003
+    },
+    {
+      &quot;a&quot;: &quot;783053&quot;,
+      &quot;b&quot;: &quot;783052&quot;,
+      &quot;deltaE76&quot;: 2.0668482334073097
+    },
+    {
+      &quot;a&quot;: &quot;783055&quot;,
+      &quot;b&quot;: &quot;783050&quot;,
+      &quot;deltaE76&quot;: 2.683817760038335
+    },
+    {
+      &quot;a&quot;: &quot;783055&quot;,
+      &quot;b&quot;: &quot;783051&quot;,
+      &quot;deltaE76&quot;: 8.496643743465825
+    },
+    {
+      &quot;a&quot;: &quot;783056&quot;,
+      &quot;b&quot;: &quot;783051&quot;,
+      &quot;deltaE76&quot;: 5.5816108482316755
+    },
+    {
+      &quot;a&quot;: &quot;783056&quot;,
+      &quot;b&quot;: &quot;783052&quot;,
+      &quot;deltaE76&quot;: 5.409505244610683
+    },
+    {
+      &quot;a&quot;: &quot;783057&quot;,
+      &quot;b&quot;: &quot;783052&quot;,
+      &quot;deltaE76&quot;: 4.881548022794376
+    },
+    {
+      &quot;a&quot;: &quot;783057&quot;,
+      &quot;b&quot;: &quot;783053&quot;,
+      &quot;deltaE76&quot;: 3.7308789502293602
+    },
+    {
+      &quot;a&quot;: &quot;783058&quot;,
+      &quot;b&quot;: &quot;783053&quot;,
+      &quot;deltaE76&quot;: 4.201939494168731
+    },
+    {
+      &quot;a&quot;: &quot;783058&quot;,
+      &quot;b&quot;: &quot;783054&quot;,
+      &quot;deltaE76&quot;: 4.262505312351267
+    },
+    {
+      &quot;a&quot;: &quot;783058&quot;,
+      &quot;b&quot;: &quot;783057&quot;,
+      &quot;deltaE76&quot;: 1.4925359027843164
+    },
+    {
+      &quot;a&quot;: &quot;783059&quot;,
+      &quot;b&quot;: &quot;783031&quot;,
+      &quot;deltaE76&quot;: 4.618991596774284
+    },
+    {
+      &quot;a&quot;: &quot;783059&quot;,
+      &quot;b&quot;: &quot;783055&quot;,
+      &quot;deltaE76&quot;: 9.17833975726053
+    },
+    {
+      &quot;a&quot;: &quot;783060&quot;,
+      &quot;b&quot;: &quot;783055&quot;,
+      &quot;deltaE76&quot;: 7.681889352995873
+    },
+    {
+      &quot;a&quot;: &quot;783060&quot;,
+      &quot;b&quot;: &quot;783056&quot;,
+      &quot;deltaE76&quot;: 9.908538976751858
+    },
+    {
+      &quot;a&quot;: &quot;783060&quot;,
+      &quot;b&quot;: &quot;783057&quot;,
+      &quot;deltaE76&quot;: 10.573146917953412
+    },
+    {
+      &quot;a&quot;: &quot;783061&quot;,
+      &quot;b&quot;: &quot;783056&quot;,
+      &quot;deltaE76&quot;: 10.394500554261535
+    },
+    {
+      &quot;a&quot;: &quot;783061&quot;,
+      &quot;b&quot;: &quot;783057&quot;,
+      &quot;deltaE76&quot;: 10.937460347401126
+    },
+    {
+      &quot;a&quot;: &quot;783061&quot;,
+      &quot;b&quot;: &quot;783058&quot;,
+      &quot;deltaE76&quot;: 10.295494655358311
+    },
+    {
+      &quot;a&quot;: &quot;783062&quot;,
+      &quot;b&quot;: &quot;783057&quot;,
+      &quot;deltaE76&quot;: 10.78893466241969
+    },
+    {
+      &quot;a&quot;: &quot;783062&quot;,
+      &quot;b&quot;: &quot;783058&quot;,
+      &quot;deltaE76&quot;: 10.213314183005611
+    },
+    {
+      &quot;a&quot;: &quot;783063&quot;,
+      &quot;b&quot;: &quot;783059&quot;,
+      &quot;deltaE76&quot;: 1.900705708126354
+    },
+    {
+      &quot;a&quot;: &quot;783064&quot;,
+      &quot;b&quot;: &quot;783059&quot;,
+      &quot;deltaE76&quot;: 7.11037611108828
+    },
+    {
+      &quot;a&quot;: &quot;783064&quot;,
+      &quot;b&quot;: &quot;783060&quot;,
+      &quot;deltaE76&quot;: 6.6381546023966
+    },
+    {
+      &quot;a&quot;: &quot;783065&quot;,
+      &quot;b&quot;: &quot;783060&quot;,
+      &quot;deltaE76&quot;: 7.661333601188083
+    },
+    {
+      &quot;a&quot;: &quot;783065&quot;,
+      &quot;b&quot;: &quot;783061&quot;,
+      &quot;deltaE76&quot;: 5.993050995415925
+    },
+    {
+      &quot;a&quot;: &quot;783065&quot;,
+      &quot;b&quot;: &quot;783064&quot;,
+      &quot;deltaE76&quot;: 1.3183927019921802
+    },
+    {
+      &quot;a&quot;: &quot;783066&quot;,
+      &quot;b&quot;: &quot;783060&quot;,
+      &quot;deltaE76&quot;: 7.844865436027676
+    },
+    {
+      &quot;a&quot;: &quot;783066&quot;,
+      &quot;b&quot;: &quot;783061&quot;,
+      &quot;deltaE76&quot;: 6.060518996559585
+    },
+    {
+      &quot;a&quot;: &quot;783067&quot;,
+      &quot;b&quot;: &quot;783061&quot;,
+      &quot;deltaE76&quot;: 4.852188747374791
+    },
+    {
+      &quot;a&quot;: &quot;783067&quot;,
+      &quot;b&quot;: &quot;783062&quot;,
+      &quot;deltaE76&quot;: 4.406639231456104
+    },
+    {
+      &quot;a&quot;: &quot;783067&quot;,
+      &quot;b&quot;: &quot;783066&quot;,
+      &quot;deltaE76&quot;: 1.3879279215739613
+    },
+    {
+      &quot;a&quot;: &quot;783069&quot;,
+      &quot;b&quot;: &quot;783068&quot;,
+      &quot;deltaE76&quot;: 2.725817066678658
+    },
+    {
+      &quot;a&quot;: &quot;783070&quot;,
+      &quot;b&quot;: &quot;783069&quot;,
+      &quot;deltaE76&quot;: 3.044610599203246
+    }
+  ],
+  &quot;overlap_candidates&quot;: [],
+  &quot;roi_metrics&quot;: [
+    {
+      &quot;id&quot;: &quot;candidate-object&quot;,
+      &quot;file&quot;: &quot;004_roi1.png&quot;,
+      &quot;contrast_p90_p10&quot;: 157.0,
+      &quot;gray_entropy_bits&quot;: 7.0977630956582285,
+      &quot;edge_fraction_16&quot;: 0.29613983207477423
+    }
+  ],
+  &quot;platform_points&quot;: [],
+  &quot;decision&quot;: &quot;needs_review&quot;
+}</pre></article><article><h2>shelf-13491 · needs_review</h2><img src="005.jpg" loading="lazy"><pre>{
+  &quot;id&quot;: &quot;shelf-13491&quot;,
+  &quot;blockers&quot;: [],
+  &quot;review&quot;: [
+    &quot;visible_bbox_clipping_applied: 核查边缘目标口径；原标注文件未改&quot;,
+    &quot;critical_readability_pending:candidate-object&quot;,
+    &quot;chinese_text_coverage_unknown&quot;,
+    &quot;human_check_pending:source_fidelity&quot;,
+    &quot;human_check_pending:annotation_correct&quot;,
+    &quot;human_check_pending:critical_evidence_visible&quot;,
+    &quot;human_check_pending:no_answer_leakage&quot;,
+    &quot;human_check_pending:counting_rules_clear&quot;,
+    &quot;multi_region_dependencies_unproven&quot;,
+    &quot;wrong_pair_to_answer_effect_unproven&quot;,
+    &quot;bypass_review_pending_or_failed&quot;,
+    &quot;platform_points_expected_1_to_3&quot;
+  ],
+  &quot;advisory&quot;: [],
+  &quot;metrics&quot;: {
+    &quot;width&quot;: 1600,
+    &quot;height&quot;: 1200,
+    &quot;mode&quot;: &quot;RGB&quot;,
+    &quot;exif_orientation&quot;: 1,
+    &quot;frame_count&quot;: 1,
+    &quot;global_640_proxy&quot;: {
+      &quot;contrast_p90_p10&quot;: 194.0,
+      &quot;gray_entropy_bits&quot;: 7.691299020399713,
+      &quot;edge_fraction_16&quot;: 0.17524458648578137
+    },
+    &quot;object_count&quot;: 99,
+    &quot;objects_per_MP&quot;: 51.5625,
+    &quot;class_count&quot;: 22,
+    &quot;known_fraction&quot;: 1.0,
+    &quot;repeated_classes&quot;: 18,
+    &quot;spatial_entropy_4x4&quot;: 0.9958203664056462,
+    &quot;median_bbox_short_px&quot;: 58.0,
+    &quot;p10_bbox_short_px&quot;: 48.0,
+    &quot;edge_touching_count&quot;: 6,
+    &quot;nearcolor_pair_count&quot;: 15,
+    &quot;different_class_neighbor_pairs&quot;: 50,
+    &quot;nearcolor_neighbor_fraction&quot;: 0.3,
+    &quot;bbox_overlap_pair_count&quot;: 5,
+    &quot;distinct_dependency_regions&quot;: 0,
+    &quot;effective_counterfactuals&quot;: 0
+  },
+  &quot;source&quot;: {
+    &quot;kind&quot;: &quot;real_photo&quot;,
+    &quot;url&quot;: &quot;https://huggingface.co/datasets/shelfwise-by-form/SKUs_on_shelves_PL&quot;,
+    &quot;license_url&quot;: &quot;https://creativecommons.org/licenses/by/4.0/&quot;,
+    &quot;authorization&quot;: &quot;verified&quot;,
+    &quot;attribution&quot;: &quot;ShelfWise by FORM, SKUs_on_shelves_PL, v1.0 (2024)&quot;,
+    &quot;scene_id&quot;: &quot;ShelfWise:13491&quot;
+  },
+  &quot;difficulty_status&quot;: &quot;not_evaluated&quot;,
+  &quot;annotation_provenance&quot;: &quot;publisher_coco_unmodified&quot;,
+  &quot;preview&quot;: &quot;005.jpg&quot;,
+  &quot;bbox_adjustments&quot;: [
+    {
+      &quot;id&quot;: &quot;713363&quot;,
+      &quot;original&quot;: [
+        1541,
+        448,
+        61,
+        170
+      ],
+      &quot;visible&quot;: [
+        1541,
+        448,
+        59,
+        170
+      ]
+    }
+  ],
+  &quot;nearcolor_pairs&quot;: [
+    {
+      &quot;a&quot;: &quot;713352&quot;,
+      &quot;b&quot;: &quot;713351&quot;,
+      &quot;deltaE76&quot;: 6.823305987075303
+    },
+    {
+      &quot;a&quot;: &quot;713363&quot;,
+      &quot;b&quot;: &quot;713348&quot;,
+      &quot;deltaE76&quot;: 7.238026575952221
+    },
+    {
+      &quot;a&quot;: &quot;713363&quot;,
+      &quot;b&quot;: &quot;713361&quot;,
+      &quot;deltaE76&quot;: 3.4207831213210436
+    },
+    {
+      &quot;a&quot;: &quot;713367&quot;,
+      &quot;b&quot;: &quot;713358&quot;,
+      &quot;deltaE76&quot;: 4.937058522554389
+    },
+    {
+      &quot;a&quot;: &quot;713393&quot;,
+      &quot;b&quot;: &quot;713341&quot;,
+      &quot;deltaE76&quot;: 5.158929513214343
+    },
+    {
+      &quot;a&quot;: &quot;713395&quot;,
+      &quot;b&quot;: &quot;713351&quot;,
+      &quot;deltaE76&quot;: 7.791723668317633
+    },
+    {
+      &quot;a&quot;: &quot;713399&quot;,
+      &quot;b&quot;: &quot;713362&quot;,
+      &quot;deltaE76&quot;: 10.207138175304067
+    },
+    {
+      &quot;a&quot;: &quot;713404&quot;,
+      &quot;b&quot;: &quot;713392&quot;,
+      &quot;deltaE76&quot;: 10.76149484405681
+    },
+    {
+      &quot;a&quot;: &quot;713404&quot;,
+      &quot;b&quot;: &quot;713396&quot;,
+      &quot;deltaE76&quot;: 10.522469309757922
+    },
+    {
+      &quot;a&quot;: &quot;713407&quot;,
+      &quot;b&quot;: &quot;713382&quot;,
+      &quot;deltaE76&quot;: 7.59514620571334
+    },
+    {
+      &quot;a&quot;: &quot;713408&quot;,
+      &quot;b&quot;: &quot;713386&quot;,
+      &quot;deltaE76&quot;: 3.3209238933234597
+    },
+    {
+      &quot;a&quot;: &quot;713409&quot;,
+      &quot;b&quot;: &quot;713402&quot;,
+      &quot;deltaE76&quot;: 7.257786327539317
+    },
+    {
+      &quot;a&quot;: &quot;713411&quot;,
+      &quot;b&quot;: &quot;713363&quot;,
+      &quot;deltaE76&quot;: 3.3472349896771374
+    },
+    {
+      &quot;a&quot;: &quot;713412&quot;,
+      &quot;b&quot;: &quot;713410&quot;,
+      &quot;deltaE76&quot;: 3.177111106523665
+    },
+    {
+      &quot;a&quot;: &quot;713412&quot;,
+      &quot;b&quot;: &quot;713411&quot;,
+      &quot;deltaE76&quot;: 4.007610418040667
+    }
+  ],
+  &quot;overlap_candidates&quot;: [
+    {
+      &quot;a&quot;: &quot;713360&quot;,
+      &quot;b&quot;: &quot;713342&quot;,
+      &quot;iom&quot;: 0.2898550724637681
+    },
+    {
+      &quot;a&quot;: &quot;713395&quot;,
+      &quot;b&quot;: &quot;713366&quot;,
+      &quot;iom&quot;: 0.20641539695268646
+    },
+    {
+      &quot;a&quot;: &quot;713401&quot;,
+      &quot;b&quot;: &quot;713397&quot;,
+      &quot;iom&quot;: 0.2589928057553957
+    },
+    {
+      &quot;a&quot;: &quot;713411&quot;,
+      &quot;b&quot;: &quot;713361&quot;,
+      &quot;iom&quot;: 0.3684210526315789
+    },
+    {
+      &quot;a&quot;: &quot;713414&quot;,
+      &quot;b&quot;: &quot;713401&quot;,
+      &quot;iom&quot;: 0.352112676056338
+    }
+  ],
+  &quot;roi_metrics&quot;: [
+    {
+      &quot;id&quot;: &quot;candidate-object&quot;,
+      &quot;file&quot;: &quot;005_roi1.png&quot;,
+      &quot;contrast_p90_p10&quot;: 146.0,
+      &quot;gray_entropy_bits&quot;: 6.85719130630505,
+      &quot;edge_fraction_16&quot;: 0.07282045945313109
+    }
+  ],
+  &quot;platform_points&quot;: [],
+  &quot;decision&quot;: &quot;needs_review&quot;
+}</pre></article><article><h2>shelf-13494 · needs_review</h2><img src="006.jpg" loading="lazy"><pre>{
+  &quot;id&quot;: &quot;shelf-13494&quot;,
+  &quot;blockers&quot;: [],
+  &quot;review&quot;: [
+    &quot;critical_readability_pending:candidate-object&quot;,
+    &quot;chinese_text_coverage_unknown&quot;,
+    &quot;human_check_pending:source_fidelity&quot;,
+    &quot;human_check_pending:annotation_correct&quot;,
+    &quot;human_check_pending:critical_evidence_visible&quot;,
+    &quot;human_check_pending:no_answer_leakage&quot;,
+    &quot;human_check_pending:counting_rules_clear&quot;,
+    &quot;multi_region_dependencies_unproven&quot;,
+    &quot;wrong_pair_to_answer_effect_unproven&quot;,
+    &quot;bypass_review_pending_or_failed&quot;,
+    &quot;platform_points_expected_1_to_3&quot;
+  ],
+  &quot;advisory&quot;: [],
+  &quot;metrics&quot;: {
+    &quot;width&quot;: 1200,
+    &quot;height&quot;: 1600,
+    &quot;mode&quot;: &quot;RGB&quot;,
+    &quot;exif_orientation&quot;: 1,
+    &quot;frame_count&quot;: 1,
+    &quot;global_640_proxy&quot;: {
+      &quot;contrast_p90_p10&quot;: 181.0,
+      &quot;gray_entropy_bits&quot;: 7.884615391002349,
+      &quot;edge_fraction_16&quot;: 0.2143816853639447
+    },
+    &quot;object_count&quot;: 118,
+    &quot;objects_per_MP&quot;: 61.458333333333336,
+    &quot;class_count&quot;: 38,
+    &quot;known_fraction&quot;: 0.940677966101695,
+    &quot;repeated_classes&quot;: 26,
+    &quot;spatial_entropy_4x4&quot;: 0.9709272904973184,
+    &quot;median_bbox_short_px&quot;: 54.0,
+    &quot;p10_bbox_short_px&quot;: 39.7,
+    &quot;edge_touching_count&quot;: 3,
+    &quot;nearcolor_pair_count&quot;: 18,
+    &quot;different_class_neighbor_pairs&quot;: 127,
+    &quot;nearcolor_neighbor_fraction&quot;: 0.14173228346456693,
+    &quot;bbox_overlap_pair_count&quot;: 2,
+    &quot;distinct_dependency_regions&quot;: 0,
+    &quot;effective_counterfactuals&quot;: 0
+  },
+  &quot;source&quot;: {
+    &quot;kind&quot;: &quot;real_photo&quot;,
+    &quot;url&quot;: &quot;https://huggingface.co/datasets/shelfwise-by-form/SKUs_on_shelves_PL&quot;,
+    &quot;license_url&quot;: &quot;https://creativecommons.org/licenses/by/4.0/&quot;,
+    &quot;authorization&quot;: &quot;verified&quot;,
+    &quot;attribution&quot;: &quot;ShelfWise by FORM, SKUs_on_shelves_PL, v1.0 (2024)&quot;,
+    &quot;scene_id&quot;: &quot;ShelfWise:13494&quot;
+  },
+  &quot;difficulty_status&quot;: &quot;not_evaluated&quot;,
+  &quot;annotation_provenance&quot;: &quot;publisher_coco_unmodified&quot;,
+  &quot;preview&quot;: &quot;006.jpg&quot;,
+  &quot;nearcolor_pairs&quot;: [
+    {
+      &quot;a&quot;: &quot;2045755&quot;,
+      &quot;b&quot;: &quot;2045746&quot;,
+      &quot;deltaE76&quot;: 11.388499777103256
+    },
+    {
+      &quot;a&quot;: &quot;2045760&quot;,
+      &quot;b&quot;: &quot;2045743&quot;,
+      &quot;deltaE76&quot;: 4.279809624518769
+    },
+    {
+      &quot;a&quot;: &quot;2045762&quot;,
+      &quot;b&quot;: &quot;2045745&quot;,
+      &quot;deltaE76&quot;: 8.579108605420597
+    },
+    {
+      &quot;a&quot;: &quot;2045769&quot;,
+      &quot;b&quot;: &quot;2045746&quot;,
+      &quot;deltaE76&quot;: 4.194888731409262
+    },
+    {
+      &quot;a&quot;: &quot;2045798&quot;,
+      &quot;b&quot;: &quot;2045739&quot;,
+      &quot;deltaE76&quot;: 6.152159845586889
+    },
+    {
+      &quot;a&quot;: &quot;2045808&quot;,
+      &quot;b&quot;: &quot;2045741&quot;,
+      &quot;deltaE76&quot;: 2.042269005364756
+    },
+    {
+      &quot;a&quot;: &quot;2045810&quot;,
+      &quot;b&quot;: &quot;2045755&quot;,
+      &quot;deltaE76&quot;: 9.862518304238773
+    },
+    {
+      &quot;a&quot;: &quot;2045811&quot;,
+      &quot;b&quot;: &quot;2045748&quot;,
+      &quot;deltaE76&quot;: 8.704493969220117
+    },
+    {
+      &quot;a&quot;: &quot;2045812&quot;,
+      &quot;b&quot;: &quot;2045780&quot;,
+      &quot;deltaE76&quot;: 0.6138607690662593
+    },
+    {
+      &quot;a&quot;: &quot;2045813&quot;,
+      &quot;b&quot;: &quot;2045763&quot;,
+      &quot;deltaE76&quot;: 11.97732070446761
+    },
+    {
+      &quot;a&quot;: &quot;2045814&quot;,
+      &quot;b&quot;: &quot;2045775&quot;,
+      &quot;deltaE76&quot;: 11.565814100799699
+    },
+    {
+      &quot;a&quot;: &quot;2045826&quot;,
+      &quot;b&quot;: &quot;2045783&quot;,
+      &quot;deltaE76&quot;: 6.167701172942275
+    },
+    {
+      &quot;a&quot;: &quot;2045837&quot;,
+      &quot;b&quot;: &quot;2045791&quot;,
+      &quot;deltaE76&quot;: 3.2019749152000276
+    },
+    {
+      &quot;a&quot;: &quot;2045838&quot;,
+      &quot;b&quot;: &quot;2045824&quot;,
+      &quot;deltaE76&quot;: 6.8322129449496245
+    },
+    {
+      &quot;a&quot;: &quot;2045848&quot;,
+      &quot;b&quot;: &quot;2045761&quot;,
+      &quot;deltaE76&quot;: 3.990451459039577
+    },
+    {
+      &quot;a&quot;: &quot;2045849&quot;,
+      &quot;b&quot;: &quot;2045802&quot;,
+      &quot;deltaE76&quot;: 10.218678782501067
+    },
+    {
+      &quot;a&quot;: &quot;2045851&quot;,
+      &quot;b&quot;: &quot;2045763&quot;,
+      &quot;deltaE76&quot;: 4.641880072422166
+    },
+    {
+      &quot;a&quot;: &quot;2045851&quot;,
+      &quot;b&quot;: &quot;2045838&quot;,
+      &quot;deltaE76&quot;: 5.427433335015045
+    }
+  ],
+  &quot;overlap_candidates&quot;: [
+    {
+      &quot;a&quot;: &quot;2045797&quot;,
+      &quot;b&quot;: &quot;2045765&quot;,
+      &quot;iom&quot;: 0.16261998870694522
+    },
+    {
+      &quot;a&quot;: &quot;2045851&quot;,
+      &quot;b&quot;: &quot;2045813&quot;,
+      &quot;iom&quot;: 0.2595078299776286
+    }
+  ],
+  &quot;roi_metrics&quot;: [
+    {
+      &quot;id&quot;: &quot;candidate-object&quot;,
+      &quot;file&quot;: &quot;006_roi1.png&quot;,
+      &quot;contrast_p90_p10&quot;: 165.0,
+      &quot;gray_entropy_bits&quot;: 7.634283526171796,
+      &quot;edge_fraction_16&quot;: 0.3076539101497504
+    }
+  ],
+  &quot;platform_points&quot;: [],
+  &quot;decision&quot;: &quot;needs_review&quot;
+}</pre></article><article><h2>shelf-16067 · needs_review</h2><img src="007.jpg" loading="lazy"><pre>{
+  &quot;id&quot;: &quot;shelf-16067&quot;,
+  &quot;blockers&quot;: [],
+  &quot;review&quot;: [
+    &quot;critical_readability_pending:candidate-object&quot;,
+    &quot;chinese_text_coverage_unknown&quot;,
+    &quot;human_check_pending:source_fidelity&quot;,
+    &quot;human_check_pending:annotation_correct&quot;,
+    &quot;human_check_pending:critical_evidence_visible&quot;,
+    &quot;human_check_pending:no_answer_leakage&quot;,
+    &quot;human_check_pending:counting_rules_clear&quot;,
+    &quot;multi_region_dependencies_unproven&quot;,
+    &quot;wrong_pair_to_answer_effect_unproven&quot;,
+    &quot;bypass_review_pending_or_failed&quot;,
+    &quot;platform_points_expected_1_to_3&quot;
+  ],
+  &quot;advisory&quot;: [],
+  &quot;metrics&quot;: {
+    &quot;width&quot;: 1200,
+    &quot;height&quot;: 1600,
+    &quot;mode&quot;: &quot;RGB&quot;,
+    &quot;exif_orientation&quot;: 1,
+    &quot;frame_count&quot;: 1,
+    &quot;global_640_proxy&quot;: {
+      &quot;contrast_p90_p10&quot;: 159.0,
+      &quot;gray_entropy_bits&quot;: 7.660692027350237,
+      &quot;edge_fraction_16&quot;: 0.18619064701278373
+    },
+    &quot;object_count&quot;: 107,
+    &quot;objects_per_MP&quot;: 55.729166666666664,
+    &quot;class_count&quot;: 50,
+    &quot;known_fraction&quot;: 0.9906542056074766,
+    &quot;repeated_classes&quot;: 34,
+    &quot;spatial_entropy_4x4&quot;: 0.9439212659743959,
+    &quot;median_bbox_short_px&quot;: 57.0,
+    &quot;p10_bbox_short_px&quot;: 37.0,
+    &quot;edge_touching_count&quot;: 7,
+    &quot;nearcolor_pair_count&quot;: 12,
+    &quot;different_class_neighbor_pairs&quot;: 63,
+    &quot;nearcolor_neighbor_fraction&quot;: 0.19047619047619047,
+    &quot;bbox_overlap_pair_count&quot;: 0,
+    &quot;distinct_dependency_regions&quot;: 0,
+    &quot;effective_counterfactuals&quot;: 0
+  },
+  &quot;source&quot;: {
+    &quot;kind&quot;: &quot;real_photo&quot;,
+    &quot;url&quot;: &quot;https://huggingface.co/datasets/shelfwise-by-form/SKUs_on_shelves_PL&quot;,
+    &quot;license_url&quot;: &quot;https://creativecommons.org/licenses/by/4.0/&quot;,
+    &quot;authorization&quot;: &quot;verified&quot;,
+    &quot;attribution&quot;: &quot;ShelfWise by FORM, SKUs_on_shelves_PL, v1.0 (2024)&quot;,
+    &quot;scene_id&quot;: &quot;ShelfWise:16067&quot;
+  },
+  &quot;difficulty_status&quot;: &quot;not_evaluated&quot;,
+  &quot;annotation_provenance&quot;: &quot;publisher_coco_unmodified&quot;,
+  &quot;preview&quot;: &quot;007.jpg&quot;,
+  &quot;nearcolor_pairs&quot;: [
+    {
+      &quot;a&quot;: &quot;1124245&quot;,
+      &quot;b&quot;: &quot;1124218&quot;,
+      &quot;deltaE76&quot;: 11.86544807211464
+    },
+    {
+      &quot;a&quot;: &quot;1124246&quot;,
+      &quot;b&quot;: &quot;1124237&quot;,
+      &quot;deltaE76&quot;: 3.4416061353771887
+    },
+    {
+      &quot;a&quot;: &quot;1124253&quot;,
+      &quot;b&quot;: &quot;1124248&quot;,
+      &quot;deltaE76&quot;: 11.667548560383805
+    },
+    {
+      &quot;a&quot;: &quot;1124255&quot;,
+      &quot;b&quot;: &quot;1124208&quot;,
+      &quot;deltaE76&quot;: 10.172086699740515
+    },
+    {
+      &quot;a&quot;: &quot;1124258&quot;,
+      &quot;b&quot;: &quot;1124230&quot;,
+      &quot;deltaE76&quot;: 6.453914210423402
+    },
+    {
+      &quot;a&quot;: &quot;1124265&quot;,
+      &quot;b&quot;: &quot;1124247&quot;,
+      &quot;deltaE76&quot;: 1.1527262767388644
+    },
+    {
+      &quot;a&quot;: &quot;1124290&quot;,
+      &quot;b&quot;: &quot;1124219&quot;,
+      &quot;deltaE76&quot;: 3.5841136794105095
+    },
+    {
+      &quot;a&quot;: &quot;1124291&quot;,
+      &quot;b&quot;: &quot;1124288&quot;,
+      &quot;deltaE76&quot;: 2.903042796326628
+    },
+    {
+      &quot;a&quot;: &quot;1124294&quot;,
+      &quot;b&quot;: &quot;1124215&quot;,
+      &quot;deltaE76&quot;: 7.741992225735266
+    },
+    {
+      &quot;a&quot;: &quot;1124306&quot;,
+      &quot;b&quot;: &quot;1124305&quot;,
+      &quot;deltaE76&quot;: 7.541264680190909
+    },
+    {
+      &quot;a&quot;: &quot;1124307&quot;,
+      &quot;b&quot;: &quot;1124215&quot;,
+      &quot;deltaE76&quot;: 9.313109073369716
+    },
+    {
+      &quot;a&quot;: &quot;1124310&quot;,
+      &quot;b&quot;: &quot;1124272&quot;,
+      &quot;deltaE76&quot;: 8.521888277525214
+    }
+  ],
+  &quot;overlap_candidates&quot;: [],
+  &quot;roi_metrics&quot;: [
+    {
+      &quot;id&quot;: &quot;candidate-object&quot;,
+      &quot;file&quot;: &quot;007_roi1.png&quot;,
+      &quot;contrast_p90_p10&quot;: 106.0,
+      &quot;gray_entropy_bits&quot;: 7.170368575517191,
+      &quot;edge_fraction_16&quot;: 0.2370802919708029
+    }
+  ],
+  &quot;platform_points&quot;: [],
+  &quot;decision&quot;: &quot;needs_review&quot;
+}</pre></article><article><h2>shelf-16174 · needs_review</h2><img src="008.jpg" loading="lazy"><pre>{
+  &quot;id&quot;: &quot;shelf-16174&quot;,
+  &quot;blockers&quot;: [],
+  &quot;review&quot;: [
+    &quot;critical_readability_pending:candidate-object&quot;,
+    &quot;chinese_text_coverage_unknown&quot;,
+    &quot;human_check_pending:source_fidelity&quot;,
+    &quot;human_check_pending:annotation_correct&quot;,
+    &quot;human_check_pending:critical_evidence_visible&quot;,
+    &quot;human_check_pending:no_answer_leakage&quot;,
+    &quot;human_check_pending:counting_rules_clear&quot;,
+    &quot;multi_region_dependencies_unproven&quot;,
+    &quot;wrong_pair_to_answer_effect_unproven&quot;,
+    &quot;bypass_review_pending_or_failed&quot;,
+    &quot;platform_points_expected_1_to_3&quot;
+  ],
+  &quot;advisory&quot;: [],
+  &quot;metrics&quot;: {
+    &quot;width&quot;: 1200,
+    &quot;height&quot;: 1600,
+    &quot;mode&quot;: &quot;RGB&quot;,
+    &quot;exif_orientation&quot;: 1,
+    &quot;frame_count&quot;: 1,
+    &quot;global_640_proxy&quot;: {
+      &quot;contrast_p90_p10&quot;: 156.0,
+      &quot;gray_entropy_bits&quot;: 7.492434549771672,
+      &quot;edge_fraction_16&quot;: 0.1833469214714323
+    },
+    &quot;object_count&quot;: 90,
+    &quot;objects_per_MP&quot;: 46.875,
+    &quot;class_count&quot;: 28,
+    &quot;known_fraction&quot;: 0.9666666666666667,
+    &quot;repeated_classes&quot;: 23,
+    &quot;spatial_entropy_4x4&quot;: 0.9845675107384524,
+    &quot;median_bbox_short_px&quot;: 74.0,
+    &quot;p10_bbox_short_px&quot;: 47.8,
+    &quot;edge_touching_count&quot;: 13,
+    &quot;nearcolor_pair_count&quot;: 16,
+    &quot;different_class_neighbor_pairs&quot;: 64,
+    &quot;nearcolor_neighbor_fraction&quot;: 0.25,
+    &quot;bbox_overlap_pair_count&quot;: 2,
+    &quot;distinct_dependency_regions&quot;: 0,
+    &quot;effective_counterfactuals&quot;: 0
+  },
+  &quot;source&quot;: {
+    &quot;kind&quot;: &quot;real_photo&quot;,
+    &quot;url&quot;: &quot;https://huggingface.co/datasets/shelfwise-by-form/SKUs_on_shelves_PL&quot;,
+    &quot;license_url&quot;: &quot;https://creativecommons.org/licenses/by/4.0/&quot;,
+    &quot;authorization&quot;: &quot;verified&quot;,
+    &quot;attribution&quot;: &quot;ShelfWise by FORM, SKUs_on_shelves_PL, v1.0 (2024)&quot;,
+    &quot;scene_id&quot;: &quot;ShelfWise:16174&quot;
+  },
+  &quot;difficulty_status&quot;: &quot;not_evaluated&quot;,
+  &quot;annotation_provenance&quot;: &quot;publisher_coco_unmodified&quot;,
+  &quot;preview&quot;: &quot;008.jpg&quot;,
+  &quot;nearcolor_pairs&quot;: [
+    {
+      &quot;a&quot;: &quot;824824&quot;,
+      &quot;b&quot;: &quot;824819&quot;,
+      &quot;deltaE76&quot;: 8.656827411543707
+    },
+    {
+      &quot;a&quot;: &quot;824826&quot;,
+      &quot;b&quot;: &quot;824803&quot;,
+      &quot;deltaE76&quot;: 8.983886333535835
+    },
+    {
+      &quot;a&quot;: &quot;824828&quot;,
+      &quot;b&quot;: &quot;824803&quot;,
+      &quot;deltaE76&quot;: 8.399599815444274
+    },
+    {
+      &quot;a&quot;: &quot;824828&quot;,
+      &quot;b&quot;: &quot;824822&quot;,
+      &quot;deltaE76&quot;: 8.583407579281154
+    },
+    {
+      &quot;a&quot;: &quot;824848&quot;,
+      &quot;b&quot;: &quot;824842&quot;,
+      &quot;deltaE76&quot;: 2.4034611768508203
+    },
+    {
+      &quot;a&quot;: &quot;824849&quot;,
+      &quot;b&quot;: &quot;824802&quot;,
+      &quot;deltaE76&quot;: 5.0487045180142855
+    },
+    {
+      &quot;a&quot;: &quot;824855&quot;,
+      &quot;b&quot;: &quot;824842&quot;,
+      &quot;deltaE76&quot;: 1.60541812678688
+    },
+    {
+      &quot;a&quot;: &quot;824862&quot;,
+      &quot;b&quot;: &quot;824848&quot;,
+      &quot;deltaE76&quot;: 3.387873001224822
+    },
+    {
+      &quot;a&quot;: &quot;824862&quot;,
+      &quot;b&quot;: &quot;824855&quot;,
+      &quot;deltaE76&quot;: 2.6321463173196538
+    },
+    {
+      &quot;a&quot;: &quot;824863&quot;,
+      &quot;b&quot;: &quot;824827&quot;,
+      &quot;deltaE76&quot;: 6.533514573075971
+    },
+    {
+      &quot;a&quot;: &quot;824864&quot;,
+      &quot;b&quot;: &quot;824827&quot;,
+      &quot;deltaE76&quot;: 7.954500584924869
+    },
+    {
+      &quot;a&quot;: &quot;824864&quot;,
+      &quot;b&quot;: &quot;824842&quot;,
+      &quot;deltaE76&quot;: 8.63573170456985
+    },
+    {
+      &quot;a&quot;: &quot;824865&quot;,
+      &quot;b&quot;: &quot;824812&quot;,
+      &quot;deltaE76&quot;: 2.424633551779567
+    },
+    {
+      &quot;a&quot;: &quot;824867&quot;,
+      &quot;b&quot;: &quot;824809&quot;,
+      &quot;deltaE76&quot;: 10.235819397368454
+    },
+    {
+      &quot;a&quot;: &quot;824884&quot;,
+      &quot;b&quot;: &quot;824831&quot;,
+      &quot;deltaE76&quot;: 9.488832248387425
+    },
+    {
+      &quot;a&quot;: &quot;824885&quot;,
+      &quot;b&quot;: &quot;824831&quot;,
+      &quot;deltaE76&quot;: 9.43406078681553
+    }
+  ],
+  &quot;overlap_candidates&quot;: [
+    {
+      &quot;a&quot;: &quot;824878&quot;,
+      &quot;b&quot;: &quot;824869&quot;,
+      &quot;iom&quot;: 0.22448979591836735
+    },
+    {
+      &quot;a&quot;: &quot;824879&quot;,
+      &quot;b&quot;: &quot;824854&quot;,
+      &quot;iom&quot;: 0.1724137931034483
+    }
+  ],
+  &quot;roi_metrics&quot;: [
+    {
+      &quot;id&quot;: &quot;candidate-object&quot;,
+      &quot;file&quot;: &quot;008_roi1.png&quot;,
+      &quot;contrast_p90_p10&quot;: 128.0,
+      &quot;gray_entropy_bits&quot;: 7.468111710184034,
+      &quot;edge_fraction_16&quot;: 0.228779576968992
+    }
+  ],
+  &quot;platform_points&quot;: [],
+  &quot;decision&quot;: &quot;needs_review&quot;
+}</pre></article><article><h2>shelf-17567 · needs_review</h2><img src="009.jpg" loading="lazy"><pre>{
+  &quot;id&quot;: &quot;shelf-17567&quot;,
+  &quot;blockers&quot;: [],
+  &quot;review&quot;: [
+    &quot;critical_readability_pending:candidate-object&quot;,
+    &quot;chinese_text_coverage_unknown&quot;,
+    &quot;human_check_pending:source_fidelity&quot;,
+    &quot;human_check_pending:annotation_correct&quot;,
+    &quot;human_check_pending:critical_evidence_visible&quot;,
+    &quot;human_check_pending:no_answer_leakage&quot;,
+    &quot;human_check_pending:counting_rules_clear&quot;,
+    &quot;multi_region_dependencies_unproven&quot;,
+    &quot;wrong_pair_to_answer_effect_unproven&quot;,
+    &quot;bypass_review_pending_or_failed&quot;,
+    &quot;platform_points_expected_1_to_3&quot;
+  ],
+  &quot;advisory&quot;: [],
+  &quot;metrics&quot;: {
+    &quot;width&quot;: 1440,
+    &quot;height&quot;: 1920,
+    &quot;mode&quot;: &quot;RGB&quot;,
+    &quot;exif_orientation&quot;: 1,
+    &quot;frame_count&quot;: 1,
+    &quot;global_640_proxy&quot;: {
+      &quot;contrast_p90_p10&quot;: 182.0,
+      &quot;gray_entropy_bits&quot;: 7.758367029959876,
+      &quot;edge_fraction_16&quot;: 0.2843024393425515
+    },
+    &quot;object_count&quot;: 96,
+    &quot;objects_per_MP&quot;: 34.72222222222222,
+    &quot;class_count&quot;: 60,
+    &quot;known_fraction&quot;: 0.8541666666666666,
+    &quot;repeated_classes&quot;: 14,
+    &quot;spatial_entropy_4x4&quot;: 0.9617587941657375,
+    &quot;median_bbox_short_px&quot;: 74.5,
+    &quot;p10_bbox_short_px&quot;: 49.0,
+    &quot;edge_touching_count&quot;: 25,
+    &quot;nearcolor_pair_count&quot;: 20,
+    &quot;different_class_neighbor_pairs&quot;: 162,
+    &quot;nearcolor_neighbor_fraction&quot;: 0.12345679012345678,
+    &quot;bbox_overlap_pair_count&quot;: 0,
+    &quot;distinct_dependency_regions&quot;: 0,
+    &quot;effective_counterfactuals&quot;: 0
+  },
+  &quot;source&quot;: {
+    &quot;kind&quot;: &quot;real_photo&quot;,
+    &quot;url&quot;: &quot;https://huggingface.co/datasets/shelfwise-by-form/SKUs_on_shelves_PL&quot;,
+    &quot;license_url&quot;: &quot;https://creativecommons.org/licenses/by/4.0/&quot;,
+    &quot;authorization&quot;: &quot;verified&quot;,
+    &quot;attribution&quot;: &quot;ShelfWise by FORM, SKUs_on_shelves_PL, v1.0 (2024)&quot;,
+    &quot;scene_id&quot;: &quot;ShelfWise:17567&quot;
+  },
+  &quot;difficulty_status&quot;: &quot;not_evaluated&quot;,
+  &quot;annotation_provenance&quot;: &quot;publisher_coco_unmodified&quot;,
+  &quot;preview&quot;: &quot;009.jpg&quot;,
+  &quot;nearcolor_pairs&quot;: [
+    {
+      &quot;a&quot;: &quot;51414&quot;,
+      &quot;b&quot;: &quot;51413&quot;,
+      &quot;deltaE76&quot;: 7.712583501644668
+    },
+    {
+      &quot;a&quot;: &quot;51415&quot;,
+      &quot;b&quot;: &quot;51414&quot;,
+      &quot;deltaE76&quot;: 6.360619943755369
+    },
+    {
+      &quot;a&quot;: &quot;51416&quot;,
+      &quot;b&quot;: &quot;51414&quot;,
+      &quot;deltaE76&quot;: 8.266255221808699
+    },
+    {
+      &quot;a&quot;: &quot;51416&quot;,
+      &quot;b&quot;: &quot;51415&quot;,
+      &quot;deltaE76&quot;: 3.3769506122723745
+    },
+    {
+      &quot;a&quot;: &quot;51431&quot;,
+      &quot;b&quot;: &quot;51430&quot;,
+      &quot;deltaE76&quot;: 3.1054941031637417
+    },
+    {
+      &quot;a&quot;: &quot;51432&quot;,
+      &quot;b&quot;: &quot;51431&quot;,
+      &quot;deltaE76&quot;: 1.5094717520122733
+    },
+    {
+      &quot;a&quot;: &quot;51435&quot;,
+      &quot;b&quot;: &quot;51419&quot;,
+      &quot;deltaE76&quot;: 10.73050739658602
+    },
+    {
+      &quot;a&quot;: &quot;51440&quot;,
+      &quot;b&quot;: &quot;51439&quot;,
+      &quot;deltaE76&quot;: 5.082162678665979
+    },
+    {
+      &quot;a&quot;: &quot;51441&quot;,
+      &quot;b&quot;: &quot;51423&quot;,
+      &quot;deltaE76&quot;: 8.438519350986875
+    },
+    {
+      &quot;a&quot;: &quot;51443&quot;,
+      &quot;b&quot;: &quot;51442&quot;,
+      &quot;deltaE76&quot;: 7.97001446003842
+    },
+    {
+      &quot;a&quot;: &quot;51451&quot;,
+      &quot;b&quot;: &quot;51450&quot;,
+      &quot;deltaE76&quot;: 6.505302827521667
+    },
+    {
+      &quot;a&quot;: &quot;51452&quot;,
+      &quot;b&quot;: &quot;51450&quot;,
+      &quot;deltaE76&quot;: 4.5444001252921415
+    },
+    {
+      &quot;a&quot;: &quot;51455&quot;,
+      &quot;b&quot;: &quot;51435&quot;,
+      &quot;deltaE76&quot;: 6.160149137026105
+    },
+    {
+      &quot;a&quot;: &quot;51456&quot;,
+      &quot;b&quot;: &quot;51435&quot;,
+      &quot;deltaE76&quot;: 7.090780049322799
+    },
+    {
+      &quot;a&quot;: &quot;51458&quot;,
+      &quot;b&quot;: &quot;51457&quot;,
+      &quot;deltaE76&quot;: 9.585282401524813
+    },
+    {
+      &quot;a&quot;: &quot;51485&quot;,
+      &quot;b&quot;: &quot;51467&quot;,
+      &quot;deltaE76&quot;: 9.174404445387841
+    },
+    {
+      &quot;a&quot;: &quot;51497&quot;,
+      &quot;b&quot;: &quot;51496&quot;,
+      &quot;deltaE76&quot;: 3.1529589063585823
+    },
+    {
+      &quot;a&quot;: &quot;51498&quot;,
+      &quot;b&quot;: &quot;51472&quot;,
+      &quot;deltaE76&quot;: 8.764215319312195
+    },
+    {
+      &quot;a&quot;: &quot;51502&quot;,
+      &quot;b&quot;: &quot;51481&quot;,
+      &quot;deltaE76&quot;: 10.209985576627703
+    },
+    {
+      &quot;a&quot;: &quot;51503&quot;,
+      &quot;b&quot;: &quot;51482&quot;,
+      &quot;deltaE76&quot;: 11.144445190925335
+    }
+  ],
+  &quot;overlap_candidates&quot;: [],
+  &quot;roi_metrics&quot;: [
+    {
+      &quot;id&quot;: &quot;candidate-object&quot;,
+      &quot;file&quot;: &quot;009_roi1.png&quot;,
+      &quot;contrast_p90_p10&quot;: 139.0,
+      &quot;gray_entropy_bits&quot;: 7.670866661682346,
+      &quot;edge_fraction_16&quot;: 0.2732588657694165
+    }
+  ],
+  &quot;platform_points&quot;: [],
+  &quot;decision&quot;: &quot;needs_review&quot;
+}</pre></article><article><h2>shelf-18049 · needs_review</h2><img src="010.jpg" loading="lazy"><pre>{
+  &quot;id&quot;: &quot;shelf-18049&quot;,
+  &quot;blockers&quot;: [],
+  &quot;review&quot;: [
+    &quot;critical_readability_pending:candidate-object&quot;,
+    &quot;chinese_text_coverage_unknown&quot;,
+    &quot;human_check_pending:source_fidelity&quot;,
+    &quot;human_check_pending:annotation_correct&quot;,
+    &quot;human_check_pending:critical_evidence_visible&quot;,
+    &quot;human_check_pending:no_answer_leakage&quot;,
+    &quot;human_check_pending:counting_rules_clear&quot;,
+    &quot;multi_region_dependencies_unproven&quot;,
+    &quot;wrong_pair_to_answer_effect_unproven&quot;,
+    &quot;bypass_review_pending_or_failed&quot;,
+    &quot;platform_points_expected_1_to_3&quot;
+  ],
+  &quot;advisory&quot;: [],
+  &quot;metrics&quot;: {
+    &quot;width&quot;: 1152,
+    &quot;height&quot;: 1440,
+    &quot;mode&quot;: &quot;RGB&quot;,
+    &quot;exif_orientation&quot;: 1,
+    &quot;frame_count&quot;: 1,
+    &quot;global_640_proxy&quot;: {
+      &quot;contrast_p90_p10&quot;: 174.0,
+      &quot;gray_entropy_bits&quot;: 7.82573045924569,
+      &quot;edge_fraction_16&quot;: 0.23802368665623166
+    },
+    &quot;object_count&quot;: 98,
+    &quot;objects_per_MP&quot;: 59.07600308641975,
+    &quot;class_count&quot;: 45,
+    &quot;known_fraction&quot;: 0.9387755102040817,
+    &quot;repeated_classes&quot;: 22,
+    &quot;spatial_entropy_4x4&quot;: 0.9833347332646378,
+    &quot;median_bbox_short_px&quot;: 63.5,
+    &quot;p10_bbox_short_px&quot;: 31.0,
+    &quot;edge_touching_count&quot;: 17,
+    &quot;nearcolor_pair_count&quot;: 43,
+    &quot;different_class_neighbor_pairs&quot;: 210,
+    &quot;nearcolor_neighbor_fraction&quot;: 0.20476190476190476,
+    &quot;bbox_overlap_pair_count&quot;: 18,
+    &quot;distinct_dependency_regions&quot;: 0,
+    &quot;effective_counterfactuals&quot;: 0
+  },
+  &quot;source&quot;: {
+    &quot;kind&quot;: &quot;real_photo&quot;,
+    &quot;url&quot;: &quot;https://huggingface.co/datasets/shelfwise-by-form/SKUs_on_shelves_PL&quot;,
+    &quot;license_url&quot;: &quot;https://creativecommons.org/licenses/by/4.0/&quot;,
+    &quot;authorization&quot;: &quot;verified&quot;,
+    &quot;attribution&quot;: &quot;ShelfWise by FORM, SKUs_on_shelves_PL, v1.0 (2024)&quot;,
+    &quot;scene_id&quot;: &quot;ShelfWise:18049&quot;
+  },
+  &quot;difficulty_status&quot;: &quot;not_evaluated&quot;,
+  &quot;annotation_provenance&quot;: &quot;publisher_coco_unmodified&quot;,
+  &quot;preview&quot;: &quot;010.jpg&quot;,
+  &quot;nearcolor_pairs&quot;: [
+    {
+      &quot;a&quot;: &quot;537536&quot;,
+      &quot;b&quot;: &quot;537535&quot;,
+      &quot;deltaE76&quot;: 11.620761336301854
+    },
+    {
+      &quot;a&quot;: &quot;537539&quot;,
+      &quot;b&quot;: &quot;537538&quot;,
+      &quot;deltaE76&quot;: 3.369873299830161
+    },
+    {
+      &quot;a&quot;: &quot;537549&quot;,
+      &quot;b&quot;: &quot;537534&quot;,
+      &quot;deltaE76&quot;: 10.536774039192707
+    },
+    {
+      &quot;a&quot;: &quot;537550&quot;,
+      &quot;b&quot;: &quot;537534&quot;,
+      &quot;deltaE76&quot;: 10.963008367345413
+    },
+    {
+      &quot;a&quot;: &quot;537550&quot;,
+      &quot;b&quot;: &quot;537535&quot;,
+      &quot;deltaE76&quot;: 10.731154761161312
+    },
+    {
+      &quot;a&quot;: &quot;537550&quot;,
+      &quot;b&quot;: &quot;537549&quot;,
+      &quot;deltaE76&quot;: 4.055780128934777
+    },
+    {
+      &quot;a&quot;: &quot;537552&quot;,
+      &quot;b&quot;: &quot;537536&quot;,
+      &quot;deltaE76&quot;: 8.42352742636442
+    },
+    {
+      &quot;a&quot;: &quot;537552&quot;,
+      &quot;b&quot;: &quot;537537&quot;,
+      &quot;deltaE76&quot;: 10.426570808201287
+    },
+    {
+      &quot;a&quot;: &quot;537556&quot;,
+      &quot;b&quot;: &quot;537540&quot;,
+      &quot;deltaE76&quot;: 11.665880604429145
+    },
+    {
+      &quot;a&quot;: &quot;537591&quot;,
+      &quot;b&quot;: &quot;537589&quot;,
+      &quot;deltaE76&quot;: 10.625572361182453
+    },
+    {
+      &quot;a&quot;: &quot;537600&quot;,
+      &quot;b&quot;: &quot;537547&quot;,
+      &quot;deltaE76&quot;: 8.786408283521368
+    },
+    {
+      &quot;a&quot;: &quot;537600&quot;,
+      &quot;b&quot;: &quot;537548&quot;,
+      &quot;deltaE76&quot;: 9.546330317034286
+    },
+    {
+      &quot;a&quot;: &quot;537603&quot;,
+      &quot;b&quot;: &quot;537602&quot;,
+      &quot;deltaE76&quot;: 6.147022082006794
+    },
+    {
+      &quot;a&quot;: &quot;537604&quot;,
+      &quot;b&quot;: &quot;537586&quot;,
+      &quot;deltaE76&quot;: 7.485106628336878
+    },
+    {
+      &quot;a&quot;: &quot;537608&quot;,
+      &quot;b&quot;: &quot;537554&quot;,
+      &quot;deltaE76&quot;: 11.557711764430703
+    },
+    {
+      &quot;a&quot;: &quot;537614&quot;,
+      &quot;b&quot;: &quot;537613&quot;,
+      &quot;deltaE76&quot;: 10.625271094032746
+    },
+    {
+      &quot;a&quot;: &quot;537616&quot;,
+      &quot;b&quot;: &quot;537615&quot;,
+      &quot;deltaE76&quot;: 6.595315645262032
+    },
+    {
+      &quot;a&quot;: &quot;537617&quot;,
+      &quot;b&quot;: &quot;537615&quot;,
+      &quot;deltaE76&quot;: 5.88702020660644
+    },
+    {
+      &quot;a&quot;: &quot;537617&quot;,
+      &quot;b&quot;: &quot;537616&quot;,
+      &quot;deltaE76&quot;: 9.146474886197158
+    },
+    {
+      &quot;a&quot;: &quot;537618&quot;,
+      &quot;b&quot;: &quot;537616&quot;,
+      &quot;deltaE76&quot;: 7.521861454086593
+    },
+    {
+      &quot;a&quot;: &quot;537618&quot;,
+      &quot;b&quot;: &quot;537617&quot;,
+      &quot;deltaE76&quot;: 10.959432145542538
+    },
+    {
+      &quot;a&quot;: &quot;537619&quot;,
+      &quot;b&quot;: &quot;537617&quot;,
+      &quot;deltaE76&quot;: 10.44362518042693
+    },
+    {
+      &quot;a&quot;: &quot;537619&quot;,
+      &quot;b&quot;: &quot;537618&quot;,
+      &quot;deltaE76&quot;: 5.434990224600387
+    },
+    {
+      &quot;a&quot;: &quot;537620&quot;,
+      &quot;b&quot;: &quot;537617&quot;,
+      &quot;deltaE76&quot;: 10.724854729030438
+    },
+    {
+      &quot;a&quot;: &quot;537620&quot;,
+      &quot;b&quot;: &quot;537618&quot;,
+      &quot;deltaE76&quot;: 0.9649445367500685
+    },
+    {
+      &quot;a&quot;: &quot;537620&quot;,
+      &quot;b&quot;: &quot;537619&quot;,
+      &quot;deltaE76&quot;: 4.76612785223552
+    },
+    {
+      &quot;a&quot;: &quot;537621&quot;,
+      &quot;b&quot;: &quot;537619&quot;,
+      &quot;deltaE76&quot;: 3.045658434293261
+    },
+    {
+      &quot;a&quot;: &quot;537621&quot;,
+      &quot;b&quot;: &quot;537620&quot;,
+      &quot;deltaE76&quot;: 6.416360456766045
+    },
+    {
+      &quot;a&quot;: &quot;537623&quot;,
+      &quot;b&quot;: &quot;537593&quot;,
+      &quot;deltaE76&quot;: 8.428239777211651
+    },
+    {
+      &quot;a&quot;: &quot;537623&quot;,
+      &quot;b&quot;: &quot;537594&quot;,
+      &quot;deltaE76&quot;: 10.602466624775577
+    },
+    {
+      &quot;a&quot;: &quot;537623&quot;,
+      &quot;b&quot;: &quot;537597&quot;,
+      &quot;deltaE76&quot;: 7.459316231997818
+    },
+    {
+      &quot;a&quot;: &quot;537623&quot;,
+      &quot;b&quot;: &quot;537616&quot;,
+      &quot;deltaE76&quot;: 7.902950933609404
+    },
+    {
+      &quot;a&quot;: &quot;537624&quot;,
+      &quot;b&quot;: &quot;537615&quot;,
+      &quot;deltaE76&quot;: 11.516693275973077
+    },
+    {
+      &quot;a&quot;: &quot;537624&quot;,
+      &quot;b&quot;: &quot;537616&quot;,
+      &quot;deltaE76&quot;: 10.264137407910178
+    },
+    {
+      &quot;a&quot;: &quot;537624&quot;,
+      &quot;b&quot;: &quot;537617&quot;,
+      &quot;deltaE76&quot;: 11.227065097697539
+    },
+    {
+      &quot;a&quot;: &quot;537624&quot;,
+      &quot;b&quot;: &quot;537623&quot;,
+      &quot;deltaE76&quot;: 9.98466936941437
+    },
+    {
+      &quot;a&quot;: &quot;537625&quot;,
+      &quot;b&quot;: &quot;537616&quot;,
+      &quot;deltaE76&quot;: 5.284851976611782
+    },
+    {
+      &quot;a&quot;: &quot;537625&quot;,
+      &quot;b&quot;: &quot;537617&quot;,
+      &quot;deltaE76&quot;: 6.5868550821920815
+    },
+    {
+      &quot;a&quot;: &quot;537625&quot;,
+      &quot;b&quot;: &quot;537618&quot;,
+      &quot;deltaE76&quot;: 5.113800480391242
+    },
+    {
+      &quot;a&quot;: &quot;537625&quot;,
+      &quot;b&quot;: &quot;537619&quot;,
+      &quot;deltaE76&quot;: 5.823138206924307
+    },
+    {
+      &quot;a&quot;: &quot;537627&quot;,
+      &quot;b&quot;: &quot;537619&quot;,
+      &quot;deltaE76&quot;: 10.547882886759547
+    },
+    {
+      &quot;a&quot;: &quot;537627&quot;,
+      &quot;b&quot;: &quot;537620&quot;,
+      &quot;deltaE76&quot;: 11.939697169612682
+    },
+    {
+      &quot;a&quot;: &quot;537628&quot;,
+      &quot;b&quot;: &quot;537619&quot;,
+      &quot;deltaE76&quot;: 11.59765075464795
+    }
+  ],
+  &quot;overlap_candidates&quot;: [
+    {
+      &quot;a&quot;: &quot;537608&quot;,
+      &quot;b&quot;: &quot;537607&quot;,
+      &quot;iom&quot;: 0.18181818181818182
+    },
+    {
+      &quot;a&quot;: &quot;537609&quot;,
+      &quot;b&quot;: &quot;537608&quot;,
+      &quot;iom&quot;: 0.2711864406779661
+    },
+    {
+      &quot;a&quot;: &quot;537610&quot;,
+      &quot;b&quot;: &quot;537609&quot;,
+      &quot;iom&quot;: 0.23728813559322035
+    },
+    {
+      &quot;a&quot;: &quot;537611&quot;,
+      &quot;b&quot;: &quot;537610&quot;,
+      &quot;iom&quot;: 0.27137042062415195
+    },
+    {
+      &quot;a&quot;: &quot;537612&quot;,
+      &quot;b&quot;: &quot;537611&quot;,
+      &quot;iom&quot;: 0.345679012345679
+    },
+    {
+      &quot;a&quot;: &quot;537614&quot;,
+      &quot;b&quot;: &quot;537613&quot;,
+      &quot;iom&quot;: 0.8928571428571429
+    },
+    {
+      &quot;a&quot;: &quot;537616&quot;,
+      &quot;b&quot;: &quot;537615&quot;,
+      &quot;iom&quot;: 0.35064935064935066
+    },
+    {
+      &quot;a&quot;: &quot;537617&quot;,
+      &quot;b&quot;: &quot;537616&quot;,
+      &quot;iom&quot;: 0.2694651628160815
+    },
+    {
+      &quot;a&quot;: &quot;537618&quot;,
+      &quot;b&quot;: &quot;537617&quot;,
+      &quot;iom&quot;: 0.2976190476190476
+    },
+    {
+      &quot;a&quot;: &quot;537619&quot;,
+      &quot;b&quot;: &quot;537618&quot;,
+      &quot;iom&quot;: 0.4027777777777778
+    },
+    {
+      &quot;a&quot;: &quot;537620&quot;,
+      &quot;b&quot;: &quot;537619&quot;,
+      &quot;iom&quot;: 0.3917929292929293
+    },
+    {
+      &quot;a&quot;: &quot;537621&quot;,
+      &quot;b&quot;: &quot;537620&quot;,
+      &quot;iom&quot;: 0.3857319498951669
+    },
+    {
+      &quot;a&quot;: &quot;537622&quot;,
+      &quot;b&quot;: &quot;537621&quot;,
+      &quot;iom&quot;: 0.4536142815335089
+    },
+    {
+      &quot;a&quot;: &quot;537624&quot;,
+      &quot;b&quot;: &quot;537623&quot;,
+      &quot;iom&quot;: 0.26858660130718953
+    },
+    {
+      &quot;a&quot;: &quot;537625&quot;,
+      &quot;b&quot;: &quot;537624&quot;,
+      &quot;iom&quot;: 0.32222222222222224
+    },
+    {
+      &quot;a&quot;: &quot;537626&quot;,
+      &quot;b&quot;: &quot;537625&quot;,
+      &quot;iom&quot;: 0.31101190476190477
+    },
+    {
+      &quot;a&quot;: &quot;537627&quot;,
+      &quot;b&quot;: &quot;537626&quot;,
+      &quot;iom&quot;: 0.324
+    },
+    {
+      &quot;a&quot;: &quot;537628&quot;,
+      &quot;b&quot;: &quot;537627&quot;,
+      &quot;iom&quot;: 0.2320675105485232
+    }
+  ],
+  &quot;roi_metrics&quot;: [
+    {
+      &quot;id&quot;: &quot;candidate-object&quot;,
+      &quot;file&quot;: &quot;010_roi1.png&quot;,
+      &quot;contrast_p90_p10&quot;: 170.0,
+      &quot;gray_entropy_bits&quot;: 7.620433007059194,
+      &quot;edge_fraction_16&quot;: 0.21288385709164775
+    }
+  ],
+  &quot;platform_points&quot;: [],
+  &quot;decision&quot;: &quot;needs_review&quot;
+}</pre></article><article><h2>shelf-22835 · needs_review</h2><img src="011.jpg" loading="lazy"><pre>{
+  &quot;id&quot;: &quot;shelf-22835&quot;,
+  &quot;blockers&quot;: [],
+  &quot;review&quot;: [
+    &quot;visible_bbox_clipping_applied: 核查边缘目标口径；原标注文件未改&quot;,
+    &quot;human_check_pending:annotation_correct&quot;,
+    &quot;human_check_pending:no_answer_leakage&quot;,
+    &quot;human_check_pending:counting_rules_clear&quot;,
+    &quot;bypass_review_pending_or_failed&quot;
+  ],
+  &quot;advisory&quot;: [],
+  &quot;metrics&quot;: {
+    &quot;width&quot;: 1200,
+    &quot;height&quot;: 1600,
+    &quot;mode&quot;: &quot;RGB&quot;,
+    &quot;exif_orientation&quot;: 1,
+    &quot;frame_count&quot;: 1,
+    &quot;global_640_proxy&quot;: {
+      &quot;contrast_p90_p10&quot;: 163.0,
+      &quot;gray_entropy_bits&quot;: 7.8291683953937605,
+      &quot;edge_fraction_16&quot;: 0.3134441038351161
+    },
+    &quot;object_count&quot;: 133,
+    &quot;objects_per_MP&quot;: 69.27083333333333,
+    &quot;class_count&quot;: 69,
+    &quot;known_fraction&quot;: 1.0,
+    &quot;repeated_classes&quot;: 44,
+    &quot;spatial_entropy_4x4&quot;: 0.9885314970303503,
+    &quot;median_bbox_short_px&quot;: 82.0,
+    &quot;p10_bbox_short_px&quot;: 39.0,
+    &quot;edge_touching_count&quot;: 14,
+    &quot;nearcolor_pair_count&quot;: 81,
+    &quot;different_class_neighbor_pairs&quot;: 281,
+    &quot;nearcolor_neighbor_fraction&quot;: 0.28825622775800713,
+    &quot;bbox_overlap_pair_count&quot;: 0,
+    &quot;han_text_coverage&quot;: 0.0,
+    &quot;distinct_dependency_regions&quot;: 3,
+    &quot;effective_counterfactuals&quot;: 2
+  },
+  &quot;source&quot;: {
+    &quot;kind&quot;: &quot;real_photo&quot;,
+    &quot;url&quot;: &quot;https://huggingface.co/datasets/shelfwise-by-form/SKUs_on_shelves_PL&quot;,
+    &quot;license_url&quot;: &quot;https://creativecommons.org/licenses/by/4.0/&quot;,
+    &quot;authorization&quot;: &quot;verified&quot;,
+    &quot;attribution&quot;: &quot;ShelfWise by FORM, SKUs_on_shelves_PL, v1.0 (2024)&quot;,
+    &quot;scene_id&quot;: &quot;ShelfWise:22835&quot;
+  },
+  &quot;difficulty_status&quot;: &quot;not_evaluated&quot;,
+  &quot;annotation_provenance&quot;: &quot;publisher_coco_unmodified&quot;,
+  &quot;preview&quot;: &quot;011.jpg&quot;,
+  &quot;bbox_adjustments&quot;: [
+    {
+      &quot;id&quot;: &quot;213800&quot;,
+      &quot;original&quot;: [
+        1148,
+        268,
+        53,
+        118
+      ],
+      &quot;visible&quot;: [
+        1148,
+        268,
+        52,
+        118
+      ]
+    }
+  ],
+  &quot;nearcolor_pairs&quot;: [
+    {
+      &quot;a&quot;: &quot;213702&quot;,
+      &quot;b&quot;: &quot;213700&quot;,
+      &quot;deltaE76&quot;: 5.266559010625098
+    },
+    {
+      &quot;a&quot;: &quot;213709&quot;,
+      &quot;b&quot;: &quot;213703&quot;,
+      &quot;deltaE76&quot;: 7.0349670572966785
+    },
+    {
+      &quot;a&quot;: &quot;213711&quot;,
+      &quot;b&quot;: &quot;213707&quot;,
+      &quot;deltaE76&quot;: 6.439907208304155
+    },
+    {
+      &quot;a&quot;: &quot;213718&quot;,
+      &quot;b&quot;: &quot;213700&quot;,
+      &quot;deltaE76&quot;: 5.090208474608436
+    },
+    {
+      &quot;a&quot;: &quot;213720&quot;,
+      &quot;b&quot;: &quot;213718&quot;,
+      &quot;deltaE76&quot;: 10.7247683410073
+    },
+    {
+      &quot;a&quot;: &quot;213726&quot;,
+      &quot;b&quot;: &quot;213707&quot;,
+      &quot;deltaE76&quot;: 7.365916036791318
+    },
+    {
+      &quot;a&quot;: &quot;213726&quot;,
+      &quot;b&quot;: &quot;213725&quot;,
+      &quot;deltaE76&quot;: 9.989626373021018
+    },
+    {
+      &quot;a&quot;: &quot;213730&quot;,
+      &quot;b&quot;: &quot;213729&quot;,
+      &quot;deltaE76&quot;: 3.2690660184495806
+    },
+    {
+      &quot;a&quot;: &quot;213732&quot;,
+      &quot;b&quot;: &quot;213697&quot;,
+      &quot;deltaE76&quot;: 10.4690195317792
+    },
+    {
+      &quot;a&quot;: &quot;213733&quot;,
+      &quot;b&quot;: &quot;213700&quot;,
+      &quot;deltaE76&quot;: 8.881959694893649
+    },
+    {
+      &quot;a&quot;: &quot;213737&quot;,
+      &quot;b&quot;: &quot;213698&quot;,
+      &quot;deltaE76&quot;: 7.265190004052813
+    },
+    {
+      &quot;a&quot;: &quot;213740&quot;,
+      &quot;b&quot;: &quot;213711&quot;,
+      &quot;deltaE76&quot;: 8.425448373848097
+    },
+    {
+      &quot;a&quot;: &quot;213744&quot;,
+      &quot;b&quot;: &quot;213711&quot;,
+      &quot;deltaE76&quot;: 8.42879677421729
+    },
+    {
+      &quot;a&quot;: &quot;213744&quot;,
+      &quot;b&quot;: &quot;213717&quot;,
+      &quot;deltaE76&quot;: 3.5284898484468754
+    },
+    {
+      &quot;a&quot;: &quot;213745&quot;,
+      &quot;b&quot;: &quot;213718&quot;,
+      &quot;deltaE76&quot;: 7.262417117584803
+    },
+    {
+      &quot;a&quot;: &quot;213745&quot;,
+      &quot;b&quot;: &quot;213724&quot;,
+      &quot;deltaE76&quot;: 10.303994561623588
+    },
+    {
+      &quot;a&quot;: &quot;213746&quot;,
+      &quot;b&quot;: &quot;213732&quot;,
+      &quot;deltaE76&quot;: 9.356580213463824
+    },
+    {
+      &quot;a&quot;: &quot;213747&quot;,
+      &quot;b&quot;: &quot;213714&quot;,
+      &quot;deltaE76&quot;: 11.530062501323492
+    },
+    {
+      &quot;a&quot;: &quot;213747&quot;,
+      &quot;b&quot;: &quot;213719&quot;,
+      &quot;deltaE76&quot;: 11.748017202043373
+    },
+    {
+      &quot;a&quot;: &quot;213748&quot;,
+      &quot;b&quot;: &quot;213743&quot;,
+      &quot;deltaE76&quot;: 7.94257528486331
+    },
+    {
+      &quot;a&quot;: &quot;213752&quot;,
+      &quot;b&quot;: &quot;213721&quot;,
+      &quot;deltaE76&quot;: 8.648780893354486
+    },
+    {
+      &quot;a&quot;: &quot;213753&quot;,
+      &quot;b&quot;: &quot;213725&quot;,
+      &quot;deltaE76&quot;: 5.444717374528819
+    },
+    {
+      &quot;a&quot;: &quot;213756&quot;,
+      &quot;b&quot;: &quot;213702&quot;,
+      &quot;deltaE76&quot;: 8.365670266627648
+    },
+    {
+      &quot;a&quot;: &quot;213756&quot;,
+      &quot;b&quot;: &quot;213733&quot;,
+      &quot;deltaE76&quot;: 11.046006506548116
+    },
+    {
+      &quot;a&quot;: &quot;213763&quot;,
+      &quot;b&quot;: &quot;213696&quot;,
+      &quot;deltaE76&quot;: 5.632305471697034
+    },
+    {
+      &quot;a&quot;: &quot;213763&quot;,
+      &quot;b&quot;: &quot;213713&quot;,
+      &quot;deltaE76&quot;: 11.887113514982765
+    },
+    {
+      &quot;a&quot;: &quot;213765&quot;,
+      &quot;b&quot;: &quot;213704&quot;,
+      &quot;deltaE76&quot;: 11.606686090070754
+    },
+    {
+      &quot;a&quot;: &quot;213768&quot;,
+      &quot;b&quot;: &quot;213702&quot;,
+      &quot;deltaE76&quot;: 11.145836702794215
+    },
+    {
+      &quot;a&quot;: &quot;213768&quot;,
+      &quot;b&quot;: &quot;213719&quot;,
+      &quot;deltaE76&quot;: 11.603713975982137
+    },
+    {
+      &quot;a&quot;: &quot;213768&quot;,
+      &quot;b&quot;: &quot;213756&quot;,
+      &quot;deltaE76&quot;: 5.803007095827355
+    },
+    {
+      &quot;a&quot;: &quot;213769&quot;,
+      &quot;b&quot;: &quot;213717&quot;,
+      &quot;deltaE76&quot;: 4.141451387777582
+    },
+    {
+      &quot;a&quot;: &quot;213771&quot;,
+      &quot;b&quot;: &quot;213734&quot;,
+      &quot;deltaE76&quot;: 7.689977216095738
+    },
+    {
+      &quot;a&quot;: &quot;213773&quot;,
+      &quot;b&quot;: &quot;213697&quot;,
+      &quot;deltaE76&quot;: 10.765835323244172
+    },
+    {
+      &quot;a&quot;: &quot;213773&quot;,
+      &quot;b&quot;: &quot;213732&quot;,
+      &quot;deltaE76&quot;: 10.710462962100937
+    },
+    {
+      &quot;a&quot;: &quot;213775&quot;,
+      &quot;b&quot;: &quot;213742&quot;,
+      &quot;deltaE76&quot;: 6.399516222692932
+    },
+    {
+      &quot;a&quot;: &quot;213776&quot;,
+      &quot;b&quot;: &quot;213701&quot;,
+      &quot;deltaE76&quot;: 10.6730265014899
+    },
+    {
+      &quot;a&quot;: &quot;213776&quot;,
+      &quot;b&quot;: &quot;213703&quot;,
+      &quot;deltaE76&quot;: 6.5674794144466375
+    },
+    {
+      &quot;a&quot;: &quot;213776&quot;,
+      &quot;b&quot;: &quot;213709&quot;,
+      &quot;deltaE76&quot;: 4.605629755304973
+    },
+    {
+      &quot;a&quot;: &quot;213776&quot;,
+      &quot;b&quot;: &quot;213742&quot;,
+      &quot;deltaE76&quot;: 7.4463188714833715
+    },
+    {
+      &quot;a&quot;: &quot;213779&quot;,
+      &quot;b&quot;: &quot;213734&quot;,
+      &quot;deltaE76&quot;: 7.442514147712762
+    },
+    {
+      &quot;a&quot;: &quot;213779&quot;,
+      &quot;b&quot;: &quot;213757&quot;,
+      &quot;deltaE76&quot;: 2.6025597787408223
+    },
+    {
+      &quot;a&quot;: &quot;213779&quot;,
+      &quot;b&quot;: &quot;213771&quot;,
+      &quot;deltaE76&quot;: 5.526613162898743
+    },
+    {
+      &quot;a&quot;: &quot;213781&quot;,
+      &quot;b&quot;: &quot;213703&quot;,
+      &quot;deltaE76&quot;: 5.457964092950806
+    },
+    {
+      &quot;a&quot;: &quot;213781&quot;,
+      &quot;b&quot;: &quot;213709&quot;,
+      &quot;deltaE76&quot;: 3.48016781048559
+    },
+    {
+      &quot;a&quot;: &quot;213784&quot;,
+      &quot;b&quot;: &quot;213750&quot;,
+      &quot;deltaE76&quot;: 2.8422132220709435
+    },
+    {
+      &quot;a&quot;: &quot;213787&quot;,
+      &quot;b&quot;: &quot;213703&quot;,
+      &quot;deltaE76&quot;: 11.122017493935406
+    },
+    {
+      &quot;a&quot;: &quot;213787&quot;,
+      &quot;b&quot;: &quot;213709&quot;,
+      &quot;deltaE76&quot;: 5.479160747490694
+    },
+    {
+      &quot;a&quot;: &quot;213787&quot;,
+      &quot;b&quot;: &quot;213781&quot;,
+      &quot;deltaE76&quot;: 8.882258450294056
+    },
+    {
+      &quot;a&quot;: &quot;213788&quot;,
+      &quot;b&quot;: &quot;213707&quot;,
+      &quot;deltaE76&quot;: 10.958088768578648
+    },
+    {
+      &quot;a&quot;: &quot;213788&quot;,
+      &quot;b&quot;: &quot;213717&quot;,
+      &quot;deltaE76&quot;: 11.458513508995186
+    },
+    {
+      &quot;a&quot;: &quot;213788&quot;,
+      &quot;b&quot;: &quot;213744&quot;,
+      &quot;deltaE76&quot;: 8.924466935916785
+    },
+    {
+      &quot;a&quot;: &quot;213791&quot;,
+      &quot;b&quot;: &quot;213715&quot;,
+      &quot;deltaE76&quot;: 11.5995944776713
+    },
+    {
+      &quot;a&quot;: &quot;213793&quot;,
+      &quot;b&quot;: &quot;213784&quot;,
+      &quot;deltaE76&quot;: 4.946768483502914
+    },
+    {
+      &quot;a&quot;: &quot;213794&quot;,
+      &quot;b&quot;: &quot;213775&quot;,
+      &quot;deltaE76&quot;: 11.562516023247287
+    },
+    {
+      &quot;a&quot;: &quot;213795&quot;,
+      &quot;b&quot;: &quot;213709&quot;,
+      &quot;deltaE76&quot;: 10.344605094861983
+    },
+    {
+      &quot;a&quot;: &quot;213798&quot;,
+      &quot;b&quot;: &quot;213794&quot;,
+      &quot;deltaE76&quot;: 3.4558220274423608
+    },
+    {
+      &quot;a&quot;: &quot;213799&quot;,
+      &quot;b&quot;: &quot;213789&quot;,
+      &quot;deltaE76&quot;: 8.941220696588676
+    },
+    {
+      &quot;a&quot;: &quot;213801&quot;,
+      &quot;b&quot;: &quot;213743&quot;,
+      &quot;deltaE76&quot;: 5.266127663398091
+    },
+    {
+      &quot;a&quot;: &quot;213803&quot;,
+      &quot;b&quot;: &quot;213753&quot;,
+      &quot;deltaE76&quot;: 6.522660300681847
+    },
+    {
+      &quot;a&quot;: &quot;213804&quot;,
+      &quot;b&quot;: &quot;213712&quot;,
+      &quot;deltaE76&quot;: 5.907458513029717
+    },
+    {
+      &quot;a&quot;: &quot;213808&quot;,
+      &quot;b&quot;: &quot;213709&quot;,
+      &quot;deltaE76&quot;: 8.028947731909664
+    },
+    {
+      &quot;a&quot;: &quot;213808&quot;,
+      &quot;b&quot;: &quot;213776&quot;,
+      &quot;deltaE76&quot;: 10.334683695289808
+    },
+    {
+      &quot;a&quot;: &quot;213808&quot;,
+      &quot;b&quot;: &quot;213798&quot;,
+      &quot;deltaE76&quot;: 6.199354947851777
+    },
+    {
+      &quot;a&quot;: &quot;213809&quot;,
+      &quot;b&quot;: &quot;213786&quot;,
+      &quot;deltaE76&quot;: 4.979981803443963
+    },
+    {
+      &quot;a&quot;: &quot;213810&quot;,
+      &quot;b&quot;: &quot;213800&quot;,
+      &quot;deltaE76&quot;: 8.04821341211021
+    },
+    {
+      &quot;a&quot;: &quot;213810&quot;,
+      &quot;b&quot;: &quot;213802&quot;,
+      &quot;deltaE76&quot;: 6.014326858854692
+    },
+    {
+      &quot;a&quot;: &quot;213811&quot;,
+      &quot;b&quot;: &quot;213771&quot;,
+      &quot;deltaE76&quot;: 11.015288896655276
+    },
+    {
+      &quot;a&quot;: &quot;213811&quot;,
+      &quot;b&quot;: &quot;213779&quot;,
+      &quot;deltaE76&quot;: 8.834104623178412
+    },
+    {
+      &quot;a&quot;: &quot;213812&quot;,
+      &quot;b&quot;: &quot;213712&quot;,
+      &quot;deltaE76&quot;: 9.431579766443733
+    },
+    {
+      &quot;a&quot;: &quot;213813&quot;,
+      &quot;b&quot;: &quot;213729&quot;,
+      &quot;deltaE76&quot;: 4.20103389120997
+    },
+    {
+      &quot;a&quot;: &quot;213814&quot;,
+      &quot;b&quot;: &quot;213795&quot;,
+      &quot;deltaE76&quot;: 7.039053857282517
+    },
+    {
+      &quot;a&quot;: &quot;213818&quot;,
+      &quot;b&quot;: &quot;213706&quot;,
+      &quot;deltaE76&quot;: 10.171189563194055
+    },
+    {
+      &quot;a&quot;: &quot;213819&quot;,
+      &quot;b&quot;: &quot;213816&quot;,
+      &quot;deltaE76&quot;: 2.6818584572549224
+    },
+    {
+      &quot;a&quot;: &quot;213820&quot;,
+      &quot;b&quot;: &quot;213706&quot;,
+      &quot;deltaE76&quot;: 11.261096374768064
+    },
+    {
+      &quot;a&quot;: &quot;213820&quot;,
+      &quot;b&quot;: &quot;213717&quot;,
+      &quot;deltaE76&quot;: 4.783546991150711
+    },
+    {
+      &quot;a&quot;: &quot;213820&quot;,
+      &quot;b&quot;: &quot;213744&quot;,
+      &quot;deltaE76&quot;: 6.980299656037577
+    },
+    {
+      &quot;a&quot;: &quot;213821&quot;,
+      &quot;b&quot;: &quot;213712&quot;,
+      &quot;deltaE76&quot;: 8.29003711558442
+    },
+    {
+      &quot;a&quot;: &quot;213821&quot;,
+      &quot;b&quot;: &quot;213812&quot;,
+      &quot;deltaE76&quot;: 11.283572846520881
+    },
+    {
+      &quot;a&quot;: &quot;213823&quot;,
+      &quot;b&quot;: &quot;213709&quot;,
+      &quot;deltaE76&quot;: 7.407347115310224
+    },
+    {
+      &quot;a&quot;: &quot;213823&quot;,
+      &quot;b&quot;: &quot;213795&quot;,
+      &quot;deltaE76&quot;: 9.821164712146643
+    },
+    {
+      &quot;a&quot;: &quot;213828&quot;,
+      &quot;b&quot;: &quot;213827&quot;,
+      &quot;deltaE76&quot;: 1.850507684174202
+    }
+  ],
+  &quot;overlap_candidates&quot;: [],
+  &quot;roi_metrics&quot;: [
+    {
+      &quot;id&quot;: &quot;213696&quot;,
+      &quot;file&quot;: &quot;011_roi1.png&quot;,
+      &quot;contrast_p90_p10&quot;: 128.0,
+      &quot;gray_entropy_bits&quot;: 7.340861989826799,
+      &quot;edge_fraction_16&quot;: 0.29241895016480546
+    },
+    {
+      &quot;id&quot;: &quot;213796&quot;,
+      &quot;file&quot;: &quot;011_roi2.png&quot;,
+      &quot;contrast_p90_p10&quot;: 168.0,
+      &quot;gray_entropy_bits&quot;: 7.692599205455059,
+      &quot;edge_fraction_16&quot;: 0.46552967848309973
+    },
+    {
+      &quot;id&quot;: &quot;213763&quot;,
+      &quot;file&quot;: &quot;011_roi3.png&quot;,
+      &quot;contrast_p90_p10&quot;: 101.0,
+      &quot;gray_entropy_bits&quot;: 7.220159998059905,
+      &quot;edge_fraction_16&quot;: 0.34922794770159143
+    },
+    {
+      &quot;id&quot;: &quot;price-tag&quot;,
+      &quot;file&quot;: &quot;011_roi4.png&quot;,
+      &quot;contrast_p90_p10&quot;: 210.0,
+      &quot;gray_entropy_bits&quot;: 7.096556339742535,
+      &quot;edge_fraction_16&quot;: 0.32370788867964007
+    }
+  ],
+  &quot;reasoning_metrics&quot;: {
+    &quot;node_count&quot;: 11,
+    &quot;max_depth&quot;: 5,
+    &quot;branch_nodes&quot;: 1,
+    &quot;join_nodes&quot;: 3,
+    &quot;multi_visual_join_nodes&quot;: 3,
+    &quot;output_count&quot;: 1,
+    &quot;outputs_with_visual_ancestry&quot;: 1,
+    &quot;output_visual_coverage&quot;: 1.0,
+    &quot;state_nodes&quot;: 0,
+    &quot;parameter_nodes&quot;: 3,
+    &quot;output_evidence_regions&quot;: {
+      &quot;reversal&quot;: [
+        &quot;213696&quot;,
+        &quot;213763&quot;,
+        &quot;213796&quot;,
+        &quot;price-tag&quot;
+      ]
+    }
+  },
+  &quot;measurement_margins&quot;: [
+    {
+      &quot;id&quot;: &quot;correct-origin&quot;,
+      &quot;ratio&quot;: 2.9,
+      &quot;unit&quot;: &quot;px&quot;
+    },
+    {
+      &quot;id&quot;: &quot;wrong-origin-control&quot;,
+      &quot;ratio&quot;: 3.0,
+      &quot;unit&quot;: &quot;px&quot;
+    }
+  ],
+  &quot;platform_points&quot;: [
+    {
+      &quot;xy&quot;: [
+        770.5,
+        332.0
+      ],
+      &quot;label&quot;: &quot;起点身份，作者关键点&quot;
+    },
+    {
+      &quot;xy&quot;: [
+        629.0,
+        492.0
+      ],
+      &quot;label&quot;: &quot;黑胡椒目标，作者关键点&quot;
+    },
+    {
+      &quot;xy&quot;: [
+        856,
+        408
+      ],
+      &quot;label&quot;: &quot;空托下黄价签，作者关键点&quot;
+    }
+  ],
+  &quot;decision&quot;: &quot;needs_review&quot;
+}</pre></article><article><h2>shelf-24693 · needs_review</h2><img src="012.jpg" loading="lazy"><pre>{
+  &quot;id&quot;: &quot;shelf-24693&quot;,
+  &quot;blockers&quot;: [],
+  &quot;review&quot;: [
+    &quot;critical_readability_pending:candidate-object&quot;,
+    &quot;chinese_text_coverage_unknown&quot;,
+    &quot;human_check_pending:source_fidelity&quot;,
+    &quot;human_check_pending:annotation_correct&quot;,
+    &quot;human_check_pending:critical_evidence_visible&quot;,
+    &quot;human_check_pending:no_answer_leakage&quot;,
+    &quot;human_check_pending:counting_rules_clear&quot;,
+    &quot;multi_region_dependencies_unproven&quot;,
+    &quot;wrong_pair_to_answer_effect_unproven&quot;,
+    &quot;bypass_review_pending_or_failed&quot;,
+    &quot;platform_points_expected_1_to_3&quot;
+  ],
+  &quot;advisory&quot;: [],
+  &quot;metrics&quot;: {
+    &quot;width&quot;: 1920,
+    &quot;height&quot;: 2560,
+    &quot;mode&quot;: &quot;RGB&quot;,
+    &quot;exif_orientation&quot;: 1,
+    &quot;frame_count&quot;: 1,
+    &quot;global_640_proxy&quot;: {
+      &quot;contrast_p90_p10&quot;: 87.0,
+      &quot;gray_entropy_bits&quot;: 6.9438767755049415,
+      &quot;edge_fraction_16&quot;: 0.08396490999217324
+    },
+    &quot;object_count&quot;: 93,
+    &quot;objects_per_MP&quot;: 18.9208984375,
+    &quot;class_count&quot;: 91,
+    &quot;known_fraction&quot;: 1.0,
+    &quot;repeated_classes&quot;: 2,
+    &quot;spatial_entropy_4x4&quot;: 0.9271512976885099,
+    &quot;median_bbox_short_px&quot;: 74.0,
+    &quot;p10_bbox_short_px&quot;: 48.0,
+    &quot;edge_touching_count&quot;: 3,
+    &quot;nearcolor_pair_count&quot;: 30,
+    &quot;different_class_neighbor_pairs&quot;: 106,
+    &quot;nearcolor_neighbor_fraction&quot;: 0.2830188679245283,
+    &quot;bbox_overlap_pair_count&quot;: 0,
+    &quot;distinct_dependency_regions&quot;: 0,
+    &quot;effective_counterfactuals&quot;: 0
+  },
+  &quot;source&quot;: {
+    &quot;kind&quot;: &quot;real_photo&quot;,
+    &quot;url&quot;: &quot;https://huggingface.co/datasets/shelfwise-by-form/SKUs_on_shelves_PL&quot;,
+    &quot;license_url&quot;: &quot;https://creativecommons.org/licenses/by/4.0/&quot;,
+    &quot;authorization&quot;: &quot;verified&quot;,
+    &quot;attribution&quot;: &quot;ShelfWise by FORM, SKUs_on_shelves_PL, v1.0 (2024)&quot;,
+    &quot;scene_id&quot;: &quot;ShelfWise:24693&quot;
+  },
+  &quot;difficulty_status&quot;: &quot;not_evaluated&quot;,
+  &quot;annotation_provenance&quot;: &quot;publisher_coco_unmodified&quot;,
+  &quot;preview&quot;: &quot;012.jpg&quot;,
+  &quot;nearcolor_pairs&quot;: [
+    {
+      &quot;a&quot;: &quot;532720&quot;,
+      &quot;b&quot;: &quot;532707&quot;,
+      &quot;deltaE76&quot;: 2.58092805190637
+    },
+    {
+      &quot;a&quot;: &quot;532731&quot;,
+      &quot;b&quot;: &quot;532712&quot;,
+      &quot;deltaE76&quot;: 8.179176535622359
+    },
+    {
+      &quot;a&quot;: &quot;532733&quot;,
+      &quot;b&quot;: &quot;532721&quot;,
+      &quot;deltaE76&quot;: 8.601352661372754
+    },
+    {
+      &quot;a&quot;: &quot;532741&quot;,
+      &quot;b&quot;: &quot;532727&quot;,
+      &quot;deltaE76&quot;: 8.069646297813204
+    },
+    {
+      &quot;a&quot;: &quot;532742&quot;,
+      &quot;b&quot;: &quot;532738&quot;,
+      &quot;deltaE76&quot;: 11.520445962464596
+    },
+    {
+      &quot;a&quot;: &quot;532744&quot;,
+      &quot;b&quot;: &quot;532735&quot;,
+      &quot;deltaE76&quot;: 10.831546383257443
+    },
+    {
+      &quot;a&quot;: &quot;532747&quot;,
+      &quot;b&quot;: &quot;532725&quot;,
+      &quot;deltaE76&quot;: 7.726786050340647
+    },
+    {
+      &quot;a&quot;: &quot;532748&quot;,
+      &quot;b&quot;: &quot;532729&quot;,
+      &quot;deltaE76&quot;: 11.161903241221742
+    },
+    {
+      &quot;a&quot;: &quot;532751&quot;,
+      &quot;b&quot;: &quot;532738&quot;,
+      &quot;deltaE76&quot;: 8.454888134657379
+    },
+    {
+      &quot;a&quot;: &quot;532752&quot;,
+      &quot;b&quot;: &quot;532749&quot;,
+      &quot;deltaE76&quot;: 11.483060000388969
+    },
+    {
+      &quot;a&quot;: &quot;532754&quot;,
+      &quot;b&quot;: &quot;532718&quot;,
+      &quot;deltaE76&quot;: 11.76976462260342
+    },
+    {
+      &quot;a&quot;: &quot;532754&quot;,
+      &quot;b&quot;: &quot;532728&quot;,
+      &quot;deltaE76&quot;: 6.829210533991152
+    },
+    {
+      &quot;a&quot;: &quot;532756&quot;,
+      &quot;b&quot;: &quot;532723&quot;,
+      &quot;deltaE76&quot;: 9.951663279304766
+    },
+    {
+      &quot;a&quot;: &quot;532757&quot;,
+      &quot;b&quot;: &quot;532723&quot;,
+      &quot;deltaE76&quot;: 4.395034769210897
+    },
+    {
+      &quot;a&quot;: &quot;532759&quot;,
+      &quot;b&quot;: &quot;532726&quot;,
+      &quot;deltaE76&quot;: 11.379479283514486
+    },
+    {
+      &quot;a&quot;: &quot;532762&quot;,
+      &quot;b&quot;: &quot;532705&quot;,
+      &quot;deltaE76&quot;: 1.2070705671192037
+    },
+    {
+      &quot;a&quot;: &quot;532762&quot;,
+      &quot;b&quot;: &quot;532734&quot;,
+      &quot;deltaE76&quot;: 8.987784941341378
+    },
+    {
+      &quot;a&quot;: &quot;532763&quot;,
+      &quot;b&quot;: &quot;532718&quot;,
+      &quot;deltaE76&quot;: 10.165060756967186
+    },
+    {
+      &quot;a&quot;: &quot;532768&quot;,
+      &quot;b&quot;: &quot;532732&quot;,
+      &quot;deltaE76&quot;: 11.371222063282898
+    },
+    {
+      &quot;a&quot;: &quot;532769&quot;,
+      &quot;b&quot;: &quot;532768&quot;,
+      &quot;deltaE76&quot;: 7.9972942422102244
+    },
+    {
+      &quot;a&quot;: &quot;532774&quot;,
+      &quot;b&quot;: &quot;532764&quot;,
+      &quot;deltaE76&quot;: 9.391011037097512
+    },
+    {
+      &quot;a&quot;: &quot;532777&quot;,
+      &quot;b&quot;: &quot;532744&quot;,
+      &quot;deltaE76&quot;: 9.662984857963245
+    },
+    {
+      &quot;a&quot;: &quot;532777&quot;,
+      &quot;b&quot;: &quot;532759&quot;,
+      &quot;deltaE76&quot;: 11.370087684009503
+    },
+    {
+      &quot;a&quot;: &quot;532779&quot;,
+      &quot;b&quot;: &quot;532728&quot;,
+      &quot;deltaE76&quot;: 8.425553910256617
+    },
+    {
+      &quot;a&quot;: &quot;532785&quot;,
+      &quot;b&quot;: &quot;532724&quot;,
+      &quot;deltaE76&quot;: 9.502183234917606
+    },
+    {
+      &quot;a&quot;: &quot;532785&quot;,
+      &quot;b&quot;: &quot;532739&quot;,
+      &quot;deltaE76&quot;: 9.728121584639535
+    },
+    {
+      &quot;a&quot;: &quot;532787&quot;,
+      &quot;b&quot;: &quot;532717&quot;,
+      &quot;deltaE76&quot;: 5.0159652926308125
+    },
+    {
+      &quot;a&quot;: &quot;532790&quot;,
+      &quot;b&quot;: &quot;532788&quot;,
+      &quot;deltaE76&quot;: 11.432094256822422
+    },
+    {
+      &quot;a&quot;: &quot;532792&quot;,
+      &quot;b&quot;: &quot;532738&quot;,
+      &quot;deltaE76&quot;: 3.076921500301048
+    },
+    {
+      &quot;a&quot;: &quot;532796&quot;,
+      &quot;b&quot;: &quot;532753&quot;,
+      &quot;deltaE76&quot;: 11.856164861347168
+    }
+  ],
+  &quot;overlap_candidates&quot;: [],
+  &quot;roi_metrics&quot;: [
+    {
+      &quot;id&quot;: &quot;candidate-object&quot;,
+      &quot;file&quot;: &quot;012_roi1.png&quot;,
+      &quot;contrast_p90_p10&quot;: 68.0,
+      &quot;gray_entropy_bits&quot;: 6.6719272419163005,
+      &quot;edge_fraction_16&quot;: 0.05761609067788952
+    }
+  ],
+  &quot;platform_points&quot;: [],
+  &quot;decision&quot;: &quot;needs_review&quot;
+}</pre></article><article><h2>shelf-27065 · needs_review</h2><img src="013.jpg" loading="lazy"><pre>{
+  &quot;id&quot;: &quot;shelf-27065&quot;,
+  &quot;blockers&quot;: [],
+  &quot;review&quot;: [
+    &quot;critical_readability_pending:candidate-object&quot;,
+    &quot;chinese_text_coverage_unknown&quot;,
+    &quot;human_check_pending:source_fidelity&quot;,
+    &quot;human_check_pending:annotation_correct&quot;,
+    &quot;human_check_pending:critical_evidence_visible&quot;,
+    &quot;human_check_pending:no_answer_leakage&quot;,
+    &quot;human_check_pending:counting_rules_clear&quot;,
+    &quot;multi_region_dependencies_unproven&quot;,
+    &quot;wrong_pair_to_answer_effect_unproven&quot;,
+    &quot;bypass_review_pending_or_failed&quot;,
+    &quot;platform_points_expected_1_to_3&quot;
+  ],
+  &quot;advisory&quot;: [],
+  &quot;metrics&quot;: {
+    &quot;width&quot;: 1125,
+    &quot;height&quot;: 1500,
+    &quot;mode&quot;: &quot;RGB&quot;,
+    &quot;exif_orientation&quot;: 1,
+    &quot;frame_count&quot;: 1,
+    &quot;global_640_proxy&quot;: {
+      &quot;contrast_p90_p10&quot;: 152.0,
+      &quot;gray_entropy_bits&quot;: 7.451923337686555,
+      &quot;edge_fraction_16&quot;: 0.16803743803809026
+    },
+    &quot;object_count&quot;: 196,
+    &quot;objects_per_MP&quot;: 116.14814814814815,
+    &quot;class_count&quot;: 17,
+    &quot;known_fraction&quot;: 0.8571428571428571,
+    &quot;repeated_classes&quot;: 16,
+    &quot;spatial_entropy_4x4&quot;: 0.8420845169337525,
+    &quot;median_bbox_short_px&quot;: 48.5,
+    &quot;p10_bbox_short_px&quot;: 32.5,
+    &quot;edge_touching_count&quot;: 5,
+    &quot;nearcolor_pair_count&quot;: 31,
+    &quot;different_class_neighbor_pairs&quot;: 124,
+    &quot;nearcolor_neighbor_fraction&quot;: 0.25,
+    &quot;bbox_overlap_pair_count&quot;: 110,
+    &quot;distinct_dependency_regions&quot;: 0,
+    &quot;effective_counterfactuals&quot;: 0
+  },
+  &quot;source&quot;: {
+    &quot;kind&quot;: &quot;real_photo&quot;,
+    &quot;url&quot;: &quot;https://huggingface.co/datasets/shelfwise-by-form/SKUs_on_shelves_PL&quot;,
+    &quot;license_url&quot;: &quot;https://creativecommons.org/licenses/by/4.0/&quot;,
+    &quot;authorization&quot;: &quot;verified&quot;,
+    &quot;attribution&quot;: &quot;ShelfWise by FORM, SKUs_on_shelves_PL, v1.0 (2024)&quot;,
+    &quot;scene_id&quot;: &quot;ShelfWise:27065&quot;
+  },
+  &quot;difficulty_status&quot;: &quot;not_evaluated&quot;,
+  &quot;annotation_provenance&quot;: &quot;publisher_coco_unmodified&quot;,
+  &quot;preview&quot;: &quot;013.jpg&quot;,
+  &quot;nearcolor_pairs&quot;: [
+    {
+      &quot;a&quot;: &quot;783092&quot;,
+      &quot;b&quot;: &quot;783088&quot;,
+      &quot;deltaE76&quot;: 11.262858302172987
+    },
+    {
+      &quot;a&quot;: &quot;783093&quot;,
+      &quot;b&quot;: &quot;783089&quot;,
+      &quot;deltaE76&quot;: 7.313227847966756
+    },
+    {
+      &quot;a&quot;: &quot;783094&quot;,
+      &quot;b&quot;: &quot;783090&quot;,
+      &quot;deltaE76&quot;: 6.409181447432364
+    },
+    {
+      &quot;a&quot;: &quot;783094&quot;,
+      &quot;b&quot;: &quot;783091&quot;,
+      &quot;deltaE76&quot;: 5.616962419609958
+    },
+    {
+      &quot;a&quot;: &quot;783095&quot;,
+      &quot;b&quot;: &quot;783089&quot;,
+      &quot;deltaE76&quot;: 5.791759319076957
+    },
+    {
+      &quot;a&quot;: &quot;783095&quot;,
+      &quot;b&quot;: &quot;783090&quot;,
+      &quot;deltaE76&quot;: 7.293131497116753
+    },
+    {
+      &quot;a&quot;: &quot;783096&quot;,
+      &quot;b&quot;: &quot;783089&quot;,
+      &quot;deltaE76&quot;: 11.793373363759118
+    },
+    {
+      &quot;a&quot;: &quot;783096&quot;,
+      &quot;b&quot;: &quot;783090&quot;,
+      &quot;deltaE76&quot;: 7.550530035529237
+    },
+    {
+      &quot;a&quot;: &quot;783096&quot;,
+      &quot;b&quot;: &quot;783091&quot;,
+      &quot;deltaE76&quot;: 8.921567159568582
+    },
+    {
+      &quot;a&quot;: &quot;783097&quot;,
+      &quot;b&quot;: &quot;783090&quot;,
+      &quot;deltaE76&quot;: 7.4437989811649565
+    },
+    {
+      &quot;a&quot;: &quot;783097&quot;,
+      &quot;b&quot;: &quot;783091&quot;,
+      &quot;deltaE76&quot;: 7.125674477784848
+    },
+    {
+      &quot;a&quot;: &quot;783154&quot;,
+      &quot;b&quot;: &quot;783077&quot;,
+      &quot;deltaE76&quot;: 5.747084437832686
+    },
+    {
+      &quot;a&quot;: &quot;783154&quot;,
+      &quot;b&quot;: &quot;783078&quot;,
+      &quot;deltaE76&quot;: 5.817913526957406
+    },
+    {
+      &quot;a&quot;: &quot;783154&quot;,
+      &quot;b&quot;: &quot;783079&quot;,
+      &quot;deltaE76&quot;: 6.087592615082348
+    },
+    {
+      &quot;a&quot;: &quot;783158&quot;,
+      &quot;b&quot;: &quot;783139&quot;,
+      &quot;deltaE76&quot;: 10.137091514957675
+    },
+    {
+      &quot;a&quot;: &quot;783158&quot;,
+      &quot;b&quot;: &quot;783140&quot;,
+      &quot;deltaE76&quot;: 10.245951552800147
+    },
+    {
+      &quot;a&quot;: &quot;783160&quot;,
+      &quot;b&quot;: &quot;783140&quot;,
+      &quot;deltaE76&quot;: 11.151124749134777
+    },
+    {
+      &quot;a&quot;: &quot;783172&quot;,
+      &quot;b&quot;: &quot;783144&quot;,
+      &quot;deltaE76&quot;: 6.013778107175252
+    },
+    {
+      &quot;a&quot;: &quot;783172&quot;,
+      &quot;b&quot;: &quot;783145&quot;,
+      &quot;deltaE76&quot;: 5.339615216929055
+    },
+    {
+      &quot;a&quot;: &quot;783172&quot;,
+      &quot;b&quot;: &quot;783146&quot;,
+      &quot;deltaE76&quot;: 5.530549309941592
+    },
+    {
+      &quot;a&quot;: &quot;783189&quot;,
+      &quot;b&quot;: &quot;783073&quot;,
+      &quot;deltaE76&quot;: 11.030062003088839
+    },
+    {
+      &quot;a&quot;: &quot;783196&quot;,
+      &quot;b&quot;: &quot;783184&quot;,
+      &quot;deltaE76&quot;: 5.568694708098919
+    },
+    {
+      &quot;a&quot;: &quot;783197&quot;,
+      &quot;b&quot;: &quot;783196&quot;,
+      &quot;deltaE76&quot;: 4.472272588032673
+    },
+    {
+      &quot;a&quot;: &quot;783211&quot;,
+      &quot;b&quot;: &quot;783210&quot;,
+      &quot;deltaE76&quot;: 6.493550756564546
+    },
+    {
+      &quot;a&quot;: &quot;783213&quot;,
+      &quot;b&quot;: &quot;783208&quot;,
+      &quot;deltaE76&quot;: 8.690211886270365
+    },
+    {
+      &quot;a&quot;: &quot;783214&quot;,
+      &quot;b&quot;: &quot;783205&quot;,
+      &quot;deltaE76&quot;: 3.364341519941144
+    },
+    {
+      &quot;a&quot;: &quot;783219&quot;,
+      &quot;b&quot;: &quot;783212&quot;,
+      &quot;deltaE76&quot;: 8.109392424822321
+    },
+    {
+      &quot;a&quot;: &quot;783246&quot;,
+      &quot;b&quot;: &quot;783157&quot;,
+      &quot;deltaE76&quot;: 10.950468623352394
+    },
+    {
+      &quot;a&quot;: &quot;783255&quot;,
+      &quot;b&quot;: &quot;783196&quot;,
+      &quot;deltaE76&quot;: 10.127473266611203
+    },
+    {
+      &quot;a&quot;: &quot;783255&quot;,
+      &quot;b&quot;: &quot;783197&quot;,
+      &quot;deltaE76&quot;: 10.50597380130239
+    },
+    {
+      &quot;a&quot;: &quot;783255&quot;,
+      &quot;b&quot;: &quot;783210&quot;,
+      &quot;deltaE76&quot;: 8.83592175171686
+    }
+  ],
+  &quot;overlap_candidates&quot;: [
+    {
+      &quot;a&quot;: &quot;783073&quot;,
+      &quot;b&quot;: &quot;783072&quot;,
+      &quot;iom&quot;: 0.2434186801298233
+    },
+    {
+      &quot;a&quot;: &quot;783075&quot;,
+      &quot;b&quot;: &quot;783074&quot;,
+      &quot;iom&quot;: 0.16561844863731656
+    },
+    {
+      &quot;a&quot;: &quot;783076&quot;,
+      &quot;b&quot;: &quot;783075&quot;,
+      &quot;iom&quot;: 0.31679478220358726
+    },
+    {
+      &quot;a&quot;: &quot;783078&quot;,
+      &quot;b&quot;: &quot;783077&quot;,
+      &quot;iom&quot;: 0.2821869488536155
+    },
+    {
+      &quot;a&quot;: &quot;783079&quot;,
+      &quot;b&quot;: &quot;783078&quot;,
+      &quot;iom&quot;: 0.3050847457627119
+    },
+    {
+      &quot;a&quot;: &quot;783082&quot;,
+      &quot;b&quot;: &quot;783080&quot;,
+      &quot;iom&quot;: 0.2411504424778761
+    },
+    {
+      &quot;a&quot;: &quot;783084&quot;,
+      &quot;b&quot;: &quot;783082&quot;,
+      &quot;iom&quot;: 0.18518518518518517
+    },
+    {
+      &quot;a&quot;: &quot;783086&quot;,
+      &quot;b&quot;: &quot;783085&quot;,
+      &quot;iom&quot;: 0.15898617511520738
+    },
+    {
+      &quot;a&quot;: &quot;783087&quot;,
+      &quot;b&quot;: &quot;783086&quot;,
+      &quot;iom&quot;: 0.23214285714285715
+    },
+    {
+      &quot;a&quot;: &quot;783089&quot;,
+      &quot;b&quot;: &quot;783088&quot;,
+      &quot;iom&quot;: 0.18518518518518517
+    },
+    {
+      &quot;a&quot;: &quot;783111&quot;,
+      &quot;b&quot;: &quot;783102&quot;,
+      &quot;iom&quot;: 0.16619831393014853
+    },
+    {
+      &quot;a&quot;: &quot;783120&quot;,
+      &quot;b&quot;: &quot;783119&quot;,
+      &quot;iom&quot;: 0.9358974358974359
+    },
+    {
+      &quot;a&quot;: &quot;783121&quot;,
+      &quot;b&quot;: &quot;783120&quot;,
+      &quot;iom&quot;: 0.41933432266270937
+    },
+    {
+      &quot;a&quot;: &quot;783122&quot;,
+      &quot;b&quot;: &quot;783121&quot;,
+      &quot;iom&quot;: 0.46109815560737755
+    },
+    {
+      &quot;a&quot;: &quot;783123&quot;,
+      &quot;b&quot;: &quot;783122&quot;,
+      &quot;iom&quot;: 0.4666666666666667
+    },
+    {
+      &quot;a&quot;: &quot;783124&quot;,
+      &quot;b&quot;: &quot;783123&quot;,
+      &quot;iom&quot;: 0.4125159642401022
+    },
+    {
+      &quot;a&quot;: &quot;783125&quot;,
+      &quot;b&quot;: &quot;783124&quot;,
+      &quot;iom&quot;: 0.40425531914893614
+    },
+    {
+      &quot;a&quot;: &quot;783126&quot;,
+      &quot;b&quot;: &quot;783125&quot;,
+      &quot;iom&quot;: 0.41502495403204626
+    },
+    {
+      &quot;a&quot;: &quot;783127&quot;,
+      &quot;b&quot;: &quot;783126&quot;,
+      &quot;iom&quot;: 0.32175102599179206
+    },
+    {
+      &quot;a&quot;: &quot;783128&quot;,
+      &quot;b&quot;: &quot;783127&quot;,
+      &quot;iom&quot;: 0.4
+    },
+    {
+      &quot;a&quot;: &quot;783129&quot;,
+      &quot;b&quot;: &quot;783128&quot;,
+      &quot;iom&quot;: 0.4090625
+    },
+    {
+      &quot;a&quot;: &quot;783130&quot;,
+      &quot;b&quot;: &quot;783129&quot;,
+      &quot;iom&quot;: 0.5312868949232585
+    },
+    {
+      &quot;a&quot;: &quot;783131&quot;,
+      &quot;b&quot;: &quot;783130&quot;,
+      &quot;iom&quot;: 0.41304347826086957
+    },
+    {
+      &quot;a&quot;: &quot;783132&quot;,
+      &quot;b&quot;: &quot;783131&quot;,
+      &quot;iom&quot;: 0.5503432494279176
+    },
+    {
+      &quot;a&quot;: &quot;783133&quot;,
+      &quot;b&quot;: &quot;783132&quot;,
+      &quot;iom&quot;: 0.4658385093167702
+    },
+    {
+      &quot;a&quot;: &quot;783134&quot;,
+      &quot;b&quot;: &quot;783133&quot;,
+      &quot;iom&quot;: 0.36369770580296895
+    },
+    {
+      &quot;a&quot;: &quot;783135&quot;,
+      &quot;b&quot;: &quot;783134&quot;,
+      &quot;iom&quot;: 0.4676113360323887
+    },
+    {
+      &quot;a&quot;: &quot;783137&quot;,
+      &quot;b&quot;: &quot;783136&quot;,
+      &quot;iom&quot;: 0.6201680672268908
+    },
+    {
+      &quot;a&quot;: &quot;783138&quot;,
+      &quot;b&quot;: &quot;783137&quot;,
+      &quot;iom&quot;: 0.49444444444444446
+    },
+    {
+      &quot;a&quot;: &quot;783139&quot;,
+      &quot;b&quot;: &quot;783138&quot;,
+      &quot;iom&quot;: 0.3891402714932127
+    },
+    {
+      &quot;a&quot;: &quot;783140&quot;,
+      &quot;b&quot;: &quot;783139&quot;,
+      &quot;iom&quot;: 0.38009049773755654
+    },
+    {
+      &quot;a&quot;: &quot;783141&quot;,
+      &quot;b&quot;: &quot;783140&quot;,
+      &quot;iom&quot;: 0.3952941176470588
+    },
+    {
+      &quot;a&quot;: &quot;783142&quot;,
+      &quot;b&quot;: &quot;783141&quot;,
+      &quot;iom&quot;: 0.3979565772669221
+    },
+    {
+      &quot;a&quot;: &quot;783143&quot;,
+      &quot;b&quot;: &quot;783142&quot;,
+      &quot;iom&quot;: 0.4634146341463415
+    },
+    {
+      &quot;a&quot;: &quot;783144&quot;,
+      &quot;b&quot;: &quot;783143&quot;,
+      &quot;iom&quot;: 0.5026242667489966
+    },
+    {
+      &quot;a&quot;: &quot;783145&quot;,
+      &quot;b&quot;: &quot;783144&quot;,
+      &quot;iom&quot;: 0.45137789040228066
+    },
+    {
+      &quot;a&quot;: &quot;783146&quot;,
+      &quot;b&quot;: &quot;783145&quot;,
+      &quot;iom&quot;: 0.3750395945517897
+    },
+    {
+      &quot;a&quot;: &quot;783147&quot;,
+      &quot;b&quot;: &quot;783146&quot;,
+      &quot;iom&quot;: 0.47619047619047616
+    },
+    {
+      &quot;a&quot;: &quot;783148&quot;,
+      &quot;b&quot;: &quot;783147&quot;,
+      &quot;iom&quot;: 0.3868131868131868
+    },
+    {
+      &quot;a&quot;: &quot;783149&quot;,
+      &quot;b&quot;: &quot;783148&quot;,
+      &quot;iom&quot;: 0.15737704918032788
+    },
+    {
+      &quot;a&quot;: &quot;783150&quot;,
+      &quot;b&quot;: &quot;783149&quot;,
+      &quot;iom&quot;: 0.64
+    },
+    {
+      &quot;a&quot;: &quot;783151&quot;,
+      &quot;b&quot;: &quot;783150&quot;,
+      &quot;iom&quot;: 0.23255813953488372
+    },
+    {
+      &quot;a&quot;: &quot;783157&quot;,
+      &quot;b&quot;: &quot;783156&quot;,
+      &quot;iom&quot;: 0.3275186899252403
+    },
+    {
+      &quot;a&quot;: &quot;783159&quot;,
+      &quot;b&quot;: &quot;783158&quot;,
+      &quot;iom&quot;: 0.43534883720930234
+    },
+    {
+      &quot;a&quot;: &quot;783160&quot;,
+      &quot;b&quot;: &quot;783159&quot;,
+      &quot;iom&quot;: 0.45098039215686275
+    },
+    {
+      &quot;a&quot;: &quot;783162&quot;,
+      &quot;b&quot;: &quot;783161&quot;,
+      &quot;iom&quot;: 0.2397163120567376
+    },
+    {
+      &quot;a&quot;: &quot;783163&quot;,
+      &quot;b&quot;: &quot;783162&quot;,
+      &quot;iom&quot;: 0.20020222446916078
+    },
+    {
+      &quot;a&quot;: &quot;783164&quot;,
+      &quot;b&quot;: &quot;783163&quot;,
+      &quot;iom&quot;: 0.15470171890798787
+    },
+    {
+      &quot;a&quot;: &quot;783165&quot;,
+      &quot;b&quot;: &quot;783164&quot;,
+      &quot;iom&quot;: 0.2877176015473888
+    },
+    {
+      &quot;a&quot;: &quot;783169&quot;,
+      &quot;b&quot;: &quot;783167&quot;,
+      &quot;iom&quot;: 0.24735449735449735
+    },
+    {
+      &quot;a&quot;: &quot;783169&quot;,
+      &quot;b&quot;: &quot;783168&quot;,
+      &quot;iom&quot;: 0.42857142857142855
+    },
+    {
+      &quot;a&quot;: &quot;783170&quot;,
+      &quot;b&quot;: &quot;783168&quot;,
+      &quot;iom&quot;: 0.1620775969962453
+    },
+    {
+      &quot;a&quot;: &quot;783171&quot;,
+      &quot;b&quot;: &quot;783170&quot;,
+      &quot;iom&quot;: 0.1797175866495507
+    },
+    {
+      &quot;a&quot;: &quot;783172&quot;,
+      &quot;b&quot;: &quot;783167&quot;,
+      &quot;iom&quot;: 0.39665523156089194
+    },
+    {
+      &quot;a&quot;: &quot;783175&quot;,
+      &quot;b&quot;: &quot;783156&quot;,
+      &quot;iom&quot;: 0.1943181818181818
+    },
+    {
+      &quot;a&quot;: &quot;783176&quot;,
+      &quot;b&quot;: &quot;783157&quot;,
+      &quot;iom&quot;: 0.19393939393939394
+    },
+    {
+      &quot;a&quot;: &quot;783176&quot;,
+      &quot;b&quot;: &quot;783175&quot;,
+      &quot;iom&quot;: 0.4431818181818182
+    },
+    {
+      &quot;a&quot;: &quot;783181&quot;,
+      &quot;b&quot;: &quot;783180&quot;,
+      &quot;iom&quot;: 0.23715415019762845
+    },
+    {
+      &quot;a&quot;: &quot;783187&quot;,
+      &quot;b&quot;: &quot;783186&quot;,
+      &quot;iom&quot;: 0.2
+    },
+    {
+      &quot;a&quot;: &quot;783188&quot;,
+      &quot;b&quot;: &quot;783186&quot;,
+      &quot;iom&quot;: 0.2920634920634921
+    },
+    {
+      &quot;a&quot;: &quot;783189&quot;,
+      &quot;b&quot;: &quot;783188&quot;,
+      &quot;iom&quot;: 0.32126984126984126
+    },
+    {
+      &quot;a&quot;: &quot;783190&quot;,
+      &quot;b&quot;: &quot;783187&quot;,
+      &quot;iom&quot;: 0.453125
+    },
+    {
+      &quot;a&quot;: &quot;783191&quot;,
+      &quot;b&quot;: &quot;783185&quot;,
+      &quot;iom&quot;: 0.5037037037037037
+    },
+    {
+      &quot;a&quot;: &quot;783191&quot;,
+      &quot;b&quot;: &quot;783190&quot;,
+      &quot;iom&quot;: 0.26666666666666666
+    },
+    {
+      &quot;a&quot;: &quot;783192&quot;,
+      &quot;b&quot;: &quot;783184&quot;,
+      &quot;iom&quot;: 0.21843971631205675
+    },
+    {
+      &quot;a&quot;: &quot;783193&quot;,
+      &quot;b&quot;: &quot;783188&quot;,
+      &quot;iom&quot;: 0.4222222222222222
+    },
+    {
+      &quot;a&quot;: &quot;783193&quot;,
+      &quot;b&quot;: &quot;783189&quot;,
+      &quot;iom&quot;: 0.46083476272155516
+    },
+    {
+      &quot;a&quot;: &quot;783194&quot;,
+      &quot;b&quot;: &quot;783184&quot;,
+      &quot;iom&quot;: 0.5925925925925926
+    },
+    {
+      &quot;a&quot;: &quot;783194&quot;,
+      &quot;b&quot;: &quot;783193&quot;,
+      &quot;iom&quot;: 0.5185185185185185
+    },
+    {
+      &quot;a&quot;: &quot;783195&quot;,
+      &quot;b&quot;: &quot;783184&quot;,
+      &quot;iom&quot;: 0.25
+    },
+    {
+      &quot;a&quot;: &quot;783195&quot;,
+      &quot;b&quot;: &quot;783193&quot;,
+      &quot;iom&quot;: 0.5369318181818182
+    },
+    {
+      &quot;a&quot;: &quot;783200&quot;,
+      &quot;b&quot;: &quot;783199&quot;,
+      &quot;iom&quot;: 0.43678784590341835
+    },
+    {
+      &quot;a&quot;: &quot;783201&quot;,
+      &quot;b&quot;: &quot;783200&quot;,
+      &quot;iom&quot;: 0.5154639175257731
+    },
+    {
+      &quot;a&quot;: &quot;783203&quot;,
+      &quot;b&quot;: &quot;783202&quot;,
+      &quot;iom&quot;: 0.49873737373737376
+    },
+    {
+      &quot;a&quot;: &quot;783204&quot;,
+      &quot;b&quot;: &quot;783203&quot;,
+      &quot;iom&quot;: 0.4935064935064935
+    },
+    {
+      &quot;a&quot;: &quot;783206&quot;,
+      &quot;b&quot;: &quot;783205&quot;,
+      &quot;iom&quot;: 0.4189189189189189
+    },
+    {
+      &quot;a&quot;: &quot;783207&quot;,
+      &quot;b&quot;: &quot;783206&quot;,
+      &quot;iom&quot;: 0.5135135135135135
+    },
+    {
+      &quot;a&quot;: &quot;783209&quot;,
+      &quot;b&quot;: &quot;783208&quot;,
+      &quot;iom&quot;: 0.5373134328358209
+    },
+    {
+      &quot;a&quot;: &quot;783214&quot;,
+      &quot;b&quot;: &quot;783213&quot;,
+      &quot;iom&quot;: 0.325
+    },
+    {
+      &quot;a&quot;: &quot;783215&quot;,
+      &quot;b&quot;: &quot;783214&quot;,
+      &quot;iom&quot;: 0.3333333333333333
+    },
+    {
+      &quot;a&quot;: &quot;783216&quot;,
+      &quot;b&quot;: &quot;783214&quot;,
+      &quot;iom&quot;: 0.40062597809076683
+    },
+    {
+      &quot;a&quot;: &quot;783218&quot;,
+      &quot;b&quot;: &quot;783217&quot;,
+      &quot;iom&quot;: 0.3389423076923077
+    },
+    {
+      &quot;a&quot;: &quot;783219&quot;,
+      &quot;b&quot;: &quot;783215&quot;,
+      &quot;iom&quot;: 0.20634920634920634
+    },
+    {
+      &quot;a&quot;: &quot;783219&quot;,
+      &quot;b&quot;: &quot;783218&quot;,
+      &quot;iom&quot;: 0.35714285714285715
+    },
+    {
+      &quot;a&quot;: &quot;783222&quot;,
+      &quot;b&quot;: &quot;783220&quot;,
+      &quot;iom&quot;: 0.35377358490566035
+    },
+    {
+      &quot;a&quot;: &quot;783223&quot;,
+      &quot;b&quot;: &quot;783222&quot;,
+      &quot;iom&quot;: 0.33143467426130296
+    },
+    {
+      &quot;a&quot;: &quot;783224&quot;,
+      &quot;b&quot;: &quot;783221&quot;,
+      &quot;iom&quot;: 0.3137254901960784
+    },
+    {
+      &quot;a&quot;: &quot;783225&quot;,
+      &quot;b&quot;: &quot;783224&quot;,
+      &quot;iom&quot;: 0.405997693194925
+    },
+    {
+      &quot;a&quot;: &quot;783228&quot;,
+      &quot;b&quot;: &quot;783226&quot;,
+      &quot;iom&quot;: 0.2865013774104683
+    },
+    {
+      &quot;a&quot;: &quot;783229&quot;,
+      &quot;b&quot;: &quot;783228&quot;,
+      &quot;iom&quot;: 0.23655913978494625
+    },
+    {
+      &quot;a&quot;: &quot;783230&quot;,
+      &quot;b&quot;: &quot;783227&quot;,
+      &quot;iom&quot;: 0.2631578947368421
+    },
+    {
+      &quot;a&quot;: &quot;783231&quot;,
+      &quot;b&quot;: &quot;783230&quot;,
+      &quot;iom&quot;: 0.2982456140350877
+    },
+    {
+      &quot;a&quot;: &quot;783233&quot;,
+      &quot;b&quot;: &quot;783232&quot;,
+      &quot;iom&quot;: 0.3829787234042553
+    },
+    {
+      &quot;a&quot;: &quot;783234&quot;,
+      &quot;b&quot;: &quot;783233&quot;,
+      &quot;iom&quot;: 0.2864583333333333
+    },
+    {
+      &quot;a&quot;: &quot;783241&quot;,
+      &quot;b&quot;: &quot;783240&quot;,
+      &quot;iom&quot;: 0.17073170731707318
+    },
+    {
+      &quot;a&quot;: &quot;783245&quot;,
+      &quot;b&quot;: &quot;783244&quot;,
+      &quot;iom&quot;: 0.8214285714285714
+    },
+    {
+      &quot;a&quot;: &quot;783247&quot;,
+      &quot;b&quot;: &quot;783246&quot;,
+      &quot;iom&quot;: 0.44475524475524475
+    },
+    {
+      &quot;a&quot;: &quot;783252&quot;,
+      &quot;b&quot;: &quot;783251&quot;,
+      &quot;iom&quot;: 0.4318181818181818
+    },
+    {
+      &quot;a&quot;: &quot;783253&quot;,
+      &quot;b&quot;: &quot;783251&quot;,
+      &quot;iom&quot;: 0.48863636363636365
+    },
+    {
+      &quot;a&quot;: &quot;783253&quot;,
+      &quot;b&quot;: &quot;783252&quot;,
+      &quot;iom&quot;: 0.21460506706408347
+    },
+    {
+      &quot;a&quot;: &quot;783254&quot;,
+      &quot;b&quot;: &quot;783196&quot;,
+      &quot;iom&quot;: 0.2781201848998459
+    },
+    {
+      &quot;a&quot;: &quot;783255&quot;,
+      &quot;b&quot;: &quot;783197&quot;,
+      &quot;iom&quot;: 0.18955434563420046
+    },
+    {
+      &quot;a&quot;: &quot;783255&quot;,
+      &quot;b&quot;: &quot;783254&quot;,
+      &quot;iom&quot;: 0.33031587057010786
+    },
+    {
+      &quot;a&quot;: &quot;783256&quot;,
+      &quot;b&quot;: &quot;783255&quot;,
+      &quot;iom&quot;: 0.44155844155844154
+    },
+    {
+      &quot;a&quot;: &quot;783257&quot;,
+      &quot;b&quot;: &quot;783210&quot;,
+      &quot;iom&quot;: 0.16393442622950818
+    },
+    {
+      &quot;a&quot;: &quot;783257&quot;,
+      &quot;b&quot;: &quot;783256&quot;,
+      &quot;iom&quot;: 0.6015132408575031
+    },
+    {
+      &quot;a&quot;: &quot;783259&quot;,
+      &quot;b&quot;: &quot;783258&quot;,
+      &quot;iom&quot;: 0.26
+    },
+    {
+      &quot;a&quot;: &quot;783260&quot;,
+      &quot;b&quot;: &quot;783258&quot;,
+      &quot;iom&quot;: 0.24352941176470588
+    },
+    {
+      &quot;a&quot;: &quot;783262&quot;,
+      &quot;b&quot;: &quot;783212&quot;,
+      &quot;iom&quot;: 0.29375696767001114
+    },
+    {
+      &quot;a&quot;: &quot;783262&quot;,
+      &quot;b&quot;: &quot;783246&quot;,
+      &quot;iom&quot;: 0.1722723543888433
+    }
+  ],
+  &quot;roi_metrics&quot;: [
+    {
+      &quot;id&quot;: &quot;candidate-object&quot;,
+      &quot;file&quot;: &quot;013_roi1.png&quot;,
+      &quot;contrast_p90_p10&quot;: 96.0,
+      &quot;gray_entropy_bits&quot;: 6.222690214932905,
+      &quot;edge_fraction_16&quot;: 0.11759112519809825
+    }
+  ],
+  &quot;platform_points&quot;: [],
+  &quot;decision&quot;: &quot;needs_review&quot;
+}</pre></article><article><h2>shelf-7138 · needs_review</h2><img src="014.jpg" loading="lazy"><pre>{
+  &quot;id&quot;: &quot;shelf-7138&quot;,
+  &quot;blockers&quot;: [],
+  &quot;review&quot;: [
+    &quot;critical_readability_pending:candidate-object&quot;,
+    &quot;chinese_text_coverage_unknown&quot;,
+    &quot;human_check_pending:source_fidelity&quot;,
+    &quot;human_check_pending:annotation_correct&quot;,
+    &quot;human_check_pending:critical_evidence_visible&quot;,
+    &quot;human_check_pending:no_answer_leakage&quot;,
+    &quot;human_check_pending:counting_rules_clear&quot;,
+    &quot;multi_region_dependencies_unproven&quot;,
+    &quot;wrong_pair_to_answer_effect_unproven&quot;,
+    &quot;bypass_review_pending_or_failed&quot;,
+    &quot;platform_points_expected_1_to_3&quot;
+  ],
+  &quot;advisory&quot;: [],
+  &quot;metrics&quot;: {
+    &quot;width&quot;: 1200,
+    &quot;height&quot;: 1600,
+    &quot;mode&quot;: &quot;RGB&quot;,
+    &quot;exif_orientation&quot;: 1,
+    &quot;frame_count&quot;: 1,
+    &quot;global_640_proxy&quot;: {
+      &quot;contrast_p90_p10&quot;: 201.0,
+      &quot;gray_entropy_bits&quot;: 7.883252228549582,
+      &quot;edge_fraction_16&quot;: 0.30435853117662404
+    },
+    &quot;object_count&quot;: 95,
+    &quot;objects_per_MP&quot;: 49.479166666666664,
+    &quot;class_count&quot;: 48,
+    &quot;known_fraction&quot;: 0.8947368421052632,
+    &quot;repeated_classes&quot;: 20,
+    &quot;spatial_entropy_4x4&quot;: 0.9848654642666882,
+    &quot;median_bbox_short_px&quot;: 85.0,
+    &quot;p10_bbox_short_px&quot;: 58.8,
+    &quot;edge_touching_count&quot;: 8,
+    &quot;nearcolor_pair_count&quot;: 17,
+    &quot;different_class_neighbor_pairs&quot;: 103,
+    &quot;nearcolor_neighbor_fraction&quot;: 0.1650485436893204,
+    &quot;bbox_overlap_pair_count&quot;: 0,
+    &quot;distinct_dependency_regions&quot;: 0,
+    &quot;effective_counterfactuals&quot;: 0
+  },
+  &quot;source&quot;: {
+    &quot;kind&quot;: &quot;real_photo&quot;,
+    &quot;url&quot;: &quot;https://huggingface.co/datasets/shelfwise-by-form/SKUs_on_shelves_PL&quot;,
+    &quot;license_url&quot;: &quot;https://creativecommons.org/licenses/by/4.0/&quot;,
+    &quot;authorization&quot;: &quot;verified&quot;,
+    &quot;attribution&quot;: &quot;ShelfWise by FORM, SKUs_on_shelves_PL, v1.0 (2024)&quot;,
+    &quot;scene_id&quot;: &quot;ShelfWise:7138&quot;
+  },
+  &quot;difficulty_status&quot;: &quot;not_evaluated&quot;,
+  &quot;annotation_provenance&quot;: &quot;publisher_coco_unmodified&quot;,
+  &quot;preview&quot;: &quot;014.jpg&quot;,
+  &quot;nearcolor_pairs&quot;: [
+    {
+      &quot;a&quot;: &quot;1208028&quot;,
+      &quot;b&quot;: &quot;1208020&quot;,
+      &quot;deltaE76&quot;: 9.638863728407044
+    },
+    {
+      &quot;a&quot;: &quot;1208050&quot;,
+      &quot;b&quot;: &quot;1208032&quot;,
+      &quot;deltaE76&quot;: 11.75330048102831
+    },
+    {
+      &quot;a&quot;: &quot;1208058&quot;,
+      &quot;b&quot;: &quot;1208054&quot;,
+      &quot;deltaE76&quot;: 8.001441631964724
+    },
+    {
+      &quot;a&quot;: &quot;1208060&quot;,
+      &quot;b&quot;: &quot;1208022&quot;,
+      &quot;deltaE76&quot;: 2.6997040983796246
+    },
+    {
+      &quot;a&quot;: &quot;1208074&quot;,
+      &quot;b&quot;: &quot;1208017&quot;,
+      &quot;deltaE76&quot;: 10.082412159900256
+    },
+    {
+      &quot;a&quot;: &quot;1208076&quot;,
+      &quot;b&quot;: &quot;1208072&quot;,
+      &quot;deltaE76&quot;: 10.251256373366376
+    },
+    {
+      &quot;a&quot;: &quot;1208077&quot;,
+      &quot;b&quot;: &quot;1208036&quot;,
+      &quot;deltaE76&quot;: 9.384944154591262
+    },
+    {
+      &quot;a&quot;: &quot;1208082&quot;,
+      &quot;b&quot;: &quot;1208024&quot;,
+      &quot;deltaE76&quot;: 6.1169830208366
+    },
+    {
+      &quot;a&quot;: &quot;1208083&quot;,
+      &quot;b&quot;: &quot;1208016&quot;,
+      &quot;deltaE76&quot;: 10.078284362003412
+    },
+    {
+      &quot;a&quot;: &quot;1208083&quot;,
+      &quot;b&quot;: &quot;1208026&quot;,
+      &quot;deltaE76&quot;: 8.731137758864755
+    },
+    {
+      &quot;a&quot;: &quot;1208084&quot;,
+      &quot;b&quot;: &quot;1208025&quot;,
+      &quot;deltaE76&quot;: 5.795267727122446
+    },
+    {
+      &quot;a&quot;: &quot;1208087&quot;,
+      &quot;b&quot;: &quot;1208035&quot;,
+      &quot;deltaE76&quot;: 6.414885814429015
+    },
+    {
+      &quot;a&quot;: &quot;1208089&quot;,
+      &quot;b&quot;: &quot;1208027&quot;,
+      &quot;deltaE76&quot;: 10.173923975021498
+    },
+    {
+      &quot;a&quot;: &quot;1208090&quot;,
+      &quot;b&quot;: &quot;1208086&quot;,
+      &quot;deltaE76&quot;: 11.425331535442783
+    },
+    {
+      &quot;a&quot;: &quot;1208092&quot;,
+      &quot;b&quot;: &quot;1208061&quot;,
+      &quot;deltaE76&quot;: 10.694763616131786
+    },
+    {
+      &quot;a&quot;: &quot;1208093&quot;,
+      &quot;b&quot;: &quot;1208053&quot;,
+      &quot;deltaE76&quot;: 9.860118579737263
+    },
+    {
+      &quot;a&quot;: &quot;1208097&quot;,
+      &quot;b&quot;: &quot;1208079&quot;,
+      &quot;deltaE76&quot;: 7.03203679283385
+    }
+  ],
+  &quot;overlap_candidates&quot;: [],
+  &quot;roi_metrics&quot;: [
+    {
+      &quot;id&quot;: &quot;candidate-object&quot;,
+      &quot;file&quot;: &quot;014_roi1.png&quot;,
+      &quot;contrast_p90_p10&quot;: 126.0,
+      &quot;gray_entropy_bits&quot;: 7.436782354051893,
+      &quot;edge_fraction_16&quot;: 0.2210704998555331
+    }
+  ],
+  &quot;platform_points&quot;: [],
+  &quot;decision&quot;: &quot;needs_review&quot;
+}</pre></article><article><h2>ZB10-06 · blocked</h2><img src="015.jpg" loading="lazy"><pre>{
+  &quot;id&quot;: &quot;ZB10-06&quot;,
+  &quot;blockers&quot;: [
+    &quot;real_image_requirement_not_met&quot;
+  ],
+  &quot;review&quot;: [
+    &quot;source_permission_evidence_missing&quot;,
+    &quot;objects_missing: 不把边缘数当目标数&quot;,
+    &quot;critical_readability_pending:key-1&quot;,
+    &quot;critical_readability_pending:key-2&quot;,
+    &quot;critical_readability_pending:key-3&quot;,
+    &quot;chinese_text_coverage_unknown&quot;,
+    &quot;human_check_pending:source_fidelity&quot;,
+    &quot;human_check_pending:annotation_correct&quot;,
+    &quot;human_check_pending:critical_evidence_visible&quot;,
+    &quot;human_check_pending:no_answer_leakage&quot;,
+    &quot;human_check_pending:counting_rules_clear&quot;,
+    &quot;multi_region_dependencies_unproven&quot;,
+    &quot;wrong_pair_to_answer_effect_unproven&quot;,
+    &quot;bypass_review_pending_or_failed&quot;
+  ],
+  &quot;advisory&quot;: [],
+  &quot;metrics&quot;: {
+    &quot;width&quot;: 2720,
+    &quot;height&quot;: 1920,
+    &quot;mode&quot;: &quot;RGB&quot;,
+    &quot;exif_orientation&quot;: 1,
+    &quot;frame_count&quot;: 1,
+    &quot;global_640_proxy&quot;: {
+      &quot;contrast_p90_p10&quot;: 244.0,
+      &quot;gray_entropy_bits&quot;: 5.329750599266111,
+      &quot;edge_fraction_16&quot;: 0.1332039177928474
+    },
+    &quot;distinct_dependency_regions&quot;: 0,
+    &quot;effective_counterfactuals&quot;: 0
+  },
+  &quot;source&quot;: {
+    &quot;kind&quot;: &quot;synthetic_schematic&quot;,
+    &quot;authorization&quot;: &quot;pending&quot;,
+    &quot;author_record&quot;: &quot;/Users/hepeize/Work/cowork/outputs/ZeroBench_batch10_20261126/iteration_v2/cases/ZB10-06/author.json&quot;
+  },
+  &quot;difficulty_status&quot;: &quot;nonconforming_or_unknown_tools&quot;,
+  &quot;annotation_provenance&quot;: &quot;unknown&quot;,
+  &quot;preview&quot;: &quot;015.jpg&quot;,
+  &quot;roi_metrics&quot;: [
+    {
+      &quot;id&quot;: &quot;key-1&quot;,
+      &quot;file&quot;: &quot;015_roi1.png&quot;,
+      &quot;contrast_p90_p10&quot;: 70.10000000000036,
+      &quot;gray_entropy_bits&quot;: 5.456199257469658,
+      &quot;edge_fraction_16&quot;: 0.09147286821705426
+    },
+    {
+      &quot;id&quot;: &quot;key-2&quot;,
+      &quot;file&quot;: &quot;015_roi2.png&quot;,
+      &quot;contrast_p90_p10&quot;: 229.0,
+      &quot;gray_entropy_bits&quot;: 2.675635329880623,
+      &quot;edge_fraction_16&quot;: 0.08920691711389386
+    },
+    {
+      &quot;id&quot;: &quot;key-3&quot;,
+      &quot;file&quot;: &quot;015_roi3.png&quot;,
+      &quot;contrast_p90_p10&quot;: 40.0,
+      &quot;gray_entropy_bits&quot;: 4.682185205127363,
+      &quot;edge_fraction_16&quot;: 0.08404889683959452
+    }
+  ],
+  &quot;platform_points&quot;: [
+    {
+      &quot;xy&quot;: [
+        270,
+        957
+      ],
+      &quot;label&quot;: &quot;Panel A 2D 近邻细胞 C05&quot;
+    },
+    {
+      &quot;xy&quot;: [
+        1508,
+        374
+      ],
+      &quot;label&quot;: &quot;Panel B Z-slice 焦面峰 C05 (z=12)&quot;
+    },
+    {
+      &quot;xy&quot;: [
+        895,
+        932
+      ],
+      &quot;label&quot;: &quot;Panel A 消融关键细胞 C21&quot;
+    }
+  ],
+  &quot;evaluation_counts&quot;: {
+    &quot;incorrect&quot;: 1
+  },
+  &quot;decision&quot;: &quot;blocked&quot;
+}</pre></article><article><h2>ZB10-09 · blocked</h2><img src="016.jpg" loading="lazy"><pre>{
+  &quot;id&quot;: &quot;ZB10-09&quot;,
+  &quot;blockers&quot;: [
+    &quot;real_image_requirement_not_met&quot;
+  ],
+  &quot;review&quot;: [
+    &quot;source_permission_evidence_missing&quot;,
+    &quot;objects_missing: 不把边缘数当目标数&quot;,
+    &quot;critical_readability_pending:key-1&quot;,
+    &quot;critical_readability_pending:key-2&quot;,
+    &quot;critical_readability_pending:key-3&quot;,
+    &quot;chinese_text_coverage_unknown&quot;,
+    &quot;human_check_pending:source_fidelity&quot;,
+    &quot;human_check_pending:annotation_correct&quot;,
+    &quot;human_check_pending:critical_evidence_visible&quot;,
+    &quot;human_check_pending:no_answer_leakage&quot;,
+    &quot;human_check_pending:counting_rules_clear&quot;,
+    &quot;multi_region_dependencies_unproven&quot;,
+    &quot;wrong_pair_to_answer_effect_unproven&quot;,
+    &quot;bypass_review_pending_or_failed&quot;
+  ],
+  &quot;advisory&quot;: [],
+  &quot;metrics&quot;: {
+    &quot;width&quot;: 2760,
+    &quot;height&quot;: 1980,
+    &quot;mode&quot;: &quot;RGB&quot;,
+    &quot;exif_orientation&quot;: 1,
+    &quot;frame_count&quot;: 1,
+    &quot;global_640_proxy&quot;: {
+      &quot;contrast_p90_p10&quot;: 27.0,
+      &quot;gray_entropy_bits&quot;: 3.0143610722536867,
+      &quot;edge_fraction_16&quot;: 0.11005745019363222
+    },
+    &quot;distinct_dependency_regions&quot;: 0,
+    &quot;effective_counterfactuals&quot;: 0
+  },
+  &quot;source&quot;: {
+    &quot;kind&quot;: &quot;synthetic_schematic&quot;,
+    &quot;authorization&quot;: &quot;pending&quot;,
+    &quot;author_record&quot;: &quot;/Users/hepeize/Work/cowork/outputs/ZeroBench_batch10_20261126/iteration_v2/cases/ZB10-09/author.json&quot;
+  },
+  &quot;difficulty_status&quot;: &quot;nonconforming_or_unknown_tools&quot;,
+  &quot;annotation_provenance&quot;: &quot;unknown&quot;,
+  &quot;preview&quot;: &quot;016.jpg&quot;,
+  &quot;roi_metrics&quot;: [
+    {
+      &quot;id&quot;: &quot;key-1&quot;,
+      &quot;file&quot;: &quot;016_roi1.png&quot;,
+      &quot;contrast_p90_p10&quot;: 61.0,
+      &quot;gray_entropy_bits&quot;: 0.9731421312179199,
+      &quot;edge_fraction_16&quot;: 0.06004770423375075
+    },
+    {
+      &quot;id&quot;: &quot;key-2&quot;,
+      &quot;file&quot;: &quot;016_roi2.png&quot;,
+      &quot;contrast_p90_p10&quot;: 10.0,
+      &quot;gray_entropy_bits&quot;: 0.8448303700299509,
+      &quot;edge_fraction_16&quot;: 0.055515802027429936
+    },
+    {
+      &quot;id&quot;: &quot;key-3&quot;,
+      &quot;file&quot;: &quot;016_roi3.png&quot;,
+      &quot;contrast_p90_p10&quot;: 23.0,
+      &quot;gray_entropy_bits&quot;: 0.7533566026192954,
+      &quot;edge_fraction_16&quot;: 0.05447227191413238
+    }
+  ],
+  &quot;platform_points&quot;: [
+    {
+      &quot;xy&quot;: [
+        1088,
+        802
+      ],
+      &quot;label&quot;: &quot;星标止回阀 V30→V06&quot;
+    },
+    {
+      &quot;xy&quot;: [
+        828,
+        1088
+      ],
+      &quot;label&quot;: &quot;先导锁存阀 L1 (V10–V25)&quot;
+    },
+    {
+      &quot;xy&quot;: [
+        1088,
+        1296
+      ],
+      &quot;label&quot;: &quot;最优改造常闭阀 V16–V23&quot;
+    }
+  ],
+  &quot;evaluation_counts&quot;: {
+    &quot;incorrect&quot;: 0
+  },
+  &quot;decision&quot;: &quot;blocked&quot;
+}</pre></article><article><h2>ZB10-10 · blocked</h2><img src="017.jpg" loading="lazy"><pre>{
+  &quot;id&quot;: &quot;ZB10-10&quot;,
+  &quot;blockers&quot;: [
+    &quot;real_image_requirement_not_met&quot;
+  ],
+  &quot;review&quot;: [
+    &quot;source_permission_evidence_missing&quot;,
+    &quot;objects_missing: 不把边缘数当目标数&quot;,
+    &quot;critical_readability_pending:key-1&quot;,
+    &quot;critical_readability_pending:key-2&quot;,
+    &quot;critical_readability_pending:key-3&quot;,
+    &quot;chinese_text_coverage_unknown&quot;,
+    &quot;human_check_pending:source_fidelity&quot;,
+    &quot;human_check_pending:annotation_correct&quot;,
+    &quot;human_check_pending:critical_evidence_visible&quot;,
+    &quot;human_check_pending:no_answer_leakage&quot;,
+    &quot;human_check_pending:counting_rules_clear&quot;,
+    &quot;multi_region_dependencies_unproven&quot;,
+    &quot;wrong_pair_to_answer_effect_unproven&quot;,
+    &quot;bypass_review_pending_or_failed&quot;
+  ],
+  &quot;advisory&quot;: [],
+  &quot;metrics&quot;: {
+    &quot;width&quot;: 2760,
+    &quot;height&quot;: 1980,
+    &quot;mode&quot;: &quot;RGB&quot;,
+    &quot;exif_orientation&quot;: 1,
+    &quot;frame_count&quot;: 1,
+    &quot;global_640_proxy&quot;: {
+      &quot;contrast_p90_p10&quot;: 39.0,
+      &quot;gray_entropy_bits&quot;: 3.4041448719337777,
+      &quot;edge_fraction_16&quot;: 0.11319512773246525
+    },
+    &quot;distinct_dependency_regions&quot;: 0,
+    &quot;effective_counterfactuals&quot;: 0
+  },
+  &quot;source&quot;: {
+    &quot;kind&quot;: &quot;synthetic_schematic&quot;,
+    &quot;authorization&quot;: &quot;pending&quot;,
+    &quot;author_record&quot;: &quot;/Users/hepeize/Work/cowork/outputs/ZeroBench_batch10_20261126/iteration_v2/cases/ZB10-10/author.json&quot;
+  },
+  &quot;difficulty_status&quot;: &quot;nonconforming_or_unknown_tools&quot;,
+  &quot;annotation_provenance&quot;: &quot;unknown&quot;,
+  &quot;preview&quot;: &quot;017.jpg&quot;,
+  &quot;roi_metrics&quot;: [
+    {
+      &quot;id&quot;: &quot;key-1&quot;,
+      &quot;file&quot;: &quot;017_roi1.png&quot;,
+      &quot;contrast_p90_p10&quot;: 215.0,
+      &quot;gray_entropy_bits&quot;: 2.21599366320313,
+      &quot;edge_fraction_16&quot;: 0.08479427549194991
+    },
+    {
+      &quot;id&quot;: &quot;key-2&quot;,
+      &quot;file&quot;: &quot;017_roi2.png&quot;,
+      &quot;contrast_p90_p10&quot;: 174.0,
+      &quot;gray_entropy_bits&quot;: 1.6746475088904638,
+      &quot;edge_fraction_16&quot;: 0.07078115682766846
+    },
+    {
+      &quot;id&quot;: &quot;key-3&quot;,
+      &quot;file&quot;: &quot;017_roi3.png&quot;,
+      &quot;contrast_p90_p10&quot;: 215.0,
+      &quot;gray_entropy_bits&quot;: 1.7815296370324838,
+      &quot;edge_fraction_16&quot;: 0.07254025044722719
+    }
+  ],
+  &quot;platform_points&quot;: [
+    {
+      &quot;xy&quot;: [
+        503,
+        606
+      ],
+      &quot;label&quot;: &quot;E5 输出缺口 n&#x27;=E&quot;
+    },
+    {
+      &quot;xy&quot;: [
+        1533,
+        1065
+      ],
+      &quot;label&quot;: &quot;第1轮过载冷却瓦片 B01&quot;
+    },
+    {
+      &quot;xy&quot;: [
+        1449,
+        813
+      ],
+      &quot;label&quot;: &quot;最优组合锚点瓦片 B20&quot;
+    }
+  ],
+  &quot;evaluation_counts&quot;: {
+    &quot;incorrect&quot;: 2
+  },
+  &quot;decision&quot;: &quot;blocked&quot;
+}</pre></article><article><h2>ZBN-05 · blocked</h2><img src="018.jpg" loading="lazy"><pre>{
+  &quot;id&quot;: &quot;ZBN-05&quot;,
+  &quot;blockers&quot;: [
+    &quot;real_image_requirement_not_met&quot;
+  ],
+  &quot;review&quot;: [
+    &quot;source_permission_evidence_missing&quot;,
+    &quot;objects_missing: 不把边缘数当目标数&quot;,
+    &quot;critical_readability_pending:key-1&quot;,
+    &quot;critical_readability_pending:key-2&quot;,
+    &quot;critical_readability_pending:key-3&quot;,
+    &quot;chinese_text_coverage_unknown&quot;,
+    &quot;human_check_pending:source_fidelity&quot;,
+    &quot;human_check_pending:annotation_correct&quot;,
+    &quot;human_check_pending:critical_evidence_visible&quot;,
+    &quot;human_check_pending:no_answer_leakage&quot;,
+    &quot;human_check_pending:counting_rules_clear&quot;,
+    &quot;multi_region_dependencies_unproven&quot;,
+    &quot;wrong_pair_to_answer_effect_unproven&quot;,
+    &quot;bypass_review_pending_or_failed&quot;
+  ],
+  &quot;advisory&quot;: [],
+  &quot;metrics&quot;: {
+    &quot;width&quot;: 2760,
+    &quot;height&quot;: 1960,
+    &quot;mode&quot;: &quot;RGB&quot;,
+    &quot;exif_orientation&quot;: 1,
+    &quot;frame_count&quot;: 1,
+    &quot;global_640_proxy&quot;: {
+      &quot;contrast_p90_p10&quot;: 166.0,
+      &quot;gray_entropy_bits&quot;: 5.787160770218623,
+      &quot;edge_fraction_16&quot;: 0.08144979707806202
+    },
+    &quot;distinct_dependency_regions&quot;: 0,
+    &quot;effective_counterfactuals&quot;: 0
+  },
+  &quot;source&quot;: {
+    &quot;kind&quot;: &quot;simulated_observation&quot;,
+    &quot;authorization&quot;: &quot;pending&quot;,
+    &quot;author_record&quot;: &quot;/Users/hepeize/Work/cowork/outputs/ZeroBench_niche_domains_20261126/cases/ZBN-05/author.json&quot;
+  },
+  &quot;difficulty_status&quot;: &quot;not_evaluated&quot;,
+  &quot;annotation_provenance&quot;: &quot;unknown&quot;,
+  &quot;preview&quot;: &quot;018.jpg&quot;,
+  &quot;roi_metrics&quot;: [
+    {
+      &quot;id&quot;: &quot;key-1&quot;,
+      &quot;file&quot;: &quot;018_roi1.png&quot;,
+      &quot;contrast_p90_p10&quot;: 10.0,
+      &quot;gray_entropy_bits&quot;: 4.304933551969269,
+      &quot;edge_fraction_16&quot;: 0.009809183064997019
+    },
+    {
+      &quot;id&quot;: &quot;key-2&quot;,
+      &quot;file&quot;: &quot;018_roi2.png&quot;,
+      &quot;contrast_p90_p10&quot;: 25.0,
+      &quot;gray_entropy_bits&quot;: 4.782543155840494,
+      &quot;edge_fraction_16&quot;: 0.02435897435897436
+    },
+    {
+      &quot;id&quot;: &quot;key-3&quot;,
+      &quot;file&quot;: &quot;018_roi3.png&quot;,
+      &quot;contrast_p90_p10&quot;: 24.0,
+      &quot;gray_entropy_bits&quot;: 4.712106240179925,
+      &quot;edge_fraction_16&quot;: 0.017680381633870007
+    }
+  ],
+  &quot;platform_points&quot;: [
+    {
+      &quot;xy&quot;: [
+        1272,
+        475
+      ],
+      &quot;label&quot;: &quot;L13边缘热微笑主带(2168bp)&quot;
+    },
+    {
+      &quot;xy&quot;: [
+        916,
+        877
+      ],
+      &quot;label&quot;: &quot;L9共迁移2x亮带(477+476bp)&quot;
+    },
+    {
+      &quot;xy&quot;: [
+        648,
+        1226
+      ],
+      &quot;label&quot;: &quot;L6染料前沿上方141bp与隐匿44bp守恒&quot;
+    }
+  ],
+  &quot;decision&quot;: &quot;blocked&quot;
+}</pre></article><article><h2>ZBN-07 · blocked</h2><img src="019.jpg" loading="lazy"><pre>{
+  &quot;id&quot;: &quot;ZBN-07&quot;,
+  &quot;blockers&quot;: [
+    &quot;real_image_requirement_not_met&quot;
+  ],
+  &quot;review&quot;: [
+    &quot;source_permission_evidence_missing&quot;,
+    &quot;objects_missing: 不把边缘数当目标数&quot;,
+    &quot;critical_readability_pending:key-1&quot;,
+    &quot;critical_readability_pending:key-2&quot;,
+    &quot;critical_readability_pending:key-3&quot;,
+    &quot;chinese_text_coverage_unknown&quot;,
+    &quot;human_check_pending:source_fidelity&quot;,
+    &quot;human_check_pending:annotation_correct&quot;,
+    &quot;human_check_pending:critical_evidence_visible&quot;,
+    &quot;human_check_pending:no_answer_leakage&quot;,
+    &quot;human_check_pending:counting_rules_clear&quot;,
+    &quot;multi_region_dependencies_unproven&quot;,
+    &quot;wrong_pair_to_answer_effect_unproven&quot;,
+    &quot;bypass_review_pending_or_failed&quot;
+  ],
+  &quot;advisory&quot;: [],
+  &quot;metrics&quot;: {
+    &quot;width&quot;: 2760,
+    &quot;height&quot;: 1980,
+    &quot;mode&quot;: &quot;RGB&quot;,
+    &quot;exif_orientation&quot;: 1,
+    &quot;frame_count&quot;: 1,
+    &quot;global_640_proxy&quot;: {
+      &quot;contrast_p90_p10&quot;: 232.0,
+      &quot;gray_entropy_bits&quot;: 4.183114124233026,
+      &quot;edge_fraction_16&quot;: 0.11457979847242851
+    },
+    &quot;distinct_dependency_regions&quot;: 0,
+    &quot;effective_counterfactuals&quot;: 0
+  },
+  &quot;source&quot;: {
+    &quot;kind&quot;: &quot;simulated_observation&quot;,
+    &quot;authorization&quot;: &quot;pending&quot;,
+    &quot;author_record&quot;: &quot;/Users/hepeize/Work/cowork/outputs/ZeroBench_niche_domains_20261126/cases/ZBN-07/author.json&quot;
+  },
+  &quot;difficulty_status&quot;: &quot;not_evaluated&quot;,
+  &quot;annotation_provenance&quot;: &quot;unknown&quot;,
+  &quot;preview&quot;: &quot;019.jpg&quot;,
+  &quot;roi_metrics&quot;: [
+    {
+      &quot;id&quot;: &quot;key-1&quot;,
+      &quot;file&quot;: &quot;019_roi1.png&quot;,
+      &quot;contrast_p90_p10&quot;: 0.0,
+      &quot;gray_entropy_bits&quot;: 0.4059631599388769,
+      &quot;edge_fraction_16&quot;: 0.015951103160405485
+    },
+    {
+      &quot;id&quot;: &quot;key-2&quot;,
+      &quot;file&quot;: &quot;019_roi2.png&quot;,
+      &quot;contrast_p90_p10&quot;: 154.0,
+      &quot;gray_entropy_bits&quot;: 1.4765791562341954,
+      &quot;edge_fraction_16&quot;: 0.07942754919499105
+    },
+    {
+      &quot;id&quot;: &quot;key-3&quot;,
+      &quot;file&quot;: &quot;019_roi3.png&quot;,
+      &quot;contrast_p90_p10&quot;: 11.0,
+      &quot;gray_entropy_bits&quot;: 2.0821483945977044,
+      &quot;edge_fraction_16&quot;: 0.06800834824090637
+    }
+  ],
+  &quot;platform_points&quot;: [
+    {
+      &quot;xy&quot;: [
+        421,
+        1419
+      ],
+      &quot;label&quot;: &quot;L03 冷竞争非特异伪带 * (35 mm)&quot;
+    },
+    {
+      &quot;xy&quot;: [
+        1252,
+        677
+      ],
+      &quot;label&quot;: &quot;V3 反互补链新增 TF-A (108..117)&quot;
+    },
+    {
+      &quot;xy&quot;: [
+        1495,
+        1322
+      ],
+      &quot;label&quot;: &quot;M08 (−链 TF-B 螺旋协同位点)&quot;
+    }
+  ],
+  &quot;decision&quot;: &quot;blocked&quot;
+}</pre></article><article><h2>ZBN-08 · needs_review</h2><img src="020.jpg" loading="lazy"><pre>{
+  &quot;id&quot;: &quot;ZBN-08&quot;,
+  &quot;blockers&quot;: [],
+  &quot;review&quot;: [
+    &quot;source_permission_evidence_missing&quot;,
+    &quot;mixed_panels_require_separate_provenance_and_sample_consistency_review&quot;,
+    &quot;objects_missing: 不把边缘数当目标数&quot;,
+    &quot;critical_readability_pending:key-1&quot;,
+    &quot;critical_readability_pending:key-2&quot;,
+    &quot;critical_readability_pending:key-3&quot;,
+    &quot;chinese_text_coverage_unknown&quot;,
+    &quot;human_check_pending:source_fidelity&quot;,
+    &quot;human_check_pending:annotation_correct&quot;,
+    &quot;human_check_pending:critical_evidence_visible&quot;,
+    &quot;human_check_pending:no_answer_leakage&quot;,
+    &quot;human_check_pending:counting_rules_clear&quot;,
+    &quot;multi_region_dependencies_unproven&quot;,
+    &quot;wrong_pair_to_answer_effect_unproven&quot;,
+    &quot;bypass_review_pending_or_failed&quot;
+  ],
+  &quot;advisory&quot;: [],
+  &quot;metrics&quot;: {
+    &quot;width&quot;: 2760,
+    &quot;height&quot;: 1980,
+    &quot;mode&quot;: &quot;RGB&quot;,
+    &quot;exif_orientation&quot;: 1,
+    &quot;frame_count&quot;: 1,
+    &quot;global_640_proxy&quot;: {
+      &quot;contrast_p90_p10&quot;: 68.0,
+      &quot;gray_entropy_bits&quot;: 4.100098263468769,
+      &quot;edge_fraction_16&quot;: 0.15352281040412946
+    },
+    &quot;distinct_dependency_regions&quot;: 0,
+    &quot;effective_counterfactuals&quot;: 0
+  },
+  &quot;source&quot;: {
+    &quot;kind&quot;: &quot;mixed_composite&quot;,
+    &quot;authorization&quot;: &quot;pending&quot;,
+    &quot;author_record&quot;: &quot;/Users/hepeize/Work/cowork/outputs/ZeroBench_niche_domains_20261126/cases/ZBN-08/author.json&quot;,
+    &quot;panel_note&quot;: &quot;真实金相+计算谱图；须按面板核同一样品假设及许可&quot;
+  },
+  &quot;difficulty_status&quot;: &quot;not_evaluated&quot;,
+  &quot;annotation_provenance&quot;: &quot;unknown&quot;,
+  &quot;preview&quot;: &quot;020.jpg&quot;,
+  &quot;roi_metrics&quot;: [
+    {
+      &quot;id&quot;: &quot;key-1&quot;,
+      &quot;file&quot;: &quot;020_roi1.png&quot;,
+      &quot;contrast_p90_p10&quot;: 0.0,
+      &quot;gray_entropy_bits&quot;: 0.4595047315788447,
+      &quot;edge_fraction_16&quot;: 0.018962432915921288
+    },
+    {
+      &quot;id&quot;: &quot;key-2&quot;,
+      &quot;file&quot;: &quot;020_roi2.png&quot;,
+      &quot;contrast_p90_p10&quot;: 0.0,
+      &quot;gray_entropy_bits&quot;: 0.5381672423277006,
+      &quot;edge_fraction_16&quot;: 0.03729874776386404
+    },
+    {
+      &quot;id&quot;: &quot;key-3&quot;,
+      &quot;file&quot;: &quot;020_roi3.png&quot;,
+      &quot;contrast_p90_p10&quot;: 177.0,
+      &quot;gray_entropy_bits&quot;: 2.4592827416131273,
+      &quot;edge_fraction_16&quot;: 0.1169051878354204
+    }
+  ],
+  &quot;platform_points&quot;: [
+    {
+      &quot;xy&quot;: [
+        1250,
+        774
+      ],
+      &quot;label&quot;: &quot;P14 高角 Cu-Kα1/Kα2 2:1 双峰 (62.629°/62.802°)&quot;
+    },
+    {
+      &quot;xy&quot;: [
+        358,
+        338
+      ],
+      &quot;label&quot;: &quot;Fd-3m d-滑移消光检查窗 (200) 21.17°&quot;
+    },
+    {
+      &quot;xy&quot;: [
+        2205,
+        947
+      ],
+      &quot;label&quot;: &quot;彩色金相面积分数标尺 f1_obs=0.4285&quot;
+    }
+  ],
+  &quot;decision&quot;: &quot;needs_review&quot;
+}</pre></article></html>

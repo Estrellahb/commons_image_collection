@@ -1,0 +1,6 @@
+.env
+__pycache__/
+images/*
+!images/.gitkeep
+/来源与许可.jsonl
+/未入库.csv

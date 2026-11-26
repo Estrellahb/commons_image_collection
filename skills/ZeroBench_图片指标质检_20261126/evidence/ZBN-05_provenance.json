@@ -1,0 +1,26 @@
+{
+  "id": "ZBN-05",
+  "version": "v1",
+  "title": "双剪接转录本限制性酶切 14 泳道紫外凝胶与 P1–P9 拓扑解析",
+  "source": {
+    "kind": "scientific_data_rendering",
+    "title": "ZBN-05 Splice Isoform Alpha/Beta Restriction Digest UV Gel",
+    "author": "ZeroBench niche domains workflow",
+    "license": "Apache 2.0 / Open Genomic Data + CC BY 4.0 visual baseline",
+    "source_file": "render.py"
+  },
+  "image_provenance": {
+    "nature": "scientific_data_rendering",
+    "real_observation": false,
+    "authorization": "Open genomic cDNA data rendering + Wikimedia CC BY 4.0 visual reference",
+    "note": "基于开源基因组双剪接体序列数据程序渲染的紫外凝胶图，公开题面与图像均已做去身份化处理；完整数据库编号与许可见 attribution 与 source_data.json。"
+  },
+  "attribution": {
+    "database": "Ensembl GRCh38",
+    "gene_id": "ENSG00000141510 (TP53)",
+    "transcript_alpha": "ENST00000269305 (2512 bp)",
+    "transcript_beta": "ENST00000413465 (1018 bp)",
+    "visual_reference": "scouting/candidates/bio_assay_07_gel_uv.jpg (CC BY 4.0)",
+    "license": "Apache 2.0 / Open Ensembl Genomic Data + CC BY 4.0"
+  }
+}
