@@ -71,6 +71,9 @@ class CollectionTests(unittest.TestCase):
                         "INSERT INTO collection_queue (id, file_url, category) VALUES (?, ?, ?)",
                         [(3, SOURCE, CATEGORY), (2, second, "公共场景/市场摊位")],
                     )
+                self.assertEqual(db.execute(
+                    "SELECT authored_status, authored_ref FROM collection_queue ORDER BY id"
+                ).fetchall(), [("", ""), ("", "")])
                 self.assertEqual(read_queue(path), [
                     (second, "File:Example,_Detail.png", "公共场景/市场摊位"),
                     (SOURCE, "File:Example.jpg", CATEGORY),

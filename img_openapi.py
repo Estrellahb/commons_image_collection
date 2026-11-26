@@ -146,7 +146,10 @@ SELECTOR_PARAMETERS = [
     param(field, "图片定位字段，填写 id、file_url 或 path 中的一项。", schema) for field, schema in SELECTOR.items()
 ]
 AUTHORED_PARAMETERS = [
-    param("authored_status", "出题状态。显式传空字符串筛选未出题，省略此参数返回所有状态。", AUTHORED_VALUES["authored_status"]),
+    {
+        **param("authored_status", "出题状态。显式传空字符串筛选未出题。", AUTHORED_VALUES["authored_status"]),
+        "allowEmptyValue": True,
+    },
     param("authored", "出题状态的兼容筛选。0 为未出题，1 为已出题。", {**STRING, "enum": ["0", "1"]}),
 ]
 

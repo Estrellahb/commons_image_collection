@@ -142,5 +142,5 @@ Swagger UI 和 `/openapi.json` 可直接打开，业务接口仍按原有规则�
 
 - `authored_status` 接受 `""`（未出题）、`draft`（出题中）、`authored`（已出题）和 `discarded`（已淘汰）。`authored_ref` 保存题号或作者材料路径。
 - `PATCH /api/tags` 可提交 `{"id":1,"authored_status":"authored","authored_ref":"ZB-001 | outputs/题目材料"}`，也可用 `file_url` 或 `path` 三选一定位。省略字段会保留原值，空字符串可清空。批量接口同样支持这两个字段。
-- `/api/images`、`/api/queue`、`/api/archive` 及 `POST /api/claims?next=true` 支持 `?authored_status=draft` 等筛选。`?authored_status=` 和 `?authored=0` 只选未出题，`?authored=1` 只选已出题。省略筛选参数时返回所有出题状态。
+- `/api/images`、`/api/queue`、`/api/archive` 和 `POST /api/claims` 的下一条领取模式支持按出题状态筛选。`?authored_status=` 和 `?authored=0` 只选未出题，`?authored=1` 只选已出题，`?authored_status=draft` 只选出题中。省略筛选参数时匹配所有出题状态。
 - AI 和人工出题可使用 `POST /api/claims?authored=0`，请求体为 `{"next":true,"claimer":"作者名"}`，原子领取未出题图片。请求体也可传 `"authored_status":""`。领取后标记 `draft`，完成后写入 `authored` 和题目引用。

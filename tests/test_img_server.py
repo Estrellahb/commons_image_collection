@@ -667,10 +667,11 @@ class ClaimTrackingTests(unittest.TestCase):
             with sqlite3.connect(db_path) as db:
                 for table in ("collection_queue", "img_claims"):
                     columns = {row[1]: row[2:5] for row in db.execute(f"PRAGMA table_info({table})")}
-                    for field in ("question_types", "difficulty", "difficulty_tags", "tag_notes"):
+                    for field in ("question_types", "difficulty", "difficulty_tags", "tag_notes", "authored_status", "authored_ref"):
                         self.assertEqual(columns[field], ("TEXT", 1, "''"))
-                self.assertEqual(db.execute("SELECT file_path, claimed_by, question_types FROM img_claims").fetchone(),
-                                 ("old-local.png", "alice", ""))
+                self.assertEqual(db.execute(
+                    "SELECT file_path, claimed_by, question_types, authored_status, authored_ref FROM img_claims"
+                ).fetchone(), ("old-local.png", "alice", "", "", ""))
 
     def test_tag_api_validation_and_canonical_batch_rollback(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -727,7 +728,8 @@ class ClaimTrackingTests(unittest.TestCase):
             root = Path(tmp)
             img_dir, db_path, _, _ = self._setup_project(root)
             local_path = "local_only.png"
-            fields = {"question_types": ["counting"], "difficulty": "hard", "difficulty_tags": ["high_density"], "tag_notes": "第一层"}
+            fields = {"question_types": ["counting"], "difficulty": "hard", "difficulty_tags": ["high_density"],
+                      "tag_notes": "第一层", "authored_status": "draft", "authored_ref": "ZB-001"}
             with running_server(img_dir=img_dir, db_path=db_path, token="test-tag-token", root=root) as (_, _, port):
                 status, _, raw = self._request(port, "PATCH", "/api/tags", {"path": local_path, **fields})
                 self.assertEqual(status, 200)
@@ -742,6 +744,95 @@ class ClaimTrackingTests(unittest.TestCase):
                 _, _, raw = self._request(port, "GET", "/api/images?tagged=1&status=unclaimed")
                 self.assertEqual([item["path"] for item in json.loads(raw)["images"]], [local_path])
                 self.assertEqual(self._request(port, "GET", f"/download/{local_path}?claimer=charlie")[0], 200)
+
+    def test_authored_updates_and_filters_share_queue_and_local_metadata(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            img_dir, db_path, url1, _ = self._setup_project(root)
+            path = "居家场景/工具五金/zb-hardware-1234.png"
+            reference = "ZB-001 | outputs/题目材料"
+            with running_server(img_dir=img_dir, db_path=db_path, token="test-tag-token", root=root) as (_, _, port):
+                def patch_tags(data):
+                    status, _, raw = self._request(port, "PATCH", "/api/tags", data)
+                    self.assertEqual(status, 200, raw)
+                    return json.loads(raw)
+
+                patch_tags({"id": 1, "authored_status": "draft"})
+                self.assertEqual(patch_tags({"path": path, "authored_ref": reference})["authored_status"], "draft")
+                self.assertEqual(patch_tags({"file_url": url1, "authored_status": "authored"})["authored_ref"], reference)
+                patch_tags({"path": "local_only.png", "authored_status": "discarded"})
+                for invalid in ("done", " authored", None, 1):
+                    self.assertEqual(self._request(port, "PATCH", "/api/tags", {"id": 1, "authored_status": invalid})[0], 400)
+                self.assertEqual(self._request(port, "PATCH", "/api/tags", {"id": 1, "authored_ref": []})[0], 400)
+                self.assertEqual(self._request(port, "POST", "/api/tags/batch", {"items": [
+                    {"id": 1, "authored_status": "discarded"}, {"id": 999, "authored_ref": "missing"},
+                ]})[0], 404)
+                status, _, raw = self._request(port, "GET", "/api/meta/" + quote(path, safe="/"))
+                self.assertEqual(status, 200)
+                meta = json.loads(raw)
+                self.assertEqual((meta["authored_status"], meta["authored_ref"]), ("authored", reference))
+
+                for endpoint, key, unstarted, discarded in (
+                    ("/api/images", "images", [], ["discarded"]),
+                    ("/api/queue", "items", [""], []),
+                ):
+                    for suffix, expected in (
+                        ("", ["authored", *unstarted, *discarded]),
+                        ("?authored=1", ["authored"]),
+                        ("?authored=0", unstarted),
+                        ("?authored_status=", unstarted),
+                        ("?authored_status=discarded", discarded),
+                    ):
+                        with self.subTest(endpoint=endpoint, suffix=suffix):
+                            status, _, raw = self._request(port, "GET", endpoint + suffix)
+                            self.assertEqual(status, 200)
+                            items = json.loads(raw)[key]
+                            self.assertCountEqual([item["authored_status"] for item in items], expected)
+                            if suffix == "?authored=1":
+                                self.assertEqual(items[0]["authored_ref"], reference)
+                    for query in ("authored_status=done", "authored=2", "authored_status=draft&authored=1"):
+                        self.assertEqual(self._request(port, "GET", endpoint + "?" + query)[0], 400)
+
+                for query in ("authored_status=authored", "authored=1"):
+                    status, _, raw = self._request(port, "GET", "/api/archive?" + query + "&claimer=alice")
+                    self.assertEqual(status, 200)
+                    with zipfile.ZipFile(io.BytesIO(raw)) as archive:
+                        self.assertEqual(archive.namelist(), [path])
+                patch_tags({"path": "local_only.png", "authored_status": "", "authored_ref": ""})
+                status, _, raw = self._request(port, "GET", "/api/images?authored=0")
+                self.assertEqual(status, 200)
+                self.assertEqual([item["path"] for item in json.loads(raw)["images"]], ["local_only.png"])
+                for query in ("authored_status=", "authored=0"):
+                    status, _, raw = self._request(port, "GET", "/api/archive?" + query + "&claimer=bob")
+                    self.assertEqual(status, 200)
+                    with zipfile.ZipFile(io.BytesIO(raw)) as archive:
+                        self.assertEqual(archive.namelist(), ["local_only.png"])
+                self.assertEqual(self._request(port, "GET", "/api/archive?authored_status=invalid")[0], 400)
+
+    def test_next_claim_filters_by_authored_status(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            img_dir, db_path, _, _ = self._setup_project(root)
+            with sqlite3.connect(db_path) as db:
+                db.execute("UPDATE collection_queue SET authored_status = 'authored' WHERE id = 1")
+                db.execute("UPDATE collection_queue SET authored_status = 'draft' WHERE id = 2")
+                db.execute("INSERT INTO collection_queue (id, file_url, category) VALUES (3, 'File:Third.jpg', 'other')")
+            with running_server(img_dir=img_dir, db_path=db_path, token="test-tag-token", root=root) as (_, _, port):
+                payload = {"next": True, "claimer": "alice"}
+                self.assertEqual(self._request(port, "POST", "/api/claims?authored_status=bad", payload)[0], 400)
+                self.assertEqual(self._request(port, "POST", "/api/claims?authored=1", {
+                    **payload, "authored_status": "",
+                })[0], 400)
+                for suffix, fields, expected_id in (("?authored=0", {}, 3), ("?authored_status=draft", {}, 2),
+                                                    ("", {"authored_status": "authored"}, 1)):
+                    status, _, raw = self._request(port, "POST", "/api/claims" + suffix, {**payload, **fields})
+                    self.assertEqual(status, 200)
+                    self.assertEqual(json.loads(raw)["id"], expected_id)
+                for released_id, fields in ((3, {"authored_status": ""}), (1, {})):
+                    self.assertEqual(self._request(port, "DELETE", "/api/claims", {"id": released_id, "claimer": "alice"})[0], 200)
+                    status, _, raw = self._request(port, "POST", "/api/claims", {**payload, **fields})
+                    self.assertEqual(status, 200)
+                    self.assertEqual(json.loads(raw)["id"], released_id)
 
     def test_combined_filters_prefix_and_claimed_by_alias(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -797,6 +888,7 @@ class ClaimTrackingTests(unittest.TestCase):
                 def next_claim(name):
                     status, _, raw = self._request(port, "POST", "/api/claims", {
                         "next": True, "claimer": name, "question_types": ["counting"], "difficulty": "hard",
+                        "authored_status": "",
                     })
                     return status, json.loads(raw)
 
@@ -866,6 +958,16 @@ class ClaimTrackingTests(unittest.TestCase):
                 with sqlite3.connect(db_path) as db:
                     self.assertEqual(db.execute("SELECT claimed_by FROM img_claims WHERE file_path='local_only.png'").fetchone(), ("",))
 
+                def author_before_transaction(*args, **kwargs):
+                    self._request(port, "PATCH", "/api/tags", {"path": "local_only.png", "authored_status": "authored"})
+                    return original(*args, **kwargs)
+
+                with patch.object(server.claim_store, "acquire_batch_for_download", side_effect=author_before_transaction):
+                    status, _, _ = self._request(port, "GET", "/api/archive?path=local_only.png&authored=0&claimer=alice")
+                    self.assertEqual(status, 404)
+                with sqlite3.connect(db_path) as db:
+                    self.assertEqual(db.execute("SELECT claimed_by FROM img_claims WHERE file_path='local_only.png'").fetchone(), ("",))
+
     def test_safe_thumbnails_and_no_db_defaults(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -913,6 +1015,10 @@ class ClaimTrackingTests(unittest.TestCase):
                 status, _, raw = self._request(port, "GET", "/api/images?tagged=0")
                 self.assertEqual(status, 200)
                 self.assertTrue(all(item["question_types"] == [] and item["difficulty"] == "" for item in json.loads(raw)["images"]))
+                status, _, raw = self._request(port, "GET", "/api/meta/small.png")
+                self.assertEqual(status, 200)
+                meta = json.loads(raw)
+                self.assertEqual((meta["authored_status"], meta["authored_ref"]), ("", ""))
                 self.assertEqual(self._request(port, "PATCH", "/api/tags", {"path": "small.png", "difficulty": "hard"})[0], 503)
                 self.assertEqual(self._request(port, "GET", "/api/archive?question_type=counting")[0], 404)
 
