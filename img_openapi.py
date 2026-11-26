@@ -107,7 +107,10 @@ SCHEMAS = {
     ),
     "TagDefinition": obj({"code": STRING, "label": STRING, "description": STRING}),
     "TagSchema": obj(
-        {field: array(ref("TagDefinition")) for field in ("question_types", "difficulty", "difficulty_tags")}
+        {
+            field: array(ref("TagDefinition"))
+            for field in ("question_types", "difficulty", "difficulty_tags", "authored_status")
+        }
     ),
     "TagPatch": {
         **obj({**SELECTOR, **TAG_VALUES, **AUTHORED_VALUES}),
@@ -414,6 +417,12 @@ def openapi_document(*, allow_query_token=True):
         claims,
         "领取指定图片或下一条队列项",
         claim_response,
+        description=(
+            "next=true 时按队列 id 顺序领取第一条符合条件的未领取记录。"
+            "authored_status、authored、category 可放查询参数或 JSON 请求体；"
+            "question_types、difficulty（单值字符串）、difficulty_tags、match 仅从 JSON 请求体读取。"
+            "省略出题状态筛选时匹配所有状态，出题领取建议传 ?authored=0 或 {\"authored_status\": \"\"}。"
+        ),
         params=[
             *claim_selector,
             param("next", "领取下一条未领取的队列项。", BOOLEAN),

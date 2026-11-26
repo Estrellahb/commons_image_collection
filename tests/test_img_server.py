@@ -200,6 +200,8 @@ class ImgServerHTTPTests(unittest.TestCase):
                 self.assertEqual(spec["paths"]["/health"]["get"]["security"], [])
                 self.assertNotIn("security", spec["paths"]["/api/images"]["get"])
                 self.assertEqual(spec["paths"]["/api/images"]["options"]["security"], [])
+                self.assertIn("authored_status", spec["components"]["schemas"]["TagSchema"]["properties"])
+                self.assertIn("JSON 请求体", spec["paths"]["/api/claims"]["post"]["description"])
                 self.assertEqual(http_request(port, "GET", "/api/images")[0], 401)
                 self.assertEqual(http_request(port, "GET", "/api/images", headers={"Authorization": "Bearer swagger-test-token"})[0], 200)
 
@@ -688,6 +690,8 @@ class ClaimTrackingTests(unittest.TestCase):
                 self.assertEqual(len(schema["question_types"]), 8)
                 self.assertEqual(len(schema["difficulty_tags"]), 9)
                 self.assertEqual(schema["difficulty"][2]["label"], "困难")
+                self.assertEqual([item["code"] for item in schema["authored_status"]], ["", "draft", "authored", "discarded"])
+                self.assertEqual(schema["authored_status"][2]["label"], "已出题")
 
                 for invalid in ({"id": True}, {"id": 2**100}, {"path": ""}, {"id": 1, "file_url": ""}, {},
                                 {"id": 1, "difficulty": "very-hard"}, {"id": 1, "difficulty_tags": "small_target"},
@@ -771,6 +775,18 @@ class ClaimTrackingTests(unittest.TestCase):
                 self.assertEqual(status, 200)
                 meta = json.loads(raw)
                 self.assertEqual((meta["authored_status"], meta["authored_ref"]), ("authored", reference))
+
+                for query, expected_filter in (("", "null"), ("?authored=0", '""'), ("?authored_status=draft", '"draft"')):
+                    status, headers, html_raw = http_request(
+                        port, "GET", "/" + query, headers={"Authorization": "Bearer test-tag-token", "Accept": "text/html"}
+                    )
+                    self.assertEqual(status, 200)
+                    self.assertIn("text/html", headers["Content-Type"])
+                    html_text = html_raw.decode("utf-8")
+                    self.assertIn('name="authored_status"', html_text)
+                    self.assertIn('value="__all__"', html_text)
+                    self.assertIn('name="authored_ref"', html_text)
+                    self.assertIn(f'"authored_status": {expected_filter}', html_text)
 
                 for endpoint, key, unstarted, discarded in (
                     ("/api/images", "images", [], ["discarded"]),

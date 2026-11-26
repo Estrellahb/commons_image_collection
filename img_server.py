@@ -1226,7 +1226,7 @@ def render_gallery_html(items: list[dict], directory_name: str, *, claim_enabled
     h1 {{ font-size: 20px; margin: 0; }}
     .toolbar {{ display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 16px; padding: 12px; background: #fff; border: 1px solid #dbe4e8; border-radius: 8px; }}
     .toolbar input {{ padding: 7px 10px; border: 1px solid #b9cad2; border-radius: 6px; font-size: 14px; }}
-    .toolbar select, dialog select, dialog textarea {{ padding: 6px 8px; border: 1px solid #b9cad2; border-radius: 6px; font: inherit; }}
+    .toolbar select, dialog select, dialog input, dialog textarea {{ padding: 6px 8px; border: 1px solid #b9cad2; border-radius: 6px; font: inherit; }}
     .toolbar label, dialog label {{ font-size: 14px; }}
     .tag-picker {{ display: flex; flex-wrap: wrap; gap: 8px 16px; }}
     .tag-picker label {{ display: flex; align-items: center; gap: 4px; }}
@@ -1236,7 +1236,7 @@ def render_gallery_html(items: list[dict], directory_name: str, *, claim_enabled
     dialog::backdrop {{ background: #1a242b66; }}
     dialog form {{ display: grid; gap: 10px; }}
     dialog h2 {{ margin: 0; font-size: 18px; }}
-    dialog textarea {{ display: block; box-sizing: border-box; width: 100%; }}
+    dialog input, dialog textarea {{ display: block; box-sizing: border-box; width: 100%; }}
     .error {{ color: #9c3018; }}
     .notes {{ white-space: pre-wrap; overflow-wrap: anywhere; }}
     .actions {{ display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }}
@@ -1244,9 +1244,14 @@ def render_gallery_html(items: list[dict], directory_name: str, *, claim_enabled
     .btn.secondary {{ background: #e1eaee; color: #194353; }}
     .btn.warn {{ background: #b84a27; color: #fff; }}
     .meta {{ color: #526570; font-size: 13px; }}
+    .badges {{ display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }}
     .badge {{ display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 12px; font-weight: 600; }}
     .badge.free {{ background: #ddf3e4; color: #18643a; }}
     .badge.busy {{ background: #fde8e1; color: #9c3018; }}
+    .badge.authored-unstarted {{ background: #eef3f5; color: #526570; }}
+    .badge.authored-draft {{ background: #fff3d6; color: #8a5a00; }}
+    .badge.authored-done {{ background: #dcebfa; color: #144d82; }}
+    .badge.authored-discarded {{ background: #f1e6f4; color: #6c327c; }}
     .grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }}
     .card {{ background: #fff; border: 1px solid #dbe4e8; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; }}
     .thumb {{ height: 150px; background: #eef3f5; display: flex; align-items: center; justify-content: center; overflow: hidden; color: #526570; font-size: 13px; }}
@@ -1274,6 +1279,7 @@ def render_gallery_html(items: list[dict], directory_name: str, *, claim_enabled
     <label>当前领取人 <input id="claimerInput" placeholder="输入姓名"></label>
     <label>已有领取人 <input name="claimed_by"></label>
     <label>领取状态 <select name="status"><option value="all">全部</option><option value="unclaimed">未领取</option><option value="claimed">已领取</option></select></label>
+    <label>出题状态 <select name="authored_status"><option value="__all__">全部</option><option value="">未出题</option><option value="draft">出题中</option><option value="authored">已出题</option><option value="discarded">已淘汰</option></select></label>
     <label>图片类别 <input name="category"></label>
     <label>目录前缀 <input name="prefix"></label>
     <label>标注状态 <select name="tagged"><option value="">全部</option><option value="1">已打标</option><option value="0">待标注</option></select></label>
@@ -1286,11 +1292,13 @@ def render_gallery_html(items: list[dict], directory_name: str, *, claim_enabled
   <main id="content"></main>
   <dialog id="tagEditor" aria-labelledby="editTitle">
     <form id="editTags">
-      <h2 id="editTitle">编辑标签</h2>
+      <h2 id="editTitle">编辑标签与出题状态</h2>
       <div class="path" id="editPath"></div>
       <fieldset><legend>候选题型</legend><div class="tag-picker" id="editQuestionTypes"></div></fieldset>
       <label>综合难度 <select name="difficulty"></select></label>
       <fieldset><legend>视觉难点</legend><div class="tag-picker" id="editDifficultyTags"></div></fieldset>
+      <label>出题状态 <select name="authored_status"></select></label>
+      <label>题号/材料路径 <input name="authored_ref" placeholder="如 ZB-001 | outputs/题目材料"></label>
       <label>出题备注 <textarea name="tag_notes" rows="3"></textarea></label>
       <div class="error" id="editError" role="alert" hidden></div>
       <div class="actions"><button class="btn" type="submit">保存</button><button class="btn secondary" id="closeEditor" type="button">取消</button></div>
@@ -1331,12 +1339,17 @@ def render_gallery_html(items: list[dict], directory_name: str, *, claim_enabled
     for (const name of filterFields) {{
       if (name in currentFilters) filterForm.elements[name].value = currentFilters[name];
     }}
+    filterForm.elements.authored_status.value =
+      currentFilters.authored_status === null || currentFilters.authored_status === undefined
+        ? "__all__"
+        : currentFilters.authored_status;
     document.getElementById("clearFilters").href = withToken("/");
     filterForm.addEventListener("submit", (event) => {{
       event.preventDefault();
       const values = new FormData(filterForm);
       const params = Object.fromEntries(filterFields.map((name) => [name, values.get(name)]));
-      params.authored_status = currentFilters.authored_status;
+      const rawAuthored = values.get("authored_status");
+      params.authored_status = rawAuthored === "__all__" ? null : rawAuthored;
       for (const [, name] of filterTags) {{
         params[name] = tagSchema ? values.getAll(name) : currentFilters[name];
       }}
@@ -1424,6 +1437,19 @@ def render_gallery_html(items: list[dict], directory_name: str, *, claim_enabled
         option.title = description;
         select.add(option);
       }}
+      const authoredSelect = editForm.elements.authored_status;
+      authoredSelect.replaceChildren();
+      const filterAuthored = filterForm.elements.authored_status;
+      for (const {{ code, label, description }} of tagSchema.authored_status || []) {{
+        const option = new Option(label, code);
+        option.title = description;
+        authoredSelect.add(option);
+        const filterOpt = Array.from(filterAuthored.options).find((opt) => opt.value === code);
+        if (filterOpt) {{
+          filterOpt.textContent = label;
+          filterOpt.title = description;
+        }}
+      }}
     }}
 
     function editTags(item) {{
@@ -1432,6 +1458,8 @@ def render_gallery_html(items: list[dict], directory_name: str, *, claim_enabled
       fillPicker(document.getElementById("editQuestionTypes"), tagSchema.question_types, "question_types", item.question_types);
       fillPicker(document.getElementById("editDifficultyTags"), tagSchema.difficulty_tags, "difficulty_tags", item.difficulty_tags);
       editForm.elements.difficulty.value = item.difficulty;
+      editForm.elements.authored_status.value = item.authored_status || "";
+      editForm.elements.authored_ref.value = item.authored_ref || "";
       editForm.elements.tag_notes.value = item.tag_notes;
       showError(editError, "");
       editor.showModal();
@@ -1451,6 +1479,8 @@ def render_gallery_html(items: list[dict], directory_name: str, *, claim_enabled
         question_types: values.getAll("question_types").sort(),
         difficulty: values.get("difficulty"),
         difficulty_tags: values.getAll("difficulty_tags").sort(),
+        authored_status: values.get("authored_status"),
+        authored_ref: values.get("authored_ref"),
         tag_notes: values.get("tag_notes"),
       }};
       const changes = Object.fromEntries(Object.entries(annotation).filter(
@@ -1526,10 +1556,29 @@ def render_gallery_html(items: list[dict], directory_name: str, *, claim_enabled
         }}
 
         if (claimEnabled) {{
-          const badge = document.createElement("span");
-          badge.className = "badge " + (item.claimed ? "busy" : "free");
-          badge.textContent = item.claimed ? `已领取：${{item.claimed_by}}` : "未领取";
-          info.appendChild(badge);
+          const badges = document.createElement("div");
+          badges.className = "badges";
+          const claimBadge = document.createElement("span");
+          claimBadge.className = "badge " + (item.claimed ? "busy" : "free");
+          claimBadge.textContent = item.claimed ? `已领取：${{item.claimed_by}}` : "未领取";
+          badges.appendChild(claimBadge);
+
+          const authoredCode = item.authored_status || "";
+          const authoredMap = {{ "": ["未出题", "authored-unstarted"], draft: ["出题中", "authored-draft"], authored: ["已出题", "authored-done"], discarded: ["已淘汰", "authored-discarded"] }};
+          const [fallbackLabel, authoredCls] = authoredMap[authoredCode] || [authoredCode, "authored-unstarted"];
+          const authoredLabel = tagSchema?.authored_status?.find((opt) => opt.code === authoredCode)?.label || fallbackLabel;
+          const authoredBadge = document.createElement("span");
+          authoredBadge.className = `badge ${{authoredCls}}`;
+          authoredBadge.textContent = authoredLabel;
+          badges.appendChild(authoredBadge);
+          info.appendChild(badges);
+
+          if (item.authored_ref) {{
+            const refEl = document.createElement("div");
+            refEl.className = "meta notes";
+            refEl.textContent = `出题引用：${{item.authored_ref}}`;
+            info.appendChild(refEl);
+          }}
         }}
 
         const rowActions = document.createElement("div");
@@ -1560,7 +1609,7 @@ def render_gallery_html(items: list[dict], directory_name: str, *, claim_enabled
             const nextName = prompt(`当前领取人：${{item.claimed_by}}\n请输入新的领取人（留空则释放）：`, item.claimed_by);
             if (nextName === null) return;
             try {{
-              const selector = item.queue_id == null ? {{ path: encodeURIComponent(item.path) }} : {{ id: item.queue_id }};
+              const selector = item.queue_id == null ? {{ path: item.path }} : {{ id: item.queue_id }};
               await callApi("PATCH", withToken("/api/claims"), {{
                 ...selector,
                 claimer: claimerInput.value.trim() || item.claimed_by,

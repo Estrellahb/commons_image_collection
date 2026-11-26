@@ -30,7 +30,13 @@ DIFFICULTY_TAGS = {
 }
 
 TAG_FIELDS = ("question_types", "difficulty", "difficulty_tags", "tag_notes")
-AUTHORED_STATUSES = ("", "draft", "authored", "discarded")
+AUTHORED_STATUS_META = {
+    "": ("未出题", "尚未用于出题的图片。"),
+    "draft": ("出题中", "已选定拟出题或正在构造复算中。"),
+    "authored": ("已出题", "已定稿完成出题并通过质检。"),
+    "discarded": ("已淘汰", "经核查不适合出题的图片。"),
+}
+AUTHORED_STATUSES = tuple(AUTHORED_STATUS_META)
 AUTHORED_FIELDS = ("authored_status", "authored_ref")
 ANNOTATION_FIELDS = (*TAG_FIELDS, *AUTHORED_FIELDS)
 
@@ -43,6 +49,7 @@ def schema():
             ("question_types", QUESTION_TYPES),
             ("difficulty", DIFFICULTIES),
             ("difficulty_tags", DIFFICULTY_TAGS),
+            ("authored_status", AUTHORED_STATUS_META),
         )
     }
 
