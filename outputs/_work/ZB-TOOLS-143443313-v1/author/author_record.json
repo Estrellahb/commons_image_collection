@@ -1,0 +1,202 @@
+{
+  "id": "ZB-TOOLS-143443313-v1",
+  "version": "v1",
+  "title": "工具盒三排取件与双单联合约束",
+  "status": "frozen_local",
+  "main_image": {
+    "file": "public/image.jpg",
+    "width": 4032,
+    "height": 3024,
+    "kind": "real_photo"
+  },
+  "public_files": [
+    "public/image.jpg",
+    "public/prompt.md",
+    "public/attribution.md"
+  ],
+  "prompt": "把图中的红色工具盒当作一张取件图。只考虑带印刷槽标的三排批头，按上、中、下分别称为 A、B、C 排。每排从左到右用两位数字编号，从 `01` 开始。槽标是槽上方白圆里的符号和它右边的数字。每个批头按**插入的槽**归位。判色看靠槽口、围绕批头柄的色环。红和橙归为红类，黄归为黄类。\n\n把棘轮扳手头部大黑圆盘的中心记为 L，把三排槽右下方单独横放的短金属件朝右露出的银色圆端面中心记为 R。批头的位置取所属槽标白圆的中心。所有距离取所述两点横坐标差的绝对值，单位为 4032 × 3024 主图的原生像素。若按缩放图测量，将横坐标按宽度比例换回。下列距离上限均含等号。\n\n| 边 | 允许条件 |\n| --- | --- |\n| L–A | A 的色环为红类或黄类，且距离不超过 1680 px。 |\n| A–B | A 已通过 L–A 条件。距离不超过 1490 px。B 的槽标白圆内若是六边形，两种 A 色环都允许。其余 B 槽只有在色环为红类或黄类、且与 A 不同类时才允许。 |\n| C–R | C 的槽标白圆内是中心带白点的黑色六角星，且槽中批头的实际工作端没有单片宽直刃。距离不超过 1750 px。 |\n| B–C | B 的槽标白圆内为六边形，或它的色环为红类或黄类。C 已通过 C–R 条件。距离不超过 1230 px。 |\n\n一张取件单是一个依次取 A、B、C 各一件的三元组，四条边 L–A、A–B、B–C、C–R 必须都允许。积分为三个槽标的数字按 `A + 2B + C` 计算。一份双单方案由两张取件单组成。两单不能共用任何批头，交换两单次序算同一个方案。\n\n把双单积分按从小到大记为 `(s,t)`。工况 M 的目标积分是 `(45,52)`，工况 N 的目标积分是 `(44,51)`。给定目标 `(u,v)` 时，方案偏差为 `|s−u|+|t−v|`，单位为积分。若要用同一份方案应对两种工况，先最小化两种偏差中的较大值，再在此前提下最小化偏差之和。\n\n1. 四类允许边各有多少条？按 L–A、A–B、B–C、C–R 输出。\n2. 完整取件单有多少张？\n3. 双单方案有多少份？\n4. 分别只考虑 M、只考虑 N 时，各自的最小偏差和达到该偏差的双单方案数是多少？\n5. 同一份方案应对两种工况时，输出最小的较大偏差、在该条件下最小的偏差之和、同时达到这两个值的方案数，以及其中字典序最小的一份方案。\n\n输出一行，格式为 `LA,AB,BC,CR|单数|双单数|M偏差,M并列数,N偏差,N并列数|较大偏差,偏差和,并列数,取件单1,取件单2`。每张取件单写成按 A、B、C 顺序拼接的六位字符串，保留前导零。两张取件单按字符串升序排列后比较整个字符串对。边数、计数、偏差和取件单编码均精确判分，允许用等值小数表示偏差。\n",
+  "thinking": "核对槽位印刷符号、连续色环和实际刃形三类局部证据，令其共同改变允许边。双单的共件排除将三个排区的信息用于同一个可行集合。L/R 端点对上、下排分别施加独立投影门限。C06 的白点星印刷和宽直刃实物差异会改变联合最优值。",
+  "cot_image_understanding": "L 为扳手头左端大黑圆盘，横坐标约 1177 px。R 为三排右下方短金属件朝右的银色端面，横坐标约 3798 px。以下位置是印刷白圆的中心。数字属于槽标，色环和刃形属于插在该槽的实物。\n\nA01（x=1060.5 px，十字 1，红类环）、A02（x=1343 px，十字 2，红黄之外）、A03（x=1627.5 px，十字 2，黄环）、A04（x=1906.5 px，十字 3，红类环）、A05（x=2181 px，米字 1，红黄之外）、A06（x=2453.5 px，米字 2，红类环）、A07（x=2720 px，米字 2，红类环）、A08（x=2984.5 px，米字 3，黄环）、A09（x=3244 px，横杠 3，红黄之外）、A10（x=3498.5 px，横杠 4，红黄之外）。\n\nB01（x=1048.5 px，横杠 5.5，黄环）、B02（x=1333.5 px，横杠 6.5，红黄之外）、B03（x=1638 px，六边形 3，环色不参与规则）、B04（x=1918 px，六边形 4，环色不参与规则）、B05（x=2189 px，六边形 5，环色不参与规则）、B06（x=2458.5 px，六边形 6，环色不参与规则）、B07（x=2705.5 px，实心六角星 10，红类环）、B08（x=2967 px，实心六角星 15，红类环）、B09（x=3226 px，实心六角星 20，红黄之外）、B10（x=3480 px，实心六角星 25，红类环）。\n\nC01（x=1069.5 px，实心六角星 27，按印刷标记剔除）、C02（x=1354 px，实心六角星 30，按印刷标记剔除）、C03（x=1633.5 px，实心六角星 40，按印刷标记剔除）、C04（x=1910 px，白点六角星 10，实际无单片宽直刃）、C05（x=2180 px，白点六角星 15，实际无单片宽直刃）、C06（x=2449 px，白点六角星 20，实际为单片宽直刃）、C07（x=2711 px，白点六角星 25，实际无单片宽直刃）、C08（x=2970.5 px，白点六角星 27，实际无单片宽直刃）、C09（x=3228 px，白点六角星 30，实际无单片宽直刃）、C10（x=3479.5 px，白点六角星 40，实际无单片宽直刃）。\n\nB01 杆身有红色反光，靠槽口的连续红黄判色环为黄色。C06 上方的白点星与其所装宽直刃形成错配。右侧长杆斜伸，逐个沿柄回溯到插入的槽。表中所有坐标以主图左上角为原点。",
+  "cot_reasoning": "允许的上排槽为 A01、A03、A04、A06、A07。A08 为黄色环，但距 L 1807.5 px，超过 1680 px。中排 B01 为黄色环，B03–B06 为六边形槽标，B07、B08、B10 为红类环，其余中排槽不满足颜色或符号条件。下排带白点星标槽为 C04–C10，其中 C06 实际端部是单片宽直刃，排除。C04 距 R 1888 px，排除。余下 C05、C07、C08、C09、C10 可连 R。\n\nA–B 按环色或六边形规则，再按投影距离筛成 25 条。B–C 共有 29 条。连接两类边得到 83 个完整三元组，从中选取完全不共件的无序二元组共 1692 个。各积分按槽标数字 A+2B+C 汇总。M 单独最优偏差为 3，有 5 份双单达到。N 单独最优偏差为 2，有 2 份达到。按较大偏差、偏差和依次最小化，得到 (3,6)，共有 3 份。规范代表为 A01–B06–C10 与 A04–B05–C09，积分分别为 53、43。其 M、N 偏差分别均为 3，满足联合最优。",
+  "response": "5,25,29,5|83|1692|3,5,2,2|3,6,3,010610,040509",
+  "answer_fields": [
+    {
+      "field": "LA",
+      "expected": 5,
+      "unit": "条",
+      "comparison": "数值精确比较，等值小数可接受",
+      "tolerance": 0
+    },
+    {
+      "field": "AB",
+      "expected": 25,
+      "unit": "条",
+      "comparison": "数值精确比较，等值小数可接受",
+      "tolerance": 0
+    },
+    {
+      "field": "BC",
+      "expected": 29,
+      "unit": "条",
+      "comparison": "数值精确比较，等值小数可接受",
+      "tolerance": 0
+    },
+    {
+      "field": "CR",
+      "expected": 5,
+      "unit": "条",
+      "comparison": "数值精确比较，等值小数可接受",
+      "tolerance": 0
+    },
+    {
+      "field": "tickets",
+      "expected": 83,
+      "unit": "张",
+      "comparison": "数值精确比较，等值小数可接受",
+      "tolerance": 0
+    },
+    {
+      "field": "pairs",
+      "expected": 1692,
+      "unit": "份",
+      "comparison": "数值精确比较，等值小数可接受",
+      "tolerance": 0
+    },
+    {
+      "field": "M_min",
+      "expected": 3,
+      "unit": "积分",
+      "comparison": "数值精确比较，等值小数可接受",
+      "tolerance": 0
+    },
+    {
+      "field": "M_ties",
+      "expected": 5,
+      "unit": "份",
+      "comparison": "数值精确比较，等值小数可接受",
+      "tolerance": 0
+    },
+    {
+      "field": "N_min",
+      "expected": 2,
+      "unit": "积分",
+      "comparison": "数值精确比较，等值小数可接受",
+      "tolerance": 0
+    },
+    {
+      "field": "N_ties",
+      "expected": 2,
+      "unit": "份",
+      "comparison": "数值精确比较，等值小数可接受",
+      "tolerance": 0
+    },
+    {
+      "field": "joint_max",
+      "expected": 3,
+      "unit": "积分",
+      "comparison": "数值精确比较，等值小数可接受",
+      "tolerance": 0
+    },
+    {
+      "field": "joint_sum",
+      "expected": 6,
+      "unit": "积分",
+      "comparison": "数值精确比较，等值小数可接受",
+      "tolerance": 0
+    },
+    {
+      "field": "joint_ties",
+      "expected": 3,
+      "unit": "份",
+      "comparison": "数值精确比较，等值小数可接受",
+      "tolerance": 0
+    },
+    {
+      "field": "ticket1",
+      "expected": "010610",
+      "unit": "六位编码",
+      "comparison": "字符串精确比较，保留前导零",
+      "tolerance": 0
+    },
+    {
+      "field": "ticket2",
+      "expected": "040509",
+      "unit": "六位编码",
+      "comparison": "字符串精确比较，保留前导零",
+      "tolerance": 0
+    }
+  ],
+  "platform_points": [
+    {
+      "xy": [
+        2614,
+        1243
+      ],
+      "label": "C06 实际单片宽直刃，控制下排资格"
+    },
+    {
+      "xy": [
+        1173,
+        958
+      ],
+      "label": "B01 黄色基环外弧，旁有红色反光"
+    },
+    {
+      "xy": [
+        3798,
+        1508
+      ],
+      "label": "独立短金属件的银色端面中心，定义右端距离"
+    }
+  ],
+  "question_types": [
+    "counting",
+    "complex_instruction",
+    "localization_measurement",
+    "robust_ocr"
+  ],
+  "difficulty": "hard",
+  "difficulty_status": "not_evaluated",
+  "model_attempts": [],
+  "difficulty_tags": [
+    "cross_region_alignment",
+    "high_similarity",
+    "multi_hop_visual",
+    "small_target"
+  ],
+  "qa_decision": "authoring_candidate",
+  "review_evidence": [
+    "author/qa_review.md",
+    "author/pair_review.json",
+    "author/source.json"
+  ],
+  "verification": {
+    "main_solver": "solver.py",
+    "independent_enumerator": "author/verify.py",
+    "output": "recompute.json"
+  },
+  "source_and_deduplication_limits": {
+    "database_initial_queue_counts": {
+      "unwritten": 415,
+      "authored": 0,
+      "draft": 0,
+      "discarded": 0
+    },
+    "img_claims_initial_count": 0,
+    "same_scene_queue_ids": [
+      107,
+      316
+    ],
+    "same_scene_page_ids": [
+      143443313,
+      145653915
+    ],
+    "local_skill_examples_match": false,
+    "separate_exclusion_list_present": false,
+    "scope": "检索本项目技能包中的例题、manifest、数据库以及本机可查文件名。历史引用的外部难题300排除清单未随项目提供，无法核对该外部清单。"
+  },
+  "author_facts": "author/facts.json",
+  "primary_question_type": "counting",
+  "primary_question_type_label": "计数聚合链",
+  "primary_question_type_reason": "主问要求依据图像属性及距离建立约束，统计完整取件单和互斥双单方案，并在这些方案中优化。"
+}

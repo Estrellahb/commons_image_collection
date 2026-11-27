@@ -1,0 +1,143 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><title>ZeroBench 图片质检</title><style>body{font:16px system-ui;margin:30px;background:#f4f4f1;color:#202020}article{background:white;margin:22px 0;padding:24px;border:1px solid #ddd;overflow:auto}img{max-width:48%;float:left;margin:0 24px 16px 0}pre{white-space:pre-wrap;font-size:13px}h1{font-size:28px}</style><h1>图片与题目证据质检</h1><p>代理指标用于筛选，不证明难度。缺失值不会自动通过；判定与试答证据分开。</p><article><h2>ZB-FERRULES-0318-v1 · authoring_candidate</h2><img src="001.jpg" loading="lazy"><pre>{
+  &quot;id&quot;: &quot;ZB-FERRULES-0318-v1&quot;,
+  &quot;blockers&quot;: [],
+  &quot;review&quot;: [],
+  &quot;advisory&quot;: [],
+  &quot;metrics&quot;: {
+    &quot;width&quot;: 4409,
+    &quot;height&quot;: 3185,
+    &quot;mode&quot;: &quot;RGB&quot;,
+    &quot;exif_orientation&quot;: 1,
+    &quot;frame_count&quot;: 1,
+    &quot;global_640_proxy&quot;: {
+      &quot;contrast_p90_p10&quot;: 183.0,
+      &quot;gray_entropy_bits&quot;: 7.781185731867042,
+      &quot;edge_fraction_16&quot;: 0.18474971961413483
+    },
+    &quot;object_count&quot;: 12,
+    &quot;objects_per_MP&quot;: 0.854538650605138,
+    &quot;class_count&quot;: 10,
+    &quot;known_fraction&quot;: 1.0,
+    &quot;repeated_classes&quot;: 2,
+    &quot;spatial_entropy_4x4&quot;: 0.6721804688852168,
+    &quot;median_bbox_short_px&quot;: 450.0,
+    &quot;p10_bbox_short_px&quot;: 352.5,
+    &quot;edge_touching_count&quot;: 0,
+    &quot;nearcolor_pair_count&quot;: 0,
+    &quot;different_class_neighbor_pairs&quot;: 26,
+    &quot;nearcolor_neighbor_fraction&quot;: 0.0,
+    &quot;bbox_overlap_pair_count&quot;: 0,
+    &quot;han_text_coverage&quot;: 0.0,
+    &quot;distinct_dependency_regions&quot;: 3,
+    &quot;effective_counterfactuals&quot;: 2
+  },
+  &quot;source&quot;: {
+    &quot;kind&quot;: &quot;real_photo&quot;,
+    &quot;url&quot;: &quot;https://commons.wikimedia.org/wiki/File:Dornbirn-wire_ferrules-01ASD.jpg&quot;,
+    &quot;license_url&quot;: &quot;https://creativecommons.org/licenses/by-sa/4.0&quot;,
+    &quot;authorization&quot;: &quot;verified&quot;,
+    &quot;scene_id&quot;: &quot;commons:106783997&quot;,
+    &quot;verification_basis&quot;: &quot;来源与许可.jsonl matching original page_id, author, license and native dimensions&quot;,
+    &quot;live_page_check&quot;: &quot;HTTP 429 rate limited; source snapshot metadata retained in source.json&quot;
+  },
+  &quot;difficulty_status&quot;: &quot;no_complete_failure_recorded&quot;,
+  &quot;annotation_provenance&quot;: &quot;manual_author_fact_table&quot;,
+  &quot;preview&quot;: &quot;001.jpg&quot;,
+  &quot;nearcolor_pairs&quot;: [],
+  &quot;overlap_candidates&quot;: [],
+  &quot;roi_metrics&quot;: [
+    {
+      &quot;id&quot;: &quot;roi_A3&quot;,
+      &quot;file&quot;: &quot;001_roi1.png&quot;,
+      &quot;contrast_p90_p10&quot;: 200.0,
+      &quot;gray_entropy_bits&quot;: 7.73182704866824,
+      &quot;edge_fraction_16&quot;: 0.14525272795685437
+    },
+    {
+      &quot;id&quot;: &quot;roi_B3_B4&quot;,
+      &quot;file&quot;: &quot;001_roi2.png&quot;,
+      &quot;contrast_p90_p10&quot;: 210.0,
+      &quot;gray_entropy_bits&quot;: 7.587896501212066,
+      &quot;edge_fraction_16&quot;: 0.10269240287057659
+    },
+    {
+      &quot;id&quot;: &quot;roi_C3&quot;,
+      &quot;file&quot;: &quot;001_roi3.png&quot;,
+      &quot;contrast_p90_p10&quot;: 177.0,
+      &quot;gray_entropy_bits&quot;: 7.771954640999991,
+      &quot;edge_fraction_16&quot;: 0.06887395243028799
+    }
+  ],
+  &quot;reasoning_metrics&quot;: {
+    &quot;node_count&quot;: 13,
+    &quot;max_depth&quot;: 8,
+    &quot;branch_nodes&quot;: 5,
+    &quot;join_nodes&quot;: 5,
+    &quot;multi_visual_join_nodes&quot;: 5,
+    &quot;output_count&quot;: 3,
+    &quot;outputs_with_visual_ancestry&quot;: 3,
+    &quot;output_visual_coverage&quot;: 1.0,
+    &quot;state_nodes&quot;: 0,
+    &quot;parameter_nodes&quot;: 3,
+    &quot;output_evidence_regions&quot;: {
+      &quot;mode0&quot;: [
+        &quot;roi_A3&quot;,
+        &quot;roi_B3_B4&quot;,
+        &quot;roi_C3&quot;
+      ],
+      &quot;mode1&quot;: [
+        &quot;roi_A3&quot;,
+        &quot;roi_B3_B4&quot;,
+        &quot;roi_C3&quot;
+      ],
+      &quot;changed&quot;: [
+        &quot;roi_A3&quot;,
+        &quot;roi_B3_B4&quot;,
+        &quot;roi_C3&quot;
+      ]
+    }
+  },
+  &quot;measurement_margins&quot;: [
+    {
+      &quot;id&quot;: &quot;all_AB_pairs&quot;,
+      &quot;ratio&quot;: 3.375,
+      &quot;unit&quot;: &quot;px&quot;
+    },
+    {
+      &quot;id&quot;: &quot;all_BC_pairs&quot;,
+      &quot;ratio&quot;: 1.9375,
+      &quot;unit&quot;: &quot;px&quot;
+    }
+  ],
+  &quot;platform_points&quot;: [
+    {
+      &quot;xy&quot;: [
+        2460,
+        1870
+      ],
+      &quot;label&quot;: &quot;A3内红黄混色端子隔间，决定颜色集合&quot;
+    },
+    {
+      &quot;xy&quot;: [
+        3010,
+        2235
+      ],
+      &quot;label&quot;: &quot;B3与B4之间的黄色分隔板，决定两个白灰隔间&quot;
+    },
+    {
+      &quot;xy&quot;: [
+        3500,
+        2200
+      ],
+      &quot;label&quot;: &quot;C3同一长隔间内同时可见蓝色和绿色端子&quot;
+    }
+  ],
+  &quot;evaluation_counts&quot;: {
+    &quot;correct&quot;: 3,
+    &quot;incorrect&quot;: 0,
+    &quot;timeout&quot;: 0,
+    &quot;infra_error&quot;: 0,
+    &quot;partial&quot;: 0
+  },
+  &quot;decision&quot;: &quot;authoring_candidate&quot;
+}</pre></article></html>

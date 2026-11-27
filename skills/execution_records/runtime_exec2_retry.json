@@ -1,0 +1,14 @@
+{
+  "exit_code": 0,
+  "status": "completed",
+  "output": "{\"persistent_file_read\": true, \"image_write_denied_errno\": 13, \"sympy_roots\": [\"2\", \"3\"], \"graph_distance\": 4, \"rdkit_atom_count\": 4, \"ocr\": \"ZERO 123\", \"public_https_status\": 200, \"ffmpeg\": \"ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers\", \"pdftoppm\": \"pdftoppm version 25.03.0\"}\n",
+  "output_bytes": 311,
+  "saved_log_bytes": 311,
+  "output_truncated": false,
+  "reader_errors": [],
+  "stdout_log": "/Users/hepeize/.local/share/zerobench-runtime/trials/unified-runtime-check-01/logs/20261126T185957-b1ece7b1a5.stdout.txt",
+  "code_log": "/Users/hepeize/.local/share/zerobench-runtime/trials/unified-runtime-check-01/logs/20261126T185957-b1ece7b1a5.py",
+  "seconds": 2.234,
+  "effective_timeout_seconds": 30.0,
+  "state_scope": "new Python process; persistent trial files"
+}

@@ -1,0 +1,125 @@
+screen	time	destination	flight	help	gate
+A	08:55	Oporto	SK6794		C6
+A	09:05	Prague	DL9287		D73
+A	09:05	Venice	GA9496		B23
+A	09:15	Teesside Internation	DL9281		D6
+A	09:15	Newark	UA071	T5	G7
+A	09:20	Paramaribo	KL0713		E24
+A	09:20	Leeds Bradford	DL9413		E21
+A	09:20	Oslo	DL9402		C8
+A	09:20	Bucharest	SK6800		D74
+A	09:20	Copenhagen	DL9211		C12
+A	09:25	Trondheim	KQ1175		B1
+A	09:25	Hanover	SK6742		B16
+A	09:30	Paris de Gaulle	CI9291		C5
+A	09:30	Madrid	CZ7644		D78
+A	09:30	Florence	KQ1643		B5
+A	09:30	London City	VS7036		D6
+A	09:30	Nice	DL9245		C22
+A	09:35	Lyon	KL2102		B28
+A	09:35	Gdansk	DL9237		B34
+A	09:35	Marseille	SK6788		B22
+A	09:35	Rome	DL9543		B3
+A	09:35	Belgrade	SK6818		D6
+A	09:35	Dublin	EI603		D18
+A	09:35	Malaga	DL9182		C18
+A	09:35	Turin	KQ1555		B8
+A	09:40	Minneapolis	VS3947		G6
+A	09:40	Munich	DL9370		D86
+A	09:40	Helsinki	AR7812		D84
+A	09:45	Georgetown	KL0789		F5
+A	09:45	Aberdeen	DL9295		D6
+A	09:45	Zurich	DL9427		D82
+B	09:45	Dublin	DL9226		D14
+B	09:45	Nantes	DL9290		B30
+B	09:45	Geneva	DL9617		C7
+B	09:50	Frankfurt	DL9235		B7
+B	09:50	Zurich	UA9791	T3	B35
+B	09:50	Manchester	EZY2162		H1
+B	09:50	San Francisco	VS7146		E6
+B	09:50	Los Angeles	VS7136		E5
+B	09:50	Cartagena	KL0741		E20
+B	09:50	Gothenburg	MH5647		B26
+B	09:55	Houston	VS7123		F8
+B	09:55	Stavanger	MH5653		B20
+B	09:55	Vienna	ET1217	T3	B15
+B	09:55	Lima	AF8243		E8
+B	09:55	Warsaw	KQ1363		D68
+B	09:55	Tallinn	BT858		B2
+B	09:55	Split	DL9351		C11
+B	10:00	Inverness	VS7017		D6
+B	10:00	Edinburgh	BT6020		D26
+B	10:00	Manchester	CI9597		D24
+B	10:00	Frankfurt	AI8542	T3	B31
+B	10:00	Riga	BT618		B4
+B	10:00	Alicante	IB5704		C10
+B	10:00	Philadelphia	AY5712		E21
+B	10:00	New York JFK	VS3941		D49
+B	10:05	Dar Es Salaam	DL9244		E9
+B	10:05	Berlin Brandenburg	DL9190		C22
+B	10:05	Billund	DL9160		C14
+B	10:10	Vilnius	BT962		B6
+B	10:10	Atlanta	VS3943		E7
+B	10:10	Cape Town	SK6730		F3
+C	10:10	Dubrovnik	DL9315		C16
+C	10:15	Dublin	FR421		H
+C	10:15	Sofia	FB462		C24
+C	10:15	Guayaquil	AF3208		D10
+C	10:15	Ljubljana	DL9207		B30
+C	10:20	Kayseri	PC1640		G2
+C	10:20	Paramaribo	PY993		G3
+C	10:20	London Heathrow	BA429		D16
+C	10:20	Santiago Com	VY8379		B17
+C	10:20	Seattle	VS3944		G8
+C	10:20	London Heathrow	CZ7603		D25
+C	10:20	Milan Linate	GA9764		B1
+C	10:25	Copenhagen	SK552		C12
+C	10:25	Barcelona	IB5235		B27
+C	10:25	Barcelona	CZ7650		C13
+C	10:25	Portland	VS7152		E21
+C	10:25	Hamburg	DL9329		D71
+C	10:30	Bologna	KQ1585		B24
+C	10:30	Warsaw	LO266		B32
+C	10:30	Philadelphia	AA6902		
+C	10:35	Paris de Gaulle	CI9293		C15
+C	10:35	Salt L. City	VS3942		D53
+C	10:35	Tampa	VS3752		D47
+C	10:35	Johannesburg	SK6752		F4
+C	10:40	Oslo	SK822		C8
+C	10:45	Valencia	IB5969		B23
+C	10:45	Minneapolis	VS7141		G9
+C	10:55	Dallas Fort Worth	AY4133		G5
+C	10:55	Stockholm	DL9184		C5
+C	10:55	Detroit	VS3946		F9
+C	11:00	Singapore	SQ323	T9	G4
+D	11:00	Houston	UA021	T5	G1
+D	11:00	Birmingham	EJU7843		H
+D	11:00	Madrid	CI9230	T5	D63
+D	11:00	Stockholm	SK556		B17
+D	11:00	Taipei	UX3001		E21
+D	11:00	Entebbe	DL9318		E17
+D	11:00	Dusseldorf	DL9431		B3
+D	11:10	Malaga	KL2539		C18
+D	11:10	New York JFK	VS3951		D57
+D	11:15	Washington	UA947	T5	G1
+D	11:15	Istanbul Airport	TK1952		G7
+D	11:15	Munich	TG7853	T3	B31
+D	11:20	Toronto	VS7166		E24
+D	11:20	Boston	B60032		D31
+D	11:20	Manchester	EZY2180		H
+D	11:20	Frankfurt	UA9203	T3	B27
+D	11:20	Zagreb	OU451	T5	B15
+D	11:25	London City	BA8452		D16
+D	11:30	Krakow	DL9165		B1
+D	11:30	Budapest	SK6652		C14
+D	11:35	Atyrau	KC904	T5	D28
+D	11:35	Paris de Gaulle	CI9225		C11
+D	11:40	Dubai International	QF8146	T9	E18
+D	11:40	London Heathrow	BA431		D18
+D	11:40	Bucharest	RO362	T5	B31
+D	11:40	Tbilisi	RM1652		D22
+D	11:40	Bordeaux	SK6776		B7
+D	11:40	Genoa	SK6836		B26
+D	11:45	Tel Aviv	LY338	T9	G6
+D	11:45	Boston	VS3952		E21
+D	11:45	Bergen	KQ1187		C7

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "trial2",
+    "agent": "/root/blind_v2_2",
+    "status": "timeout",
+    "valid": false,
+    "whole_correct": null,
+    "wrong_fields": null,
+    "elapsed_seconds_approx": 1356,
+    "recorded_at": "2026-11-26T15:01:58.675962+00:00",
+    "reason": "约20分钟仍无完整末答，给予60秒提交提示后继续等待，未收到末答。主代理interrupt后启动全新上下文补足有效次数。",
+    "tool_failure": "unknown",
+    "final_answer_received": false,
+    "replacement": "/root/blind_v2_replacement"
+  }
+]

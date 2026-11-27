@@ -341,6 +341,8 @@ def parse_image_filters(query, *, claimer_alias=False):
         return next(iter(query_values(query, field)), "")
 
     tagged = query_choice(query, "tagged", ("0", "1"))
+    registered = query_choice(query, "registered", ("0", "1"))
+    registry_source = query_choice(query, "registry_source", image_tags.REGISTRY_SOURCES)
     filters = {
         "question_types": image_tags.normalize_codes(
             query_values(query, "question_type", multiple=True), image_tags.QUESTION_TYPES, "question_type"
@@ -353,6 +355,8 @@ def parse_image_filters(query, *, claimer_alias=False):
         ),
         "match": query_choice(query, "match", ("all", "any"), "all"),
         "tagged": tagged == "1" if tagged else None,
+        "registered": registered == "1" if registered else None,
+        "registry_source": registry_source or None,
         "status": query_choice(query, "status", ("all", "claimed", "unclaimed"), "all"),
         "authored_status": parse_authored_filter(query),
         "claimed_by": first("claimed_by") or (first("claimer") if claimer_alias else ""),
@@ -762,6 +766,8 @@ class ClaimStore:
             "category": row["category"],
             "claimed_by": claimed_by,
             "claimed": bool(claimed_by),
+            "registered": True,
+            "registry_source": "collection_queue",
             "local_file": local_file,
             **image_tags.read_annotations(row),
         }
@@ -815,6 +821,8 @@ class ClaimStore:
                 "path": relpath,
                 "claimed_by": claimed_by,
                 "claimed": bool(claimed_by),
+                "registered": local_row is not None,
+                "registry_source": "img_claims" if local_row is not None else "",
                 "download_url": f"/download/{encoded}",
                 "view_url": f"/img/{encoded}",
                 **image_tags.read_annotations(local_row),
@@ -845,6 +853,9 @@ class ClaimStore:
                     (target["path"], new_claimer, now),
                 )
             updated = dict(target)
+            if new_claimer:
+                updated["registered"] = True
+                updated["registry_source"] = "img_claims"
         updated["claimed_by"] = new_claimer
         updated["claimed"] = bool(new_claimer)
         return updated
@@ -867,6 +878,8 @@ class ClaimStore:
                 mapping[rel] = {
                     "claimed": bool(claimed_by),
                     "claimed_by": claimed_by,
+                    "registered": True,
+                    "registry_source": "collection_queue",
                     "queue_id": row["id"],
                     "file_url": row["file_url"],
                     "category": row["category"],
@@ -878,6 +891,8 @@ class ClaimStore:
                 mapping[rel] = {
                     "claimed": bool(claimed_by),
                     "claimed_by": claimed_by,
+                    "registered": local_row is not None,
+                    "registry_source": "img_claims" if local_row is not None else "",
                     "queue_id": None,
                     "file_url": None,
                     "category": None,
@@ -914,6 +929,8 @@ class ClaimStore:
                     conn.execute(f"UPDATE img_claims SET {assignments} WHERE file_path = ?", (*fields.values(), key[1]))
                 normalized = image_tags.read_annotations(dict.fromkeys(image_tags.ANNOTATION_FIELDS, "") | fields)
                 target.update({field: normalized[field] for field in fields})
+                target["registered"] = True
+                target["registry_source"] = "collection_queue" if kind == "queue" else "img_claims"
                 updated.append(target)
         return updated
 
@@ -1252,6 +1269,8 @@ def render_gallery_html(items: list[dict], directory_name: str, *, claim_enabled
     .badge.authored-draft {{ background: #fff3d6; color: #8a5a00; }}
     .badge.authored-done {{ background: #dcebfa; color: #144d82; }}
     .badge.authored-discarded {{ background: #f1e6f4; color: #6c327c; }}
+    .badge.reg-ok {{ background: #e1f5ee; color: #126149; }}
+    .badge.reg-none {{ background: #f2e6e4; color: #8c2d19; }}
     .grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }}
     .card {{ background: #fff; border: 1px solid #dbe4e8; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; }}
     .thumb {{ height: 150px; background: #eef3f5; display: flex; align-items: center; justify-content: center; overflow: hidden; color: #526570; font-size: 13px; }}
@@ -1282,6 +1301,8 @@ def render_gallery_html(items: list[dict], directory_name: str, *, claim_enabled
     <label>出题状态 <select name="authored_status"><option value="__all__">全部</option><option value="">未出题</option><option value="draft">出题中</option><option value="authored">已出题</option><option value="discarded">已淘汰</option></select></label>
     <label>图片类别 <input name="category"></label>
     <label>目录前缀 <input name="prefix"></label>
+    <label>登记状态 <select name="registered"><option value="">全部</option><option value="1">已入库</option><option value="0">未登记</option></select></label>
+    <label>登记表 <select name="registry_source"><option value="">全部</option><option value="collection_queue">队列 collection_queue</option><option value="img_claims">本地 img_claims</option><option value="none">未登记</option></select></label>
     <label>标注状态 <select name="tagged"><option value="">全部</option><option value="1">已打标</option><option value="0">待标注</option></select></label>
     <label>组内匹配 <select name="match"><option value="all">全部所选标签</option><option value="any">任一所选标签</option></select></label>
     <button class="btn" type="submit">筛选</button>
@@ -1321,7 +1342,7 @@ def render_gallery_html(items: list[dict], directory_name: str, *, claim_enabled
     const fmtSize = (n) => n < 1024 ? n + " B" : n < 1048576 ? (n / 1024).toFixed(1) + " KB" : (n / 1048576).toFixed(2) + " MB";
 
     const filterForm = document.getElementById("filters");
-    const filterFields = ["claimed_by", "status", "category", "prefix", "tagged", "match"];
+    const filterFields = ["claimed_by", "status", "category", "prefix", "registered", "registry_source", "tagged", "match"];
     const filterTags = [
       ["question_types", "question_type", "候选题型"],
       ["difficulty", "difficulty", "综合难度"],
@@ -1571,6 +1592,11 @@ def render_gallery_html(items: list[dict], directory_name: str, *, claim_enabled
           authoredBadge.className = `badge ${{authoredCls}}`;
           authoredBadge.textContent = authoredLabel;
           badges.appendChild(authoredBadge);
+
+          const regBadge = document.createElement("span");
+          regBadge.className = "badge " + (item.registered ? "reg-ok" : "reg-none");
+          regBadge.textContent = item.registered ? `已入库 · ${{item.registry_source}}` : "未登记";
+          badges.appendChild(regBadge);
           info.appendChild(badges);
 
           if (item.authored_ref) {{
@@ -1896,11 +1922,34 @@ class ImageHTTPHandler(BaseHTTPRequestHandler):
             return
         self._send_json(HTTPStatus.OK, {"updated_count": len(items), "items": items} if batch else items[0])
 
+    def _collect_filtered_images(
+        self,
+        filters: dict,
+        prefix: str,
+        *,
+        include_sha256: bool = False,
+    ) -> list[dict]:
+        entries = iter_images(
+            self.cfg.img_dir, prefix=quote(prefix, safe="/"), allow_all_files=self.cfg.allow_all_files
+        )
+        store = self.server.claim_store
+        claims = store.get_claims_by_relpaths([rel for _, rel, _, _ in entries]) if store is not None else {}
+        empty_claim = {**image_tags.read_annotations(), "registered": False, "registry_source": ""}
+        items = []
+        for path, rel, st, mime in entries:
+            claim_info = claims.get(rel) or empty_claim
+            if not image_tags.matches(claim_info, filters):
+                continue
+            meta = build_file_metadata(path, rel, st, mime, include_sha256=include_sha256)
+            meta.update(claim_info)
+            items.append(meta)
+        return items
+
     def _handle_list(self, parsed_path: str, query: dict[str, list[str]], *, send_body: bool) -> None:
         include_sha256 = query.get("checksum", [""])[0].lower() in {"1", "true", "yes"}
         try:
             filters, prefix = parse_image_filters(query, claimer_alias=True)
-            entries = iter_images(self.cfg.img_dir, prefix=quote(prefix, safe="/"), allow_all_files=self.cfg.allow_all_files)
+            items = self._collect_filtered_images(filters, prefix, include_sha256=include_sha256)
         except PathValidationError as exc:
             self._send_error_json(exc.status, "invalid_path", str(exc))
             return
@@ -1909,17 +1958,6 @@ class ImageHTTPHandler(BaseHTTPRequestHandler):
             return
 
         store = self.server.claim_store
-        claims = store.get_claims_by_relpaths([rel for _, rel, _, _ in entries]) if store is not None else {}
-
-        items = []
-        for path, rel, st, mime in entries:
-            claim_info = claims.get(rel) or image_tags.read_annotations()
-            if not image_tags.matches(claim_info, filters):
-                continue
-            meta = build_file_metadata(path, rel, st, mime, include_sha256=include_sha256)
-            meta.update(claim_info)
-            items.append(meta)
-
         accept = self.headers.get("Accept", "")
         fmt = query.get("format", [""])[0].lower()
         if parsed_path == "/" and fmt != "json" and ("text/html" in accept or fmt == "html"):
@@ -1929,6 +1967,8 @@ class ImageHTTPHandler(BaseHTTPRequestHandler):
                 "status": filters["status"], "claimed_by": filters["claimed_by"],
                 "authored_status": filters["authored_status"],
                 "category": filters["category"], "prefix": prefix,
+                "registered": "" if filters["registered"] is None else str(int(filters["registered"])),
+                "registry_source": filters["registry_source"] or "",
                 "tagged": "" if filters["tagged"] is None else str(int(filters["tagged"])),
             }
             self._send_html(
@@ -1937,6 +1977,7 @@ class ImageHTTPHandler(BaseHTTPRequestHandler):
                 send_body=send_body,
             )
             return
+        registered_count = sum(1 for item in items if item.get("registered"))
         self._send_json(
             HTTPStatus.OK,
             {
@@ -1944,6 +1985,8 @@ class ImageHTTPHandler(BaseHTTPRequestHandler):
                 "count": len(items),
                 "total_bytes": sum(item["size"] for item in items),
                 "claim_tracking": store is not None,
+                "registered_count": registered_count,
+                "unregistered_count": len(items) - registered_count,
                 "images": items,
             },
             send_body=send_body,
@@ -2059,7 +2102,8 @@ class ImageHTTPHandler(BaseHTTPRequestHandler):
         mime = guess_mime_type(resolved, self.cfg.allow_all_files) or "application/octet-stream"
         meta = build_file_metadata(resolved, rel, resolved.stat(), mime, include_sha256=True)
         store = self.server.claim_store
-        meta.update(store.get_claims_by_relpaths([rel])[rel] if store is not None else image_tags.read_annotations())
+        empty_claim = {**image_tags.read_annotations(), "registered": False, "registry_source": ""}
+        meta.update(store.get_claims_by_relpaths([rel])[rel] if store is not None else empty_claim)
         self._send_json(HTTPStatus.OK, meta, send_body=send_body)
 
     def _handle_thumbnail(self, raw_relpath: str, query: dict[str, list[str]], *, send_body: bool) -> None:
@@ -2182,6 +2226,75 @@ class ImageHTTPHandler(BaseHTTPRequestHandler):
             filters=filters,
             prefix=prefix,
         )
+        self._send_json(HTTPStatus.OK, payload, send_body=send_body)
+
+    def _handle_registry(self, query: dict[str, list[str]], *, send_body: bool) -> None:
+        include_sha256 = query.get("checksum", [""])[0].lower() in {"1", "true", "yes"}
+        include_pending = query.get("include_pending", [""])[0].lower() in {"1", "true", "yes"}
+        try:
+            filters, prefix = parse_image_filters(query, claimer_alias=True)
+            limit = int(query.get("limit", ["0"])[0] or "0")
+            offset = int(query.get("offset", ["0"])[0] or "0")
+        except PathValidationError as exc:
+            self._send_error_json(exc.status, "invalid_path", str(exc))
+            return
+        except ValueError as exc:
+            self._send_error_json(HTTPStatus.BAD_REQUEST, "invalid_filter", str(exc))
+            return
+
+        store = self.server.claim_store
+        if include_pending and store is None:
+            self._require_claim_store()
+            return
+
+        try:
+            items = self._collect_filtered_images(filters, prefix, include_sha256=include_sha256)
+        except PathValidationError as exc:
+            self._send_error_json(exc.status, "invalid_path", str(exc))
+            return
+
+        by_source = {"collection_queue": 0, "img_claims": 0, "unregistered": 0}
+        for item in items:
+            src = item.get("registry_source") or "unregistered"
+            by_source[src] = by_source.get(src, 0) + 1
+        registered_count = by_source["collection_queue"] + by_source["img_claims"]
+        unregistered_count = by_source["unregistered"]
+        matched_count = len(items)
+        sliced = items[offset:] if offset > 0 else items
+        if limit > 0:
+            sliced = sliced[:limit]
+
+        queue_summary = None
+        pending_queue: list[dict] = []
+        if store is not None:
+            all_queue = store.list_queue()["items"]
+            downloaded_count = sum(1 for q in all_queue if q.get("local_file"))
+            queue_summary = {
+                "total": len(all_queue),
+                "downloaded_count": downloaded_count,
+                "pending_download_count": len(all_queue) - downloaded_count,
+            }
+            if include_pending:
+                pending_queue = [
+                    q for q in all_queue
+                    if not q.get("local_file")
+                    and image_tags.matches(q, filters)
+                    and path_matches_prefix(q.get("local_file"), prefix)
+                ]
+
+        payload = {
+            "directory": self.cfg.img_dir.name,
+            "claim_tracking": store is not None,
+            "total_files": matched_count,
+            "registered_count": registered_count,
+            "unregistered_count": unregistered_count,
+            "by_source": by_source,
+            "queue_summary": queue_summary,
+            "matched_count": matched_count,
+            "images": sliced,
+        }
+        if include_pending:
+            payload["pending_queue"] = pending_queue
         self._send_json(HTTPStatus.OK, payload, send_body=send_body)
 
     def _handle_claim_create(self, query: dict[str, list[str]]) -> None:
@@ -2355,6 +2468,9 @@ class ImageHTTPHandler(BaseHTTPRequestHandler):
             return
         if path == "/api/queue":
             self._handle_queue_list(query, send_body=send_body)
+            return
+        if path == "/api/registry":
+            self._handle_registry(query, send_body=send_body)
             return
         if path == "/api/tags/schema":
             self._send_json(HTTPStatus.OK, image_tags.schema(), send_body=send_body)

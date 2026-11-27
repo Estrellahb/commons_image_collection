@@ -1,0 +1,5 @@
+Wellcome Collection IIIF v2 公版/开放许可科学图版与博物插图数据集
+精选数量: 36
+API 入口: https://api.wellcomecollection.org/catalogue/v2/works 与 https://iiif.wellcomecollection.org/presentation/v2/{manifest_id}
+许可范围: 仅收录逐条核验为 Public Domain Mark 1.0 (pdm)、CC0 1.0 (cc0)、CC BY (cc-by) 或 CC BY-SA (cc-by-sa) 的条目（严格过滤 NC/ND/InC）。
+用途说明: 显微铜版图鉴、天文星图与经纬图解、解剖/骨骼/神经图谱、植物细胞与标本插图；所有 JPG 已统一限制在 2048px 与 3 MB 以内。

@@ -1,0 +1,27 @@
+{
+  "queue": {
+    "id": 318,
+    "file_url": "https://commons.wikimedia.org/wiki/File:Dornbirn-wire_ferrules-01ASD.jpg",
+    "category": "居家场景/工具五金",
+    "claimed_by": "Codex-ZB-FERRULES-0318-v1",
+    "question_types": "complex_instruction,counting,localization_measurement",
+    "difficulty": "medium",
+    "difficulty_tags": "cross_region_alignment,high_similarity,multi_hop_visual,occlusion_overlap",
+    "tag_notes": "P1。原生端子盒分格与混色联合约束。A3红黄、C3蓝绿及B3/B4分隔板控制可行集。22条接力、28个完整方案，工况最优代价30/31。C3漏绿使方案28→13，工况1代价31→37。r2本地新上下文盲答3/3全对，定为medium。",
+    "authored_status": "authored",
+    "authored_ref": "ZB-FERRULES-0318-v1 | outputs/authoring_ZB-FERRULES-0318-v1"
+  },
+  "img_claims": {
+    "file_path": "居家场景/工具五金/zb-hardware-106783997.jpg",
+    "claimed_by": "Codex-ZB-FERRULES-0318-v1",
+    "updated_at": "2026-11-26T16:45:05.140258+00:00",
+    "question_types": "complex_instruction,counting,localization_measurement",
+    "difficulty": "medium",
+    "difficulty_tags": "cross_region_alignment,high_similarity,multi_hop_visual,occlusion_overlap",
+    "tag_notes": "P1。原生端子盒分格与混色联合约束。A3红黄、C3蓝绿及B3/B4分隔板控制可行集。22条接力、28个完整方案，工况最优代价30/31。C3漏绿使方案28→13，工况1代价31→37。r2本地新上下文盲答3/3全对，定为medium。",
+    "authored_status": "authored",
+    "authored_ref": "ZB-FERRULES-0318-v1 | outputs/authoring_ZB-FERRULES-0318-v1"
+  },
+  "write_mode": "local atomic SQLite transaction",
+  "finalized_at": "2026-11-26T16:45:05.145860+00:00"
+}

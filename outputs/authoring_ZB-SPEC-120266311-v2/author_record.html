@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZeroBench 作者填报记录 · ZB-SPEC-120266311-v2</title>
+<style>
+  :root {
+    --bg: #f5f6f8;
+    --card: #ffffff;
+    --ink: #18202c;
+    --muted: #526071;
+    --border: #dce2ea;
+    --accent: #1d4ed8;
+    --accent-soft: #eff6ff;
+    --ok: #15803d;
+    --ok-bg: #dcfce7;
+    --err: #b91c1c;
+    --err-bg: #fee2e2;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 28px 20px 64px;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    line-height: 1.65;
+  }
+  .wrap { max-width: 1280px; margin: 0 auto; }
+  header {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+    color: #fff;
+    padding: 24px 28px;
+    border-radius: 14px;
+    margin-bottom: 22px;
+    box-shadow: 0 6px 24px rgba(15, 23, 42, 0.14);
+  }
+  header h1 { margin: 0 0 6px; font-size: 24px; letter-spacing: 0.2px; }
+  header p { margin: 0; opacity: 0.9; font-size: 14px; }
+  section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  }
+  .sec-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    border-bottom: 2px solid var(--accent-soft);
+    padding-bottom: 10px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+  h2 { margin: 0; font-size: 19px; color: #0f172a; }
+  h3 { margin: 18px 0 10px; font-size: 15.5px; color: #1e293b; }
+  .btn-copy {
+    appearance: none;
+    border: 1px solid var(--accent);
+    background: var(--accent);
+    color: #fff;
+    border-radius: 7px;
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.08s ease;
+  }
+  .btn-copy:hover { background: #1e40af; }
+  .btn-copy:active { transform: scale(0.98); }
+  .btn-copy.copied { background: var(--ok); border-color: var(--ok); }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 10px 18px;
+  }
+  .meta-item {
+    padding: 10px 12px;
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 13.5px;
+  }
+  .meta-item .k { display: block; color: var(--muted); font-size: 12px; margin-bottom: 2px; }
+  .meta-item .v { font-weight: 600; word-break: break-all; }
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    align-items: start;
+  }
+  @media (max-width: 900px) {
+    .compare-grid { grid-template-columns: 1fr; }
+  }
+  figure { margin: 0; }
+  figcaption {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+  .img-stage {
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: #111;
+    line-height: 0;
+  }
+  .img-stage img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .img-stage svg.overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  .copy-box {
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 14px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "PingFang SC", "Microsoft YaHei", monospace;
+  }
+  .answer-box {
+    background: #eff6ff;
+    border: 2px solid #93c5fd;
+    color: #1e3a8a;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 14px 18px;
+    border-radius: 8px;
+    word-break: break-all;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  .table-wrap { overflow-x: auto; margin-top: 10px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { background: #f1f5f9; font-weight: 700; white-space: nowrap; }
+  tr.baseline-row { background: #f0fdf4; }
+  td.flip-cell { background: #fef2f2; color: var(--err); }
+  .badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  .badge.ok { background: var(--ok-bg); color: var(--ok); }
+  .badge.err { background: var(--err-bg); color: var(--err); }
+  ul.clean { margin: 8px 0 0; padding-left: 20px; font-size: 14px; }
+  ul.clean li { margin-bottom: 6px; }
+  code {
+    background: #f1f5f9;
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-size: 12.5px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>ZeroBench 视觉联合推理作者填报页 · ZB-SPEC-120266311-v2</h1>
+  <p>英国自然历史博物馆鞘翅目标本盒微观装帧盘点、正射测距与两工况联合抽检反转（离线平台填报版 · 登记难度 medium）</p>
+</header>
+
+<!-- 1. 基本信息 -->
+<section id="sec-basic">
+  <div class="sec-head">
+    <h2>一、基本信息</h2>
+    <button class="btn-copy" data-target="copy-basic">复制基本信息</button>
+  </div>
+  <div class="meta-grid">
+    <div class="meta-item"><span class="k">题号</span><span class="v">ZB-SPEC-120266311-v2</span></div>
+    <div class="meta-item"><span class="k">题名</span><span class="v">博物馆鞘翅目标本盒 12 物种微观装帧盘点与两工况联合抽检反转</span></div>
+    <div class="meta-item"><span class="k">一级题型 / 候选题型</span><span class="v">计数聚合链（主）；定位度量、抗干扰文本读取、复杂指令遵循</span></div>
+    <div class="meta-item"><span class="k">图片大类与小类</span><span class="v">实拍密集场景照 · 小众专业实物 / 珠宝·矿物·标本（真实照片 real_photo）</span></div>
+    <div class="meta-item"><span class="k">原图尺寸与文件</span><span class="v">3870 × 3081 px（EXIF=1，RGB JPEG，zb-specimens-120266311.jpg）</span></div>
+    <div class="meta-item"><span class="k">来源页与资产编号</span><span class="v">Wikimedia Commons Page ID 120266311 · File:Drawer_27_(5555544961).jpg</span></div>
+    <div class="meta-item"><span class="k">作者署名</span><span class="v">Natural History Museum: Coleoptera Section from South Kensington, London, UK</span></div>
+    <div class="meta-item"><span class="k">许可协议</span><span class="v">CC BY 2.0（https://creativecommons.org/licenses/by/2.0）</span></div>
+  </div>
+  <textarea id="copy-basic" hidden>题号：ZB-SPEC-120266311-v2
+题名：博物馆鞘翅目标本盒 12 物种微观装帧盘点与两工况联合抽检反转
+题型：计数聚合链（兼定位度量、抗干扰文本读取、复杂指令遵循）
+图片类别：实拍密集场景照 / 小众专业实物-珠宝·矿物·标本（真实照片）
+原图尺寸：3870×3081 px（zb-specimens-120266311.jpg）
+来源：https://commons.wikimedia.org/wiki/File:Drawer_27_(5555544961).jpg
+作者：Natural History Museum: Coleoptera Section from South Kensington, London, UK
+许可：CC BY 2.0（https://creativecommons.org/licenses/by/2.0）</textarea>
+</section>
+
+<!-- 2. 原图与打点对照 -->
+<section id="sec-images">
+  <div class="sec-head">
+    <h2>二、原图与打点对照</h2>
+    <button class="btn-copy" data-target="copy-points">复制打点坐标说明</button>
+  </div>
+  <div class="compare-grid">
+    <figure>
+      <figcaption>左：干净原图（上传平台主图，3870 × 3081 px 未修改）</figcaption>
+      <div class="img-stage">
+        <img src="zb-specimens-120266311.jpg" alt="干净原图 zb-specimens-120266311.jpg" width="3870" height="3081">
+      </div>
+    </figure>
+    <figure>
+      <figcaption>右：同画幅叠加 3 个关键打点（SVG viewBox 0 0 3870 3081 精确缩放对齐）</figcaption>
+      <div class="img-stage">
+        <img src="zb-specimens-120266311.jpg" alt="打点对照图 zb-specimens-120266311.jpg" width="3870" height="3081">
+        <svg class="overlay" viewBox="0 0 3870 3081" xmlns="http://www.w3.org/2000/svg" aria-label="关键打点标注">
+          
+      <g>
+        <circle cx="3156" cy="206" r="80" fill="none" stroke="#ffffff" stroke-width="24" opacity="0.95"/>
+        <circle cx="3156" cy="206" r="80" fill="none" stroke="#f59e0b" stroke-width="13"/>
+        <line x1="3042" y1="206" x2="3116" y2="206" stroke="#f59e0b" stroke-width="9"/>
+        <line x1="3196" y1="206" x2="3270" y2="206" stroke="#f59e0b" stroke-width="9"/>
+        <line x1="3156" y1="92" x2="3156" y2="166" stroke="#f59e0b" stroke-width="9"/>
+        <line x1="3156" y1="246" x2="3156" y2="320" stroke="#f59e0b" stroke-width="9"/>
+        <circle cx="3156" cy="206" r="14" fill="#f59e0b" stroke="#ffffff" stroke-width="6"/>
+        <circle cx="3246" cy="116" r="60" fill="#f59e0b" stroke="#ffffff" stroke-width="11"/>
+        <text x="3246" y="140" text-anchor="middle" fill="#ffffff" font-size="72" font-weight="700" font-family="system-ui, sans-serif">1</text>
+      </g>
+
+      <g>
+        <circle cx="3502" cy="795" r="80" fill="none" stroke="#ffffff" stroke-width="24" opacity="0.95"/>
+        <circle cx="3502" cy="795" r="80" fill="none" stroke="#0284c7" stroke-width="13"/>
+        <line x1="3388" y1="795" x2="3462" y2="795" stroke="#0284c7" stroke-width="9"/>
+        <line x1="3542" y1="795" x2="3616" y2="795" stroke="#0284c7" stroke-width="9"/>
+        <line x1="3502" y1="681" x2="3502" y2="755" stroke="#0284c7" stroke-width="9"/>
+        <line x1="3502" y1="835" x2="3502" y2="909" stroke="#0284c7" stroke-width="9"/>
+        <circle cx="3502" cy="795" r="14" fill="#0284c7" stroke="#ffffff" stroke-width="6"/>
+        <circle cx="3592" cy="705" r="60" fill="#0284c7" stroke="#ffffff" stroke-width="11"/>
+        <text x="3592" y="729" text-anchor="middle" fill="#ffffff" font-size="72" font-weight="700" font-family="system-ui, sans-serif">2</text>
+      </g>
+
+      <g>
+        <circle cx="2952" cy="2828" r="80" fill="none" stroke="#ffffff" stroke-width="24" opacity="0.95"/>
+        <circle cx="2952" cy="2828" r="80" fill="none" stroke="#e11d48" stroke-width="13"/>
+        <line x1="2838" y1="2828" x2="2912" y2="2828" stroke="#e11d48" stroke-width="9"/>
+        <line x1="2992" y1="2828" x2="3066" y2="2828" stroke="#e11d48" stroke-width="9"/>
+        <line x1="2952" y1="2714" x2="2952" y2="2788" stroke="#e11d48" stroke-width="9"/>
+        <line x1="2952" y1="2868" x2="2952" y2="2942" stroke="#e11d48" stroke-width="9"/>
+        <circle cx="2952" cy="2828" r="14" fill="#e11d48" stroke="#ffffff" stroke-width="6"/>
+        <circle cx="3042" cy="2738" r="60" fill="#e11d48" stroke="#ffffff" stroke-width="11"/>
+        <text x="3042" y="2762" text-anchor="middle" fill="#ffffff" font-size="72" font-weight="700" font-family="system-ui, sans-serif">3</text>
+      </g>
+        </svg>
+      </div>
+    </figure>
+  </div>
+  <h3>关键打点清单（以原图左上角为原点，单位 px）</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>点编号</th><th>原图像素坐标 (x, y)</th><th>点类型</th><th>证据说明</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>#1</strong></td><td><code>(3156, 206)</code><br><small>81.55%, 6.69%</small></td><td>作者关键证据点</td><td><strong>B1 (murina, L.) 第 1 行第 3 卡左上角隐藏 ♂ 符号</strong><br>位于最右第 2 栏顶部 ISOMIRA 属下第 1 行第 3 卡（非首卡）左上角，为该物种块唯一性别符号（X_B1 = 1，无配套 ♀）。漏看该 ♂ 将直接使 8 个依赖 A1-B1 的合法方案失效（P: 92→84，sum_X: 7→6）。</td></tr><tr><td><strong>#2</strong></td><td><code>(3502, 795)</code><br><small>90.49%, 25.80%</small></td><td>作者关键证据点</td><td><strong>B5 (desmaresti, Lt.) 多虫纸卡区（5 卡 10 虫、3 张下端插针）</strong><br>共 5 张独立矩形纸卡分别装有 1、1、3、4、1 只甲虫（C=5, S=10），其中 3 虫卡、4 虫卡及右下 1 虫卡为下端插针（B=3）。误按卡数计虫数（S=5）或漏看任 1 张下端插针均会直接将两工况赢家反转位由 1 翻转为 0。</td></tr><tr><td><strong>#3</strong></td><td><code>(2952, 2828)</code><br><small>76.28%, 91.79%</small></td><td>作者关键证据点</td><td><strong>A6 (ceramboides, L.) 最右下角唯一 1 张下端插针卡</strong><br>3×3 共 9 张纸卡中唯独第 3 行第 3 卡（最右下角）采用下端插针（B_A6 = 1，同理 A5 hirta 15 卡中也仅最右下角 1 张下端插针）。漏看该单卡下端插针会导致近距边 A6-B6 失效并直接消灭两工况赢家反转（rev: 1→0）。</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <textarea id="copy-points" hidden>点1：(3156, 206) [81.55%, 6.69%] | 作者关键证据点 | B1 (murina, L.) 第 1 行第 3 卡左上角隐藏 ♂ 符号（X_B1=1），漏看将使 8 个合法方案失效（P: 92->84）。
+点2：(3502, 795) [90.49%, 25.80%] | 作者关键证据点 | B5 (desmaresti, Lt.) 多虫纸卡区：5 卡装 1,1,3,4,1=10 虫且含 3 张下端插针，误按卡数计虫数或漏看插针均直接翻转反转位。
+点3：(2952, 2828) [76.28%, 91.79%] | 作者关键证据点 | A6 (ceramboides, L.) 最右下角唯一 1 张下端插针卡（B_A6=1），漏看将使近距边 A6-B6 失效并消灭两工况赢家反转。</textarea>
+</section>
+
+<!-- 3. 题目 (prompt) -->
+<section id="sec-prompt">
+  <div class="sec-head">
+    <h2>三、题目（prompt）</h2>
+    <button class="btn-copy" data-target="copy-prompt">复制题目正文</button>
+  </div>
+  <div class="copy-box" id="copy-prompt">请仅依据所给博物馆鞘翅目标本盒正俯拍原图（尺寸 3870×3081 px，以原图左上角为坐标原点，x 向右、y 向下），完成下列 12 个指定物种标本块的装帧盘点、正射平面测距与两工况联合抽检调度计算。
+
+一、考察对象与分组（共 12 个物种标本块）
+按博物馆标本盒分栏与属种编排规则，每个物种标本块起自其所属属名大签（或同栏上一物种的种名纸签）下方，止于下一属名大签或下一物种区域上方；印刷体种名纸签通常位于该物种所有标本纸卡正下方，若末行中央留空嵌入种名纸签（如 A2 caeruleus L. 位于 HELOPS 属与 CYLINDRINOTUS 属之间），则处于同一属区间内、位于下一属名大签上方的末行纸卡同样归属该物种。仅考察盒内右侧 4 栏中的下列 12 个指定物种标本块（每块仅计其白色/米色矩形装帧纸卡及卡上甲虫，不含任何印刷体属名/种名纸签及邻近其他物种）：
+- A 组（右侧 4 栏中偏左两栏，编号 A1–A6）：
+  1. A1：obscurus, F.（TENEBRIO 属）
+  2. A2：caeruleus L.（HELOPS 属）
+  3. A3：pallidus, Curt.（CYLINDRINOTUS 属）
+  4. A4：atripes Muls. &amp; Guil.（LAGRIA 属）
+  5. A5：hirta, L.（LAGRIA 属）
+  6. A6：ceramboides, L.（PSEUDOCISTELA 属）
+- B 组（最右两栏，编号 B1–B6）：
+  7. B1：murina, L.（ISOMIRA 属）
+  8. B2：ater, F.（PRIONYCHUS 属）
+  9. B3：melanarius Germ.（PRIONYCHUS 属）
+  10. B4：sulphureus, L.（CTENIOPUS 属）
+  11. B5：desmaresti, Lt.（TETRATOMA 属）
+  12. B6：vaudoueri Muls.（PHLOIOTRYA 属）
+
+二、单物种块视觉属性定义
+对每个物种块 i ∈ {A1..A6, B1..B6}，逐项读取以下整型属性与位置坐标：
+1. 纸卡数 C_i：该物种块内的独立矩形标本纸卡张数。
+2. 虫体数 S_i：该物种块内全部纸卡上装帧的甲虫总个体数。
+3. 下端插针卡数 B_i：该物种块中，金属固定针插在纸卡下端（甲虫尾部下方）而非上端（头部上方）的纸卡张数。
+4. 双字母墨水代码卡数 L_i 与 WX 代码卡数 WX_i：统计该物种块内，纸卡右上角手写有黑色双字母大写墨水代码的纸卡总张数 L_i，以及其中代码明确为 “WX” 的纸卡张数 WX_i。
+5. 性别符号卡数 X_i：统计该物种块内，纸卡左上角标有性别符号（♂ 或 ♀）的纸卡张数。
+6. 标本块平面中心 (cx_i, cy_i)（单位 px）：取该物种块全部标本纸卡联合外接矩形（不含下方印刷种名纸签）的几何中心坐标；任意跨组物种块对 (a, b) 的正射平面欧氏像素距离定义为 d(a, b) = sqrt((cx_a - cx_b)^2 + (cy_a - cy_b)^2)（单位 px）。
+
+三、兼容边、合法方案与两工况代价规则
+1. 跨组兼容边：跨组物种块对 (a, b)（a ∈ A，b ∈ B）成为兼容边，当且仅当同时满足：
+   (1) 平面欧氏像素距离 d(a, b) ≤ 1490 px；
+   (2) 两块下端插针卡数之和 B_a + B_b ≥ 3。
+   其中 d(a, b) ≤ 733 px 称为“近距边”，733 &lt; d(a, b) ≤ 1490 px 称为“中距边”。
+2. 合法两对抽检方案：两条兼容边组成的无序集合 S = {(a1, b1), (a2, b2)}，满足端点互不复用（a1 ≠ a2 且 b1 ≠ b2），且所选 4 个物种块的性别符号卡总数 X_tot = X_{a1} + X_{a2} + X_{b1} + X_{b2} ≥ 1。
+3. 虫体规模分组：记方案所选 4 个物种块的甲虫总个体数为 S_tot = S_{a1} + S_{a2} + S_{b1} + S_{b2}：
+   - 大样本组 M：S_tot ≥ 44；
+   - 精简样本组 N：S_tot ≤ 43。
+4. 两工况代价（均为精确整数，越小越优）：
+   - 动线费 walk(e)：近距边为 10，中距边为 30。
+   - 记方案所选 4 个物种块的纸卡总数 C_tot、下端插针卡总数 B_tot、双字母代码卡总数 L_tot、WX 代码卡总数 WX_tot，以及全 12 个物种块的下端插针卡总和 sum_B：
+   - 工况 0（常规纸卡扫描与跨栏移动成本）：
+     C_0(S) = C_tot + walk(e1) + walk(e2)。
+   - 工况 1（全虫体复检、下端插针补检与代码核验综合成本）：
+     C_1(S) = S_tot + walk(e1) + walk(e2) + 2 × (sum_B - B_tot) - 6 × WX_tot - 2 × L_tot。
+5. 赢家与并列规则：各工况下比较 M 组与 N 组最小代价，严格更小者为赢家（某组无合法方案则另一组胜；相等记 TIE）。两工况赢家均为 M 或 N 且不同时反转位为 1，否则为 0。方案规范编码写为 “a1-b1;a2-b2”（按 A 组编号升序），并列取字典序最小者。
+
+四、请依次作答以下 6 个小问
+1. 全 12 块盘点：依次输出全 12 个物种块的纸卡总数 sum_C、虫体总数 sum_S、下端插针卡总数 sum_B、双字母墨水代码卡总数 sum_L、WX 代码卡总数 sum_WX 以及性别符号卡总数 sum_X。
+2. 跨组兼容边：输出兼容边总数 E 与近距边条数 E_near。
+3. 合法方案计数：输出合法两对方案总数 P、M 组合法方案数 P_M 与 N 组合法方案数 P_N。
+4. 工况 0 优化：输出 M 组最小代价、M 组并列方案数、N 组最小代价、N 组并列方案数。
+5. 工况 1 优化：输出 M 组最小代价、M 组并列方案数、N 组最小代价、N 组并列方案数。
+6. 赢家反转与代表方案：输出工况 0 赢家、工况 1 赢家、反转位（0 或 1），以及工况 1 赢家组最小代价的规范代表方案编码。
+
+输出格式要求：所有计数与代价均为精确整数，无容差；请在回复最后单独一行按以下 6 段竖线分隔格式给出最终答案（段内用英文逗号分隔，不加空格）：
+FINAL_ANSWER: sum_C,sum_S,sum_B,sum_L,sum_WX,sum_X|E,E_near|P,P_M,P_N|C0_M,ties0_M,C0_N,ties0_N|C1_M,ties1_M,C1_N,ties1_N|W0,W1,rev,a1-b1;a2-b2</div>
+</section>
+
+<!-- 4. 出题思路 (thinking) -->
+<section id="sec-thinking">
+  <div class="sec-head">
+    <h2>四、出题思路（thinking）</h2>
+    <button class="btn-copy" data-target="copy-thinking">复制出题思路</button>
+  </div>
+  <div class="copy-box" id="copy-thinking">1. 关键视觉区别（四重微观标本装帧图证联锁）：
+- 下端插针的隐蔽非均匀分布：12 个物种块共 132 张纸卡中 24 张采用下端插针（甲虫尾部下方），其余 108 张为上端插针；其中 A5 (hirta) 15 卡中仅最右下角 1 张下端插针（B=1），A6 (ceramboides) 9 卡中仅最右下角 1 张下端插针（B=1），A1 (obscurus) 全部 3 张下端插针（B=3），A3 (pallidus) 末行左起第 2–5 张共 4 张下端插针（B=4），B2 (ater) 末行仅中/右 2 张下端插针（B=2），B3 (melanarius) 含第 2 行右卡及末行全 3 卡共 4 张下端插针（B=4），B4 (sulphureus) 末行 4 张全为下端插针（B=4），B5 (desmaresti) 含 3 张下端插针（B=3），B6 (vaudoueri) 末行仅最左与最右 2 张下端插针（中间 2 张仍为上端插针，B=2）。
+- 单虫卡与多虫卡及非满排计数：B5 (desmaresti) 仅 5 张纸卡但装有 1+1+3+4+1 = 10 只甲虫（C=5 vs S=10），极易按卡数误计虫数；A2 (caeruleus) 末行中空实为 14 卡（非 4×4=16），B4 (sulphureus) 为 5+5+4 = 14 卡（非 3×5=15）。
+- 右上角手写双字母墨水代码单字母区分：B2 (ater) 有 8 张代码卡（WK, BK, HT / WX, HT, BK / HT, -, HT，仅 1 张 WX），B3 (melanarius) 第 2 行中卡藏有唯独 1 张 WX 代码，合 L=9、WX=2；混淆 WK 与 WX 或漏看 B3 的隐藏 WX 均会直接改变代码计数与工况 1 代价。
+- 非首卡位置的隐蔽性别符号与正射平面测距：除 A2、A4 在第 1 行第 1–2 卡标注 ♂/♀ 外，B1 (murina) 在第 1 行第 3 卡左上角藏有唯一 1 个 ♂（X=1），B6 (vaudoueri) 的 ♀ 位于第 1 行第 4 卡而非第 2 卡（X=2）。12 块装帧纸卡外接框按 20 px 精细网格逐块实测（严格排除属名/种名纸签），按正射欧氏像素距离划定近距（≤733 px）与上限（≤1490 px），最小余量分别达 54.99 px 与 84.06 px（总误差上界 30 px，R = 1.83 与 2.80）。
+
+2. 改变的关系、参数与约束：
+- 兼容边下限 B_a + B_b ≥ 3 令 5 条近距边中的 3 条（A5-B2、A4-B5、A6-B6）恰位于 B 和 = 3 的精确临界线：漏看 A5、A6 的各自唯一 1 张下端插针，或漏看 B5、B6 的任 1 张下端插针，相关近距边立即消失并摧毁最优方案，直接把两工况赢家反转位由 1 翻转为 0。
+- B5 (desmaresti) 的多虫卡差额（S=10 vs C=5）决定 A4-B5;A5-B2（S=48）与 A4-B5;A6-B4（S=44）归入大样本组 M，而 A4-B5;A6-B6（S=42，C=37）留在精简组 N 并赢得工况 0（57 &lt; 59）；若误将 B5 计为 5 只虫，大样本最优方案跌入 N 组导致两工况均由 N 胜（rev: 1→0）。
+- B1 (murina) 第 1 行第 3 卡隐藏 ♂（X=1）通过边 A1-B1 为 8 个无其他性别符号的方案提供合法资格（X_tot ≥ 1）；漏看该 ♂ 会直接减少 8 个合法方案（P: 92→84）。
+- 工况 1 引入虫体数、未覆盖下端插针罚分（×2）与代码/WX 抵扣（-2L - 6WX），使含 B2 (ater, L=8, WX=1) 且使用两条近距边的 M 组方案 A4-B5;A5-B2 与 A5-B2;A6-B6 并列取得 82 分，反超 N 组最优 86 分（A1-B2;A4-B5 与 A1-B2;A6-B6），实现 N → M 的赢家反转。
+
+3. 受影响的可判分字段与明确定义的 12 组反事实复算验证：
+- 标准正确读法：盘点=132/137/24/9/2/7，E=20(5)，P=92(M=52,N=40)，工况 0: M=59/N=57→N，工况 1: M=82(并列2)/N=86(并列2)→M，rev=1（规范方案 A4-B5;A5-B2）。
+- 对以下 12 组明确限定修改条件的有图面依据易混读法（其余未提及属性均保持标准值）逐一独立重算：
+  (1) CF1_B1_miss_murina_male：仅漏看 B1 (murina) 第 1 行第 3 卡左上角隐藏 ♂ 符号（X_B1: 1→0） → 盘点=132/137/24/9/2/6，E=20(5)，P=84(M=49,N=35)，工况 0: M=59/N=57→N，工况 1: M=82(并列2)/N=86(并列2)→M，rev=1（共 4/23 字段变化）。
+  (2) CF2_A5_miss_hirta_pin：仅漏看 A5 (hirta) 最右下角唯一 1 张下端插针卡（B_A5: 1→0） → 盘点=132/137/23/9/2/7，E=18(4)，P=72(M=35,N=37)，工况 0: M=59/N=57→N，工况 1: M=89(并列2)/N=84(并列2)→N，rev=0（共 11/23 字段变化）。
+  (3) CF3_A6_miss_ceramb_pin：仅漏看 A6 (ceramboides) 最右下角唯一 1 张下端插针卡（B_A6: 1→0） → 盘点=132/137/23/9/2/7，E=19(4)，P=77(M=45,N=32)，工况 0: M=59/N=68→M，工况 1: M=80(并列1)/N=84(并列1)→M，rev=0（共 13/23 字段变化）。
+  (4) CF4_B5_cards_eq_bugs：仅将 B5 (desmaresti) 5 张纸卡误计为 5 只虫体（忽略 3 虫卡与 4 虫卡，S_B5: 10→5） → 盘点=132/132/24/9/2/7，E=20(5)，P=92(M=42,N=50)，工况 0: M=65/N=57→N，工况 1: M=82(并列1)/N=77(并列1)→N，rev=0（共 9/23 字段变化）。
+  (5) CF5_B5_miss_1pin：仅漏看 B5 (desmaresti) 1 张下端插针卡（B_B5: 3→2） → 盘点=132/137/23/9/2/7，E=19(4)，P=76(M=43,N=33)，工况 0: M=65/N=69→M，工况 1: M=80(并列1)/N=84(并列1)→M，rev=0（共 15/23 字段变化）。
+  (6) CF6_B4_guess_15cards：仅按 3×5 满排误数 B4 (sulphureus) 为 15 卡 15 虫（忽略末行仅 4 卡，C/S: 14→15） → 盘点=133/138/24/9/2/7，E=20(5)，P=92(M=54,N=38)，工况 0: M=60/N=57→N，工况 1: M=82(并列2)/N=86(并列2)→M，rev=1（共 6/23 字段变化）。
+  (7) CF7_B2_row4_all3_pins：仅误判 B2 (ater) 末行全 3 张均为下端插针（B_B2: 2→3） → 盘点=132/137/25/9/2/7，E=22(6)，P=124(M=76,N=48)，工况 0: M=59/N=57→N，工况 1: M=71(并列1)/N=75(并列1)→M，rev=1（共 11/23 字段变化）。
+  (8) CF8_B3_miss_WX_and_pin：仅漏看 B3 (melanarius) 隐藏 WX 代码及第 2 行右卡下端插针（WX: 1→0, L: 1→0, B: 4→3） → 盘点=132/137/23/8/1/7，E=20(5)，P=92(M=52,N=40)，工况 0: M=59/N=57→N，工况 1: M=80(并列2)/N=84(并列2)→M，rev=1（共 5/23 字段变化）。
+  (9) CF9_A1_miss_obscurus_pin：仅忽略 A1 (obscurus) 全部 3 张下端插针（B_A1: 3→0） → 盘点=132/137/21/9/2/7，E=18(5)，P=70(M=47,N=23)，工况 0: M=59/N=57→N，工况 1: M=76(并列2)/N=92(并列1)→M，rev=1（共 8/23 字段变化）。
+  (10) CF10_A3_miss_pallid_pins：仅漏看 A3 (pallidus) 末行 2 张下端插针（B_A3: 4→2） → 盘点=132/137/22/9/2/7，E=20(5)，P=92(M=52,N=40)，工况 0: M=59/N=57→N，工况 1: M=78(并列2)/N=82(并列2)→M，rev=1（共 3/23 字段变化）。
+  (11) CF11_B6_miss_1pin：仅漏看 B6 (vaudoueri) 末行外侧 1 张下端插针（B_B6: 2→1） → 盘点=132/137/23/9/2/7，E=18(4)，P=64(M=35,N=29)，工况 0: M=59/N=68→M，工况 1: M=80(并列1)/N=84(并列1)→M，rev=0（共 13/23 字段变化）。
+  (12) CF12_B2_WK_as_WX：仅将 B2 (ater) 首卡右上角 WK 误读为 WX（WX_B2: 1→2） → 盘点=132/137/24/9/3/7，E=20(5)，P=92(M=52,N=40)，工况 0: M=59/N=57→N，工况 1: M=76(并列2)/N=80(并列2)→M，rev=1（共 3/23 字段变化）。
+- 汇总：上述显式定义的 12 组反事实读法均改变 3–15 个可判分字段，其中 5/12 组（CF2、CF3、CF4、CF5、CF11）直接将两工况赢家反转位由 1 翻转为 0，其余 7 组（CF1、CF6、CF7、CF8、CF9、CF10、CF12）分别改变性别符号总数与合法方案数、纸卡/虫体总数、兼容边数、代码/WX 计数与工况 1 最优值。</div>
+</section>
+
+<!-- 5. 图像识别 (cot_image_understanding) -->
+<section id="sec-cot-img">
+  <div class="sec-head">
+    <h2>五、图像识别（cot_image_understanding）</h2>
+    <button class="btn-copy" data-target="copy-cot-img">复制图像识别正文</button>
+  </div>
+  <div class="copy-box" id="copy-cot-img">按原图（3870×3081 px，左上角为原点，x 向右、y 向下）仅考察标本盒右侧 4 栏中指定的 12 个物种标本块。每个物种块起自其所属属名大签（或同栏上一物种种名纸签）下方、止于下一属名大签或下一物种区域上方，仅计装帧纸卡及卡上甲虫、严格排除印刷体属名/种名纸签（其中 A2 caeruleus L. 的种名签嵌入末行中央留空处，其左右两张末行纸卡位于 HELOPS 属与 CYLINDRINOTUS 属之间，同样归属 A2）：
+
+一、A 组（右侧 4 栏中偏左两栏，编号 A1–A6）
+1. A1（obscurus, F.，TENEBRIO 属）：1 行×3 列共 3 张单虫纸卡（C=3, S=3）；放大核查 3 张纸卡的金属固定针均插于尾部下方 → B=3；无右上角双字母代码（L=0, WX=0），无性别符号（X=0）；纸卡联合外接矩形 [2167, 1368, 440, 218]（严格止于下方 obscurus, F. 纸签之上），几何中心 (2387, 1477)。易混点：紧邻全上端插针的 molitor 与 caeruleus，易惯性漏看全部 3 张下端插针。
+2. A2（caeruleus L.，HELOPS 属）：位于 HELOPS, F. 属名大签下方至 CYLINDRINOTUS Fald. 属名大签上方，自上而下 4+4+4+2 共 14 张单虫纸卡（末行中央留空嵌入 caeruleus L. 种名签，左右两卡延至 y≈2626 均归属 A2，非 4×4=16），C=14, S=14；14 张全为上端插针 → B=0；L=0, WX=0；第 1 行第 1 卡左上角标 ♂、第 2 卡左上角标 ♀ → X=2；外接矩形 [2092, 1646, 583, 980]，中心 (2384, 2136)。
+3. A3（pallidus, Curt.，CYLINDRINOTUS 属）：2 行排列（上行 8 张 + 下行 5 张）共 13 张单虫纸卡（C=13, S=13）；上行 8 张及下行第 1 张均为上端插针，下行第 2、3、4、5 张金属针均插于尾部下方 → B=4；L=0, WX=0, X=0；外接矩形 [2092, 2640, 568, 262]，中心 (2376, 2771)。
+4. A4（atripes Muls. &amp; Guil.，LAGRIA 属）：4+4+3 共 11 张单虫纸卡（C=11, S=11）；全部 11 张均为上端插针 → B=0；L=0, WX=0；第 1 行第 1 卡标 ♂、第 2 卡标 ♀ → X=2；外接矩形 [2687, 694, 327, 454]，中心 (2850, 921)。
+5. A5（hirta, L.，LAGRIA 属）：3 行×5 列共 15 张单虫纸卡（C=15, S=15）；前 14 张均为上端插针，唯独第 3 行第 5 卡（最右下角）金属针插于尾部下方 → B=1；L=0, WX=0, X=0；外接矩形 [2680, 1208, 325, 390]，中心 (2842, 1403)。易混点：15 张相似褐色甲虫中仅最右下角 1 张下端插针，极易漏看。
+6. A6（ceramboides, L.，PSEUDOCISTELA 属）：3 行×3 列共 9 张单虫纸卡（C=9, S=9）；前 8 张均为上端插针，唯独第 3 行第 3 卡（最右下角）金属针插于尾部下方 → B=1；L=0, WX=0, X=0；外接矩形 [2679, 2302, 303, 566]，中心 (2830, 2585)。易混点：仅最右下角 1 张下端插针。
+
+二、B 组（最右两栏，编号 B1–B6）
+7. B1（murina, L.，ISOMIRA 属）：3 行×5 列共 15 张单虫纸卡（C=15, S=15）；全部 15 张均为上端插针 → B=0；L=0, WX=0；第 1 行第 3 卡左上角清晰手写有 ♂（其余 14 卡无性别符号）→ X=1；外接矩形 [3033, 190, 305, 362]，中心 (3186, 371)。易混点：♂ 位于第 3 卡而非首卡，且无配套 ♀。
+8. B2（ater, F.，PRIONYCHUS 属）：4 行×3 列共 12 张单虫纸卡（C=12, S=12）；前 3 行 9 卡与第 4 行第 1 卡为上端插针，第 4 行第 2、3 卡为下端插针 → B=2；右上角黑色双字母手写代码逐卡核查：R1=(WK, BK, HT)、R2=(WX, HT, BK)、R3=(HT, 无, HT)、R4=(无, 无, 无)，共计 L=8，其中 WX 仅 R2C1 1 张（WX=1，注意 R1C1 为 WK 而非 WX）；X=0；外接矩形 [3020, 644, 320, 758]，中心 (3180, 1023)。
+9. B3（melanarius Germ.，PRIONYCHUS 属）：3 行×3 列共 9 张单虫纸卡（C=9, S=9）；R1 全 3 卡及 R2 左/中 2 卡为上端插针，R2 右卡及 R3 全 3 卡共 4 张为下端插针 → B=4；R2 中卡右上角手写有黑色代码 “WX”，其余 8 卡无代码 → L=1, WX=1；X=0；外接矩形 [3012, 1448, 320, 544]，中心 (3172, 1720)。
+10. B4（sulphureus, L.，CTENIOPUS 属）：3 行排列为 5+5+4 共 14 张单虫纸卡（末行仅 4 卡，非 3×5=15），C=14, S=14；前两行 10 卡全为上端插针，第 3 行全部 4 卡均为下端插针 → B=4；L=0, WX=0, X=0；仅计 14 张装帧纸卡外缘（上缘 y=2386、下缘 y=2835，严格排除下方 y≥2848 的 sulphureus, L. 种名纸签），外接矩形 [2996, 2386, 330, 449]，中心 (3161, 2610)。
+11. B5（desmaresti, Lt.，TETRATOMA 属）：位于 fungorum, F. 与 ancora, F. 之间，共 5 张独立矩形纸卡（C=5）：上行左起第 1、2 卡各装 1 虫（均上端插针），上行右卡宽纸卡并排装 3 虫（下端插针），下行左宽纸卡并排装 4 虫（下端插针），下行右卡装 1 虫（下端插针）→ 总虫体数 S = 1+1+3+4+1 = 10，下端插针卡数 B = 3；L=0, WX=0, X=0；外接矩形 [3355, 672, 258, 189]，中心 (3484, 766)。
+12. B6（vaudoueri Muls.，PHLOIOTRYA 属）：3 行×4 列共 12 张单虫纸卡（C=12, S=12）；前两行 8 卡及第 3 行中间 2 卡（R3C2, R3C3）为上端插针，第 3 行最左（R3C1）与最右（R3C4）2 卡为下端插针 → B=2；L=0, WX=0；第 1 行第 1 卡左上角标 ♂、第 1 行第 4 卡左上角标 ♀ → X=2；外接矩形 [3343, 2305, 329, 555]，中心 (3508, 2582)。
+
+三、盘点汇总
+- sum_C = 3+14+13+11+15+9 + 15+12+9+14+5+12 = 65 + 67 = 132；
+- sum_S = 65 + (15+12+9+14+10+12) = 65 + 72 = 137；
+- sum_B = (3+0+4+0+1+1) + (0+2+4+4+3+2) = 9 + 15 = 24；
+- sum_L = 8 + 1 = 9；sum_WX = 1 + 1 = 2；
+- sum_X = 2 + 2 + 1 + 2 = 7。</div>
+  <h3>A1–A6 与 B1–B6 逐物种块核验事实表（共 132 纸卡 / 137 甲虫）</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>编号</th><th>分组</th><th>属 / 种名</th><th>纸卡 C_i</th><th>虫体 S_i</th><th>下针 B_i</th><th>代码 L_i</th><th>WX_i</th><th>性别 X_i</th><th>中心 (cx, cy)</th><th>关键图证备注</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>A1</strong></td><td>A 组</td><td><code>TENEBRIO / obscurus, F.</code></td><td>3</td><td><strong>3</strong></td><td>3</td><td>0</td><td>0</td><td>0</td><td>(2387, 1477)</td><td>1×3 全部 3 卡下端插针</td></tr><tr><td><strong>A2</strong></td><td>A 组</td><td><code>HELOPS / caeruleus L.</code></td><td>14</td><td><strong>14</strong></td><td>0</td><td>0</td><td>0</td><td>2</td><td>(2384, 2136)</td><td>4+4+4+2 末行中空；R1C1 ♂, R1C2 ♀</td></tr><tr><td><strong>A3</strong></td><td>A 组</td><td><code>CYLINDRINOTUS / pallidus, Curt.</code></td><td>13</td><td><strong>13</strong></td><td>4</td><td>0</td><td>0</td><td>0</td><td>(2376, 2771)</td><td>8+5；下行第 2–5 卡共 4 张下端插针</td></tr><tr><td><strong>A4</strong></td><td>A 组</td><td><code>LAGRIA / atripes Muls. &amp; Guil.</code></td><td>11</td><td><strong>11</strong></td><td>0</td><td>0</td><td>0</td><td>2</td><td>(2850, 921)</td><td>4+4+3 全上端插针；R1C1 ♂, R1C2 ♀</td></tr><tr><td><strong>A5</strong></td><td>A 组</td><td><code>LAGRIA / hirta, L.</code></td><td>15</td><td><strong>15</strong></td><td>1</td><td>0</td><td>0</td><td>0</td><td>(2842, 1403)</td><td>3×5；仅最右下角 R3C5 单卡下端插针</td></tr><tr><td><strong>A6</strong></td><td>A 组</td><td><code>PSEUDOCISTELA / ceramboides, L.</code></td><td>9</td><td><strong>9</strong></td><td>1</td><td>0</td><td>0</td><td>0</td><td>(2830, 2585)</td><td>3×3；仅最右下角 R3C3 单卡下端插针</td></tr><tr><td><strong>B1</strong></td><td>B 组</td><td><code>ISOMIRA / murina, L.</code></td><td>15</td><td><strong>15</strong></td><td>0</td><td>0</td><td>0</td><td>1</td><td>(3186, 371)</td><td>3×5 全上端插针；R1C3 左上角隐藏 ♂</td></tr><tr><td><strong>B2</strong></td><td>B 组</td><td><code>PRIONYCHUS / ater, F.</code></td><td>12</td><td><strong>12</strong></td><td>2</td><td>8</td><td>1</td><td>0</td><td>(3180, 1023)</td><td>4×3；R4C2/R4C3 下针；8 代码(WK,BK,HT/WX,HT,BK/HT,-,HT)</td></tr><tr><td><strong>B3</strong></td><td>B 组</td><td><code>PRIONYCHUS / melanarius Germ.</code></td><td>9</td><td><strong>9</strong></td><td>4</td><td>1</td><td>1</td><td>0</td><td>(3172, 1720)</td><td>3×3；R2C3+R3 共 4 下针；R2C2 隐藏 WX</td></tr><tr><td><strong>B4</strong></td><td>B 组</td><td><code>CTENIOPUS / sulphureus, L.</code></td><td>14</td><td><strong>14</strong></td><td>4</td><td>0</td><td>0</td><td>0</td><td>(3161, 2610)</td><td>5+5+4 非满排；末行 4 卡全下端插针</td></tr><tr><td><strong>B5</strong></td><td>B 组</td><td><code>TETRATOMA / desmaresti, Lt.</code></td><td>5</td><td><strong>10</strong></td><td>3</td><td>0</td><td>0</td><td>0</td><td>(3484, 766)</td><td>5 卡装 1,1,3,4,1=10 虫；3 卡下端插针</td></tr><tr><td><strong>B6</strong></td><td>B 组</td><td><code>PHLOIOTRYA / vaudoueri Muls.</code></td><td>12</td><td><strong>12</strong></td><td>2</td><td>0</td><td>0</td><td>2</td><td>(3508, 2582)</td><td>3×4；R3C1/R3C4 下针；R1C1 ♂, R1C4 ♀</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 6. 题目推理 (cot_reasoning) -->
+<section id="sec-cot-reason">
+  <div class="sec-head">
+    <h2>六、题目推理（cot_reasoning）</h2>
+    <button class="btn-copy" data-target="copy-cot-reason">复制题目推理正文</button>
+  </div>
+  <div class="copy-box" id="copy-cot-reason">一、小问 1（全 12 块盘点）
+由逐块事实表直接汇总：sum_C = 132，sum_S = 137，sum_B = 24，sum_L = 9，sum_WX = 2，sum_X = 7。
+
+二、小问 2（正射平面欧氏测距与兼容边筛选）
+计算全部 6×6 = 36 对跨组物种块对的正射平面欧氏像素距离 d(a, b) = sqrt((cx_a - cx_b)^2 + (cy_a - cy_b)^2)，核验阈值边界余量（20 px 网格逐块精测，单块中心误差上界 e = 15 px，两点距离总误差上界 2e = 30 px）：
+- 距近距阈值 733 px 最近的两对为 A6-B6（678.01 px，余量 54.99 px）与 A3-B4（801.34 px，余量 68.34 px），最小余量 54.99 px，R = 54.99 / 30 = 1.83 &gt; 1；
+- 距上限阈值 1490 px 最近的两对为 A1-B4（1372.14 px，余量 117.86 px）与 A1-B6（1574.06 px，余量 84.06 px），最小余量 84.06 px，R = 84.06 / 30 = 2.80 &gt; 1。
+所有 36 对分类完全稳健。逐对检验两项兼容条件（d ≤ 1490 且 B_a + B_b ≥ 3），共得 E = 20 条兼容边，其中近距边（d ≤ 733，walk = 10）共 E_near = 5 条，中距边（733 &lt; d ≤ 1490，walk = 30）共 15 条：
+1. 近距边（5 条）：
+   - A6-B4（d=331.94，B和=1+4=5）、A5-B3（d=457.59，B和=1+4=5）、A5-B2（d=508.57，B和=1+2=3）、A4-B5（d=652.67，B和=0+3=3）、A6-B6（d=678.01，B和=1+2=3）。
+2. 中距边（15 条）：
+   - A3-B4（801.34，B和=8）、A1-B3（821.75，B和=7）、A4-B3（861.44，B和=4）、A2-B3（891.07，B和=4）、A5-B5（904.40，B和=4）、A2-B4（910.17，B和=4）、A1-B2（913.76，B和=5）、A6-B3（930.16，B和=5）、A3-B6（1147.67，B和=6）、A5-B4（1248.44，B和=5）、A1-B5（1307.26，B和=6）、A3-B3（1318.41，B和=8）、A5-B6（1354.10，B和=3）、A1-B1（1364.42，B和=3）、A1-B4（1372.14，B和=7）。
+（注：A4-B2 虽仅 345.4 px 但 B和 = 0+2 = 2 &lt; 3 被剔除；A4-B1、A2-B2、A2-B5、A2-B6 等同样因 B和 &lt; 3 或 d &gt; 1490 被剔除。）
+
+三、小问 3（完整合法两对方案计数与分组）
+从 20 条兼容边中无序任取两条端点互不复用（a1 ≠ a2 且 b1 ≠ b2）的边，先按端点不重叠枚举后筛选 X_tot ≥ 1（具性别符号的物种块为 A2(2)、A4(2)、B1(1)、B6(2)），共得合法无序两对方案 P = 92 种（其中恰好 8 种仅依赖 B1 的隐藏 ♂ 满足 X_tot = 1）。按虫体总数 S_tot 划分：
+- 大样本组 M（S_tot ≥ 44）：共 P_M = 52 种；
+- 精简样本组 N（S_tot ≤ 43）：共 P_N = 40 种。
+
+四、小问 4（工况 0 优化与并列）
+公式 C_0(S) = C_tot + walk(e1) + walk(e2)，优先考察同时使用两条近距边（walk = 20）的方案：
+- M 组（52 种）：
+  * A4-B5;A6-B4：C_tot = 11+5+9+14 = 39，S_tot = 44 ≥ 44，walk = 20 → C_0 = 59（唯一最小）；
+  * A4-B5;A5-B3：C_tot = 11+5+15+9 = 40，S_tot = 45，walk = 20 → C_0 = 60；
+  * A4-B5;A5-B2：C_tot = 11+5+15+12 = 43，S_tot = 48，walk = 20 → C_0 = 63；
+  * A5-B3;A6-B6：C_tot = 45，walk = 20 → C_0 = 65；A5-B2;A6-B6：C_tot = 48，walk = 20 → C_0 = 68；其余方案 C_0 ≥ 74。
+  故 C0_M = 59，ties0_M = 1。
+- N 组（40 种）：
+  * A4-B5;A6-B6：C_tot = 11+5+9+12 = 37，S_tot = 11+10+9+12 = 42 ≤ 43，walk = 10+10 = 20 → C_0 = 57（唯一最小）；
+  * 次优为 A1-B3;A4-B5（C_tot=28, walk=40 → C_0=68）与 A1-B5;A6-B6（29+40=69）等。
+  故 C0_N = 57，ties0_N = 1。
+
+五、小问 5（工况 1 优化与并列）
+公式 C_1(S) = S_tot + walk + 2×(24 - B_tot) - 6×WX_tot - 2×L_tot：
+- M 组（52 种）：
+  * A4-B5;A5-B2：S=48，walk=20，B_tot=0+3+1+2=6 → 未覆盖 18×2=+36，WX=1(-6)，L=8(-16) → C_1 = 48 + 20 + 36 - 6 - 16 = 82；
+  * A5-B2;A6-B6：S=15+12+9+12=48，walk=20，B_tot=1+2+1+2=6 → 未覆盖 18×2=+36，WX=1(-6)，L=8(-16) → C_1 = 48 + 20 + 36 - 6 - 16 = 82；
+  * 次优为 A4-B5;A5-B3（45+20+32-6-2=89）与 A5-B3;A6-B6（45+20+32-6-2=89）、A4-B3;A5-B2（47+40+34-12-18=91）等。
+  故 C1_M = 82，ties1_M = 2（并列最优：A4-B5;A5-B2 与 A5-B2;A6-B6）。
+- N 组（40 种）：
+  * A1-B2;A4-B5：S=3+12+11+10=36，walk=30+10=40，B_tot=3+2+0+3=8 → 未覆盖 16×2=+32，WX=1(-6)，L=8(-16) → C_1 = 36 + 40 + 32 - 6 - 16 = 86；
+  * A1-B2;A6-B6：S=3+12+9+12=36，walk=30+10=40，B_tot=3+2+1+2=8 → 未覆盖 16×2=+32，WX=1(-6)，L=8(-16) → C_1 = 36 + 40 + 32 - 6 - 16 = 86；
+  * 次优为 A1-B3;A4-B5（33+40+28-6-2=93）与 A1-B3;A6-B6（93）、A1-B2;A4-B3（35+60+30-12-18=95）等。
+  故 C1_N = 86，ties1_N = 2（并列最优：A1-B2;A4-B5 与 A1-B2;A6-B6）。
+
+六、小问 6（赢家反转与规范代表方案）
+- 工况 0：N 组 57 &lt; M 组 59，赢家 W0 = N；
+- 工况 1：M 组 82 &lt; N 组 86，赢家 W1 = M；
+- 两工况赢家由 N 反转为 M，反转位 rev = 1；
+- 工况 1 赢家组（M 组）2 个并列最优方案 A4-B5;A5-B2 与 A5-B2;A6-B6 按字典序取最小，规范代表方案编码为 A4-B5;A5-B2。
+
+最终标准答案：
+132,137,24,9,2,7|20,5|92,52,40|59,1,57,1|82,2,86,2|N,M,1,A4-B5;A5-B2</div>
+</section>
+
+<!-- 7. 标准答案 (response) -->
+<section id="sec-response">
+  <div class="sec-head">
+    <h2>七、标准答案（response）与逐字段判分口径</h2>
+    <button class="btn-copy" data-target="copy-response">复制标准答案</button>
+  </div>
+  <div class="answer-box" id="copy-response">132,137,24,9,2,7|20,5|92,52,40|59,1,57,1|82,2,86,2|N,M,1,A4-B5;A5-B2</div>
+  <h3>逐字段判分口径（共 23 个可判分字段）</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>字段键名</th><th>标准真值</th><th>单位</th><th>判分方法</th><th>容差</th><th>字段说明</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>q1_sum_C</code></td><td><strong>132</strong></td><td>张</td><td>精确整数</td><td>0</td><td>小问 1：全 12 物种块独立矩形标本纸卡总数</td></tr>
+<tr><td><code>q1_sum_S</code></td><td><strong>137</strong></td><td>只</td><td>精确整数</td><td>0</td><td>小问 1：全 12 物种块甲虫总个体数（含多虫卡）</td></tr>
+<tr><td><code>q1_sum_B</code></td><td><strong>24</strong></td><td>张</td><td>精确整数</td><td>0</td><td>小问 1：全 12 物种块下端插针纸卡总数</td></tr>
+<tr><td><code>q1_sum_L</code></td><td><strong>9</strong></td><td>张</td><td>精确整数</td><td>0</td><td>小问 1：右上角手写双字母墨水代码卡总数</td></tr>
+<tr><td><code>q1_sum_WX</code></td><td><strong>2</strong></td><td>张</td><td>精确整数</td><td>0</td><td>小问 1：右上角手写代码明确为 WX 的纸卡数</td></tr>
+<tr><td><code>q1_sum_X</code></td><td><strong>7</strong></td><td>张</td><td>精确整数</td><td>0</td><td>小问 1：左上角标有性别符号（♂/♀）的纸卡总数</td></tr>
+<tr><td><code>q2_edges</code></td><td><strong>20</strong></td><td>条</td><td>精确整数</td><td>0</td><td>小问 2：跨组兼容边总数</td></tr>
+<tr><td><code>q2_near_edges</code></td><td><strong>5</strong></td><td>条</td><td>精确整数</td><td>0</td><td>小问 2：近距兼容边数（d ≤ 733 px）</td></tr>
+<tr><td><code>q3_total_plans</code></td><td><strong>92</strong></td><td>种</td><td>精确整数</td><td>0</td><td>小问 3：合法无序两对抽检方案总数</td></tr>
+<tr><td><code>q3_M_plans</code></td><td><strong>52</strong></td><td>种</td><td>精确整数</td><td>0</td><td>小问 3：大样本组 M（S_tot ≥ 44）方案数</td></tr>
+<tr><td><code>q3_N_plans</code></td><td><strong>40</strong></td><td>种</td><td>精确整数</td><td>0</td><td>小问 3：精简样本组 N（S_tot ≤ 43）方案数</td></tr>
+<tr><td><code>q4_M_min_c0</code></td><td><strong>59</strong></td><td>代价点</td><td>精确整数</td><td>0</td><td>小问 4：工况 0 下 M 组最小代价</td></tr>
+<tr><td><code>q4_M_ties_c0</code></td><td><strong>1</strong></td><td>种</td><td>精确整数</td><td>0</td><td>小问 4：工况 0 下 M 组最优并列方案数</td></tr>
+<tr><td><code>q4_N_min_c0</code></td><td><strong>57</strong></td><td>代价点</td><td>精确整数</td><td>0</td><td>小问 4：工况 0 下 N 组最小代价</td></tr>
+<tr><td><code>q4_N_ties_c0</code></td><td><strong>1</strong></td><td>种</td><td>精确整数</td><td>0</td><td>小问 4：工况 0 下 N 组最优并列方案数</td></tr>
+<tr><td><code>q5_M_min_c1</code></td><td><strong>82</strong></td><td>代价点</td><td>精确整数</td><td>0</td><td>小问 5：工况 1 下 M 组最小代价</td></tr>
+<tr><td><code>q5_M_ties_c1</code></td><td><strong>2</strong></td><td>种</td><td>精确整数</td><td>0</td><td>小问 5：工况 1 下 M 组最优并列方案数</td></tr>
+<tr><td><code>q5_N_min_c1</code></td><td><strong>86</strong></td><td>代价点</td><td>精确整数</td><td>0</td><td>小问 5：工况 1 下 N 组最小代价</td></tr>
+<tr><td><code>q5_N_ties_c1</code></td><td><strong>2</strong></td><td>种</td><td>精确整数</td><td>0</td><td>小问 5：工况 1 下 N 组最优并列方案数</td></tr>
+<tr><td><code>q6_winner_w0</code></td><td><strong>N</strong></td><td>组别</td><td>精确枚举（M/N/TIE）</td><td>无</td><td>小问 6：工况 0 赢家</td></tr>
+<tr><td><code>q6_winner_w1</code></td><td><strong>M</strong></td><td>组别</td><td>精确枚举（M/N/TIE）</td><td>无</td><td>小问 6：工况 1 赢家</td></tr>
+<tr><td><code>q6_reversal</code></td><td><strong>1</strong></td><td>位</td><td>精确整数（0/1）</td><td>0</td><td>小问 6：两工况赢家反转位</td></tr>
+<tr><td><code>q6_w1_canonical_plan</code></td><td><strong>A4-B5;A5-B2</strong></td><td>编码</td><td>精确规范字符串</td><td>无</td><td>小问 6：工况 1 赢家组字典序最小最优方案</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 8. 质检与复算摘要 -->
+<section id="sec-qa">
+  <div class="sec-head">
+    <h2>八、质检与复算摘要</h2>
+    <button class="btn-copy" data-target="copy-qa">复制质检摘要</button>
+  </div>
+  <ul class="clean">
+    <li><strong>离线指标质检结论</strong>：<span class="badge ok">decision = authoring_candidate</span>（阻断项 <code>0</code>、待复核项 <code>0</code>、提醒项 <code>0</code>）；<code>difficulty_status = no_complete_failure_recorded</code>（经 v1→v2 扩块提难后仍 3/3 全对，按实测诚实登记难度为 <code>medium</code>）。</li>
+    <li><strong>原图与密集/近色统计</strong>：原图 <code>3870×3081 px</code>（EXIF=1，RGB），中文覆盖率 <code>0.0%</code>，无人物隐私与水印遮挡；登记 <code>12</code> 个物种块（<code>12</code> 类），近色异类邻居 <code>14</code> 对（近色邻居比例 <code>77.8%</code>），6 个原生 ROI 裁图均经人工逐张复核清晰可辨。</li>
+    <li><strong>多层联合推理图与测距稳健性</strong>：作者登记推理 DAG 含 <code>20</code> 节点、最大深度 <code>6</code> 层、<code>10</code> 个多视觉源合流节点，6 个小问输出视觉祖先覆盖率 <code>100%</code>。20 px 网格逐块精测全部 12 块装帧纸卡外接框与中心（严格排除属名/种名纸签；<code>B4</code> 修正为 <code>[2996, 2386, 330, 449]</code>、中心 <code>(3161, 2610)</code>），单块中心误差上界 <code>15 px</code>（两点总误差上界 <code>30 px</code>），近距阈值 <code>733 px</code> 最小余量 <code>54.99 px</code>（<code>R = 1.83</code>），上限阈值 <code>1490 px</code> 最小余量 <code>84.06 px</code>（<code>R = 2.80</code>）；<code>10,000</code> 次联合径向扰动与统一 <code>+25 px</code> 纵移替代锚点复算，全部 23 字段稳定率均为 <code>100%</code>。</li>
+    <li><strong>防绕过审查（passed）</strong>：v2 彻底移除代码样例、多虫卡提示与相对位置线索，去图无法推导任何字段；关键图证跨越右侧全部 4 栏全高度，单一大裁图无法覆盖。</li>
+  </ul>
+
+  <h3>反事实复算差异对照（solver.py 独立重算，共 12 组）</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>读法编号</th><th>图面误读假设</th><th>C / S / B</th><th>L / WX / X</th><th>边(近) · 方案(M/N)</th><th>工况 0 最小代价→赢家</th><th>工况 1 最小代价→赢家</th><th>反转位</th><th>工况 1 代表方案</th></tr>
+      </thead>
+      <tbody>
+        <tr class='baseline-row'><td><strong>标准正确读法</strong></td><td>原生微距核验全 12 块（132 卡 / 137 虫）</td><td>132/137/24</td><td>9/2/7</td><td>20(5) · 92(52/40)</td><td>M=59, N=57 → N</td><td>M=82(×2), N=86(×2) → M</td><td><strong>1</strong></td><td><code>A4-B5;A5-B2</code></td></tr><tr><td><code>CF1_B1_miss_murina_male</code></td><td>漏看 B1 (murina) 第 1 行第 3 卡左上角隐藏 ♂ 符号（X_B1: 1 -&gt; 0）</td><td>132/137/24</td><td>9/2/6</td><td>20(5) · 84(49/35)</td><td>M=59, N=57 → N</td><td>M=82(×2), N=86(×2) → M</td><td><strong>1</strong></td><td><code>A4-B5;A5-B2</code></td></tr><tr><td><code>CF2_A5_miss_hirta_pin</code></td><td>漏看 A5 (hirta) 最右下角唯一 1 张下端插针卡（B_A5: 1 -&gt; 0）</td><td>132/137/23</td><td>9/2/7</td><td>18(4) · 72(35/37)</td><td>M=59, N=57 → N</td><td>M=89(×2), N=84(×2) → N</td><td class='flip-cell'><strong>0</strong></td><td><code>A1-B2;A4-B5</code></td></tr><tr><td><code>CF3_A6_miss_ceramb_pin</code></td><td>漏看 A6 (ceramboides) 最右下角唯一 1 张下端插针卡（B_A6: 1 -&gt; 0）</td><td>132/137/23</td><td>9/2/7</td><td>19(4) · 77(45/32)</td><td>M=59, N=68 → M</td><td>M=80(×1), N=84(×1) → M</td><td class='flip-cell'><strong>0</strong></td><td><code>A4-B5;A5-B2</code></td></tr><tr><td><code>CF4_B5_cards_eq_bugs</code></td><td>将 B5 (desmaresti) 5 张纸卡误计为 5 只虫体（S_B5: 10 -&gt; 5）</td><td>132/132/24</td><td>9/2/7</td><td>20(5) · 92(42/50)</td><td>M=65, N=57 → N</td><td>M=82(×1), N=77(×1) → N</td><td class='flip-cell'><strong>0</strong></td><td><code>A4-B5;A5-B2</code></td></tr><tr><td><code>CF5_B5_miss_1pin</code></td><td>漏看 B5 (desmaresti) 1 张下端插针卡（B_B5: 3 -&gt; 2）</td><td>132/137/23</td><td>9/2/7</td><td>19(4) · 76(43/33)</td><td>M=65, N=69 → M</td><td>M=80(×1), N=84(×1) → M</td><td class='flip-cell'><strong>0</strong></td><td><code>A5-B2;A6-B6</code></td></tr><tr><td><code>CF6_B4_guess_15cards</code></td><td>按 3x5 满排误数 B4 (sulphureus) 为 15 卡（忽略末行仅 4 卡，C/S: 14 -&gt; 15）</td><td>133/138/24</td><td>9/2/7</td><td>20(5) · 92(54/38)</td><td>M=60, N=57 → N</td><td>M=82(×2), N=86(×2) → M</td><td><strong>1</strong></td><td><code>A4-B5;A5-B2</code></td></tr><tr><td><code>CF7_B2_row4_all3_pins</code></td><td>误判 B2 (ater) 末行全 3 张均为下端插针（B_B2: 2 -&gt; 3）</td><td>132/137/25</td><td>9/2/7</td><td>22(6) · 124(76/48)</td><td>M=59, N=57 → N</td><td>M=71(×1), N=75(×1) → M</td><td><strong>1</strong></td><td><code>A4-B2;A5-B3</code></td></tr><tr><td><code>CF8_B3_miss_WX_and_pin</code></td><td>漏看 B3 (melanarius) 隐藏 WX 代码及第 2 行右卡下端插针（WX:1-&gt;0, L:1-&gt;0, B:4-&gt;3）</td><td>132/137/23</td><td>8/1/7</td><td>20(5) · 92(52/40)</td><td>M=59, N=57 → N</td><td>M=80(×2), N=84(×2) → M</td><td><strong>1</strong></td><td><code>A4-B5;A5-B2</code></td></tr><tr><td><code>CF9_A1_miss_obscurus_pin</code></td><td>忽略 A1 (obscurus) 全部 3 张下端插针（B_A1: 3 -&gt; 0）</td><td>132/137/21</td><td>9/2/7</td><td>18(5) · 70(47/23)</td><td>M=59, N=57 → N</td><td>M=76(×2), N=92(×1) → M</td><td><strong>1</strong></td><td><code>A4-B5;A5-B2</code></td></tr><tr><td><code>CF10_A3_miss_pallid_pins</code></td><td>漏看 A3 (pallidus) 末行 2 张下端插针（B_A3: 4 -&gt; 2）</td><td>132/137/22</td><td>9/2/7</td><td>20(5) · 92(52/40)</td><td>M=59, N=57 → N</td><td>M=78(×2), N=82(×2) → M</td><td><strong>1</strong></td><td><code>A4-B5;A5-B2</code></td></tr><tr><td><code>CF11_B6_miss_1pin</code></td><td>漏看 B6 (vaudoueri) 末行外侧 1 张下端插针（B_B6: 2 -&gt; 1）</td><td>132/137/23</td><td>9/2/7</td><td>18(4) · 64(35/29)</td><td>M=59, N=68 → M</td><td>M=80(×1), N=84(×1) → M</td><td class='flip-cell'><strong>0</strong></td><td><code>A4-B5;A5-B2</code></td></tr><tr><td><code>CF12_B2_WK_as_WX</code></td><td>将 B2 (ater) 首卡 WK 误读为 WX（WX_B2: 1 -&gt; 2）</td><td>132/137/24</td><td>9/3/7</td><td>20(5) · 92(52/40)</td><td>M=59, N=57 → N</td><td>M=76(×2), N=80(×2) → M</td><td><strong>1</strong></td><td><code>A4-B5;A5-B2</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>定稿前 3 次独立盲答试答摘要（冻结修订版题面 v2-rev1 + 干净原图，工具开放）</h3>
+  <p style="font-size:13.5px; margin:6px 0 8px;">先期 <code>v1</code>（10 块）与 <code>v2</code> 初版（12 块）均 3/3 全对；按 AI 质检意见修订 <code>A2</code> 种名签边界说明与全 12 块精测坐标（特别是 <code>B4</code> 外接框）后，对冻结修订版 <code>v2-rev1</code> 重新执行独立盲答：首批 3 个子代理因接口 <code>429 RESOURCE_EXHAUSTED</code> 限流单独记入 <code>infra_error = 3</code>，随后用 3 个新子代理补足有效完整试答 <strong>3 / 3</strong>（超时 0、残缺 0），整题完全正确 <strong>3 / 3</strong>（全部 23/23 字段零歧义精确命中，且 3 位盲答者独立测得 <code>B4</code> 中心均为 <code>(3161.5–3162.0, 2609.0–2611.5)</code>，与精测值 <code>(3161, 2610)</code> 偏差 ≤ 1.5 px），按实测如实登记难度为 <code>medium</code>。</p>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>轮次</th><th>判分结果</th><th>提交末答</th><th>错答字段</th><th>核验说明</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>trial_1</strong></td><td><span class='badge ok'>整题正确 (23/23)</span></td><td><code>132,137,24,9,2,7|20,5|92,52,40|59,1,57,1|82,2,86,2|N,M,1,A4-B5;A5-B2</code></td><td>无</td><td>基于修订版题面独立量测全 12 块（测得 B4 中心 3162.0, 2610.5，A2 含末行左右两卡共 14 卡），132 卡 / 137 虫 / 24 下针 / 9 代码 / 2 WX / 7 性别与两工况优化 23/23 字段全对，无歧义。</td></tr><tr><td><strong>trial_2</strong></td><td><span class='badge ok'>整题正确 (23/23)</span></td><td><code>132,137,24,9,2,7|20,5|92,52,40|59,1,57,1|82,2,86,2|N,M,1,A4-B5;A5-B2</code></td><td>无</td><td>基于修订版题面独立量测全 12 块（测得 B4 中心 3161.5, 2611.5，A2 中心 2381.5, 2134.5），准确识别全部 20 兼容边（5 近距）、92 合法方案及工况 0→1 赢家反转（N→M），23/23 字段全对，无歧义。</td></tr><tr><td><strong>trial_3</strong></td><td><span class='badge ok'>整题正确 (23/23)</span></td><td><code>132,137,24,9,2,7|20,5|92,52,40|59,1,57,1|82,2,86,2|N,M,1,A4-B5;A5-B2</code></td><td>无</td><td>基于修订版题面独立量测全 12 块（测得 B4 中心 3162.0, 2609.0，A2 含末行左右 2 卡共 14 卡），23/23 字段零误差命中，确认修订后题面口径与精测坐标完全自洽。</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <textarea id="copy-qa" hidden>离线质检：decision=authoring_candidate（0阻断/0待审/0提醒），原图 3870×3081 px（EXIF=1，中文覆盖 0.0%，无隐私水印），12 物种块、14 近色异类对，6 个原生 ROI 均人工复核可读。
+测距稳健性：20 px 网格逐块精测全部 12 块装帧纸卡外接框与中心（严格排除属名/种名纸签；B4 为 [2996,2386,330,449]、中心 (3161,2610)），单块中心误差上界 15 px（两点总误差上界 30 px），733 px 阈值余量 54.99 px（R=1.83），1490 px 阈值余量 84.06 px（R=2.80），10000 次联合径向扰动与 +25 px 替代锚点复算稳定率 100%。
+反事实复算：对 CF1–CF12 共 12 组显式限定条件的易混读法逐一重算（其余属性不变），全部 12 组均改变 3–15 个可判分字段；其中 5/12 组（CF2、CF3、CF4、CF5、CF11）直接将两工况赢家反转位由 1 翻转为 0，其余 7 组分别改变性别符号与合法方案数、纸卡/虫体总数、兼容边数、代码/WX 计数与工况 1 最优代价。
+三次独立盲答（冻结修订版 v2-rev1 + 干净原图，工具开放）：另记 3 轮 429 额度限流 infra_error，补足有效试答 3/3，整题全对 3/3（23/23 字段零歧义精确命中，独立测得 B4 中心偏差 ≤ 1.5 px），按实测诚实登记难度 medium。</textarea>
+</section>
+
+</div>
+
+<script>
+(function() {
+  function fallbackCopy(text) {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.focus();
+    ta.select();
+    let ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+    document.body.removeChild(ta);
+    return ok;
+  }
+
+  document.querySelectorAll('.btn-copy').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      const id = btn.getAttribute('data-target');
+      const el = document.getElementById(id);
+      if (!el) return;
+      const text = (el.tagName === 'TEXTAREA' || el.tagName === 'INPUT') ? el.value : el.innerText;
+      const done = function() {
+        const orig = btn.textContent;
+        btn.textContent = '已复制 ✓';
+        btn.classList.add('copied');
+        setTimeout(function() {
+          btn.textContent = orig;
+          btn.classList.remove('copied');
+        }, 1600);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done).catch(function() {
+          if (fallbackCopy(text)) done();
+        });
+      } else {
+        if (fallbackCopy(text)) done();
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>

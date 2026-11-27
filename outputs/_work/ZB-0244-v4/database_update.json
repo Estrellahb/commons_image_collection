@@ -1,0 +1,28 @@
+{
+  "time": "2026-11-26T16:20:06.104697+00:00",
+  "method": "SQLite BEGIN IMMEDIATE; final preconditions asserted",
+  "before": {
+    "id": 244,
+    "file_url": "https://commons.wikimedia.org/wiki/File:JJ_Joicey_cabinet_Haslemere_Educational_Museum_drawer_no_14.jpg",
+    "category": "小众专业实物/珠宝·矿物·标本",
+    "claimed_by": "codex-ZB-0244-v2",
+    "question_types": "counting,localization_measurement,topology_tracking",
+    "difficulty": "hard",
+    "difficulty_tags": "cross_region_alignment,high_similarity,multi_hop_visual",
+    "tag_notes": "P1。ZB-0244-v1 已冻结作者稿，26件蝴蝶的前翅浅斑F、后翅暖色H与横带共同决定路线。原图2000×1333，官方CC BY-SA 4.0。本地图片质检authoring_candidate，双路线360组、最小代价3、并列16。浏览器工具禁止本地file协议，实际HTML渲染及系统剪贴板验收待完成，按临停要求清空草稿并释放；续作材料 outputs/_work/ZB-0244-v1。",
+    "authored_status": "draft",
+    "authored_ref": "ZB-0244-v4 | outputs/authoring_ZB-0244-v4"
+  },
+  "after": {
+    "id": 244,
+    "file_url": "https://commons.wikimedia.org/wiki/File:JJ_Joicey_cabinet_Haslemere_Educational_Museum_drawer_no_14.jpg",
+    "category": "小众专业实物/珠宝·矿物·标本",
+    "claimed_by": "codex-ZB-0244-v2",
+    "question_types": "complex_instruction,counting",
+    "difficulty": "medium",
+    "difficulty_tags": "cross_region_alignment,high_density,high_similarity,multi_hop_visual",
+    "tag_notes": "P1。原生2000×1333官方照片。前翅主斑、后翅暖斑、列位及编号共同决定相邻列边、单路线和双路线可行集与两工况优化。v2/v3盲答暴露褪色口径分歧，v4公开统一H=0时F=0、B4.F=0。双路线864份，工况0最优(1,1)并列2份，工况1最优(12,14)唯一。本地质检authoring_candidate，最终三次独立盲答75/75字段全对，按medium登记。官方CC BY-SA 4.0，交付原文件字节未改。",
+    "authored_status": "authored",
+    "authored_ref": "ZB-0244-v4 | outputs/authoring_ZB-0244-v4"
+  }
+}

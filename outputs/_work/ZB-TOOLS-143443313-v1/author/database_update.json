@@ -1,0 +1,39 @@
+{
+  "table": "collection_queue",
+  "database": "采集数据.sqlite",
+  "scene_id": "commons:143443313:miniature-bit-set",
+  "updated_at": "2026-11-26T18:17:26+08:00",
+  "scene_duplicate_reason": "同场景防重。该白底加尺衍生版和队列 107 为同一张照片，主图已出题。",
+  "after": [
+    {
+      "id": 107,
+      "file_url": "https://commons.wikimedia.org/wiki/File:Miniature_bit_set_with_wrench_for_carrying_on_belt.jpg",
+      "category": "居家场景/工具五金",
+      "claimed_by": "",
+      "question_types": "complex_instruction,counting,localization_measurement,robust_ocr",
+      "difficulty": "hard",
+      "difficulty_tags": "cross_region_alignment,high_similarity,multi_hop_visual,small_target",
+      "tag_notes": "P1。三排实拍批头，槽标、基环和实际刃形共同限定取件路径。水平投影距离、两单互斥与两工况联合优化。本地质检 authoring_candidate。同场景白底加尺派生版为队列 316。",
+      "authored_status": "authored",
+      "authored_ref": "ZB-TOOLS-143443313-v1 | outputs/authoring_ZB-TOOLS-143443313-v1"
+    },
+    {
+      "id": 316,
+      "file_url": "https://commons.wikimedia.org/wiki/File:Miniature_bit_set_with_wrench,_for_carrying_on_belt_(white_background,_added_ruler).jpg",
+      "category": "居家场景/工具五金",
+      "claimed_by": "",
+      "question_types": "counting,robust_ocr",
+      "difficulty": "hard",
+      "difficulty_tags": "cross_region_alignment,high_density,multi_hop_visual",
+      "tag_notes": "P1。红盒三列排的标号、端形和色环逐槽绑定。第三排带孔星形 20 槽露一字端，顶排两处 +2 色环不同，照槽标读会新增可用星形边。按实物端形优先并合用槽号与色环求一对一完整分配数。与库内 ID 107 为同款、同错位布局，定稿去重。\n同场景防重。该白底加尺衍生版和队列 107 为同一张照片，主图已出题。",
+      "authored_status": "discarded",
+      "authored_ref": "ZB-TOOLS-143443313-v1 | outputs/authoring_ZB-TOOLS-143443313-v1"
+    }
+  ],
+  "queue_status_counts": {
+    "": 413,
+    "authored": 1,
+    "discarded": 1
+  },
+  "sqlite_quick_check": "ok"
+}

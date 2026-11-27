@@ -1,0 +1,601 @@
+{
+  "items": [
+    {
+      "id": "ZB-0235-v2",
+      "image": "../../../img/公共场景/市场摊位/zb-market-16268679.jpg",
+      "require_real": true,
+      "source": {
+        "kind": "real_photo",
+        "scene_id": "wikimedia-commons:16268679",
+        "authorization": "verified",
+        "url": "https://commons.wikimedia.org/wiki/File:Spices_for_sale_in_the_Morocco.jpg",
+        "license_url": "https://creativecommons.org/licenses/by/3.0/de/deed.en",
+        "author": "High Contrast",
+        "license": "CC BY 3.0 de",
+        "native_size": [
+          1650,
+          2320
+        ],
+        "evidence": "source.json, source_page.html"
+      },
+      "annotation_provenance": "author_manual_native_pixels",
+      "objects": [
+        {
+          "id": "U1",
+          "bbox": [
+            160,
+            46,
+            278,
+            796
+          ],
+          "category": "CORIANDRE"
+        },
+        {
+          "id": "U2",
+          "bbox": [
+            438,
+            77,
+            248,
+            765
+          ],
+          "category": "RAS EL HANOUT"
+        },
+        {
+          "id": "U3",
+          "bbox": [
+            680,
+            104,
+            243,
+            739
+          ],
+          "category": "PAPRIKA"
+        },
+        {
+          "id": "U4",
+          "bbox": [
+            918,
+            115,
+            223,
+            730
+          ],
+          "category": "GINGEMBRE"
+        },
+        {
+          "id": "U5",
+          "bbox": [
+            1138,
+            155,
+            211,
+            695
+          ],
+          "category": "CURCUMA"
+        },
+        {
+          "id": "L1",
+          "bbox": [
+            148,
+            873,
+            289,
+            762
+          ],
+          "category": "CURCUMA"
+        },
+        {
+          "id": "L2",
+          "bbox": [
+            422,
+            879,
+            267,
+            741
+          ],
+          "category": "GINGEMBRE"
+        },
+        {
+          "id": "L3",
+          "bbox": [
+            680,
+            882,
+            247,
+            718
+          ],
+          "category": "LAHRISSA"
+        },
+        {
+          "id": "L4",
+          "bbox": [
+            915,
+            876,
+            226,
+            706
+          ],
+          "category": "35 EPICES"
+        },
+        {
+          "id": "L5",
+          "bbox": [
+            1130,
+            874,
+            224,
+            694
+          ],
+          "category": "HENNE"
+        },
+        {
+          "id": "R1",
+          "bbox": [
+            386,
+            1817,
+            273,
+            407
+          ],
+          "category": "white"
+        },
+        {
+          "id": "R2",
+          "bbox": [
+            643,
+            1757,
+            222,
+            406
+          ],
+          "category": "stones"
+        },
+        {
+          "id": "R3",
+          "bbox": [
+            869,
+            1712,
+            265,
+            374
+          ],
+          "category": "stones"
+        },
+        {
+          "id": "R4",
+          "bbox": [
+            981,
+            1965,
+            295,
+            355
+          ],
+          "category": "buds"
+        },
+        {
+          "id": "R5",
+          "bbox": [
+            1226,
+            1938,
+            284,
+            382
+          ],
+          "category": "grains"
+        },
+        {
+          "id": "E1",
+          "bbox": [
+            73,
+            1856,
+            321,
+            463
+          ],
+          "category": "dark_chunks"
+        },
+        {
+          "id": "E2",
+          "bbox": [
+            1074,
+            1688,
+            292,
+            395
+          ],
+          "category": "obscured_stones"
+        },
+        {
+          "id": "E3",
+          "bbox": [
+            525,
+            2053,
+            256,
+            267
+          ],
+          "category": "orange_rolls"
+        },
+        {
+          "id": "E4",
+          "bbox": [
+            733,
+            2012,
+            305,
+            308
+          ],
+          "category": "dark_pods"
+        },
+        {
+          "id": "E5",
+          "bbox": [
+            209,
+            2148,
+            296,
+            172
+          ],
+          "category": "mixed_pieces"
+        }
+      ],
+      "critical_rois": [
+        {
+          "id": "upper_tips",
+          "bbox": [
+            142,
+            25,
+            1225,
+            230
+          ],
+          "human_readable": true
+        },
+        {
+          "id": "upper_names",
+          "bbox": [
+            145,
+            560,
+            1235,
+            291
+          ],
+          "human_readable": true
+        },
+        {
+          "id": "lower_tips",
+          "bbox": [
+            145,
+            851,
+            1225,
+            170
+          ],
+          "human_readable": true
+        },
+        {
+          "id": "lower_names",
+          "bbox": [
+            144,
+            1290,
+            1225,
+            365
+          ],
+          "human_readable": true
+        },
+        {
+          "id": "rear_lids",
+          "bbox": [
+            65,
+            1605,
+            1310,
+            523
+          ],
+          "human_readable": true
+        },
+        {
+          "id": "front_lids",
+          "bbox": [
+            190,
+            1922,
+            1330,
+            398
+          ],
+          "human_readable": true
+        },
+        {
+          "id": "blocked_lid",
+          "bbox": [
+            1030,
+            1575,
+            345,
+            353
+          ],
+          "human_readable": true
+        }
+      ],
+      "platform_points": [
+        {
+          "xy": [
+            1247,
+            718
+          ],
+          "label": "上排第 5 罐正面的 CURCUMA，与下排左端同名。"
+        },
+        {
+          "xy": [
+            325,
+            1519
+          ],
+          "label": "下排第 1 罐正面的 CURCUMA，沿罐口上溯到本罐锥尖。"
+        },
+        {
+          "xy": [
+            1135,
+            1690
+          ],
+          "label": "白牌遮在右后方灰褐块罐的盖顶前，牌缘不可用作盖缘坐标。"
+        }
+      ],
+      "ocr": {
+        "han_bboxes": [],
+        "reviewed": true,
+        "notes": "原生图全幅巡查未见汉字。题证品名为拉丁字母，部分末字随弧面变暗。下方阿拉伯文与法文吊牌只用于实体遮挡定位。"
+      },
+      "human_checks": {
+        "source_fidelity": true,
+        "annotation_correct": true,
+        "critical_evidence_visible": true,
+        "no_answer_leakage": true,
+        "counting_rules_clear": true,
+        "privacy_faces": true,
+        "watermark_no_obstruction": true
+      },
+      "task": {
+        "uses_distance": true,
+        "dependencies": [
+          {
+            "roi_id": "upper_names",
+            "parameter": "上排品名",
+            "output": "同名边、方案总数"
+          },
+          {
+            "roi_id": "lower_names",
+            "parameter": "下排品名",
+            "output": "同名边、方案总数"
+          },
+          {
+            "roi_id": "upper_tips",
+            "parameter": "上排锥尖 x",
+            "output": "档位、代表方案码"
+          },
+          {
+            "roi_id": "lower_tips",
+            "parameter": "下排锥尖 x",
+            "output": "档位、代表方案码"
+          },
+          {
+            "roi_id": "rear_lids",
+            "parameter": "后方参照盖顶及料型",
+            "output": "各参照方案数、最低分"
+          },
+          {
+            "roi_id": "front_lids",
+            "parameter": "前方参照盖顶及料型",
+            "output": "各参照方案数"
+          },
+          {
+            "roi_id": "blocked_lid",
+            "parameter": "排除盖顶受阻的灰褐罐",
+            "output": "参照编号和总数"
+          }
+        ],
+        "measurements": [
+          {
+            "id": "bands",
+            "margin": 59,
+            "error_bound": 24,
+            "unit": "px",
+            "error_method": "两个锥尖横坐标各取 ±12 px 上界",
+            "evidence": "facts.json, recompute.json, qa_review.md"
+          },
+          {
+            "id": "window",
+            "margin": 27.0,
+            "error_bound": 24,
+            "unit": "px",
+            "error_method": "两锥尖中点经误差取平均仍至多 ±12 px，盖顶至多 ±12 px",
+            "evidence": "facts.json, recompute.json, qa_review.md"
+          }
+        ],
+        "counterfactuals": [
+          {
+            "field": "完整方案数",
+            "baseline": 23,
+            "alternative": 5,
+            "verified": true,
+            "evidence": "recompute.json#same_color_as_same_name"
+          },
+          {
+            "field": "A 代表方案",
+            "baseline": "13425/2",
+            "alternative": "14235/3",
+            "verified": true,
+            "evidence": "recompute.json#same_color_as_same_name"
+          },
+          {
+            "field": "按参照编号的完整方案数",
+            "baseline": [
+              5,
+              7,
+              6,
+              5,
+              0
+            ],
+            "alternative": [
+              5,
+              7,
+              6,
+              5,
+              6,
+              0
+            ],
+            "verified": true,
+            "evidence": "recompute.json#occluded_lid_as_visible"
+          }
+        ],
+        "bypass_review": "passed",
+        "reasoning_graph": {
+          "nodes": [
+            {
+              "id": "upper_tips",
+              "kind": "visual",
+              "roi_id": "upper_tips"
+            },
+            {
+              "id": "upper_names",
+              "kind": "visual",
+              "roi_id": "upper_names"
+            },
+            {
+              "id": "lower_tips",
+              "kind": "visual",
+              "roi_id": "lower_tips"
+            },
+            {
+              "id": "lower_names",
+              "kind": "visual",
+              "roi_id": "lower_names"
+            },
+            {
+              "id": "rear_lids",
+              "kind": "visual",
+              "roi_id": "rear_lids"
+            },
+            {
+              "id": "front_lids",
+              "kind": "visual",
+              "roi_id": "front_lids"
+            },
+            {
+              "id": "blocked_lid",
+              "kind": "visual",
+              "roi_id": "blocked_lid"
+            },
+            {
+              "id": "name_match",
+              "kind": "parameter"
+            },
+            {
+              "id": "edge_geometry",
+              "kind": "measure"
+            },
+            {
+              "id": "lid_eligibility",
+              "kind": "parameter"
+            },
+            {
+              "id": "five_permutations",
+              "kind": "state"
+            },
+            {
+              "id": "window",
+              "kind": "state"
+            },
+            {
+              "id": "scores",
+              "kind": "optimize"
+            },
+            {
+              "id": "same_name",
+              "kind": "output"
+            },
+            {
+              "id": "counts",
+              "kind": "output"
+            },
+            {
+              "id": "optima",
+              "kind": "output"
+            },
+            {
+              "id": "representative_edges",
+              "kind": "output"
+            }
+          ],
+          "edges": [
+            [
+              "upper_names",
+              "name_match"
+            ],
+            [
+              "lower_names",
+              "name_match"
+            ],
+            [
+              "upper_tips",
+              "edge_geometry"
+            ],
+            [
+              "lower_tips",
+              "edge_geometry"
+            ],
+            [
+              "rear_lids",
+              "lid_eligibility"
+            ],
+            [
+              "front_lids",
+              "lid_eligibility"
+            ],
+            [
+              "blocked_lid",
+              "lid_eligibility"
+            ],
+            [
+              "name_match",
+              "same_name"
+            ],
+            [
+              "name_match",
+              "five_permutations"
+            ],
+            [
+              "edge_geometry",
+              "five_permutations"
+            ],
+            [
+              "edge_geometry",
+              "window"
+            ],
+            [
+              "five_permutations",
+              "window"
+            ],
+            [
+              "lid_eligibility",
+              "window"
+            ],
+            [
+              "window",
+              "counts"
+            ],
+            [
+              "window",
+              "scores"
+            ],
+            [
+              "lid_eligibility",
+              "scores"
+            ],
+            [
+              "scores",
+              "optima"
+            ],
+            [
+              "scores",
+              "representative_edges"
+            ],
+            [
+              "window",
+              "representative_edges"
+            ]
+          ]
+        }
+      },
+      "evaluation": {
+        "tools_enabled": true,
+        "frozen_version": "ZB-0235-v2",
+        "counts": {
+          "correct": 3,
+          "incorrect": 0,
+          "timeout": 0,
+          "infra_error": 0,
+          "partial": 0
+        },
+        "trajectory": "blind_trials.json",
+        "gt_review": "recompute.json, grade_blind.py",
+        "failure_attribution": "三次独立试答均全部正确。"
+      }
+    }
+  ]
+}

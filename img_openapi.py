@@ -35,9 +35,14 @@ AUTHORED_VALUES = {
 }
 SELECTOR = {"id": INTEGER, "file_url": STRING, "path": STRING}
 CLAIM_FIELDS = {"claimed": BOOLEAN, "claimed_by": STRING}
+REGISTRY_VALUES = {
+    "registered": BOOLEAN,
+    "registry_source": {**STRING, "enum": ["", "collection_queue", "img_claims"]},
+}
 CLAIM_TARGET = {
     **SELECTOR,
     **CLAIM_FIELDS,
+    **REGISTRY_VALUES,
     **TAG_VALUES,
     **AUTHORED_VALUES,
     "source": STRING,
@@ -60,6 +65,7 @@ FILE_FIELDS = {
     "sha256": STRING,
     "bytes_written": INTEGER,
     **CLAIM_FIELDS,
+    **REGISTRY_VALUES,
     **TAG_VALUES,
     **AUTHORED_VALUES,
     "queue_id": {**INTEGER, "nullable": True},
@@ -84,7 +90,32 @@ SCHEMAS = {
             "count": INTEGER,
             "total_bytes": INTEGER,
             "claim_tracking": BOOLEAN,
+            "registered_count": INTEGER,
+            "unregistered_count": INTEGER,
             "images": array(ref("Image")),
+        }
+    ),
+    "RegistryReport": obj(
+        {
+            "directory": STRING,
+            "claim_tracking": BOOLEAN,
+            "total_files": INTEGER,
+            "registered_count": INTEGER,
+            "unregistered_count": INTEGER,
+            "by_source": obj(
+                {"collection_queue": INTEGER, "img_claims": INTEGER, "unregistered": INTEGER},
+                ("collection_queue", "img_claims", "unregistered"),
+            ),
+            "queue_summary": {
+                **obj(
+                    {"total": INTEGER, "downloaded_count": INTEGER, "pending_download_count": INTEGER},
+                    ("total", "downloaded_count", "pending_download_count"),
+                ),
+                "nullable": True,
+            },
+            "matched_count": INTEGER,
+            "images": array(ref("Image")),
+            "pending_queue": array(ref("ClaimTarget")),
         }
     ),
     "Queue": obj(
@@ -166,6 +197,12 @@ def filters(*, claimer_alias=False):
         param("difficulty_tag", "视觉难点，可多选。", TAG_VALUES["difficulty_tags"], explode=False),
         param("match", "各标签组内匹配全部或任一所选项。", {**STRING, "enum": ["all", "any"], "default": "all"}),
         param("tagged", "1 为已打标，0 为待标注。", {**STRING, "enum": ["0", "1"]}),
+        param("registered", "入库登记状态。1 为已在 collection_queue 或 img_claims 登记，0 为磁盘未登记。", {**STRING, "enum": ["0", "1"]}),
+        param(
+            "registry_source",
+            "登记来源表筛选（collection_queue=队列，img_claims=本地台账，none=未登记）。",
+            {**STRING, "enum": list(image_tags.REGISTRY_SOURCES)},
+        ),
         param("status", "领取状态。", {**STRING, "enum": ["all", "unclaimed", "claimed"], "default": "all"}),
         *AUTHORED_PARAMETERS,
         param("claimed_by", "筛选已有领取人。"),
@@ -404,6 +441,27 @@ def openapi_document(*, allow_query_token=True):
                 *filters(claimer_alias=True),
                 param("limit", "每页数量，0 表示不限。", INTEGER),
                 param("offset", "跳过的匹配项数。", INTEGER),
+            ],
+            errors=("400", "403", "503"),
+        )
+    )
+    paths["/api/registry"] = get_head(
+        operation(
+            "registryAudit",
+            claims,
+            "统一核对图片入库登记状态",
+            {"200": response("磁盘文件与数据库登记核对清单。", ref("RegistryReport"))},
+            description=(
+                "汇总 img/ 磁盘图片是否在 collection_queue 或 img_claims 中完成登记。"
+                "支持按 prefix、registered=0/1、registry_source、difficulty、authored_status 等组合筛选，"
+                "传 include_pending=true 可同时列出 collection_queue 中尚未下载的条目。"
+            ),
+            params=[
+                *filters(claimer_alias=True),
+                param("checksum", "为每张图计算 SHA-256。", BOOLEAN),
+                param("include_pending", "同时列出 collection_queue 中尚未下载到本地的记录。", BOOLEAN),
+                param("limit", "每页返回图片数量，0 表示不限。", INTEGER),
+                param("offset", "跳过的匹配图片数。", INTEGER),
             ],
             errors=("400", "403", "503"),
         )

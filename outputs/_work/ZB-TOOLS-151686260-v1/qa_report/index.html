@@ -1,0 +1,437 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><title>ZeroBench 图片质检</title><style>body{font:16px system-ui;margin:30px;background:#f4f4f1;color:#202020}article{background:white;margin:22px 0;padding:24px;border:1px solid #ddd;overflow:auto}img{max-width:48%;float:left;margin:0 24px 16px 0}pre{white-space:pre-wrap;font-size:13px}h1{font-size:28px}</style><h1>图片与题目证据质检</h1><p>代理指标用于筛选，不证明难度。缺失值不会自动通过；判定与试答证据分开。</p><article><h2>ZB-TOOLS-151686260-v1 · authoring_candidate</h2><img src="001.jpg" loading="lazy"><pre>{
+  &quot;id&quot;: &quot;ZB-TOOLS-151686260-v1&quot;,
+  &quot;blockers&quot;: [],
+  &quot;review&quot;: [],
+  &quot;advisory&quot;: [],
+  &quot;metrics&quot;: {
+    &quot;width&quot;: 4716,
+    &quot;height&quot;: 3144,
+    &quot;mode&quot;: &quot;RGB&quot;,
+    &quot;exif_orientation&quot;: 1,
+    &quot;frame_count&quot;: 1,
+    &quot;global_640_proxy&quot;: {
+      &quot;contrast_p90_p10&quot;: 176.0,
+      &quot;gray_entropy_bits&quot;: 7.716000734481479,
+      &quot;edge_fraction_16&quot;: 0.1669828943726134
+    },
+    &quot;object_count&quot;: 20,
+    &quot;objects_per_MP&quot;: 1.3488810761696957,
+    &quot;class_count&quot;: 14,
+    &quot;known_fraction&quot;: 1.0,
+    &quot;repeated_classes&quot;: 1,
+    &quot;spatial_entropy_4x4&quot;: 0.6804820237218405,
+    &quot;median_bbox_short_px&quot;: 310.0,
+    &quot;p10_bbox_short_px&quot;: 260.0,
+    &quot;edge_touching_count&quot;: 0,
+    &quot;nearcolor_pair_count&quot;: 33,
+    &quot;different_class_neighbor_pairs&quot;: 45,
+    &quot;nearcolor_neighbor_fraction&quot;: 0.7333333333333333,
+    &quot;bbox_overlap_pair_count&quot;: 15,
+    &quot;han_text_coverage&quot;: 0.0,
+    &quot;distinct_dependency_regions&quot;: 6,
+    &quot;effective_counterfactuals&quot;: 5
+  },
+  &quot;source&quot;: {
+    &quot;kind&quot;: &quot;real_photo&quot;,
+    &quot;url&quot;: &quot;https://commons.wikimedia.org/wiki/File:Bicycle_cone_wrenches_at_Somerville_Bike_Kitchen.jpg&quot;,
+    &quot;license_url&quot;: &quot;https://creativecommons.org/licenses/by/4.0&quot;,
+    &quot;authorization&quot;: &quot;verified&quot;,
+    &quot;scene_id&quot;: &quot;commons:151686260&quot;
+  },
+  &quot;difficulty_status&quot;: &quot;documented_failure_evidence_requires_human_acceptance&quot;,
+  &quot;annotation_provenance&quot;: &quot;author_manual_bbox&quot;,
+  &quot;preview&quot;: &quot;001.jpg&quot;,
+  &quot;nearcolor_pairs&quot;: [
+    {
+      &quot;a&quot;: &quot;H3_red_stack&quot;,
+      &quot;b&quot;: &quot;H2_red&quot;,
+      &quot;deltaE76&quot;: 8.493022899268862
+    },
+    {
+      &quot;a&quot;: &quot;H4_red_stack&quot;,
+      &quot;b&quot;: &quot;H3_red_stack&quot;,
+      &quot;deltaE76&quot;: 11.29705490027879
+    },
+    {
+      &quot;a&quot;: &quot;H6_blue&quot;,
+      &quot;b&quot;: &quot;H5_blue&quot;,
+      &quot;deltaE76&quot;: 2.598930560588157
+    },
+    {
+      &quot;a&quot;: &quot;H6_red_behind&quot;,
+      &quot;b&quot;: &quot;H5_blue&quot;,
+      &quot;deltaE76&quot;: 9.415385171735984
+    },
+    {
+      &quot;a&quot;: &quot;H6_red_behind&quot;,
+      &quot;b&quot;: &quot;H6_blue&quot;,
+      &quot;deltaE76&quot;: 10.194572685834169
+    },
+    {
+      &quot;a&quot;: &quot;H7_blue&quot;,
+      &quot;b&quot;: &quot;H6_blue&quot;,
+      &quot;deltaE76&quot;: 8.42989267264543
+    },
+    {
+      &quot;a&quot;: &quot;H7_blue&quot;,
+      &quot;b&quot;: &quot;H6_red_behind&quot;,
+      &quot;deltaE76&quot;: 11.227783484715046
+    },
+    {
+      &quot;a&quot;: &quot;H7_red_behind&quot;,
+      &quot;b&quot;: &quot;H6_blue&quot;,
+      &quot;deltaE76&quot;: 10.49005076691259
+    },
+    {
+      &quot;a&quot;: &quot;H7_red_behind&quot;,
+      &quot;b&quot;: &quot;H7_blue&quot;,
+      &quot;deltaE76&quot;: 3.3625949722535298
+    },
+    {
+      &quot;a&quot;: &quot;H8_blue&quot;,
+      &quot;b&quot;: &quot;H7_blue&quot;,
+      &quot;deltaE76&quot;: 8.1289750207013
+    },
+    {
+      &quot;a&quot;: &quot;H8_blue&quot;,
+      &quot;b&quot;: &quot;H7_red_behind&quot;,
+      &quot;deltaE76&quot;: 10.335351577172277
+    },
+    {
+      &quot;a&quot;: &quot;H8_red_behind&quot;,
+      &quot;b&quot;: &quot;H6_blue&quot;,
+      &quot;deltaE76&quot;: 2.47343487510424
+    },
+    {
+      &quot;a&quot;: &quot;H8_red_behind&quot;,
+      &quot;b&quot;: &quot;H7_blue&quot;,
+      &quot;deltaE76&quot;: 7.077270569679795
+    },
+    {
+      &quot;a&quot;: &quot;H8_red_behind&quot;,
+      &quot;b&quot;: &quot;H8_blue&quot;,
+      &quot;deltaE76&quot;: 2.6790208994236715
+    },
+    {
+      &quot;a&quot;: &quot;H9_blue&quot;,
+      &quot;b&quot;: &quot;H8_blue&quot;,
+      &quot;deltaE76&quot;: 3.492275663769702
+    },
+    {
+      &quot;a&quot;: &quot;H9_blue&quot;,
+      &quot;b&quot;: &quot;H8_red_behind&quot;,
+      &quot;deltaE76&quot;: 2.279012384472806
+    },
+    {
+      &quot;a&quot;: &quot;H9_red_behind&quot;,
+      &quot;b&quot;: &quot;H8_blue&quot;,
+      &quot;deltaE76&quot;: 5.485077567074632
+    },
+    {
+      &quot;a&quot;: &quot;H9_red_behind&quot;,
+      &quot;b&quot;: &quot;H9_blue&quot;,
+      &quot;deltaE76&quot;: 2.293131874035327
+    },
+    {
+      &quot;a&quot;: &quot;H10_blue&quot;,
+      &quot;b&quot;: &quot;H9_blue&quot;,
+      &quot;deltaE76&quot;: 4.097284427266933
+    },
+    {
+      &quot;a&quot;: &quot;H10_blue&quot;,
+      &quot;b&quot;: &quot;H9_red_behind&quot;,
+      &quot;deltaE76&quot;: 3.0927836824050354
+    },
+    {
+      &quot;a&quot;: &quot;H10_red_behind&quot;,
+      &quot;b&quot;: &quot;H8_blue&quot;,
+      &quot;deltaE76&quot;: 9.725419279090042
+    },
+    {
+      &quot;a&quot;: &quot;H10_red_behind&quot;,
+      &quot;b&quot;: &quot;H9_blue&quot;,
+      &quot;deltaE76&quot;: 7.9494423496443005
+    },
+    {
+      &quot;a&quot;: &quot;H10_red_behind&quot;,
+      &quot;b&quot;: &quot;H9_red_behind&quot;,
+      &quot;deltaE76&quot;: 6.283628846738863
+    },
+    {
+      &quot;a&quot;: &quot;H10_red_behind&quot;,
+      &quot;b&quot;: &quot;H10_blue&quot;,
+      &quot;deltaE76&quot;: 4.232133430492733
+    },
+    {
+      &quot;a&quot;: &quot;H11_blue&quot;,
+      &quot;b&quot;: &quot;H9_blue&quot;,
+      &quot;deltaE76&quot;: 5.180332701047064
+    },
+    {
+      &quot;a&quot;: &quot;H11_blue&quot;,
+      &quot;b&quot;: &quot;H10_blue&quot;,
+      &quot;deltaE76&quot;: 9.05191134688096
+    },
+    {
+      &quot;a&quot;: &quot;H11_red_behind&quot;,
+      &quot;b&quot;: &quot;H9_blue&quot;,
+      &quot;deltaE76&quot;: 9.378418860786885
+    },
+    {
+      &quot;a&quot;: &quot;H11_red_behind&quot;,
+      &quot;b&quot;: &quot;H10_blue&quot;,
+      &quot;deltaE76&quot;: 11.753005293212889
+    },
+    {
+      &quot;a&quot;: &quot;H11_red_behind&quot;,
+      &quot;b&quot;: &quot;H11_blue&quot;,
+      &quot;deltaE76&quot;: 7.03375463825805
+    },
+    {
+      &quot;a&quot;: &quot;H12_blue&quot;,
+      &quot;b&quot;: &quot;H10_blue&quot;,
+      &quot;deltaE76&quot;: 10.703608579402601
+    },
+    {
+      &quot;a&quot;: &quot;H12_blue&quot;,
+      &quot;b&quot;: &quot;H11_blue&quot;,
+      &quot;deltaE76&quot;: 4.444218583540082
+    },
+    {
+      &quot;a&quot;: &quot;H12_blue&quot;,
+      &quot;b&quot;: &quot;H11_red_behind&quot;,
+      &quot;deltaE76&quot;: 7.966480774869739
+    },
+    {
+      &quot;a&quot;: &quot;H12_red_behind&quot;,
+      &quot;b&quot;: &quot;H12_blue&quot;,
+      &quot;deltaE76&quot;: 10.322853906219757
+    }
+  ],
+  &quot;overlap_candidates&quot;: [
+    {
+      &quot;a&quot;: &quot;H4_red_stack&quot;,
+      &quot;b&quot;: &quot;H3_red_stack&quot;,
+      &quot;iom&quot;: 0.15384615384615385
+    },
+    {
+      &quot;a&quot;: &quot;H5_red_behind&quot;,
+      &quot;b&quot;: &quot;H5_blue&quot;,
+      &quot;iom&quot;: 0.8602941176470589
+    },
+    {
+      &quot;a&quot;: &quot;H6_red_behind&quot;,
+      &quot;b&quot;: &quot;H6_blue&quot;,
+      &quot;iom&quot;: 0.8203747072599532
+    },
+    {
+      &quot;a&quot;: &quot;H7_red_behind&quot;,
+      &quot;b&quot;: &quot;H6_blue&quot;,
+      &quot;iom&quot;: 0.20313302516692347
+    },
+    {
+      &quot;a&quot;: &quot;H7_red_behind&quot;,
+      &quot;b&quot;: &quot;H7_blue&quot;,
+      &quot;iom&quot;: 0.7909604519774012
+    },
+    {
+      &quot;a&quot;: &quot;H8_red_behind&quot;,
+      &quot;b&quot;: &quot;H7_blue&quot;,
+      &quot;iom&quot;: 0.18513323983169705
+    },
+    {
+      &quot;a&quot;: &quot;H8_red_behind&quot;,
+      &quot;b&quot;: &quot;H8_blue&quot;,
+      &quot;iom&quot;: 0.7876577840112202
+    },
+    {
+      &quot;a&quot;: &quot;H9_red_behind&quot;,
+      &quot;b&quot;: &quot;H9_blue&quot;,
+      &quot;iom&quot;: 0.7679403541472507
+    },
+    {
+      &quot;a&quot;: &quot;H10_blue&quot;,
+      &quot;b&quot;: &quot;H9_blue&quot;,
+      &quot;iom&quot;: 0.18518518518518517
+    },
+    {
+      &quot;a&quot;: &quot;H10_red_behind&quot;,
+      &quot;b&quot;: &quot;H9_blue&quot;,
+      &quot;iom&quot;: 0.2799864084267754
+    },
+    {
+      &quot;a&quot;: &quot;H10_red_behind&quot;,
+      &quot;b&quot;: &quot;H10_blue&quot;,
+      &quot;iom&quot;: 0.8236493374108053
+    },
+    {
+      &quot;a&quot;: &quot;H11_red_behind&quot;,
+      &quot;b&quot;: &quot;H10_blue&quot;,
+      &quot;iom&quot;: 0.21782890007189074
+    },
+    {
+      &quot;a&quot;: &quot;H11_red_behind&quot;,
+      &quot;b&quot;: &quot;H11_blue&quot;,
+      &quot;iom&quot;: 0.7828900071890726
+    },
+    {
+      &quot;a&quot;: &quot;H12_red_behind&quot;,
+      &quot;b&quot;: &quot;H11_blue&quot;,
+      &quot;iom&quot;: 0.2175824175824176
+    },
+    {
+      &quot;a&quot;: &quot;H12_red_behind&quot;,
+      &quot;b&quot;: &quot;H12_blue&quot;,
+      &quot;iom&quot;: 0.8172161172161172
+    }
+  ],
+  &quot;roi_metrics&quot;: [
+    {
+      &quot;id&quot;: &quot;r1_h1_h2_stack&quot;,
+      &quot;file&quot;: &quot;001_roi1.png&quot;,
+      &quot;contrast_p90_p10&quot;: 123.0,
+      &quot;gray_entropy_bits&quot;: 7.483234251303518,
+      &quot;edge_fraction_16&quot;: 0.03804027412556663
+    },
+    {
+      &quot;id&quot;: &quot;r2_h3_h4_stack&quot;,
+      &quot;file&quot;: &quot;001_roi2.png&quot;,
+      &quot;contrast_p90_p10&quot;: 175.0,
+      &quot;gray_entropy_bits&quot;: 7.735238203382376,
+      &quot;edge_fraction_16&quot;: 0.06482080447235115
+    },
+    {
+      &quot;id&quot;: &quot;r3_h5_h6_stack&quot;,
+      &quot;file&quot;: &quot;001_roi3.png&quot;,
+      &quot;contrast_p90_p10&quot;: 211.0,
+      &quot;gray_entropy_bits&quot;: 7.351350387382018,
+      &quot;edge_fraction_16&quot;: 0.09008526530899866
+    },
+    {
+      &quot;id&quot;: &quot;r4_h7_h8_usa_stack&quot;,
+      &quot;file&quot;: &quot;001_roi4.png&quot;,
+      &quot;contrast_p90_p10&quot;: 215.0,
+      &quot;gray_entropy_bits&quot;: 7.419853575943564,
+      &quot;edge_fraction_16&quot;: 0.07099351160784607
+    },
+    {
+      &quot;id&quot;: &quot;r5_h9_h10_stack&quot;,
+      &quot;file&quot;: &quot;001_roi5.png&quot;,
+      &quot;contrast_p90_p10&quot;: 190.0,
+      &quot;gray_entropy_bits&quot;: 7.541970557986072,
+      &quot;edge_fraction_16&quot;: 0.056182255401622284
+    },
+    {
+      &quot;id&quot;: &quot;r6_h11_h12_stack&quot;,
+      &quot;file&quot;: &quot;001_roi6.png&quot;,
+      &quot;contrast_p90_p10&quot;: 137.0,
+      &quot;gray_entropy_bits&quot;: 7.268430353518671,
+      &quot;edge_fraction_16&quot;: 0.046242801984612614
+    }
+  ],
+  &quot;reasoning_metrics&quot;: {
+    &quot;node_count&quot;: 19,
+    &quot;max_depth&quot;: 7,
+    &quot;branch_nodes&quot;: 13,
+    &quot;join_nodes&quot;: 9,
+    &quot;multi_visual_join_nodes&quot;: 9,
+    &quot;output_count&quot;: 6,
+    &quot;outputs_with_visual_ancestry&quot;: 6,
+    &quot;output_visual_coverage&quot;: 1.0,
+    &quot;state_nodes&quot;: 1,
+    &quot;parameter_nodes&quot;: 2,
+    &quot;output_evidence_regions&quot;: {
+      &quot;out_q1&quot;: [
+        &quot;r1_h1_h2_stack&quot;,
+        &quot;r2_h3_h4_stack&quot;,
+        &quot;r3_h5_h6_stack&quot;,
+        &quot;r4_h7_h8_usa_stack&quot;,
+        &quot;r5_h9_h10_stack&quot;,
+        &quot;r6_h11_h12_stack&quot;
+      ],
+      &quot;out_q2&quot;: [
+        &quot;r1_h1_h2_stack&quot;,
+        &quot;r2_h3_h4_stack&quot;,
+        &quot;r3_h5_h6_stack&quot;,
+        &quot;r4_h7_h8_usa_stack&quot;,
+        &quot;r5_h9_h10_stack&quot;,
+        &quot;r6_h11_h12_stack&quot;
+      ],
+      &quot;out_q3&quot;: [
+        &quot;r1_h1_h2_stack&quot;,
+        &quot;r2_h3_h4_stack&quot;,
+        &quot;r3_h5_h6_stack&quot;,
+        &quot;r4_h7_h8_usa_stack&quot;,
+        &quot;r5_h9_h10_stack&quot;,
+        &quot;r6_h11_h12_stack&quot;
+      ],
+      &quot;out_q4&quot;: [
+        &quot;r1_h1_h2_stack&quot;,
+        &quot;r2_h3_h4_stack&quot;,
+        &quot;r3_h5_h6_stack&quot;,
+        &quot;r4_h7_h8_usa_stack&quot;,
+        &quot;r5_h9_h10_stack&quot;,
+        &quot;r6_h11_h12_stack&quot;
+      ],
+      &quot;out_q5&quot;: [
+        &quot;r1_h1_h2_stack&quot;,
+        &quot;r2_h3_h4_stack&quot;,
+        &quot;r3_h5_h6_stack&quot;,
+        &quot;r4_h7_h8_usa_stack&quot;,
+        &quot;r5_h9_h10_stack&quot;,
+        &quot;r6_h11_h12_stack&quot;
+      ],
+      &quot;out_q6&quot;: [
+        &quot;r1_h1_h2_stack&quot;,
+        &quot;r2_h3_h4_stack&quot;,
+        &quot;r3_h5_h6_stack&quot;,
+        &quot;r4_h7_h8_usa_stack&quot;,
+        &quot;r5_h9_h10_stack&quot;,
+        &quot;r6_h11_h12_stack&quot;
+      ]
+    }
+  },
+  &quot;measurement_margins&quot;: [
+    {
+      &quot;id&quot;: &quot;dx_near_1180&quot;,
+      &quot;ratio&quot;: 4.5,
+      &quot;unit&quot;: &quot;px&quot;
+    },
+    {
+      &quot;id&quot;: &quot;dx_max_2200&quot;,
+      &quot;ratio&quot;: 3.0,
+      &quot;unit&quot;: &quot;px&quot;
+    }
+  ],
+  &quot;platform_points&quot;: [
+    {
+      &quot;xy&quot;: [
+        1338,
+        895
+      ],
+      &quot;label&quot;: &quot;H3 挂钩：左红柄区非单调刻字 15（位于 24 与 22 之间）且同钩叠挂 3 把红柄，作者关键证据点&quot;
+    },
+    {
+      &quot;xy&quot;: [
+        1666,
+        955
+      ],
+      &quot;label&quot;: &quot;H4 挂钩：22 mm 红柄实际紧贴叠挂 2 把（橙颈/钳口双层），盲测 2/3 轮次漏读为 1 把，模型误读点&quot;
+    },
+    {
+      &quot;xy&quot;: [
+        2340,
+        1015
+      ],
+      &quot;label&quot;: &quot;H6 挂钩：19 mm 蓝柄实际叠挂 3 层蓝套且背后有 2 把红柄，盲测 1/3 轮次误读为 2 蓝柄并翻转赢家，模型误读点&quot;
+    }
+  ],
+  &quot;evaluation_counts&quot;: {
+    &quot;correct&quot;: 1,
+    &quot;incorrect&quot;: 2,
+    &quot;timeout&quot;: 0,
+    &quot;infra_error&quot;: 0,
+    &quot;partial&quot;: 0
+  },
+  &quot;decision&quot;: &quot;authoring_candidate&quot;
+}</pre></article></html>

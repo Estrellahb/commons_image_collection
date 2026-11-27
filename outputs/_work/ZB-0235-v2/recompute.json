@@ -1,0 +1,1508 @@
+{
+  "version": "ZB-0235-v2",
+  "baseline": {
+    "same_name": [
+      [
+        4,
+        2
+      ],
+      [
+        5,
+        1
+      ]
+    ],
+    "by_reference": [
+      5,
+      7,
+      6,
+      5,
+      0
+    ],
+    "total": 23,
+    "optimum": {
+      "A": {
+        "score": 20,
+        "count": 2,
+        "representative": "13425/2",
+        "window_edge": [
+          2,
+          3
+        ],
+        "winners": [
+          "13425/2",
+          "13425/3"
+        ]
+      },
+      "B": {
+        "score": 14,
+        "count": 2,
+        "representative": "14523/2",
+        "window_edge": [
+          2,
+          4
+        ],
+        "winners": [
+          "14523/2",
+          "34125/2"
+        ]
+      }
+    },
+    "core_count": 13,
+    "distance_matrix": [
+      [
+        20,
+        271,
+        501,
+        726,
+        940
+      ],
+      [
+        262,
+        29,
+        259,
+        484,
+        698
+      ],
+      [
+        487,
+        196,
+        34,
+        259,
+        473
+      ],
+      [
+        724,
+        433,
+        203,
+        22,
+        236
+      ],
+      [
+        953,
+        662,
+        432,
+        207,
+        7
+      ]
+    ],
+    "band_matrix": [
+      [
+        0,
+        1,
+        2,
+        3,
+        3
+      ],
+      [
+        1,
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        2,
+        1,
+        0,
+        1,
+        2
+      ],
+      [
+        3,
+        2,
+        1,
+        0,
+        1
+      ],
+      [
+        3,
+        3,
+        2,
+        1,
+        0
+      ]
+    ],
+    "min_band_margin": [
+      59,
+      501,
+      [
+        1,
+        3
+      ],
+      560
+    ],
+    "min_window_margin": [
+      27.0,
+      90.0,
+      "31425",
+      1,
+      [
+        2,
+        1
+      ]
+    ],
+    "core_codes": [
+      "13425",
+      "13524",
+      "14523",
+      "23451",
+      "23541",
+      "24351",
+      "24531",
+      "31425",
+      "31524",
+      "32451",
+      "32541",
+      "34125",
+      "34251"
+    ],
+    "feasible": [
+      {
+        "code": "13425",
+        "reference": 2,
+        "crossings": 2,
+        "window_edge": [
+          2,
+          3
+        ],
+        "bands": [
+          0,
+          1,
+          1,
+          2,
+          0
+        ],
+        "A": 20,
+        "B": 15
+      },
+      {
+        "code": "13425",
+        "reference": 3,
+        "crossings": 2,
+        "window_edge": [
+          3,
+          4
+        ],
+        "bands": [
+          0,
+          1,
+          1,
+          2,
+          0
+        ],
+        "A": 20,
+        "B": 15
+      },
+      {
+        "code": "13524",
+        "reference": 2,
+        "crossings": 3,
+        "window_edge": [
+          2,
+          3
+        ],
+        "bands": [
+          0,
+          1,
+          2,
+          2,
+          1
+        ],
+        "A": 26,
+        "B": 18
+      },
+      {
+        "code": "13524",
+        "reference": 3,
+        "crossings": 3,
+        "window_edge": [
+          3,
+          5
+        ],
+        "bands": [
+          0,
+          1,
+          2,
+          2,
+          1
+        ],
+        "A": 26,
+        "B": 18
+      },
+      {
+        "code": "14523",
+        "reference": 2,
+        "crossings": 4,
+        "window_edge": [
+          2,
+          4
+        ],
+        "bands": [
+          0,
+          2,
+          2,
+          2,
+          2
+        ],
+        "A": 28,
+        "B": 14
+      },
+      {
+        "code": "23451",
+        "reference": 1,
+        "crossings": 4,
+        "window_edge": [
+          1,
+          2
+        ],
+        "bands": [
+          1,
+          1,
+          1,
+          1,
+          3
+        ],
+        "A": 26,
+        "B": 31
+      },
+      {
+        "code": "23451",
+        "reference": 2,
+        "crossings": 4,
+        "window_edge": [
+          2,
+          3
+        ],
+        "bands": [
+          1,
+          1,
+          1,
+          1,
+          3
+        ],
+        "A": 29,
+        "B": 30
+      },
+      {
+        "code": "23451",
+        "reference": 3,
+        "crossings": 4,
+        "window_edge": [
+          3,
+          4
+        ],
+        "bands": [
+          1,
+          1,
+          1,
+          1,
+          3
+        ],
+        "A": 29,
+        "B": 30
+      },
+      {
+        "code": "23451",
+        "reference": 4,
+        "crossings": 4,
+        "window_edge": [
+          4,
+          5
+        ],
+        "bands": [
+          1,
+          1,
+          1,
+          1,
+          3
+        ],
+        "A": 28,
+        "B": 33
+      },
+      {
+        "code": "23541",
+        "reference": 1,
+        "crossings": 5,
+        "window_edge": [
+          1,
+          2
+        ],
+        "bands": [
+          1,
+          1,
+          2,
+          0,
+          3
+        ],
+        "A": 24,
+        "B": 26
+      },
+      {
+        "code": "23541",
+        "reference": 2,
+        "crossings": 5,
+        "window_edge": [
+          2,
+          3
+        ],
+        "bands": [
+          1,
+          1,
+          2,
+          0,
+          3
+        ],
+        "A": 27,
+        "B": 25
+      },
+      {
+        "code": "24351",
+        "reference": 1,
+        "crossings": 5,
+        "window_edge": [
+          1,
+          2
+        ],
+        "bands": [
+          1,
+          2,
+          0,
+          1,
+          3
+        ],
+        "A": 24,
+        "B": 26
+      },
+      {
+        "code": "24351",
+        "reference": 4,
+        "crossings": 5,
+        "window_edge": [
+          4,
+          5
+        ],
+        "bands": [
+          1,
+          2,
+          0,
+          1,
+          3
+        ],
+        "A": 26,
+        "B": 28
+      },
+      {
+        "code": "24531",
+        "reference": 1,
+        "crossings": 6,
+        "window_edge": [
+          1,
+          2
+        ],
+        "bands": [
+          1,
+          2,
+          2,
+          1,
+          3
+        ],
+        "A": 30,
+        "B": 29
+      },
+      {
+        "code": "24531",
+        "reference": 2,
+        "crossings": 6,
+        "window_edge": [
+          2,
+          4
+        ],
+        "bands": [
+          1,
+          2,
+          2,
+          1,
+          3
+        ],
+        "A": 33,
+        "B": 28
+      },
+      {
+        "code": "24531",
+        "reference": 4,
+        "crossings": 6,
+        "window_edge": [
+          3,
+          5
+        ],
+        "bands": [
+          1,
+          2,
+          2,
+          1,
+          3
+        ],
+        "A": 32,
+        "B": 31
+      },
+      {
+        "code": "31425",
+        "reference": 3,
+        "crossings": 3,
+        "window_edge": [
+          3,
+          4
+        ],
+        "bands": [
+          2,
+          1,
+          1,
+          2,
+          0
+        ],
+        "A": 26,
+        "B": 18
+      },
+      {
+        "code": "31524",
+        "reference": 3,
+        "crossings": 4,
+        "window_edge": [
+          3,
+          5
+        ],
+        "bands": [
+          2,
+          1,
+          2,
+          2,
+          1
+        ],
+        "A": 32,
+        "B": 21
+      },
+      {
+        "code": "32451",
+        "reference": 3,
+        "crossings": 5,
+        "window_edge": [
+          3,
+          4
+        ],
+        "bands": [
+          2,
+          0,
+          1,
+          1,
+          3
+        ],
+        "A": 27,
+        "B": 25
+      },
+      {
+        "code": "32451",
+        "reference": 4,
+        "crossings": 5,
+        "window_edge": [
+          4,
+          5
+        ],
+        "bands": [
+          2,
+          0,
+          1,
+          1,
+          3
+        ],
+        "A": 26,
+        "B": 28
+      },
+      {
+        "code": "34125",
+        "reference": 2,
+        "crossings": 4,
+        "window_edge": [
+          2,
+          4
+        ],
+        "bands": [
+          2,
+          2,
+          2,
+          2,
+          0
+        ],
+        "A": 28,
+        "B": 14
+      },
+      {
+        "code": "34251",
+        "reference": 1,
+        "crossings": 6,
+        "window_edge": [
+          1,
+          3
+        ],
+        "bands": [
+          2,
+          2,
+          1,
+          1,
+          3
+        ],
+        "A": 30,
+        "B": 29
+      },
+      {
+        "code": "34251",
+        "reference": 4,
+        "crossings": 6,
+        "window_edge": [
+          4,
+          5
+        ],
+        "bands": [
+          2,
+          2,
+          1,
+          1,
+          3
+        ],
+        "A": 32,
+        "B": 31
+      }
+    ]
+  },
+  "alternatives": {
+    "same_color_as_same_name": {
+      "changed": "上排 1 与下排 1 的粉堆偏黄，误把这一对视为 CURCUMA 同名边。以 1-1 取代 5-1，保留 4-2。其他图证保持原样。",
+      "result": {
+        "same_name": [
+          [
+            1,
+            1
+          ],
+          [
+            4,
+            2
+          ]
+        ],
+        "by_reference": [
+          0,
+          1,
+          4,
+          0,
+          0
+        ],
+        "total": 5,
+        "optimum": {
+          "A": {
+            "score": 20,
+            "count": 1,
+            "representative": "14235/3",
+            "window_edge": [
+              4,
+              3
+            ],
+            "winners": [
+              "14235/3"
+            ]
+          },
+          "B": {
+            "score": 14,
+            "count": 1,
+            "representative": "34125/2",
+            "window_edge": [
+              2,
+              4
+            ],
+            "winners": [
+              "34125/2"
+            ]
+          }
+        },
+        "core_count": 8,
+        "distance_matrix": [
+          [
+            20,
+            271,
+            501,
+            726,
+            940
+          ],
+          [
+            262,
+            29,
+            259,
+            484,
+            698
+          ],
+          [
+            487,
+            196,
+            34,
+            259,
+            473
+          ],
+          [
+            724,
+            433,
+            203,
+            22,
+            236
+          ],
+          [
+            953,
+            662,
+            432,
+            207,
+            7
+          ]
+        ],
+        "band_matrix": [
+          [
+            0,
+            1,
+            2,
+            3,
+            3
+          ],
+          [
+            1,
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            1,
+            0,
+            1,
+            2
+          ],
+          [
+            3,
+            2,
+            1,
+            0,
+            1
+          ],
+          [
+            3,
+            3,
+            2,
+            1,
+            0
+          ]
+        ],
+        "min_band_margin": [
+          59,
+          501,
+          [
+            1,
+            3
+          ],
+          560
+        ],
+        "min_window_margin": [
+          27.0,
+          90.0,
+          "31425",
+          1,
+          [
+            2,
+            1
+          ]
+        ],
+        "core_codes": [
+          "12453",
+          "12534",
+          "13254",
+          "14235",
+          "14253",
+          "31425",
+          "31524",
+          "34125"
+        ],
+        "feasible": [
+          {
+            "code": "14235",
+            "reference": 3,
+            "crossings": 2,
+            "window_edge": [
+              4,
+              3
+            ],
+            "bands": [
+              0,
+              2,
+              1,
+              1,
+              0
+            ],
+            "A": 20,
+            "B": 15
+          },
+          {
+            "code": "14253",
+            "reference": 3,
+            "crossings": 3,
+            "window_edge": [
+              5,
+              3
+            ],
+            "bands": [
+              0,
+              2,
+              1,
+              1,
+              2
+            ],
+            "A": 26,
+            "B": 18
+          },
+          {
+            "code": "31425",
+            "reference": 3,
+            "crossings": 3,
+            "window_edge": [
+              3,
+              4
+            ],
+            "bands": [
+              2,
+              1,
+              1,
+              2,
+              0
+            ],
+            "A": 26,
+            "B": 18
+          },
+          {
+            "code": "31524",
+            "reference": 3,
+            "crossings": 4,
+            "window_edge": [
+              3,
+              5
+            ],
+            "bands": [
+              2,
+              1,
+              2,
+              2,
+              1
+            ],
+            "A": 32,
+            "B": 21
+          },
+          {
+            "code": "34125",
+            "reference": 2,
+            "crossings": 4,
+            "window_edge": [
+              2,
+              4
+            ],
+            "bands": [
+              2,
+              2,
+              2,
+              2,
+              0
+            ],
+            "A": 28,
+            "B": 14
+          }
+        ]
+      }
+    },
+    "occluded_lid_as_visible": {
+      "changed": "把白牌斜下缘邻近石块处错认成牌下罐的可见圆盖顶，以 x=1135 额外加入灰褐块参照。原参照不变，新参照排在粉紫花苞之后。",
+      "result": {
+        "same_name": [
+          [
+            4,
+            2
+          ],
+          [
+            5,
+            1
+          ]
+        ],
+        "by_reference": [
+          5,
+          7,
+          6,
+          5,
+          6,
+          0
+        ],
+        "total": 29,
+        "optimum": {
+          "A": {
+            "score": 20,
+            "count": 2,
+            "representative": "13425/2",
+            "window_edge": [
+              2,
+              3
+            ],
+            "winners": [
+              "13425/2",
+              "13425/3"
+            ]
+          },
+          "B": {
+            "score": 14,
+            "count": 2,
+            "representative": "14523/2",
+            "window_edge": [
+              2,
+              4
+            ],
+            "winners": [
+              "14523/2",
+              "34125/2"
+            ]
+          }
+        },
+        "core_count": 13,
+        "distance_matrix": [
+          [
+            20,
+            271,
+            501,
+            726,
+            940
+          ],
+          [
+            262,
+            29,
+            259,
+            484,
+            698
+          ],
+          [
+            487,
+            196,
+            34,
+            259,
+            473
+          ],
+          [
+            724,
+            433,
+            203,
+            22,
+            236
+          ],
+          [
+            953,
+            662,
+            432,
+            207,
+            7
+          ]
+        ],
+        "band_matrix": [
+          [
+            0,
+            1,
+            2,
+            3,
+            3
+          ],
+          [
+            1,
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            1,
+            0,
+            1,
+            2
+          ],
+          [
+            3,
+            2,
+            1,
+            0,
+            1
+          ],
+          [
+            3,
+            3,
+            2,
+            1,
+            0
+          ]
+        ],
+        "min_band_margin": [
+          59,
+          501,
+          [
+            1,
+            3
+          ],
+          560
+        ],
+        "min_window_margin": [
+          1.0,
+          118.0,
+          "14523",
+          5,
+          [
+            5,
+            3
+          ]
+        ],
+        "core_codes": [
+          "13425",
+          "13524",
+          "14523",
+          "23451",
+          "23541",
+          "24351",
+          "24531",
+          "31425",
+          "31524",
+          "32451",
+          "32541",
+          "34125",
+          "34251"
+        ],
+        "feasible": [
+          {
+            "code": "13425",
+            "reference": 2,
+            "crossings": 2,
+            "window_edge": [
+              2,
+              3
+            ],
+            "bands": [
+              0,
+              1,
+              1,
+              2,
+              0
+            ],
+            "A": 20,
+            "B": 15
+          },
+          {
+            "code": "13425",
+            "reference": 3,
+            "crossings": 2,
+            "window_edge": [
+              3,
+              4
+            ],
+            "bands": [
+              0,
+              1,
+              1,
+              2,
+              0
+            ],
+            "A": 20,
+            "B": 15
+          },
+          {
+            "code": "13524",
+            "reference": 2,
+            "crossings": 3,
+            "window_edge": [
+              2,
+              3
+            ],
+            "bands": [
+              0,
+              1,
+              2,
+              2,
+              1
+            ],
+            "A": 26,
+            "B": 18
+          },
+          {
+            "code": "13524",
+            "reference": 3,
+            "crossings": 3,
+            "window_edge": [
+              3,
+              5
+            ],
+            "bands": [
+              0,
+              1,
+              2,
+              2,
+              1
+            ],
+            "A": 26,
+            "B": 18
+          },
+          {
+            "code": "13524",
+            "reference": 5,
+            "crossings": 3,
+            "window_edge": [
+              5,
+              4
+            ],
+            "bands": [
+              0,
+              1,
+              2,
+              2,
+              1
+            ],
+            "A": 26,
+            "B": 18
+          },
+          {
+            "code": "14523",
+            "reference": 2,
+            "crossings": 4,
+            "window_edge": [
+              2,
+              4
+            ],
+            "bands": [
+              0,
+              2,
+              2,
+              2,
+              2
+            ],
+            "A": 28,
+            "B": 14
+          },
+          {
+            "code": "23451",
+            "reference": 1,
+            "crossings": 4,
+            "window_edge": [
+              1,
+              2
+            ],
+            "bands": [
+              1,
+              1,
+              1,
+              1,
+              3
+            ],
+            "A": 26,
+            "B": 31
+          },
+          {
+            "code": "23451",
+            "reference": 2,
+            "crossings": 4,
+            "window_edge": [
+              2,
+              3
+            ],
+            "bands": [
+              1,
+              1,
+              1,
+              1,
+              3
+            ],
+            "A": 29,
+            "B": 30
+          },
+          {
+            "code": "23451",
+            "reference": 3,
+            "crossings": 4,
+            "window_edge": [
+              3,
+              4
+            ],
+            "bands": [
+              1,
+              1,
+              1,
+              1,
+              3
+            ],
+            "A": 29,
+            "B": 30
+          },
+          {
+            "code": "23451",
+            "reference": 4,
+            "crossings": 4,
+            "window_edge": [
+              4,
+              5
+            ],
+            "bands": [
+              1,
+              1,
+              1,
+              1,
+              3
+            ],
+            "A": 28,
+            "B": 33
+          },
+          {
+            "code": "23451",
+            "reference": 5,
+            "crossings": 4,
+            "window_edge": [
+              4,
+              5
+            ],
+            "bands": [
+              1,
+              1,
+              1,
+              1,
+              3
+            ],
+            "A": 29,
+            "B": 30
+          },
+          {
+            "code": "23541",
+            "reference": 1,
+            "crossings": 5,
+            "window_edge": [
+              1,
+              2
+            ],
+            "bands": [
+              1,
+              1,
+              2,
+              0,
+              3
+            ],
+            "A": 24,
+            "B": 26
+          },
+          {
+            "code": "23541",
+            "reference": 2,
+            "crossings": 5,
+            "window_edge": [
+              2,
+              3
+            ],
+            "bands": [
+              1,
+              1,
+              2,
+              0,
+              3
+            ],
+            "A": 27,
+            "B": 25
+          },
+          {
+            "code": "24351",
+            "reference": 1,
+            "crossings": 5,
+            "window_edge": [
+              1,
+              2
+            ],
+            "bands": [
+              1,
+              2,
+              0,
+              1,
+              3
+            ],
+            "A": 24,
+            "B": 26
+          },
+          {
+            "code": "24351",
+            "reference": 4,
+            "crossings": 5,
+            "window_edge": [
+              4,
+              5
+            ],
+            "bands": [
+              1,
+              2,
+              0,
+              1,
+              3
+            ],
+            "A": 26,
+            "B": 28
+          },
+          {
+            "code": "24351",
+            "reference": 5,
+            "crossings": 5,
+            "window_edge": [
+              4,
+              5
+            ],
+            "bands": [
+              1,
+              2,
+              0,
+              1,
+              3
+            ],
+            "A": 27,
+            "B": 25
+          },
+          {
+            "code": "24531",
+            "reference": 1,
+            "crossings": 6,
+            "window_edge": [
+              1,
+              2
+            ],
+            "bands": [
+              1,
+              2,
+              2,
+              1,
+              3
+            ],
+            "A": 30,
+            "B": 29
+          },
+          {
+            "code": "24531",
+            "reference": 2,
+            "crossings": 6,
+            "window_edge": [
+              2,
+              4
+            ],
+            "bands": [
+              1,
+              2,
+              2,
+              1,
+              3
+            ],
+            "A": 33,
+            "B": 28
+          },
+          {
+            "code": "24531",
+            "reference": 4,
+            "crossings": 6,
+            "window_edge": [
+              3,
+              5
+            ],
+            "bands": [
+              1,
+              2,
+              2,
+              1,
+              3
+            ],
+            "A": 32,
+            "B": 31
+          },
+          {
+            "code": "31425",
+            "reference": 3,
+            "crossings": 3,
+            "window_edge": [
+              3,
+              4
+            ],
+            "bands": [
+              2,
+              1,
+              1,
+              2,
+              0
+            ],
+            "A": 26,
+            "B": 18
+          },
+          {
+            "code": "31524",
+            "reference": 3,
+            "crossings": 4,
+            "window_edge": [
+              3,
+              5
+            ],
+            "bands": [
+              2,
+              1,
+              2,
+              2,
+              1
+            ],
+            "A": 32,
+            "B": 21
+          },
+          {
+            "code": "31524",
+            "reference": 5,
+            "crossings": 4,
+            "window_edge": [
+              5,
+              4
+            ],
+            "bands": [
+              2,
+              1,
+              2,
+              2,
+              1
+            ],
+            "A": 32,
+            "B": 21
+          },
+          {
+            "code": "32451",
+            "reference": 3,
+            "crossings": 5,
+            "window_edge": [
+              3,
+              4
+            ],
+            "bands": [
+              2,
+              0,
+              1,
+              1,
+              3
+            ],
+            "A": 27,
+            "B": 25
+          },
+          {
+            "code": "32451",
+            "reference": 4,
+            "crossings": 5,
+            "window_edge": [
+              4,
+              5
+            ],
+            "bands": [
+              2,
+              0,
+              1,
+              1,
+              3
+            ],
+            "A": 26,
+            "B": 28
+          },
+          {
+            "code": "32451",
+            "reference": 5,
+            "crossings": 5,
+            "window_edge": [
+              4,
+              5
+            ],
+            "bands": [
+              2,
+              0,
+              1,
+              1,
+              3
+            ],
+            "A": 27,
+            "B": 25
+          },
+          {
+            "code": "34125",
+            "reference": 2,
+            "crossings": 4,
+            "window_edge": [
+              2,
+              4
+            ],
+            "bands": [
+              2,
+              2,
+              2,
+              2,
+              0
+            ],
+            "A": 28,
+            "B": 14
+          },
+          {
+            "code": "34251",
+            "reference": 1,
+            "crossings": 6,
+            "window_edge": [
+              1,
+              3
+            ],
+            "bands": [
+              2,
+              2,
+              1,
+              1,
+              3
+            ],
+            "A": 30,
+            "B": 29
+          },
+          {
+            "code": "34251",
+            "reference": 4,
+            "crossings": 6,
+            "window_edge": [
+              4,
+              5
+            ],
+            "bands": [
+              2,
+              2,
+              1,
+              1,
+              3
+            ],
+            "A": 32,
+            "B": 31
+          },
+          {
+            "code": "34251",
+            "reference": 5,
+            "crossings": 6,
+            "window_edge": [
+              4,
+              5
+            ],
+            "bands": [
+              2,
+              2,
+              1,
+              1,
+              3
+            ],
+            "A": 33,
+            "B": 28
+          }
+        ]
+      }
+    }
+  }
+}

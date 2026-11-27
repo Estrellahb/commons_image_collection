@@ -189,7 +189,7 @@ class ImgServerHTTPTests(unittest.TestCase):
                     path: get_head for path in (
                         "/", "/health", "/docs", "/docs/", "/openapi.json", "/img", "/img/", "/api/images", "/api/files",
                         "/download/{relpath}", "/api/meta/{relpath}", "/api/thumb/{relpath}", "/api/queue",
-                        "/api/archive", "/download-all", "/api/tags/schema",
+                        "/api/registry", "/api/archive", "/download-all", "/api/tags/schema",
                     )
                 } | {
                     "/img/{relpath}": {"get", "head", "put"}, "/api/claims": {"post", "put", "patch", "delete"},
@@ -201,6 +201,11 @@ class ImgServerHTTPTests(unittest.TestCase):
                 self.assertNotIn("security", spec["paths"]["/api/images"]["get"])
                 self.assertEqual(spec["paths"]["/api/images"]["options"]["security"], [])
                 self.assertIn("authored_status", spec["components"]["schemas"]["TagSchema"]["properties"])
+                self.assertIn("registered", spec["components"]["schemas"]["Image"]["properties"])
+                self.assertIn("registry_source", spec["components"]["schemas"]["Image"]["properties"])
+                self.assertIn("RegistryReport", spec["components"]["schemas"])
+                img_param_names = {p["name"] for p in spec["paths"]["/api/images"]["get"]["parameters"]}
+                self.assertTrue({"registered", "registry_source"} <= img_param_names)
                 self.assertIn("JSON 请求体", spec["paths"]["/api/claims"]["post"]["description"])
                 self.assertEqual(http_request(port, "GET", "/api/images")[0], 401)
                 self.assertEqual(http_request(port, "GET", "/api/images", headers={"Authorization": "Bearer swagger-test-token"})[0], 200)
@@ -1037,6 +1042,81 @@ class ClaimTrackingTests(unittest.TestCase):
                 self.assertEqual((meta["authored_status"], meta["authored_ref"]), ("", ""))
                 self.assertEqual(self._request(port, "PATCH", "/api/tags", {"path": "small.png", "difficulty": "hard"})[0], 503)
                 self.assertEqual(self._request(port, "GET", "/api/archive?question_type=counting")[0], 404)
+
+    def test_registry_status_filters_and_api_registry_endpoint(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            img_dir, db_path, _, _ = self._setup_project(root)
+            (img_dir / "unregistered.png").write_bytes(TINY_PNG)
+            # Register local_only.png in img_claims without tags to verify registered vs tagged distinction.
+            with sqlite3.connect(db_path) as db:
+                db.execute(
+                    "INSERT INTO img_claims (file_path, claimed_by, updated_at) VALUES (?, '', '')",
+                    ("local_only.png",),
+                )
+            with running_server(img_dir=img_dir, db_path=db_path, token="test-tag-token", root=root) as (_, _, port):
+                status, _, raw = self._request(port, "GET", "/api/images")
+                self.assertEqual(status, 200)
+                listing = json.loads(raw)
+                self.assertEqual((listing["registered_count"], listing["unregistered_count"]), (2, 1))
+                by_path = {item["path"]: item for item in listing["images"]}
+                self.assertEqual(
+                    (by_path["居家场景/工具五金/zb-hardware-1234.png"]["registered"],
+                     by_path["居家场景/工具五金/zb-hardware-1234.png"]["registry_source"]),
+                    (True, "collection_queue"),
+                )
+                self.assertEqual(
+                    (by_path["local_only.png"]["registered"], by_path["local_only.png"]["registry_source"]),
+                    (True, "img_claims"),
+                )
+                self.assertEqual(
+                    (by_path["unregistered.png"]["registered"], by_path["unregistered.png"]["registry_source"]),
+                    (False, ""),
+                )
+
+                # Filter registered=0 vs registered=1 and by registry_source.
+                _, _, raw = self._request(port, "GET", "/api/images?registered=0")
+                self.assertEqual([i["path"] for i in json.loads(raw)["images"]], ["unregistered.png"])
+                _, _, raw = self._request(port, "GET", "/api/images?registered=1")
+                self.assertEqual(
+                    {i["path"] for i in json.loads(raw)["images"]},
+                    {"居家场景/工具五金/zb-hardware-1234.png", "local_only.png"},
+                )
+                _, _, raw = self._request(port, "GET", "/api/images?registry_source=img_claims")
+                self.assertEqual([i["path"] for i in json.loads(raw)["images"]], ["local_only.png"])
+                _, _, raw = self._request(port, "GET", "/api/images?registry_source=none")
+                self.assertEqual([i["path"] for i in json.loads(raw)["images"]], ["unregistered.png"])
+                self.assertEqual(self._request(port, "GET", "/api/images?registered=2")[0], 400)
+                self.assertEqual(self._request(port, "GET", "/api/images?registry_source=other")[0], 400)
+
+                # /api/meta reflects registration status too.
+                _, _, raw = self._request(port, "GET", "/api/meta/unregistered.png")
+                meta = json.loads(raw)
+                self.assertEqual((meta["registered"], meta["registry_source"]), (False, ""))
+
+                # Unified /api/registry summarizes disk vs DB tables and supports include_pending=1.
+                status, _, raw = self._request(port, "GET", "/api/registry?include_pending=1")
+                self.assertEqual(status, 200)
+                reg = json.loads(raw)
+                self.assertEqual(reg["total_files"], 3)
+                self.assertEqual(reg["by_source"], {"collection_queue": 1, "img_claims": 1, "unregistered": 1})
+                self.assertEqual(reg["queue_summary"], {"total": 2, "downloaded_count": 1, "pending_download_count": 1})
+                self.assertEqual(len(reg["pending_queue"]), 1)
+                self.assertEqual(reg["pending_queue"][0]["id"], 2)
+                self.assertEqual(self._request(port, "HEAD", "/api/registry")[0], 200)
+
+                # Archive also supports registered=0 without claiming in DB unless written.
+                status, _, zip_bytes = self._request(port, "GET", "/api/archive?registered=0&claimer=alice")
+                self.assertEqual(status, 200)
+                with zipfile.ZipFile(io.BytesIO(zip_bytes)) as archive:
+                    self.assertEqual(archive.namelist(), ["unregistered.png"])
+
+            with running_server(img_dir=img_dir, no_db=True, token="test-tag-token", root=root) as (_, _, port):
+                status, _, raw = self._request(port, "GET", "/api/registry")
+                self.assertEqual(status, 200)
+                reg = json.loads(raw)
+                self.assertEqual((reg["registered_count"], reg["unregistered_count"], reg["queue_summary"]), (0, 3, None))
+                self.assertEqual(self._request(port, "GET", "/api/registry?include_pending=1")[0], 503)
 
 
 if __name__ == "__main__":

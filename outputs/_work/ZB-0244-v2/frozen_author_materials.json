@@ -1,0 +1,11 @@
+{
+  "version": "ZB-0244-v2",
+  "sha256": {
+    "prompt.txt": "3688c03623caeb36eddcb3978ca800bc916e419932ed9592e67be778329cad38",
+    "original.jpg": "a0f2b2af64103b968f29efe21716ddded47328a7275d13af70f2bfc28c2daca4",
+    "facts.json": "b8d3ada58eebc078c5a88fd6c531d7dd9fc04d676028bd22e731fdd60399ca34",
+    "solver.py": "a85a22ff597430748217a87b8cc66973ce4a4404a4daf856817cad2a91296315",
+    "recompute.json": "ca2dd27c50b6f63cd41c5df2f1a738cfdd71ef28d7f83d35a33853a6d939df9e",
+    "verify_solver.py": "cc2932f9b8b62d500225fd6fb04cd24276e76e84d5efeddc5df72e0b40cd2d7e"
+  }
+}

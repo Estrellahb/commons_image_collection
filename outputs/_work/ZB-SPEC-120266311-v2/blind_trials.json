@@ -1,0 +1,84 @@
+{
+  "question_id": "ZB-SPEC-120266311-v2",
+  "frozen_version": "v2-rev1",
+  "tools_enabled": true,
+  "ground_truth_answer": "132,137,24,9,2,7|20,5|92,52,40|59,1,57,1|82,2,86,2|N,M,1,A4-B5;A5-B2",
+  "total_fields": 23,
+  "hardening_history": {
+    "v1_valid_trials": 3,
+    "v1_exact_correct": 3,
+    "v1_conversation_ids": [
+      "bdaa529c-d800-4c1e-b89c-299f5dfe495b",
+      "e9535bfd-40bb-407c-8155-41e47b4eb171",
+      "ff3f412e-5fd2-4e41-8d7d-c4e347c85f0a"
+    ],
+    "v2_initial_valid_trials": 3,
+    "v2_initial_exact_correct": 3,
+    "v2_initial_conversation_ids": [
+      "610db3a4-7589-4b01-b958-cd269d9d8372",
+      "bca8ae52-e6e1-4849-98eb-a6ebb2cd2657",
+      "5e219d67-de1f-4ee4-a1c4-39e2750c23e3"
+    ],
+    "v2_rev1_changes": "按 AI 质检意见修订两项：(1) 修正题干中种名纸签定位表述，明确属种区间边界及 A2 (caeruleus L.) 末行中央嵌入种名签、左右两卡归属该物种的口径；(2) 用 20 px 网格逐块重测全 12 个物种块外接框与中心（特别是将 B4 sulphureus 由 [3010,2410,315,465]/(3168,2642) 修正为 [2996,2386,330,449]/(3161,2610)，严格排除下方种名纸签）并同步更新测距余量（R=1.83/2.80）。修订后按规范用新题面重做 3 次独立盲答。"
+  },
+  "summary": {
+    "valid_trials": 3,
+    "exact_correct": 3,
+    "exact_incorrect": 0,
+    "timeout": 0,
+    "infra_error": 3,
+    "partial": 0
+  },
+  "infra_error_attempts": [
+    {
+      "attempt_id": "infra_1",
+      "conversation_id": "3352f5cf-0372-4f96-bed3-7af4a55ea43a",
+      "status": "infra_error",
+      "reason": "RESOURCE_EXHAUSTED (HTTP 429) 额度限流未完成，已单独记录并用新子代理补足有效试答。"
+    },
+    {
+      "attempt_id": "infra_2",
+      "conversation_id": "76c6c9ea-91e0-4192-b84e-56e7b40796fb",
+      "status": "infra_error",
+      "reason": "RESOURCE_EXHAUSTED (HTTP 429) 额度限流未完成，已单独记录并用新子代理补足有效试答。"
+    },
+    {
+      "attempt_id": "infra_3",
+      "conversation_id": "1a901166-cdd6-474d-9118-1363a1c90bd5",
+      "status": "infra_error",
+      "reason": "RESOURCE_EXHAUSTED (HTTP 429) 额度限流未完成，已单独记录并用新子代理补足有效试答。"
+    }
+  ],
+  "trials": [
+    {
+      "trial_id": "trial_1",
+      "conversation_id": "f50d39b3-a51d-485c-89bc-926bd90e3e1c",
+      "status": "valid_complete",
+      "answer": "132,137,24,9,2,7|20,5|92,52,40|59,1,57,1|82,2,86,2|N,M,1,A4-B5;A5-B2",
+      "exact_match": true,
+      "correct_fields": 23,
+      "wrong_fields": [],
+      "attribution": "基于修订版题面独立量测全 12 块（测得 B4 中心 3162.0, 2610.5，A2 含末行左右两卡共 14 卡），132 卡 / 137 虫 / 24 下针 / 9 代码 / 2 WX / 7 性别与两工况优化 23/23 字段全对，无歧义。"
+    },
+    {
+      "trial_id": "trial_2",
+      "conversation_id": "f11726f3-d3c5-4822-9ff8-d405aff873b5",
+      "status": "valid_complete",
+      "answer": "132,137,24,9,2,7|20,5|92,52,40|59,1,57,1|82,2,86,2|N,M,1,A4-B5;A5-B2",
+      "exact_match": true,
+      "correct_fields": 23,
+      "wrong_fields": [],
+      "attribution": "基于修订版题面独立量测全 12 块（测得 B4 中心 3161.5, 2611.5，A2 中心 2381.5, 2134.5），准确识别全部 20 兼容边（5 近距）、92 合法方案及工况 0→1 赢家反转（N→M），23/23 字段全对，无歧义。"
+    },
+    {
+      "trial_id": "trial_3",
+      "conversation_id": "19c4a0dd-188d-4c7f-9a80-79a2af8a68e9",
+      "status": "valid_complete",
+      "answer": "132,137,24,9,2,7|20,5|92,52,40|59,1,57,1|82,2,86,2|N,M,1,A4-B5;A5-B2",
+      "exact_match": true,
+      "correct_fields": 23,
+      "wrong_fields": [],
+      "attribution": "基于修订版题面独立量测全 12 块（测得 B4 中心 3162.0, 2609.0，A2 含末行左右 2 卡共 14 卡），23/23 字段零误差命中，确认修订后题面口径与精测坐标完全自洽。"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "run_at": "2026-11-26T18:50:46.120328+08:00",
+  "script": "/Users/hepeize/Work/cowork/outputs/ZeroBench_Unified_Skill_20261126/zerobench-visual-benchmark/scripts/inspect_images.py",
+  "input_1": "outputs/ZeroBench_图片指标质检_20261126/manifest.json",
+  "input_1_items": 20,
+  "input_1_decisions": {
+    "needs_review": 15,
+    "blocked": 5
+  },
+  "input_2": "/Users/hepeize/Work/cowork/outputs/ZeroBench_Unified_Skill_20261126/inspection_worked_manifest.json",
+  "input_2_items": 2,
+  "input_2_decisions": {
+    "needs_review": 2
+  },
+  "observed": {
+    "source_boxes": 118,
+    "participating_objects": 18,
+    "raw_source_size": [
+      1200,
+      1600
+    ],
+    "composite_size": [
+      1960,
+      1600
+    ],
+    "raw_density_per_MP": 9.375,
+    "composite_density_per_MP": 5.739795918367347,
+    "region_density_per_MP_both": 9.375,
+    "composite_global_native_size": null,
+    "unannotated_occlusion": null,
+    "unproven_complete_background_count": null
+  },
+  "debug_correction": "Allowed integer output-size rounding in otherwise aspect-preserving thumbnails; 78x210 -> 74x200 no longer falsely labeled nonuniform. Re-ran existing worked manifest.",
+  "downloads": 0,
+  "model_calls": 0,
+  "dependencies_installed": 0,
+  "old_skill_files_modified": false
+}

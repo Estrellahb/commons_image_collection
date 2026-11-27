@@ -1,0 +1,613 @@
+{
+  "image_size": [
+    4032,
+    3024
+  ],
+  "origin": "upper_left",
+  "coordinates": "槽标白圆在水平方向的左右外缘中点为 x。y 仅作定位。",
+  "reading_error_x_px": {
+    "slot": 10,
+    "anchor": 20
+  },
+  "anchors": {
+    "L": {
+      "xy": [
+        1177,
+        1974
+      ],
+      "bbox": [
+        940,
+        1759,
+        473,
+        436
+      ],
+      "feature": "棘轮扳手头左端大黑圆盘的横向外缘中点，排除右侧小拨片及盘外银色齿边"
+    },
+    "R": {
+      "xy": [
+        3798,
+        1508
+      ],
+      "bbox": [
+        3351,
+        1405,
+        533,
+        193
+      ],
+      "feature": "三排右下方独立短金属件朝右的银色端面横向外缘中点，排除左侧深色杆身"
+    }
+  },
+  "slots": [
+    {
+      "id": "A01",
+      "row": "A",
+      "column": 1,
+      "label_xy": [
+        1060.5,
+        479
+      ],
+      "symbol": "plus",
+      "number": 1,
+      "collar": "red",
+      "blade": null,
+      "bbox": [
+        966,
+        518,
+        224,
+        236
+      ]
+    },
+    {
+      "id": "A02",
+      "row": "A",
+      "column": 2,
+      "label_xy": [
+        1343,
+        471
+      ],
+      "symbol": "plus",
+      "number": 2,
+      "collar": "other",
+      "blade": null,
+      "bbox": [
+        1290,
+        501,
+        196,
+        220
+      ]
+    },
+    {
+      "id": "A03",
+      "row": "A",
+      "column": 3,
+      "label_xy": [
+        1627.5,
+        471
+      ],
+      "symbol": "plus",
+      "number": 2,
+      "collar": "yellow",
+      "blade": null,
+      "bbox": [
+        1569,
+        515,
+        183,
+        210
+      ]
+    },
+    {
+      "id": "A04",
+      "row": "A",
+      "column": 4,
+      "label_xy": [
+        1906.5,
+        464
+      ],
+      "symbol": "plus",
+      "number": 3,
+      "collar": "red",
+      "blade": null,
+      "bbox": [
+        1847,
+        483,
+        231,
+        240
+      ]
+    },
+    {
+      "id": "A05",
+      "row": "A",
+      "column": 5,
+      "label_xy": [
+        2181,
+        463.5
+      ],
+      "symbol": "asterisk",
+      "number": 1,
+      "collar": "other",
+      "blade": null,
+      "bbox": [
+        2125,
+        500,
+        217,
+        208
+      ]
+    },
+    {
+      "id": "A06",
+      "row": "A",
+      "column": 6,
+      "label_xy": [
+        2453.5,
+        458.5
+      ],
+      "symbol": "asterisk",
+      "number": 2,
+      "collar": "red",
+      "blade": null,
+      "bbox": [
+        2392,
+        463,
+        250,
+        241
+      ]
+    },
+    {
+      "id": "A07",
+      "row": "A",
+      "column": 7,
+      "label_xy": [
+        2720,
+        454
+      ],
+      "symbol": "asterisk",
+      "number": 2,
+      "collar": "red",
+      "blade": null,
+      "bbox": [
+        2660,
+        485,
+        249,
+        219
+      ]
+    },
+    {
+      "id": "A08",
+      "row": "A",
+      "column": 8,
+      "label_xy": [
+        2984.5,
+        449
+      ],
+      "symbol": "asterisk",
+      "number": 3,
+      "collar": "yellow",
+      "blade": null,
+      "bbox": [
+        2923,
+        485,
+        317,
+        211
+      ]
+    },
+    {
+      "id": "A09",
+      "row": "A",
+      "column": 9,
+      "label_xy": [
+        3244,
+        444.5
+      ],
+      "symbol": "minus",
+      "number": 3,
+      "collar": "other",
+      "blade": null,
+      "bbox": [
+        3214,
+        475,
+        346,
+        212
+      ]
+    },
+    {
+      "id": "A10",
+      "row": "A",
+      "column": 10,
+      "label_xy": [
+        3498.5,
+        440.5
+      ],
+      "symbol": "minus",
+      "number": 4,
+      "collar": "other",
+      "blade": null,
+      "bbox": [
+        3450,
+        461,
+        315,
+        214
+      ]
+    },
+    {
+      "id": "B01",
+      "row": "B",
+      "column": 1,
+      "label_xy": [
+        1048.5,
+        806
+      ],
+      "symbol": "minus",
+      "number": 5.5,
+      "collar": "yellow",
+      "blade": null,
+      "bbox": [
+        995,
+        829,
+        212,
+        231
+      ]
+    },
+    {
+      "id": "B02",
+      "row": "B",
+      "column": 2,
+      "label_xy": [
+        1333.5,
+        803
+      ],
+      "symbol": "minus",
+      "number": 6.5,
+      "collar": "other",
+      "blade": null,
+      "bbox": [
+        1303,
+        855,
+        183,
+        213
+      ]
+    },
+    {
+      "id": "B03",
+      "row": "B",
+      "column": 3,
+      "label_xy": [
+        1638,
+        796
+      ],
+      "symbol": "hex",
+      "number": 3,
+      "collar": null,
+      "blade": null,
+      "bbox": [
+        1580,
+        849,
+        211,
+        228
+      ]
+    },
+    {
+      "id": "B04",
+      "row": "B",
+      "column": 4,
+      "label_xy": [
+        1918,
+        789.5
+      ],
+      "symbol": "hex",
+      "number": 4,
+      "collar": null,
+      "blade": null,
+      "bbox": [
+        1865,
+        829,
+        198,
+        238
+      ]
+    },
+    {
+      "id": "B05",
+      "row": "B",
+      "column": 5,
+      "label_xy": [
+        2189,
+        785.5
+      ],
+      "symbol": "hex",
+      "number": 5,
+      "collar": null,
+      "blade": null,
+      "bbox": [
+        2124,
+        818,
+        254,
+        242
+      ]
+    },
+    {
+      "id": "B06",
+      "row": "B",
+      "column": 6,
+      "label_xy": [
+        2458.5,
+        776.5
+      ],
+      "symbol": "hex",
+      "number": 6,
+      "collar": null,
+      "blade": null,
+      "bbox": [
+        2369,
+        800,
+        309,
+        251
+      ]
+    },
+    {
+      "id": "B07",
+      "row": "B",
+      "column": 7,
+      "label_xy": [
+        2705.5,
+        770
+      ],
+      "symbol": "star",
+      "number": 10,
+      "collar": "red",
+      "blade": null,
+      "bbox": [
+        2648,
+        833,
+        260,
+        199
+      ]
+    },
+    {
+      "id": "B08",
+      "row": "B",
+      "column": 8,
+      "label_xy": [
+        2967,
+        762.5
+      ],
+      "symbol": "star",
+      "number": 15,
+      "collar": "red",
+      "blade": null,
+      "bbox": [
+        2922,
+        812,
+        292,
+        192
+      ]
+    },
+    {
+      "id": "B09",
+      "row": "B",
+      "column": 9,
+      "label_xy": [
+        3226,
+        755.5
+      ],
+      "symbol": "star",
+      "number": 20,
+      "collar": "other",
+      "blade": null,
+      "bbox": [
+        3195,
+        802,
+        340,
+        202
+      ]
+    },
+    {
+      "id": "B10",
+      "row": "B",
+      "column": 10,
+      "label_xy": [
+        3480,
+        748.5
+      ],
+      "symbol": "star",
+      "number": 25,
+      "collar": "red",
+      "blade": null,
+      "bbox": [
+        3470,
+        791,
+        369,
+        207
+      ]
+    },
+    {
+      "id": "C01",
+      "row": "C",
+      "column": 1,
+      "label_xy": [
+        1069.5,
+        1132
+      ],
+      "symbol": "star",
+      "number": 27,
+      "collar": null,
+      "blade": null,
+      "bbox": [
+        978,
+        1198,
+        251,
+        189
+      ]
+    },
+    {
+      "id": "C02",
+      "row": "C",
+      "column": 2,
+      "label_xy": [
+        1354,
+        1121.5
+      ],
+      "symbol": "star",
+      "number": 30,
+      "collar": null,
+      "blade": null,
+      "bbox": [
+        1301,
+        1198,
+        199,
+        185
+      ]
+    },
+    {
+      "id": "C03",
+      "row": "C",
+      "column": 3,
+      "label_xy": [
+        1633.5,
+        1113
+      ],
+      "symbol": "star",
+      "number": 40,
+      "collar": null,
+      "blade": null,
+      "bbox": [
+        1598,
+        1147,
+        211,
+        197
+      ]
+    },
+    {
+      "id": "C04",
+      "row": "C",
+      "column": 4,
+      "label_xy": [
+        1910,
+        1103.5
+      ],
+      "symbol": "star-dot",
+      "number": 10,
+      "collar": null,
+      "blade": false,
+      "bbox": [
+        1876,
+        1164,
+        209,
+        180
+      ]
+    },
+    {
+      "id": "C05",
+      "row": "C",
+      "column": 5,
+      "label_xy": [
+        2180,
+        1094
+      ],
+      "symbol": "star-dot",
+      "number": 15,
+      "collar": null,
+      "blade": false,
+      "bbox": [
+        2154,
+        1151,
+        253,
+        187
+      ]
+    },
+    {
+      "id": "C06",
+      "row": "C",
+      "column": 6,
+      "label_xy": [
+        2449,
+        1083.5
+      ],
+      "symbol": "star-dot",
+      "number": 20,
+      "collar": null,
+      "blade": true,
+      "bbox": [
+        2402,
+        1147,
+        273,
+        187
+      ]
+    },
+    {
+      "id": "C07",
+      "row": "C",
+      "column": 7,
+      "label_xy": [
+        2711,
+        1076.5
+      ],
+      "symbol": "star-dot",
+      "number": 25,
+      "collar": null,
+      "blade": false,
+      "bbox": [
+        2681,
+        1131,
+        286,
+        195
+      ]
+    },
+    {
+      "id": "C08",
+      "row": "C",
+      "column": 8,
+      "label_xy": [
+        2970.5,
+        1067.5
+      ],
+      "symbol": "star-dot",
+      "number": 27,
+      "collar": null,
+      "blade": false,
+      "bbox": [
+        2940,
+        1113,
+        305,
+        185
+      ]
+    },
+    {
+      "id": "C09",
+      "row": "C",
+      "column": 9,
+      "label_xy": [
+        3228,
+        1058.5
+      ],
+      "symbol": "star-dot",
+      "number": 30,
+      "collar": null,
+      "blade": false,
+      "bbox": [
+        3198,
+        1096,
+        314,
+        199
+      ]
+    },
+    {
+      "id": "C10",
+      "row": "C",
+      "column": 10,
+      "label_xy": [
+        3479.5,
+        1049.5
+      ],
+      "symbol": "star-dot",
+      "number": 40,
+      "collar": null,
+      "blade": false,
+      "bbox": [
+        3469,
+        1095,
+        345,
+        197
+      ]
+    }
+  ],
+  "note": "other 表示可判定为红、黄两类之外。null 表示题设无需读取该属性。blade 只在下排白点星标槽读取。bbox 框物理批头可见范围，槽标点另列。"
+}

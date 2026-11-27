@@ -1,0 +1,8 @@
+{
+  "id": 361,
+  "claimed_by": "ZeroBench-Codex-ZB-TRANSIT-172600032-v2",
+  "authored_status": "draft",
+  "authored_ref": "ZB-TRANSIT-172600032-v2 | outputs/authoring_ZB-TRANSIT-172600032-v2",
+  "backend": "local SQLite",
+  "parent_version": "ZB-TRANSIT-172600032-v1"
+}

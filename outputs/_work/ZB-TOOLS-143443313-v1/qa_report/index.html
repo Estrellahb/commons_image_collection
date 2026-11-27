@@ -1,0 +1,393 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><title>ZeroBench 图片质检</title><style>body{font:16px system-ui;margin:30px;background:#f4f4f1;color:#202020}article{background:white;margin:22px 0;padding:24px;border:1px solid #ddd;overflow:auto}img{max-width:48%;float:left;margin:0 24px 16px 0}pre{white-space:pre-wrap;font-size:13px}h1{font-size:28px}</style><h1>图片与题目证据质检</h1><p>代理指标用于筛选，不证明难度。缺失值不会自动通过；判定与试答证据分开。</p><article><h2>ZB-TOOLS-143443313-v1 · authoring_candidate</h2><img src="001.jpg" loading="lazy"><pre>{
+  &quot;id&quot;: &quot;ZB-TOOLS-143443313-v1&quot;,
+  &quot;blockers&quot;: [],
+  &quot;review&quot;: [],
+  &quot;advisory&quot;: [],
+  &quot;metrics&quot;: {
+    &quot;width&quot;: 4032,
+    &quot;height&quot;: 3024,
+    &quot;mode&quot;: &quot;RGB&quot;,
+    &quot;exif_orientation&quot;: 1,
+    &quot;frame_count&quot;: 1,
+    &quot;global_640_proxy&quot;: {
+      &quot;contrast_p90_p10&quot;: 155.0,
+      &quot;gray_entropy_bits&quot;: 7.452362423267203,
+      &quot;edge_fraction_16&quot;: 0.16786296634489956
+    },
+    &quot;object_count&quot;: 32,
+    &quot;objects_per_MP&quot;: 2.624506592760561,
+    &quot;class_count&quot;: 8,
+    &quot;known_fraction&quot;: 1.0,
+    &quot;repeated_classes&quot;: 6,
+    &quot;spatial_entropy_4x4&quot;: 0.6510075432573663,
+    &quot;median_bbox_short_px&quot;: 199.0,
+    &quot;p10_bbox_short_px&quot;: 185.0,
+    &quot;edge_touching_count&quot;: 0,
+    &quot;nearcolor_pair_count&quot;: 27,
+    &quot;different_class_neighbor_pairs&quot;: 40,
+    &quot;nearcolor_neighbor_fraction&quot;: 0.675,
+    &quot;bbox_overlap_pair_count&quot;: 3,
+    &quot;han_text_coverage&quot;: 0.0,
+    &quot;distinct_dependency_regions&quot;: 9,
+    &quot;effective_counterfactuals&quot;: 6
+  },
+  &quot;source&quot;: {
+    &quot;kind&quot;: &quot;real_photo&quot;,
+    &quot;url&quot;: &quot;https://commons.wikimedia.org/wiki/File:Miniature_bit_set_with_wrench_for_carrying_on_belt.jpg&quot;,
+    &quot;asset_url&quot;: &quot;https://upload.wikimedia.org/wikipedia/commons/d/d8/Miniature_bit_set_with_wrench_for_carrying_on_belt.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=original&quot;,
+    &quot;license_url&quot;: &quot;https://creativecommons.org/licenses/by/4.0&quot;,
+    &quot;license&quot;: &quot;CC BY 4.0&quot;,
+    &quot;authorization&quot;: &quot;verified&quot;,
+    &quot;attribution&quot;: &quot;Pittigrilli, Miniature bit set with wrench for carrying on belt, Wikimedia Commons&quot;,
+    &quot;scene_id&quot;: &quot;commons:143443313:miniature-bit-set&quot;,
+    &quot;source_page_id&quot;: 143443313,
+    &quot;same_scene_page_ids&quot;: [
+      143443313,
+      145653915
+    ],
+    &quot;native_dimensions&quot;: [
+      4032,
+      3024
+    ],
+    &quot;collection_transform&quot;: &quot;Lossy JPEG re-encoding. EXIF orientation applied; only color-related metadata kept.&quot;,
+    &quot;authoring_transform&quot;: &quot;逐字节复制现有采集文件&quot;,
+    &quot;evidence&quot;: &quot;author/source.json&quot;
+  },
+  &quot;difficulty_status&quot;: &quot;not_evaluated&quot;,
+  &quot;annotation_provenance&quot;: &quot;author_checked_native_visible_bboxes_slot_print_classes&quot;,
+  &quot;preview&quot;: &quot;001.jpg&quot;,
+  &quot;nearcolor_pairs&quot;: [
+    {
+      &quot;a&quot;: &quot;A05&quot;,
+      &quot;b&quot;: &quot;A04&quot;,
+      &quot;deltaE76&quot;: 1.6171483565793419
+    },
+    {
+      &quot;a&quot;: &quot;A09&quot;,
+      &quot;b&quot;: &quot;A08&quot;,
+      &quot;deltaE76&quot;: 7.237417825268439
+    },
+    {
+      &quot;a&quot;: &quot;A10&quot;,
+      &quot;b&quot;: &quot;A08&quot;,
+      &quot;deltaE76&quot;: 6.184812169433333
+    },
+    {
+      &quot;a&quot;: &quot;B01&quot;,
+      &quot;b&quot;: &quot;A01&quot;,
+      &quot;deltaE76&quot;: 2.953935323695578
+    },
+    {
+      &quot;a&quot;: &quot;B02&quot;,
+      &quot;b&quot;: &quot;A02&quot;,
+      &quot;deltaE76&quot;: 8.555159859607558
+    },
+    {
+      &quot;a&quot;: &quot;B03&quot;,
+      &quot;b&quot;: &quot;A03&quot;,
+      &quot;deltaE76&quot;: 5.795539011055886
+    },
+    {
+      &quot;a&quot;: &quot;B03&quot;,
+      &quot;b&quot;: &quot;B02&quot;,
+      &quot;deltaE76&quot;: 6.549245285243079
+    },
+    {
+      &quot;a&quot;: &quot;B04&quot;,
+      &quot;b&quot;: &quot;A04&quot;,
+      &quot;deltaE76&quot;: 4.416608775675301
+    },
+    {
+      &quot;a&quot;: &quot;B05&quot;,
+      &quot;b&quot;: &quot;A05&quot;,
+      &quot;deltaE76&quot;: 7.12964486971997
+    },
+    {
+      &quot;a&quot;: &quot;B06&quot;,
+      &quot;b&quot;: &quot;A05&quot;,
+      &quot;deltaE76&quot;: 8.73977236777847
+    },
+    {
+      &quot;a&quot;: &quot;B06&quot;,
+      &quot;b&quot;: &quot;A06&quot;,
+      &quot;deltaE76&quot;: 9.861688560245812
+    },
+    {
+      &quot;a&quot;: &quot;B08&quot;,
+      &quot;b&quot;: &quot;A08&quot;,
+      &quot;deltaE76&quot;: 4.762273871922564
+    },
+    {
+      &quot;a&quot;: &quot;B09&quot;,
+      &quot;b&quot;: &quot;A08&quot;,
+      &quot;deltaE76&quot;: 6.860229640429777
+    },
+    {
+      &quot;a&quot;: &quot;B09&quot;,
+      &quot;b&quot;: &quot;A09&quot;,
+      &quot;deltaE76&quot;: 7.197309278846094
+    },
+    {
+      &quot;a&quot;: &quot;B09&quot;,
+      &quot;b&quot;: &quot;A10&quot;,
+      &quot;deltaE76&quot;: 8.0650914282459
+    },
+    {
+      &quot;a&quot;: &quot;C01&quot;,
+      &quot;b&quot;: &quot;B01&quot;,
+      &quot;deltaE76&quot;: 2.5547435606120095
+    },
+    {
+      &quot;a&quot;: &quot;C02&quot;,
+      &quot;b&quot;: &quot;B02&quot;,
+      &quot;deltaE76&quot;: 8.848962931123115
+    },
+    {
+      &quot;a&quot;: &quot;C04&quot;,
+      &quot;b&quot;: &quot;C03&quot;,
+      &quot;deltaE76&quot;: 4.971337553181794
+    },
+    {
+      &quot;a&quot;: &quot;C05&quot;,
+      &quot;b&quot;: &quot;B05&quot;,
+      &quot;deltaE76&quot;: 11.995468322663568
+    },
+    {
+      &quot;a&quot;: &quot;C07&quot;,
+      &quot;b&quot;: &quot;B06&quot;,
+      &quot;deltaE76&quot;: 6.751805690378012
+    },
+    {
+      &quot;a&quot;: &quot;C08&quot;,
+      &quot;b&quot;: &quot;B08&quot;,
+      &quot;deltaE76&quot;: 5.77471074218448
+    },
+    {
+      &quot;a&quot;: &quot;C08&quot;,
+      &quot;b&quot;: &quot;B09&quot;,
+      &quot;deltaE76&quot;: 4.9764806482587804
+    },
+    {
+      &quot;a&quot;: &quot;C09&quot;,
+      &quot;b&quot;: &quot;B08&quot;,
+      &quot;deltaE76&quot;: 9.37647227935486
+    },
+    {
+      &quot;a&quot;: &quot;C09&quot;,
+      &quot;b&quot;: &quot;B09&quot;,
+      &quot;deltaE76&quot;: 5.271887184560626
+    },
+    {
+      &quot;a&quot;: &quot;C09&quot;,
+      &quot;b&quot;: &quot;B10&quot;,
+      &quot;deltaE76&quot;: 6.639405372017768
+    },
+    {
+      &quot;a&quot;: &quot;C10&quot;,
+      &quot;b&quot;: &quot;B09&quot;,
+      &quot;deltaE76&quot;: 5.218490525104737
+    },
+    {
+      &quot;a&quot;: &quot;C10&quot;,
+      &quot;b&quot;: &quot;B10&quot;,
+      &quot;deltaE76&quot;: 7.721841066931968
+    }
+  ],
+  &quot;overlap_candidates&quot;: [
+    {
+      &quot;a&quot;: &quot;A10&quot;,
+      &quot;b&quot;: &quot;A09&quot;,
+      &quot;iom&quot;: 0.32636107402462544
+    },
+    {
+      &quot;a&quot;: &quot;B10&quot;,
+      &quot;b&quot;: &quot;B09&quot;,
+      &quot;iom&quot;: 0.18549796156086196
+    },
+    {
+      &quot;a&quot;: &quot;C09&quot;,
+      &quot;b&quot;: &quot;C08&quot;,
+      &quot;iom&quot;: 0.1515994683207798
+    }
+  ],
+  &quot;roi_metrics&quot;: [
+    {
+      &quot;id&quot;: &quot;a_left&quot;,
+      &quot;file&quot;: &quot;001_roi1.png&quot;,
+      &quot;contrast_p90_p10&quot;: 127.0,
+      &quot;gray_entropy_bits&quot;: 7.288389417509818,
+      &quot;edge_fraction_16&quot;: 0.05369361195384048
+    },
+    {
+      &quot;id&quot;: &quot;a_right&quot;,
+      &quot;file&quot;: &quot;001_roi2.png&quot;,
+      &quot;contrast_p90_p10&quot;: 140.0,
+      &quot;gray_entropy_bits&quot;: 7.378034126264617,
+      &quot;edge_fraction_16&quot;: 0.054013650740802395
+    },
+    {
+      &quot;id&quot;: &quot;b_left&quot;,
+      &quot;file&quot;: &quot;001_roi3.png&quot;,
+      &quot;contrast_p90_p10&quot;: 128.0,
+      &quot;gray_entropy_bits&quot;: 7.082104879854736,
+      &quot;edge_fraction_16&quot;: 0.06037517335344639
+    },
+    {
+      &quot;id&quot;: &quot;b_right&quot;,
+      &quot;file&quot;: &quot;001_roi4.png&quot;,
+      &quot;contrast_p90_p10&quot;: 126.0,
+      &quot;gray_entropy_bits&quot;: 7.239601453333048,
+      &quot;edge_fraction_16&quot;: 0.06325444826461214
+    },
+    {
+      &quot;id&quot;: &quot;c_left&quot;,
+      &quot;file&quot;: &quot;001_roi5.png&quot;,
+      &quot;contrast_p90_p10&quot;: 123.0,
+      &quot;gray_entropy_bits&quot;: 6.9541941087953205,
+      &quot;edge_fraction_16&quot;: 0.059126484672250915
+    },
+    {
+      &quot;id&quot;: &quot;c_right&quot;,
+      &quot;file&quot;: &quot;001_roi6.png&quot;,
+      &quot;contrast_p90_p10&quot;: 106.0,
+      &quot;gray_entropy_bits&quot;: 6.997990712367063,
+      &quot;edge_fraction_16&quot;: 0.04927698252957536
+    },
+    {
+      &quot;id&quot;: &quot;blade&quot;,
+      &quot;file&quot;: &quot;001_roi7.png&quot;,
+      &quot;contrast_p90_p10&quot;: 116.0,
+      &quot;gray_entropy_bits&quot;: 6.812009614188916,
+      &quot;edge_fraction_16&quot;: 0.06040968851824002
+    },
+    {
+      &quot;id&quot;: &quot;anchor_l&quot;,
+      &quot;file&quot;: &quot;001_roi8.png&quot;,
+      &quot;contrast_p90_p10&quot;: 113.0,
+      &quot;gray_entropy_bits&quot;: 6.578305350512376,
+      &quot;edge_fraction_16&quot;: 0.01851509852845832
+    },
+    {
+      &quot;id&quot;: &quot;anchor_r&quot;,
+      &quot;file&quot;: &quot;001_roi9.png&quot;,
+      &quot;contrast_p90_p10&quot;: 86.0,
+      &quot;gray_entropy_bits&quot;: 6.5050261464285235,
+      &quot;edge_fraction_16&quot;: 0.02416592700882368
+    }
+  ],
+  &quot;reasoning_metrics&quot;: {
+    &quot;node_count&quot;: 29,
+    &quot;max_depth&quot;: 9,
+    &quot;branch_nodes&quot;: 14,
+    &quot;join_nodes&quot;: 11,
+    &quot;multi_visual_join_nodes&quot;: 11,
+    &quot;output_count&quot;: 5,
+    &quot;outputs_with_visual_ancestry&quot;: 5,
+    &quot;output_visual_coverage&quot;: 1.0,
+    &quot;state_nodes&quot;: 4,
+    &quot;parameter_nodes&quot;: 5,
+    &quot;output_evidence_regions&quot;: {
+      &quot;Q1&quot;: [
+        &quot;a_left&quot;,
+        &quot;a_right&quot;,
+        &quot;anchor_l&quot;,
+        &quot;anchor_r&quot;,
+        &quot;b_left&quot;,
+        &quot;b_right&quot;,
+        &quot;blade&quot;,
+        &quot;c_left&quot;,
+        &quot;c_right&quot;
+      ],
+      &quot;Q2&quot;: [
+        &quot;a_left&quot;,
+        &quot;a_right&quot;,
+        &quot;anchor_l&quot;,
+        &quot;anchor_r&quot;,
+        &quot;b_left&quot;,
+        &quot;b_right&quot;,
+        &quot;blade&quot;,
+        &quot;c_left&quot;,
+        &quot;c_right&quot;
+      ],
+      &quot;Q3&quot;: [
+        &quot;a_left&quot;,
+        &quot;a_right&quot;,
+        &quot;anchor_l&quot;,
+        &quot;anchor_r&quot;,
+        &quot;b_left&quot;,
+        &quot;b_right&quot;,
+        &quot;blade&quot;,
+        &quot;c_left&quot;,
+        &quot;c_right&quot;
+      ],
+      &quot;Q4&quot;: [
+        &quot;a_left&quot;,
+        &quot;a_right&quot;,
+        &quot;anchor_l&quot;,
+        &quot;anchor_r&quot;,
+        &quot;b_left&quot;,
+        &quot;b_right&quot;,
+        &quot;blade&quot;,
+        &quot;c_left&quot;,
+        &quot;c_right&quot;
+      ],
+      &quot;Q5&quot;: [
+        &quot;a_left&quot;,
+        &quot;a_right&quot;,
+        &quot;anchor_l&quot;,
+        &quot;anchor_r&quot;,
+        &quot;b_left&quot;,
+        &quot;b_right&quot;,
+        &quot;blade&quot;,
+        &quot;c_left&quot;,
+        &quot;c_right&quot;
+      ]
+    }
+  },
+  &quot;measurement_margins&quot;: [
+    {
+      &quot;id&quot;: &quot;LA_nearest&quot;,
+      &quot;ratio&quot;: 4.25,
+      &quot;unit&quot;: &quot;px&quot;
+    },
+    {
+      &quot;id&quot;: &quot;AB_nearest&quot;,
+      &quot;ratio&quot;: 4.25,
+      &quot;unit&quot;: &quot;px&quot;
+    },
+    {
+      &quot;id&quot;: &quot;BC_nearest&quot;,
+      &quot;ratio&quot;: 3.025,
+      &quot;unit&quot;: &quot;px&quot;
+    },
+    {
+      &quot;id&quot;: &quot;CR_nearest&quot;,
+      &quot;ratio&quot;: 4.4,
+      &quot;unit&quot;: &quot;px&quot;
+    }
+  ],
+  &quot;platform_points&quot;: [
+    {
+      &quot;xy&quot;: [
+        2614,
+        1243
+      ],
+      &quot;label&quot;: &quot;C06 实际单片宽直刃，控制下排资格&quot;
+    },
+    {
+      &quot;xy&quot;: [
+        1173,
+        958
+      ],
+      &quot;label&quot;: &quot;B01 黄色基环外弧，旁有红色反光&quot;
+    },
+    {
+      &quot;xy&quot;: [
+        3798,
+        1508
+      ],
+      &quot;label&quot;: &quot;独立短金属件的银色端面中心，定义右端距离&quot;
+    }
+  ],
+  &quot;decision&quot;: &quot;authoring_candidate&quot;
+}</pre></article></html>

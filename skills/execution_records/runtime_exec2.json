@@ -1,0 +1,14 @@
+{
+  "exit_code": 1,
+  "status": "tool_error",
+  "output": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"<model-tool>\", line 17, in <module>\nAssertionError: 13\n",
+  "output_bytes": 137,
+  "saved_log_bytes": 137,
+  "output_truncated": false,
+  "reader_errors": [],
+  "stdout_log": "/Users/hepeize/.local/share/zerobench-runtime/trials/unified-runtime-check-01/logs/20261126T185939-d46e84e4b4.stdout.txt",
+  "code_log": "/Users/hepeize/.local/share/zerobench-runtime/trials/unified-runtime-check-01/logs/20261126T185939-d46e84e4b4.py",
+  "seconds": 0.847,
+  "effective_timeout_seconds": 30.0,
+  "state_scope": "new Python process; persistent trial files"
+}

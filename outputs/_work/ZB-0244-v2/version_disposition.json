@@ -1,0 +1,10 @@
+{
+  "status": "superseded",
+  "replacement": "ZB-0244-v3",
+  "reason": "有效盲答2正确1错误。错误完整复现于C4.F由0改为1，判断为褪色前翅灰绿色残斑定义存在歧义。新版增加H=0对象的F统一记0规则。",
+  "counts": {
+    "correct": 2,
+    "incorrect": 1,
+    "timeout": 1
+  }
+}

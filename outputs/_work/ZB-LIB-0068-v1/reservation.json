@@ -1,0 +1,20 @@
+{
+  "before": {
+    "id": 68,
+    "file_url": "https://commons.wikimedia.org/wiki/File:Schermers_Opera_Patris.jpg",
+    "category": "公共场景/图书馆",
+    "claimed_by": "",
+    "question_types": "counting,robust_ocr",
+    "difficulty": "hard",
+    "difficulty_tags": "high_similarity,small_target,view_transform",
+    "tag_notes": "逐卷读取斜放书脊上的卷号和年份段，再与底部橙色圆贴状态配对。",
+    "authored_status": "",
+    "authored_ref": ""
+  },
+  "local_claims_before": [],
+  "claimed_by": "ZeroBench-Codex-ZB-LIB-0068-v1",
+  "authored_status": "draft",
+  "authored_ref": "ZB-LIB-0068-v1 | outputs/authoring_ZB-LIB-0068-v1",
+  "method": "local_sqlite_begin_immediate",
+  "time": "2026-11-26T12:46:21.093462+00:00"
+}

@@ -1,0 +1,310 @@
+{
+  "items": [
+    {
+      "id": "ZB-0230-v1",
+      "image": "../../authoring_ZB-0230-v1/Spice_Bazaar_18283738.jpg",
+      "require_real": true,
+      "source": {
+        "kind": "real_photo",
+        "url": "https://commons.wikimedia.org/wiki/File:Spice_Bazaar_18283738.jpg",
+        "license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "authorization": "verified",
+        "scene_id": "commons:1613524"
+      },
+      "annotation_provenance": "manual_sample_regions",
+      "objects": [
+        {
+          "id": "A1",
+          "bbox": [
+            205,
+            145,
+            185,
+            165
+          ],
+          "category": "橙"
+        },
+        {
+          "id": "A2",
+          "bbox": [
+            510,
+            150,
+            230,
+            185
+          ],
+          "category": "黄"
+        },
+        {
+          "id": "A3",
+          "bbox": [
+            815,
+            185,
+            220,
+            150
+          ],
+          "category": "绿"
+        },
+        {
+          "id": "B1",
+          "bbox": [
+            50,
+            390,
+            225,
+            145
+          ],
+          "category": "绿"
+        },
+        {
+          "id": "B2",
+          "bbox": [
+            390,
+            390,
+            260,
+            145
+          ],
+          "category": "红"
+        },
+        {
+          "id": "B3",
+          "bbox": [
+            845,
+            380,
+            245,
+            150
+          ],
+          "category": "黄"
+        },
+        {
+          "id": "C1",
+          "bbox": [
+            0,
+            700,
+            200,
+            180
+          ],
+          "category": "杂"
+        },
+        {
+          "id": "C2",
+          "bbox": [
+            315,
+            720,
+            320,
+            180
+          ],
+          "category": "白"
+        },
+        {
+          "id": "C3",
+          "bbox": [
+            840,
+            730,
+            290,
+            180
+          ],
+          "category": "红"
+        },
+        {
+          "id": "D2",
+          "bbox": [
+            260,
+            1150,
+            360,
+            250
+          ],
+          "category": "橙茶"
+        },
+        {
+          "id": "D3",
+          "bbox": [
+            820,
+            1150,
+            310,
+            250
+          ],
+          "category": "爱茶"
+        }
+      ],
+      "critical_rois": [
+        {
+          "id": "A",
+          "bbox": [
+            155,
+            110,
+            965,
+            245
+          ],
+          "human_readable": true
+        },
+        {
+          "id": "B",
+          "bbox": [
+            0,
+            330,
+            1190,
+            250
+          ],
+          "human_readable": true
+        },
+        {
+          "id": "C",
+          "bbox": [
+            0,
+            650,
+            1200,
+            260
+          ],
+          "human_readable": true
+        },
+        {
+          "id": "D",
+          "bbox": [
+            340,
+            910,
+            780,
+            230
+          ],
+          "human_readable": true
+        }
+      ],
+      "ocr": {
+        "han_bboxes": [],
+        "reviewed": true
+      },
+      "platform_points": [
+        {
+          "xy": [
+            100,
+            767
+          ],
+          "label": "C1 多色颗粒，区别于右侧纯色胡椒"
+        },
+        {
+          "xy": [
+            513,
+            635
+          ],
+          "label": "白胡椒标牌与其后方白色颗粒"
+        },
+        {
+          "xy": [
+            460,
+            1020
+          ],
+          "label": "ORANGE TEA 标牌指向前排茶料"
+        }
+      ],
+      "human_checks": {
+        "source_fidelity": true,
+        "annotation_correct": true,
+        "critical_evidence_visible": true,
+        "no_answer_leakage": true,
+        "counting_rules_clear": true
+      },
+      "task": {
+        "uses_distance": false,
+        "dependencies": [
+          {
+            "roi_id": "A",
+            "parameter": "A格位与属性",
+            "output": "合法路线及代价"
+          },
+          {
+            "roi_id": "B",
+            "parameter": "B格位与属性",
+            "output": "合法路线及代价"
+          },
+          {
+            "roi_id": "C",
+            "parameter": "C格位与属性",
+            "output": "合法路线及代价"
+          },
+          {
+            "roi_id": "D",
+            "parameter": "D格位与属性",
+            "output": "合法路线及代价"
+          }
+        ],
+        "reasoning_graph": {
+          "nodes": [
+            {
+              "id": "vA",
+              "kind": "visual",
+              "roi_id": "A"
+            },
+            {
+              "id": "vB",
+              "kind": "visual",
+              "roi_id": "B"
+            },
+            {
+              "id": "vC",
+              "kind": "visual",
+              "roi_id": "C"
+            },
+            {
+              "id": "vD",
+              "kind": "visual",
+              "roi_id": "D"
+            },
+            {
+              "id": "facts",
+              "kind": "parameter"
+            },
+            {
+              "id": "valid",
+              "kind": "state"
+            },
+            {
+              "id": "cost",
+              "kind": "optimize"
+            },
+            {
+              "id": "out",
+              "kind": "output"
+            }
+          ],
+          "edges": [
+            [
+              "vA",
+              "facts"
+            ],
+            [
+              "vB",
+              "facts"
+            ],
+            [
+              "vC",
+              "facts"
+            ],
+            [
+              "vD",
+              "facts"
+            ],
+            [
+              "facts",
+              "valid"
+            ],
+            [
+              "valid",
+              "cost"
+            ],
+            [
+              "cost",
+              "out"
+            ]
+          ]
+        },
+        "counterfactuals": [
+          {
+            "field": "路线总数",
+            "baseline": 9,
+            "alternative": 7,
+            "verified": true,
+            "evidence": "recompute.json"
+          }
+        ],
+        "bypass_review": "passed"
+      }
+    }
+  ]
+}

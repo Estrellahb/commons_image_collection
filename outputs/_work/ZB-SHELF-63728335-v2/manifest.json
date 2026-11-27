@@ -1,0 +1,127 @@
+{
+  "items": [
+    {
+      "id": "ZB-SHELF-63728335-v2",
+      "image": "../../../img/公共场景/超市货架/zb-shelf-63728335.jpg",
+      "require_real": true,
+      "allow_data_rendering": false,
+      "min_native_short_px": 1080,
+      "source": {
+        "kind": "real_photo",
+        "url": "https://commons.wikimedia.org/wiki/File:Mackerel_in_tomato_sauce,_etc.,_product_aisle-shop_shelves_in_Meny_Supermarket,_Bergen_Storsenter_Shopping_Mall,_Bergen,_Norway,_2017-10-23.jpg",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "authorization": "verified",
+        "scene_id": "commons:63728335"
+      },
+      "annotation_provenance": "author_manual_bbox",
+      "objects": [
+        {"id": "A1_bay", "bbox": [120, 860, 810, 340], "category": "stabburet_peppermakrell_upright"},
+        {"id": "A2_bay", "bbox": [830, 410, 850, 850], "category": "kingoscar_round_red_2x2"},
+        {"id": "A3_bay", "bbox": [1610, 350, 610, 880], "category": "kingoscar_skinnfri_stack6"},
+        {"id": "A4_bay", "bbox": [2820, 440, 1212, 850], "category": "stabburet_filet_yellow_2x2"},
+        {"id": "B1_bay", "bbox": [590, 1620, 870, 620], "category": "stabburet_salsa_orange_2x2"},
+        {"id": "B2_bay", "bbox": [1380, 1520, 860, 860], "category": "stabburet_tomat_blue_3x2"},
+        {"id": "B3_bay", "bbox": [2220, 1460, 1500, 1080], "category": "stabburet_pepper_red_3x2"},
+        {"id": "tag_A2_1220", "bbox": [1170, 1340, 340, 190], "category": "esl_mackerel_1220"},
+        {"id": "tag_A3_1390", "bbox": [1760, 1390, 370, 210], "category": "esl_mackerel_1390_ko"},
+        {"id": "tag_A4_1390", "bbox": [3070, 1460, 470, 240], "category": "esl_mackerel_1390_st"},
+        {"id": "tag_B2_1690", "bbox": [1600, 2390, 340, 230], "category": "esl_mackerel_1690"},
+        {"id": "tag_distract_1310", "bbox": [2000, 2460, 360, 240], "category": "esl_leverpostei_1310"},
+        {"id": "tag_B3_1970", "bbox": [2590, 2580, 360, 260], "category": "esl_mackerel_1970"},
+        {"id": "tag_distract_1480", "bbox": [3320, 2730, 410, 290], "category": "esl_down_arrow_1480"}
+      ],
+      "critical_rois": [
+        {"id": "r1_A2_red_round", "bbox": [820, 400, 860, 860], "human_readable": true},
+        {"id": "r2_A3_back_and_tabs", "bbox": [1580, 260, 680, 980], "human_readable": true},
+        {"id": "r3_A4_top_right", "bbox": [2800, 360, 1232, 920], "human_readable": true},
+        {"id": "r4_B1_B2_keyholes", "bbox": [560, 1480, 1700, 940], "human_readable": true},
+        {"id": "r5_B3_pepper_3x2", "bbox": [2200, 1420, 1560, 1140], "human_readable": true},
+        {"id": "r6_tags_lower_rail", "bbox": [1560, 2340, 2220, 684], "human_readable": true}
+      ],
+      "ocr": {"han_bboxes": [], "reviewed": true},
+      "platform_points": [
+        {"xy": [2070, 940], "label": "A3 左侧竖叠列第 4 罐背面翻转及第 1、5 罐右侧翘起米金色易撕耳片，作者关键证据点"},
+        {"xy": [1828, 2272], "label": "B2 底层右罐倒置露出的左下角绿色钥匙孔图标（B2 共见 3 处绿色钥匙孔），作者关键证据点"},
+        {"xy": [2760, 2700], "label": "下层红杠 B3 真实价签 19.70 kr / 115.88 kr/kg（须排除 13.10 肝酱签、红下箭头 14.80 签与上方 13.90 签），作者关键证据点"}
+      ],
+      "human_checks": {
+        "source_fidelity": true,
+        "annotation_correct": true,
+        "critical_evidence_visible": true,
+        "no_answer_leakage": true,
+        "counting_rules_clear": true
+      },
+      "task": {
+        "uses_distance": true,
+        "dependencies": [
+          {"roi_id": "r1_A2_red_round", "parameter": "A2_E2_and_G2", "output": "q6_reversal"},
+          {"roi_id": "r2_A3_back_and_tabs", "parameter": "A3_E1_and_tab2", "output": "q6_reversal"},
+          {"roi_id": "r3_A4_top_right", "parameter": "A4_E3_G1_upright", "output": "q6_reversal"},
+          {"roi_id": "r4_B1_B2_keyholes", "parameter": "B1_B2_E_and_K5", "output": "q5_N_min_c1"},
+          {"roi_id": "r5_B3_pepper_3x2", "parameter": "B3_E4_back_left", "output": "q5_N_min_c1"},
+          {"roi_id": "r6_tags_lower_rail", "parameter": "B2_B3_p10_and_kg", "output": "q6_reversal"}
+        ],
+        "measurements": [
+          {"id": "dx_near_720", "margin": 165, "error_bound": 60, "unit": "px", "error_method": "单货位水平中心误差上界 30px，两点差总误差上界 2e=60px", "evidence": "measurement.md"},
+          {"id": "dx_max_2050", "margin": 335, "error_bound": 60, "unit": "px", "error_method": "单货位水平中心误差上界 30px，两点差总误差上界 2e=60px", "evidence": "measurement.md"}
+        ],
+        "counterfactuals": [
+          {"field": "q6_reversal", "baseline": 1, "alternative": 0, "verified": true, "evidence": "recompute.json"},
+          {"field": "q1_sum_K", "baseline": 5, "alternative": 4, "verified": true, "evidence": "recompute.json"},
+          {"field": "q1_tab_A3", "baseline": 2, "alternative": 1, "verified": true, "evidence": "recompute.json"},
+          {"field": "q1_sum_KG", "baseline": 642, "alternative": 554, "verified": true, "evidence": "recompute.json"},
+          {"field": "q3_total_plans", "baseline": 14, "alternative": 6, "verified": true, "evidence": "recompute.json"}
+        ],
+        "bypass_review": "passed",
+        "reasoning_graph": {
+          "nodes": [
+            {"id": "v_a2", "kind": "visual", "roi_id": "r1_A2_red_round"},
+            {"id": "v_a3", "kind": "visual", "roi_id": "r2_A3_back_and_tabs"},
+            {"id": "v_a4", "kind": "visual", "roi_id": "r3_A4_top_right"},
+            {"id": "v_b12", "kind": "visual", "roi_id": "r4_B1_B2_keyholes"},
+            {"id": "v_b3", "kind": "visual", "roi_id": "r5_B3_pepper_3x2"},
+            {"id": "v_tags", "kind": "visual", "roi_id": "r6_tags_lower_rail"},
+            {"id": "m_dx", "kind": "measure"},
+            {"id": "p_orient", "kind": "parameter"},
+            {"id": "p_micro", "kind": "parameter"},
+            {"id": "p_price", "kind": "parameter"},
+            {"id": "s_edges", "kind": "state"},
+            {"id": "a_plans", "kind": "aggregate"},
+            {"id": "opt_w0", "kind": "optimize"},
+            {"id": "opt_w1", "kind": "optimize"},
+            {"id": "out_q1", "kind": "output"},
+            {"id": "out_q2", "kind": "output"},
+            {"id": "out_q3", "kind": "output"},
+            {"id": "out_q4", "kind": "output"},
+            {"id": "out_q5", "kind": "output"},
+            {"id": "out_q6", "kind": "output"}
+          ],
+          "edges": [
+            ["v_a2", "m_dx"], ["v_a3", "m_dx"], ["v_a4", "m_dx"], ["v_b12", "m_dx"], ["v_b3", "m_dx"],
+            ["v_a2", "p_orient"], ["v_a3", "p_orient"], ["v_a4", "p_orient"], ["v_b12", "p_orient"], ["v_b3", "p_orient"],
+            ["v_a3", "p_micro"], ["v_b12", "p_micro"],
+            ["v_a2", "p_price"], ["v_a3", "p_price"], ["v_a4", "p_price"], ["v_tags", "p_price"],
+            ["p_orient", "out_q1"], ["p_micro", "out_q1"], ["p_price", "out_q1"],
+            ["m_dx", "s_edges"], ["p_orient", "s_edges"],
+            ["s_edges", "out_q2"],
+            ["s_edges", "a_plans"], ["p_orient", "a_plans"],
+            ["a_plans", "out_q3"],
+            ["a_plans", "opt_w0"], ["m_dx", "opt_w0"], ["p_price", "opt_w0"],
+            ["opt_w0", "out_q4"],
+            ["a_plans", "opt_w1"], ["m_dx", "opt_w1"], ["p_price", "opt_w1"], ["p_orient", "opt_w1"], ["p_micro", "opt_w1"],
+            ["opt_w1", "out_q5"],
+            ["opt_w0", "out_q6"], ["opt_w1", "out_q6"]
+          ]
+        }
+      },
+      "evaluation": {
+        "tools_enabled": true,
+        "frozen_version": "v2",
+        "counts": {"correct": 3, "incorrect": 0, "timeout": 0, "infra_error": 0, "partial": 0},
+        "trajectory": "blind_trials.json",
+        "gt_review": "passed_v2_3of3_exact_23fields_registered_medium",
+        "failure_attribution": "none_all_3_valid_trials_exact_match_after_v1_to_v2_hardening"
+      }
+    }
+  ]
+}

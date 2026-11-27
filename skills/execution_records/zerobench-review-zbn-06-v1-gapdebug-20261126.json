@@ -1,0 +1,428 @@
+{
+  "schema_version": "1.0",
+  "checked_at": "2026-11-26T10:50:03.023701+00:00",
+  "case": "/Users/hepeize/Work/cowork/outputs/ZeroBench_niche_domains_20261126/cases/ZBN-06",
+  "id": "ZBN-06",
+  "version": "v1",
+  "status": "needs_review",
+  "machine_blockers": 0,
+  "counts": {
+    "pass": 14,
+    "needs_review": 9,
+    "not_applicable": 1
+  },
+  "checks": [
+    {
+      "code": "public_scope",
+      "status": "pass",
+      "message": "Public and author material were separated before semantic checks",
+      "evidence": {
+        "primary": "/Users/hepeize/Work/cowork/outputs/ZeroBench_niche_domains_20261126/cases/ZBN-06/question.json",
+        "author": "/Users/hepeize/Work/cowork/outputs/ZeroBench_niche_domains_20261126/cases/ZBN-06/author.json",
+        "public_exposure_basis": "fallback allowlist; prompt/options/candidates only, title and answer fields are not assumed public",
+        "public_keys_checked": [
+          "prompt"
+        ],
+        "not_scanned_for_public_leaks": [
+          "private facts.json",
+          "author answers/CoT",
+          "source provenance",
+          "code comments",
+          "unrendered Python literals"
+        ]
+      }
+    },
+    {
+      "code": "prompt",
+      "status": "pass",
+      "message": "Public prompt is present",
+      "evidence": {
+        "characters": 1362
+      }
+    },
+    {
+      "code": "candidate_winner_label",
+      "status": "pass",
+      "message": "No explicit winner label found in the checked public candidate fields; image text remains unverified",
+      "evidence": {}
+    },
+    {
+      "code": "rendered_candidate_label",
+      "status": "needs_review",
+      "message": "Candidate winner words flow into a drawing text call; inspect the saved main image before declaring pixel-level leakage",
+      "evidence": [
+        {
+          "file": "/Users/hepeize/Work/cowork/outputs/ZeroBench_niche_domains_20261126/cases/ZBN-06/render.py",
+          "line": 510,
+          "candidate_ids": [
+            "H5"
+          ],
+          "rendered_text_expression_value": "全 3D 口袋约束 + OD340 清洗协同酶动力学真模型",
+          "evidence_limit": "literal candidate-loop value reaches text(); current PNG pixels and execution path still require inspection"
+        }
+      ]
+    },
+    {
+      "code": "coverage_metric_contract",
+      "status": "needs_review",
+      "message": "Coverage/decoy count is requested. Verify the public checklist, denominator, weights, threshold, winner inclusion and every exemption; a variable name alone is not a violation.",
+      "evidence": {
+        "structured_public_definitions_present": false,
+        "private_override_accesses": [
+          {
+            "file": "/Users/hepeize/Work/cowork/outputs/ZeroBench_niche_domains_20261126/cases/ZBN-06/oracle.py",
+            "line": 198,
+            "accessed_key": "naive_pass_cps"
+          }
+        ],
+        "prompt_mentions_denominator": false,
+        "prompt_mentions_winner_scope": false,
+        "limit": "Images may carry definitions; absence from parsed JSON is not proof of absence from the whole question."
+      }
+    },
+    {
+      "code": "tie_and_empty_contract",
+      "status": "needs_review",
+      "message": "Check tie, empty feasible set/path and no-winner branches; wording presence does not prove every branch is defined",
+      "evidence": {
+        "tie_wording_present": false,
+        "empty_wording_present": false,
+        "public_rule_conventions": {}
+      }
+    },
+    {
+      "code": "language_false_positive_policy",
+      "status": "pass",
+      "message": "Ordinary 忽略/真实/唯一/混淆 wording, source IDs in private provenance, and author facts are not automatically rejected",
+      "evidence": {}
+    },
+    {
+      "code": "main_image",
+      "status": "pass",
+      "message": "Read main-image dimensions; this is not a clarity or native-resolution proof",
+      "evidence": {
+        "path": "/Users/hepeize/Work/cowork/outputs/ZeroBench_niche_domains_20261126/cases/ZBN-06/main.png",
+        "dimensions": [
+          2760,
+          1960
+        ],
+        "method": "PNG_header"
+      }
+    },
+    {
+      "code": "native_resolution",
+      "status": "not_applicable",
+      "message": "Declared structural/scientific-data rendering has no photographic source-raster resolution; inspect its coordinate/data provenance and final display instead",
+      "evidence": {
+        "kind": "scientific_data_rendering"
+      }
+    },
+    {
+      "code": "source_license_and_fidelity",
+      "status": "needs_review",
+      "message": "Verify source bytes, license/attribution and whether each panel is observation, data rendering or simulated measurement; metadata declarations alone are not proof",
+      "evidence": {
+        "source": {
+          "kind": "scientific_data_rendering",
+          "title": "ZBN-06 Oxidoreductase 3D Pocket + OD340 Enzyme Kinetics Checkerboard",
+          "author": "ZeroBench niche domains workflow",
+          "license": "CC0 1.0 + CC BY-SA 3.0 + CC BY-SA 4.0 visual baseline",
+          "source_file": "render.py"
+        },
+        "image_provenance": {
+          "nature": "scientific_data_rendering",
+          "real_observation": false,
+          "authorization": "Open crystal structure coordinates + open enzyme activity dataset + Wikimedia CC BY-SA 4.0 visual reference",
+          "note": "基于开源晶体坐标与酶活测定数据渲染的结构—酶动力学耦合图谱，公开题面与图像均已做去身份化处理；完整数据库编号与许可见 attribution 与 source_data.json。"
+        }
+      }
+    },
+    {
+      "code": "mixed_observation_claim",
+      "status": "needs_review",
+      "message": "Prompt claims measured/observed evidence within a rendering; check each panel against actual recorded data, especially simulated assays",
+      "evidence": {}
+    },
+    {
+      "code": "platform_point_count",
+      "status": "pass",
+      "message": "Platform key-point count is 1–3",
+      "evidence": {
+        "count": 3
+      }
+    },
+    {
+      "code": "platform_point_coordinate",
+      "status": "pass",
+      "message": "Pixel coordinate is finite and within known bounds; target alignment still requires viewing",
+      "evidence": {
+        "index": 0,
+        "xy": [
+          1396,
+          891
+        ]
+      }
+    },
+    {
+      "code": "platform_point_coordinate",
+      "status": "pass",
+      "message": "Pixel coordinate is finite and within known bounds; target alignment still requires viewing",
+      "evidence": {
+        "index": 1,
+        "xy": [
+          2423,
+          304
+        ]
+      }
+    },
+    {
+      "code": "platform_point_coordinate",
+      "status": "pass",
+      "message": "Pixel coordinate is finite and within known bounds; target alignment still requires viewing",
+      "evidence": {
+        "index": 2,
+        "xy": [
+          978,
+          794
+        ]
+      }
+    },
+    {
+      "code": "author_solution_image",
+      "status": "pass",
+      "message": "Two author-written solution sections are required; mere presence does not establish full evidence coverage",
+      "evidence": {
+        "section": "image",
+        "characters": 305
+      }
+    },
+    {
+      "code": "author_solution_reasoning",
+      "status": "pass",
+      "message": "Two author-written solution sections are required; mere presence does not establish full evidence coverage",
+      "evidence": {
+        "section": "reasoning",
+        "characters": 702
+      }
+    },
+    {
+      "code": "question_type",
+      "status": "needs_review",
+      "message": "Check against the stored eight-category mapping; no live platform was accessed",
+      "evidence": {
+        "question_type": "生物结构与酶动力学联合推理",
+        "canonical_type": "生物结构与酶动力学联合推理"
+      }
+    },
+    {
+      "code": "author_answer",
+      "status": "pass",
+      "message": "Author answer exists; correctness and unique-match semantics require review",
+      "evidence": {}
+    },
+    {
+      "code": "stored_answer_consistency",
+      "status": "pass",
+      "message": "Compared stored answer strings only; no oracle executed, no scientific correctness inferred",
+      "evidence": {
+        "same_string": true
+      }
+    },
+    {
+      "code": "oracle_presence",
+      "status": "pass",
+      "message": "Oracle presence recorded only; this checker never imports or runs it",
+      "evidence": {
+        "present": true
+      }
+    },
+    {
+      "code": "evaluation_evidence",
+      "status": "needs_review",
+      "message": "Receipts were classified; confirm requested trial count, content validity, final answer and tool/trace integrity before accepting failures",
+      "evidence": {
+        "machine_incorrect_candidate_requires_content_review": 1
+      }
+    },
+    {
+      "code": "evaluation_round_gaps",
+      "status": "needs_review",
+      "message": "Planned rounds lack receipt files; preserve early-stop, interruption or missing-evidence status instead of filling them as failures",
+      "evidence": [
+        {
+          "path": "/Users/hepeize/Work/cowork/outputs/ZeroBench_niche_domains_20261126/evaluation/evaluation_summary.json",
+          "planned": 4,
+          "recorded_rounds": [
+            2
+          ],
+          "rounds_without_receipt": [
+            1,
+            3,
+            4
+          ],
+          "skipped_records": [
+            {
+              "round": 1,
+              "status": "skipped_early_stop",
+              "triggered_by_round": 2,
+              "reason": "已于第 2 轮确认错答入库，立即取消/跳过该题其余轮次"
+            },
+            {
+              "round": 3,
+              "status": "skipped_early_stop",
+              "triggered_by_round": 2,
+              "reason": "已于第 2 轮确认错答入库，立即取消/跳过该题其余轮次"
+            },
+            {
+              "round": 4,
+              "status": "skipped_early_stop",
+              "triggered_by_round": 2,
+              "reason": "已于第 2 轮确认错答入库，立即取消/跳过该题其余轮次"
+            }
+          ],
+          "reported_pending": 0,
+          "note": "Summary skip reasons are retained as declarations; they are not completed model answers."
+        }
+      ]
+    },
+    {
+      "code": "human_evidence_review",
+      "status": "needs_review",
+      "message": "Machine checks cannot establish these necessary conditions",
+      "evidence": [
+        "View native key ROIs and final image at 100%; establish readability, occlusion, similar-color identity, Chinese-text extent and point-to-evidence alignment.",
+        "Trace each required image observation to parameter choice, constraints and requested output; lawful full transcription or pixel registration is not cheating.",
+        "Review source licenses and panel provenance, actual measurements versus simulated assays, scientific labels and public physical assumptions.",
+        "Independently review facts-to-pixels, every empty/tie/boundary branch, answer formatting and GT. This tool does not execute an oracle.",
+        "Review measurement error propagation and feasible-set/optimal-winner stability; inspect actual counterfactual recomputation, not a claimed pass flag.",
+        "If an error is claimed, distinguish corrected intermediate reads from the final adopted facts, and exclude content defects, protocol mismatches, interruptions and service failures."
+      ]
+    }
+  ],
+  "metadata": {
+    "input_schema": {
+      "primary": "/Users/hepeize/Work/cowork/outputs/ZeroBench_niche_domains_20261126/cases/ZBN-06/question.json",
+      "author": "/Users/hepeize/Work/cowork/outputs/ZeroBench_niche_domains_20261126/cases/ZBN-06/author.json",
+      "public_exposure_basis": "fallback allowlist; prompt/options/candidates only, title and answer fields are not assumed public",
+      "public_keys_checked": [
+        "prompt"
+      ],
+      "not_scanned_for_public_leaks": [
+        "private facts.json",
+        "author answers/CoT",
+        "source provenance",
+        "code comments",
+        "unrendered Python literals"
+      ]
+    },
+    "image": {
+      "main_path": "/Users/hepeize/Work/cowork/outputs/ZeroBench_niche_domains_20261126/cases/ZBN-06/main.png",
+      "main_dimensions": [
+        2760,
+        1960
+      ],
+      "declared_source_kind": "scientific_data_rendering",
+      "native_rasters": [],
+      "declared_native_dimensions": null,
+      "profile": {
+        "min_short_px": 1080,
+        "min_long_px": 1920,
+        "status": "local conservative equivalent-1080p screening, not a verified live platform enum"
+      }
+    },
+    "evaluation": {
+      "id": "ZBN-06",
+      "version": "v1",
+      "records": [
+        {
+          "path": "/Users/hepeize/Work/cowork/outputs/ZeroBench_niche_domains_20261126/evaluation/attempts/r2-ZBN-06.json",
+          "round": 2,
+          "classification": "machine_incorrect_candidate_requires_content_review",
+          "status": "completed",
+          "invalid_reason": null,
+          "invalid_detail": null,
+          "machine_grade": "incorrect",
+          "requested_model": "gpt-6.2-sol",
+          "provider_models": [
+            "gpt-6.2-sol"
+          ],
+          "requested_effort": "max",
+          "provider_efforts": [
+            "max"
+          ],
+          "model_echo_matches": true,
+          "effort_echo_matches": true,
+          "tools_declared_available": true,
+          "tools_available": [
+            "run_python",
+            "inspect_image",
+            "view_local_image",
+            "fetch_url",
+            "search_web"
+          ],
+          "observed_tool_counts": {
+            "run_python": 1,
+            "inspect_image": 2
+          },
+          "trace_exists": true,
+          "seconds": 149.69,
+          "carried_seconds": 0.0,
+          "timeout_seconds": 1800
+        }
+      ],
+      "counts": {
+        "machine_incorrect_candidate_requires_content_review": 1
+      },
+      "summaries": [
+        {
+          "path": "/Users/hepeize/Work/cowork/outputs/ZeroBench_niche_domains_20261126/evaluation/evaluation_summary.json",
+          "planned": 4,
+          "recorded_rounds": [
+            2
+          ],
+          "rounds_without_receipt": [
+            1,
+            3,
+            4
+          ],
+          "skipped_records": [
+            {
+              "round": 1,
+              "status": "skipped_early_stop",
+              "triggered_by_round": 2,
+              "reason": "已于第 2 轮确认错答入库，立即取消/跳过该题其余轮次"
+            },
+            {
+              "round": 3,
+              "status": "skipped_early_stop",
+              "triggered_by_round": 2,
+              "reason": "已于第 2 轮确认错答入库，立即取消/跳过该题其余轮次"
+            },
+            {
+              "round": 4,
+              "status": "skipped_early_stop",
+              "triggered_by_round": 2,
+              "reason": "已于第 2 轮确认错答入库，立即取消/跳过该题其余轮次"
+            }
+          ],
+          "reported_pending": 0,
+          "note": "Summary skip reasons are retained as declarations; they are not completed model answers."
+        }
+      ],
+      "completed_rounds": [
+        2
+      ],
+      "policy": "Latest receipt files only; history not double-counted. Missing/stopped/timeout/transport/partial is not a model error. Available but unused tools remain enabled."
+    }
+  },
+  "platform_accepted": false,
+  "difficulty_proven": false,
+  "side_effects": {
+    "oracle_executed": false,
+    "model_api_called": false,
+    "network_used": false,
+    "dependencies_installed": false,
+    "case_files_modified": false
+  },
+  "meaning": "blocked means a concrete local schema/reference/profile conflict; needs_review means unknown or incomplete evidence. pass applies only to the named limited check, never whole-case approval."
+}

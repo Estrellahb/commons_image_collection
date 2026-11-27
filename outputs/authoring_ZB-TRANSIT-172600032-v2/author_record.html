@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>四屏航班配对与登机口拥挤 · ZeroBench 作者记录</title>
+<style>
+:root { color-scheme: light; font: 16px/1.65 system-ui, "Noto Sans CJK SC", sans-serif; color: #17242d; background: #eef2f4; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { max-width: 1280px; margin: auto; padding: 24px clamp(12px, 3vw, 40px) 48px; }
+h1 { margin: 0 0 20px; font-size: clamp(24px, 3vw, 38px); line-height: 1.25; }
+h2 { font-size: 21px; margin: 0 0 8px; }
+h3 { font-size: 17px; margin: 16px 0 6px; }
+small { color: #486374; font-size: 0.67em; font-weight: 500; overflow-wrap: anywhere; }
+section { background: #fff; border: 1px solid #d6e2e8; border-radius: 12px; padding: clamp(14px, 2.5vw, 26px); margin-bottom: 18px; }
+section header { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+p { margin: 8px 0; }
+a { color: #175473; overflow-wrap: anywhere; }
+button { background: #e7f2f9; color: #153f57; border: 1px solid #a9c7d9; border-radius: 6px; cursor: pointer; font: inherit; font-size: 14px; padding: 3px 10px; white-space: nowrap; }
+button:focus-visible, a:focus-visible { outline: 2px solid #175473; outline-offset: 2px; }
+.table { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+th, td { border-bottom: 1px solid #dfe8ed; padding: 6px 9px; text-align: left; vertical-align: top; }
+th { background: #f3f7f9; white-space: nowrap; }
+.images { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 10px 0; }
+figure { margin: 0; }
+figcaption { margin-top: 5px; text-align: center; }
+.image-frame { position: relative; }
+.image-frame img { display: block; width: 100%; height: auto; }
+.point { position: absolute; display: grid; place-items: center; width: 19px; height: 19px; transform: translate(-50%, -50%); border-radius: 50%; background: #a12608; color: #fff; border: 1px solid #fff; font: bold 11px system-ui, sans-serif; box-shadow: 0 0 0 1px #22150d; }
+pre { font: inherit; white-space: pre-wrap; overflow-wrap: anywhere; }
+.copy-fallback { position: fixed; left: 10px; bottom: 10px; width: 250px; min-height: 80px; opacity: 0; }
+.copy-fallback.manual { opacity: 1; }
+@media (max-width: 700px) { .images { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body><main>
+<h1>四屏航班配对与登机口拥挤</h1>
+<section><h2>基本信息</h2><div class='table'><table><tr><th scope='row'>题号</th><td>ZB-TRANSIT-172600032-v2<textarea id='meta-0' hidden readonly>ZB-TRANSIT-172600032-v2</textarea></td><td><button type='button' data-copy='meta-0'>复制</button></td></tr><tr><th scope='row'>题名</th><td>四屏航班配对与登机口拥挤<textarea id='meta-1' hidden readonly>四屏航班配对与登机口拥挤</textarea></td><td><button type='button' data-copy='meta-1'>复制</button></td></tr><tr><th scope='row'>题型</th><td>复杂指令遵循<textarea id='meta-2' hidden readonly>复杂指令遵循</textarea></td><td><button type='button' data-copy='meta-2'>复制</button></td></tr><tr><th scope='row'>辅助题型</th><td>计数聚合链、抗干扰文本读取<textarea id='meta-3' hidden readonly>计数聚合链、抗干扰文本读取</textarea></td><td><button type='button' data-copy='meta-3'>复制</button></td></tr><tr><th scope='row'>难度</th><td>中等<textarea id='meta-4' hidden readonly>中等</textarea></td><td><button type='button' data-copy='meta-4'>复制</button></td></tr><tr><th scope='row'>图片大类</th><td>实拍文字载体照<textarea id='meta-5' hidden readonly>实拍文字载体照</textarea></td><td><button type='button' data-copy='meta-5'>复制</button></td></tr><tr><th scope='row'>图片小类</th><td>交通枢纽 · 机场出发航班电子屏<textarea id='meta-6' hidden readonly>交通枢纽 · 机场出发航班电子屏</textarea></td><td><button type='button' data-copy='meta-6'>复制</button></td></tr><tr><th scope='row'>素材类型</th><td>真实照片<textarea id='meta-7' hidden readonly>真实照片</textarea></td><td><button type='button' data-copy='meta-7'>复制</button></td></tr><tr><th scope='row'>原图尺寸</th><td>4032 × 3024 像素<textarea id='meta-8' hidden readonly>4032 × 3024 像素</textarea></td><td><button type='button' data-copy='meta-8'>复制</button></td></tr><tr><th scope='row'>原图文件</th><td>zb-transit-172600032.jpg<textarea id='meta-9' hidden readonly>zb-transit-172600032.jpg</textarea></td><td><button type='button' data-copy='meta-9'>复制</button></td></tr><tr><th scope='row'>来源</th><td><a href='https://commons.wikimedia.org/wiki/File:Amsterdam_Airport_Schiphol_-_Flights_departures_board_2025-08-13.jpg'>https://commons.wikimedia.org/wiki/File:Amsterdam_Airport_Schiphol_-_Flights_departures_board_2025-08-13.jpg</a><textarea id='meta-10' hidden readonly>https://commons.wikimedia.org/wiki/File:Amsterdam_Airport_Schiphol_-_Flights_departures_board_2025-08-13.jpg</textarea></td><td><button type='button' data-copy='meta-10'>复制</button></td></tr><tr><th scope='row'>作者</th><td>Sebleouf<textarea id='meta-11' hidden readonly>Sebleouf</textarea></td><td><button type='button' data-copy='meta-11'>复制</button></td></tr><tr><th scope='row'>许可</th><td>CC BY-SA 4.0<textarea id='meta-12' hidden readonly>CC BY-SA 4.0</textarea></td><td><button type='button' data-copy='meta-12'>复制</button></td></tr><tr><th scope='row'>许可链接</th><td><a href='https://creativecommons.org/licenses/by-sa/4.0'>https://creativecommons.org/licenses/by-sa/4.0</a><textarea id='meta-13' hidden readonly>https://creativecommons.org/licenses/by-sa/4.0</textarea></td><td><button type='button' data-copy='meta-13'>复制</button></td></tr><tr><th scope='row'>处理记录</th><td>采集入库时曾重编码 JPEG 并处理 EXIF，未缩放。交付文件逐字节复制库内原图。<textarea id='meta-14' hidden readonly>采集入库时曾重编码 JPEG 并处理 EXIF，未缩放。交付文件逐字节复制库内原图。</textarea></td><td><button type='button' data-copy='meta-14'>复制</button></td></tr></table></div></section><section><header><h2>原图与打点对照</h2><button type='button' data-copy='platform_points'>复制</button></header><textarea id='platform_points' hidden readonly>1. (1887, 1372)  B 屏 T3 位于 UA9791 的 Zurich 行。正上方 DL9235 的 Help 格为空。
+2. (2157, 1770)  B 屏 DL9351 的 Gate 为 C11。它不进入候选对，但计入拥挤费。
+3. (3704, 1957)  D 屏 CI9225 也用 C11。与 B 屏的记录共同决定这行的拥挤费。</textarea><div class='images'><figure><div class='image-frame'><img src='zb-transit-172600032.jpg' width='4032' height='3024' alt='四块并排的机场出发航班屏'></div><figcaption>干净原图</figcaption></figure><figure><div class='image-frame'><img src='zb-transit-172600032.jpg' width='4032' height='3024' alt='四块并排的机场出发航班屏'><span class='point' data-x='1887' data-y='1372' title='B 屏 T3 位于 UA9791 的 Zurich 行。正上方 DL9235 的 Help 格为空。' style='left:46.8005952381%;top:45.3703703704%'>1</span><span class='point' data-x='2157' data-y='1770' title='B 屏 DL9351 的 Gate 为 C11。它不进入候选对，但计入拥挤费。' style='left:53.4970238095%;top:58.5317460317%'>2</span><span class='point' data-x='3704' data-y='1957' title='D 屏 CI9225 也用 C11。与 B 屏的记录共同决定这行的拥挤费。' style='left:91.8650793651%;top:64.7156084656%'>3</span></div><figcaption>打点图</figcaption></figure></div><p>坐标使用原图像素，以左上角为原点，x 向右，y 向下。</p><div class='table'><table><thead><tr><th scope='col'>编号</th><th scope='col'>原图坐标 (x, y)</th><th scope='col'>证据说明</th></tr></thead><tbody><tr><td>1</td><td>(1887, 1372)</td><td>B 屏 T3 位于 UA9791 的 Zurich 行。正上方 DL9235 的 Help 格为空。</td></tr><tr><td>2</td><td>(2157, 1770)</td><td>B 屏 DL9351 的 Gate 为 C11。它不进入候选对，但计入拥挤费。</td></tr><tr><td>3</td><td>(3704, 1957)</td><td>D 屏 CI9225 也用 C11。与 B 屏的记录共同决定这行的拥挤费。</td></tr></tbody></table></div></section><section><header><h2>题目 <small>prompt</small></h2><button type='button' data-copy='prompt'>复制</button></header><textarea id='prompt' hidden readonly>把照片中从左到右的四块出发屏记为 A、B、C、D。以下是一项针对照片快照的排班练习。沿每块屏幕的同一条横行读取 Time（计划时间）、Destination（目的地）、Flight（航班号）、Help 和 Gate（登机口）。Help 格中印有 T 加数字时，该行带 Help 标记。只使用 Gate 为一个英文字母紧跟数字的行。时间一律取 Time 列，忽略 Remarks 列。
+
+一对候选由两块不同屏幕上目的地完整显示名称相同的两行组成。每两行只算一对。同一块屏上若有不同航班行显示相同目的地和时间，仍按各自航班行配对。每对的时间差取绝对值，单位为分钟。每对的两个 Gate 首字母不同时，记一次字母切换。
+
+一个完整方案由两对候选组成，四块屏各恰好用一行，两对的目的地互不相同，所用四行恰好一行带 Help 标记。交换两对的书写顺序仍算同一个方案。把屏幕组合分为 AB/CD、AC/BD、AD/BC 三类。
+
+常规工况中，两对时间差之和每分钟计 1 成本点。拥挤工况在常规成本上每次字母切换加 50 点，再加登机口拥挤费。对方案中的每一行，在四块屏的全部现存航班行中数使用同一完整 Gate（字母和数字都相同）的其他行，每找到一行就为当前方案行加 25 点。这些其他行可以在同一屏，也可以属于方案本身，且无须能组成候选对。同一 Gate 的两行如果都在方案里，两行分别计算自己的拥挤费。
+
+两种工况都取成本最低的完整方案。方案写成按 A、B、C、D 排列的四个航班号，去掉号内空格，保留前导零。若成本并列，先计所有最优方案，再用四个航班号的元组取字典序最小者作代表。比较字符时数字 0–9 在字母 A–Z 之前。
+
+请按顺序给出以下五项。计数和成本均为精确整数，容差为 0。
+1. 候选对数，按 AB、AC、AD、BC、BD、CD 的顺序。
+2. 完整方案数，按 AB/CD、AC/BD、AD/BC 的顺序。
+3. 常规工况的最低成本、最优方案数、代表方案的四个航班号。
+4. 拥挤工况的最低成本、最优方案数、代表方案的四个航班号。
+5. 每次从照片记录中独立撤下一个航班行，用剩余各行重新计算拥挤工况的可行方案和拥挤费。报出所有使最低成本发生变化的单行撤下情形，包括成本上升或下降。先给情形数，再按被撤航班号字典序列出「被撤航班号 → 新的最低成本」。无可行方案也算变化，新值写「无解」。</textarea><p>把照片中从左到右的四块出发屏记为 A、B、C、D。以下是一项针对照片快照的排班练习。沿每块屏幕的同一条横行读取 Time（计划时间）、Destination（目的地）、Flight（航班号）、Help 和 Gate（登机口）。Help 格中印有 T 加数字时，该行带 Help 标记。只使用 Gate 为一个英文字母紧跟数字的行。时间一律取 Time 列，忽略 Remarks 列。</p><p>一对候选由两块不同屏幕上目的地完整显示名称相同的两行组成。每两行只算一对。同一块屏上若有不同航班行显示相同目的地和时间，仍按各自航班行配对。每对的时间差取绝对值，单位为分钟。每对的两个 Gate 首字母不同时，记一次字母切换。</p><p>一个完整方案由两对候选组成，四块屏各恰好用一行，两对的目的地互不相同，所用四行恰好一行带 Help 标记。交换两对的书写顺序仍算同一个方案。把屏幕组合分为 AB/CD、AC/BD、AD/BC 三类。</p><p>常规工况中，两对时间差之和每分钟计 1 成本点。拥挤工况在常规成本上每次字母切换加 50 点，再加登机口拥挤费。对方案中的每一行，在四块屏的全部现存航班行中数使用同一完整 Gate（字母和数字都相同）的其他行，每找到一行就为当前方案行加 25 点。这些其他行可以在同一屏，也可以属于方案本身，且无须能组成候选对。同一 Gate 的两行如果都在方案里，两行分别计算自己的拥挤费。</p><p>两种工况都取成本最低的完整方案。方案写成按 A、B、C、D 排列的四个航班号，去掉号内空格，保留前导零。若成本并列，先计所有最优方案，再用四个航班号的元组取字典序最小者作代表。比较字符时数字 0–9 在字母 A–Z 之前。</p><p>请按顺序给出以下五项。计数和成本均为精确整数，容差为 0。
+1. 候选对数，按 AB、AC、AD、BC、BD、CD 的顺序。
+2. 完整方案数，按 AB/CD、AC/BD、AD/BC 的顺序。
+3. 常规工况的最低成本、最优方案数、代表方案的四个航班号。
+4. 拥挤工况的最低成本、最优方案数、代表方案的四个航班号。
+5. 每次从照片记录中独立撤下一个航班行，用剩余各行重新计算拥挤工况的可行方案和拥挤费。报出所有使最低成本发生变化的单行撤下情形，包括成本上升或下降。先给情形数，再按被撤航班号字典序列出「被撤航班号 → 新的最低成本」。无可行方案也算变化，新值写「无解」。</p></section><section><header><h2>出题思路 <small>thinking</small></h2><button type='button' data-copy='thinking'>复制</button></header><textarea id='thinking' hidden readonly>同一时刻的 B 屏 Frankfurt 和 Zurich 只隔一行。T3 的横行归属决定 AB 的 Zurich 对能否作为唯一的 Help 来源，也决定 BD 的 Frankfurt 对是否因有两个 Help 而失去资格。错绑会改变完整方案数、两种最低成本和撤下一行的敏感情形。
+
+图中两处 C11 属于不同航班。B 屏 Split 的 DL9351 无跨屏同名候选，仍与 D 屏 CI9225 构成同口占用。若遗漏这个对应，拥挤最低成本少 25 点。C 屏两条 Heathrow 行同目的地同时间，须用航班号和 D16、D25 保留为两个实体。</textarea><p>同一时刻的 B 屏 Frankfurt 和 Zurich 只隔一行。T3 的横行归属决定 AB 的 Zurich 对能否作为唯一的 Help 来源，也决定 BD 的 Frankfurt 对是否因有两个 Help 而失去资格。错绑会改变完整方案数、两种最低成本和撤下一行的敏感情形。</p><p>图中两处 C11 属于不同航班。B 屏 Split 的 DL9351 无跨屏同名候选，仍与 D 屏 CI9225 构成同口占用。若遗漏这个对应，拥挤最低成本少 25 点。C 屏两条 Heathrow 行同目的地同时间，须用航班号和 D16、D25 保留为两个实体。</p></section><section><header><h2>图像识别 <small>cot_image_understanding</small></h2><button type='button' data-copy='cot_image_understanding'>复制</button></header><textarea id='cot_image_understanding' hidden readonly>A–D 是从左到右的四块屏，屏内数据行从上往下编号，每屏 31 行。C 屏第 2 行 FR421、D 屏第 2 行 EJU7843 和第 15 行 EZY2180 的 Gate 为 H。C 屏第 20 行 AA6902 的 Gate 空白。这四行排除。B 屏 EZY2162 的 H1 合格，但没有合格的跨屏 Manchester 对手。C 屏第 8、11 行均显示 10:20 London Heathrow，分别是 BA429/D16 与 CZ7603/D25，各自都能与 D 屏 BA431/D18 配对。B 屏第 4 行 DL9235 的 Help 为空，下一行 UA9791 才带 T3。
+
+所有进入候选对的航班行
+屏 | 行 | 计划时间 | 目的地 | 航班号 | Help | Gate
+A | 6 | 09:20 | Paramaribo | KL0713 | 空 | E24
+A | 8 | 09:20 | Oslo | DL9402 | 空 | C8
+A | 9 | 09:20 | Bucharest | SK6800 | 空 | D74
+A | 10 | 09:20 | Copenhagen | DL9211 | 空 | C12
+A | 13 | 09:30 | Paris de Gaulle | CI9291 | 空 | C5
+A | 14 | 09:30 | Madrid | CZ7644 | 空 | D78
+A | 16 | 09:30 | London City | VS7036 | 空 | D6
+A | 23 | 09:35 | Dublin | EI603 | 空 | D18
+A | 24 | 09:35 | Malaga | DL9182 | 空 | C18
+A | 26 | 09:40 | Minneapolis | VS3947 | 空 | G6
+A | 27 | 09:40 | Munich | DL9370 | 空 | D86
+A | 31 | 09:45 | Zurich | DL9427 | 空 | D82
+B | 1 | 09:45 | Dublin | DL9226 | 空 | D14
+B | 4 | 09:50 | Frankfurt | DL9235 | 空 | B7
+B | 5 | 09:50 | Zurich | UA9791 | T3 | B35
+B | 11 | 09:55 | Houston | VS7123 | 空 | F8
+B | 15 | 09:55 | Warsaw | KQ1363 | 空 | D68
+B | 21 | 10:00 | Frankfurt | AI8542 | T3 | B31
+B | 25 | 10:00 | New York JFK | VS3941 | 空 | D49
+C | 7 | 10:20 | Paramaribo | PY993 | 空 | G3
+C | 8 | 10:20 | London Heathrow | BA429 | 空 | D16
+C | 11 | 10:20 | London Heathrow | CZ7603 | 空 | D25
+C | 13 | 10:25 | Copenhagen | SK552 | 空 | C12
+C | 19 | 10:30 | Warsaw | LO266 | 空 | B32
+C | 21 | 10:35 | Paris de Gaulle | CI9293 | 空 | C15
+C | 25 | 10:40 | Oslo | SK822 | 空 | C8
+C | 27 | 10:45 | Minneapolis | VS7141 | 空 | G9
+C | 29 | 10:55 | Stockholm | DL9184 | 空 | C5
+D | 1 | 11:00 | Houston | UA021 | T5 | G1
+D | 3 | 11:00 | Madrid | CI9230 | T5 | D63
+D | 4 | 11:00 | Stockholm | SK556 | 空 | B17
+D | 8 | 11:10 | Malaga | KL2539 | 空 | C18
+D | 9 | 11:10 | New York JFK | VS3951 | 空 | D57
+D | 12 | 11:15 | Munich | TG7853 | T3 | B31
+D | 16 | 11:20 | Frankfurt | UA9203 | T3 | B27
+D | 18 | 11:25 | London City | BA8452 | 空 | D16
+D | 22 | 11:35 | Paris de Gaulle | CI9225 | 空 | C11
+D | 24 | 11:40 | London Heathrow | BA431 | 空 | D18
+D | 25 | 11:40 | Bucharest | RO362 | T5 | B31
+
+候选用到的重复 Gate 及照片中全部同口航班行
+Gate | 行数 | 屏与航班号
+B17 | 2 | C VY8379、D SK556
+B27 | 2 | C IB5235、D UA9203
+B31 | 3 | B AI8542、D TG7853、D RO362
+B7 | 2 | B DL9235、D SK6776
+C11 | 2 | B DL9351、D CI9225
+C12 | 2 | A DL9211、C SK552
+C18 | 2 | A DL9182、D KL2539
+C5 | 2 | A CI9291、C DL9184
+C8 | 2 | A DL9402、C SK822
+D16 | 2 | C BA429、D BA8452
+D18 | 2 | A EI603、D BA431
+D6 | 5 | A DL9281、A VS7036、A SK6818、A DL9295、B VS7017
+E24 | 2 | A KL0713、D VS7166
+G1 | 2 | D UA021、D UA947
+G6 | 2 | A VS3947、D LY338
+其余候选用到的 Gate 在全图只出现一次。</textarea><p>A–D 是从左到右的四块屏，屏内数据行从上往下编号，每屏 31 行。C 屏第 2 行 FR421、D 屏第 2 行 EJU7843 和第 15 行 EZY2180 的 Gate 为 H。C 屏第 20 行 AA6902 的 Gate 空白。这四行排除。B 屏 EZY2162 的 H1 合格，但没有合格的跨屏 Manchester 对手。C 屏第 8、11 行均显示 10:20 London Heathrow，分别是 BA429/D16 与 CZ7603/D25，各自都能与 D 屏 BA431/D18 配对。B 屏第 4 行 DL9235 的 Help 为空，下一行 UA9791 才带 T3。</p><h3>所有进入候选对的航班行</h3><div class='table'><table><thead><tr><th scope='col'>屏</th><th scope='col'>行</th><th scope='col'>计划时间</th><th scope='col'>目的地</th><th scope='col'>航班号</th><th scope='col'>Help</th><th scope='col'>Gate</th></tr></thead><tbody><tr><td>A</td><td>6</td><td>09:20</td><td>Paramaribo</td><td>KL0713</td><td>空</td><td>E24</td></tr><tr><td>A</td><td>8</td><td>09:20</td><td>Oslo</td><td>DL9402</td><td>空</td><td>C8</td></tr><tr><td>A</td><td>9</td><td>09:20</td><td>Bucharest</td><td>SK6800</td><td>空</td><td>D74</td></tr><tr><td>A</td><td>10</td><td>09:20</td><td>Copenhagen</td><td>DL9211</td><td>空</td><td>C12</td></tr><tr><td>A</td><td>13</td><td>09:30</td><td>Paris de Gaulle</td><td>CI9291</td><td>空</td><td>C5</td></tr><tr><td>A</td><td>14</td><td>09:30</td><td>Madrid</td><td>CZ7644</td><td>空</td><td>D78</td></tr><tr><td>A</td><td>16</td><td>09:30</td><td>London City</td><td>VS7036</td><td>空</td><td>D6</td></tr><tr><td>A</td><td>23</td><td>09:35</td><td>Dublin</td><td>EI603</td><td>空</td><td>D18</td></tr><tr><td>A</td><td>24</td><td>09:35</td><td>Malaga</td><td>DL9182</td><td>空</td><td>C18</td></tr><tr><td>A</td><td>26</td><td>09:40</td><td>Minneapolis</td><td>VS3947</td><td>空</td><td>G6</td></tr><tr><td>A</td><td>27</td><td>09:40</td><td>Munich</td><td>DL9370</td><td>空</td><td>D86</td></tr><tr><td>A</td><td>31</td><td>09:45</td><td>Zurich</td><td>DL9427</td><td>空</td><td>D82</td></tr><tr><td>B</td><td>1</td><td>09:45</td><td>Dublin</td><td>DL9226</td><td>空</td><td>D14</td></tr><tr><td>B</td><td>4</td><td>09:50</td><td>Frankfurt</td><td>DL9235</td><td>空</td><td>B7</td></tr><tr><td>B</td><td>5</td><td>09:50</td><td>Zurich</td><td>UA9791</td><td>T3</td><td>B35</td></tr><tr><td>B</td><td>11</td><td>09:55</td><td>Houston</td><td>VS7123</td><td>空</td><td>F8</td></tr><tr><td>B</td><td>15</td><td>09:55</td><td>Warsaw</td><td>KQ1363</td><td>空</td><td>D68</td></tr><tr><td>B</td><td>21</td><td>10:00</td><td>Frankfurt</td><td>AI8542</td><td>T3</td><td>B31</td></tr><tr><td>B</td><td>25</td><td>10:00</td><td>New York JFK</td><td>VS3941</td><td>空</td><td>D49</td></tr><tr><td>C</td><td>7</td><td>10:20</td><td>Paramaribo</td><td>PY993</td><td>空</td><td>G3</td></tr><tr><td>C</td><td>8</td><td>10:20</td><td>London Heathrow</td><td>BA429</td><td>空</td><td>D16</td></tr><tr><td>C</td><td>11</td><td>10:20</td><td>London Heathrow</td><td>CZ7603</td><td>空</td><td>D25</td></tr><tr><td>C</td><td>13</td><td>10:25</td><td>Copenhagen</td><td>SK552</td><td>空</td><td>C12</td></tr><tr><td>C</td><td>19</td><td>10:30</td><td>Warsaw</td><td>LO266</td><td>空</td><td>B32</td></tr><tr><td>C</td><td>21</td><td>10:35</td><td>Paris de Gaulle</td><td>CI9293</td><td>空</td><td>C15</td></tr><tr><td>C</td><td>25</td><td>10:40</td><td>Oslo</td><td>SK822</td><td>空</td><td>C8</td></tr><tr><td>C</td><td>27</td><td>10:45</td><td>Minneapolis</td><td>VS7141</td><td>空</td><td>G9</td></tr><tr><td>C</td><td>29</td><td>10:55</td><td>Stockholm</td><td>DL9184</td><td>空</td><td>C5</td></tr><tr><td>D</td><td>1</td><td>11:00</td><td>Houston</td><td>UA021</td><td>T5</td><td>G1</td></tr><tr><td>D</td><td>3</td><td>11:00</td><td>Madrid</td><td>CI9230</td><td>T5</td><td>D63</td></tr><tr><td>D</td><td>4</td><td>11:00</td><td>Stockholm</td><td>SK556</td><td>空</td><td>B17</td></tr><tr><td>D</td><td>8</td><td>11:10</td><td>Malaga</td><td>KL2539</td><td>空</td><td>C18</td></tr><tr><td>D</td><td>9</td><td>11:10</td><td>New York JFK</td><td>VS3951</td><td>空</td><td>D57</td></tr><tr><td>D</td><td>12</td><td>11:15</td><td>Munich</td><td>TG7853</td><td>T3</td><td>B31</td></tr><tr><td>D</td><td>16</td><td>11:20</td><td>Frankfurt</td><td>UA9203</td><td>T3</td><td>B27</td></tr><tr><td>D</td><td>18</td><td>11:25</td><td>London City</td><td>BA8452</td><td>空</td><td>D16</td></tr><tr><td>D</td><td>22</td><td>11:35</td><td>Paris de Gaulle</td><td>CI9225</td><td>空</td><td>C11</td></tr><tr><td>D</td><td>24</td><td>11:40</td><td>London Heathrow</td><td>BA431</td><td>空</td><td>D18</td></tr><tr><td>D</td><td>25</td><td>11:40</td><td>Bucharest</td><td>RO362</td><td>T5</td><td>B31</td></tr></tbody></table></div><h3>候选用到的重复 Gate</h3><div class='table'><table><thead><tr><th scope='col'>Gate</th><th scope='col'>行数</th><th scope='col'>屏与航班号</th></tr></thead><tbody><tr><td>B17</td><td>2</td><td>C VY8379、D SK556</td></tr><tr><td>B27</td><td>2</td><td>C IB5235、D UA9203</td></tr><tr><td>B31</td><td>3</td><td>B AI8542、D TG7853、D RO362</td></tr><tr><td>B7</td><td>2</td><td>B DL9235、D SK6776</td></tr><tr><td>C11</td><td>2</td><td>B DL9351、D CI9225</td></tr><tr><td>C12</td><td>2</td><td>A DL9211、C SK552</td></tr><tr><td>C18</td><td>2</td><td>A DL9182、D KL2539</td></tr><tr><td>C5</td><td>2</td><td>A CI9291、C DL9184</td></tr><tr><td>C8</td><td>2</td><td>A DL9402、C SK822</td></tr><tr><td>D16</td><td>2</td><td>C BA429、D BA8452</td></tr><tr><td>D18</td><td>2</td><td>A EI603、D BA431</td></tr><tr><td>D6</td><td>5</td><td>A DL9281、A VS7036、A SK6818、A DL9295、B VS7017</td></tr><tr><td>E24</td><td>2</td><td>A KL0713、D VS7166</td></tr><tr><td>G1</td><td>2</td><td>D UA021、D UA947</td></tr><tr><td>G6</td><td>2</td><td>A VS3947、D LY338</td></tr></tbody></table></div><p>其余候选用到的 Gate 在全图只出现一次。</p></section><section><header><h2>题目推理 <small>cot_reasoning</small></h2><button type='button' data-copy='cot_reasoning'>复制</button></header><textarea id='cot_reasoning' hidden readonly>用完整目的地名在六个跨屏组合中配对。AB、AC、AD、BC、BD、CD 分别有 2、5、6、1、4、4 对。
+
+跨屏 | 目的地 | 航班配对 | 带 Help 行数
+AB | Dublin | EI603 / DL9226 | 0
+AB | Zurich | DL9427 / UA9791 | 1
+AC | Paramaribo | KL0713 / PY993 | 0
+AC | Oslo | DL9402 / SK822 | 0
+AC | Copenhagen | DL9211 / SK552 | 0
+AC | Paris de Gaulle | CI9291 / CI9293 | 0
+AC | Minneapolis | VS3947 / VS7141 | 0
+AD | Bucharest | SK6800 / RO362 | 1
+AD | Paris de Gaulle | CI9291 / CI9225 | 0
+AD | Madrid | CZ7644 / CI9230 | 1
+AD | London City | VS7036 / BA8452 | 0
+AD | Malaga | DL9182 / KL2539 | 0
+AD | Munich | DL9370 / TG7853 | 1
+BC | Warsaw | KQ1363 / LO266 | 0
+BD | Frankfurt | DL9235 / UA9203 | 1
+BD | Houston | VS7123 / UA021 | 1
+BD | Frankfurt | AI8542 / UA9203 | 2
+BD | New York JFK | VS3941 / VS3951 | 0
+CD | London Heathrow | BA429 / BA431 | 0
+CD | London Heathrow | CZ7603 / BA431 | 0
+CD | Paris de Gaulle | CI9293 / CI9225 | 0
+CD | Stockholm | DL9184 / SK556 | 0
+
+依次取 AB×CD、AC×BD、AD×BC。三个乘积有 8、20、6 种，两对目的地在这些乘积中均不同。按四行恰有一个 Help 筛成 4、10、3 种。每个方案在唯一的屏幕分组下枚举一次。
+
+常规成本最低方案由 Zurich 和 Stockholm 组成，时间差为 5 与 5 分钟，共 10 点。它有两次字母切换，C5 和 B17 各多一行，拥挤成本为 10 + 2×50 + 2×25 = 160 点。
+
+拥挤工况最优方案由 Zurich 和 Paris de Gaulle 组成。两对时间差为 5 与 60 分钟，只有 Zurich 发生字母切换。四行的 Gate 为 D82、B35、C15、C11，只有 C11 另有一行，故成本为 65 + 50 + 25 = 140 点。两工况均唯一最优。枚举时仍先保留全部同分最优方案，再按 A、B、C、D 航班号元组取字典序首项。
+
+依次撤下 124 个航班行。每次删除包含该行的完整方案，再用剩余行重算所有方案的 Gate 重数。以下八种使最低成本变化。
+撤下航班 | 新最低成本（点） | 复算依据
+CI9225 | 160 | 原最优方案失效。Heathrow 的 CZ7603 组合与 Stockholm 组合并列。
+CI9291 | 135 | C5 少一行，复用 C5 的 Stockholm 组合降至 135 点。
+CI9293 | 160 | 原最优方案失效。Heathrow 的 CZ7603 组合与 Stockholm 组合并列。
+DL9351 | 115 | C11 少一行，原最优方案少付 25 点。
+DL9427 | 175 | 全部含 Zurich 的完整方案失效，Madrid / Warsaw 组合以 175 点取胜。
+EI603 | 135 | D18 少一行，Heathrow 的 CZ7603 组合降至 135 点。
+UA9791 | 175 | 全部含 Zurich 的完整方案失效，Madrid / Warsaw 组合以 175 点取胜。
+VY8379 | 135 | B17 少一行，复用 B17 的 Stockholm 组合降至 135 点。</textarea><p>用完整目的地名在六个跨屏组合中配对。AB、AC、AD、BC、BD、CD 分别有 2、5、6、1、4、4 对。</p><div class='table'><table><thead><tr><th scope='col'>跨屏</th><th scope='col'>目的地</th><th scope='col'>航班配对</th><th scope='col'>带 Help 行数</th></tr></thead><tbody><tr><td>AB</td><td>Dublin</td><td>EI603 / DL9226</td><td>0</td></tr><tr><td>AB</td><td>Zurich</td><td>DL9427 / UA9791</td><td>1</td></tr><tr><td>AC</td><td>Paramaribo</td><td>KL0713 / PY993</td><td>0</td></tr><tr><td>AC</td><td>Oslo</td><td>DL9402 / SK822</td><td>0</td></tr><tr><td>AC</td><td>Copenhagen</td><td>DL9211 / SK552</td><td>0</td></tr><tr><td>AC</td><td>Paris de Gaulle</td><td>CI9291 / CI9293</td><td>0</td></tr><tr><td>AC</td><td>Minneapolis</td><td>VS3947 / VS7141</td><td>0</td></tr><tr><td>AD</td><td>Bucharest</td><td>SK6800 / RO362</td><td>1</td></tr><tr><td>AD</td><td>Paris de Gaulle</td><td>CI9291 / CI9225</td><td>0</td></tr><tr><td>AD</td><td>Madrid</td><td>CZ7644 / CI9230</td><td>1</td></tr><tr><td>AD</td><td>London City</td><td>VS7036 / BA8452</td><td>0</td></tr><tr><td>AD</td><td>Malaga</td><td>DL9182 / KL2539</td><td>0</td></tr><tr><td>AD</td><td>Munich</td><td>DL9370 / TG7853</td><td>1</td></tr><tr><td>BC</td><td>Warsaw</td><td>KQ1363 / LO266</td><td>0</td></tr><tr><td>BD</td><td>Frankfurt</td><td>DL9235 / UA9203</td><td>1</td></tr><tr><td>BD</td><td>Houston</td><td>VS7123 / UA021</td><td>1</td></tr><tr><td>BD</td><td>Frankfurt</td><td>AI8542 / UA9203</td><td>2</td></tr><tr><td>BD</td><td>New York JFK</td><td>VS3941 / VS3951</td><td>0</td></tr><tr><td>CD</td><td>London Heathrow</td><td>BA429 / BA431</td><td>0</td></tr><tr><td>CD</td><td>London Heathrow</td><td>CZ7603 / BA431</td><td>0</td></tr><tr><td>CD</td><td>Paris de Gaulle</td><td>CI9293 / CI9225</td><td>0</td></tr><tr><td>CD</td><td>Stockholm</td><td>DL9184 / SK556</td><td>0</td></tr></tbody></table></div><p>依次取 AB×CD、AC×BD、AD×BC。三个乘积有 8、20、6 种，两对目的地在这些乘积中均不同。按四行恰有一个 Help 筛成 4、10、3 种。每个方案在唯一的屏幕分组下枚举一次。</p><p>常规成本最低方案由 Zurich 和 Stockholm 组成，时间差为 5 与 5 分钟，共 10 点。它有两次字母切换，C5 和 B17 各多一行，拥挤成本为 10 + 2×50 + 2×25 = 160 点。</p><p>拥挤工况最优方案由 Zurich 和 Paris de Gaulle 组成。两对时间差为 5 与 60 分钟，只有 Zurich 发生字母切换。四行的 Gate 为 D82、B35、C15、C11，只有 C11 另有一行，故成本为 65 + 50 + 25 = 140 点。两工况均唯一最优。枚举时仍先保留全部同分最优方案，再按 A、B、C、D 航班号元组取字典序首项。</p><p>依次撤下 124 个航班行。每次删除包含该行的完整方案，再用剩余行重算所有方案的 Gate 重数。以下八种使最低成本变化。</p><div class='table'><table><thead><tr><th scope='col'>撤下航班</th><th scope='col'>新最低成本（点）</th><th scope='col'>复算依据</th></tr></thead><tbody><tr><td>CI9225</td><td>160</td><td>原最优方案失效。Heathrow 的 CZ7603 组合与 Stockholm 组合并列。</td></tr><tr><td>CI9291</td><td>135</td><td>C5 少一行，复用 C5 的 Stockholm 组合降至 135 点。</td></tr><tr><td>CI9293</td><td>160</td><td>原最优方案失效。Heathrow 的 CZ7603 组合与 Stockholm 组合并列。</td></tr><tr><td>DL9351</td><td>115</td><td>C11 少一行，原最优方案少付 25 点。</td></tr><tr><td>DL9427</td><td>175</td><td>全部含 Zurich 的完整方案失效，Madrid / Warsaw 组合以 175 点取胜。</td></tr><tr><td>EI603</td><td>135</td><td>D18 少一行，Heathrow 的 CZ7603 组合降至 135 点。</td></tr><tr><td>UA9791</td><td>175</td><td>全部含 Zurich 的完整方案失效，Madrid / Warsaw 组合以 175 点取胜。</td></tr><tr><td>VY8379</td><td>135</td><td>B17 少一行，复用 B17 的 Stockholm 组合降至 135 点。</td></tr></tbody></table></div></section><section><header><h2>标准答案 <small>response</small></h2><button type='button' data-copy='response'>复制</button></header><textarea id='response' hidden readonly>1. 2，5，6，1，4，4
+2. 4，10，3
+3. 10 点，1 个，DL9427、UA9791、DL9184、SK556
+4. 140 点，1 个，DL9427、UA9791、CI9293、CI9225
+5. 8 种
+CI9225 → 160 点
+CI9291 → 135 点
+CI9293 → 160 点
+DL9351 → 115 点
+DL9427 → 175 点
+EI603 → 135 点
+UA9791 → 175 点
+VY8379 → 135 点</textarea><pre>1. 2，5，6，1，4，4
+2. 4，10，3
+3. 10 点，1 个，DL9427、UA9791、DL9184、SK556
+4. 140 点，1 个，DL9427、UA9791、CI9293、CI9225
+5. 8 种
+CI9225 → 160 点
+CI9291 → 135 点
+CI9293 → 160 点
+DL9351 → 115 点
+DL9427 → 175 点
+EI603 → 135 点
+UA9791 → 175 点
+VY8379 → 135 点</pre><h3>逐字段判分口径</h3><div class='table'><table><thead><tr><th scope='col'>项</th><th scope='col'>口径</th></tr></thead><tbody><tr><td>1</td><td>六个候选对数逐个比较，按 AB、AC、AD、BC、BD、CD。</td></tr><tr><td>2</td><td>三个完整方案数逐个比较，按 AB/CD、AC/BD、AD/BC。</td></tr><tr><td>3、4</td><td>成本点、最优方案数、四个有序航班号各自比较。航班号保留前导零。</td></tr><tr><td>5</td><td>分别核对情形数及有序撤下清单中的各航班号和新成本。完整清单须无缺漏、额外项或重复。</td></tr></tbody></table></div><p>整数和成本的容差均为 0。标点、分隔空格及等值数值写法可规范化。整题正确须全部字段匹配。</p></section><section><h2>质检与复算摘要</h2><p>离线质检判定为 <code>authoring_candidate</code>。124 个航班行全部核对，8 个关键区域可在原生像素下读取。逐行框无重叠候选。84 对近色异类行共享相似底色，按横行、字段列及字符区分。汉字覆盖 0%，无可辨识人脸及遮挡图证的水印。题目使用离散读数，连续测距阈值与误差比不适用。</p><p>只读题面或单屏裁图无法恢复跨屏配对及完整登机口重数。题目允许查看含四屏的裁图并编程求解。场景去重覆盖本地已登记条目与现有题包，工作区未提供单独的全项目排除表。</p><div class='table'><table><thead><tr><th scope='col'>读法</th><th scope='col'>完整方案数</th><th scope='col'>常规最低（点）</th><th scope='col'>拥挤最低（点）</th><th scope='col'>撤下情形数</th></tr></thead><tbody><tr><td>正确读法</td><td>4 / 10 / 3</td><td>10</td><td>140</td><td>8</td></tr><tr><td>把 B 屏 T3 上移一行</td><td>0 / 5 / 3</td><td>125</td><td>175</td><td>4</td></tr><tr><td>把 B 屏 DL9351 的 C11 误读为 C1</td><td>4 / 10 / 3</td><td>10</td><td>115</td><td>4</td></tr></tbody></table></div><p>冻结版的 3 次独立盲答均完整且整题全对，关键错答字段为零，超时、故障和残缺均为零。第一版 3 次全对后加入 Gate 重数及撤下行后的动态重算。新版仍为 3 次全对，登记为中等难度。</p></section>
+</main>
+<script>
+document.querySelectorAll("[data-copy]").forEach(button => {
+  button.addEventListener("click", async () => {
+    const plain = document.getElementById(button.dataset.copy).value;
+    try {
+      await navigator.clipboard.writeText(plain);
+      button.textContent = "已复制";
+    } catch (_) {
+      const box = document.createElement("textarea");
+      box.className = "copy-fallback";
+      box.value = plain;
+      box.readOnly = true;
+      box.setAttribute("aria-label", "待复制纯文本");
+      document.body.append(box);
+      box.select();
+      if (document.execCommand("copy")) {
+        box.remove();
+        button.focus();
+        button.textContent = "已复制";
+      } else {
+        box.classList.add("manual");
+        box.addEventListener("blur", () => box.remove(), {once: true});
+        button.textContent = "按 Ctrl/Cmd+C 复制";
+        return;
+      }
+    }
+    setTimeout(() => { button.textContent = "复制"; }, 1400);
+  });
+});
+</script>
+</body></html>

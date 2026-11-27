@@ -1,0 +1,705 @@
+{
+  "public_revision": "r2",
+  "frozen": {
+    "version": "v1",
+    "image_path": "outputs/authoring_ZB-FERRULES-0318-v1/zb-hardware-106783997.jpg",
+    "image_sha256": "aff2b1f3c72ba5ea1e6c66b7c8c10427d0f814c6a7365778db85b94b83dcdacc",
+    "prompt_sha256": "d889c263b4ddd4a3816c644eea9499ddcf8777aab03ad40edeca0abf20523268",
+    "conditions": "3 independent agents, fresh context, tools available, public image and prompt only",
+    "target_difficulty": "medium",
+    "freeze_time_utc": "2026-11-26",
+    "public_revision": 2,
+    "revision_reason": "作者原生像素复核修正下框内缘坐标；BC阈值1650px使全部边判定稳健"
+  },
+  "tools_enabled": true,
+  "context": "三个新代理均fork_turns=none，只接收公开题面和原图路径",
+  "scope": "本地独立代理试答，实际模型与推理档继承主会话设置",
+  "standard": {
+    "counts": [
+      5,
+      4,
+      3
+    ],
+    "colors_A3": [
+      "R",
+      "Y"
+    ],
+    "colors_C3": [
+      "B",
+      "G"
+    ],
+    "distances_px": [
+      865,
+      1573
+    ],
+    "edges": [
+      8,
+      7
+    ],
+    "relays": 22,
+    "plans": 28,
+    "mode0": [
+      30,
+      1,
+      "A1B/B2K/C2R;A2R/B3W/C3B"
+    ],
+    "mode1": [
+      31,
+      1,
+      "A1B/B1Y/C2R;A2R/B3W/C3G"
+    ],
+    "changed": 1
+  },
+  "trials": [
+    {
+      "agent": "/root/blind_ferrules_r2_1",
+      "distances_px": [
+        849,
+        1562
+      ],
+      "reference_y": {
+        "A1": 519.5,
+        "A2": 1212,
+        "A3": 1877,
+        "B1": 503,
+        "B2": 1385,
+        "B3": 2061,
+        "B4": 2586,
+        "C2": 1024.5,
+        "C3": 2249.5
+      },
+      "answer": {
+        "counts": [
+          5,
+          4,
+          3
+        ],
+        "colors_A3": [
+          "R",
+          "Y"
+        ],
+        "colors_C3": [
+          "B",
+          "G"
+        ],
+        "distances_px": [
+          849,
+          1562
+        ],
+        "edges": [
+          8,
+          7
+        ],
+        "relays": 22,
+        "plans": 28,
+        "mode0": [
+          30,
+          1,
+          "A1B/B2K/C2R;A2R/B3W/C3B"
+        ],
+        "mode1": [
+          31,
+          1,
+          "A1B/B1Y/C2R;A2R/B3W/C3G"
+        ],
+        "changed": 1
+      },
+      "field_checks": {
+        "counts": [
+          true,
+          true,
+          true
+        ],
+        "colors_A3": [
+          true
+        ],
+        "colors_C3": [
+          true
+        ],
+        "distances_px": [
+          true,
+          true
+        ],
+        "edges": [
+          true,
+          true
+        ],
+        "relays": [
+          true
+        ],
+        "plans": [
+          true
+        ],
+        "mode0": [
+          true,
+          true,
+          true
+        ],
+        "mode1": [
+          true,
+          true,
+          true
+        ],
+        "changed": [
+          true
+        ]
+      },
+      "fields_correct": 18,
+      "fields_total": 18,
+      "whole_correct": true,
+      "status": "valid_complete",
+      "image_colors": {
+        "A1": [
+          "B"
+        ],
+        "A2": [
+          "R"
+        ],
+        "A3": [
+          "R",
+          "Y"
+        ],
+        "B1": [
+          "Y"
+        ],
+        "B2": [
+          "K"
+        ],
+        "B3": [
+          "W"
+        ],
+        "B4": [
+          "W"
+        ],
+        "C2": [
+          "R"
+        ],
+        "C3": [
+          "B",
+          "G"
+        ]
+      },
+      "ab_edges": [
+        [
+          "A1",
+          "B1"
+        ],
+        [
+          "A1",
+          "B2"
+        ],
+        [
+          "A2",
+          "B1"
+        ],
+        [
+          "A2",
+          "B2"
+        ],
+        [
+          "A2",
+          "B3"
+        ],
+        [
+          "A3",
+          "B2"
+        ],
+        [
+          "A3",
+          "B3"
+        ],
+        [
+          "A3",
+          "B4"
+        ]
+      ],
+      "bc_edges": [
+        [
+          "B1",
+          "C2"
+        ],
+        [
+          "B2",
+          "C2"
+        ],
+        [
+          "B2",
+          "C3"
+        ],
+        [
+          "B3",
+          "C2"
+        ],
+        [
+          "B3",
+          "C3"
+        ],
+        [
+          "B4",
+          "C2"
+        ],
+        [
+          "B4",
+          "C3"
+        ]
+      ],
+      "critical_wrong_fields": []
+    },
+    {
+      "agent": "/root/blind_ferrules_r2_2",
+      "distances_px": [
+        858,
+        1564
+      ],
+      "reference_y": {
+        "A1": 519.5,
+        "A2": 1209.5,
+        "A3": 1882.5,
+        "B1": 504,
+        "B2": 1385,
+        "B3": 2067.5,
+        "B4": 2594.5,
+        "C2": 1031,
+        "C3": 2252
+      },
+      "answer": {
+        "counts": [
+          5,
+          4,
+          3
+        ],
+        "colors_A3": [
+          "R",
+          "Y"
+        ],
+        "colors_C3": [
+          "B",
+          "G"
+        ],
+        "distances_px": [
+          858,
+          1564
+        ],
+        "edges": [
+          8,
+          7
+        ],
+        "relays": 22,
+        "plans": 28,
+        "mode0": [
+          30,
+          1,
+          "A1B/B2K/C2R;A2R/B3W/C3B"
+        ],
+        "mode1": [
+          31,
+          1,
+          "A1B/B1Y/C2R;A2R/B3W/C3G"
+        ],
+        "changed": 1
+      },
+      "field_checks": {
+        "counts": [
+          true,
+          true,
+          true
+        ],
+        "colors_A3": [
+          true
+        ],
+        "colors_C3": [
+          true
+        ],
+        "distances_px": [
+          true,
+          true
+        ],
+        "edges": [
+          true,
+          true
+        ],
+        "relays": [
+          true
+        ],
+        "plans": [
+          true
+        ],
+        "mode0": [
+          true,
+          true,
+          true
+        ],
+        "mode1": [
+          true,
+          true,
+          true
+        ],
+        "changed": [
+          true
+        ]
+      },
+      "fields_correct": 18,
+      "fields_total": 18,
+      "whole_correct": true,
+      "status": "valid_complete",
+      "image_colors": {
+        "A1": [
+          "B"
+        ],
+        "A2": [
+          "R"
+        ],
+        "A3": [
+          "R",
+          "Y"
+        ],
+        "B1": [
+          "Y"
+        ],
+        "B2": [
+          "K"
+        ],
+        "B3": [
+          "W"
+        ],
+        "B4": [
+          "W"
+        ],
+        "C2": [
+          "R"
+        ],
+        "C3": [
+          "B",
+          "G"
+        ]
+      },
+      "ab_edges": [
+        [
+          "A1",
+          "B1"
+        ],
+        [
+          "A1",
+          "B2"
+        ],
+        [
+          "A2",
+          "B1"
+        ],
+        [
+          "A2",
+          "B2"
+        ],
+        [
+          "A2",
+          "B3"
+        ],
+        [
+          "A3",
+          "B2"
+        ],
+        [
+          "A3",
+          "B3"
+        ],
+        [
+          "A3",
+          "B4"
+        ]
+      ],
+      "bc_edges": [
+        [
+          "B1",
+          "C2"
+        ],
+        [
+          "B2",
+          "C2"
+        ],
+        [
+          "B2",
+          "C3"
+        ],
+        [
+          "B3",
+          "C2"
+        ],
+        [
+          "B3",
+          "C3"
+        ],
+        [
+          "B4",
+          "C2"
+        ],
+        [
+          "B4",
+          "C3"
+        ]
+      ],
+      "critical_wrong_fields": []
+    },
+    {
+      "agent": "/root/blind_ferrules_r2_3",
+      "distances_px": [
+        870,
+        1556
+      ],
+      "reference_y": {
+        "A1": 523,
+        "A2": 1208,
+        "A3": 1882,
+        "B1": 510,
+        "B2": 1397,
+        "B3": 2078,
+        "B4": 2590,
+        "C2": 1034,
+        "C3": 2245
+      },
+      "answer": {
+        "counts": [
+          5,
+          4,
+          3
+        ],
+        "colors_A3": [
+          "R",
+          "Y"
+        ],
+        "colors_C3": [
+          "B",
+          "G"
+        ],
+        "distances_px": [
+          870,
+          1556
+        ],
+        "edges": [
+          8,
+          7
+        ],
+        "relays": 22,
+        "plans": 28,
+        "mode0": [
+          30,
+          1,
+          "A1B/B2K/C2R;A2R/B3W/C3B"
+        ],
+        "mode1": [
+          31,
+          1,
+          "A1B/B1Y/C2R;A2R/B3W/C3G"
+        ],
+        "changed": 1
+      },
+      "field_checks": {
+        "counts": [
+          true,
+          true,
+          true
+        ],
+        "colors_A3": [
+          true
+        ],
+        "colors_C3": [
+          true
+        ],
+        "distances_px": [
+          true,
+          true
+        ],
+        "edges": [
+          true,
+          true
+        ],
+        "relays": [
+          true
+        ],
+        "plans": [
+          true
+        ],
+        "mode0": [
+          true,
+          true,
+          true
+        ],
+        "mode1": [
+          true,
+          true,
+          true
+        ],
+        "changed": [
+          true
+        ]
+      },
+      "fields_correct": 18,
+      "fields_total": 18,
+      "whole_correct": true,
+      "status": "valid_complete",
+      "image_colors": {
+        "A1": [
+          "B"
+        ],
+        "A2": [
+          "R"
+        ],
+        "A3": [
+          "R",
+          "Y"
+        ],
+        "B1": [
+          "Y"
+        ],
+        "B2": [
+          "K"
+        ],
+        "B3": [
+          "W"
+        ],
+        "B4": [
+          "W"
+        ],
+        "C2": [
+          "R"
+        ],
+        "C3": [
+          "B",
+          "G"
+        ]
+      },
+      "ab_edges": [
+        [
+          "A1",
+          "B1"
+        ],
+        [
+          "A1",
+          "B2"
+        ],
+        [
+          "A2",
+          "B1"
+        ],
+        [
+          "A2",
+          "B2"
+        ],
+        [
+          "A2",
+          "B3"
+        ],
+        [
+          "A3",
+          "B2"
+        ],
+        [
+          "A3",
+          "B3"
+        ],
+        [
+          "A3",
+          "B4"
+        ]
+      ],
+      "bc_edges": [
+        [
+          "B1",
+          "C2"
+        ],
+        [
+          "B2",
+          "C2"
+        ],
+        [
+          "B2",
+          "C3"
+        ],
+        [
+          "B3",
+          "C2"
+        ],
+        [
+          "B3",
+          "C3"
+        ],
+        [
+          "B4",
+          "C2"
+        ],
+        [
+          "B4",
+          "C3"
+        ]
+      ],
+      "critical_wrong_fields": []
+    }
+  ],
+  "counts": {
+    "correct": 3,
+    "incorrect": 0,
+    "timeout": 0,
+    "infra_error": 0,
+    "partial": 0
+  },
+  "revision1": {
+    "status": "superseded",
+    "reason": "作者B4下边界定位偏上，测距真值修正，BC阈值由1600改1650",
+    "raw_distances": [
+      [
+        864,
+        1577
+      ],
+      [
+        853,
+        1558
+      ],
+      [
+        863,
+        1566
+      ]
+    ],
+    "other_answer_fields": {
+      "counts": [
+        5,
+        4,
+        3
+      ],
+      "colors_A3": [
+        "R",
+        "Y"
+      ],
+      "colors_C3": [
+        "B",
+        "G"
+      ],
+      "distances_px": [
+        865,
+        1573
+      ],
+      "edges": [
+        8,
+        7
+      ],
+      "relays": 22,
+      "plans": 28,
+      "mode0": [
+        30,
+        1,
+        "A1B/B2K/C2R;A2R/B3W/C3B"
+      ],
+      "mode1": [
+        31,
+        1,
+        "A1B/B1Y/C2R;A2R/B3W/C3G"
+      ],
+      "changed": 1
+    },
+    "initial_agents": [
+      "blind_ferrules_1",
+      "blind_ferrules_2",
+      "blind_ferrules_3"
+    ]
+  },
+  "protocol_events": "旧代理续答被立即中断，该类续答不纳入有效分母。r2另开三个新代理。",
+  "difficulty_decision": "medium，3/3完整正确；本题保留为中等候选。"
+}

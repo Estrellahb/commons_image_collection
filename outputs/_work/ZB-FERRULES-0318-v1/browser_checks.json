@@ -1,0 +1,196 @@
+{
+  "offline_file_open": true,
+  "images": {
+    "sameSource": true,
+    "sizes": [
+      4409,
+      3185,
+      4409,
+      3185
+    ]
+  },
+  "copy_buttons": [
+    {
+      "field": "meta-0",
+      "plain_text_equal": true,
+      "characters": 19
+    },
+    {
+      "field": "meta-1",
+      "plain_text_equal": true,
+      "characters": 15
+    },
+    {
+      "field": "meta-2",
+      "plain_text_equal": true,
+      "characters": 5
+    },
+    {
+      "field": "meta-3",
+      "plain_text_equal": true,
+      "characters": 11
+    },
+    {
+      "field": "meta-4",
+      "plain_text_equal": true,
+      "characters": 11
+    },
+    {
+      "field": "meta-5",
+      "plain_text_equal": true,
+      "characters": 7
+    },
+    {
+      "field": "meta-6",
+      "plain_text_equal": true,
+      "characters": 19
+    },
+    {
+      "field": "meta-7",
+      "plain_text_equal": true,
+      "characters": 17
+    },
+    {
+      "field": "meta-8",
+      "plain_text_equal": true,
+      "characters": 23
+    },
+    {
+      "field": "meta-9",
+      "plain_text_equal": true,
+      "characters": 72
+    },
+    {
+      "field": "meta-10",
+      "plain_text_equal": true,
+      "characters": 9
+    },
+    {
+      "field": "meta-11",
+      "plain_text_equal": true,
+      "characters": 12
+    },
+    {
+      "field": "meta-12",
+      "plain_text_equal": true,
+      "characters": 46
+    },
+    {
+      "field": "points-text",
+      "plain_text_equal": true,
+      "characters": 105
+    },
+    {
+      "field": "prompt-text",
+      "plain_text_equal": true,
+      "characters": 1581
+    },
+    {
+      "field": "thinking-text",
+      "plain_text_equal": true,
+      "characters": 252
+    },
+    {
+      "field": "understanding-text",
+      "plain_text_equal": true,
+      "characters": 658
+    },
+    {
+      "field": "reasoning-text",
+      "plain_text_equal": true,
+      "characters": 730
+    },
+    {
+      "field": "response-text",
+      "plain_text_equal": true,
+      "characters": 191
+    },
+    {
+      "field": "qa-text",
+      "plain_text_equal": true,
+      "characters": 1228
+    }
+  ],
+  "geometry": {
+    "wide": {
+      "images": [
+        {
+          "x": 47,
+          "y": 186.328125,
+          "width": 664,
+          "height": 479.65625,
+          "top": 186.328125,
+          "right": 711,
+          "bottom": 665.984375,
+          "left": 47
+        },
+        {
+          "x": 729,
+          "y": 186.328125,
+          "width": 664,
+          "height": 479.65625,
+          "top": 186.328125,
+          "right": 1393,
+          "bottom": 665.984375,
+          "left": 729
+        }
+      ],
+      "points": [
+        [
+          0.5579348644578314,
+          0.5871066518991466
+        ],
+        [
+          0.6826760165662651,
+          0.7017069515929376
+        ],
+        [
+          0.7938158885542169,
+          0.6907290377223272
+        ]
+      ],
+      "overflow": false
+    },
+    "narrow": {
+      "images": [
+        {
+          "x": 28,
+          "y": 164.984375,
+          "width": 334,
+          "height": 241.265625,
+          "top": 164.984375,
+          "right": 362,
+          "bottom": 406.25,
+          "left": 28
+        },
+        {
+          "x": 28,
+          "y": 461.4375,
+          "width": 334,
+          "height": 241.265625,
+          "top": 461.4375,
+          "right": 362,
+          "bottom": 702.703125,
+          "left": 28
+        }
+      ],
+      "points": [
+        [
+          0.5579154191616766,
+          0.587073376076679
+        ],
+        [
+          0.6826815119760479,
+          0.7017032575610388
+        ],
+        [
+          0.7937874251497006,
+          0.6906936079269478
+        ]
+      ],
+      "overflow": false
+    }
+  },
+  "javascript_errors": [],
+  "clipboard_test": "intercepted clipboard API and execCommand text"
+}

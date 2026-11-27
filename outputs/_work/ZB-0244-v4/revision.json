@@ -1,0 +1,7 @@
+{
+  "parent_version": "ZB-0244-v3",
+  "public_change": "B列第4件因严重褪色统一记F=0。",
+  "reason": "v3试答B4.F分歧，误读完整复现。",
+  "baseline_answer_change": false,
+  "requires_three_new_valid_blind_attempts": true
+}

@@ -1,0 +1,5091 @@
+{
+  "baseline": {
+    "answers": {
+      "LA": 5,
+      "AB": 25,
+      "BC": 29,
+      "CR": 5,
+      "tickets": 83,
+      "pairs": 1692,
+      "M_min": 3,
+      "M_ties": 5,
+      "N_min": 2,
+      "N_ties": 2,
+      "joint_max": 3,
+      "joint_sum": 6,
+      "joint_ties": 3,
+      "ticket1": "010610",
+      "ticket2": "040509"
+    },
+    "response": "5,25,29,5|83|1692|3,5,2,2|3,6,3,010610,040509",
+    "edges": {
+      "LA": [
+        "A01",
+        "A03",
+        "A04",
+        "A06",
+        "A07"
+      ],
+      "AB": [
+        [
+          "A01",
+          "B01"
+        ],
+        [
+          "A01",
+          "B03"
+        ],
+        [
+          "A01",
+          "B04"
+        ],
+        [
+          "A01",
+          "B05"
+        ],
+        [
+          "A01",
+          "B06"
+        ],
+        [
+          "A03",
+          "B03"
+        ],
+        [
+          "A03",
+          "B04"
+        ],
+        [
+          "A03",
+          "B05"
+        ],
+        [
+          "A03",
+          "B06"
+        ],
+        [
+          "A03",
+          "B07"
+        ],
+        [
+          "A03",
+          "B08"
+        ],
+        [
+          "A04",
+          "B01"
+        ],
+        [
+          "A04",
+          "B03"
+        ],
+        [
+          "A04",
+          "B04"
+        ],
+        [
+          "A04",
+          "B05"
+        ],
+        [
+          "A04",
+          "B06"
+        ],
+        [
+          "A06",
+          "B01"
+        ],
+        [
+          "A06",
+          "B03"
+        ],
+        [
+          "A06",
+          "B04"
+        ],
+        [
+          "A06",
+          "B05"
+        ],
+        [
+          "A06",
+          "B06"
+        ],
+        [
+          "A07",
+          "B03"
+        ],
+        [
+          "A07",
+          "B04"
+        ],
+        [
+          "A07",
+          "B05"
+        ],
+        [
+          "A07",
+          "B06"
+        ]
+      ],
+      "BC": [
+        [
+          "B01",
+          "C05"
+        ],
+        [
+          "B03",
+          "C05"
+        ],
+        [
+          "B03",
+          "C07"
+        ],
+        [
+          "B04",
+          "C05"
+        ],
+        [
+          "B04",
+          "C07"
+        ],
+        [
+          "B04",
+          "C08"
+        ],
+        [
+          "B05",
+          "C05"
+        ],
+        [
+          "B05",
+          "C07"
+        ],
+        [
+          "B05",
+          "C08"
+        ],
+        [
+          "B05",
+          "C09"
+        ],
+        [
+          "B06",
+          "C05"
+        ],
+        [
+          "B06",
+          "C07"
+        ],
+        [
+          "B06",
+          "C08"
+        ],
+        [
+          "B06",
+          "C09"
+        ],
+        [
+          "B06",
+          "C10"
+        ],
+        [
+          "B07",
+          "C05"
+        ],
+        [
+          "B07",
+          "C07"
+        ],
+        [
+          "B07",
+          "C08"
+        ],
+        [
+          "B07",
+          "C09"
+        ],
+        [
+          "B07",
+          "C10"
+        ],
+        [
+          "B08",
+          "C05"
+        ],
+        [
+          "B08",
+          "C07"
+        ],
+        [
+          "B08",
+          "C08"
+        ],
+        [
+          "B08",
+          "C09"
+        ],
+        [
+          "B08",
+          "C10"
+        ],
+        [
+          "B10",
+          "C07"
+        ],
+        [
+          "B10",
+          "C08"
+        ],
+        [
+          "B10",
+          "C09"
+        ],
+        [
+          "B10",
+          "C10"
+        ]
+      ],
+      "CR": [
+        "C05",
+        "C07",
+        "C08",
+        "C09",
+        "C10"
+      ]
+    },
+    "tickets": [
+      {
+        "slots": [
+          "A01",
+          "B01",
+          "C05"
+        ],
+        "points": 27
+      },
+      {
+        "slots": [
+          "A01",
+          "B03",
+          "C05"
+        ],
+        "points": 22
+      },
+      {
+        "slots": [
+          "A01",
+          "B03",
+          "C07"
+        ],
+        "points": 32
+      },
+      {
+        "slots": [
+          "A01",
+          "B04",
+          "C05"
+        ],
+        "points": 24
+      },
+      {
+        "slots": [
+          "A01",
+          "B04",
+          "C07"
+        ],
+        "points": 34
+      },
+      {
+        "slots": [
+          "A01",
+          "B04",
+          "C08"
+        ],
+        "points": 36
+      },
+      {
+        "slots": [
+          "A01",
+          "B05",
+          "C05"
+        ],
+        "points": 26
+      },
+      {
+        "slots": [
+          "A01",
+          "B05",
+          "C07"
+        ],
+        "points": 36
+      },
+      {
+        "slots": [
+          "A01",
+          "B05",
+          "C08"
+        ],
+        "points": 38
+      },
+      {
+        "slots": [
+          "A01",
+          "B05",
+          "C09"
+        ],
+        "points": 41
+      },
+      {
+        "slots": [
+          "A01",
+          "B06",
+          "C05"
+        ],
+        "points": 28
+      },
+      {
+        "slots": [
+          "A01",
+          "B06",
+          "C07"
+        ],
+        "points": 38
+      },
+      {
+        "slots": [
+          "A01",
+          "B06",
+          "C08"
+        ],
+        "points": 40
+      },
+      {
+        "slots": [
+          "A01",
+          "B06",
+          "C09"
+        ],
+        "points": 43
+      },
+      {
+        "slots": [
+          "A01",
+          "B06",
+          "C10"
+        ],
+        "points": 53
+      },
+      {
+        "slots": [
+          "A03",
+          "B03",
+          "C05"
+        ],
+        "points": 23
+      },
+      {
+        "slots": [
+          "A03",
+          "B03",
+          "C07"
+        ],
+        "points": 33
+      },
+      {
+        "slots": [
+          "A03",
+          "B04",
+          "C05"
+        ],
+        "points": 25
+      },
+      {
+        "slots": [
+          "A03",
+          "B04",
+          "C07"
+        ],
+        "points": 35
+      },
+      {
+        "slots": [
+          "A03",
+          "B04",
+          "C08"
+        ],
+        "points": 37
+      },
+      {
+        "slots": [
+          "A03",
+          "B05",
+          "C05"
+        ],
+        "points": 27
+      },
+      {
+        "slots": [
+          "A03",
+          "B05",
+          "C07"
+        ],
+        "points": 37
+      },
+      {
+        "slots": [
+          "A03",
+          "B05",
+          "C08"
+        ],
+        "points": 39
+      },
+      {
+        "slots": [
+          "A03",
+          "B05",
+          "C09"
+        ],
+        "points": 42
+      },
+      {
+        "slots": [
+          "A03",
+          "B06",
+          "C05"
+        ],
+        "points": 29
+      },
+      {
+        "slots": [
+          "A03",
+          "B06",
+          "C07"
+        ],
+        "points": 39
+      },
+      {
+        "slots": [
+          "A03",
+          "B06",
+          "C08"
+        ],
+        "points": 41
+      },
+      {
+        "slots": [
+          "A03",
+          "B06",
+          "C09"
+        ],
+        "points": 44
+      },
+      {
+        "slots": [
+          "A03",
+          "B06",
+          "C10"
+        ],
+        "points": 54
+      },
+      {
+        "slots": [
+          "A03",
+          "B07",
+          "C05"
+        ],
+        "points": 37
+      },
+      {
+        "slots": [
+          "A03",
+          "B07",
+          "C07"
+        ],
+        "points": 47
+      },
+      {
+        "slots": [
+          "A03",
+          "B07",
+          "C08"
+        ],
+        "points": 49
+      },
+      {
+        "slots": [
+          "A03",
+          "B07",
+          "C09"
+        ],
+        "points": 52
+      },
+      {
+        "slots": [
+          "A03",
+          "B07",
+          "C10"
+        ],
+        "points": 62
+      },
+      {
+        "slots": [
+          "A03",
+          "B08",
+          "C05"
+        ],
+        "points": 47
+      },
+      {
+        "slots": [
+          "A03",
+          "B08",
+          "C07"
+        ],
+        "points": 57
+      },
+      {
+        "slots": [
+          "A03",
+          "B08",
+          "C08"
+        ],
+        "points": 59
+      },
+      {
+        "slots": [
+          "A03",
+          "B08",
+          "C09"
+        ],
+        "points": 62
+      },
+      {
+        "slots": [
+          "A03",
+          "B08",
+          "C10"
+        ],
+        "points": 72
+      },
+      {
+        "slots": [
+          "A04",
+          "B01",
+          "C05"
+        ],
+        "points": 29
+      },
+      {
+        "slots": [
+          "A04",
+          "B03",
+          "C05"
+        ],
+        "points": 24
+      },
+      {
+        "slots": [
+          "A04",
+          "B03",
+          "C07"
+        ],
+        "points": 34
+      },
+      {
+        "slots": [
+          "A04",
+          "B04",
+          "C05"
+        ],
+        "points": 26
+      },
+      {
+        "slots": [
+          "A04",
+          "B04",
+          "C07"
+        ],
+        "points": 36
+      },
+      {
+        "slots": [
+          "A04",
+          "B04",
+          "C08"
+        ],
+        "points": 38
+      },
+      {
+        "slots": [
+          "A04",
+          "B05",
+          "C05"
+        ],
+        "points": 28
+      },
+      {
+        "slots": [
+          "A04",
+          "B05",
+          "C07"
+        ],
+        "points": 38
+      },
+      {
+        "slots": [
+          "A04",
+          "B05",
+          "C08"
+        ],
+        "points": 40
+      },
+      {
+        "slots": [
+          "A04",
+          "B05",
+          "C09"
+        ],
+        "points": 43
+      },
+      {
+        "slots": [
+          "A04",
+          "B06",
+          "C05"
+        ],
+        "points": 30
+      },
+      {
+        "slots": [
+          "A04",
+          "B06",
+          "C07"
+        ],
+        "points": 40
+      },
+      {
+        "slots": [
+          "A04",
+          "B06",
+          "C08"
+        ],
+        "points": 42
+      },
+      {
+        "slots": [
+          "A04",
+          "B06",
+          "C09"
+        ],
+        "points": 45
+      },
+      {
+        "slots": [
+          "A04",
+          "B06",
+          "C10"
+        ],
+        "points": 55
+      },
+      {
+        "slots": [
+          "A06",
+          "B01",
+          "C05"
+        ],
+        "points": 28
+      },
+      {
+        "slots": [
+          "A06",
+          "B03",
+          "C05"
+        ],
+        "points": 23
+      },
+      {
+        "slots": [
+          "A06",
+          "B03",
+          "C07"
+        ],
+        "points": 33
+      },
+      {
+        "slots": [
+          "A06",
+          "B04",
+          "C05"
+        ],
+        "points": 25
+      },
+      {
+        "slots": [
+          "A06",
+          "B04",
+          "C07"
+        ],
+        "points": 35
+      },
+      {
+        "slots": [
+          "A06",
+          "B04",
+          "C08"
+        ],
+        "points": 37
+      },
+      {
+        "slots": [
+          "A06",
+          "B05",
+          "C05"
+        ],
+        "points": 27
+      },
+      {
+        "slots": [
+          "A06",
+          "B05",
+          "C07"
+        ],
+        "points": 37
+      },
+      {
+        "slots": [
+          "A06",
+          "B05",
+          "C08"
+        ],
+        "points": 39
+      },
+      {
+        "slots": [
+          "A06",
+          "B05",
+          "C09"
+        ],
+        "points": 42
+      },
+      {
+        "slots": [
+          "A06",
+          "B06",
+          "C05"
+        ],
+        "points": 29
+      },
+      {
+        "slots": [
+          "A06",
+          "B06",
+          "C07"
+        ],
+        "points": 39
+      },
+      {
+        "slots": [
+          "A06",
+          "B06",
+          "C08"
+        ],
+        "points": 41
+      },
+      {
+        "slots": [
+          "A06",
+          "B06",
+          "C09"
+        ],
+        "points": 44
+      },
+      {
+        "slots": [
+          "A06",
+          "B06",
+          "C10"
+        ],
+        "points": 54
+      },
+      {
+        "slots": [
+          "A07",
+          "B03",
+          "C05"
+        ],
+        "points": 23
+      },
+      {
+        "slots": [
+          "A07",
+          "B03",
+          "C07"
+        ],
+        "points": 33
+      },
+      {
+        "slots": [
+          "A07",
+          "B04",
+          "C05"
+        ],
+        "points": 25
+      },
+      {
+        "slots": [
+          "A07",
+          "B04",
+          "C07"
+        ],
+        "points": 35
+      },
+      {
+        "slots": [
+          "A07",
+          "B04",
+          "C08"
+        ],
+        "points": 37
+      },
+      {
+        "slots": [
+          "A07",
+          "B05",
+          "C05"
+        ],
+        "points": 27
+      },
+      {
+        "slots": [
+          "A07",
+          "B05",
+          "C07"
+        ],
+        "points": 37
+      },
+      {
+        "slots": [
+          "A07",
+          "B05",
+          "C08"
+        ],
+        "points": 39
+      },
+      {
+        "slots": [
+          "A07",
+          "B05",
+          "C09"
+        ],
+        "points": 42
+      },
+      {
+        "slots": [
+          "A07",
+          "B06",
+          "C05"
+        ],
+        "points": 29
+      },
+      {
+        "slots": [
+          "A07",
+          "B06",
+          "C07"
+        ],
+        "points": 39
+      },
+      {
+        "slots": [
+          "A07",
+          "B06",
+          "C08"
+        ],
+        "points": 41
+      },
+      {
+        "slots": [
+          "A07",
+          "B06",
+          "C09"
+        ],
+        "points": 44
+      },
+      {
+        "slots": [
+          "A07",
+          "B06",
+          "C10"
+        ],
+        "points": 54
+      }
+    ],
+    "representative": {
+      "points_in_code_order": [
+        53,
+        43
+      ],
+      "deviations": [
+        3,
+        3
+      ]
+    },
+    "comparisons": {
+      "LA": [
+        {
+          "left": "L",
+          "right": "A01",
+          "distance": 116.5,
+          "limit": 1680,
+          "margin": 1563.5,
+          "error_bound": 30
+        },
+        {
+          "left": "L",
+          "right": "A03",
+          "distance": 450.5,
+          "limit": 1680,
+          "margin": 1229.5,
+          "error_bound": 30
+        },
+        {
+          "left": "L",
+          "right": "A04",
+          "distance": 729.5,
+          "limit": 1680,
+          "margin": 950.5,
+          "error_bound": 30
+        },
+        {
+          "left": "L",
+          "right": "A06",
+          "distance": 1276.5,
+          "limit": 1680,
+          "margin": 403.5,
+          "error_bound": 30
+        },
+        {
+          "left": "L",
+          "right": "A07",
+          "distance": 1543,
+          "limit": 1680,
+          "margin": 137,
+          "error_bound": 30
+        },
+        {
+          "left": "L",
+          "right": "A08",
+          "distance": 1807.5,
+          "limit": 1680,
+          "margin": 127.5,
+          "error_bound": 30
+        }
+      ],
+      "AB": [
+        {
+          "left": "A01",
+          "right": "B01",
+          "distance": 12.0,
+          "limit": 1490,
+          "margin": 1478.0,
+          "error_bound": 20
+        },
+        {
+          "left": "A01",
+          "right": "B03",
+          "distance": 577.5,
+          "limit": 1490,
+          "margin": 912.5,
+          "error_bound": 20
+        },
+        {
+          "left": "A01",
+          "right": "B04",
+          "distance": 857.5,
+          "limit": 1490,
+          "margin": 632.5,
+          "error_bound": 20
+        },
+        {
+          "left": "A01",
+          "right": "B05",
+          "distance": 1128.5,
+          "limit": 1490,
+          "margin": 361.5,
+          "error_bound": 20
+        },
+        {
+          "left": "A01",
+          "right": "B06",
+          "distance": 1398.0,
+          "limit": 1490,
+          "margin": 92.0,
+          "error_bound": 20
+        },
+        {
+          "left": "A03",
+          "right": "B03",
+          "distance": 10.5,
+          "limit": 1490,
+          "margin": 1479.5,
+          "error_bound": 20
+        },
+        {
+          "left": "A03",
+          "right": "B04",
+          "distance": 290.5,
+          "limit": 1490,
+          "margin": 1199.5,
+          "error_bound": 20
+        },
+        {
+          "left": "A03",
+          "right": "B05",
+          "distance": 561.5,
+          "limit": 1490,
+          "margin": 928.5,
+          "error_bound": 20
+        },
+        {
+          "left": "A03",
+          "right": "B06",
+          "distance": 831.0,
+          "limit": 1490,
+          "margin": 659.0,
+          "error_bound": 20
+        },
+        {
+          "left": "A03",
+          "right": "B07",
+          "distance": 1078.0,
+          "limit": 1490,
+          "margin": 412.0,
+          "error_bound": 20
+        },
+        {
+          "left": "A03",
+          "right": "B08",
+          "distance": 1339.5,
+          "limit": 1490,
+          "margin": 150.5,
+          "error_bound": 20
+        },
+        {
+          "left": "A03",
+          "right": "B10",
+          "distance": 1852.5,
+          "limit": 1490,
+          "margin": 362.5,
+          "error_bound": 20
+        },
+        {
+          "left": "A04",
+          "right": "B01",
+          "distance": 858.0,
+          "limit": 1490,
+          "margin": 632.0,
+          "error_bound": 20
+        },
+        {
+          "left": "A04",
+          "right": "B03",
+          "distance": 268.5,
+          "limit": 1490,
+          "margin": 1221.5,
+          "error_bound": 20
+        },
+        {
+          "left": "A04",
+          "right": "B04",
+          "distance": 11.5,
+          "limit": 1490,
+          "margin": 1478.5,
+          "error_bound": 20
+        },
+        {
+          "left": "A04",
+          "right": "B05",
+          "distance": 282.5,
+          "limit": 1490,
+          "margin": 1207.5,
+          "error_bound": 20
+        },
+        {
+          "left": "A04",
+          "right": "B06",
+          "distance": 552.0,
+          "limit": 1490,
+          "margin": 938.0,
+          "error_bound": 20
+        },
+        {
+          "left": "A06",
+          "right": "B01",
+          "distance": 1405.0,
+          "limit": 1490,
+          "margin": 85.0,
+          "error_bound": 20
+        },
+        {
+          "left": "A06",
+          "right": "B03",
+          "distance": 815.5,
+          "limit": 1490,
+          "margin": 674.5,
+          "error_bound": 20
+        },
+        {
+          "left": "A06",
+          "right": "B04",
+          "distance": 535.5,
+          "limit": 1490,
+          "margin": 954.5,
+          "error_bound": 20
+        },
+        {
+          "left": "A06",
+          "right": "B05",
+          "distance": 264.5,
+          "limit": 1490,
+          "margin": 1225.5,
+          "error_bound": 20
+        },
+        {
+          "left": "A06",
+          "right": "B06",
+          "distance": 5.0,
+          "limit": 1490,
+          "margin": 1485.0,
+          "error_bound": 20
+        },
+        {
+          "left": "A07",
+          "right": "B01",
+          "distance": 1671.5,
+          "limit": 1490,
+          "margin": 181.5,
+          "error_bound": 20
+        },
+        {
+          "left": "A07",
+          "right": "B03",
+          "distance": 1082,
+          "limit": 1490,
+          "margin": 408,
+          "error_bound": 20
+        },
+        {
+          "left": "A07",
+          "right": "B04",
+          "distance": 802,
+          "limit": 1490,
+          "margin": 688,
+          "error_bound": 20
+        },
+        {
+          "left": "A07",
+          "right": "B05",
+          "distance": 531,
+          "limit": 1490,
+          "margin": 959,
+          "error_bound": 20
+        },
+        {
+          "left": "A07",
+          "right": "B06",
+          "distance": 261.5,
+          "limit": 1490,
+          "margin": 1228.5,
+          "error_bound": 20
+        }
+      ],
+      "BC": [
+        {
+          "left": "B01",
+          "right": "C05",
+          "distance": 1131.5,
+          "limit": 1230,
+          "margin": 98.5,
+          "error_bound": 20
+        },
+        {
+          "left": "B01",
+          "right": "C07",
+          "distance": 1662.5,
+          "limit": 1230,
+          "margin": 432.5,
+          "error_bound": 20
+        },
+        {
+          "left": "B01",
+          "right": "C08",
+          "distance": 1922.0,
+          "limit": 1230,
+          "margin": 692.0,
+          "error_bound": 20
+        },
+        {
+          "left": "B01",
+          "right": "C09",
+          "distance": 2179.5,
+          "limit": 1230,
+          "margin": 949.5,
+          "error_bound": 20
+        },
+        {
+          "left": "B01",
+          "right": "C10",
+          "distance": 2431.0,
+          "limit": 1230,
+          "margin": 1201.0,
+          "error_bound": 20
+        },
+        {
+          "left": "B03",
+          "right": "C05",
+          "distance": 542,
+          "limit": 1230,
+          "margin": 688,
+          "error_bound": 20
+        },
+        {
+          "left": "B03",
+          "right": "C07",
+          "distance": 1073,
+          "limit": 1230,
+          "margin": 157,
+          "error_bound": 20
+        },
+        {
+          "left": "B03",
+          "right": "C08",
+          "distance": 1332.5,
+          "limit": 1230,
+          "margin": 102.5,
+          "error_bound": 20
+        },
+        {
+          "left": "B03",
+          "right": "C09",
+          "distance": 1590,
+          "limit": 1230,
+          "margin": 360,
+          "error_bound": 20
+        },
+        {
+          "left": "B03",
+          "right": "C10",
+          "distance": 1841.5,
+          "limit": 1230,
+          "margin": 611.5,
+          "error_bound": 20
+        },
+        {
+          "left": "B04",
+          "right": "C05",
+          "distance": 262,
+          "limit": 1230,
+          "margin": 968,
+          "error_bound": 20
+        },
+        {
+          "left": "B04",
+          "right": "C07",
+          "distance": 793,
+          "limit": 1230,
+          "margin": 437,
+          "error_bound": 20
+        },
+        {
+          "left": "B04",
+          "right": "C08",
+          "distance": 1052.5,
+          "limit": 1230,
+          "margin": 177.5,
+          "error_bound": 20
+        },
+        {
+          "left": "B04",
+          "right": "C09",
+          "distance": 1310,
+          "limit": 1230,
+          "margin": 80,
+          "error_bound": 20
+        },
+        {
+          "left": "B04",
+          "right": "C10",
+          "distance": 1561.5,
+          "limit": 1230,
+          "margin": 331.5,
+          "error_bound": 20
+        },
+        {
+          "left": "B05",
+          "right": "C05",
+          "distance": 9,
+          "limit": 1230,
+          "margin": 1221,
+          "error_bound": 20
+        },
+        {
+          "left": "B05",
+          "right": "C07",
+          "distance": 522,
+          "limit": 1230,
+          "margin": 708,
+          "error_bound": 20
+        },
+        {
+          "left": "B05",
+          "right": "C08",
+          "distance": 781.5,
+          "limit": 1230,
+          "margin": 448.5,
+          "error_bound": 20
+        },
+        {
+          "left": "B05",
+          "right": "C09",
+          "distance": 1039,
+          "limit": 1230,
+          "margin": 191,
+          "error_bound": 20
+        },
+        {
+          "left": "B05",
+          "right": "C10",
+          "distance": 1290.5,
+          "limit": 1230,
+          "margin": 60.5,
+          "error_bound": 20
+        },
+        {
+          "left": "B06",
+          "right": "C05",
+          "distance": 278.5,
+          "limit": 1230,
+          "margin": 951.5,
+          "error_bound": 20
+        },
+        {
+          "left": "B06",
+          "right": "C07",
+          "distance": 252.5,
+          "limit": 1230,
+          "margin": 977.5,
+          "error_bound": 20
+        },
+        {
+          "left": "B06",
+          "right": "C08",
+          "distance": 512.0,
+          "limit": 1230,
+          "margin": 718.0,
+          "error_bound": 20
+        },
+        {
+          "left": "B06",
+          "right": "C09",
+          "distance": 769.5,
+          "limit": 1230,
+          "margin": 460.5,
+          "error_bound": 20
+        },
+        {
+          "left": "B06",
+          "right": "C10",
+          "distance": 1021.0,
+          "limit": 1230,
+          "margin": 209.0,
+          "error_bound": 20
+        },
+        {
+          "left": "B07",
+          "right": "C05",
+          "distance": 525.5,
+          "limit": 1230,
+          "margin": 704.5,
+          "error_bound": 20
+        },
+        {
+          "left": "B07",
+          "right": "C07",
+          "distance": 5.5,
+          "limit": 1230,
+          "margin": 1224.5,
+          "error_bound": 20
+        },
+        {
+          "left": "B07",
+          "right": "C08",
+          "distance": 265.0,
+          "limit": 1230,
+          "margin": 965.0,
+          "error_bound": 20
+        },
+        {
+          "left": "B07",
+          "right": "C09",
+          "distance": 522.5,
+          "limit": 1230,
+          "margin": 707.5,
+          "error_bound": 20
+        },
+        {
+          "left": "B07",
+          "right": "C10",
+          "distance": 774.0,
+          "limit": 1230,
+          "margin": 456.0,
+          "error_bound": 20
+        },
+        {
+          "left": "B08",
+          "right": "C05",
+          "distance": 787,
+          "limit": 1230,
+          "margin": 443,
+          "error_bound": 20
+        },
+        {
+          "left": "B08",
+          "right": "C07",
+          "distance": 256,
+          "limit": 1230,
+          "margin": 974,
+          "error_bound": 20
+        },
+        {
+          "left": "B08",
+          "right": "C08",
+          "distance": 3.5,
+          "limit": 1230,
+          "margin": 1226.5,
+          "error_bound": 20
+        },
+        {
+          "left": "B08",
+          "right": "C09",
+          "distance": 261,
+          "limit": 1230,
+          "margin": 969,
+          "error_bound": 20
+        },
+        {
+          "left": "B08",
+          "right": "C10",
+          "distance": 512.5,
+          "limit": 1230,
+          "margin": 717.5,
+          "error_bound": 20
+        },
+        {
+          "left": "B10",
+          "right": "C05",
+          "distance": 1300,
+          "limit": 1230,
+          "margin": 70,
+          "error_bound": 20
+        },
+        {
+          "left": "B10",
+          "right": "C07",
+          "distance": 769,
+          "limit": 1230,
+          "margin": 461,
+          "error_bound": 20
+        },
+        {
+          "left": "B10",
+          "right": "C08",
+          "distance": 509.5,
+          "limit": 1230,
+          "margin": 720.5,
+          "error_bound": 20
+        },
+        {
+          "left": "B10",
+          "right": "C09",
+          "distance": 252,
+          "limit": 1230,
+          "margin": 978,
+          "error_bound": 20
+        },
+        {
+          "left": "B10",
+          "right": "C10",
+          "distance": 0.5,
+          "limit": 1230,
+          "margin": 1229.5,
+          "error_bound": 20
+        }
+      ],
+      "CR": [
+        {
+          "left": "C04",
+          "right": "R",
+          "distance": 1888,
+          "limit": 1750,
+          "margin": 138,
+          "error_bound": 30
+        },
+        {
+          "left": "C05",
+          "right": "R",
+          "distance": 1618,
+          "limit": 1750,
+          "margin": 132,
+          "error_bound": 30
+        },
+        {
+          "left": "C07",
+          "right": "R",
+          "distance": 1087,
+          "limit": 1750,
+          "margin": 663,
+          "error_bound": 30
+        },
+        {
+          "left": "C08",
+          "right": "R",
+          "distance": 827.5,
+          "limit": 1750,
+          "margin": 922.5,
+          "error_bound": 30
+        },
+        {
+          "left": "C09",
+          "right": "R",
+          "distance": 570,
+          "limit": 1750,
+          "margin": 1180,
+          "error_bound": 30
+        },
+        {
+          "left": "C10",
+          "right": "R",
+          "distance": 318.5,
+          "limit": 1750,
+          "margin": 1431.5,
+          "error_bound": 30
+        }
+      ]
+    }
+  },
+  "alternatives": {
+    "flat_blade_accepted": {
+      "answers": {
+        "LA": 5,
+        "AB": 25,
+        "BC": 36,
+        "CR": 6,
+        "tickets": 105,
+        "pairs": 2858,
+        "M_min": 0,
+        "M_ties": 1,
+        "N_min": 1,
+        "N_ties": 2,
+        "joint_max": 1,
+        "joint_sum": 2,
+        "joint_ties": 2,
+        "ticket1": "030806",
+        "ticket2": "060609"
+      },
+      "response": "5,25,36,6|105|2858|0,1,1,2|1,2,2,030806,060609",
+      "edges": {
+        "LA": [
+          "A01",
+          "A03",
+          "A04",
+          "A06",
+          "A07"
+        ],
+        "AB": [
+          [
+            "A01",
+            "B01"
+          ],
+          [
+            "A01",
+            "B03"
+          ],
+          [
+            "A01",
+            "B04"
+          ],
+          [
+            "A01",
+            "B05"
+          ],
+          [
+            "A01",
+            "B06"
+          ],
+          [
+            "A03",
+            "B03"
+          ],
+          [
+            "A03",
+            "B04"
+          ],
+          [
+            "A03",
+            "B05"
+          ],
+          [
+            "A03",
+            "B06"
+          ],
+          [
+            "A03",
+            "B07"
+          ],
+          [
+            "A03",
+            "B08"
+          ],
+          [
+            "A04",
+            "B01"
+          ],
+          [
+            "A04",
+            "B03"
+          ],
+          [
+            "A04",
+            "B04"
+          ],
+          [
+            "A04",
+            "B05"
+          ],
+          [
+            "A04",
+            "B06"
+          ],
+          [
+            "A06",
+            "B01"
+          ],
+          [
+            "A06",
+            "B03"
+          ],
+          [
+            "A06",
+            "B04"
+          ],
+          [
+            "A06",
+            "B05"
+          ],
+          [
+            "A06",
+            "B06"
+          ],
+          [
+            "A07",
+            "B03"
+          ],
+          [
+            "A07",
+            "B04"
+          ],
+          [
+            "A07",
+            "B05"
+          ],
+          [
+            "A07",
+            "B06"
+          ]
+        ],
+        "BC": [
+          [
+            "B01",
+            "C05"
+          ],
+          [
+            "B03",
+            "C05"
+          ],
+          [
+            "B03",
+            "C06"
+          ],
+          [
+            "B03",
+            "C07"
+          ],
+          [
+            "B04",
+            "C05"
+          ],
+          [
+            "B04",
+            "C06"
+          ],
+          [
+            "B04",
+            "C07"
+          ],
+          [
+            "B04",
+            "C08"
+          ],
+          [
+            "B05",
+            "C05"
+          ],
+          [
+            "B05",
+            "C06"
+          ],
+          [
+            "B05",
+            "C07"
+          ],
+          [
+            "B05",
+            "C08"
+          ],
+          [
+            "B05",
+            "C09"
+          ],
+          [
+            "B06",
+            "C05"
+          ],
+          [
+            "B06",
+            "C06"
+          ],
+          [
+            "B06",
+            "C07"
+          ],
+          [
+            "B06",
+            "C08"
+          ],
+          [
+            "B06",
+            "C09"
+          ],
+          [
+            "B06",
+            "C10"
+          ],
+          [
+            "B07",
+            "C05"
+          ],
+          [
+            "B07",
+            "C06"
+          ],
+          [
+            "B07",
+            "C07"
+          ],
+          [
+            "B07",
+            "C08"
+          ],
+          [
+            "B07",
+            "C09"
+          ],
+          [
+            "B07",
+            "C10"
+          ],
+          [
+            "B08",
+            "C05"
+          ],
+          [
+            "B08",
+            "C06"
+          ],
+          [
+            "B08",
+            "C07"
+          ],
+          [
+            "B08",
+            "C08"
+          ],
+          [
+            "B08",
+            "C09"
+          ],
+          [
+            "B08",
+            "C10"
+          ],
+          [
+            "B10",
+            "C06"
+          ],
+          [
+            "B10",
+            "C07"
+          ],
+          [
+            "B10",
+            "C08"
+          ],
+          [
+            "B10",
+            "C09"
+          ],
+          [
+            "B10",
+            "C10"
+          ]
+        ],
+        "CR": [
+          "C05",
+          "C06",
+          "C07",
+          "C08",
+          "C09",
+          "C10"
+        ]
+      },
+      "tickets": [
+        {
+          "slots": [
+            "A01",
+            "B01",
+            "C05"
+          ],
+          "points": 27
+        },
+        {
+          "slots": [
+            "A01",
+            "B03",
+            "C05"
+          ],
+          "points": 22
+        },
+        {
+          "slots": [
+            "A01",
+            "B03",
+            "C06"
+          ],
+          "points": 27
+        },
+        {
+          "slots": [
+            "A01",
+            "B03",
+            "C07"
+          ],
+          "points": 32
+        },
+        {
+          "slots": [
+            "A01",
+            "B04",
+            "C05"
+          ],
+          "points": 24
+        },
+        {
+          "slots": [
+            "A01",
+            "B04",
+            "C06"
+          ],
+          "points": 29
+        },
+        {
+          "slots": [
+            "A01",
+            "B04",
+            "C07"
+          ],
+          "points": 34
+        },
+        {
+          "slots": [
+            "A01",
+            "B04",
+            "C08"
+          ],
+          "points": 36
+        },
+        {
+          "slots": [
+            "A01",
+            "B05",
+            "C05"
+          ],
+          "points": 26
+        },
+        {
+          "slots": [
+            "A01",
+            "B05",
+            "C06"
+          ],
+          "points": 31
+        },
+        {
+          "slots": [
+            "A01",
+            "B05",
+            "C07"
+          ],
+          "points": 36
+        },
+        {
+          "slots": [
+            "A01",
+            "B05",
+            "C08"
+          ],
+          "points": 38
+        },
+        {
+          "slots": [
+            "A01",
+            "B05",
+            "C09"
+          ],
+          "points": 41
+        },
+        {
+          "slots": [
+            "A01",
+            "B06",
+            "C05"
+          ],
+          "points": 28
+        },
+        {
+          "slots": [
+            "A01",
+            "B06",
+            "C06"
+          ],
+          "points": 33
+        },
+        {
+          "slots": [
+            "A01",
+            "B06",
+            "C07"
+          ],
+          "points": 38
+        },
+        {
+          "slots": [
+            "A01",
+            "B06",
+            "C08"
+          ],
+          "points": 40
+        },
+        {
+          "slots": [
+            "A01",
+            "B06",
+            "C09"
+          ],
+          "points": 43
+        },
+        {
+          "slots": [
+            "A01",
+            "B06",
+            "C10"
+          ],
+          "points": 53
+        },
+        {
+          "slots": [
+            "A03",
+            "B03",
+            "C05"
+          ],
+          "points": 23
+        },
+        {
+          "slots": [
+            "A03",
+            "B03",
+            "C06"
+          ],
+          "points": 28
+        },
+        {
+          "slots": [
+            "A03",
+            "B03",
+            "C07"
+          ],
+          "points": 33
+        },
+        {
+          "slots": [
+            "A03",
+            "B04",
+            "C05"
+          ],
+          "points": 25
+        },
+        {
+          "slots": [
+            "A03",
+            "B04",
+            "C06"
+          ],
+          "points": 30
+        },
+        {
+          "slots": [
+            "A03",
+            "B04",
+            "C07"
+          ],
+          "points": 35
+        },
+        {
+          "slots": [
+            "A03",
+            "B04",
+            "C08"
+          ],
+          "points": 37
+        },
+        {
+          "slots": [
+            "A03",
+            "B05",
+            "C05"
+          ],
+          "points": 27
+        },
+        {
+          "slots": [
+            "A03",
+            "B05",
+            "C06"
+          ],
+          "points": 32
+        },
+        {
+          "slots": [
+            "A03",
+            "B05",
+            "C07"
+          ],
+          "points": 37
+        },
+        {
+          "slots": [
+            "A03",
+            "B05",
+            "C08"
+          ],
+          "points": 39
+        },
+        {
+          "slots": [
+            "A03",
+            "B05",
+            "C09"
+          ],
+          "points": 42
+        },
+        {
+          "slots": [
+            "A03",
+            "B06",
+            "C05"
+          ],
+          "points": 29
+        },
+        {
+          "slots": [
+            "A03",
+            "B06",
+            "C06"
+          ],
+          "points": 34
+        },
+        {
+          "slots": [
+            "A03",
+            "B06",
+            "C07"
+          ],
+          "points": 39
+        },
+        {
+          "slots": [
+            "A03",
+            "B06",
+            "C08"
+          ],
+          "points": 41
+        },
+        {
+          "slots": [
+            "A03",
+            "B06",
+            "C09"
+          ],
+          "points": 44
+        },
+        {
+          "slots": [
+            "A03",
+            "B06",
+            "C10"
+          ],
+          "points": 54
+        },
+        {
+          "slots": [
+            "A03",
+            "B07",
+            "C05"
+          ],
+          "points": 37
+        },
+        {
+          "slots": [
+            "A03",
+            "B07",
+            "C06"
+          ],
+          "points": 42
+        },
+        {
+          "slots": [
+            "A03",
+            "B07",
+            "C07"
+          ],
+          "points": 47
+        },
+        {
+          "slots": [
+            "A03",
+            "B07",
+            "C08"
+          ],
+          "points": 49
+        },
+        {
+          "slots": [
+            "A03",
+            "B07",
+            "C09"
+          ],
+          "points": 52
+        },
+        {
+          "slots": [
+            "A03",
+            "B07",
+            "C10"
+          ],
+          "points": 62
+        },
+        {
+          "slots": [
+            "A03",
+            "B08",
+            "C05"
+          ],
+          "points": 47
+        },
+        {
+          "slots": [
+            "A03",
+            "B08",
+            "C06"
+          ],
+          "points": 52
+        },
+        {
+          "slots": [
+            "A03",
+            "B08",
+            "C07"
+          ],
+          "points": 57
+        },
+        {
+          "slots": [
+            "A03",
+            "B08",
+            "C08"
+          ],
+          "points": 59
+        },
+        {
+          "slots": [
+            "A03",
+            "B08",
+            "C09"
+          ],
+          "points": 62
+        },
+        {
+          "slots": [
+            "A03",
+            "B08",
+            "C10"
+          ],
+          "points": 72
+        },
+        {
+          "slots": [
+            "A04",
+            "B01",
+            "C05"
+          ],
+          "points": 29
+        },
+        {
+          "slots": [
+            "A04",
+            "B03",
+            "C05"
+          ],
+          "points": 24
+        },
+        {
+          "slots": [
+            "A04",
+            "B03",
+            "C06"
+          ],
+          "points": 29
+        },
+        {
+          "slots": [
+            "A04",
+            "B03",
+            "C07"
+          ],
+          "points": 34
+        },
+        {
+          "slots": [
+            "A04",
+            "B04",
+            "C05"
+          ],
+          "points": 26
+        },
+        {
+          "slots": [
+            "A04",
+            "B04",
+            "C06"
+          ],
+          "points": 31
+        },
+        {
+          "slots": [
+            "A04",
+            "B04",
+            "C07"
+          ],
+          "points": 36
+        },
+        {
+          "slots": [
+            "A04",
+            "B04",
+            "C08"
+          ],
+          "points": 38
+        },
+        {
+          "slots": [
+            "A04",
+            "B05",
+            "C05"
+          ],
+          "points": 28
+        },
+        {
+          "slots": [
+            "A04",
+            "B05",
+            "C06"
+          ],
+          "points": 33
+        },
+        {
+          "slots": [
+            "A04",
+            "B05",
+            "C07"
+          ],
+          "points": 38
+        },
+        {
+          "slots": [
+            "A04",
+            "B05",
+            "C08"
+          ],
+          "points": 40
+        },
+        {
+          "slots": [
+            "A04",
+            "B05",
+            "C09"
+          ],
+          "points": 43
+        },
+        {
+          "slots": [
+            "A04",
+            "B06",
+            "C05"
+          ],
+          "points": 30
+        },
+        {
+          "slots": [
+            "A04",
+            "B06",
+            "C06"
+          ],
+          "points": 35
+        },
+        {
+          "slots": [
+            "A04",
+            "B06",
+            "C07"
+          ],
+          "points": 40
+        },
+        {
+          "slots": [
+            "A04",
+            "B06",
+            "C08"
+          ],
+          "points": 42
+        },
+        {
+          "slots": [
+            "A04",
+            "B06",
+            "C09"
+          ],
+          "points": 45
+        },
+        {
+          "slots": [
+            "A04",
+            "B06",
+            "C10"
+          ],
+          "points": 55
+        },
+        {
+          "slots": [
+            "A06",
+            "B01",
+            "C05"
+          ],
+          "points": 28
+        },
+        {
+          "slots": [
+            "A06",
+            "B03",
+            "C05"
+          ],
+          "points": 23
+        },
+        {
+          "slots": [
+            "A06",
+            "B03",
+            "C06"
+          ],
+          "points": 28
+        },
+        {
+          "slots": [
+            "A06",
+            "B03",
+            "C07"
+          ],
+          "points": 33
+        },
+        {
+          "slots": [
+            "A06",
+            "B04",
+            "C05"
+          ],
+          "points": 25
+        },
+        {
+          "slots": [
+            "A06",
+            "B04",
+            "C06"
+          ],
+          "points": 30
+        },
+        {
+          "slots": [
+            "A06",
+            "B04",
+            "C07"
+          ],
+          "points": 35
+        },
+        {
+          "slots": [
+            "A06",
+            "B04",
+            "C08"
+          ],
+          "points": 37
+        },
+        {
+          "slots": [
+            "A06",
+            "B05",
+            "C05"
+          ],
+          "points": 27
+        },
+        {
+          "slots": [
+            "A06",
+            "B05",
+            "C06"
+          ],
+          "points": 32
+        },
+        {
+          "slots": [
+            "A06",
+            "B05",
+            "C07"
+          ],
+          "points": 37
+        },
+        {
+          "slots": [
+            "A06",
+            "B05",
+            "C08"
+          ],
+          "points": 39
+        },
+        {
+          "slots": [
+            "A06",
+            "B05",
+            "C09"
+          ],
+          "points": 42
+        },
+        {
+          "slots": [
+            "A06",
+            "B06",
+            "C05"
+          ],
+          "points": 29
+        },
+        {
+          "slots": [
+            "A06",
+            "B06",
+            "C06"
+          ],
+          "points": 34
+        },
+        {
+          "slots": [
+            "A06",
+            "B06",
+            "C07"
+          ],
+          "points": 39
+        },
+        {
+          "slots": [
+            "A06",
+            "B06",
+            "C08"
+          ],
+          "points": 41
+        },
+        {
+          "slots": [
+            "A06",
+            "B06",
+            "C09"
+          ],
+          "points": 44
+        },
+        {
+          "slots": [
+            "A06",
+            "B06",
+            "C10"
+          ],
+          "points": 54
+        },
+        {
+          "slots": [
+            "A07",
+            "B03",
+            "C05"
+          ],
+          "points": 23
+        },
+        {
+          "slots": [
+            "A07",
+            "B03",
+            "C06"
+          ],
+          "points": 28
+        },
+        {
+          "slots": [
+            "A07",
+            "B03",
+            "C07"
+          ],
+          "points": 33
+        },
+        {
+          "slots": [
+            "A07",
+            "B04",
+            "C05"
+          ],
+          "points": 25
+        },
+        {
+          "slots": [
+            "A07",
+            "B04",
+            "C06"
+          ],
+          "points": 30
+        },
+        {
+          "slots": [
+            "A07",
+            "B04",
+            "C07"
+          ],
+          "points": 35
+        },
+        {
+          "slots": [
+            "A07",
+            "B04",
+            "C08"
+          ],
+          "points": 37
+        },
+        {
+          "slots": [
+            "A07",
+            "B05",
+            "C05"
+          ],
+          "points": 27
+        },
+        {
+          "slots": [
+            "A07",
+            "B05",
+            "C06"
+          ],
+          "points": 32
+        },
+        {
+          "slots": [
+            "A07",
+            "B05",
+            "C07"
+          ],
+          "points": 37
+        },
+        {
+          "slots": [
+            "A07",
+            "B05",
+            "C08"
+          ],
+          "points": 39
+        },
+        {
+          "slots": [
+            "A07",
+            "B05",
+            "C09"
+          ],
+          "points": 42
+        },
+        {
+          "slots": [
+            "A07",
+            "B06",
+            "C05"
+          ],
+          "points": 29
+        },
+        {
+          "slots": [
+            "A07",
+            "B06",
+            "C06"
+          ],
+          "points": 34
+        },
+        {
+          "slots": [
+            "A07",
+            "B06",
+            "C07"
+          ],
+          "points": 39
+        },
+        {
+          "slots": [
+            "A07",
+            "B06",
+            "C08"
+          ],
+          "points": 41
+        },
+        {
+          "slots": [
+            "A07",
+            "B06",
+            "C09"
+          ],
+          "points": 44
+        },
+        {
+          "slots": [
+            "A07",
+            "B06",
+            "C10"
+          ],
+          "points": 54
+        }
+      ],
+      "representative": {
+        "points_in_code_order": [
+          52,
+          44
+        ],
+        "deviations": [
+          1,
+          1
+        ]
+      },
+      "comparisons": {
+        "LA": [
+          {
+            "left": "L",
+            "right": "A01",
+            "distance": 116.5,
+            "limit": 1680,
+            "margin": 1563.5,
+            "error_bound": 30
+          },
+          {
+            "left": "L",
+            "right": "A03",
+            "distance": 450.5,
+            "limit": 1680,
+            "margin": 1229.5,
+            "error_bound": 30
+          },
+          {
+            "left": "L",
+            "right": "A04",
+            "distance": 729.5,
+            "limit": 1680,
+            "margin": 950.5,
+            "error_bound": 30
+          },
+          {
+            "left": "L",
+            "right": "A06",
+            "distance": 1276.5,
+            "limit": 1680,
+            "margin": 403.5,
+            "error_bound": 30
+          },
+          {
+            "left": "L",
+            "right": "A07",
+            "distance": 1543,
+            "limit": 1680,
+            "margin": 137,
+            "error_bound": 30
+          },
+          {
+            "left": "L",
+            "right": "A08",
+            "distance": 1807.5,
+            "limit": 1680,
+            "margin": 127.5,
+            "error_bound": 30
+          }
+        ],
+        "AB": [
+          {
+            "left": "A01",
+            "right": "B01",
+            "distance": 12.0,
+            "limit": 1490,
+            "margin": 1478.0,
+            "error_bound": 20
+          },
+          {
+            "left": "A01",
+            "right": "B03",
+            "distance": 577.5,
+            "limit": 1490,
+            "margin": 912.5,
+            "error_bound": 20
+          },
+          {
+            "left": "A01",
+            "right": "B04",
+            "distance": 857.5,
+            "limit": 1490,
+            "margin": 632.5,
+            "error_bound": 20
+          },
+          {
+            "left": "A01",
+            "right": "B05",
+            "distance": 1128.5,
+            "limit": 1490,
+            "margin": 361.5,
+            "error_bound": 20
+          },
+          {
+            "left": "A01",
+            "right": "B06",
+            "distance": 1398.0,
+            "limit": 1490,
+            "margin": 92.0,
+            "error_bound": 20
+          },
+          {
+            "left": "A03",
+            "right": "B03",
+            "distance": 10.5,
+            "limit": 1490,
+            "margin": 1479.5,
+            "error_bound": 20
+          },
+          {
+            "left": "A03",
+            "right": "B04",
+            "distance": 290.5,
+            "limit": 1490,
+            "margin": 1199.5,
+            "error_bound": 20
+          },
+          {
+            "left": "A03",
+            "right": "B05",
+            "distance": 561.5,
+            "limit": 1490,
+            "margin": 928.5,
+            "error_bound": 20
+          },
+          {
+            "left": "A03",
+            "right": "B06",
+            "distance": 831.0,
+            "limit": 1490,
+            "margin": 659.0,
+            "error_bound": 20
+          },
+          {
+            "left": "A03",
+            "right": "B07",
+            "distance": 1078.0,
+            "limit": 1490,
+            "margin": 412.0,
+            "error_bound": 20
+          },
+          {
+            "left": "A03",
+            "right": "B08",
+            "distance": 1339.5,
+            "limit": 1490,
+            "margin": 150.5,
+            "error_bound": 20
+          },
+          {
+            "left": "A03",
+            "right": "B10",
+            "distance": 1852.5,
+            "limit": 1490,
+            "margin": 362.5,
+            "error_bound": 20
+          },
+          {
+            "left": "A04",
+            "right": "B01",
+            "distance": 858.0,
+            "limit": 1490,
+            "margin": 632.0,
+            "error_bound": 20
+          },
+          {
+            "left": "A04",
+            "right": "B03",
+            "distance": 268.5,
+            "limit": 1490,
+            "margin": 1221.5,
+            "error_bound": 20
+          },
+          {
+            "left": "A04",
+            "right": "B04",
+            "distance": 11.5,
+            "limit": 1490,
+            "margin": 1478.5,
+            "error_bound": 20
+          },
+          {
+            "left": "A04",
+            "right": "B05",
+            "distance": 282.5,
+            "limit": 1490,
+            "margin": 1207.5,
+            "error_bound": 20
+          },
+          {
+            "left": "A04",
+            "right": "B06",
+            "distance": 552.0,
+            "limit": 1490,
+            "margin": 938.0,
+            "error_bound": 20
+          },
+          {
+            "left": "A06",
+            "right": "B01",
+            "distance": 1405.0,
+            "limit": 1490,
+            "margin": 85.0,
+            "error_bound": 20
+          },
+          {
+            "left": "A06",
+            "right": "B03",
+            "distance": 815.5,
+            "limit": 1490,
+            "margin": 674.5,
+            "error_bound": 20
+          },
+          {
+            "left": "A06",
+            "right": "B04",
+            "distance": 535.5,
+            "limit": 1490,
+            "margin": 954.5,
+            "error_bound": 20
+          },
+          {
+            "left": "A06",
+            "right": "B05",
+            "distance": 264.5,
+            "limit": 1490,
+            "margin": 1225.5,
+            "error_bound": 20
+          },
+          {
+            "left": "A06",
+            "right": "B06",
+            "distance": 5.0,
+            "limit": 1490,
+            "margin": 1485.0,
+            "error_bound": 20
+          },
+          {
+            "left": "A07",
+            "right": "B01",
+            "distance": 1671.5,
+            "limit": 1490,
+            "margin": 181.5,
+            "error_bound": 20
+          },
+          {
+            "left": "A07",
+            "right": "B03",
+            "distance": 1082,
+            "limit": 1490,
+            "margin": 408,
+            "error_bound": 20
+          },
+          {
+            "left": "A07",
+            "right": "B04",
+            "distance": 802,
+            "limit": 1490,
+            "margin": 688,
+            "error_bound": 20
+          },
+          {
+            "left": "A07",
+            "right": "B05",
+            "distance": 531,
+            "limit": 1490,
+            "margin": 959,
+            "error_bound": 20
+          },
+          {
+            "left": "A07",
+            "right": "B06",
+            "distance": 261.5,
+            "limit": 1490,
+            "margin": 1228.5,
+            "error_bound": 20
+          }
+        ],
+        "BC": [
+          {
+            "left": "B01",
+            "right": "C05",
+            "distance": 1131.5,
+            "limit": 1230,
+            "margin": 98.5,
+            "error_bound": 20
+          },
+          {
+            "left": "B01",
+            "right": "C06",
+            "distance": 1400.5,
+            "limit": 1230,
+            "margin": 170.5,
+            "error_bound": 20
+          },
+          {
+            "left": "B01",
+            "right": "C07",
+            "distance": 1662.5,
+            "limit": 1230,
+            "margin": 432.5,
+            "error_bound": 20
+          },
+          {
+            "left": "B01",
+            "right": "C08",
+            "distance": 1922.0,
+            "limit": 1230,
+            "margin": 692.0,
+            "error_bound": 20
+          },
+          {
+            "left": "B01",
+            "right": "C09",
+            "distance": 2179.5,
+            "limit": 1230,
+            "margin": 949.5,
+            "error_bound": 20
+          },
+          {
+            "left": "B01",
+            "right": "C10",
+            "distance": 2431.0,
+            "limit": 1230,
+            "margin": 1201.0,
+            "error_bound": 20
+          },
+          {
+            "left": "B03",
+            "right": "C05",
+            "distance": 542,
+            "limit": 1230,
+            "margin": 688,
+            "error_bound": 20
+          },
+          {
+            "left": "B03",
+            "right": "C06",
+            "distance": 811,
+            "limit": 1230,
+            "margin": 419,
+            "error_bound": 20
+          },
+          {
+            "left": "B03",
+            "right": "C07",
+            "distance": 1073,
+            "limit": 1230,
+            "margin": 157,
+            "error_bound": 20
+          },
+          {
+            "left": "B03",
+            "right": "C08",
+            "distance": 1332.5,
+            "limit": 1230,
+            "margin": 102.5,
+            "error_bound": 20
+          },
+          {
+            "left": "B03",
+            "right": "C09",
+            "distance": 1590,
+            "limit": 1230,
+            "margin": 360,
+            "error_bound": 20
+          },
+          {
+            "left": "B03",
+            "right": "C10",
+            "distance": 1841.5,
+            "limit": 1230,
+            "margin": 611.5,
+            "error_bound": 20
+          },
+          {
+            "left": "B04",
+            "right": "C05",
+            "distance": 262,
+            "limit": 1230,
+            "margin": 968,
+            "error_bound": 20
+          },
+          {
+            "left": "B04",
+            "right": "C06",
+            "distance": 531,
+            "limit": 1230,
+            "margin": 699,
+            "error_bound": 20
+          },
+          {
+            "left": "B04",
+            "right": "C07",
+            "distance": 793,
+            "limit": 1230,
+            "margin": 437,
+            "error_bound": 20
+          },
+          {
+            "left": "B04",
+            "right": "C08",
+            "distance": 1052.5,
+            "limit": 1230,
+            "margin": 177.5,
+            "error_bound": 20
+          },
+          {
+            "left": "B04",
+            "right": "C09",
+            "distance": 1310,
+            "limit": 1230,
+            "margin": 80,
+            "error_bound": 20
+          },
+          {
+            "left": "B04",
+            "right": "C10",
+            "distance": 1561.5,
+            "limit": 1230,
+            "margin": 331.5,
+            "error_bound": 20
+          },
+          {
+            "left": "B05",
+            "right": "C05",
+            "distance": 9,
+            "limit": 1230,
+            "margin": 1221,
+            "error_bound": 20
+          },
+          {
+            "left": "B05",
+            "right": "C06",
+            "distance": 260,
+            "limit": 1230,
+            "margin": 970,
+            "error_bound": 20
+          },
+          {
+            "left": "B05",
+            "right": "C07",
+            "distance": 522,
+            "limit": 1230,
+            "margin": 708,
+            "error_bound": 20
+          },
+          {
+            "left": "B05",
+            "right": "C08",
+            "distance": 781.5,
+            "limit": 1230,
+            "margin": 448.5,
+            "error_bound": 20
+          },
+          {
+            "left": "B05",
+            "right": "C09",
+            "distance": 1039,
+            "limit": 1230,
+            "margin": 191,
+            "error_bound": 20
+          },
+          {
+            "left": "B05",
+            "right": "C10",
+            "distance": 1290.5,
+            "limit": 1230,
+            "margin": 60.5,
+            "error_bound": 20
+          },
+          {
+            "left": "B06",
+            "right": "C05",
+            "distance": 278.5,
+            "limit": 1230,
+            "margin": 951.5,
+            "error_bound": 20
+          },
+          {
+            "left": "B06",
+            "right": "C06",
+            "distance": 9.5,
+            "limit": 1230,
+            "margin": 1220.5,
+            "error_bound": 20
+          },
+          {
+            "left": "B06",
+            "right": "C07",
+            "distance": 252.5,
+            "limit": 1230,
+            "margin": 977.5,
+            "error_bound": 20
+          },
+          {
+            "left": "B06",
+            "right": "C08",
+            "distance": 512.0,
+            "limit": 1230,
+            "margin": 718.0,
+            "error_bound": 20
+          },
+          {
+            "left": "B06",
+            "right": "C09",
+            "distance": 769.5,
+            "limit": 1230,
+            "margin": 460.5,
+            "error_bound": 20
+          },
+          {
+            "left": "B06",
+            "right": "C10",
+            "distance": 1021.0,
+            "limit": 1230,
+            "margin": 209.0,
+            "error_bound": 20
+          },
+          {
+            "left": "B07",
+            "right": "C05",
+            "distance": 525.5,
+            "limit": 1230,
+            "margin": 704.5,
+            "error_bound": 20
+          },
+          {
+            "left": "B07",
+            "right": "C06",
+            "distance": 256.5,
+            "limit": 1230,
+            "margin": 973.5,
+            "error_bound": 20
+          },
+          {
+            "left": "B07",
+            "right": "C07",
+            "distance": 5.5,
+            "limit": 1230,
+            "margin": 1224.5,
+            "error_bound": 20
+          },
+          {
+            "left": "B07",
+            "right": "C08",
+            "distance": 265.0,
+            "limit": 1230,
+            "margin": 965.0,
+            "error_bound": 20
+          },
+          {
+            "left": "B07",
+            "right": "C09",
+            "distance": 522.5,
+            "limit": 1230,
+            "margin": 707.5,
+            "error_bound": 20
+          },
+          {
+            "left": "B07",
+            "right": "C10",
+            "distance": 774.0,
+            "limit": 1230,
+            "margin": 456.0,
+            "error_bound": 20
+          },
+          {
+            "left": "B08",
+            "right": "C05",
+            "distance": 787,
+            "limit": 1230,
+            "margin": 443,
+            "error_bound": 20
+          },
+          {
+            "left": "B08",
+            "right": "C06",
+            "distance": 518,
+            "limit": 1230,
+            "margin": 712,
+            "error_bound": 20
+          },
+          {
+            "left": "B08",
+            "right": "C07",
+            "distance": 256,
+            "limit": 1230,
+            "margin": 974,
+            "error_bound": 20
+          },
+          {
+            "left": "B08",
+            "right": "C08",
+            "distance": 3.5,
+            "limit": 1230,
+            "margin": 1226.5,
+            "error_bound": 20
+          },
+          {
+            "left": "B08",
+            "right": "C09",
+            "distance": 261,
+            "limit": 1230,
+            "margin": 969,
+            "error_bound": 20
+          },
+          {
+            "left": "B08",
+            "right": "C10",
+            "distance": 512.5,
+            "limit": 1230,
+            "margin": 717.5,
+            "error_bound": 20
+          },
+          {
+            "left": "B10",
+            "right": "C05",
+            "distance": 1300,
+            "limit": 1230,
+            "margin": 70,
+            "error_bound": 20
+          },
+          {
+            "left": "B10",
+            "right": "C06",
+            "distance": 1031,
+            "limit": 1230,
+            "margin": 199,
+            "error_bound": 20
+          },
+          {
+            "left": "B10",
+            "right": "C07",
+            "distance": 769,
+            "limit": 1230,
+            "margin": 461,
+            "error_bound": 20
+          },
+          {
+            "left": "B10",
+            "right": "C08",
+            "distance": 509.5,
+            "limit": 1230,
+            "margin": 720.5,
+            "error_bound": 20
+          },
+          {
+            "left": "B10",
+            "right": "C09",
+            "distance": 252,
+            "limit": 1230,
+            "margin": 978,
+            "error_bound": 20
+          },
+          {
+            "left": "B10",
+            "right": "C10",
+            "distance": 0.5,
+            "limit": 1230,
+            "margin": 1229.5,
+            "error_bound": 20
+          }
+        ],
+        "CR": [
+          {
+            "left": "C04",
+            "right": "R",
+            "distance": 1888,
+            "limit": 1750,
+            "margin": 138,
+            "error_bound": 30
+          },
+          {
+            "left": "C05",
+            "right": "R",
+            "distance": 1618,
+            "limit": 1750,
+            "margin": 132,
+            "error_bound": 30
+          },
+          {
+            "left": "C06",
+            "right": "R",
+            "distance": 1349,
+            "limit": 1750,
+            "margin": 401,
+            "error_bound": 30
+          },
+          {
+            "left": "C07",
+            "right": "R",
+            "distance": 1087,
+            "limit": 1750,
+            "margin": 663,
+            "error_bound": 30
+          },
+          {
+            "left": "C08",
+            "right": "R",
+            "distance": 827.5,
+            "limit": 1750,
+            "margin": 922.5,
+            "error_bound": 30
+          },
+          {
+            "left": "C09",
+            "right": "R",
+            "distance": 570,
+            "limit": 1750,
+            "margin": 1180,
+            "error_bound": 30
+          },
+          {
+            "left": "C10",
+            "right": "R",
+            "distance": 318.5,
+            "limit": 1750,
+            "margin": 1431.5,
+            "error_bound": 30
+          }
+        ]
+      }
+    },
+    "reflected_red_at_B01": {
+      "answers": {
+        "LA": 5,
+        "AB": 23,
+        "BC": 29,
+        "CR": 5,
+        "tickets": 81,
+        "pairs": 1588,
+        "M_min": 3,
+        "M_ties": 5,
+        "N_min": 2,
+        "N_ties": 2,
+        "joint_max": 3,
+        "joint_sum": 6,
+        "joint_ties": 3,
+        "ticket1": "010610",
+        "ticket2": "040509"
+      },
+      "response": "5,23,29,5|81|1588|3,5,2,2|3,6,3,010610,040509",
+      "edges": {
+        "LA": [
+          "A01",
+          "A03",
+          "A04",
+          "A06",
+          "A07"
+        ],
+        "AB": [
+          [
+            "A01",
+            "B03"
+          ],
+          [
+            "A01",
+            "B04"
+          ],
+          [
+            "A01",
+            "B05"
+          ],
+          [
+            "A01",
+            "B06"
+          ],
+          [
+            "A03",
+            "B01"
+          ],
+          [
+            "A03",
+            "B03"
+          ],
+          [
+            "A03",
+            "B04"
+          ],
+          [
+            "A03",
+            "B05"
+          ],
+          [
+            "A03",
+            "B06"
+          ],
+          [
+            "A03",
+            "B07"
+          ],
+          [
+            "A03",
+            "B08"
+          ],
+          [
+            "A04",
+            "B03"
+          ],
+          [
+            "A04",
+            "B04"
+          ],
+          [
+            "A04",
+            "B05"
+          ],
+          [
+            "A04",
+            "B06"
+          ],
+          [
+            "A06",
+            "B03"
+          ],
+          [
+            "A06",
+            "B04"
+          ],
+          [
+            "A06",
+            "B05"
+          ],
+          [
+            "A06",
+            "B06"
+          ],
+          [
+            "A07",
+            "B03"
+          ],
+          [
+            "A07",
+            "B04"
+          ],
+          [
+            "A07",
+            "B05"
+          ],
+          [
+            "A07",
+            "B06"
+          ]
+        ],
+        "BC": [
+          [
+            "B01",
+            "C05"
+          ],
+          [
+            "B03",
+            "C05"
+          ],
+          [
+            "B03",
+            "C07"
+          ],
+          [
+            "B04",
+            "C05"
+          ],
+          [
+            "B04",
+            "C07"
+          ],
+          [
+            "B04",
+            "C08"
+          ],
+          [
+            "B05",
+            "C05"
+          ],
+          [
+            "B05",
+            "C07"
+          ],
+          [
+            "B05",
+            "C08"
+          ],
+          [
+            "B05",
+            "C09"
+          ],
+          [
+            "B06",
+            "C05"
+          ],
+          [
+            "B06",
+            "C07"
+          ],
+          [
+            "B06",
+            "C08"
+          ],
+          [
+            "B06",
+            "C09"
+          ],
+          [
+            "B06",
+            "C10"
+          ],
+          [
+            "B07",
+            "C05"
+          ],
+          [
+            "B07",
+            "C07"
+          ],
+          [
+            "B07",
+            "C08"
+          ],
+          [
+            "B07",
+            "C09"
+          ],
+          [
+            "B07",
+            "C10"
+          ],
+          [
+            "B08",
+            "C05"
+          ],
+          [
+            "B08",
+            "C07"
+          ],
+          [
+            "B08",
+            "C08"
+          ],
+          [
+            "B08",
+            "C09"
+          ],
+          [
+            "B08",
+            "C10"
+          ],
+          [
+            "B10",
+            "C07"
+          ],
+          [
+            "B10",
+            "C08"
+          ],
+          [
+            "B10",
+            "C09"
+          ],
+          [
+            "B10",
+            "C10"
+          ]
+        ],
+        "CR": [
+          "C05",
+          "C07",
+          "C08",
+          "C09",
+          "C10"
+        ]
+      },
+      "tickets": [
+        {
+          "slots": [
+            "A01",
+            "B03",
+            "C05"
+          ],
+          "points": 22
+        },
+        {
+          "slots": [
+            "A01",
+            "B03",
+            "C07"
+          ],
+          "points": 32
+        },
+        {
+          "slots": [
+            "A01",
+            "B04",
+            "C05"
+          ],
+          "points": 24
+        },
+        {
+          "slots": [
+            "A01",
+            "B04",
+            "C07"
+          ],
+          "points": 34
+        },
+        {
+          "slots": [
+            "A01",
+            "B04",
+            "C08"
+          ],
+          "points": 36
+        },
+        {
+          "slots": [
+            "A01",
+            "B05",
+            "C05"
+          ],
+          "points": 26
+        },
+        {
+          "slots": [
+            "A01",
+            "B05",
+            "C07"
+          ],
+          "points": 36
+        },
+        {
+          "slots": [
+            "A01",
+            "B05",
+            "C08"
+          ],
+          "points": 38
+        },
+        {
+          "slots": [
+            "A01",
+            "B05",
+            "C09"
+          ],
+          "points": 41
+        },
+        {
+          "slots": [
+            "A01",
+            "B06",
+            "C05"
+          ],
+          "points": 28
+        },
+        {
+          "slots": [
+            "A01",
+            "B06",
+            "C07"
+          ],
+          "points": 38
+        },
+        {
+          "slots": [
+            "A01",
+            "B06",
+            "C08"
+          ],
+          "points": 40
+        },
+        {
+          "slots": [
+            "A01",
+            "B06",
+            "C09"
+          ],
+          "points": 43
+        },
+        {
+          "slots": [
+            "A01",
+            "B06",
+            "C10"
+          ],
+          "points": 53
+        },
+        {
+          "slots": [
+            "A03",
+            "B01",
+            "C05"
+          ],
+          "points": 28
+        },
+        {
+          "slots": [
+            "A03",
+            "B03",
+            "C05"
+          ],
+          "points": 23
+        },
+        {
+          "slots": [
+            "A03",
+            "B03",
+            "C07"
+          ],
+          "points": 33
+        },
+        {
+          "slots": [
+            "A03",
+            "B04",
+            "C05"
+          ],
+          "points": 25
+        },
+        {
+          "slots": [
+            "A03",
+            "B04",
+            "C07"
+          ],
+          "points": 35
+        },
+        {
+          "slots": [
+            "A03",
+            "B04",
+            "C08"
+          ],
+          "points": 37
+        },
+        {
+          "slots": [
+            "A03",
+            "B05",
+            "C05"
+          ],
+          "points": 27
+        },
+        {
+          "slots": [
+            "A03",
+            "B05",
+            "C07"
+          ],
+          "points": 37
+        },
+        {
+          "slots": [
+            "A03",
+            "B05",
+            "C08"
+          ],
+          "points": 39
+        },
+        {
+          "slots": [
+            "A03",
+            "B05",
+            "C09"
+          ],
+          "points": 42
+        },
+        {
+          "slots": [
+            "A03",
+            "B06",
+            "C05"
+          ],
+          "points": 29
+        },
+        {
+          "slots": [
+            "A03",
+            "B06",
+            "C07"
+          ],
+          "points": 39
+        },
+        {
+          "slots": [
+            "A03",
+            "B06",
+            "C08"
+          ],
+          "points": 41
+        },
+        {
+          "slots": [
+            "A03",
+            "B06",
+            "C09"
+          ],
+          "points": 44
+        },
+        {
+          "slots": [
+            "A03",
+            "B06",
+            "C10"
+          ],
+          "points": 54
+        },
+        {
+          "slots": [
+            "A03",
+            "B07",
+            "C05"
+          ],
+          "points": 37
+        },
+        {
+          "slots": [
+            "A03",
+            "B07",
+            "C07"
+          ],
+          "points": 47
+        },
+        {
+          "slots": [
+            "A03",
+            "B07",
+            "C08"
+          ],
+          "points": 49
+        },
+        {
+          "slots": [
+            "A03",
+            "B07",
+            "C09"
+          ],
+          "points": 52
+        },
+        {
+          "slots": [
+            "A03",
+            "B07",
+            "C10"
+          ],
+          "points": 62
+        },
+        {
+          "slots": [
+            "A03",
+            "B08",
+            "C05"
+          ],
+          "points": 47
+        },
+        {
+          "slots": [
+            "A03",
+            "B08",
+            "C07"
+          ],
+          "points": 57
+        },
+        {
+          "slots": [
+            "A03",
+            "B08",
+            "C08"
+          ],
+          "points": 59
+        },
+        {
+          "slots": [
+            "A03",
+            "B08",
+            "C09"
+          ],
+          "points": 62
+        },
+        {
+          "slots": [
+            "A03",
+            "B08",
+            "C10"
+          ],
+          "points": 72
+        },
+        {
+          "slots": [
+            "A04",
+            "B03",
+            "C05"
+          ],
+          "points": 24
+        },
+        {
+          "slots": [
+            "A04",
+            "B03",
+            "C07"
+          ],
+          "points": 34
+        },
+        {
+          "slots": [
+            "A04",
+            "B04",
+            "C05"
+          ],
+          "points": 26
+        },
+        {
+          "slots": [
+            "A04",
+            "B04",
+            "C07"
+          ],
+          "points": 36
+        },
+        {
+          "slots": [
+            "A04",
+            "B04",
+            "C08"
+          ],
+          "points": 38
+        },
+        {
+          "slots": [
+            "A04",
+            "B05",
+            "C05"
+          ],
+          "points": 28
+        },
+        {
+          "slots": [
+            "A04",
+            "B05",
+            "C07"
+          ],
+          "points": 38
+        },
+        {
+          "slots": [
+            "A04",
+            "B05",
+            "C08"
+          ],
+          "points": 40
+        },
+        {
+          "slots": [
+            "A04",
+            "B05",
+            "C09"
+          ],
+          "points": 43
+        },
+        {
+          "slots": [
+            "A04",
+            "B06",
+            "C05"
+          ],
+          "points": 30
+        },
+        {
+          "slots": [
+            "A04",
+            "B06",
+            "C07"
+          ],
+          "points": 40
+        },
+        {
+          "slots": [
+            "A04",
+            "B06",
+            "C08"
+          ],
+          "points": 42
+        },
+        {
+          "slots": [
+            "A04",
+            "B06",
+            "C09"
+          ],
+          "points": 45
+        },
+        {
+          "slots": [
+            "A04",
+            "B06",
+            "C10"
+          ],
+          "points": 55
+        },
+        {
+          "slots": [
+            "A06",
+            "B03",
+            "C05"
+          ],
+          "points": 23
+        },
+        {
+          "slots": [
+            "A06",
+            "B03",
+            "C07"
+          ],
+          "points": 33
+        },
+        {
+          "slots": [
+            "A06",
+            "B04",
+            "C05"
+          ],
+          "points": 25
+        },
+        {
+          "slots": [
+            "A06",
+            "B04",
+            "C07"
+          ],
+          "points": 35
+        },
+        {
+          "slots": [
+            "A06",
+            "B04",
+            "C08"
+          ],
+          "points": 37
+        },
+        {
+          "slots": [
+            "A06",
+            "B05",
+            "C05"
+          ],
+          "points": 27
+        },
+        {
+          "slots": [
+            "A06",
+            "B05",
+            "C07"
+          ],
+          "points": 37
+        },
+        {
+          "slots": [
+            "A06",
+            "B05",
+            "C08"
+          ],
+          "points": 39
+        },
+        {
+          "slots": [
+            "A06",
+            "B05",
+            "C09"
+          ],
+          "points": 42
+        },
+        {
+          "slots": [
+            "A06",
+            "B06",
+            "C05"
+          ],
+          "points": 29
+        },
+        {
+          "slots": [
+            "A06",
+            "B06",
+            "C07"
+          ],
+          "points": 39
+        },
+        {
+          "slots": [
+            "A06",
+            "B06",
+            "C08"
+          ],
+          "points": 41
+        },
+        {
+          "slots": [
+            "A06",
+            "B06",
+            "C09"
+          ],
+          "points": 44
+        },
+        {
+          "slots": [
+            "A06",
+            "B06",
+            "C10"
+          ],
+          "points": 54
+        },
+        {
+          "slots": [
+            "A07",
+            "B03",
+            "C05"
+          ],
+          "points": 23
+        },
+        {
+          "slots": [
+            "A07",
+            "B03",
+            "C07"
+          ],
+          "points": 33
+        },
+        {
+          "slots": [
+            "A07",
+            "B04",
+            "C05"
+          ],
+          "points": 25
+        },
+        {
+          "slots": [
+            "A07",
+            "B04",
+            "C07"
+          ],
+          "points": 35
+        },
+        {
+          "slots": [
+            "A07",
+            "B04",
+            "C08"
+          ],
+          "points": 37
+        },
+        {
+          "slots": [
+            "A07",
+            "B05",
+            "C05"
+          ],
+          "points": 27
+        },
+        {
+          "slots": [
+            "A07",
+            "B05",
+            "C07"
+          ],
+          "points": 37
+        },
+        {
+          "slots": [
+            "A07",
+            "B05",
+            "C08"
+          ],
+          "points": 39
+        },
+        {
+          "slots": [
+            "A07",
+            "B05",
+            "C09"
+          ],
+          "points": 42
+        },
+        {
+          "slots": [
+            "A07",
+            "B06",
+            "C05"
+          ],
+          "points": 29
+        },
+        {
+          "slots": [
+            "A07",
+            "B06",
+            "C07"
+          ],
+          "points": 39
+        },
+        {
+          "slots": [
+            "A07",
+            "B06",
+            "C08"
+          ],
+          "points": 41
+        },
+        {
+          "slots": [
+            "A07",
+            "B06",
+            "C09"
+          ],
+          "points": 44
+        },
+        {
+          "slots": [
+            "A07",
+            "B06",
+            "C10"
+          ],
+          "points": 54
+        }
+      ],
+      "representative": {
+        "points_in_code_order": [
+          53,
+          43
+        ],
+        "deviations": [
+          3,
+          3
+        ]
+      },
+      "comparisons": {
+        "LA": [
+          {
+            "left": "L",
+            "right": "A01",
+            "distance": 116.5,
+            "limit": 1680,
+            "margin": 1563.5,
+            "error_bound": 30
+          },
+          {
+            "left": "L",
+            "right": "A03",
+            "distance": 450.5,
+            "limit": 1680,
+            "margin": 1229.5,
+            "error_bound": 30
+          },
+          {
+            "left": "L",
+            "right": "A04",
+            "distance": 729.5,
+            "limit": 1680,
+            "margin": 950.5,
+            "error_bound": 30
+          },
+          {
+            "left": "L",
+            "right": "A06",
+            "distance": 1276.5,
+            "limit": 1680,
+            "margin": 403.5,
+            "error_bound": 30
+          },
+          {
+            "left": "L",
+            "right": "A07",
+            "distance": 1543,
+            "limit": 1680,
+            "margin": 137,
+            "error_bound": 30
+          },
+          {
+            "left": "L",
+            "right": "A08",
+            "distance": 1807.5,
+            "limit": 1680,
+            "margin": 127.5,
+            "error_bound": 30
+          }
+        ],
+        "AB": [
+          {
+            "left": "A01",
+            "right": "B03",
+            "distance": 577.5,
+            "limit": 1490,
+            "margin": 912.5,
+            "error_bound": 20
+          },
+          {
+            "left": "A01",
+            "right": "B04",
+            "distance": 857.5,
+            "limit": 1490,
+            "margin": 632.5,
+            "error_bound": 20
+          },
+          {
+            "left": "A01",
+            "right": "B05",
+            "distance": 1128.5,
+            "limit": 1490,
+            "margin": 361.5,
+            "error_bound": 20
+          },
+          {
+            "left": "A01",
+            "right": "B06",
+            "distance": 1398.0,
+            "limit": 1490,
+            "margin": 92.0,
+            "error_bound": 20
+          },
+          {
+            "left": "A03",
+            "right": "B01",
+            "distance": 579.0,
+            "limit": 1490,
+            "margin": 911.0,
+            "error_bound": 20
+          },
+          {
+            "left": "A03",
+            "right": "B03",
+            "distance": 10.5,
+            "limit": 1490,
+            "margin": 1479.5,
+            "error_bound": 20
+          },
+          {
+            "left": "A03",
+            "right": "B04",
+            "distance": 290.5,
+            "limit": 1490,
+            "margin": 1199.5,
+            "error_bound": 20
+          },
+          {
+            "left": "A03",
+            "right": "B05",
+            "distance": 561.5,
+            "limit": 1490,
+            "margin": 928.5,
+            "error_bound": 20
+          },
+          {
+            "left": "A03",
+            "right": "B06",
+            "distance": 831.0,
+            "limit": 1490,
+            "margin": 659.0,
+            "error_bound": 20
+          },
+          {
+            "left": "A03",
+            "right": "B07",
+            "distance": 1078.0,
+            "limit": 1490,
+            "margin": 412.0,
+            "error_bound": 20
+          },
+          {
+            "left": "A03",
+            "right": "B08",
+            "distance": 1339.5,
+            "limit": 1490,
+            "margin": 150.5,
+            "error_bound": 20
+          },
+          {
+            "left": "A03",
+            "right": "B10",
+            "distance": 1852.5,
+            "limit": 1490,
+            "margin": 362.5,
+            "error_bound": 20
+          },
+          {
+            "left": "A04",
+            "right": "B03",
+            "distance": 268.5,
+            "limit": 1490,
+            "margin": 1221.5,
+            "error_bound": 20
+          },
+          {
+            "left": "A04",
+            "right": "B04",
+            "distance": 11.5,
+            "limit": 1490,
+            "margin": 1478.5,
+            "error_bound": 20
+          },
+          {
+            "left": "A04",
+            "right": "B05",
+            "distance": 282.5,
+            "limit": 1490,
+            "margin": 1207.5,
+            "error_bound": 20
+          },
+          {
+            "left": "A04",
+            "right": "B06",
+            "distance": 552.0,
+            "limit": 1490,
+            "margin": 938.0,
+            "error_bound": 20
+          },
+          {
+            "left": "A06",
+            "right": "B03",
+            "distance": 815.5,
+            "limit": 1490,
+            "margin": 674.5,
+            "error_bound": 20
+          },
+          {
+            "left": "A06",
+            "right": "B04",
+            "distance": 535.5,
+            "limit": 1490,
+            "margin": 954.5,
+            "error_bound": 20
+          },
+          {
+            "left": "A06",
+            "right": "B05",
+            "distance": 264.5,
+            "limit": 1490,
+            "margin": 1225.5,
+            "error_bound": 20
+          },
+          {
+            "left": "A06",
+            "right": "B06",
+            "distance": 5.0,
+            "limit": 1490,
+            "margin": 1485.0,
+            "error_bound": 20
+          },
+          {
+            "left": "A07",
+            "right": "B03",
+            "distance": 1082,
+            "limit": 1490,
+            "margin": 408,
+            "error_bound": 20
+          },
+          {
+            "left": "A07",
+            "right": "B04",
+            "distance": 802,
+            "limit": 1490,
+            "margin": 688,
+            "error_bound": 20
+          },
+          {
+            "left": "A07",
+            "right": "B05",
+            "distance": 531,
+            "limit": 1490,
+            "margin": 959,
+            "error_bound": 20
+          },
+          {
+            "left": "A07",
+            "right": "B06",
+            "distance": 261.5,
+            "limit": 1490,
+            "margin": 1228.5,
+            "error_bound": 20
+          }
+        ],
+        "BC": [
+          {
+            "left": "B01",
+            "right": "C05",
+            "distance": 1131.5,
+            "limit": 1230,
+            "margin": 98.5,
+            "error_bound": 20
+          },
+          {
+            "left": "B01",
+            "right": "C07",
+            "distance": 1662.5,
+            "limit": 1230,
+            "margin": 432.5,
+            "error_bound": 20
+          },
+          {
+            "left": "B01",
+            "right": "C08",
+            "distance": 1922.0,
+            "limit": 1230,
+            "margin": 692.0,
+            "error_bound": 20
+          },
+          {
+            "left": "B01",
+            "right": "C09",
+            "distance": 2179.5,
+            "limit": 1230,
+            "margin": 949.5,
+            "error_bound": 20
+          },
+          {
+            "left": "B01",
+            "right": "C10",
+            "distance": 2431.0,
+            "limit": 1230,
+            "margin": 1201.0,
+            "error_bound": 20
+          },
+          {
+            "left": "B03",
+            "right": "C05",
+            "distance": 542,
+            "limit": 1230,
+            "margin": 688,
+            "error_bound": 20
+          },
+          {
+            "left": "B03",
+            "right": "C07",
+            "distance": 1073,
+            "limit": 1230,
+            "margin": 157,
+            "error_bound": 20
+          },
+          {
+            "left": "B03",
+            "right": "C08",
+            "distance": 1332.5,
+            "limit": 1230,
+            "margin": 102.5,
+            "error_bound": 20
+          },
+          {
+            "left": "B03",
+            "right": "C09",
+            "distance": 1590,
+            "limit": 1230,
+            "margin": 360,
+            "error_bound": 20
+          },
+          {
+            "left": "B03",
+            "right": "C10",
+            "distance": 1841.5,
+            "limit": 1230,
+            "margin": 611.5,
+            "error_bound": 20
+          },
+          {
+            "left": "B04",
+            "right": "C05",
+            "distance": 262,
+            "limit": 1230,
+            "margin": 968,
+            "error_bound": 20
+          },
+          {
+            "left": "B04",
+            "right": "C07",
+            "distance": 793,
+            "limit": 1230,
+            "margin": 437,
+            "error_bound": 20
+          },
+          {
+            "left": "B04",
+            "right": "C08",
+            "distance": 1052.5,
+            "limit": 1230,
+            "margin": 177.5,
+            "error_bound": 20
+          },
+          {
+            "left": "B04",
+            "right": "C09",
+            "distance": 1310,
+            "limit": 1230,
+            "margin": 80,
+            "error_bound": 20
+          },
+          {
+            "left": "B04",
+            "right": "C10",
+            "distance": 1561.5,
+            "limit": 1230,
+            "margin": 331.5,
+            "error_bound": 20
+          },
+          {
+            "left": "B05",
+            "right": "C05",
+            "distance": 9,
+            "limit": 1230,
+            "margin": 1221,
+            "error_bound": 20
+          },
+          {
+            "left": "B05",
+            "right": "C07",
+            "distance": 522,
+            "limit": 1230,
+            "margin": 708,
+            "error_bound": 20
+          },
+          {
+            "left": "B05",
+            "right": "C08",
+            "distance": 781.5,
+            "limit": 1230,
+            "margin": 448.5,
+            "error_bound": 20
+          },
+          {
+            "left": "B05",
+            "right": "C09",
+            "distance": 1039,
+            "limit": 1230,
+            "margin": 191,
+            "error_bound": 20
+          },
+          {
+            "left": "B05",
+            "right": "C10",
+            "distance": 1290.5,
+            "limit": 1230,
+            "margin": 60.5,
+            "error_bound": 20
+          },
+          {
+            "left": "B06",
+            "right": "C05",
+            "distance": 278.5,
+            "limit": 1230,
+            "margin": 951.5,
+            "error_bound": 20
+          },
+          {
+            "left": "B06",
+            "right": "C07",
+            "distance": 252.5,
+            "limit": 1230,
+            "margin": 977.5,
+            "error_bound": 20
+          },
+          {
+            "left": "B06",
+            "right": "C08",
+            "distance": 512.0,
+            "limit": 1230,
+            "margin": 718.0,
+            "error_bound": 20
+          },
+          {
+            "left": "B06",
+            "right": "C09",
+            "distance": 769.5,
+            "limit": 1230,
+            "margin": 460.5,
+            "error_bound": 20
+          },
+          {
+            "left": "B06",
+            "right": "C10",
+            "distance": 1021.0,
+            "limit": 1230,
+            "margin": 209.0,
+            "error_bound": 20
+          },
+          {
+            "left": "B07",
+            "right": "C05",
+            "distance": 525.5,
+            "limit": 1230,
+            "margin": 704.5,
+            "error_bound": 20
+          },
+          {
+            "left": "B07",
+            "right": "C07",
+            "distance": 5.5,
+            "limit": 1230,
+            "margin": 1224.5,
+            "error_bound": 20
+          },
+          {
+            "left": "B07",
+            "right": "C08",
+            "distance": 265.0,
+            "limit": 1230,
+            "margin": 965.0,
+            "error_bound": 20
+          },
+          {
+            "left": "B07",
+            "right": "C09",
+            "distance": 522.5,
+            "limit": 1230,
+            "margin": 707.5,
+            "error_bound": 20
+          },
+          {
+            "left": "B07",
+            "right": "C10",
+            "distance": 774.0,
+            "limit": 1230,
+            "margin": 456.0,
+            "error_bound": 20
+          },
+          {
+            "left": "B08",
+            "right": "C05",
+            "distance": 787,
+            "limit": 1230,
+            "margin": 443,
+            "error_bound": 20
+          },
+          {
+            "left": "B08",
+            "right": "C07",
+            "distance": 256,
+            "limit": 1230,
+            "margin": 974,
+            "error_bound": 20
+          },
+          {
+            "left": "B08",
+            "right": "C08",
+            "distance": 3.5,
+            "limit": 1230,
+            "margin": 1226.5,
+            "error_bound": 20
+          },
+          {
+            "left": "B08",
+            "right": "C09",
+            "distance": 261,
+            "limit": 1230,
+            "margin": 969,
+            "error_bound": 20
+          },
+          {
+            "left": "B08",
+            "right": "C10",
+            "distance": 512.5,
+            "limit": 1230,
+            "margin": 717.5,
+            "error_bound": 20
+          },
+          {
+            "left": "B10",
+            "right": "C05",
+            "distance": 1300,
+            "limit": 1230,
+            "margin": 70,
+            "error_bound": 20
+          },
+          {
+            "left": "B10",
+            "right": "C07",
+            "distance": 769,
+            "limit": 1230,
+            "margin": 461,
+            "error_bound": 20
+          },
+          {
+            "left": "B10",
+            "right": "C08",
+            "distance": 509.5,
+            "limit": 1230,
+            "margin": 720.5,
+            "error_bound": 20
+          },
+          {
+            "left": "B10",
+            "right": "C09",
+            "distance": 252,
+            "limit": 1230,
+            "margin": 978,
+            "error_bound": 20
+          },
+          {
+            "left": "B10",
+            "right": "C10",
+            "distance": 0.5,
+            "limit": 1230,
+            "margin": 1229.5,
+            "error_bound": 20
+          }
+        ],
+        "CR": [
+          {
+            "left": "C04",
+            "right": "R",
+            "distance": 1888,
+            "limit": 1750,
+            "margin": 138,
+            "error_bound": 30
+          },
+          {
+            "left": "C05",
+            "right": "R",
+            "distance": 1618,
+            "limit": 1750,
+            "margin": 132,
+            "error_bound": 30
+          },
+          {
+            "left": "C07",
+            "right": "R",
+            "distance": 1087,
+            "limit": 1750,
+            "margin": 663,
+            "error_bound": 30
+          },
+          {
+            "left": "C08",
+            "right": "R",
+            "distance": 827.5,
+            "limit": 1750,
+            "margin": 922.5,
+            "error_bound": 30
+          },
+          {
+            "left": "C09",
+            "right": "R",
+            "distance": 570,
+            "limit": 1750,
+            "margin": 1180,
+            "error_bound": 30
+          },
+          {
+            "left": "C10",
+            "right": "R",
+            "distance": 318.5,
+            "limit": 1750,
+            "margin": 1431.5,
+            "error_bound": 30
+          }
+        ]
+      }
+    }
+  },
+  "changed_fields": {
+    "flat_blade_accepted": {
+      "BC": [
+        29,
+        36
+      ],
+      "CR": [
+        5,
+        6
+      ],
+      "tickets": [
+        83,
+        105
+      ],
+      "pairs": [
+        1692,
+        2858
+      ],
+      "M_min": [
+        3,
+        0
+      ],
+      "M_ties": [
+        5,
+        1
+      ],
+      "N_min": [
+        2,
+        1
+      ],
+      "joint_max": [
+        3,
+        1
+      ],
+      "joint_sum": [
+        6,
+        2
+      ],
+      "joint_ties": [
+        3,
+        2
+      ],
+      "ticket1": [
+        "010610",
+        "030806"
+      ],
+      "ticket2": [
+        "040509",
+        "060609"
+      ]
+    },
+    "reflected_red_at_B01": {
+      "AB": [
+        25,
+        23
+      ],
+      "tickets": [
+        83,
+        81
+      ],
+      "pairs": [
+        1692,
+        1588
+      ]
+    }
+  },
+  "closest_thresholds": {
+    "LA": {
+      "left": "L",
+      "right": "A08",
+      "distance": 1807.5,
+      "limit": 1680,
+      "margin": 127.5,
+      "error_bound": 30
+    },
+    "AB": {
+      "left": "A06",
+      "right": "B01",
+      "distance": 1405.0,
+      "limit": 1490,
+      "margin": 85.0,
+      "error_bound": 20
+    },
+    "BC": {
+      "left": "B05",
+      "right": "C10",
+      "distance": 1290.5,
+      "limit": 1230,
+      "margin": 60.5,
+      "error_bound": 20
+    },
+    "CR": {
+      "left": "C05",
+      "right": "R",
+      "distance": 1618,
+      "limit": 1750,
+      "margin": 132,
+      "error_bound": 30
+    }
+  },
+  "anchor_gate_ablations": {
+    "LA": {
+      "LA": 6,
+      "AB": 32,
+      "BC": 29,
+      "CR": 5,
+      "tickets": 111,
+      "pairs": 3282,
+      "M_min": 2,
+      "M_ties": 1,
+      "N_min": 1,
+      "N_ties": 3,
+      "joint_max": 2,
+      "joint_sum": 4,
+      "joint_ties": 1,
+      "ticket1": "040609",
+      "ticket2": "080708"
+    },
+    "CR": {
+      "LA": 5,
+      "AB": 25,
+      "BC": 36,
+      "CR": 6,
+      "tickets": 108,
+      "pairs": 3056,
+      "M_min": 3,
+      "M_ties": 5,
+      "N_min": 2,
+      "N_ties": 2,
+      "joint_max": 3,
+      "joint_sum": 6,
+      "joint_ties": 3,
+      "ticket1": "010610",
+      "ticket2": "040509"
+    }
+  }
+}

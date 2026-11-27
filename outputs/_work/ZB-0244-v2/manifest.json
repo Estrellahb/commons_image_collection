@@ -1,0 +1,816 @@
+{
+  "items": [
+    {
+      "id": "ZB-0244-v2",
+      "image": "../../authoring_ZB-0244-v2/JJ_Joicey_cabinet_Haslemere_Educational_Museum_drawer_no_14.jpg",
+      "require_real": true,
+      "allow_data_rendering": false,
+      "min_native_short_px": 1080,
+      "source": {
+        "kind": "real_photo",
+        "url": "https://commons.wikimedia.org/wiki/File:JJ_Joicey_cabinet_Haslemere_Educational_Museum_drawer_no_14.jpg",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "authorization": "verified",
+        "scene_id": "commons:87024371:Joicey-drawer14",
+        "author": "Haslemere Educational Museum",
+        "evidence": "source.json; source_page.html"
+      },
+      "annotation_provenance": "author_manual_on_native_original",
+      "objects": [
+        {
+          "id": "A1",
+          "column": "A",
+          "rank": 1,
+          "xy": [
+            645,
+            272
+          ],
+          "F": 1,
+          "H": 1,
+          "bbox": [
+            455,
+            187,
+            380,
+            175
+          ],
+          "category": "F1H1",
+          "evidence": "前翅成片青绿/黄绿色主斑；后翅橙红/粉红斑"
+        },
+        {
+          "id": "A2",
+          "column": "A",
+          "rank": 2,
+          "xy": [
+            650,
+            477
+          ],
+          "F": 1,
+          "H": 1,
+          "bbox": [
+            460,
+            392,
+            380,
+            175
+          ],
+          "category": "F1H1",
+          "evidence": "前翅成片青绿/黄绿色主斑；后翅橙红/粉红斑"
+        },
+        {
+          "id": "A3",
+          "column": "A",
+          "rank": 3,
+          "xy": [
+            650,
+            665
+          ],
+          "F": 1,
+          "H": 1,
+          "bbox": [
+            460,
+            580,
+            380,
+            175
+          ],
+          "category": "F1H1",
+          "evidence": "前翅成片青绿/黄绿色主斑；后翅橙红/粉红斑"
+        },
+        {
+          "id": "A4",
+          "column": "A",
+          "rank": 4,
+          "xy": [
+            653,
+            856
+          ],
+          "F": 1,
+          "H": 1,
+          "bbox": [
+            463,
+            771,
+            380,
+            175
+          ],
+          "category": "F1H1",
+          "evidence": "前翅成片青绿/黄绿色主斑；后翅橙红/粉红斑"
+        },
+        {
+          "id": "A5",
+          "column": "A",
+          "rank": 5,
+          "xy": [
+            650,
+            1030
+          ],
+          "F": 0,
+          "H": 1,
+          "bbox": [
+            460,
+            945,
+            380,
+            175
+          ],
+          "category": "F0H1",
+          "evidence": "前翅为零星小鳞片斑；后翅红斑"
+        },
+        {
+          "id": "B1",
+          "column": "B",
+          "rank": 1,
+          "xy": [
+            1020,
+            219
+          ],
+          "F": 1,
+          "H": 1,
+          "bbox": [
+            848,
+            134,
+            345,
+            175
+          ],
+          "category": "F1H1",
+          "evidence": "前翅成片青绿/黄绿色主斑；后翅橙红/粉红斑"
+        },
+        {
+          "id": "B2",
+          "column": "B",
+          "rank": 2,
+          "xy": [
+            1020,
+            389
+          ],
+          "F": 1,
+          "H": 1,
+          "bbox": [
+            848,
+            304,
+            345,
+            175
+          ],
+          "category": "F1H1",
+          "evidence": "前翅成片青绿/黄绿色主斑；后翅橙红/粉红斑"
+        },
+        {
+          "id": "B3",
+          "column": "B",
+          "rank": 3,
+          "xy": [
+            1020,
+            550
+          ],
+          "F": 1,
+          "H": 1,
+          "bbox": [
+            848,
+            465,
+            345,
+            175
+          ],
+          "category": "F1H1",
+          "evidence": "前翅成片青绿/黄绿色主斑；后翅橙红/粉红斑"
+        },
+        {
+          "id": "B4",
+          "column": "B",
+          "rank": 4,
+          "xy": [
+            1020,
+            723
+          ],
+          "F": 0,
+          "H": 1,
+          "bbox": [
+            848,
+            638,
+            345,
+            175
+          ],
+          "category": "F0H1",
+          "evidence": "前翅单个微小淡黄点；后翅橙斑"
+        },
+        {
+          "id": "B5",
+          "column": "B",
+          "rank": 5,
+          "xy": [
+            1020,
+            915
+          ],
+          "F": 1,
+          "H": 1,
+          "bbox": [
+            848,
+            830,
+            345,
+            175
+          ],
+          "category": "F1H1",
+          "evidence": "前翅成片青绿/黄绿色主斑；后翅橙红/粉红斑"
+        },
+        {
+          "id": "B6",
+          "column": "B",
+          "rank": 6,
+          "xy": [
+            1020,
+            1086
+          ],
+          "F": 1,
+          "H": 1,
+          "bbox": [
+            848,
+            1001,
+            345,
+            175
+          ],
+          "category": "F1H1",
+          "evidence": "前翅成片青绿/黄绿色主斑；后翅橙红/粉红斑"
+        },
+        {
+          "id": "C1",
+          "column": "C",
+          "rank": 1,
+          "xy": [
+            1380,
+            235
+          ],
+          "F": 1,
+          "H": 1,
+          "bbox": [
+            1208,
+            150,
+            345,
+            175
+          ],
+          "category": "F1H1",
+          "evidence": "前翅成片青绿/黄绿色主斑；后翅橙红/粉红斑"
+        },
+        {
+          "id": "C2",
+          "column": "C",
+          "rank": 2,
+          "xy": [
+            1385,
+            420
+          ],
+          "F": 1,
+          "H": 1,
+          "bbox": [
+            1213,
+            335,
+            345,
+            175
+          ],
+          "category": "F1H1",
+          "evidence": "前翅成片青绿/黄绿色主斑；后翅橙红/粉红斑"
+        },
+        {
+          "id": "C3",
+          "column": "C",
+          "rank": 3,
+          "xy": [
+            1385,
+            587
+          ],
+          "F": 1,
+          "H": 1,
+          "bbox": [
+            1213,
+            502,
+            345,
+            175
+          ],
+          "category": "F1H1",
+          "evidence": "前翅成片青绿/黄绿色主斑；后翅橙红/粉红斑"
+        },
+        {
+          "id": "C4",
+          "column": "C",
+          "rank": 4,
+          "xy": [
+            1388,
+            761
+          ],
+          "F": 0,
+          "H": 0,
+          "bbox": [
+            1216,
+            676,
+            345,
+            175
+          ],
+          "category": "F0H0",
+          "evidence": "前翅小乳黄斑；后翅奶油色指状斑，腹部斜向左下"
+        },
+        {
+          "id": "C5",
+          "column": "C",
+          "rank": 5,
+          "xy": [
+            1390,
+            992
+          ],
+          "F": 1,
+          "H": 1,
+          "bbox": [
+            1218,
+            907,
+            345,
+            175
+          ],
+          "category": "F1H1",
+          "evidence": "前翅成片青绿/黄绿色主斑；后翅橙红/粉红斑"
+        },
+        {
+          "id": "D1",
+          "column": "D",
+          "rank": 1,
+          "xy": [
+            1717,
+            203
+          ],
+          "F": 0,
+          "H": 1,
+          "bbox": [
+            1567,
+            118,
+            300,
+            175
+          ],
+          "category": "F0H1",
+          "evidence": "前翅纯白/乳白短斑；后翅粉红斑"
+        },
+        {
+          "id": "D2",
+          "column": "D",
+          "rank": 2,
+          "xy": [
+            1715,
+            365
+          ],
+          "F": 1,
+          "H": 1,
+          "bbox": [
+            1565,
+            280,
+            300,
+            175
+          ],
+          "category": "F1H1",
+          "evidence": "前翅成片青绿/黄绿色主斑；后翅橙红/粉红斑"
+        },
+        {
+          "id": "D3",
+          "column": "D",
+          "rank": 3,
+          "xy": [
+            1713,
+            538
+          ],
+          "F": 1,
+          "H": 1,
+          "bbox": [
+            1563,
+            453,
+            300,
+            175
+          ],
+          "category": "F1H1",
+          "evidence": "前翅成片青绿/黄绿色主斑；后翅橙红/粉红斑"
+        },
+        {
+          "id": "D4",
+          "column": "D",
+          "rank": 4,
+          "xy": [
+            1715,
+            681
+          ],
+          "F": 1,
+          "H": 1,
+          "bbox": [
+            1565,
+            596,
+            300,
+            175
+          ],
+          "category": "F1H1",
+          "evidence": "前翅成片青绿/黄绿色主斑；后翅橙红/粉红斑"
+        },
+        {
+          "id": "D5",
+          "column": "D",
+          "rank": 5,
+          "xy": [
+            1715,
+            863
+          ],
+          "F": 1,
+          "H": 1,
+          "bbox": [
+            1565,
+            778,
+            300,
+            175
+          ],
+          "category": "F1H1",
+          "evidence": "前翅成片青绿/黄绿色主斑；后翅橙红/粉红斑"
+        },
+        {
+          "id": "D6",
+          "column": "D",
+          "rank": 6,
+          "xy": [
+            1715,
+            1009
+          ],
+          "F": 0,
+          "H": 1,
+          "bbox": [
+            1565,
+            924,
+            300,
+            175
+          ],
+          "category": "F0H1",
+          "evidence": "前翅纯白/乳白短斑；后翅粉红斑"
+        }
+      ],
+      "critical_rois": [
+        {
+          "id": "column_A",
+          "bbox": [
+            430,
+            180,
+            410,
+            960
+          ],
+          "human_readable": true
+        },
+        {
+          "id": "column_B",
+          "bbox": [
+            850,
+            130,
+            340,
+            1040
+          ],
+          "human_readable": true
+        },
+        {
+          "id": "column_C",
+          "bbox": [
+            1210,
+            140,
+            375,
+            950
+          ],
+          "human_readable": true
+        },
+        {
+          "id": "column_D",
+          "bbox": [
+            1570,
+            120,
+            325,
+            970
+          ],
+          "human_readable": true
+        },
+        {
+          "id": "lower_boundary",
+          "bbox": [
+            1580,
+            1090,
+            300,
+            160
+          ],
+          "human_readable": true
+        },
+        {
+          "id": "A5_small_spots",
+          "bbox": [
+            500,
+            950,
+            300,
+            180
+          ],
+          "human_readable": true
+        }
+      ],
+      "ocr": {
+        "han_bboxes": [],
+        "reviewed": true,
+        "review_method": "逐列原生裁图两次人工检查；只用位置和斑纹，标签拉丁字母不参与求解"
+      },
+      "platform_points": [
+        {
+          "xy": [
+            580,
+            1015
+          ],
+          "label": "A5前翅只剩零星小点与鳞片，F=0"
+        },
+        {
+          "xy": [
+            1319,
+            814
+          ],
+          "label": "C4后翅奶油色斑，H=0"
+        },
+        {
+          "xy": [
+            1650,
+            992
+          ],
+          "label": "D6纯白短斑，F=0；需与上方青绿主斑区分"
+        }
+      ],
+      "human_checks": {
+        "source_fidelity": true,
+        "annotation_correct": true,
+        "critical_evidence_visible": true,
+        "no_answer_leakage": true,
+        "counting_rules_clear": true
+      },
+      "task": {
+        "uses_distance": false,
+        "dependencies": [
+          {
+            "roi_id": "column_A",
+            "parameter": "A列成员与F/H",
+            "output": "Q1,Q2,Q3,Q4,Q5,Q6"
+          },
+          {
+            "roi_id": "column_B",
+            "parameter": "B列F=0成员B4",
+            "output": "Q1,Q2,Q3,Q4,Q5,Q6"
+          },
+          {
+            "roi_id": "column_C",
+            "parameter": "C4冷色后翅，约束八件H和等于7",
+            "output": "Q1,Q4,Q5,Q6"
+          },
+          {
+            "roi_id": "column_D",
+            "parameter": "白斑D1和D6的F=0",
+            "output": "Q1,Q2,Q3,Q4,Q5,Q6"
+          },
+          {
+            "roi_id": "lower_boundary",
+            "parameter": "排除D7，确定列内编号",
+            "output": "Q1,Q2,Q3,Q4,Q5,Q6"
+          },
+          {
+            "roi_id": "A5_small_spots",
+            "parameter": "A5零星小点不构成主斑",
+            "output": "Q1,Q2,Q3,Q4,Q6"
+          }
+        ],
+        "measurements": [
+          {
+            "id": "membership_y_window",
+            "margin": 20,
+            "error_bound": 5,
+            "unit": "px",
+            "error_method": "胸部中心原生坐标人工定位欧氏误差≤5px，纵向分量≤5px。保守余量20px。",
+            "evidence": "measurement.md; facts.json"
+          }
+        ],
+        "counterfactuals": [
+          {
+            "field": "Q4_double_route_count",
+            "baseline": 864,
+            "alternative": 1296,
+            "verified": true,
+            "change": [
+              "A5",
+              "F",
+              1
+            ],
+            "evidence": "recompute.json; independent_verification.json"
+          },
+          {
+            "field": "Q4_double_route_count",
+            "baseline": 864,
+            "alternative": 0,
+            "verified": true,
+            "change": [
+              "C4",
+              "H",
+              1
+            ],
+            "evidence": "recompute.json; independent_verification.json"
+          }
+        ],
+        "bypass_review": "passed",
+        "reasoning_graph": {
+          "nodes": [
+            {
+              "id": "column_A",
+              "kind": "visual",
+              "roi_id": "column_A"
+            },
+            {
+              "id": "column_B",
+              "kind": "visual",
+              "roi_id": "column_B"
+            },
+            {
+              "id": "column_C",
+              "kind": "visual",
+              "roi_id": "column_C"
+            },
+            {
+              "id": "column_D",
+              "kind": "visual",
+              "roi_id": "column_D"
+            },
+            {
+              "id": "lower_boundary",
+              "kind": "visual",
+              "roi_id": "lower_boundary"
+            },
+            {
+              "id": "A5_small_spots",
+              "kind": "visual",
+              "roi_id": "A5_small_spots"
+            },
+            {
+              "id": "membership",
+              "kind": "parameter"
+            },
+            {
+              "id": "attributes",
+              "kind": "parameter"
+            },
+            {
+              "id": "edges",
+              "kind": "parameter"
+            },
+            {
+              "id": "routes",
+              "kind": "aggregate"
+            },
+            {
+              "id": "plans",
+              "kind": "aggregate"
+            },
+            {
+              "id": "cost0",
+              "kind": "optimize"
+            },
+            {
+              "id": "cost1",
+              "kind": "optimize"
+            },
+            {
+              "id": "Q1",
+              "kind": "output"
+            },
+            {
+              "id": "Q2",
+              "kind": "output"
+            },
+            {
+              "id": "Q3",
+              "kind": "output"
+            },
+            {
+              "id": "Q4",
+              "kind": "output"
+            },
+            {
+              "id": "Q5",
+              "kind": "output"
+            },
+            {
+              "id": "Q6",
+              "kind": "output"
+            }
+          ],
+          "edges": [
+            [
+              "column_A",
+              "membership"
+            ],
+            [
+              "column_B",
+              "membership"
+            ],
+            [
+              "column_C",
+              "membership"
+            ],
+            [
+              "column_D",
+              "membership"
+            ],
+            [
+              "lower_boundary",
+              "membership"
+            ],
+            [
+              "column_A",
+              "attributes"
+            ],
+            [
+              "column_B",
+              "attributes"
+            ],
+            [
+              "column_C",
+              "attributes"
+            ],
+            [
+              "column_D",
+              "attributes"
+            ],
+            [
+              "A5_small_spots",
+              "attributes"
+            ],
+            [
+              "membership",
+              "attributes"
+            ],
+            [
+              "membership",
+              "edges"
+            ],
+            [
+              "attributes",
+              "edges"
+            ],
+            [
+              "attributes",
+              "Q1"
+            ],
+            [
+              "edges",
+              "Q2"
+            ],
+            [
+              "edges",
+              "routes"
+            ],
+            [
+              "attributes",
+              "routes"
+            ],
+            [
+              "routes",
+              "Q3"
+            ],
+            [
+              "routes",
+              "plans"
+            ],
+            [
+              "attributes",
+              "plans"
+            ],
+            [
+              "plans",
+              "Q4"
+            ],
+            [
+              "plans",
+              "cost0"
+            ],
+            [
+              "plans",
+              "cost1"
+            ],
+            [
+              "attributes",
+              "cost1"
+            ],
+            [
+              "cost0",
+              "Q5"
+            ],
+            [
+              "cost1",
+              "Q6"
+            ]
+          ]
+        }
+      },
+      "evaluation": {
+        "tools_enabled": true,
+        "frozen_version": "ZB-0244-v2",
+        "counts": {
+          "correct": 0,
+          "incorrect": 0,
+          "timeout": 0,
+          "infra_error": 0,
+          "partial": 0
+        },
+        "trajectory": "",
+        "gt_review": "",
+        "failure_attribution": ""
+      }
+    }
+  ]
+}

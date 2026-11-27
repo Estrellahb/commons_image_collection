@@ -1,0 +1,246 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><title>ZeroBench 图片质检</title><style>body{font:16px system-ui;margin:30px;background:#f4f4f1;color:#202020}article{background:white;margin:22px 0;padding:24px;border:1px solid #ddd;overflow:auto}img{max-width:48%;float:left;margin:0 24px 16px 0}pre{white-space:pre-wrap;font-size:13px}h1{font-size:28px}</style><h1>图片与题目证据质检</h1><p>代理指标用于筛选，不证明难度。缺失值不会自动通过；判定与试答证据分开。</p><article><h2>ZB-SPEC-120266311-v1 · authoring_candidate</h2><img src="001.jpg" loading="lazy"><pre>{
+  &quot;id&quot;: &quot;ZB-SPEC-120266311-v1&quot;,
+  &quot;blockers&quot;: [],
+  &quot;review&quot;: [],
+  &quot;advisory&quot;: [],
+  &quot;metrics&quot;: {
+    &quot;width&quot;: 3870,
+    &quot;height&quot;: 3081,
+    &quot;mode&quot;: &quot;RGB&quot;,
+    &quot;exif_orientation&quot;: 1,
+    &quot;frame_count&quot;: 1,
+    &quot;global_640_proxy&quot;: {
+      &quot;contrast_p90_p10&quot;: 192.0,
+      &quot;gray_entropy_bits&quot;: 7.770504668596065,
+      &quot;edge_fraction_16&quot;: 0.29839177472569633
+    },
+    &quot;object_count&quot;: 10,
+    &quot;objects_per_MP&quot;: 0.8386820279666909,
+    &quot;class_count&quot;: 10,
+    &quot;known_fraction&quot;: 1.0,
+    &quot;repeated_classes&quot;: 0,
+    &quot;spatial_entropy_4x4&quot;: 0.6116098361677539,
+    &quot;median_bbox_short_px&quot;: 315.0,
+    &quot;p10_bbox_short_px&quot;: 202.5,
+    &quot;edge_touching_count&quot;: 0,
+    &quot;nearcolor_pair_count&quot;: 10,
+    &quot;different_class_neighbor_pairs&quot;: 12,
+    &quot;nearcolor_neighbor_fraction&quot;: 0.8333333333333334,
+    &quot;bbox_overlap_pair_count&quot;: 0,
+    &quot;han_text_coverage&quot;: 0.0,
+    &quot;distinct_dependency_regions&quot;: 6,
+    &quot;effective_counterfactuals&quot;: 5
+  },
+  &quot;source&quot;: {
+    &quot;kind&quot;: &quot;real_photo&quot;,
+    &quot;url&quot;: &quot;https://commons.wikimedia.org/wiki/File:Drawer_27_(5555544961).jpg&quot;,
+    &quot;license_url&quot;: &quot;https://creativecommons.org/licenses/by/2.0&quot;,
+    &quot;authorization&quot;: &quot;verified&quot;,
+    &quot;scene_id&quot;: &quot;commons:120266311&quot;
+  },
+  &quot;difficulty_status&quot;: &quot;no_complete_failure_recorded&quot;,
+  &quot;annotation_provenance&quot;: &quot;author_manual_bbox&quot;,
+  &quot;preview&quot;: &quot;001.jpg&quot;,
+  &quot;nearcolor_pairs&quot;: [
+    {
+      &quot;a&quot;: &quot;A2_obscurus&quot;,
+      &quot;b&quot;: &quot;A1_molitor&quot;,
+      &quot;deltaE76&quot;: 4.886989996372631
+    },
+    {
+      &quot;a&quot;: &quot;A3_caeruleus&quot;,
+      &quot;b&quot;: &quot;A2_obscurus&quot;,
+      &quot;deltaE76&quot;: 10.556730891003527
+    },
+    {
+      &quot;a&quot;: &quot;A4_atripes&quot;,
+      &quot;b&quot;: &quot;A1_molitor&quot;,
+      &quot;deltaE76&quot;: 5.610032814097979
+    },
+    {
+      &quot;a&quot;: &quot;B1_ater&quot;,
+      &quot;b&quot;: &quot;A1_molitor&quot;,
+      &quot;deltaE76&quot;: 3.577481959125142
+    },
+    {
+      &quot;a&quot;: &quot;B1_ater&quot;,
+      &quot;b&quot;: &quot;A4_atripes&quot;,
+      &quot;deltaE76&quot;: 9.161749731523786
+    },
+    {
+      &quot;a&quot;: &quot;B2_melanarius&quot;,
+      &quot;b&quot;: &quot;B1_ater&quot;,
+      &quot;deltaE76&quot;: 1.731599923699589
+    },
+    {
+      &quot;a&quot;: &quot;B3_desmaresti&quot;,
+      &quot;b&quot;: &quot;B1_ater&quot;,
+      &quot;deltaE76&quot;: 10.110922663602107
+    },
+    {
+      &quot;a&quot;: &quot;B4_caraboides&quot;,
+      &quot;b&quot;: &quot;B1_ater&quot;,
+      &quot;deltaE76&quot;: 1.8854330929193248
+    },
+    {
+      &quot;a&quot;: &quot;B4_caraboides&quot;,
+      &quot;b&quot;: &quot;B2_melanarius&quot;,
+      &quot;deltaE76&quot;: 3.468377767483524
+    },
+    {
+      &quot;a&quot;: &quot;B5_vaudoueri&quot;,
+      &quot;b&quot;: &quot;B4_caraboides&quot;,
+      &quot;deltaE76&quot;: 7.293620212409793
+    }
+  ],
+  &quot;overlap_candidates&quot;: [],
+  &quot;roi_metrics&quot;: [
+    {
+      &quot;id&quot;: &quot;r1_A1_A2_obscurus&quot;,
+      &quot;file&quot;: &quot;001_roi1.png&quot;,
+      &quot;contrast_p90_p10&quot;: 198.0,
+      &quot;gray_entropy_bits&quot;: 7.464562699323997,
+      &quot;edge_fraction_16&quot;: 0.09444933094090467
+    },
+    {
+      &quot;id&quot;: &quot;r2_A3_A5_pin&quot;,
+      &quot;file&quot;: &quot;001_roi2.png&quot;,
+      &quot;contrast_p90_p10&quot;: 182.0,
+      &quot;gray_entropy_bits&quot;: 7.569426514807814,
+      &quot;edge_fraction_16&quot;: 0.10741147637961633
+    },
+    {
+      &quot;id&quot;: &quot;r3_B1_ater_codes&quot;,
+      &quot;file&quot;: &quot;001_roi3.png&quot;,
+      &quot;contrast_p90_p10&quot;: 175.0,
+      &quot;gray_entropy_bits&quot;: 7.549957091188084,
+      &quot;edge_fraction_16&quot;: 0.10862242195064029
+    },
+    {
+      &quot;id&quot;: &quot;r4_B2_melanarius&quot;,
+      &quot;file&quot;: &quot;001_roi4.png&quot;,
+      &quot;contrast_p90_p10&quot;: 176.0,
+      &quot;gray_entropy_bits&quot;: 7.643223066928838,
+      &quot;edge_fraction_16&quot;: 0.10767803520421865
+    },
+    {
+      &quot;id&quot;: &quot;r5_B3_desmaresti&quot;,
+      &quot;file&quot;: &quot;001_roi5.png&quot;,
+      &quot;contrast_p90_p10&quot;: 85.0,
+      &quot;gray_entropy_bits&quot;: 6.962459518308537,
+      &quot;edge_fraction_16&quot;: 0.08214981406056313
+    },
+    {
+      &quot;id&quot;: &quot;r6_B4_B5_vaudoueri&quot;,
+      &quot;file&quot;: &quot;001_roi6.png&quot;,
+      &quot;contrast_p90_p10&quot;: 161.0,
+      &quot;gray_entropy_bits&quot;: 7.565411861691724,
+      &quot;edge_fraction_16&quot;: 0.0966062822004321
+    }
+  ],
+  &quot;reasoning_metrics&quot;: {
+    &quot;node_count&quot;: 20,
+    &quot;max_depth&quot;: 6,
+    &quot;branch_nodes&quot;: 14,
+    &quot;join_nodes&quot;: 10,
+    &quot;multi_visual_join_nodes&quot;: 10,
+    &quot;output_count&quot;: 6,
+    &quot;outputs_with_visual_ancestry&quot;: 6,
+    &quot;output_visual_coverage&quot;: 1.0,
+    &quot;state_nodes&quot;: 1,
+    &quot;parameter_nodes&quot;: 3,
+    &quot;output_evidence_regions&quot;: {
+      &quot;out_q1&quot;: [
+        &quot;r1_A1_A2_obscurus&quot;,
+        &quot;r2_A3_A5_pin&quot;,
+        &quot;r3_B1_ater_codes&quot;,
+        &quot;r4_B2_melanarius&quot;,
+        &quot;r5_B3_desmaresti&quot;,
+        &quot;r6_B4_B5_vaudoueri&quot;
+      ],
+      &quot;out_q2&quot;: [
+        &quot;r1_A1_A2_obscurus&quot;,
+        &quot;r2_A3_A5_pin&quot;,
+        &quot;r3_B1_ater_codes&quot;,
+        &quot;r4_B2_melanarius&quot;,
+        &quot;r5_B3_desmaresti&quot;,
+        &quot;r6_B4_B5_vaudoueri&quot;
+      ],
+      &quot;out_q3&quot;: [
+        &quot;r1_A1_A2_obscurus&quot;,
+        &quot;r2_A3_A5_pin&quot;,
+        &quot;r3_B1_ater_codes&quot;,
+        &quot;r4_B2_melanarius&quot;,
+        &quot;r5_B3_desmaresti&quot;,
+        &quot;r6_B4_B5_vaudoueri&quot;
+      ],
+      &quot;out_q4&quot;: [
+        &quot;r1_A1_A2_obscurus&quot;,
+        &quot;r2_A3_A5_pin&quot;,
+        &quot;r3_B1_ater_codes&quot;,
+        &quot;r4_B2_melanarius&quot;,
+        &quot;r5_B3_desmaresti&quot;,
+        &quot;r6_B4_B5_vaudoueri&quot;
+      ],
+      &quot;out_q5&quot;: [
+        &quot;r1_A1_A2_obscurus&quot;,
+        &quot;r2_A3_A5_pin&quot;,
+        &quot;r3_B1_ater_codes&quot;,
+        &quot;r4_B2_melanarius&quot;,
+        &quot;r5_B3_desmaresti&quot;,
+        &quot;r6_B4_B5_vaudoueri&quot;
+      ],
+      &quot;out_q6&quot;: [
+        &quot;r1_A1_A2_obscurus&quot;,
+        &quot;r2_A3_A5_pin&quot;,
+        &quot;r3_B1_ater_codes&quot;,
+        &quot;r4_B2_melanarius&quot;,
+        &quot;r5_B3_desmaresti&quot;,
+        &quot;r6_B4_B5_vaudoueri&quot;
+      ]
+    }
+  },
+  &quot;measurement_margins&quot;: [
+    {
+      &quot;id&quot;: &quot;d_near_735&quot;,
+      &quot;ratio&quot;: 2.1266666666666665,
+      &quot;unit&quot;: &quot;px&quot;
+    },
+    {
+      &quot;id&quot;: &quot;d_max_1465&quot;,
+      &quot;ratio&quot;: 3.6366666666666663,
+      &quot;unit&quot;: &quot;px&quot;
+    }
+  ],
+  &quot;platform_points&quot;: [
+    {
+      &quot;xy&quot;: [
+        3502,
+        795
+      ],
+      &quot;label&quot;: &quot;B3 (desmaresti, Lt.) 多虫纸卡区：5 张纸卡装 1,1,3,4,1 共 10 只甲虫且含 3 张下端插针卡，作者关键证据点&quot;
+    },
+    {
+      &quot;xy&quot;: [
+        3215,
+        1685
+      ],
+      &quot;label&quot;: &quot;B2 (melanarius Germ.) 第 2 行中卡右上角隐藏手写代码 WX 及第 2 行右卡/第 3 行共 4 张下端插针，作者关键证据点&quot;
+    },
+    {
+      &quot;xy&quot;: [
+        2952,
+        2828
+      ],
+      &quot;label&quot;: &quot;A5 (ceramboides, L.) 最右下角唯一 1 张下端插针卡（B_A5=1 决定双近距最优边 A5-B5 存亡），作者关键证据点&quot;
+    }
+  ],
+  &quot;evaluation_counts&quot;: {
+    &quot;correct&quot;: 0,
+    &quot;incorrect&quot;: 0,
+    &quot;timeout&quot;: 0,
+    &quot;infra_error&quot;: 0,
+    &quot;partial&quot;: 0
+  },
+  &quot;decision&quot;: &quot;authoring_candidate&quot;
+}</pre></article></html>

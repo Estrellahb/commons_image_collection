@@ -1,0 +1,45 @@
+{
+  "question_id": "ZB-TOOLS-143443313-v1",
+  "before": [
+    {
+      "id": 107,
+      "file_url": "https://commons.wikimedia.org/wiki/File:Miniature_bit_set_with_wrench_for_carrying_on_belt.jpg",
+      "category": "居家场景/工具五金",
+      "claimed_by": "",
+      "question_types": "counting,localization_measurement,robust_ocr",
+      "difficulty": "hard",
+      "difficulty_tags": "cross_region_alignment,high_density,small_target",
+      "tag_notes": "把红盒内的行列编号与每个批头对应，按标签字符选中批头后核对工作端的规格或形状。",
+      "authored_status": "",
+      "authored_ref": ""
+    },
+    {
+      "id": 316,
+      "file_url": "https://commons.wikimedia.org/wiki/File:Miniature_bit_set_with_wrench,_for_carrying_on_belt_(white_background,_added_ruler).jpg",
+      "category": "居家场景/工具五金",
+      "claimed_by": "",
+      "question_types": "",
+      "difficulty": "",
+      "difficulty_tags": "",
+      "tag_notes": "",
+      "authored_status": "",
+      "authored_ref": ""
+    }
+  ],
+  "local_claims_before": [],
+  "scene_reservation": {
+    "before": {
+      "id": 316,
+      "file_url": "https://commons.wikimedia.org/wiki/File:Miniature_bit_set_with_wrench,_for_carrying_on_belt_(white_background,_added_ruler).jpg",
+      "category": "居家场景/工具五金",
+      "claimed_by": "",
+      "question_types": "",
+      "difficulty": "",
+      "difficulty_tags": "",
+      "tag_notes": "",
+      "authored_status": "",
+      "authored_ref": ""
+    },
+    "reason": "同一原图的白底加尺衍生版与主图共享 scene_id，随主图防重预留"
+  }
+}

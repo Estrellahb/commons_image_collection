@@ -1,0 +1,21 @@
+{
+  "created_at": "2026-11-26T18:52:40.222124+08:00",
+  "new_skill": "zerobench-visual-benchmark",
+  "old_installed_skills": [
+    "/Users/hepeize/.codex/skills/zerobench-visual-authoring",
+    "/Users/hepeize/.codex/skills/zerobench-image-quality"
+  ],
+  "backup_zip": "/Users/hepeize/Work/cowork/outputs/ZeroBench_Unified_Skill_20261126/retired-skills-20261126.zip",
+  "replacement_status": "installed_and_old_active_entries_removed",
+  "historical_research_outputs": "retained as source evidence, not registered skill entries",
+  "api_calls_in_this_skill_task": 0,
+  "completed_at": "2026-11-26T19:01:09.843286+08:00",
+  "installed_path": "/Users/hepeize/.codex/skills/zerobench-visual-benchmark",
+  "removed_active_entries": [
+    "/Users/hepeize/.codex/skills/zerobench-visual-authoring",
+    "/Users/hepeize/.codex/skills/zerobench-image-quality"
+  ],
+  "active_zerobench_skills": [
+    "zerobench-visual-benchmark"
+  ]
+}

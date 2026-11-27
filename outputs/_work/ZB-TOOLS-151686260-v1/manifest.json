@@ -1,0 +1,175 @@
+{
+  "items": [
+    {
+      "id": "ZB-TOOLS-151686260-v1",
+      "image": "../../../img/居家场景/工具五金/zb-hardware-151686260.jpg",
+      "require_real": true,
+      "allow_data_rendering": false,
+      "min_native_short_px": 1080,
+      "source": {
+        "kind": "real_photo",
+        "url": "https://commons.wikimedia.org/wiki/File:Bicycle_cone_wrenches_at_Somerville_Bike_Kitchen.jpg",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "authorization": "verified",
+        "scene_id": "commons:151686260"
+      },
+      "annotation_provenance": "author_manual_bbox",
+      "objects": [
+        {"id": "H1_red_stack", "bbox": [180, 560, 490, 1850], "category": "unior_red_28_x2"},
+        {"id": "H2_red", "bbox": [670, 620, 430, 1680], "category": "unior_red_24_x1"},
+        {"id": "H3_red_stack", "bbox": [1090, 650, 430, 1630], "category": "unior_red_15_x3"},
+        {"id": "H4_red_stack", "bbox": [1460, 730, 390, 1550], "category": "unior_red_22_x2"},
+        {"id": "H5_blue", "bbox": [1830, 910, 330, 1360], "category": "parktool_blue_20_x1"},
+        {"id": "H5_red_behind", "bbox": [1800, 810, 360, 1270], "category": "unior_red_behind_x2"},
+        {"id": "H6_blue", "bbox": [2160, 940, 340, 1330], "category": "parktool_blue_19_x3"},
+        {"id": "H6_red_behind", "bbox": [2120, 850, 350, 1220], "category": "unior_red_behind_x2"},
+        {"id": "H7_blue", "bbox": [2480, 970, 310, 1290], "category": "parktool_blue_18_usa_x3"},
+        {"id": "H7_red_behind", "bbox": [2430, 890, 330, 1180], "category": "unior_red_behind_x2"},
+        {"id": "H8_blue", "bbox": [2780, 990, 310, 1260], "category": "parktool_blue_17_x4"},
+        {"id": "H8_red_behind", "bbox": [2730, 920, 310, 1150], "category": "unior_red_behind_x2"},
+        {"id": "H9_blue", "bbox": [3110, 1040, 290, 1200], "category": "parktool_blue_16_usa_x2"},
+        {"id": "H9_red_behind", "bbox": [3060, 960, 290, 1110], "category": "unior_red_behind_x2"},
+        {"id": "H10_blue", "bbox": [3350, 1060, 270, 1160], "category": "parktool_blue_15_x1"},
+        {"id": "H10_red_behind", "bbox": [3320, 980, 270, 1090], "category": "unior_red_behind_x1"},
+        {"id": "H11_blue", "bbox": [3600, 1080, 260, 1150], "category": "parktool_blue_14_usa_x3"},
+        {"id": "H11_red_behind", "bbox": [3560, 1000, 260, 1070], "category": "unior_red_behind_x2"},
+        {"id": "H12_blue", "bbox": [3830, 1100, 260, 1130], "category": "parktool_blue_13_x3"},
+        {"id": "H12_red_behind", "bbox": [3800, 1020, 260, 1050], "category": "unior_red_behind_x2"}
+      ],
+      "critical_rois": [
+        {"id": "r1_h1_h2_stack", "bbox": [180, 560, 930, 1860], "human_readable": true},
+        {"id": "r2_h3_h4_stack", "bbox": [1080, 650, 810, 1660], "human_readable": true},
+        {"id": "r3_h5_h6_stack", "bbox": [1790, 820, 740, 960], "human_readable": true},
+        {"id": "r4_h7_h8_usa_stack", "bbox": [2420, 880, 710, 940], "human_readable": true},
+        {"id": "r5_h9_h10_stack", "bbox": [3040, 950, 620, 900], "human_readable": true},
+        {"id": "r6_h11_h12_stack", "bbox": [3540, 990, 580, 910], "human_readable": true}
+      ],
+      "ocr": {
+        "han_bboxes": [],
+        "reviewed": true
+      },
+      "platform_points": [
+        {"xy": [1338, 895], "label": "H3 挂钩：左红柄区非单调刻字 15（位于 24 与 22 之间）且同钩叠挂 3 把红柄，作者关键证据点"},
+        {"xy": [1666, 955], "label": "H4 挂钩：22 mm 红柄实际紧贴叠挂 2 把（橙颈/钳口双层），盲测 2/3 轮次漏读为 1 把，模型误读点"},
+        {"xy": [2340, 1015], "label": "H6 挂钩：19 mm 蓝柄实际叠挂 3 层蓝套且背后有 2 把红柄，盲测 1/3 轮次误读为 2 蓝柄并翻转赢家，模型误读点"}
+      ],
+      "human_checks": {
+        "source_fidelity": true,
+        "annotation_correct": true,
+        "critical_evidence_visible": true,
+        "no_answer_leakage": true,
+        "counting_rules_clear": true
+      },
+      "task": {
+        "uses_distance": true,
+        "dependencies": [
+          {"roi_id": "r1_h1_h2_stack", "parameter": "H1_R1_stack_and_H2_R2", "output": "q2_edges"},
+          {"roi_id": "r2_h3_h4_stack", "parameter": "H3_size15_R3_and_H4_R4", "output": "q6_reversal"},
+          {"roi_id": "r3_h5_h6_stack", "parameter": "H5_USA_and_H6_B6_stack", "output": "q6_reversal"},
+          {"roi_id": "r4_h7_h8_usa_stack", "parameter": "H7_USA_B7_and_H8_B8", "output": "q6_reversal"},
+          {"roi_id": "r5_h9_h10_stack", "parameter": "H9_USA_B9_and_H10_R10", "output": "q1_sum_red"},
+          {"roi_id": "r6_h11_h12_stack", "parameter": "H11_USA_B11_and_H12_B12", "output": "q3_total_plans"}
+        ],
+        "measurements": [
+          {
+            "id": "dx_near_1180",
+            "margin": 108,
+            "error_bound": 24,
+            "unit": "px",
+            "error_method": "每个挂钩红杆穿出孔心横坐标误差上界 12px，两点差总误差上界 2e=24px",
+            "evidence": "measurement.md"
+          },
+          {
+            "id": "dx_max_2200",
+            "margin": 72,
+            "error_bound": 24,
+            "unit": "px",
+            "error_method": "每个挂钩红杆穿出孔心横坐标误差上界 12px，两点差总误差上界 2e=24px",
+            "evidence": "measurement.md"
+          }
+        ],
+        "counterfactuals": [
+          {"field": "q6_reversal", "baseline": 1, "alternative": 0, "verified": true, "evidence": "recompute.json"},
+          {"field": "q3_total_plans", "baseline": 28, "alternative": 24, "verified": true, "evidence": "recompute.json"},
+          {"field": "q1_sum_red", "baseline": 23, "alternative": 21, "verified": true, "evidence": "recompute.json"},
+          {"field": "q1_sum_blue", "baseline": 20, "alternative": 19, "verified": true, "evidence": "recompute.json"},
+          {"field": "q5_M_min_c1", "baseline": 32, "alternative": 30, "verified": true, "evidence": "recompute.json"}
+        ],
+        "bypass_review": "passed",
+        "reasoning_graph": {
+          "nodes": [
+            {"id": "v_h12", "kind": "visual", "roi_id": "r1_h1_h2_stack"},
+            {"id": "v_h34", "kind": "visual", "roi_id": "r2_h3_h4_stack"},
+            {"id": "v_h56", "kind": "visual", "roi_id": "r3_h5_h6_stack"},
+            {"id": "v_h78", "kind": "visual", "roi_id": "r4_h7_h8_usa_stack"},
+            {"id": "v_h910", "kind": "visual", "roi_id": "r5_h9_h10_stack"},
+            {"id": "v_h1112", "kind": "visual", "roi_id": "r6_h11_h12_stack"},
+            {"id": "m_dx", "kind": "measure"},
+            {"id": "p_inv", "kind": "parameter"},
+            {"id": "p_usa", "kind": "parameter"},
+            {"id": "s_edges", "kind": "state"},
+            {"id": "a_plans", "kind": "aggregate"},
+            {"id": "opt_w0", "kind": "optimize"},
+            {"id": "opt_w1", "kind": "optimize"},
+            {"id": "out_q1", "kind": "output"},
+            {"id": "out_q2", "kind": "output"},
+            {"id": "out_q3", "kind": "output"},
+            {"id": "out_q4", "kind": "output"},
+            {"id": "out_q5", "kind": "output"},
+            {"id": "out_q6", "kind": "output"}
+          ],
+          "edges": [
+            ["v_h12", "m_dx"],
+            ["v_h34", "m_dx"],
+            ["v_h56", "m_dx"],
+            ["v_h78", "m_dx"],
+            ["v_h910", "m_dx"],
+            ["v_h1112", "m_dx"],
+            ["v_h12", "p_inv"],
+            ["v_h34", "p_inv"],
+            ["v_h56", "p_inv"],
+            ["v_h78", "p_inv"],
+            ["v_h910", "p_inv"],
+            ["v_h1112", "p_inv"],
+            ["v_h56", "p_usa"],
+            ["v_h78", "p_usa"],
+            ["v_h910", "p_usa"],
+            ["v_h1112", "p_usa"],
+            ["p_inv", "out_q1"],
+            ["p_usa", "out_q1"],
+            ["m_dx", "s_edges"],
+            ["p_inv", "s_edges"],
+            ["s_edges", "out_q2"],
+            ["s_edges", "a_plans"],
+            ["p_usa", "a_plans"],
+            ["p_inv", "a_plans"],
+            ["a_plans", "out_q3"],
+            ["a_plans", "opt_w0"],
+            ["m_dx", "opt_w0"],
+            ["p_inv", "opt_w0"],
+            ["opt_w0", "out_q4"],
+            ["opt_w0", "opt_w1"],
+            ["p_inv", "opt_w1"],
+            ["opt_w1", "out_q5"],
+            ["opt_w0", "out_q6"],
+            ["opt_w1", "out_q6"]
+          ]
+        }
+      },
+      "evaluation": {
+        "tools_enabled": true,
+        "frozen_version": "v1",
+        "counts": {
+          "correct": 1,
+          "incorrect": 2,
+          "timeout": 0,
+          "infra_error": 0,
+          "partial": 0
+        },
+        "trajectory": "blind_trials.json",
+        "gt_review": "4x 原生微距逐钩复核 H1-H12 叠挂层数、品牌后缀与钩心坐标，已由 solver.py 与盲测第 1 轮独立复算一致通过",
+        "failure_attribution": "盲测第 2 轮漏读 H1/H4 双层红柄并误读 H6 为 2 蓝柄（recompute.json 中 CF4 100% 复现末答，反转位由 1 翻转为 0）；盲测第 3 轮漏读 H1/H4 双层红柄（CF3 100% 复现末答）"
+      }
+    }
+  ]
+}

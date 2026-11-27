@@ -1,0 +1,264 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><title>ZeroBench 图片质检</title><style>body{font:16px system-ui;margin:30px;background:#f4f4f1;color:#202020}article{background:white;margin:22px 0;padding:24px;border:1px solid #ddd;overflow:auto}img{max-width:48%;float:left;margin:0 24px 16px 0}pre{white-space:pre-wrap;font-size:13px}h1{font-size:28px}</style><h1>图片与题目证据质检</h1><p>代理指标用于筛选，不证明难度。缺失值不会自动通过；判定与试答证据分开。</p><article><h2>ZB-0244-v2 · authoring_candidate</h2><img src="001.jpg" loading="lazy"><pre>{
+  &quot;id&quot;: &quot;ZB-0244-v2&quot;,
+  &quot;blockers&quot;: [],
+  &quot;review&quot;: [],
+  &quot;advisory&quot;: [],
+  &quot;metrics&quot;: {
+    &quot;width&quot;: 2000,
+    &quot;height&quot;: 1333,
+    &quot;mode&quot;: &quot;RGB&quot;,
+    &quot;exif_orientation&quot;: 1,
+    &quot;frame_count&quot;: 1,
+    &quot;global_640_proxy&quot;: {
+      &quot;contrast_p90_p10&quot;: 214.0,
+      &quot;gray_entropy_bits&quot;: 7.436645611748808,
+      &quot;edge_fraction_16&quot;: 0.16437974456134175
+    },
+    &quot;object_count&quot;: 22,
+    &quot;objects_per_MP&quot;: 8.252063015753938,
+    &quot;class_count&quot;: 3,
+    &quot;known_fraction&quot;: 1.0,
+    &quot;repeated_classes&quot;: 2,
+    &quot;spatial_entropy_4x4&quot;: 0.8421306319320516,
+    &quot;median_bbox_short_px&quot;: 175.0,
+    &quot;p10_bbox_short_px&quot;: 175.0,
+    &quot;edge_touching_count&quot;: 0,
+    &quot;nearcolor_pair_count&quot;: 12,
+    &quot;different_class_neighbor_pairs&quot;: 23,
+    &quot;nearcolor_neighbor_fraction&quot;: 0.5217391304347826,
+    &quot;bbox_overlap_pair_count&quot;: 2,
+    &quot;han_text_coverage&quot;: 0.0,
+    &quot;distinct_dependency_regions&quot;: 6,
+    &quot;effective_counterfactuals&quot;: 2
+  },
+  &quot;source&quot;: {
+    &quot;kind&quot;: &quot;real_photo&quot;,
+    &quot;url&quot;: &quot;https://commons.wikimedia.org/wiki/File:JJ_Joicey_cabinet_Haslemere_Educational_Museum_drawer_no_14.jpg&quot;,
+    &quot;license_url&quot;: &quot;https://creativecommons.org/licenses/by-sa/4.0/&quot;,
+    &quot;authorization&quot;: &quot;verified&quot;,
+    &quot;scene_id&quot;: &quot;commons:87024371:Joicey-drawer14&quot;,
+    &quot;author&quot;: &quot;Haslemere Educational Museum&quot;,
+    &quot;evidence&quot;: &quot;source.json; source_page.html&quot;
+  },
+  &quot;difficulty_status&quot;: &quot;no_complete_failure_recorded&quot;,
+  &quot;annotation_provenance&quot;: &quot;author_manual_on_native_original&quot;,
+  &quot;preview&quot;: &quot;001.jpg&quot;,
+  &quot;nearcolor_pairs&quot;: [
+    {
+      &quot;a&quot;: &quot;A5&quot;,
+      &quot;b&quot;: &quot;A4&quot;,
+      &quot;deltaE76&quot;: 4.738739984170624
+    },
+    {
+      &quot;a&quot;: &quot;B4&quot;,
+      &quot;b&quot;: &quot;A2&quot;,
+      &quot;deltaE76&quot;: 1.7448106490188091
+    },
+    {
+      &quot;a&quot;: &quot;B4&quot;,
+      &quot;b&quot;: &quot;A3&quot;,
+      &quot;deltaE76&quot;: 3.085381410016886
+    },
+    {
+      &quot;a&quot;: &quot;B4&quot;,
+      &quot;b&quot;: &quot;A4&quot;,
+      &quot;deltaE76&quot;: 10.35736243350701
+    },
+    {
+      &quot;a&quot;: &quot;B4&quot;,
+      &quot;b&quot;: &quot;B3&quot;,
+      &quot;deltaE76&quot;: 7.984063579272368
+    },
+    {
+      &quot;a&quot;: &quot;B5&quot;,
+      &quot;b&quot;: &quot;A5&quot;,
+      &quot;deltaE76&quot;: 10.81727143135051
+    },
+    {
+      &quot;a&quot;: &quot;B5&quot;,
+      &quot;b&quot;: &quot;B4&quot;,
+      &quot;deltaE76&quot;: 1.5475466342819297
+    },
+    {
+      &quot;a&quot;: &quot;C3&quot;,
+      &quot;b&quot;: &quot;B4&quot;,
+      &quot;deltaE76&quot;: 9.025374568940153
+    },
+    {
+      &quot;a&quot;: &quot;C4&quot;,
+      &quot;b&quot;: &quot;B4&quot;,
+      &quot;deltaE76&quot;: 7.007094262539255
+    },
+    {
+      &quot;a&quot;: &quot;C4&quot;,
+      &quot;b&quot;: &quot;B5&quot;,
+      &quot;deltaE76&quot;: 5.813764081883172
+    },
+    {
+      &quot;a&quot;: &quot;C5&quot;,
+      &quot;b&quot;: &quot;C4&quot;,
+      &quot;deltaE76&quot;: 4.836490801037411
+    },
+    {
+      &quot;a&quot;: &quot;D2&quot;,
+      &quot;b&quot;: &quot;D1&quot;,
+      &quot;deltaE76&quot;: 11.897958248705578
+    }
+  ],
+  &quot;overlap_candidates&quot;: [
+    {
+      &quot;a&quot;: &quot;D4&quot;,
+      &quot;b&quot;: &quot;D3&quot;,
+      &quot;iom&quot;: 0.18163809523809524
+    },
+    {
+      &quot;a&quot;: &quot;D6&quot;,
+      &quot;b&quot;: &quot;D5&quot;,
+      &quot;iom&quot;: 0.1657142857142857
+    }
+  ],
+  &quot;roi_metrics&quot;: [
+    {
+      &quot;id&quot;: &quot;column_A&quot;,
+      &quot;file&quot;: &quot;001_roi1.png&quot;,
+      &quot;contrast_p90_p10&quot;: 222.0,
+      &quot;gray_entropy_bits&quot;: 7.038376331087786,
+      &quot;edge_fraction_16&quot;: 0.10974129264599214
+    },
+    {
+      &quot;id&quot;: &quot;column_B&quot;,
+      &quot;file&quot;: &quot;001_roi2.png&quot;,
+      &quot;contrast_p90_p10&quot;: 216.0,
+      &quot;gray_entropy_bits&quot;: 7.226855646121239,
+      &quot;edge_fraction_16&quot;: 0.12703238786092771
+    },
+    {
+      &quot;id&quot;: &quot;column_C&quot;,
+      &quot;file&quot;: &quot;001_roi3.png&quot;,
+      &quot;contrast_p90_p10&quot;: 219.0,
+      &quot;gray_entropy_bits&quot;: 7.000839572253075,
+      &quot;edge_fraction_16&quot;: 0.1156030512883608
+    },
+    {
+      &quot;id&quot;: &quot;column_D&quot;,
+      &quot;file&quot;: &quot;001_roi4.png&quot;,
+      &quot;contrast_p90_p10&quot;: 203.0,
+      &quot;gray_entropy_bits&quot;: 7.466889276074577,
+      &quot;edge_fraction_16&quot;: 0.12665824333881645
+    },
+    {
+      &quot;id&quot;: &quot;lower_boundary&quot;,
+      &quot;file&quot;: &quot;001_roi5.png&quot;,
+      &quot;contrast_p90_p10&quot;: 207.0,
+      &quot;gray_entropy_bits&quot;: 6.460868600376452,
+      &quot;edge_fraction_16&quot;: 0.07957923382876282
+    },
+    {
+      &quot;id&quot;: &quot;A5_small_spots&quot;,
+      &quot;file&quot;: &quot;001_roi6.png&quot;,
+      &quot;contrast_p90_p10&quot;: 203.0,
+      &quot;gray_entropy_bits&quot;: 7.1179062642496564,
+      &quot;edge_fraction_16&quot;: 0.1415643601190476
+    }
+  ],
+  &quot;reasoning_metrics&quot;: {
+    &quot;node_count&quot;: 19,
+    &quot;max_depth&quot;: 8,
+    &quot;branch_nodes&quot;: 9,
+    &quot;join_nodes&quot;: 6,
+    &quot;multi_visual_join_nodes&quot;: 6,
+    &quot;output_count&quot;: 6,
+    &quot;outputs_with_visual_ancestry&quot;: 6,
+    &quot;output_visual_coverage&quot;: 1.0,
+    &quot;state_nodes&quot;: 0,
+    &quot;parameter_nodes&quot;: 3,
+    &quot;output_evidence_regions&quot;: {
+      &quot;Q1&quot;: [
+        &quot;A5_small_spots&quot;,
+        &quot;column_A&quot;,
+        &quot;column_B&quot;,
+        &quot;column_C&quot;,
+        &quot;column_D&quot;,
+        &quot;lower_boundary&quot;
+      ],
+      &quot;Q2&quot;: [
+        &quot;A5_small_spots&quot;,
+        &quot;column_A&quot;,
+        &quot;column_B&quot;,
+        &quot;column_C&quot;,
+        &quot;column_D&quot;,
+        &quot;lower_boundary&quot;
+      ],
+      &quot;Q3&quot;: [
+        &quot;A5_small_spots&quot;,
+        &quot;column_A&quot;,
+        &quot;column_B&quot;,
+        &quot;column_C&quot;,
+        &quot;column_D&quot;,
+        &quot;lower_boundary&quot;
+      ],
+      &quot;Q4&quot;: [
+        &quot;A5_small_spots&quot;,
+        &quot;column_A&quot;,
+        &quot;column_B&quot;,
+        &quot;column_C&quot;,
+        &quot;column_D&quot;,
+        &quot;lower_boundary&quot;
+      ],
+      &quot;Q5&quot;: [
+        &quot;A5_small_spots&quot;,
+        &quot;column_A&quot;,
+        &quot;column_B&quot;,
+        &quot;column_C&quot;,
+        &quot;column_D&quot;,
+        &quot;lower_boundary&quot;
+      ],
+      &quot;Q6&quot;: [
+        &quot;A5_small_spots&quot;,
+        &quot;column_A&quot;,
+        &quot;column_B&quot;,
+        &quot;column_C&quot;,
+        &quot;column_D&quot;,
+        &quot;lower_boundary&quot;
+      ]
+    }
+  },
+  &quot;measurement_margins&quot;: [
+    {
+      &quot;id&quot;: &quot;membership_y_window&quot;,
+      &quot;ratio&quot;: 4.0,
+      &quot;unit&quot;: &quot;px&quot;
+    }
+  ],
+  &quot;platform_points&quot;: [
+    {
+      &quot;xy&quot;: [
+        580,
+        1015
+      ],
+      &quot;label&quot;: &quot;A5前翅只剩零星小点与鳞片，F=0&quot;
+    },
+    {
+      &quot;xy&quot;: [
+        1319,
+        814
+      ],
+      &quot;label&quot;: &quot;C4后翅奶油色斑，H=0&quot;
+    },
+    {
+      &quot;xy&quot;: [
+        1650,
+        992
+      ],
+      &quot;label&quot;: &quot;D6纯白短斑，F=0；需与上方青绿主斑区分&quot;
+    }
+  ],
+  &quot;evaluation_counts&quot;: {
+    &quot;correct&quot;: 0,
+    &quot;incorrect&quot;: 0,
+    &quot;timeout&quot;: 0,
+    &quot;infra_error&quot;: 0,
+    &quot;partial&quot;: 0
+  },
+  &quot;decision&quot;: &quot;authoring_candidate&quot;
+}</pre></article></html>

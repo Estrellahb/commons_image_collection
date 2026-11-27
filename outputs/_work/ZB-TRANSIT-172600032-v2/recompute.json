@@ -1,0 +1,3069 @@
+{
+  "baseline": {
+    "q1": {
+      "AB": 2,
+      "AC": 5,
+      "AD": 6,
+      "BC": 1,
+      "BD": 4,
+      "CD": 4
+    },
+    "q2": {
+      "AB/CD": 4,
+      "AC/BD": 10,
+      "AD/BC": 3
+    },
+    "q3": {
+      "cost": 10,
+      "count": 1,
+      "representative": [
+        "DL9427",
+        "UA9791",
+        "DL9184",
+        "SK556"
+      ],
+      "all_winners": [
+        [
+          "DL9427",
+          "UA9791",
+          "DL9184",
+          "SK556"
+        ]
+      ]
+    },
+    "q4": {
+      "cost": 140,
+      "count": 1,
+      "representative": [
+        "DL9427",
+        "UA9791",
+        "CI9293",
+        "CI9225"
+      ],
+      "all_winners": [
+        [
+          "DL9427",
+          "UA9791",
+          "CI9293",
+          "CI9225"
+        ]
+      ]
+    },
+    "q5": {
+      "count": 8,
+      "minimum_after_removal": {
+        "CI9225": 160,
+        "CI9291": 135,
+        "CI9293": 160,
+        "DL9351": 115,
+        "DL9427": 175,
+        "EI603": 135,
+        "UA9791": 175,
+        "VY8379": 135
+      }
+    },
+    "removal_traces": {
+      "CI9225": {
+        "cost": 160,
+        "count": 2,
+        "representative": [
+          "DL9427",
+          "UA9791",
+          "CZ7603",
+          "BA431"
+        ],
+        "all_winners": [
+          [
+            "DL9427",
+            "UA9791",
+            "CZ7603",
+            "BA431"
+          ],
+          [
+            "DL9427",
+            "UA9791",
+            "DL9184",
+            "SK556"
+          ]
+        ]
+      },
+      "CI9291": {
+        "cost": 135,
+        "count": 1,
+        "representative": [
+          "DL9427",
+          "UA9791",
+          "DL9184",
+          "SK556"
+        ],
+        "all_winners": [
+          [
+            "DL9427",
+            "UA9791",
+            "DL9184",
+            "SK556"
+          ]
+        ]
+      },
+      "CI9293": {
+        "cost": 160,
+        "count": 2,
+        "representative": [
+          "DL9427",
+          "UA9791",
+          "CZ7603",
+          "BA431"
+        ],
+        "all_winners": [
+          [
+            "DL9427",
+            "UA9791",
+            "CZ7603",
+            "BA431"
+          ],
+          [
+            "DL9427",
+            "UA9791",
+            "DL9184",
+            "SK556"
+          ]
+        ]
+      },
+      "DL9351": {
+        "cost": 115,
+        "count": 1,
+        "representative": [
+          "DL9427",
+          "UA9791",
+          "CI9293",
+          "CI9225"
+        ],
+        "all_winners": [
+          [
+            "DL9427",
+            "UA9791",
+            "CI9293",
+            "CI9225"
+          ]
+        ]
+      },
+      "DL9427": {
+        "cost": 175,
+        "count": 1,
+        "representative": [
+          "CZ7644",
+          "KQ1363",
+          "LO266",
+          "CI9230"
+        ],
+        "all_winners": [
+          [
+            "CZ7644",
+            "KQ1363",
+            "LO266",
+            "CI9230"
+          ]
+        ]
+      },
+      "EI603": {
+        "cost": 135,
+        "count": 1,
+        "representative": [
+          "DL9427",
+          "UA9791",
+          "CZ7603",
+          "BA431"
+        ],
+        "all_winners": [
+          [
+            "DL9427",
+            "UA9791",
+            "CZ7603",
+            "BA431"
+          ]
+        ]
+      },
+      "UA9791": {
+        "cost": 175,
+        "count": 1,
+        "representative": [
+          "CZ7644",
+          "KQ1363",
+          "LO266",
+          "CI9230"
+        ],
+        "all_winners": [
+          [
+            "CZ7644",
+            "KQ1363",
+            "LO266",
+            "CI9230"
+          ]
+        ]
+      },
+      "VY8379": {
+        "cost": 135,
+        "count": 1,
+        "representative": [
+          "DL9427",
+          "UA9791",
+          "DL9184",
+          "SK556"
+        ],
+        "all_winners": [
+          [
+            "DL9427",
+            "UA9791",
+            "DL9184",
+            "SK556"
+          ]
+        ]
+      }
+    },
+    "gate_occupancy": {
+      "B1": 3,
+      "B15": 2,
+      "B16": 1,
+      "B17": 2,
+      "B2": 1,
+      "B20": 1,
+      "B22": 1,
+      "B23": 2,
+      "B24": 1,
+      "B26": 2,
+      "B27": 2,
+      "B28": 1,
+      "B3": 2,
+      "B30": 2,
+      "B31": 3,
+      "B32": 1,
+      "B34": 1,
+      "B35": 1,
+      "B4": 1,
+      "B5": 1,
+      "B6": 1,
+      "B7": 2,
+      "B8": 1,
+      "C10": 1,
+      "C11": 2,
+      "C12": 2,
+      "C13": 1,
+      "C14": 2,
+      "C15": 1,
+      "C16": 1,
+      "C18": 2,
+      "C22": 2,
+      "C24": 1,
+      "C5": 2,
+      "C6": 1,
+      "C7": 2,
+      "C8": 2,
+      "D10": 1,
+      "D14": 1,
+      "D16": 2,
+      "D18": 2,
+      "D22": 1,
+      "D24": 1,
+      "D25": 1,
+      "D26": 1,
+      "D28": 1,
+      "D31": 1,
+      "D47": 1,
+      "D49": 1,
+      "D53": 1,
+      "D57": 1,
+      "D6": 5,
+      "D63": 1,
+      "D68": 1,
+      "D71": 1,
+      "D73": 1,
+      "D74": 1,
+      "D78": 1,
+      "D82": 1,
+      "D84": 1,
+      "D86": 1,
+      "E17": 1,
+      "E18": 1,
+      "E20": 1,
+      "E21": 5,
+      "E24": 2,
+      "E5": 1,
+      "E6": 1,
+      "E7": 1,
+      "E8": 1,
+      "E9": 1,
+      "F3": 1,
+      "F4": 1,
+      "F5": 1,
+      "F8": 1,
+      "F9": 1,
+      "G1": 2,
+      "G2": 1,
+      "G3": 1,
+      "G4": 1,
+      "G5": 1,
+      "G6": 2,
+      "G7": 2,
+      "G8": 1,
+      "G9": 1,
+      "H1": 1
+    },
+    "candidate_pairs": {
+      "AB": [
+        [
+          {
+            "screen": "A",
+            "time": "09:35",
+            "destination": "Dublin",
+            "flight": "EI603",
+            "help": "",
+            "gate": "D18",
+            "row_number": 23
+          },
+          {
+            "screen": "B",
+            "time": "09:45",
+            "destination": "Dublin",
+            "flight": "DL9226",
+            "help": "",
+            "gate": "D14",
+            "row_number": 1
+          }
+        ],
+        [
+          {
+            "screen": "A",
+            "time": "09:45",
+            "destination": "Zurich",
+            "flight": "DL9427",
+            "help": "",
+            "gate": "D82",
+            "row_number": 31
+          },
+          {
+            "screen": "B",
+            "time": "09:50",
+            "destination": "Zurich",
+            "flight": "UA9791",
+            "help": "T3",
+            "gate": "B35",
+            "row_number": 5
+          }
+        ]
+      ],
+      "AC": [
+        [
+          {
+            "screen": "A",
+            "time": "09:20",
+            "destination": "Paramaribo",
+            "flight": "KL0713",
+            "help": "",
+            "gate": "E24",
+            "row_number": 6
+          },
+          {
+            "screen": "C",
+            "time": "10:20",
+            "destination": "Paramaribo",
+            "flight": "PY993",
+            "help": "",
+            "gate": "G3",
+            "row_number": 7
+          }
+        ],
+        [
+          {
+            "screen": "A",
+            "time": "09:20",
+            "destination": "Oslo",
+            "flight": "DL9402",
+            "help": "",
+            "gate": "C8",
+            "row_number": 8
+          },
+          {
+            "screen": "C",
+            "time": "10:40",
+            "destination": "Oslo",
+            "flight": "SK822",
+            "help": "",
+            "gate": "C8",
+            "row_number": 25
+          }
+        ],
+        [
+          {
+            "screen": "A",
+            "time": "09:20",
+            "destination": "Copenhagen",
+            "flight": "DL9211",
+            "help": "",
+            "gate": "C12",
+            "row_number": 10
+          },
+          {
+            "screen": "C",
+            "time": "10:25",
+            "destination": "Copenhagen",
+            "flight": "SK552",
+            "help": "",
+            "gate": "C12",
+            "row_number": 13
+          }
+        ],
+        [
+          {
+            "screen": "A",
+            "time": "09:30",
+            "destination": "Paris de Gaulle",
+            "flight": "CI9291",
+            "help": "",
+            "gate": "C5",
+            "row_number": 13
+          },
+          {
+            "screen": "C",
+            "time": "10:35",
+            "destination": "Paris de Gaulle",
+            "flight": "CI9293",
+            "help": "",
+            "gate": "C15",
+            "row_number": 21
+          }
+        ],
+        [
+          {
+            "screen": "A",
+            "time": "09:40",
+            "destination": "Minneapolis",
+            "flight": "VS3947",
+            "help": "",
+            "gate": "G6",
+            "row_number": 26
+          },
+          {
+            "screen": "C",
+            "time": "10:45",
+            "destination": "Minneapolis",
+            "flight": "VS7141",
+            "help": "",
+            "gate": "G9",
+            "row_number": 27
+          }
+        ]
+      ],
+      "AD": [
+        [
+          {
+            "screen": "A",
+            "time": "09:20",
+            "destination": "Bucharest",
+            "flight": "SK6800",
+            "help": "",
+            "gate": "D74",
+            "row_number": 9
+          },
+          {
+            "screen": "D",
+            "time": "11:40",
+            "destination": "Bucharest",
+            "flight": "RO362",
+            "help": "T5",
+            "gate": "B31",
+            "row_number": 25
+          }
+        ],
+        [
+          {
+            "screen": "A",
+            "time": "09:30",
+            "destination": "Paris de Gaulle",
+            "flight": "CI9291",
+            "help": "",
+            "gate": "C5",
+            "row_number": 13
+          },
+          {
+            "screen": "D",
+            "time": "11:35",
+            "destination": "Paris de Gaulle",
+            "flight": "CI9225",
+            "help": "",
+            "gate": "C11",
+            "row_number": 22
+          }
+        ],
+        [
+          {
+            "screen": "A",
+            "time": "09:30",
+            "destination": "Madrid",
+            "flight": "CZ7644",
+            "help": "",
+            "gate": "D78",
+            "row_number": 14
+          },
+          {
+            "screen": "D",
+            "time": "11:00",
+            "destination": "Madrid",
+            "flight": "CI9230",
+            "help": "T5",
+            "gate": "D63",
+            "row_number": 3
+          }
+        ],
+        [
+          {
+            "screen": "A",
+            "time": "09:30",
+            "destination": "London City",
+            "flight": "VS7036",
+            "help": "",
+            "gate": "D6",
+            "row_number": 16
+          },
+          {
+            "screen": "D",
+            "time": "11:25",
+            "destination": "London City",
+            "flight": "BA8452",
+            "help": "",
+            "gate": "D16",
+            "row_number": 18
+          }
+        ],
+        [
+          {
+            "screen": "A",
+            "time": "09:35",
+            "destination": "Malaga",
+            "flight": "DL9182",
+            "help": "",
+            "gate": "C18",
+            "row_number": 24
+          },
+          {
+            "screen": "D",
+            "time": "11:10",
+            "destination": "Malaga",
+            "flight": "KL2539",
+            "help": "",
+            "gate": "C18",
+            "row_number": 8
+          }
+        ],
+        [
+          {
+            "screen": "A",
+            "time": "09:40",
+            "destination": "Munich",
+            "flight": "DL9370",
+            "help": "",
+            "gate": "D86",
+            "row_number": 27
+          },
+          {
+            "screen": "D",
+            "time": "11:15",
+            "destination": "Munich",
+            "flight": "TG7853",
+            "help": "T3",
+            "gate": "B31",
+            "row_number": 12
+          }
+        ]
+      ],
+      "BC": [
+        [
+          {
+            "screen": "B",
+            "time": "09:55",
+            "destination": "Warsaw",
+            "flight": "KQ1363",
+            "help": "",
+            "gate": "D68",
+            "row_number": 15
+          },
+          {
+            "screen": "C",
+            "time": "10:30",
+            "destination": "Warsaw",
+            "flight": "LO266",
+            "help": "",
+            "gate": "B32",
+            "row_number": 19
+          }
+        ]
+      ],
+      "BD": [
+        [
+          {
+            "screen": "B",
+            "time": "09:50",
+            "destination": "Frankfurt",
+            "flight": "DL9235",
+            "help": "",
+            "gate": "B7",
+            "row_number": 4
+          },
+          {
+            "screen": "D",
+            "time": "11:20",
+            "destination": "Frankfurt",
+            "flight": "UA9203",
+            "help": "T3",
+            "gate": "B27",
+            "row_number": 16
+          }
+        ],
+        [
+          {
+            "screen": "B",
+            "time": "09:55",
+            "destination": "Houston",
+            "flight": "VS7123",
+            "help": "",
+            "gate": "F8",
+            "row_number": 11
+          },
+          {
+            "screen": "D",
+            "time": "11:00",
+            "destination": "Houston",
+            "flight": "UA021",
+            "help": "T5",
+            "gate": "G1",
+            "row_number": 1
+          }
+        ],
+        [
+          {
+            "screen": "B",
+            "time": "10:00",
+            "destination": "Frankfurt",
+            "flight": "AI8542",
+            "help": "T3",
+            "gate": "B31",
+            "row_number": 21
+          },
+          {
+            "screen": "D",
+            "time": "11:20",
+            "destination": "Frankfurt",
+            "flight": "UA9203",
+            "help": "T3",
+            "gate": "B27",
+            "row_number": 16
+          }
+        ],
+        [
+          {
+            "screen": "B",
+            "time": "10:00",
+            "destination": "New York JFK",
+            "flight": "VS3941",
+            "help": "",
+            "gate": "D49",
+            "row_number": 25
+          },
+          {
+            "screen": "D",
+            "time": "11:10",
+            "destination": "New York JFK",
+            "flight": "VS3951",
+            "help": "",
+            "gate": "D57",
+            "row_number": 9
+          }
+        ]
+      ],
+      "CD": [
+        [
+          {
+            "screen": "C",
+            "time": "10:20",
+            "destination": "London Heathrow",
+            "flight": "BA429",
+            "help": "",
+            "gate": "D16",
+            "row_number": 8
+          },
+          {
+            "screen": "D",
+            "time": "11:40",
+            "destination": "London Heathrow",
+            "flight": "BA431",
+            "help": "",
+            "gate": "D18",
+            "row_number": 24
+          }
+        ],
+        [
+          {
+            "screen": "C",
+            "time": "10:20",
+            "destination": "London Heathrow",
+            "flight": "CZ7603",
+            "help": "",
+            "gate": "D25",
+            "row_number": 11
+          },
+          {
+            "screen": "D",
+            "time": "11:40",
+            "destination": "London Heathrow",
+            "flight": "BA431",
+            "help": "",
+            "gate": "D18",
+            "row_number": 24
+          }
+        ],
+        [
+          {
+            "screen": "C",
+            "time": "10:35",
+            "destination": "Paris de Gaulle",
+            "flight": "CI9293",
+            "help": "",
+            "gate": "C15",
+            "row_number": 21
+          },
+          {
+            "screen": "D",
+            "time": "11:35",
+            "destination": "Paris de Gaulle",
+            "flight": "CI9225",
+            "help": "",
+            "gate": "C11",
+            "row_number": 22
+          }
+        ],
+        [
+          {
+            "screen": "C",
+            "time": "10:55",
+            "destination": "Stockholm",
+            "flight": "DL9184",
+            "help": "",
+            "gate": "C5",
+            "row_number": 29
+          },
+          {
+            "screen": "D",
+            "time": "11:00",
+            "destination": "Stockholm",
+            "flight": "SK556",
+            "help": "",
+            "gate": "B17",
+            "row_number": 4
+          }
+        ]
+      ]
+    },
+    "complete_plans": {
+      "AB/CD": [
+        {
+          "flights": [
+            "DL9427",
+            "UA9791",
+            "BA429",
+            "BA431"
+          ],
+          "destinations": [
+            "Zurich",
+            "London Heathrow"
+          ],
+          "time_points": 85,
+          "prefix_changes": 1,
+          "other_gate_rows": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "congested_points": 185
+        },
+        {
+          "flights": [
+            "DL9427",
+            "UA9791",
+            "CZ7603",
+            "BA431"
+          ],
+          "destinations": [
+            "Zurich",
+            "London Heathrow"
+          ],
+          "time_points": 85,
+          "prefix_changes": 1,
+          "other_gate_rows": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "congested_points": 160
+        },
+        {
+          "flights": [
+            "DL9427",
+            "UA9791",
+            "CI9293",
+            "CI9225"
+          ],
+          "destinations": [
+            "Zurich",
+            "Paris de Gaulle"
+          ],
+          "time_points": 65,
+          "prefix_changes": 1,
+          "other_gate_rows": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "congested_points": 140
+        },
+        {
+          "flights": [
+            "DL9427",
+            "UA9791",
+            "DL9184",
+            "SK556"
+          ],
+          "destinations": [
+            "Zurich",
+            "Stockholm"
+          ],
+          "time_points": 10,
+          "prefix_changes": 2,
+          "other_gate_rows": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "congested_points": 160
+        }
+      ],
+      "AC/BD": [
+        {
+          "flights": [
+            "KL0713",
+            "DL9235",
+            "PY993",
+            "UA9203"
+          ],
+          "destinations": [
+            "Paramaribo",
+            "Frankfurt"
+          ],
+          "time_points": 150,
+          "prefix_changes": 1,
+          "other_gate_rows": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "congested_points": 275
+        },
+        {
+          "flights": [
+            "KL0713",
+            "VS7123",
+            "PY993",
+            "UA021"
+          ],
+          "destinations": [
+            "Paramaribo",
+            "Houston"
+          ],
+          "time_points": 125,
+          "prefix_changes": 2,
+          "other_gate_rows": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "congested_points": 275
+        },
+        {
+          "flights": [
+            "DL9402",
+            "DL9235",
+            "SK822",
+            "UA9203"
+          ],
+          "destinations": [
+            "Oslo",
+            "Frankfurt"
+          ],
+          "time_points": 170,
+          "prefix_changes": 0,
+          "other_gate_rows": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "congested_points": 270
+        },
+        {
+          "flights": [
+            "DL9402",
+            "VS7123",
+            "SK822",
+            "UA021"
+          ],
+          "destinations": [
+            "Oslo",
+            "Houston"
+          ],
+          "time_points": 145,
+          "prefix_changes": 1,
+          "other_gate_rows": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "congested_points": 270
+        },
+        {
+          "flights": [
+            "DL9211",
+            "DL9235",
+            "SK552",
+            "UA9203"
+          ],
+          "destinations": [
+            "Copenhagen",
+            "Frankfurt"
+          ],
+          "time_points": 155,
+          "prefix_changes": 0,
+          "other_gate_rows": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "congested_points": 255
+        },
+        {
+          "flights": [
+            "DL9211",
+            "VS7123",
+            "SK552",
+            "UA021"
+          ],
+          "destinations": [
+            "Copenhagen",
+            "Houston"
+          ],
+          "time_points": 130,
+          "prefix_changes": 1,
+          "other_gate_rows": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "congested_points": 255
+        },
+        {
+          "flights": [
+            "CI9291",
+            "DL9235",
+            "CI9293",
+            "UA9203"
+          ],
+          "destinations": [
+            "Paris de Gaulle",
+            "Frankfurt"
+          ],
+          "time_points": 155,
+          "prefix_changes": 0,
+          "other_gate_rows": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "congested_points": 230
+        },
+        {
+          "flights": [
+            "CI9291",
+            "VS7123",
+            "CI9293",
+            "UA021"
+          ],
+          "destinations": [
+            "Paris de Gaulle",
+            "Houston"
+          ],
+          "time_points": 130,
+          "prefix_changes": 1,
+          "other_gate_rows": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "congested_points": 230
+        },
+        {
+          "flights": [
+            "VS3947",
+            "DL9235",
+            "VS7141",
+            "UA9203"
+          ],
+          "destinations": [
+            "Minneapolis",
+            "Frankfurt"
+          ],
+          "time_points": 155,
+          "prefix_changes": 0,
+          "other_gate_rows": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "congested_points": 230
+        },
+        {
+          "flights": [
+            "VS3947",
+            "VS7123",
+            "VS7141",
+            "UA021"
+          ],
+          "destinations": [
+            "Minneapolis",
+            "Houston"
+          ],
+          "time_points": 130,
+          "prefix_changes": 1,
+          "other_gate_rows": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "congested_points": 230
+        }
+      ],
+      "AD/BC": [
+        {
+          "flights": [
+            "SK6800",
+            "KQ1363",
+            "LO266",
+            "RO362"
+          ],
+          "destinations": [
+            "Bucharest",
+            "Warsaw"
+          ],
+          "time_points": 175,
+          "prefix_changes": 2,
+          "other_gate_rows": [
+            0,
+            0,
+            0,
+            2
+          ],
+          "congested_points": 325
+        },
+        {
+          "flights": [
+            "CZ7644",
+            "KQ1363",
+            "LO266",
+            "CI9230"
+          ],
+          "destinations": [
+            "Madrid",
+            "Warsaw"
+          ],
+          "time_points": 125,
+          "prefix_changes": 1,
+          "other_gate_rows": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "congested_points": 175
+        },
+        {
+          "flights": [
+            "DL9370",
+            "KQ1363",
+            "LO266",
+            "TG7853"
+          ],
+          "destinations": [
+            "Munich",
+            "Warsaw"
+          ],
+          "time_points": 130,
+          "prefix_changes": 2,
+          "other_gate_rows": [
+            0,
+            0,
+            0,
+            2
+          ],
+          "congested_points": 280
+        }
+      ]
+    }
+  },
+  "alternative": {
+    "q1": {
+      "AB": 2,
+      "AC": 5,
+      "AD": 6,
+      "BC": 1,
+      "BD": 4,
+      "CD": 4
+    },
+    "q2": {
+      "AB/CD": 0,
+      "AC/BD": 5,
+      "AD/BC": 3
+    },
+    "q3": {
+      "cost": 125,
+      "count": 2,
+      "representative": [
+        "CZ7644",
+        "KQ1363",
+        "LO266",
+        "CI9230"
+      ],
+      "all_winners": [
+        [
+          "CZ7644",
+          "KQ1363",
+          "LO266",
+          "CI9230"
+        ],
+        [
+          "KL0713",
+          "VS7123",
+          "PY993",
+          "UA021"
+        ]
+      ]
+    },
+    "q4": {
+      "cost": 175,
+      "count": 1,
+      "representative": [
+        "CZ7644",
+        "KQ1363",
+        "LO266",
+        "CI9230"
+      ],
+      "all_winners": [
+        [
+          "CZ7644",
+          "KQ1363",
+          "LO266",
+          "CI9230"
+        ]
+      ]
+    },
+    "q5": {
+      "count": 4,
+      "minimum_after_removal": {
+        "CI9230": 230,
+        "CZ7644": 230,
+        "KQ1363": 230,
+        "LO266": 230
+      }
+    },
+    "removal_traces": {
+      "CI9230": {
+        "cost": 230,
+        "count": 2,
+        "representative": [
+          "CI9291",
+          "VS7123",
+          "CI9293",
+          "UA021"
+        ],
+        "all_winners": [
+          [
+            "CI9291",
+            "VS7123",
+            "CI9293",
+            "UA021"
+          ],
+          [
+            "VS3947",
+            "VS7123",
+            "VS7141",
+            "UA021"
+          ]
+        ]
+      },
+      "CZ7644": {
+        "cost": 230,
+        "count": 2,
+        "representative": [
+          "CI9291",
+          "VS7123",
+          "CI9293",
+          "UA021"
+        ],
+        "all_winners": [
+          [
+            "CI9291",
+            "VS7123",
+            "CI9293",
+            "UA021"
+          ],
+          [
+            "VS3947",
+            "VS7123",
+            "VS7141",
+            "UA021"
+          ]
+        ]
+      },
+      "KQ1363": {
+        "cost": 230,
+        "count": 2,
+        "representative": [
+          "CI9291",
+          "VS7123",
+          "CI9293",
+          "UA021"
+        ],
+        "all_winners": [
+          [
+            "CI9291",
+            "VS7123",
+            "CI9293",
+            "UA021"
+          ],
+          [
+            "VS3947",
+            "VS7123",
+            "VS7141",
+            "UA021"
+          ]
+        ]
+      },
+      "LO266": {
+        "cost": 230,
+        "count": 2,
+        "representative": [
+          "CI9291",
+          "VS7123",
+          "CI9293",
+          "UA021"
+        ],
+        "all_winners": [
+          [
+            "CI9291",
+            "VS7123",
+            "CI9293",
+            "UA021"
+          ],
+          [
+            "VS3947",
+            "VS7123",
+            "VS7141",
+            "UA021"
+          ]
+        ]
+      }
+    },
+    "gate_occupancy": {
+      "B1": 3,
+      "B15": 2,
+      "B16": 1,
+      "B17": 2,
+      "B2": 1,
+      "B20": 1,
+      "B22": 1,
+      "B23": 2,
+      "B24": 1,
+      "B26": 2,
+      "B27": 2,
+      "B28": 1,
+      "B3": 2,
+      "B30": 2,
+      "B31": 3,
+      "B32": 1,
+      "B34": 1,
+      "B35": 1,
+      "B4": 1,
+      "B5": 1,
+      "B6": 1,
+      "B7": 2,
+      "B8": 1,
+      "C10": 1,
+      "C11": 2,
+      "C12": 2,
+      "C13": 1,
+      "C14": 2,
+      "C15": 1,
+      "C16": 1,
+      "C18": 2,
+      "C22": 2,
+      "C24": 1,
+      "C5": 2,
+      "C6": 1,
+      "C7": 2,
+      "C8": 2,
+      "D10": 1,
+      "D14": 1,
+      "D16": 2,
+      "D18": 2,
+      "D22": 1,
+      "D24": 1,
+      "D25": 1,
+      "D26": 1,
+      "D28": 1,
+      "D31": 1,
+      "D47": 1,
+      "D49": 1,
+      "D53": 1,
+      "D57": 1,
+      "D6": 5,
+      "D63": 1,
+      "D68": 1,
+      "D71": 1,
+      "D73": 1,
+      "D74": 1,
+      "D78": 1,
+      "D82": 1,
+      "D84": 1,
+      "D86": 1,
+      "E17": 1,
+      "E18": 1,
+      "E20": 1,
+      "E21": 5,
+      "E24": 2,
+      "E5": 1,
+      "E6": 1,
+      "E7": 1,
+      "E8": 1,
+      "E9": 1,
+      "F3": 1,
+      "F4": 1,
+      "F5": 1,
+      "F8": 1,
+      "F9": 1,
+      "G1": 2,
+      "G2": 1,
+      "G3": 1,
+      "G4": 1,
+      "G5": 1,
+      "G6": 2,
+      "G7": 2,
+      "G8": 1,
+      "G9": 1,
+      "H1": 1
+    },
+    "candidate_pairs": {
+      "AB": [
+        [
+          {
+            "screen": "A",
+            "time": "09:35",
+            "destination": "Dublin",
+            "flight": "EI603",
+            "help": "",
+            "gate": "D18",
+            "row_number": 23
+          },
+          {
+            "screen": "B",
+            "time": "09:45",
+            "destination": "Dublin",
+            "flight": "DL9226",
+            "help": "",
+            "gate": "D14",
+            "row_number": 1
+          }
+        ],
+        [
+          {
+            "screen": "A",
+            "time": "09:45",
+            "destination": "Zurich",
+            "flight": "DL9427",
+            "help": "",
+            "gate": "D82",
+            "row_number": 31
+          },
+          {
+            "screen": "B",
+            "time": "09:50",
+            "destination": "Zurich",
+            "flight": "UA9791",
+            "help": "",
+            "gate": "B35",
+            "row_number": 5
+          }
+        ]
+      ],
+      "AC": [
+        [
+          {
+            "screen": "A",
+            "time": "09:20",
+            "destination": "Paramaribo",
+            "flight": "KL0713",
+            "help": "",
+            "gate": "E24",
+            "row_number": 6
+          },
+          {
+            "screen": "C",
+            "time": "10:20",
+            "destination": "Paramaribo",
+            "flight": "PY993",
+            "help": "",
+            "gate": "G3",
+            "row_number": 7
+          }
+        ],
+        [
+          {
+            "screen": "A",
+            "time": "09:20",
+            "destination": "Oslo",
+            "flight": "DL9402",
+            "help": "",
+            "gate": "C8",
+            "row_number": 8
+          },
+          {
+            "screen": "C",
+            "time": "10:40",
+            "destination": "Oslo",
+            "flight": "SK822",
+            "help": "",
+            "gate": "C8",
+            "row_number": 25
+          }
+        ],
+        [
+          {
+            "screen": "A",
+            "time": "09:20",
+            "destination": "Copenhagen",
+            "flight": "DL9211",
+            "help": "",
+            "gate": "C12",
+            "row_number": 10
+          },
+          {
+            "screen": "C",
+            "time": "10:25",
+            "destination": "Copenhagen",
+            "flight": "SK552",
+            "help": "",
+            "gate": "C12",
+            "row_number": 13
+          }
+        ],
+        [
+          {
+            "screen": "A",
+            "time": "09:30",
+            "destination": "Paris de Gaulle",
+            "flight": "CI9291",
+            "help": "",
+            "gate": "C5",
+            "row_number": 13
+          },
+          {
+            "screen": "C",
+            "time": "10:35",
+            "destination": "Paris de Gaulle",
+            "flight": "CI9293",
+            "help": "",
+            "gate": "C15",
+            "row_number": 21
+          }
+        ],
+        [
+          {
+            "screen": "A",
+            "time": "09:40",
+            "destination": "Minneapolis",
+            "flight": "VS3947",
+            "help": "",
+            "gate": "G6",
+            "row_number": 26
+          },
+          {
+            "screen": "C",
+            "time": "10:45",
+            "destination": "Minneapolis",
+            "flight": "VS7141",
+            "help": "",
+            "gate": "G9",
+            "row_number": 27
+          }
+        ]
+      ],
+      "AD": [
+        [
+          {
+            "screen": "A",
+            "time": "09:20",
+            "destination": "Bucharest",
+            "flight": "SK6800",
+            "help": "",
+            "gate": "D74",
+            "row_number": 9
+          },
+          {
+            "screen": "D",
+            "time": "11:40",
+            "destination": "Bucharest",
+            "flight": "RO362",
+            "help": "T5",
+            "gate": "B31",
+            "row_number": 25
+          }
+        ],
+        [
+          {
+            "screen": "A",
+            "time": "09:30",
+            "destination": "Paris de Gaulle",
+            "flight": "CI9291",
+            "help": "",
+            "gate": "C5",
+            "row_number": 13
+          },
+          {
+            "screen": "D",
+            "time": "11:35",
+            "destination": "Paris de Gaulle",
+            "flight": "CI9225",
+            "help": "",
+            "gate": "C11",
+            "row_number": 22
+          }
+        ],
+        [
+          {
+            "screen": "A",
+            "time": "09:30",
+            "destination": "Madrid",
+            "flight": "CZ7644",
+            "help": "",
+            "gate": "D78",
+            "row_number": 14
+          },
+          {
+            "screen": "D",
+            "time": "11:00",
+            "destination": "Madrid",
+            "flight": "CI9230",
+            "help": "T5",
+            "gate": "D63",
+            "row_number": 3
+          }
+        ],
+        [
+          {
+            "screen": "A",
+            "time": "09:30",
+            "destination": "London City",
+            "flight": "VS7036",
+            "help": "",
+            "gate": "D6",
+            "row_number": 16
+          },
+          {
+            "screen": "D",
+            "time": "11:25",
+            "destination": "London City",
+            "flight": "BA8452",
+            "help": "",
+            "gate": "D16",
+            "row_number": 18
+          }
+        ],
+        [
+          {
+            "screen": "A",
+            "time": "09:35",
+            "destination": "Malaga",
+            "flight": "DL9182",
+            "help": "",
+            "gate": "C18",
+            "row_number": 24
+          },
+          {
+            "screen": "D",
+            "time": "11:10",
+            "destination": "Malaga",
+            "flight": "KL2539",
+            "help": "",
+            "gate": "C18",
+            "row_number": 8
+          }
+        ],
+        [
+          {
+            "screen": "A",
+            "time": "09:40",
+            "destination": "Munich",
+            "flight": "DL9370",
+            "help": "",
+            "gate": "D86",
+            "row_number": 27
+          },
+          {
+            "screen": "D",
+            "time": "11:15",
+            "destination": "Munich",
+            "flight": "TG7853",
+            "help": "T3",
+            "gate": "B31",
+            "row_number": 12
+          }
+        ]
+      ],
+      "BC": [
+        [
+          {
+            "screen": "B",
+            "time": "09:55",
+            "destination": "Warsaw",
+            "flight": "KQ1363",
+            "help": "",
+            "gate": "D68",
+            "row_number": 15
+          },
+          {
+            "screen": "C",
+            "time": "10:30",
+            "destination": "Warsaw",
+            "flight": "LO266",
+            "help": "",
+            "gate": "B32",
+            "row_number": 19
+          }
+        ]
+      ],
+      "BD": [
+        [
+          {
+            "screen": "B",
+            "time": "09:50",
+            "destination": "Frankfurt",
+            "flight": "DL9235",
+            "help": "T3",
+            "gate": "B7",
+            "row_number": 4
+          },
+          {
+            "screen": "D",
+            "time": "11:20",
+            "destination": "Frankfurt",
+            "flight": "UA9203",
+            "help": "T3",
+            "gate": "B27",
+            "row_number": 16
+          }
+        ],
+        [
+          {
+            "screen": "B",
+            "time": "09:55",
+            "destination": "Houston",
+            "flight": "VS7123",
+            "help": "",
+            "gate": "F8",
+            "row_number": 11
+          },
+          {
+            "screen": "D",
+            "time": "11:00",
+            "destination": "Houston",
+            "flight": "UA021",
+            "help": "T5",
+            "gate": "G1",
+            "row_number": 1
+          }
+        ],
+        [
+          {
+            "screen": "B",
+            "time": "10:00",
+            "destination": "Frankfurt",
+            "flight": "AI8542",
+            "help": "T3",
+            "gate": "B31",
+            "row_number": 21
+          },
+          {
+            "screen": "D",
+            "time": "11:20",
+            "destination": "Frankfurt",
+            "flight": "UA9203",
+            "help": "T3",
+            "gate": "B27",
+            "row_number": 16
+          }
+        ],
+        [
+          {
+            "screen": "B",
+            "time": "10:00",
+            "destination": "New York JFK",
+            "flight": "VS3941",
+            "help": "",
+            "gate": "D49",
+            "row_number": 25
+          },
+          {
+            "screen": "D",
+            "time": "11:10",
+            "destination": "New York JFK",
+            "flight": "VS3951",
+            "help": "",
+            "gate": "D57",
+            "row_number": 9
+          }
+        ]
+      ],
+      "CD": [
+        [
+          {
+            "screen": "C",
+            "time": "10:20",
+            "destination": "London Heathrow",
+            "flight": "BA429",
+            "help": "",
+            "gate": "D16",
+            "row_number": 8
+          },
+          {
+            "screen": "D",
+            "time": "11:40",
+            "destination": "London Heathrow",
+            "flight": "BA431",
+            "help": "",
+            "gate": "D18",
+            "row_number": 24
+          }
+        ],
+        [
+          {
+            "screen": "C",
+            "time": "10:20",
+            "destination": "London Heathrow",
+            "flight": "CZ7603",
+            "help": "",
+            "gate": "D25",
+            "row_number": 11
+          },
+          {
+            "screen": "D",
+            "time": "11:40",
+            "destination": "London Heathrow",
+            "flight": "BA431",
+            "help": "",
+            "gate": "D18",
+            "row_number": 24
+          }
+        ],
+        [
+          {
+            "screen": "C",
+            "time": "10:35",
+            "destination": "Paris de Gaulle",
+            "flight": "CI9293",
+            "help": "",
+            "gate": "C15",
+            "row_number": 21
+          },
+          {
+            "screen": "D",
+            "time": "11:35",
+            "destination": "Paris de Gaulle",
+            "flight": "CI9225",
+            "help": "",
+            "gate": "C11",
+            "row_number": 22
+          }
+        ],
+        [
+          {
+            "screen": "C",
+            "time": "10:55",
+            "destination": "Stockholm",
+            "flight": "DL9184",
+            "help": "",
+            "gate": "C5",
+            "row_number": 29
+          },
+          {
+            "screen": "D",
+            "time": "11:00",
+            "destination": "Stockholm",
+            "flight": "SK556",
+            "help": "",
+            "gate": "B17",
+            "row_number": 4
+          }
+        ]
+      ]
+    },
+    "complete_plans": {
+      "AB/CD": [],
+      "AC/BD": [
+        {
+          "flights": [
+            "KL0713",
+            "VS7123",
+            "PY993",
+            "UA021"
+          ],
+          "destinations": [
+            "Paramaribo",
+            "Houston"
+          ],
+          "time_points": 125,
+          "prefix_changes": 2,
+          "other_gate_rows": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "congested_points": 275
+        },
+        {
+          "flights": [
+            "DL9402",
+            "VS7123",
+            "SK822",
+            "UA021"
+          ],
+          "destinations": [
+            "Oslo",
+            "Houston"
+          ],
+          "time_points": 145,
+          "prefix_changes": 1,
+          "other_gate_rows": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "congested_points": 270
+        },
+        {
+          "flights": [
+            "DL9211",
+            "VS7123",
+            "SK552",
+            "UA021"
+          ],
+          "destinations": [
+            "Copenhagen",
+            "Houston"
+          ],
+          "time_points": 130,
+          "prefix_changes": 1,
+          "other_gate_rows": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "congested_points": 255
+        },
+        {
+          "flights": [
+            "CI9291",
+            "VS7123",
+            "CI9293",
+            "UA021"
+          ],
+          "destinations": [
+            "Paris de Gaulle",
+            "Houston"
+          ],
+          "time_points": 130,
+          "prefix_changes": 1,
+          "other_gate_rows": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "congested_points": 230
+        },
+        {
+          "flights": [
+            "VS3947",
+            "VS7123",
+            "VS7141",
+            "UA021"
+          ],
+          "destinations": [
+            "Minneapolis",
+            "Houston"
+          ],
+          "time_points": 130,
+          "prefix_changes": 1,
+          "other_gate_rows": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "congested_points": 230
+        }
+      ],
+      "AD/BC": [
+        {
+          "flights": [
+            "SK6800",
+            "KQ1363",
+            "LO266",
+            "RO362"
+          ],
+          "destinations": [
+            "Bucharest",
+            "Warsaw"
+          ],
+          "time_points": 175,
+          "prefix_changes": 2,
+          "other_gate_rows": [
+            0,
+            0,
+            0,
+            2
+          ],
+          "congested_points": 325
+        },
+        {
+          "flights": [
+            "CZ7644",
+            "KQ1363",
+            "LO266",
+            "CI9230"
+          ],
+          "destinations": [
+            "Madrid",
+            "Warsaw"
+          ],
+          "time_points": 125,
+          "prefix_changes": 1,
+          "other_gate_rows": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "congested_points": 175
+        },
+        {
+          "flights": [
+            "DL9370",
+            "KQ1363",
+            "LO266",
+            "TG7853"
+          ],
+          "destinations": [
+            "Munich",
+            "Warsaw"
+          ],
+          "time_points": 130,
+          "prefix_changes": 2,
+          "other_gate_rows": [
+            0,
+            0,
+            0,
+            2
+          ],
+          "congested_points": 280
+        }
+      ]
+    }
+  },
+  "alternative_gate": {
+    "q1": {
+      "AB": 2,
+      "AC": 5,
+      "AD": 6,
+      "BC": 1,
+      "BD": 4,
+      "CD": 4
+    },
+    "q2": {
+      "AB/CD": 4,
+      "AC/BD": 10,
+      "AD/BC": 3
+    },
+    "q3": {
+      "cost": 10,
+      "count": 1,
+      "representative": [
+        "DL9427",
+        "UA9791",
+        "DL9184",
+        "SK556"
+      ],
+      "all_winners": [
+        [
+          "DL9427",
+          "UA9791",
+          "DL9184",
+          "SK556"
+        ]
+      ]
+    },
+    "q4": {
+      "cost": 115,
+      "count": 1,
+      "representative": [
+        "DL9427",
+        "UA9791",
+        "CI9293",
+        "CI9225"
+      ],
+      "all_winners": [
+        [
+          "DL9427",
+          "UA9791",
+          "CI9293",
+          "CI9225"
+        ]
+      ]
+    },
+    "q5": {
+      "count": 4,
+      "minimum_after_removal": {
+        "CI9225": 160,
+        "CI9293": 160,
+        "DL9427": 175,
+        "UA9791": 175
+      }
+    },
+    "removal_traces": {
+      "CI9225": {
+        "cost": 160,
+        "count": 2,
+        "representative": [
+          "DL9427",
+          "UA9791",
+          "CZ7603",
+          "BA431"
+        ],
+        "all_winners": [
+          [
+            "DL9427",
+            "UA9791",
+            "CZ7603",
+            "BA431"
+          ],
+          [
+            "DL9427",
+            "UA9791",
+            "DL9184",
+            "SK556"
+          ]
+        ]
+      },
+      "CI9293": {
+        "cost": 160,
+        "count": 2,
+        "representative": [
+          "DL9427",
+          "UA9791",
+          "CZ7603",
+          "BA431"
+        ],
+        "all_winners": [
+          [
+            "DL9427",
+            "UA9791",
+            "CZ7603",
+            "BA431"
+          ],
+          [
+            "DL9427",
+            "UA9791",
+            "DL9184",
+            "SK556"
+          ]
+        ]
+      },
+      "DL9427": {
+        "cost": 175,
+        "count": 1,
+        "representative": [
+          "CZ7644",
+          "KQ1363",
+          "LO266",
+          "CI9230"
+        ],
+        "all_winners": [
+          [
+            "CZ7644",
+            "KQ1363",
+            "LO266",
+            "CI9230"
+          ]
+        ]
+      },
+      "UA9791": {
+        "cost": 175,
+        "count": 1,
+        "representative": [
+          "CZ7644",
+          "KQ1363",
+          "LO266",
+          "CI9230"
+        ],
+        "all_winners": [
+          [
+            "CZ7644",
+            "KQ1363",
+            "LO266",
+            "CI9230"
+          ]
+        ]
+      }
+    },
+    "gate_occupancy": {
+      "B1": 3,
+      "B15": 2,
+      "B16": 1,
+      "B17": 2,
+      "B2": 1,
+      "B20": 1,
+      "B22": 1,
+      "B23": 2,
+      "B24": 1,
+      "B26": 2,
+      "B27": 2,
+      "B28": 1,
+      "B3": 2,
+      "B30": 2,
+      "B31": 3,
+      "B32": 1,
+      "B34": 1,
+      "B35": 1,
+      "B4": 1,
+      "B5": 1,
+      "B6": 1,
+      "B7": 2,
+      "B8": 1,
+      "C1": 1,
+      "C10": 1,
+      "C11": 1,
+      "C12": 2,
+      "C13": 1,
+      "C14": 2,
+      "C15": 1,
+      "C16": 1,
+      "C18": 2,
+      "C22": 2,
+      "C24": 1,
+      "C5": 2,
+      "C6": 1,
+      "C7": 2,
+      "C8": 2,
+      "D10": 1,
+      "D14": 1,
+      "D16": 2,
+      "D18": 2,
+      "D22": 1,
+      "D24": 1,
+      "D25": 1,
+      "D26": 1,
+      "D28": 1,
+      "D31": 1,
+      "D47": 1,
+      "D49": 1,
+      "D53": 1,
+      "D57": 1,
+      "D6": 5,
+      "D63": 1,
+      "D68": 1,
+      "D71": 1,
+      "D73": 1,
+      "D74": 1,
+      "D78": 1,
+      "D82": 1,
+      "D84": 1,
+      "D86": 1,
+      "E17": 1,
+      "E18": 1,
+      "E20": 1,
+      "E21": 5,
+      "E24": 2,
+      "E5": 1,
+      "E6": 1,
+      "E7": 1,
+      "E8": 1,
+      "E9": 1,
+      "F3": 1,
+      "F4": 1,
+      "F5": 1,
+      "F8": 1,
+      "F9": 1,
+      "G1": 2,
+      "G2": 1,
+      "G3": 1,
+      "G4": 1,
+      "G5": 1,
+      "G6": 2,
+      "G7": 2,
+      "G8": 1,
+      "G9": 1,
+      "H1": 1
+    },
+    "candidate_pairs": {
+      "AB": [
+        [
+          {
+            "screen": "A",
+            "time": "09:35",
+            "destination": "Dublin",
+            "flight": "EI603",
+            "help": "",
+            "gate": "D18",
+            "row_number": 23
+          },
+          {
+            "screen": "B",
+            "time": "09:45",
+            "destination": "Dublin",
+            "flight": "DL9226",
+            "help": "",
+            "gate": "D14",
+            "row_number": 1
+          }
+        ],
+        [
+          {
+            "screen": "A",
+            "time": "09:45",
+            "destination": "Zurich",
+            "flight": "DL9427",
+            "help": "",
+            "gate": "D82",
+            "row_number": 31
+          },
+          {
+            "screen": "B",
+            "time": "09:50",
+            "destination": "Zurich",
+            "flight": "UA9791",
+            "help": "T3",
+            "gate": "B35",
+            "row_number": 5
+          }
+        ]
+      ],
+      "AC": [
+        [
+          {
+            "screen": "A",
+            "time": "09:20",
+            "destination": "Paramaribo",
+            "flight": "KL0713",
+            "help": "",
+            "gate": "E24",
+            "row_number": 6
+          },
+          {
+            "screen": "C",
+            "time": "10:20",
+            "destination": "Paramaribo",
+            "flight": "PY993",
+            "help": "",
+            "gate": "G3",
+            "row_number": 7
+          }
+        ],
+        [
+          {
+            "screen": "A",
+            "time": "09:20",
+            "destination": "Oslo",
+            "flight": "DL9402",
+            "help": "",
+            "gate": "C8",
+            "row_number": 8
+          },
+          {
+            "screen": "C",
+            "time": "10:40",
+            "destination": "Oslo",
+            "flight": "SK822",
+            "help": "",
+            "gate": "C8",
+            "row_number": 25
+          }
+        ],
+        [
+          {
+            "screen": "A",
+            "time": "09:20",
+            "destination": "Copenhagen",
+            "flight": "DL9211",
+            "help": "",
+            "gate": "C12",
+            "row_number": 10
+          },
+          {
+            "screen": "C",
+            "time": "10:25",
+            "destination": "Copenhagen",
+            "flight": "SK552",
+            "help": "",
+            "gate": "C12",
+            "row_number": 13
+          }
+        ],
+        [
+          {
+            "screen": "A",
+            "time": "09:30",
+            "destination": "Paris de Gaulle",
+            "flight": "CI9291",
+            "help": "",
+            "gate": "C5",
+            "row_number": 13
+          },
+          {
+            "screen": "C",
+            "time": "10:35",
+            "destination": "Paris de Gaulle",
+            "flight": "CI9293",
+            "help": "",
+            "gate": "C15",
+            "row_number": 21
+          }
+        ],
+        [
+          {
+            "screen": "A",
+            "time": "09:40",
+            "destination": "Minneapolis",
+            "flight": "VS3947",
+            "help": "",
+            "gate": "G6",
+            "row_number": 26
+          },
+          {
+            "screen": "C",
+            "time": "10:45",
+            "destination": "Minneapolis",
+            "flight": "VS7141",
+            "help": "",
+            "gate": "G9",
+            "row_number": 27
+          }
+        ]
+      ],
+      "AD": [
+        [
+          {
+            "screen": "A",
+            "time": "09:20",
+            "destination": "Bucharest",
+            "flight": "SK6800",
+            "help": "",
+            "gate": "D74",
+            "row_number": 9
+          },
+          {
+            "screen": "D",
+            "time": "11:40",
+            "destination": "Bucharest",
+            "flight": "RO362",
+            "help": "T5",
+            "gate": "B31",
+            "row_number": 25
+          }
+        ],
+        [
+          {
+            "screen": "A",
+            "time": "09:30",
+            "destination": "Paris de Gaulle",
+            "flight": "CI9291",
+            "help": "",
+            "gate": "C5",
+            "row_number": 13
+          },
+          {
+            "screen": "D",
+            "time": "11:35",
+            "destination": "Paris de Gaulle",
+            "flight": "CI9225",
+            "help": "",
+            "gate": "C11",
+            "row_number": 22
+          }
+        ],
+        [
+          {
+            "screen": "A",
+            "time": "09:30",
+            "destination": "Madrid",
+            "flight": "CZ7644",
+            "help": "",
+            "gate": "D78",
+            "row_number": 14
+          },
+          {
+            "screen": "D",
+            "time": "11:00",
+            "destination": "Madrid",
+            "flight": "CI9230",
+            "help": "T5",
+            "gate": "D63",
+            "row_number": 3
+          }
+        ],
+        [
+          {
+            "screen": "A",
+            "time": "09:30",
+            "destination": "London City",
+            "flight": "VS7036",
+            "help": "",
+            "gate": "D6",
+            "row_number": 16
+          },
+          {
+            "screen": "D",
+            "time": "11:25",
+            "destination": "London City",
+            "flight": "BA8452",
+            "help": "",
+            "gate": "D16",
+            "row_number": 18
+          }
+        ],
+        [
+          {
+            "screen": "A",
+            "time": "09:35",
+            "destination": "Malaga",
+            "flight": "DL9182",
+            "help": "",
+            "gate": "C18",
+            "row_number": 24
+          },
+          {
+            "screen": "D",
+            "time": "11:10",
+            "destination": "Malaga",
+            "flight": "KL2539",
+            "help": "",
+            "gate": "C18",
+            "row_number": 8
+          }
+        ],
+        [
+          {
+            "screen": "A",
+            "time": "09:40",
+            "destination": "Munich",
+            "flight": "DL9370",
+            "help": "",
+            "gate": "D86",
+            "row_number": 27
+          },
+          {
+            "screen": "D",
+            "time": "11:15",
+            "destination": "Munich",
+            "flight": "TG7853",
+            "help": "T3",
+            "gate": "B31",
+            "row_number": 12
+          }
+        ]
+      ],
+      "BC": [
+        [
+          {
+            "screen": "B",
+            "time": "09:55",
+            "destination": "Warsaw",
+            "flight": "KQ1363",
+            "help": "",
+            "gate": "D68",
+            "row_number": 15
+          },
+          {
+            "screen": "C",
+            "time": "10:30",
+            "destination": "Warsaw",
+            "flight": "LO266",
+            "help": "",
+            "gate": "B32",
+            "row_number": 19
+          }
+        ]
+      ],
+      "BD": [
+        [
+          {
+            "screen": "B",
+            "time": "09:50",
+            "destination": "Frankfurt",
+            "flight": "DL9235",
+            "help": "",
+            "gate": "B7",
+            "row_number": 4
+          },
+          {
+            "screen": "D",
+            "time": "11:20",
+            "destination": "Frankfurt",
+            "flight": "UA9203",
+            "help": "T3",
+            "gate": "B27",
+            "row_number": 16
+          }
+        ],
+        [
+          {
+            "screen": "B",
+            "time": "09:55",
+            "destination": "Houston",
+            "flight": "VS7123",
+            "help": "",
+            "gate": "F8",
+            "row_number": 11
+          },
+          {
+            "screen": "D",
+            "time": "11:00",
+            "destination": "Houston",
+            "flight": "UA021",
+            "help": "T5",
+            "gate": "G1",
+            "row_number": 1
+          }
+        ],
+        [
+          {
+            "screen": "B",
+            "time": "10:00",
+            "destination": "Frankfurt",
+            "flight": "AI8542",
+            "help": "T3",
+            "gate": "B31",
+            "row_number": 21
+          },
+          {
+            "screen": "D",
+            "time": "11:20",
+            "destination": "Frankfurt",
+            "flight": "UA9203",
+            "help": "T3",
+            "gate": "B27",
+            "row_number": 16
+          }
+        ],
+        [
+          {
+            "screen": "B",
+            "time": "10:00",
+            "destination": "New York JFK",
+            "flight": "VS3941",
+            "help": "",
+            "gate": "D49",
+            "row_number": 25
+          },
+          {
+            "screen": "D",
+            "time": "11:10",
+            "destination": "New York JFK",
+            "flight": "VS3951",
+            "help": "",
+            "gate": "D57",
+            "row_number": 9
+          }
+        ]
+      ],
+      "CD": [
+        [
+          {
+            "screen": "C",
+            "time": "10:20",
+            "destination": "London Heathrow",
+            "flight": "BA429",
+            "help": "",
+            "gate": "D16",
+            "row_number": 8
+          },
+          {
+            "screen": "D",
+            "time": "11:40",
+            "destination": "London Heathrow",
+            "flight": "BA431",
+            "help": "",
+            "gate": "D18",
+            "row_number": 24
+          }
+        ],
+        [
+          {
+            "screen": "C",
+            "time": "10:20",
+            "destination": "London Heathrow",
+            "flight": "CZ7603",
+            "help": "",
+            "gate": "D25",
+            "row_number": 11
+          },
+          {
+            "screen": "D",
+            "time": "11:40",
+            "destination": "London Heathrow",
+            "flight": "BA431",
+            "help": "",
+            "gate": "D18",
+            "row_number": 24
+          }
+        ],
+        [
+          {
+            "screen": "C",
+            "time": "10:35",
+            "destination": "Paris de Gaulle",
+            "flight": "CI9293",
+            "help": "",
+            "gate": "C15",
+            "row_number": 21
+          },
+          {
+            "screen": "D",
+            "time": "11:35",
+            "destination": "Paris de Gaulle",
+            "flight": "CI9225",
+            "help": "",
+            "gate": "C11",
+            "row_number": 22
+          }
+        ],
+        [
+          {
+            "screen": "C",
+            "time": "10:55",
+            "destination": "Stockholm",
+            "flight": "DL9184",
+            "help": "",
+            "gate": "C5",
+            "row_number": 29
+          },
+          {
+            "screen": "D",
+            "time": "11:00",
+            "destination": "Stockholm",
+            "flight": "SK556",
+            "help": "",
+            "gate": "B17",
+            "row_number": 4
+          }
+        ]
+      ]
+    },
+    "complete_plans": {
+      "AB/CD": [
+        {
+          "flights": [
+            "DL9427",
+            "UA9791",
+            "BA429",
+            "BA431"
+          ],
+          "destinations": [
+            "Zurich",
+            "London Heathrow"
+          ],
+          "time_points": 85,
+          "prefix_changes": 1,
+          "other_gate_rows": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "congested_points": 185
+        },
+        {
+          "flights": [
+            "DL9427",
+            "UA9791",
+            "CZ7603",
+            "BA431"
+          ],
+          "destinations": [
+            "Zurich",
+            "London Heathrow"
+          ],
+          "time_points": 85,
+          "prefix_changes": 1,
+          "other_gate_rows": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "congested_points": 160
+        },
+        {
+          "flights": [
+            "DL9427",
+            "UA9791",
+            "CI9293",
+            "CI9225"
+          ],
+          "destinations": [
+            "Zurich",
+            "Paris de Gaulle"
+          ],
+          "time_points": 65,
+          "prefix_changes": 1,
+          "other_gate_rows": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "congested_points": 115
+        },
+        {
+          "flights": [
+            "DL9427",
+            "UA9791",
+            "DL9184",
+            "SK556"
+          ],
+          "destinations": [
+            "Zurich",
+            "Stockholm"
+          ],
+          "time_points": 10,
+          "prefix_changes": 2,
+          "other_gate_rows": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "congested_points": 160
+        }
+      ],
+      "AC/BD": [
+        {
+          "flights": [
+            "KL0713",
+            "DL9235",
+            "PY993",
+            "UA9203"
+          ],
+          "destinations": [
+            "Paramaribo",
+            "Frankfurt"
+          ],
+          "time_points": 150,
+          "prefix_changes": 1,
+          "other_gate_rows": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "congested_points": 275
+        },
+        {
+          "flights": [
+            "KL0713",
+            "VS7123",
+            "PY993",
+            "UA021"
+          ],
+          "destinations": [
+            "Paramaribo",
+            "Houston"
+          ],
+          "time_points": 125,
+          "prefix_changes": 2,
+          "other_gate_rows": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "congested_points": 275
+        },
+        {
+          "flights": [
+            "DL9402",
+            "DL9235",
+            "SK822",
+            "UA9203"
+          ],
+          "destinations": [
+            "Oslo",
+            "Frankfurt"
+          ],
+          "time_points": 170,
+          "prefix_changes": 0,
+          "other_gate_rows": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "congested_points": 270
+        },
+        {
+          "flights": [
+            "DL9402",
+            "VS7123",
+            "SK822",
+            "UA021"
+          ],
+          "destinations": [
+            "Oslo",
+            "Houston"
+          ],
+          "time_points": 145,
+          "prefix_changes": 1,
+          "other_gate_rows": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "congested_points": 270
+        },
+        {
+          "flights": [
+            "DL9211",
+            "DL9235",
+            "SK552",
+            "UA9203"
+          ],
+          "destinations": [
+            "Copenhagen",
+            "Frankfurt"
+          ],
+          "time_points": 155,
+          "prefix_changes": 0,
+          "other_gate_rows": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "congested_points": 255
+        },
+        {
+          "flights": [
+            "DL9211",
+            "VS7123",
+            "SK552",
+            "UA021"
+          ],
+          "destinations": [
+            "Copenhagen",
+            "Houston"
+          ],
+          "time_points": 130,
+          "prefix_changes": 1,
+          "other_gate_rows": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "congested_points": 255
+        },
+        {
+          "flights": [
+            "CI9291",
+            "DL9235",
+            "CI9293",
+            "UA9203"
+          ],
+          "destinations": [
+            "Paris de Gaulle",
+            "Frankfurt"
+          ],
+          "time_points": 155,
+          "prefix_changes": 0,
+          "other_gate_rows": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "congested_points": 230
+        },
+        {
+          "flights": [
+            "CI9291",
+            "VS7123",
+            "CI9293",
+            "UA021"
+          ],
+          "destinations": [
+            "Paris de Gaulle",
+            "Houston"
+          ],
+          "time_points": 130,
+          "prefix_changes": 1,
+          "other_gate_rows": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "congested_points": 230
+        },
+        {
+          "flights": [
+            "VS3947",
+            "DL9235",
+            "VS7141",
+            "UA9203"
+          ],
+          "destinations": [
+            "Minneapolis",
+            "Frankfurt"
+          ],
+          "time_points": 155,
+          "prefix_changes": 0,
+          "other_gate_rows": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "congested_points": 230
+        },
+        {
+          "flights": [
+            "VS3947",
+            "VS7123",
+            "VS7141",
+            "UA021"
+          ],
+          "destinations": [
+            "Minneapolis",
+            "Houston"
+          ],
+          "time_points": 130,
+          "prefix_changes": 1,
+          "other_gate_rows": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "congested_points": 230
+        }
+      ],
+      "AD/BC": [
+        {
+          "flights": [
+            "SK6800",
+            "KQ1363",
+            "LO266",
+            "RO362"
+          ],
+          "destinations": [
+            "Bucharest",
+            "Warsaw"
+          ],
+          "time_points": 175,
+          "prefix_changes": 2,
+          "other_gate_rows": [
+            0,
+            0,
+            0,
+            2
+          ],
+          "congested_points": 325
+        },
+        {
+          "flights": [
+            "CZ7644",
+            "KQ1363",
+            "LO266",
+            "CI9230"
+          ],
+          "destinations": [
+            "Madrid",
+            "Warsaw"
+          ],
+          "time_points": 125,
+          "prefix_changes": 1,
+          "other_gate_rows": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "congested_points": 175
+        },
+        {
+          "flights": [
+            "DL9370",
+            "KQ1363",
+            "LO266",
+            "TG7853"
+          ],
+          "destinations": [
+            "Munich",
+            "Warsaw"
+          ],
+          "time_points": 130,
+          "prefix_changes": 2,
+          "other_gate_rows": [
+            0,
+            0,
+            0,
+            2
+          ],
+          "congested_points": 280
+        }
+      ]
+    }
+  },
+  "changed_gate_input": "B 屏 DL9351 的 C11 漏读末尾一位，记成 C1，和 D 屏 CI9225 不再同口。",
+  "changed_visual_input": "第二屏把苏黎世 UA9791 的 T3 错绑到上一行法兰克福 DL9235。",
+  "changed_constraint": "AB 苏黎世对的 Help 数从 1 变 0，BD 的 DL9235—UA9203 从 1 变 2。"
+}

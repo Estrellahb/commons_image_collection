@@ -1,0 +1,38 @@
+{
+  "name": "/zerobench-unified-runtime-check-01-0c511593d0",
+  "state": {
+    "Status": "running",
+    "Running": true,
+    "Paused": false,
+    "Restarting": false,
+    "OOMKilled": false,
+    "Dead": false,
+    "Pid": 3643732,
+    "ExitCode": 0,
+    "Error": "",
+    "StartedAt": "2026-11-26T10:59:22.909135748Z",
+    "FinishedAt": "0001-01-01T00:00:00Z"
+  },
+  "mounts": [
+    {
+      "Type": "bind",
+      "Source": "/Users/hepeize/.local/share/zerobench-runtime/trials/unified-runtime-check-01/work",
+      "Destination": "/workspace",
+      "Mode": "",
+      "RW": true,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/hepeize/.local/share/zerobench-runtime/trials/unified-runtime-check-01/work/image.png",
+      "Destination": "/workspace/image.png",
+      "Mode": "",
+      "RW": false,
+      "Propagation": "rprivate"
+    }
+  ],
+  "network_mode": "bridge",
+  "rootfs_read_only": true,
+  "cpu_limit": 1000000000,
+  "memory_bytes": 1073741824
+}

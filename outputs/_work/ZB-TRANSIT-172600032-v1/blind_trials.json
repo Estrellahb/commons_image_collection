@@ -1,0 +1,12 @@
+{
+  "frozen_version": "ZB-TRANSIT-172600032-v1",
+  "inputs": ["prompt.txt", "未修改的采集库 JPG"],
+  "input_digests": "frozen.sha256",
+  "protocol": "三次分别用新上下文，工具开放，只提供冻结题面和干净原图，五项全部逐字段比对。",
+  "counts": {"correct": 3, "incorrect": 0, "timeout": 0, "infra_error": 0, "partial": 0},
+  "trials": [
+    {"agent": "blind_sch_one", "answer": [[2,5,6,1,4,4],[4,10,3],[10,1,["DL9427","UA9791","DL9184","SK556"]],[155,3,["CI9291","DL9235","CI9293","UA9203"]],[2,[["DL9235",165],["UA9203",165]]]], "wrong_fields": []},
+    {"agent": "blind_sch_two", "answer": [[2,5,6,1,4,4],[4,10,3],[10,1,["DL9427","UA9791","DL9184","SK556"]],[155,3,["CI9291","DL9235","CI9293","UA9203"]],[2,[["DL9235",165],["UA9203",165]]]], "readback": "C 两条 London Heathrow 分别为 BA429/D16 与 CZ7603/D25。C Dublin、Philadelphia 和 D Manchester 的 Gate 分别是 H、空白、H，均排除。", "wrong_fields": []},
+    {"agent": "blind_sch_three", "answer": [[2,5,6,1,4,4],[4,10,3],[10,1,["DL9427","UA9791","DL9184","SK556"]],[155,3,["CI9291","DL9235","CI9293","UA9203"]],[2,[["DL9235",165],["UA9203",165]]]], "wrong_fields": []}
+  ]
+}

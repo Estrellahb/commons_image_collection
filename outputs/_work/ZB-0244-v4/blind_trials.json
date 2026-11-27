@@ -1,0 +1,812 @@
+{
+  "frozen_version": "ZB-0244-v4",
+  "evaluation": {
+    "tools_enabled": true,
+    "frozen_version": "ZB-0244-v4",
+    "counts": {
+      "correct": 3,
+      "incorrect": 0,
+      "timeout": 0,
+      "infra_error": 0,
+      "partial": 0
+    },
+    "trajectory": "blind_trials/trial1.md; blind_trials/trial2.md; blind_trials/trial3.md",
+    "gt_review": "recompute.json; independent_verification.json; qa_notes.md",
+    "failure_attribution": "三次全部正确，无实际错答归因"
+  },
+  "difficulty_decision": "三次有效试答全部正确，最终按中等难度登记。有效样本中的错答数为零。",
+  "difficulty_label": "中等",
+  "model_settings": {
+    "model": "inherited session model",
+    "model_override": null,
+    "reasoning_override": null,
+    "fork_turns": "none",
+    "tools_enabled": true
+  },
+  "invalid_attempts": [],
+  "trials": [
+    {
+      "id": "trial1",
+      "agent": "/root/blind_v4_1",
+      "answer": [
+        [
+          [
+            5,
+            4,
+            5
+          ],
+          [
+            6,
+            5,
+            6
+          ],
+          [
+            5,
+            4,
+            4
+          ],
+          [
+            6,
+            4,
+            6
+          ]
+        ],
+        [
+          20,
+          20,
+          20
+        ],
+        138,
+        864,
+        [
+          1,
+          1,
+          2,
+          [
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            4,
+            4
+          ]
+        ],
+        [
+          12,
+          14,
+          1,
+          [
+            2,
+            2,
+            4,
+            4,
+            4,
+            5,
+            5,
+            6
+          ]
+        ]
+      ],
+      "public_input": "/tmp/zb0244-public-v4",
+      "facts_difference": [],
+      "final_answer_file": "blind_trials/trial1.md",
+      "collected_at": "2026-11-26T15:48:07.047122+00:00",
+      "valid": true,
+      "whole_correct": true,
+      "correct_fields": 25,
+      "wrong_fields": [],
+      "grading": [
+        {
+          "field": "Q1.A.n",
+          "expected": 5,
+          "actual": 5,
+          "correct": true
+        },
+        {
+          "field": "Q1.A.F",
+          "expected": 4,
+          "actual": 4,
+          "correct": true
+        },
+        {
+          "field": "Q1.A.H",
+          "expected": 5,
+          "actual": 5,
+          "correct": true
+        },
+        {
+          "field": "Q1.B.n",
+          "expected": 6,
+          "actual": 6,
+          "correct": true
+        },
+        {
+          "field": "Q1.B.F",
+          "expected": 5,
+          "actual": 5,
+          "correct": true
+        },
+        {
+          "field": "Q1.B.H",
+          "expected": 6,
+          "actual": 6,
+          "correct": true
+        },
+        {
+          "field": "Q1.C.n",
+          "expected": 5,
+          "actual": 5,
+          "correct": true
+        },
+        {
+          "field": "Q1.C.F",
+          "expected": 4,
+          "actual": 4,
+          "correct": true
+        },
+        {
+          "field": "Q1.C.H",
+          "expected": 4,
+          "actual": 4,
+          "correct": true
+        },
+        {
+          "field": "Q1.D.n",
+          "expected": 6,
+          "actual": 6,
+          "correct": true
+        },
+        {
+          "field": "Q1.D.F",
+          "expected": 4,
+          "actual": 4,
+          "correct": true
+        },
+        {
+          "field": "Q1.D.H",
+          "expected": 6,
+          "actual": 6,
+          "correct": true
+        },
+        {
+          "field": "Q2.AB",
+          "expected": 20,
+          "actual": 20,
+          "correct": true
+        },
+        {
+          "field": "Q2.BC",
+          "expected": 20,
+          "actual": 20,
+          "correct": true
+        },
+        {
+          "field": "Q2.CD",
+          "expected": 20,
+          "actual": 20,
+          "correct": true
+        },
+        {
+          "field": "Q3.routes",
+          "expected": 138,
+          "actual": 138,
+          "correct": true
+        },
+        {
+          "field": "Q4.plans",
+          "expected": 864,
+          "actual": 864,
+          "correct": true
+        },
+        {
+          "field": "Q5.max_cost",
+          "expected": 1,
+          "actual": 1,
+          "correct": true
+        },
+        {
+          "field": "Q5.sum_cost",
+          "expected": 1,
+          "actual": 1,
+          "correct": true
+        },
+        {
+          "field": "Q5.ties",
+          "expected": 2,
+          "actual": 2,
+          "correct": true
+        },
+        {
+          "field": "Q5.representative",
+          "expected": [
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            4,
+            4
+          ],
+          "actual": [
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            4,
+            4
+          ],
+          "correct": true
+        },
+        {
+          "field": "Q6.max_cost",
+          "expected": 12,
+          "actual": 12,
+          "correct": true
+        },
+        {
+          "field": "Q6.sum_cost",
+          "expected": 14,
+          "actual": 14,
+          "correct": true
+        },
+        {
+          "field": "Q6.ties",
+          "expected": 1,
+          "actual": 1,
+          "correct": true
+        },
+        {
+          "field": "Q6.representative",
+          "expected": [
+            2,
+            2,
+            4,
+            4,
+            4,
+            5,
+            5,
+            6
+          ],
+          "actual": [
+            2,
+            2,
+            4,
+            4,
+            4,
+            5,
+            5,
+            6
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "trial2",
+      "agent": "/root/blind_v4_2",
+      "answer": [
+        [
+          [
+            5,
+            4,
+            5
+          ],
+          [
+            6,
+            5,
+            6
+          ],
+          [
+            5,
+            4,
+            4
+          ],
+          [
+            6,
+            4,
+            6
+          ]
+        ],
+        [
+          20,
+          20,
+          20
+        ],
+        138,
+        864,
+        [
+          1,
+          1,
+          2,
+          [
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            4,
+            4
+          ]
+        ],
+        [
+          12,
+          14,
+          1,
+          [
+            2,
+            2,
+            4,
+            4,
+            4,
+            5,
+            5,
+            6
+          ]
+        ]
+      ],
+      "public_input": "/tmp/zb0244-public-v4",
+      "facts_difference": [],
+      "final_answer_file": "blind_trials/trial2.md",
+      "collected_at": "2026-11-26T15:48:07.049846+00:00",
+      "valid": true,
+      "whole_correct": true,
+      "correct_fields": 25,
+      "wrong_fields": [],
+      "grading": [
+        {
+          "field": "Q1.A.n",
+          "expected": 5,
+          "actual": 5,
+          "correct": true
+        },
+        {
+          "field": "Q1.A.F",
+          "expected": 4,
+          "actual": 4,
+          "correct": true
+        },
+        {
+          "field": "Q1.A.H",
+          "expected": 5,
+          "actual": 5,
+          "correct": true
+        },
+        {
+          "field": "Q1.B.n",
+          "expected": 6,
+          "actual": 6,
+          "correct": true
+        },
+        {
+          "field": "Q1.B.F",
+          "expected": 5,
+          "actual": 5,
+          "correct": true
+        },
+        {
+          "field": "Q1.B.H",
+          "expected": 6,
+          "actual": 6,
+          "correct": true
+        },
+        {
+          "field": "Q1.C.n",
+          "expected": 5,
+          "actual": 5,
+          "correct": true
+        },
+        {
+          "field": "Q1.C.F",
+          "expected": 4,
+          "actual": 4,
+          "correct": true
+        },
+        {
+          "field": "Q1.C.H",
+          "expected": 4,
+          "actual": 4,
+          "correct": true
+        },
+        {
+          "field": "Q1.D.n",
+          "expected": 6,
+          "actual": 6,
+          "correct": true
+        },
+        {
+          "field": "Q1.D.F",
+          "expected": 4,
+          "actual": 4,
+          "correct": true
+        },
+        {
+          "field": "Q1.D.H",
+          "expected": 6,
+          "actual": 6,
+          "correct": true
+        },
+        {
+          "field": "Q2.AB",
+          "expected": 20,
+          "actual": 20,
+          "correct": true
+        },
+        {
+          "field": "Q2.BC",
+          "expected": 20,
+          "actual": 20,
+          "correct": true
+        },
+        {
+          "field": "Q2.CD",
+          "expected": 20,
+          "actual": 20,
+          "correct": true
+        },
+        {
+          "field": "Q3.routes",
+          "expected": 138,
+          "actual": 138,
+          "correct": true
+        },
+        {
+          "field": "Q4.plans",
+          "expected": 864,
+          "actual": 864,
+          "correct": true
+        },
+        {
+          "field": "Q5.max_cost",
+          "expected": 1,
+          "actual": 1,
+          "correct": true
+        },
+        {
+          "field": "Q5.sum_cost",
+          "expected": 1,
+          "actual": 1,
+          "correct": true
+        },
+        {
+          "field": "Q5.ties",
+          "expected": 2,
+          "actual": 2,
+          "correct": true
+        },
+        {
+          "field": "Q5.representative",
+          "expected": [
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            4,
+            4
+          ],
+          "actual": [
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            4,
+            4
+          ],
+          "correct": true
+        },
+        {
+          "field": "Q6.max_cost",
+          "expected": 12,
+          "actual": 12,
+          "correct": true
+        },
+        {
+          "field": "Q6.sum_cost",
+          "expected": 14,
+          "actual": 14,
+          "correct": true
+        },
+        {
+          "field": "Q6.ties",
+          "expected": 1,
+          "actual": 1,
+          "correct": true
+        },
+        {
+          "field": "Q6.representative",
+          "expected": [
+            2,
+            2,
+            4,
+            4,
+            4,
+            5,
+            5,
+            6
+          ],
+          "actual": [
+            2,
+            2,
+            4,
+            4,
+            4,
+            5,
+            5,
+            6
+          ],
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "trial3",
+      "agent": "/root/blind_v4_3",
+      "answer": [
+        [
+          [
+            5,
+            4,
+            5
+          ],
+          [
+            6,
+            5,
+            6
+          ],
+          [
+            5,
+            4,
+            4
+          ],
+          [
+            6,
+            4,
+            6
+          ]
+        ],
+        [
+          20,
+          20,
+          20
+        ],
+        138,
+        864,
+        [
+          1,
+          1,
+          2,
+          [
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            4,
+            4
+          ]
+        ],
+        [
+          12,
+          14,
+          1,
+          [
+            2,
+            2,
+            4,
+            4,
+            4,
+            5,
+            5,
+            6
+          ]
+        ]
+      ],
+      "public_input": "/tmp/zb0244-public-v4",
+      "facts_difference": [],
+      "final_answer_file": "blind_trials/trial3.md",
+      "collected_at": "2026-11-26T15:48:07.059725+00:00",
+      "valid": true,
+      "whole_correct": true,
+      "correct_fields": 25,
+      "wrong_fields": [],
+      "grading": [
+        {
+          "field": "Q1.A.n",
+          "expected": 5,
+          "actual": 5,
+          "correct": true
+        },
+        {
+          "field": "Q1.A.F",
+          "expected": 4,
+          "actual": 4,
+          "correct": true
+        },
+        {
+          "field": "Q1.A.H",
+          "expected": 5,
+          "actual": 5,
+          "correct": true
+        },
+        {
+          "field": "Q1.B.n",
+          "expected": 6,
+          "actual": 6,
+          "correct": true
+        },
+        {
+          "field": "Q1.B.F",
+          "expected": 5,
+          "actual": 5,
+          "correct": true
+        },
+        {
+          "field": "Q1.B.H",
+          "expected": 6,
+          "actual": 6,
+          "correct": true
+        },
+        {
+          "field": "Q1.C.n",
+          "expected": 5,
+          "actual": 5,
+          "correct": true
+        },
+        {
+          "field": "Q1.C.F",
+          "expected": 4,
+          "actual": 4,
+          "correct": true
+        },
+        {
+          "field": "Q1.C.H",
+          "expected": 4,
+          "actual": 4,
+          "correct": true
+        },
+        {
+          "field": "Q1.D.n",
+          "expected": 6,
+          "actual": 6,
+          "correct": true
+        },
+        {
+          "field": "Q1.D.F",
+          "expected": 4,
+          "actual": 4,
+          "correct": true
+        },
+        {
+          "field": "Q1.D.H",
+          "expected": 6,
+          "actual": 6,
+          "correct": true
+        },
+        {
+          "field": "Q2.AB",
+          "expected": 20,
+          "actual": 20,
+          "correct": true
+        },
+        {
+          "field": "Q2.BC",
+          "expected": 20,
+          "actual": 20,
+          "correct": true
+        },
+        {
+          "field": "Q2.CD",
+          "expected": 20,
+          "actual": 20,
+          "correct": true
+        },
+        {
+          "field": "Q3.routes",
+          "expected": 138,
+          "actual": 138,
+          "correct": true
+        },
+        {
+          "field": "Q4.plans",
+          "expected": 864,
+          "actual": 864,
+          "correct": true
+        },
+        {
+          "field": "Q5.max_cost",
+          "expected": 1,
+          "actual": 1,
+          "correct": true
+        },
+        {
+          "field": "Q5.sum_cost",
+          "expected": 1,
+          "actual": 1,
+          "correct": true
+        },
+        {
+          "field": "Q5.ties",
+          "expected": 2,
+          "actual": 2,
+          "correct": true
+        },
+        {
+          "field": "Q5.representative",
+          "expected": [
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            4,
+            4
+          ],
+          "actual": [
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            4,
+            4
+          ],
+          "correct": true
+        },
+        {
+          "field": "Q6.max_cost",
+          "expected": 12,
+          "actual": 12,
+          "correct": true
+        },
+        {
+          "field": "Q6.sum_cost",
+          "expected": 14,
+          "actual": 14,
+          "correct": true
+        },
+        {
+          "field": "Q6.ties",
+          "expected": 1,
+          "actual": 1,
+          "correct": true
+        },
+        {
+          "field": "Q6.representative",
+          "expected": [
+            2,
+            2,
+            4,
+            4,
+            4,
+            5,
+            5,
+            6
+          ],
+          "actual": [
+            2,
+            2,
+            4,
+            4,
+            4,
+            5,
+            5,
+            6
+          ],
+          "correct": true
+        }
+      ]
+    }
+  ]
+}

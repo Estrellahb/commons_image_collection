@@ -1,0 +1,209 @@
+{
+  "plan_count": 28,
+  "plans_match": true,
+  "all_threshold_margins": [
+    {
+      "pair": [
+        "A1",
+        "B1"
+      ],
+      "threshold": 1000,
+      "distance": 15,
+      "margin": 985,
+      "error_bound": 40
+    },
+    {
+      "pair": [
+        "A1",
+        "B2"
+      ],
+      "threshold": 1000,
+      "distance": 865,
+      "margin": 135,
+      "error_bound": 40
+    },
+    {
+      "pair": [
+        "A1",
+        "B3"
+      ],
+      "threshold": 1000,
+      "distance": 1555,
+      "margin": 555,
+      "error_bound": 40
+    },
+    {
+      "pair": [
+        "A1",
+        "B4"
+      ],
+      "threshold": 1000,
+      "distance": 2077.5,
+      "margin": 1077.5,
+      "error_bound": 40
+    },
+    {
+      "pair": [
+        "A2",
+        "B1"
+      ],
+      "threshold": 1000,
+      "distance": 705,
+      "margin": 295,
+      "error_bound": 40
+    },
+    {
+      "pair": [
+        "A2",
+        "B2"
+      ],
+      "threshold": 1000,
+      "distance": 175,
+      "margin": 825,
+      "error_bound": 40
+    },
+    {
+      "pair": [
+        "A2",
+        "B3"
+      ],
+      "threshold": 1000,
+      "distance": 865,
+      "margin": 135,
+      "error_bound": 40
+    },
+    {
+      "pair": [
+        "A2",
+        "B4"
+      ],
+      "threshold": 1000,
+      "distance": 1387.5,
+      "margin": 387.5,
+      "error_bound": 40
+    },
+    {
+      "pair": [
+        "A3",
+        "B1"
+      ],
+      "threshold": 1000,
+      "distance": 1380,
+      "margin": 380,
+      "error_bound": 40
+    },
+    {
+      "pair": [
+        "A3",
+        "B2"
+      ],
+      "threshold": 1000,
+      "distance": 500,
+      "margin": 500,
+      "error_bound": 40
+    },
+    {
+      "pair": [
+        "A3",
+        "B3"
+      ],
+      "threshold": 1000,
+      "distance": 190,
+      "margin": 810,
+      "error_bound": 40
+    },
+    {
+      "pair": [
+        "A3",
+        "B4"
+      ],
+      "threshold": 1000,
+      "distance": 712.5,
+      "margin": 287.5,
+      "error_bound": 40
+    },
+    {
+      "pair": [
+        "B1",
+        "C2"
+      ],
+      "threshold": 1650,
+      "distance": 520,
+      "margin": 1130,
+      "error_bound": 40
+    },
+    {
+      "pair": [
+        "B1",
+        "C3"
+      ],
+      "threshold": 1650,
+      "distance": 1742.5,
+      "margin": 92.5,
+      "error_bound": 40
+    },
+    {
+      "pair": [
+        "B2",
+        "C2"
+      ],
+      "threshold": 1650,
+      "distance": 360,
+      "margin": 1290,
+      "error_bound": 40
+    },
+    {
+      "pair": [
+        "B2",
+        "C3"
+      ],
+      "threshold": 1650,
+      "distance": 862.5,
+      "margin": 787.5,
+      "error_bound": 40
+    },
+    {
+      "pair": [
+        "B3",
+        "C2"
+      ],
+      "threshold": 1650,
+      "distance": 1050,
+      "margin": 600,
+      "error_bound": 40
+    },
+    {
+      "pair": [
+        "B3",
+        "C3"
+      ],
+      "threshold": 1650,
+      "distance": 172.5,
+      "margin": 1477.5,
+      "error_bound": 40
+    },
+    {
+      "pair": [
+        "B4",
+        "C2"
+      ],
+      "threshold": 1650,
+      "distance": 1572.5,
+      "margin": 77.5,
+      "error_bound": 40
+    },
+    {
+      "pair": [
+        "B4",
+        "C3"
+      ],
+      "threshold": 1650,
+      "distance": 350.0,
+      "margin": 1300.0,
+      "error_bound": 40
+    }
+  ],
+  "minimum_margin": 77.5,
+  "error_bound": 40,
+  "R": 1.9375
+}

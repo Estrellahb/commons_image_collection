@@ -1,0 +1,15 @@
+{
+  "exit_code": null,
+  "status": "timeout",
+  "error": "TimeoutExpired",
+  "output": "checking bounded cleanup\n",
+  "seconds": 1.672,
+  "effective_timeout_seconds": 1.0,
+  "cleanup": {
+    "removed": true,
+    "daemon_shutdown_confirmed": true,
+    "artifacts_preserved": "/Users/hepeize/.local/share/zerobench-runtime/trials/unified-runtime-check-01"
+  },
+  "stdout_log": "/Users/hepeize/.local/share/zerobench-runtime/trials/unified-runtime-check-01/logs/20261126T190012-c6005edca5.stdout.txt",
+  "code_log": "/Users/hepeize/.local/share/zerobench-runtime/trials/unified-runtime-check-01/logs/20261126T190012-c6005edca5.py"
+}

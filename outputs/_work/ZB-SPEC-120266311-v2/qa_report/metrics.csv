@@ -1,0 +1,2 @@
+﻿id,decision,difficulty_status,width,height,object_count,class_count,known_fraction,median_bbox_short_px,nearcolor_pair_count,bbox_overlap_pair_count,distinct_dependency_regions,effective_counterfactuals,blockers,review,advisory
+ZB-SPEC-120266311-v2,authoring_candidate,no_complete_failure_recorded,3870,3081,12,12,1.0,320.0,14,0,6,5,[],[],[]

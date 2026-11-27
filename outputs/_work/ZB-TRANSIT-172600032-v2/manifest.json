@@ -1,0 +1,1674 @@
+{
+  "items": [
+    {
+      "id": "ZB-TRANSIT-172600032-v2",
+      "image": "../../../img/公共场景/交通枢纽/zb-transit-172600032.jpg",
+      "require_real": true,
+      "min_native_short_px": 1080,
+      "source": {
+        "kind": "real_photo",
+        "url": "https://commons.wikimedia.org/wiki/File:Amsterdam_Airport_Schiphol_-_Flights_departures_board_2025-08-13.jpg",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "authorization": "verified",
+        "scene_id": "commons:172600032:schiphol-departures-2025-08-13",
+        "attribution": "Sebleouf, CC BY-SA 4.0",
+        "native_resolution": [
+          4032,
+          3024
+        ],
+        "ingest_transform": "Lossy JPEG re-encoding. EXIF orientation applied; only color-related metadata kept.",
+        "license_evidence": "source_page.html",
+        "dedup_evidence": "qa_notes.md"
+      },
+      "annotation_provenance": "人工逐行抄录，行框见本目录构建脚本",
+      "objects": [
+        {
+          "id": "SK6794",
+          "bbox": [
+            697,
+            1220,
+            719,
+            25
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "DL9287",
+          "bbox": [
+            696,
+            1254,
+            719,
+            25
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "GA9496",
+          "bbox": [
+            696,
+            1287,
+            720,
+            25
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "DL9281",
+          "bbox": [
+            695,
+            1321,
+            720,
+            25
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "UA071",
+          "bbox": [
+            694,
+            1355,
+            720,
+            25
+          ],
+          "category": "带 Help"
+        },
+        {
+          "id": "KL0713",
+          "bbox": [
+            693,
+            1388,
+            721,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "DL9413",
+          "bbox": [
+            693,
+            1422,
+            721,
+            25
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "DL9402",
+          "bbox": [
+            692,
+            1456,
+            722,
+            25
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "SK6800",
+          "bbox": [
+            691,
+            1489,
+            722,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "DL9211",
+          "bbox": [
+            690,
+            1523,
+            722,
+            25
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "KQ1175",
+          "bbox": [
+            690,
+            1557,
+            723,
+            25
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "SK6742",
+          "bbox": [
+            689,
+            1590,
+            723,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "CI9291",
+          "bbox": [
+            688,
+            1624,
+            723,
+            25
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "CZ7644",
+          "bbox": [
+            687,
+            1658,
+            724,
+            25
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "KQ1643",
+          "bbox": [
+            687,
+            1691,
+            724,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "VS7036",
+          "bbox": [
+            686,
+            1725,
+            724,
+            25
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "DL9245",
+          "bbox": [
+            685,
+            1759,
+            725,
+            25
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "KL2102",
+          "bbox": [
+            685,
+            1792,
+            725,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "DL9237",
+          "bbox": [
+            684,
+            1826,
+            726,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "SK6788",
+          "bbox": [
+            683,
+            1860,
+            726,
+            25
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "DL9543",
+          "bbox": [
+            682,
+            1893,
+            726,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "SK6818",
+          "bbox": [
+            682,
+            1927,
+            727,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "EI603",
+          "bbox": [
+            681,
+            1961,
+            727,
+            25
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "DL9182",
+          "bbox": [
+            680,
+            1994,
+            727,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "KQ1555",
+          "bbox": [
+            679,
+            2028,
+            728,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "VS3947",
+          "bbox": [
+            679,
+            2062,
+            728,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "DL9370",
+          "bbox": [
+            678,
+            2095,
+            729,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "AR7812",
+          "bbox": [
+            677,
+            2129,
+            729,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "KL0789",
+          "bbox": [
+            676,
+            2163,
+            729,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "DL9295",
+          "bbox": [
+            676,
+            2196,
+            730,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "DL9427",
+          "bbox": [
+            675,
+            2230,
+            730,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "DL9226",
+          "bbox": [
+            1477,
+            1228,
+            703,
+            24
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "DL9290",
+          "bbox": [
+            1477,
+            1262,
+            703,
+            24
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "DL9617",
+          "bbox": [
+            1476,
+            1295,
+            704,
+            24
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "DL9235",
+          "bbox": [
+            1476,
+            1329,
+            704,
+            24
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "UA9791",
+          "bbox": [
+            1476,
+            1362,
+            705,
+            25
+          ],
+          "category": "带 Help"
+        },
+        {
+          "id": "EZY2162",
+          "bbox": [
+            1476,
+            1396,
+            705,
+            25
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "VS7146",
+          "bbox": [
+            1475,
+            1430,
+            706,
+            24
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "VS7136",
+          "bbox": [
+            1475,
+            1463,
+            706,
+            25
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "KL0741",
+          "bbox": [
+            1475,
+            1497,
+            706,
+            25
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "MH5647",
+          "bbox": [
+            1474,
+            1530,
+            707,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "VS7123",
+          "bbox": [
+            1474,
+            1564,
+            707,
+            25
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "MH5653",
+          "bbox": [
+            1474,
+            1598,
+            708,
+            25
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "ET1217",
+          "bbox": [
+            1473,
+            1631,
+            708,
+            26
+          ],
+          "category": "带 Help"
+        },
+        {
+          "id": "AF8243",
+          "bbox": [
+            1473,
+            1665,
+            709,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "KQ1363",
+          "bbox": [
+            1473,
+            1698,
+            709,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "BT858",
+          "bbox": [
+            1472,
+            1732,
+            710,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "DL9351",
+          "bbox": [
+            1472,
+            1766,
+            710,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "VS7017",
+          "bbox": [
+            1472,
+            1799,
+            710,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "BT6020",
+          "bbox": [
+            1472,
+            1833,
+            711,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "CI9597",
+          "bbox": [
+            1471,
+            1866,
+            711,
+            27
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "AI8542",
+          "bbox": [
+            1471,
+            1900,
+            712,
+            27
+          ],
+          "category": "带 Help"
+        },
+        {
+          "id": "BT618",
+          "bbox": [
+            1471,
+            1934,
+            712,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "IB5704",
+          "bbox": [
+            1470,
+            1967,
+            713,
+            27
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "AY5712",
+          "bbox": [
+            1470,
+            2001,
+            713,
+            27
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "VS3941",
+          "bbox": [
+            1470,
+            2034,
+            713,
+            28
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "DL9244",
+          "bbox": [
+            1470,
+            2068,
+            714,
+            27
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "DL9190",
+          "bbox": [
+            1469,
+            2102,
+            714,
+            27
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "DL9160",
+          "bbox": [
+            1469,
+            2135,
+            715,
+            28
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "BT962",
+          "bbox": [
+            1469,
+            2169,
+            715,
+            28
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "VS3943",
+          "bbox": [
+            1468,
+            2202,
+            716,
+            28
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "SK6730",
+          "bbox": [
+            1468,
+            2236,
+            716,
+            28
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "DL9315",
+          "bbox": [
+            2242,
+            1234,
+            706,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "FR421",
+          "bbox": [
+            2242,
+            1268,
+            707,
+            26
+          ],
+          "category": "无合格 Gate"
+        },
+        {
+          "id": "FB462",
+          "bbox": [
+            2242,
+            1301,
+            708,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "AF3208",
+          "bbox": [
+            2242,
+            1335,
+            708,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "DL9207",
+          "bbox": [
+            2242,
+            1369,
+            709,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "PC1640",
+          "bbox": [
+            2242,
+            1403,
+            710,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "PY993",
+          "bbox": [
+            2242,
+            1436,
+            711,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "BA429",
+          "bbox": [
+            2242,
+            1470,
+            712,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "VY8379",
+          "bbox": [
+            2241,
+            1504,
+            712,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "VS3944",
+          "bbox": [
+            2241,
+            1538,
+            713,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "CZ7603",
+          "bbox": [
+            2241,
+            1571,
+            714,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "GA9764",
+          "bbox": [
+            2241,
+            1605,
+            715,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "SK552",
+          "bbox": [
+            2241,
+            1639,
+            716,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "IB5235",
+          "bbox": [
+            2241,
+            1673,
+            716,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "CZ7650",
+          "bbox": [
+            2241,
+            1706,
+            717,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "VS7152",
+          "bbox": [
+            2241,
+            1740,
+            718,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "DL9329",
+          "bbox": [
+            2241,
+            1774,
+            719,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "KQ1585",
+          "bbox": [
+            2241,
+            1807,
+            720,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "LO266",
+          "bbox": [
+            2241,
+            1841,
+            720,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "AA6902",
+          "bbox": [
+            2241,
+            1875,
+            721,
+            26
+          ],
+          "category": "无合格 Gate"
+        },
+        {
+          "id": "CI9293",
+          "bbox": [
+            2241,
+            1909,
+            722,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "VS3942",
+          "bbox": [
+            2241,
+            1942,
+            723,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "VS3752",
+          "bbox": [
+            2241,
+            1976,
+            724,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "SK6752",
+          "bbox": [
+            2240,
+            2010,
+            724,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "SK822",
+          "bbox": [
+            2240,
+            2044,
+            725,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "IB5969",
+          "bbox": [
+            2240,
+            2077,
+            726,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "VS7141",
+          "bbox": [
+            2240,
+            2111,
+            727,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "AY4133",
+          "bbox": [
+            2240,
+            2145,
+            728,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "DL9184",
+          "bbox": [
+            2240,
+            2179,
+            728,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "VS3946",
+          "bbox": [
+            2240,
+            2212,
+            729,
+            26
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "SQ323",
+          "bbox": [
+            2240,
+            2246,
+            730,
+            26
+          ],
+          "category": "带 Help"
+        },
+        {
+          "id": "UA021",
+          "bbox": [
+            3008,
+            1236,
+            699,
+            27
+          ],
+          "category": "带 Help"
+        },
+        {
+          "id": "EJU7843",
+          "bbox": [
+            3009,
+            1270,
+            700,
+            27
+          ],
+          "category": "无合格 Gate"
+        },
+        {
+          "id": "CI9230",
+          "bbox": [
+            3009,
+            1304,
+            701,
+            27
+          ],
+          "category": "带 Help"
+        },
+        {
+          "id": "SK556",
+          "bbox": [
+            3010,
+            1337,
+            702,
+            27
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "UX3001",
+          "bbox": [
+            3011,
+            1371,
+            703,
+            27
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "DL9318",
+          "bbox": [
+            3011,
+            1405,
+            704,
+            27
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "DL9431",
+          "bbox": [
+            3012,
+            1439,
+            705,
+            27
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "KL2539",
+          "bbox": [
+            3013,
+            1473,
+            706,
+            27
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "VS3951",
+          "bbox": [
+            3013,
+            1506,
+            707,
+            28
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "UA947",
+          "bbox": [
+            3014,
+            1540,
+            708,
+            28
+          ],
+          "category": "带 Help"
+        },
+        {
+          "id": "TK1952",
+          "bbox": [
+            3015,
+            1574,
+            709,
+            27
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "TG7853",
+          "bbox": [
+            3015,
+            1608,
+            710,
+            27
+          ],
+          "category": "带 Help"
+        },
+        {
+          "id": "VS7166",
+          "bbox": [
+            3016,
+            1642,
+            711,
+            27
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "B60032",
+          "bbox": [
+            3017,
+            1675,
+            712,
+            28
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "EZY2180",
+          "bbox": [
+            3017,
+            1709,
+            713,
+            28
+          ],
+          "category": "无合格 Gate"
+        },
+        {
+          "id": "UA9203",
+          "bbox": [
+            3018,
+            1743,
+            714,
+            27
+          ],
+          "category": "带 Help"
+        },
+        {
+          "id": "OU451",
+          "bbox": [
+            3019,
+            1777,
+            714,
+            27
+          ],
+          "category": "带 Help"
+        },
+        {
+          "id": "BA8452",
+          "bbox": [
+            3019,
+            1811,
+            715,
+            27
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "DL9165",
+          "bbox": [
+            3020,
+            1844,
+            716,
+            28
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "SK6652",
+          "bbox": [
+            3021,
+            1878,
+            717,
+            28
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "KC904",
+          "bbox": [
+            3021,
+            1912,
+            718,
+            28
+          ],
+          "category": "带 Help"
+        },
+        {
+          "id": "CI9225",
+          "bbox": [
+            3022,
+            1946,
+            719,
+            28
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "QF8146",
+          "bbox": [
+            3023,
+            1980,
+            720,
+            27
+          ],
+          "category": "带 Help"
+        },
+        {
+          "id": "BA431",
+          "bbox": [
+            3023,
+            2013,
+            721,
+            28
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "RO362",
+          "bbox": [
+            3024,
+            2047,
+            722,
+            28
+          ],
+          "category": "带 Help"
+        },
+        {
+          "id": "RM1652",
+          "bbox": [
+            3025,
+            2081,
+            723,
+            28
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "SK6776",
+          "bbox": [
+            3025,
+            2115,
+            724,
+            28
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "SK6836",
+          "bbox": [
+            3026,
+            2149,
+            725,
+            27
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "LY338",
+          "bbox": [
+            3027,
+            2182,
+            726,
+            28
+          ],
+          "category": "带 Help"
+        },
+        {
+          "id": "VS3952",
+          "bbox": [
+            3027,
+            2216,
+            727,
+            28
+          ],
+          "category": "合格空 Help"
+        },
+        {
+          "id": "KQ1187",
+          "bbox": [
+            3028,
+            2250,
+            728,
+            28
+          ],
+          "category": "合格空 Help"
+        }
+      ],
+      "critical_rois": [
+        {
+          "id": "A",
+          "bbox": [
+            650,
+            1070,
+            795,
+            1350
+          ],
+          "human_readable": true
+        },
+        {
+          "id": "B",
+          "bbox": [
+            1439,
+            1070,
+            786,
+            1350
+          ],
+          "human_readable": true
+        },
+        {
+          "id": "C",
+          "bbox": [
+            2215,
+            1070,
+            790,
+            1360
+          ],
+          "human_readable": true
+        },
+        {
+          "id": "D",
+          "bbox": [
+            2983,
+            1070,
+            807,
+            1360
+          ],
+          "human_readable": true
+        },
+        {
+          "id": "B-help",
+          "bbox": [
+            1460,
+            1320,
+            730,
+            78
+          ],
+          "human_readable": true
+        },
+        {
+          "id": "B-gate",
+          "bbox": [
+            1460,
+            1745,
+            737,
+            65
+          ],
+          "human_readable": true
+        },
+        {
+          "id": "D-gate",
+          "bbox": [
+            3010,
+            1925,
+            755,
+            62
+          ],
+          "human_readable": true
+        },
+        {
+          "id": "C-heathrow",
+          "bbox": [
+            2235,
+            1450,
+            735,
+            148
+          ],
+          "human_readable": true
+        }
+      ],
+      "platform_points": [
+        {
+          "xy": [
+            1887,
+            1372
+          ],
+          "label": "B 屏 T3 位于 UA9791 的 Zurich 行。正上方 DL9235 的 Help 格为空。"
+        },
+        {
+          "xy": [
+            2157,
+            1770
+          ],
+          "label": "B 屏 DL9351 的 Gate 为 C11。它不进入候选对，但计入拥挤费。"
+        },
+        {
+          "xy": [
+            3704,
+            1957
+          ],
+          "label": "D 屏 CI9225 也用 C11。与 B 屏的记录共同决定这行的拥挤费。"
+        }
+      ],
+      "ocr": {
+        "han_bboxes": [],
+        "reviewed": true,
+        "evidence": "qa_notes.md"
+      },
+      "human_checks": {
+        "source_fidelity": true,
+        "annotation_correct": true,
+        "critical_evidence_visible": true,
+        "no_answer_leakage": true,
+        "counting_rules_clear": true
+      },
+      "human_checks_evidence": "qa_notes.md",
+      "task": {
+        "uses_distance": false,
+        "measurements": [],
+        "measurement_review": "无连续像素距离或阈值，时间取整分钟。见 qa_notes.md。",
+        "bypass_review": "passed",
+        "bypass_evidence": "qa_notes.md",
+        "dependencies": [
+          {
+            "roi_id": "A",
+            "parameter": "同一行的目的地、时间、Help、Gate、航班号",
+            "output": "q1–q5"
+          },
+          {
+            "roi_id": "B",
+            "parameter": "同一行的目的地、时间、Help、Gate、航班号",
+            "output": "q1–q5"
+          },
+          {
+            "roi_id": "C",
+            "parameter": "同一行的目的地、时间、Help、Gate、航班号",
+            "output": "q1–q5"
+          },
+          {
+            "roi_id": "D",
+            "parameter": "同一行的目的地、时间、Help、Gate、航班号",
+            "output": "q1–q5"
+          },
+          {
+            "roi_id": "B-help",
+            "parameter": "T3 对应 UA9791",
+            "output": "q2–q5"
+          },
+          {
+            "roi_id": "B-gate",
+            "parameter": "DL9351 使用 C11",
+            "output": "q4–q5"
+          },
+          {
+            "roi_id": "D-gate",
+            "parameter": "CI9225 使用 C11",
+            "output": "q4–q5"
+          },
+          {
+            "roi_id": "C-heathrow",
+            "parameter": "两个同目的地同时间但不同 Gate 的航班行",
+            "output": "q1、q2、q5"
+          }
+        ],
+        "counterfactuals": [
+          {
+            "field": "q2",
+            "baseline": {
+              "AB/CD": 4,
+              "AC/BD": 10,
+              "AD/BC": 3
+            },
+            "alternative": {
+              "AB/CD": 0,
+              "AC/BD": 5,
+              "AD/BC": 3
+            },
+            "verified": true,
+            "evidence": "recompute.json"
+          },
+          {
+            "field": "q4_cost",
+            "baseline": 140,
+            "alternative": 175,
+            "verified": true,
+            "evidence": "recompute.json"
+          },
+          {
+            "field": "q4_cost_without_C11_collision",
+            "baseline": 140,
+            "alternative": 115,
+            "verified": true,
+            "evidence": "recompute.json"
+          }
+        ],
+        "reasoning_graph": {
+          "nodes": [
+            {
+              "id": "read_A",
+              "kind": "visual",
+              "roi_id": "A"
+            },
+            {
+              "id": "read_B",
+              "kind": "visual",
+              "roi_id": "B"
+            },
+            {
+              "id": "read_C",
+              "kind": "visual",
+              "roi_id": "C"
+            },
+            {
+              "id": "read_D",
+              "kind": "visual",
+              "roi_id": "D"
+            },
+            {
+              "id": "pair_edges",
+              "kind": "state"
+            },
+            {
+              "id": "gate_counts",
+              "kind": "aggregate"
+            },
+            {
+              "id": "help_filter",
+              "kind": "state"
+            },
+            {
+              "id": "time_and_letter_costs",
+              "kind": "parameter"
+            },
+            {
+              "id": "full_plans",
+              "kind": "state"
+            },
+            {
+              "id": "apply_congestion",
+              "kind": "optimize"
+            },
+            {
+              "id": "recount_after_removal",
+              "kind": "state"
+            },
+            {
+              "id": "q1",
+              "kind": "output"
+            },
+            {
+              "id": "q2",
+              "kind": "output"
+            },
+            {
+              "id": "q3",
+              "kind": "output"
+            },
+            {
+              "id": "q4",
+              "kind": "output"
+            },
+            {
+              "id": "q5",
+              "kind": "output"
+            }
+          ],
+          "edges": [
+            [
+              "read_A",
+              "pair_edges"
+            ],
+            [
+              "read_A",
+              "gate_counts"
+            ],
+            [
+              "read_A",
+              "help_filter"
+            ],
+            [
+              "read_A",
+              "time_and_letter_costs"
+            ],
+            [
+              "read_B",
+              "pair_edges"
+            ],
+            [
+              "read_B",
+              "gate_counts"
+            ],
+            [
+              "read_B",
+              "help_filter"
+            ],
+            [
+              "read_B",
+              "time_and_letter_costs"
+            ],
+            [
+              "read_C",
+              "pair_edges"
+            ],
+            [
+              "read_C",
+              "gate_counts"
+            ],
+            [
+              "read_C",
+              "help_filter"
+            ],
+            [
+              "read_C",
+              "time_and_letter_costs"
+            ],
+            [
+              "read_D",
+              "pair_edges"
+            ],
+            [
+              "read_D",
+              "gate_counts"
+            ],
+            [
+              "read_D",
+              "help_filter"
+            ],
+            [
+              "read_D",
+              "time_and_letter_costs"
+            ],
+            [
+              "pair_edges",
+              "q1"
+            ],
+            [
+              "pair_edges",
+              "full_plans"
+            ],
+            [
+              "help_filter",
+              "full_plans"
+            ],
+            [
+              "full_plans",
+              "q2"
+            ],
+            [
+              "full_plans",
+              "q3"
+            ],
+            [
+              "time_and_letter_costs",
+              "q3"
+            ],
+            [
+              "gate_counts",
+              "apply_congestion"
+            ],
+            [
+              "full_plans",
+              "apply_congestion"
+            ],
+            [
+              "time_and_letter_costs",
+              "apply_congestion"
+            ],
+            [
+              "apply_congestion",
+              "q4"
+            ],
+            [
+              "apply_congestion",
+              "recount_after_removal"
+            ],
+            [
+              "gate_counts",
+              "recount_after_removal"
+            ],
+            [
+              "full_plans",
+              "recount_after_removal"
+            ],
+            [
+              "recount_after_removal",
+              "q5"
+            ]
+          ]
+        }
+      },
+      "evaluation": {
+        "tools_enabled": true,
+        "frozen_version": "ZB-TRANSIT-172600032-v2",
+        "counts": {
+          "correct": 3,
+          "incorrect": 0,
+          "timeout": 0,
+          "infra_error": 0,
+          "partial": 0
+        },
+        "trajectory": "blind_trials.json",
+        "gt_review": "recompute.json",
+        "failure_attribution": "三轮均全部字段正确"
+      }
+    }
+  ]
+}

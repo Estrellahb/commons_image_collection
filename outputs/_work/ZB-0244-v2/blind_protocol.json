@@ -1,0 +1,13 @@
+{
+  "frozen_version": "ZB-0244-v2",
+  "time": "2026-11-26T14:39:22.218573+00:00",
+  "input_directory": "/tmp/zb0244-public-v2",
+  "tools_enabled": true,
+  "contexts": "fork_turns=none",
+  "required_valid_attempts": 3,
+  "public_files": [
+    "prompt.txt",
+    "original.jpg"
+  ],
+  "instructions": "仅公开题面和干净原图；禁止访问其他作者材料、其他作答或与其他代理通信；每人独立一次完整作答。"
+}

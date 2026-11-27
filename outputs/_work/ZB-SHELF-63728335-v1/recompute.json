@@ -1,0 +1,928 @@
+{
+  "question_id": "ZB-SHELF-63728335-v1",
+  "image_size": [
+    4032,
+    3024
+  ],
+  "thresholds": {
+    "D_NEAR": 720.0,
+    "D_MAX": 2050.0,
+    "endpoint_error_px": 30.0,
+    "error_bound_px": 60.0
+  },
+  "bays": [
+    {
+      "id": "A1",
+      "group": "A",
+      "brand": "Stabburet",
+      "N": 2,
+      "E": 0,
+      "p10": 150,
+      "has_tag": 0,
+      "cx": 525,
+      "cy": 1030,
+      "bbox": [
+        120,
+        860,
+        810,
+        340
+      ]
+    },
+    {
+      "id": "A2",
+      "group": "A",
+      "brand": "KING OSCAR",
+      "N": 4,
+      "E": 2,
+      "p10": 122,
+      "has_tag": 1,
+      "cx": 1255,
+      "cy": 850,
+      "bbox": [
+        830,
+        410,
+        850,
+        850
+      ]
+    },
+    {
+      "id": "A3",
+      "group": "A",
+      "brand": "KING OSCAR",
+      "N": 6,
+      "E": 1,
+      "p10": 139,
+      "has_tag": 1,
+      "cx": 1915,
+      "cy": 790,
+      "bbox": [
+        1610,
+        350,
+        610,
+        880
+      ]
+    },
+    {
+      "id": "A4",
+      "group": "A",
+      "brand": "Stabburet",
+      "N": 4,
+      "E": 3,
+      "p10": 139,
+      "has_tag": 1,
+      "cx": 3426,
+      "cy": 860,
+      "bbox": [
+        2820,
+        440,
+        1212,
+        850
+      ]
+    },
+    {
+      "id": "B1",
+      "group": "B",
+      "brand": "Stabburet",
+      "N": 4,
+      "E": 2,
+      "p10": 150,
+      "has_tag": 0,
+      "cx": 1025,
+      "cy": 1930,
+      "bbox": [
+        590,
+        1620,
+        870,
+        620
+      ]
+    },
+    {
+      "id": "B2",
+      "group": "B",
+      "brand": "Stabburet",
+      "N": 6,
+      "E": 2,
+      "p10": 169,
+      "has_tag": 1,
+      "cx": 1810,
+      "cy": 1940,
+      "bbox": [
+        1380,
+        1520,
+        860,
+        860
+      ]
+    },
+    {
+      "id": "B3",
+      "group": "B",
+      "brand": "Stabburet",
+      "N": 6,
+      "E": 4,
+      "p10": 197,
+      "has_tag": 1,
+      "cx": 2970,
+      "cy": 2040,
+      "bbox": [
+        2220,
+        1460,
+        1500,
+        1080
+      ]
+    }
+  ],
+  "baseline": {
+    "fields": {
+      "q1_sum_N": 32,
+      "q1_sum_E": 14,
+      "q1_sum_P10_tagged": 766,
+      "q2_edges": 8,
+      "q2_near_edges": 4,
+      "q3_total_plans": 14,
+      "q3_M_plans": 12,
+      "q3_N_plans": 2,
+      "q4_M_min_c0": 638,
+      "q4_M_ties_c0": 1,
+      "q4_N_min_c0": 610,
+      "q4_N_ties_c0": 1,
+      "q5_M_min_c1": 665,
+      "q5_M_ties_c1": 1,
+      "q5_N_min_c1": 673,
+      "q5_N_ties_c1": 1,
+      "q6_winner_w0": "N",
+      "q6_winner_w1": "M",
+      "q6_reversal": 1,
+      "q6_w1_canonical_plan": "A2-B1;A4-B3"
+    },
+    "canonical_answer": "32,14,766|8,4|14,12,2|638,1,610,1|665,1,673,1|N,M,1,A2-B1;A4-B3",
+    "edges": [
+      {
+        "a": "A2",
+        "b": "B1",
+        "dx": 230,
+        "near": true,
+        "walk": 15,
+        "e_sum": 4
+      },
+      {
+        "a": "A2",
+        "b": "B2",
+        "dx": 555,
+        "near": true,
+        "walk": 15,
+        "e_sum": 4
+      },
+      {
+        "a": "A2",
+        "b": "B3",
+        "dx": 1715,
+        "near": false,
+        "walk": 45,
+        "e_sum": 6
+      },
+      {
+        "a": "A3",
+        "b": "B1",
+        "dx": 890,
+        "near": false,
+        "walk": 45,
+        "e_sum": 3
+      },
+      {
+        "a": "A3",
+        "b": "B2",
+        "dx": 105,
+        "near": true,
+        "walk": 15,
+        "e_sum": 3
+      },
+      {
+        "a": "A3",
+        "b": "B3",
+        "dx": 1055,
+        "near": false,
+        "walk": 45,
+        "e_sum": 5
+      },
+      {
+        "a": "A4",
+        "b": "B2",
+        "dx": 1616,
+        "near": false,
+        "walk": 45,
+        "e_sum": 5
+      },
+      {
+        "a": "A4",
+        "b": "B3",
+        "dx": 456,
+        "near": true,
+        "walk": 15,
+        "e_sum": 7
+      }
+    ],
+    "M": {
+      "count": 12,
+      "min_c0": 638,
+      "ties_c0": 1,
+      "best_c0": [
+        "A2-B1;A4-B3"
+      ],
+      "min_c1": 665,
+      "ties_c1": 1,
+      "best_c1": [
+        "A2-B1;A4-B3"
+      ]
+    },
+    "N": {
+      "count": 2,
+      "min_c0": 610,
+      "ties_c0": 1,
+      "best_c0": [
+        "A2-B1;A3-B2"
+      ],
+      "min_c1": 673,
+      "ties_c1": 1,
+      "best_c1": [
+        "A2-B1;A3-B2"
+      ]
+    },
+    "distance_margins": {
+      "D_NEAR": 720.0,
+      "margin_near_px": 165.0,
+      "closest_near": {
+        "edge": "A2-B2",
+        "dx": 555,
+        "e_sum": 4,
+        "g_a": 2,
+        "g_b": 4
+      },
+      "D_MAX": 2050.0,
+      "margin_max_px": 335.0,
+      "closest_max": {
+        "edge": "A2-B3",
+        "dx": 1715,
+        "e_sum": 6,
+        "g_a": 2,
+        "g_b": 2
+      }
+    }
+  },
+  "a4_shift_check": {
+    "description": "Shift A4 center +124 px to yellow tray logo center (x=3550)",
+    "all_fields_identical": true,
+    "distance_margins": {
+      "D_NEAR": 720.0,
+      "margin_near_px": 140.0,
+      "closest_near": {
+        "edge": "A4-B3",
+        "dx": 580,
+        "e_sum": 7,
+        "g_a": 1,
+        "g_b": 2
+      },
+      "D_MAX": 2050.0,
+      "margin_max_px": 310.0,
+      "closest_max": {
+        "edge": "A4-B2",
+        "dx": 1740,
+        "e_sum": 5,
+        "g_a": 1,
+        "g_b": 4
+      }
+    }
+  },
+  "perturbation_check": {
+    "trials": 10000,
+    "endpoint_noise_px": 30.0,
+    "pair_error_bound_px": 60.0,
+    "all_fields_stable_count": 10000,
+    "stability_rate": 1.0
+  },
+  "counterfactuals": [
+    {
+      "id": "CF1_B3_cross_shelf_139",
+      "description": "串层把中层红杠上方 STABBUR-MAKRELL FILET 110G (13.90 kr) 误读为下方 B3 胡椒大罐单价（p10_B3: 197 -> 139）",
+      "mechanism": "直接降低含 B3 的高异常方案购样成本 58，使 M 组在工况 0 反超 N 组，反转位由 1 翻转为 0",
+      "fields": {
+        "q1_sum_N": 32,
+        "q1_sum_E": 14,
+        "q1_sum_P10_tagged": 708,
+        "q2_edges": 8,
+        "q2_near_edges": 4,
+        "q3_total_plans": 14,
+        "q3_M_plans": 12,
+        "q3_N_plans": 2,
+        "q4_M_min_c0": 580,
+        "q4_M_ties_c0": 1,
+        "q4_N_min_c0": 610,
+        "q4_N_ties_c0": 1,
+        "q5_M_min_c1": 607,
+        "q5_M_ties_c1": 1,
+        "q5_N_min_c1": 673,
+        "q5_N_ties_c1": 1,
+        "q6_winner_w0": "M",
+        "q6_winner_w1": "M",
+        "q6_reversal": 0,
+        "q6_w1_canonical_plan": "A2-B1;A4-B3"
+      },
+      "canonical_answer": "32,14,708|8,4|14,12,2|580,1,610,1|607,1,673,1|M,M,0,A2-B1;A4-B3",
+      "changed_fields": {
+        "q1_sum_P10_tagged": {
+          "baseline": 766,
+          "alternative": 708
+        },
+        "q4_M_min_c0": {
+          "baseline": 638,
+          "alternative": 580
+        },
+        "q5_M_min_c1": {
+          "baseline": 665,
+          "alternative": 607
+        },
+        "q6_winner_w0": {
+          "baseline": "N",
+          "alternative": "M"
+        },
+        "q6_reversal": {
+          "baseline": 1,
+          "alternative": 0
+        }
+      },
+      "changed_field_count": 5,
+      "flips_reversal": true
+    },
+    {
+      "id": "CF2_B3_arrow_tag_148",
+      "description": "忽略下层红杠右侧红色向下箭头，将下层 14.80 kr 价签误归给 B3（p10_B3: 197 -> 148）",
+      "mechanism": "降低含 B3 的 M 组购样成本 49，使 M 组在两工况均胜，反转位由 1 翻转为 0",
+      "fields": {
+        "q1_sum_N": 32,
+        "q1_sum_E": 14,
+        "q1_sum_P10_tagged": 717,
+        "q2_edges": 8,
+        "q2_near_edges": 4,
+        "q3_total_plans": 14,
+        "q3_M_plans": 12,
+        "q3_N_plans": 2,
+        "q4_M_min_c0": 589,
+        "q4_M_ties_c0": 1,
+        "q4_N_min_c0": 610,
+        "q4_N_ties_c0": 1,
+        "q5_M_min_c1": 616,
+        "q5_M_ties_c1": 1,
+        "q5_N_min_c1": 673,
+        "q5_N_ties_c1": 1,
+        "q6_winner_w0": "M",
+        "q6_winner_w1": "M",
+        "q6_reversal": 0,
+        "q6_w1_canonical_plan": "A2-B1;A4-B3"
+      },
+      "canonical_answer": "32,14,717|8,4|14,12,2|589,1,610,1|616,1,673,1|M,M,0,A2-B1;A4-B3",
+      "changed_fields": {
+        "q1_sum_P10_tagged": {
+          "baseline": 766,
+          "alternative": 717
+        },
+        "q4_M_min_c0": {
+          "baseline": 638,
+          "alternative": 589
+        },
+        "q5_M_min_c1": {
+          "baseline": 665,
+          "alternative": 616
+        },
+        "q6_winner_w0": {
+          "baseline": "N",
+          "alternative": "M"
+        },
+        "q6_reversal": {
+          "baseline": 1,
+          "alternative": 0
+        }
+      },
+      "changed_field_count": 5,
+      "flips_reversal": true
+    },
+    {
+      "id": "CF3_B2_leverpostei_131",
+      "description": "将下层红杠夹在中间的 13.10 kr (LEVERPOSTEI 肝酱) 误归给中层 B2（p10_B2: 169 -> 131）",
+      "mechanism": "大幅降低含 B2 的 N 组购样成本 38，使 N 组在两工况均胜，反转位由 1 翻转为 0",
+      "fields": {
+        "q1_sum_N": 32,
+        "q1_sum_E": 14,
+        "q1_sum_P10_tagged": 728,
+        "q2_edges": 8,
+        "q2_near_edges": 4,
+        "q3_total_plans": 14,
+        "q3_M_plans": 12,
+        "q3_N_plans": 2,
+        "q4_M_min_c0": 602,
+        "q4_M_ties_c0": 1,
+        "q4_N_min_c0": 572,
+        "q4_N_ties_c0": 1,
+        "q5_M_min_c1": 646,
+        "q5_M_ties_c1": 1,
+        "q5_N_min_c1": 635,
+        "q5_N_ties_c1": 1,
+        "q6_winner_w0": "N",
+        "q6_winner_w1": "N",
+        "q6_reversal": 0,
+        "q6_w1_canonical_plan": "A2-B1;A3-B2"
+      },
+      "canonical_answer": "32,14,728|8,4|14,12,2|602,1,572,1|646,1,635,1|N,N,0,A2-B1;A3-B2",
+      "changed_fields": {
+        "q1_sum_P10_tagged": {
+          "baseline": 766,
+          "alternative": 728
+        },
+        "q4_M_min_c0": {
+          "baseline": 638,
+          "alternative": 602
+        },
+        "q4_N_min_c0": {
+          "baseline": 610,
+          "alternative": 572
+        },
+        "q5_M_min_c1": {
+          "baseline": 665,
+          "alternative": 646
+        },
+        "q5_N_min_c1": {
+          "baseline": 673,
+          "alternative": 635
+        },
+        "q6_winner_w1": {
+          "baseline": "M",
+          "alternative": "N"
+        },
+        "q6_reversal": {
+          "baseline": 1,
+          "alternative": 0
+        },
+        "q6_w1_canonical_plan": {
+          "baseline": "A2-B1;A4-B3",
+          "alternative": "A2-B1;A3-B2"
+        }
+      },
+      "changed_field_count": 8,
+      "flips_reversal": true
+    },
+    {
+      "id": "CF4_A3_miss_back_can",
+      "description": "漏看 A3 蓝白竖叠 6 罐中第 4 罐背面营养表朝前，误读 E_A3: 1 -> 0",
+      "mechanism": "使 A3-B1 与 A3-B2 不满足 E_a + E_b >= 3，轻异常组 N 方案归零，两工况均由 M 胜，反转位 1 -> 0",
+      "fields": {
+        "q1_sum_N": 32,
+        "q1_sum_E": 13,
+        "q1_sum_P10_tagged": 766,
+        "q2_edges": 6,
+        "q2_near_edges": 3,
+        "q3_total_plans": 7,
+        "q3_M_plans": 7,
+        "q3_N_plans": 0,
+        "q4_M_min_c0": 638,
+        "q4_M_ties_c0": 1,
+        "q4_N_min_c0": null,
+        "q4_N_ties_c0": 0,
+        "q5_M_min_c1": 656,
+        "q5_M_ties_c1": 1,
+        "q5_N_min_c1": null,
+        "q5_N_ties_c1": 0,
+        "q6_winner_w0": "M",
+        "q6_winner_w1": "M",
+        "q6_reversal": 0,
+        "q6_w1_canonical_plan": "A2-B1;A4-B3"
+      },
+      "canonical_answer": "32,13,766|6,3|7,7,0|638,1,None,0|656,1,None,0|M,M,0,A2-B1;A4-B3",
+      "changed_fields": {
+        "q1_sum_E": {
+          "baseline": 14,
+          "alternative": 13
+        },
+        "q2_edges": {
+          "baseline": 8,
+          "alternative": 6
+        },
+        "q2_near_edges": {
+          "baseline": 4,
+          "alternative": 3
+        },
+        "q3_total_plans": {
+          "baseline": 14,
+          "alternative": 7
+        },
+        "q3_M_plans": {
+          "baseline": 12,
+          "alternative": 7
+        },
+        "q3_N_plans": {
+          "baseline": 2,
+          "alternative": 0
+        },
+        "q4_N_min_c0": {
+          "baseline": 610,
+          "alternative": null
+        },
+        "q4_N_ties_c0": {
+          "baseline": 1,
+          "alternative": 0
+        },
+        "q5_M_min_c1": {
+          "baseline": 665,
+          "alternative": 656
+        },
+        "q5_N_min_c1": {
+          "baseline": 673,
+          "alternative": null
+        },
+        "q5_N_ties_c1": {
+          "baseline": 1,
+          "alternative": 0
+        },
+        "q6_winner_w0": {
+          "baseline": "N",
+          "alternative": "M"
+        },
+        "q6_reversal": {
+          "baseline": 1,
+          "alternative": 0
+        }
+      },
+      "changed_field_count": 13,
+      "flips_reversal": true
+    },
+    {
+      "id": "CF5_A4_all_inverted",
+      "description": "误以为 A4 右侧宽黄托 4 罐全倒置、漏看上托右列正立罐（E_A4: 3 -> 4，导致 G_A4 = 0）",
+      "mechanism": "A4 不满足 G_a >= 1 被剔除，M 组失去最优方案 A2-B1;A4-B3，两工况均由 N 胜，反转位 1 -> 0",
+      "fields": {
+        "q1_sum_N": 32,
+        "q1_sum_E": 15,
+        "q1_sum_P10_tagged": 766,
+        "q2_edges": 6,
+        "q2_near_edges": 3,
+        "q3_total_plans": 6,
+        "q3_M_plans": 4,
+        "q3_N_plans": 2,
+        "q4_M_min_c0": 668,
+        "q4_M_ties_c0": 1,
+        "q4_N_min_c0": 610,
+        "q4_N_ties_c0": 1,
+        "q5_M_min_c1": 722,
+        "q5_M_ties_c1": 1,
+        "q5_N_min_c1": 682,
+        "q5_N_ties_c1": 1,
+        "q6_winner_w0": "N",
+        "q6_winner_w1": "N",
+        "q6_reversal": 0,
+        "q6_w1_canonical_plan": "A2-B1;A3-B2"
+      },
+      "canonical_answer": "32,15,766|6,3|6,4,2|668,1,610,1|722,1,682,1|N,N,0,A2-B1;A3-B2",
+      "changed_fields": {
+        "q1_sum_E": {
+          "baseline": 14,
+          "alternative": 15
+        },
+        "q2_edges": {
+          "baseline": 8,
+          "alternative": 6
+        },
+        "q2_near_edges": {
+          "baseline": 4,
+          "alternative": 3
+        },
+        "q3_total_plans": {
+          "baseline": 14,
+          "alternative": 6
+        },
+        "q3_M_plans": {
+          "baseline": 12,
+          "alternative": 4
+        },
+        "q4_M_min_c0": {
+          "baseline": 638,
+          "alternative": 668
+        },
+        "q5_M_min_c1": {
+          "baseline": 665,
+          "alternative": 722
+        },
+        "q5_N_min_c1": {
+          "baseline": 673,
+          "alternative": 682
+        },
+        "q6_winner_w1": {
+          "baseline": "M",
+          "alternative": "N"
+        },
+        "q6_reversal": {
+          "baseline": 1,
+          "alternative": 0
+        },
+        "q6_w1_canonical_plan": {
+          "baseline": "A2-B1;A4-B3",
+          "alternative": "A2-B1;A3-B2"
+        }
+      },
+      "changed_field_count": 11,
+      "flips_reversal": true
+    },
+    {
+      "id": "CF6_B3_miss_back_left",
+      "description": "漏看 B3 红边大罐后排左罐倒置，误以为左列全正立、右列全倒置（E_B3: 4 -> 3）",
+      "mechanism": "缩小 M 组与 N 组的异常罐覆盖差（4 -> 3），工况 1 中 M(665) 败于 N(664)，反转位 1 -> 0",
+      "fields": {
+        "q1_sum_N": 32,
+        "q1_sum_E": 13,
+        "q1_sum_P10_tagged": 766,
+        "q2_edges": 8,
+        "q2_near_edges": 4,
+        "q3_total_plans": 14,
+        "q3_M_plans": 12,
+        "q3_N_plans": 2,
+        "q4_M_min_c0": 638,
+        "q4_M_ties_c0": 1,
+        "q4_N_min_c0": 610,
+        "q4_N_ties_c0": 1,
+        "q5_M_min_c1": 665,
+        "q5_M_ties_c1": 1,
+        "q5_N_min_c1": 664,
+        "q5_N_ties_c1": 1,
+        "q6_winner_w0": "N",
+        "q6_winner_w1": "N",
+        "q6_reversal": 0,
+        "q6_w1_canonical_plan": "A2-B1;A3-B2"
+      },
+      "canonical_answer": "32,13,766|8,4|14,12,2|638,1,610,1|665,1,664,1|N,N,0,A2-B1;A3-B2",
+      "changed_fields": {
+        "q1_sum_E": {
+          "baseline": 14,
+          "alternative": 13
+        },
+        "q5_N_min_c1": {
+          "baseline": 673,
+          "alternative": 664
+        },
+        "q6_winner_w1": {
+          "baseline": "M",
+          "alternative": "N"
+        },
+        "q6_reversal": {
+          "baseline": 1,
+          "alternative": 0
+        },
+        "q6_w1_canonical_plan": {
+          "baseline": "A2-B1;A4-B3",
+          "alternative": "A2-B1;A3-B2"
+        }
+      },
+      "changed_field_count": 5,
+      "flips_reversal": true
+    },
+    {
+      "id": "CF7_B2_miss_bottom_row",
+      "description": "漏看 B2 天蓝角标底层 2 罐倒置（E_B2: 2 -> 0）",
+      "mechanism": "使 A2-B2 与 A3-B2 失效（E: 8 -> 6, P: 14 -> 8），N 组失去最优方案 A2-B1;A3-B2，两工况均由 M 胜，反转位 1 -> 0",
+      "fields": {
+        "q1_sum_N": 32,
+        "q1_sum_E": 12,
+        "q1_sum_P10_tagged": 766,
+        "q2_edges": 6,
+        "q2_near_edges": 2,
+        "q3_total_plans": 8,
+        "q3_M_plans": 6,
+        "q3_N_plans": 2,
+        "q4_M_min_c0": 638,
+        "q4_M_ties_c0": 1,
+        "q4_N_min_c0": 640,
+        "q4_N_ties_c0": 1,
+        "q5_M_min_c1": 647,
+        "q5_M_ties_c1": 1,
+        "q5_N_min_c1": 685,
+        "q5_N_ties_c1": 1,
+        "q6_winner_w0": "M",
+        "q6_winner_w1": "M",
+        "q6_reversal": 0,
+        "q6_w1_canonical_plan": "A2-B1;A4-B3"
+      },
+      "canonical_answer": "32,12,766|6,2|8,6,2|638,1,640,1|647,1,685,1|M,M,0,A2-B1;A4-B3",
+      "changed_fields": {
+        "q1_sum_E": {
+          "baseline": 14,
+          "alternative": 12
+        },
+        "q2_edges": {
+          "baseline": 8,
+          "alternative": 6
+        },
+        "q2_near_edges": {
+          "baseline": 4,
+          "alternative": 2
+        },
+        "q3_total_plans": {
+          "baseline": 14,
+          "alternative": 8
+        },
+        "q3_M_plans": {
+          "baseline": 12,
+          "alternative": 6
+        },
+        "q4_N_min_c0": {
+          "baseline": 610,
+          "alternative": 640
+        },
+        "q5_M_min_c1": {
+          "baseline": 665,
+          "alternative": 647
+        },
+        "q5_N_min_c1": {
+          "baseline": 673,
+          "alternative": 685
+        },
+        "q6_winner_w0": {
+          "baseline": "N",
+          "alternative": "M"
+        },
+        "q6_reversal": {
+          "baseline": 1,
+          "alternative": 0
+        }
+      },
+      "changed_field_count": 10,
+      "flips_reversal": true
+    },
+    {
+      "id": "CF8_A2_miss_bottom_row",
+      "description": "漏看 A2 红纸托下层 2 罐圆罐倒置（E_A2: 2 -> 0）",
+      "mechanism": "使 A2-B1 与 A2-B2 失效（E: 8 -> 6, P: 14 -> 7），两工况均由 M 胜，反转位 1 -> 0",
+      "fields": {
+        "q1_sum_N": 32,
+        "q1_sum_E": 12,
+        "q1_sum_P10_tagged": 766,
+        "q2_edges": 6,
+        "q2_near_edges": 2,
+        "q3_total_plans": 7,
+        "q3_M_plans": 5,
+        "q3_N_plans": 2,
+        "q4_M_min_c0": 674,
+        "q4_M_ties_c0": 1,
+        "q4_N_min_c0": 687,
+        "q4_N_ties_c0": 1,
+        "q5_M_min_c1": 692,
+        "q5_M_ties_c1": 1,
+        "q5_N_min_c1": 732,
+        "q5_N_ties_c1": 1,
+        "q6_winner_w0": "M",
+        "q6_winner_w1": "M",
+        "q6_reversal": 0,
+        "q6_w1_canonical_plan": "A3-B2;A4-B3"
+      },
+      "canonical_answer": "32,12,766|6,2|7,5,2|674,1,687,1|692,1,732,1|M,M,0,A3-B2;A4-B3",
+      "changed_fields": {
+        "q1_sum_E": {
+          "baseline": 14,
+          "alternative": 12
+        },
+        "q2_edges": {
+          "baseline": 8,
+          "alternative": 6
+        },
+        "q2_near_edges": {
+          "baseline": 4,
+          "alternative": 2
+        },
+        "q3_total_plans": {
+          "baseline": 14,
+          "alternative": 7
+        },
+        "q3_M_plans": {
+          "baseline": 12,
+          "alternative": 5
+        },
+        "q4_M_min_c0": {
+          "baseline": 638,
+          "alternative": 674
+        },
+        "q4_N_min_c0": {
+          "baseline": 610,
+          "alternative": 687
+        },
+        "q5_M_min_c1": {
+          "baseline": 665,
+          "alternative": 692
+        },
+        "q5_N_min_c1": {
+          "baseline": 673,
+          "alternative": 732
+        },
+        "q6_winner_w0": {
+          "baseline": "N",
+          "alternative": "M"
+        },
+        "q6_reversal": {
+          "baseline": 1,
+          "alternative": 0
+        },
+        "q6_w1_canonical_plan": {
+          "baseline": "A2-B1;A4-B3",
+          "alternative": "A3-B2;A4-B3"
+        }
+      },
+      "changed_field_count": 12,
+      "flips_reversal": true
+    },
+    {
+      "id": "CF9_B1_miss_left_col",
+      "description": "漏看 B1 橙红角标左列上下 2 罐倒置（E_B1: 2 -> 0）",
+      "mechanism": "使 A2-B1 与 A3-B1 失效（E: 8 -> 6, P: 14 -> 6, N: 2 -> 0），两工况均由 M 胜，反转位 1 -> 0",
+      "fields": {
+        "q1_sum_N": 32,
+        "q1_sum_E": 12,
+        "q1_sum_P10_tagged": 766,
+        "q2_edges": 6,
+        "q2_near_edges": 3,
+        "q3_total_plans": 6,
+        "q3_M_plans": 6,
+        "q3_N_plans": 0,
+        "q4_M_min_c0": 657,
+        "q4_M_ties_c0": 1,
+        "q4_N_min_c0": null,
+        "q4_N_ties_c0": 0,
+        "q5_M_min_c1": 666,
+        "q5_M_ties_c1": 1,
+        "q5_N_min_c1": null,
+        "q5_N_ties_c1": 0,
+        "q6_winner_w0": "M",
+        "q6_winner_w1": "M",
+        "q6_reversal": 0,
+        "q6_w1_canonical_plan": "A2-B2;A4-B3"
+      },
+      "canonical_answer": "32,12,766|6,3|6,6,0|657,1,None,0|666,1,None,0|M,M,0,A2-B2;A4-B3",
+      "changed_fields": {
+        "q1_sum_E": {
+          "baseline": 14,
+          "alternative": 12
+        },
+        "q2_edges": {
+          "baseline": 8,
+          "alternative": 6
+        },
+        "q2_near_edges": {
+          "baseline": 4,
+          "alternative": 3
+        },
+        "q3_total_plans": {
+          "baseline": 14,
+          "alternative": 6
+        },
+        "q3_M_plans": {
+          "baseline": 12,
+          "alternative": 6
+        },
+        "q3_N_plans": {
+          "baseline": 2,
+          "alternative": 0
+        },
+        "q4_M_min_c0": {
+          "baseline": 638,
+          "alternative": 657
+        },
+        "q4_N_min_c0": {
+          "baseline": 610,
+          "alternative": null
+        },
+        "q4_N_ties_c0": {
+          "baseline": 1,
+          "alternative": 0
+        },
+        "q5_M_min_c1": {
+          "baseline": 665,
+          "alternative": 666
+        },
+        "q5_N_min_c1": {
+          "baseline": 673,
+          "alternative": null
+        },
+        "q5_N_ties_c1": {
+          "baseline": 1,
+          "alternative": 0
+        },
+        "q6_winner_w0": {
+          "baseline": "N",
+          "alternative": "M"
+        },
+        "q6_reversal": {
+          "baseline": 1,
+          "alternative": 0
+        },
+        "q6_w1_canonical_plan": {
+          "baseline": "A2-B1;A4-B3",
+          "alternative": "A2-B2;A4-B3"
+        }
+      },
+      "changed_field_count": 15,
+      "flips_reversal": true
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "page_id": 137835149,
+  "category": "公共场景/图书馆",
+  "file": "img/公共场景/图书馆/zb-library-137835149.jpg",
+  "title": "File:Schermers Opera Patris.jpg",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Schermers_Opera_Patris.jpg",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Schermers_Opera_Patris.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "source_bytes": 1777528,
+  "source_width": 3191,
+  "source_height": 2840,
+  "width": 3191,
+  "height": 2840,
+  "bytes": 2072768,
+  "limit_bytes": 5000000,
+  "preferred_bytes": 5000000,
+  "license": {
+    "Credit": "Own work",
+    "Artist": "JorisEnter",
+    "LicenseShortName": "CC BY-SA 4.0",
+    "UsageTerms": "Creative Commons Attribution-Share Alike 4.0",
+    "AttributionRequired": "true",
+    "LicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "Restrictions": ""
+  },
+  "modifications": "Lossy JPEG re-encoding. EXIF orientation applied; only color-related metadata kept.",
+  "resized": false,
+  "sha256": "55d49b2ade325cd662bd364f432d33ca0fdbfadbe40eb8d445d4522fb4b043e8",
+  "source_page_live_check": "unavailable_dns_resolution",
+  "verification_basis": "本地来源台账中的逐资产记录、文件路径、原生尺寸及实际图像内容",
+  "scene_id": "commons:137835149:Schermers_Opera_Patris",
+  "dedup_scope": "当前 SQLite 出题与领取记录、本地 outputs、skills 中样例。外部难题300清单未随项目提供。"
+}

@@ -1,6 +1,6 @@
 # ZeroBench 图片标签与筛选实施方案
 
-图片入库时，用候选题型、视觉难点和综合难度描述可出题的方向，用备注记录图证和预计影响。[zerobench-visual-authoring](skills/zerobench-visual-authoring/zerobench-visual-authoring/SKILL.md)
+图片入库时，用候选题型、视觉难点和综合难度描述可出题的方向，用备注记录图证和预计影响。[zerobench-visual-benchmark](skills/zerobench-visual-benchmark/SKILL.md)
 
 ## 1. 出题标注规则
 
@@ -18,7 +18,7 @@
 | P2 | 通过另一时相、视角或图面局部解决对象对应、细支路连接或阶段状态更新。按该题的实际读图依赖评级。 |
 | P3 | 探索图形规律、隐藏表示或条件迁移。先限定规则范围，再找能排除最相近解释的决定性格子。 |
 
-优先级可写在 `tag_notes` 里。单次读趋势、按已给输入代公式、单段明确测距、扩大重复规模或只问一个赢家，可用于递进题中的局部步骤。多问联合题可将 4–6 个小问串成读对象、测距、建关系或选参数、求全局结果，按需要加入优化或排序。每问应输出可以单独核对的字段。[构造方法](skills/zerobench-visual-authoring/zerobench-visual-authoring/references/construction-recipes.md)
+优先级可写在 `tag_notes` 里。单次读趋势、按已给输入代公式、单段明确测距、扩大重复规模或只问一个赢家，可用于递进题中的局部步骤。多问联合题可将 4–6 个小问串成读对象、测距、建关系或选参数、求全局结果，按需要加入优化或排序。每问应输出可以单独核对的字段。[优先级和构题配方](skills/zerobench-visual-benchmark/references/priorities-and-recipes.md)
 
 ### 候选题型 `question_types`（多选）
 
@@ -64,11 +64,11 @@
 | `medium` | 需要核对多组对象，或根据读图结果建立有明确对应的关系、取参并计算。 |
 | `hard` | 多项可核验图证共同决定关系、约束或全局求解。有具体的易混读法会改变至少一个要求输出的字段，且正确读法在合理测量误差范围内保持稳定。候选标注记录预计影响，定稿时复算确认。 |
 
-密集程度、规则条数、计算量和小问数用于描述题面。难度以图证怎样进入求解为依据。关键信息完全不可见、连接有歧义、物理尺度缺失或测量误差会跨过判定阈值时，记录待核项。连续量注明端点、单位、阈值等号归属和容差。全局问题写明一个完整方案的定义、去重与并列口径。成题后的模型实测随单题版本记录，超时、工具故障或缺失末答另行统计。[实测证据与适用范围](skills/zerobench-visual-authoring/zerobench-visual-authoring/references/evidence.md)
+密集程度、规则条数、计算量和小问数用于描述题面。难度以图证怎样进入求解为依据。关键信息完全不可见、连接有歧义、物理尺度缺失或测量误差会跨过判定阈值时，记录待核项。连续量注明端点、单位、阈值等号归属和容差。全局问题写明一个完整方案的定义、去重与并列口径。成题后的模型实测随单题版本记录，超时、服务故障或缺失末答另行统计。[实测证据与适用范围](skills/zerobench-visual-benchmark/references/evidence.md)
 
 ### 出题备注 `tag_notes`
 
-备注可按「优先级 → 证据位置与辨析 → 关系、参数或约束 → 受影响字段 → 待核项」组织。若有多个出题方向，注明当前评级依据。单题定稿另存最终题图尺寸、原图坐标打点、对象事实表、正确输入与误读复算、单位及容差，以及两段作者解答。[单题作者记录](skills/zerobench-visual-authoring/zerobench-visual-authoring/references/authoring-record.md)
+备注可按「优先级 → 证据位置与辨析 → 关系、参数或约束 → 受影响字段 → 待核项」组织。若有多个出题方向，注明当前评级依据。出题选图已彻底取消 1080p（`1080×1920`）及最小像素尺寸硬门槛（如实记录图像宽高并在原图 100% 下确认关键证据清晰可辨即可），并跳过外部「难题 300」排除清单、直接以本地 `采集数据.sqlite` 与 `outputs/` 已有题目来源去重。单题最终交付目录 `outputs/authoring_<题号>/` 仅存放「干净原图文件 + `author_record.html`」，`solver.py`、`facts.json`、`recompute.json`、`manifest.json`、`qa_report/`、`eval_4x.json`、`review.json` 等过程材料统一存放在 `outputs/_work/<题号>/`。[单题作者记录与交付契约](skills/zerobench-visual-benchmark/references/authoring-and-platform.md)
 
 | 候选场景 | 候选标注 | 备注示例 |
 | --- | --- | --- |

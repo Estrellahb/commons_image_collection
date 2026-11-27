@@ -39,6 +39,7 @@ AUTHORED_STATUS_META = {
 AUTHORED_STATUSES = tuple(AUTHORED_STATUS_META)
 AUTHORED_FIELDS = ("authored_status", "authored_ref")
 ANNOTATION_FIELDS = (*TAG_FIELDS, *AUTHORED_FIELDS)
+REGISTRY_SOURCES = ("collection_queue", "img_claims", "none")
 
 
 def schema():
@@ -138,4 +139,13 @@ def matches(item, filters):
         return False
     if filters.get("category") and item.get("category") != filters["category"]:
         return False
+    registered = filters.get("registered")
+    if registered is not None and bool(item.get("registered")) != registered:
+        return False
+    registry_source = filters.get("registry_source")
+    if registry_source is not None:
+        actual_source = item.get("registry_source", "")
+        expected_source = "" if registry_source == "none" else registry_source
+        if actual_source != expected_source:
+            return False
     return True

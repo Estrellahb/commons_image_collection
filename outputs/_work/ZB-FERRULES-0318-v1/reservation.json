@@ -1,0 +1,28 @@
+{
+  "before": {
+    "id": 318,
+    "file_url": "https://commons.wikimedia.org/wiki/File:Dornbirn-wire_ferrules-01ASD.jpg",
+    "category": "居家场景/工具五金",
+    "claimed_by": "",
+    "question_types": "counting",
+    "difficulty": "hard",
+    "difficulty_tags": "cross_region_alignment,high_density,multi_hop_visual",
+    "tag_notes": "P1。蓝盒用黄色隔条划格，登记格内主要套管色及是否可辨金属头。右下蓝绿混格若按纯蓝邻格读，会换颜色组合与资格。每套跨三纵列各取一格且封端状态满足题设，输出完整套数；左盖空模位剔除。",
+    "authored_status": "",
+    "authored_ref": ""
+  },
+  "after": {
+    "id": 318,
+    "file_url": "https://commons.wikimedia.org/wiki/File:Dornbirn-wire_ferrules-01ASD.jpg",
+    "category": "居家场景/工具五金",
+    "claimed_by": "Codex-ZB-FERRULES-0318-v1",
+    "question_types": "counting",
+    "difficulty": "hard",
+    "difficulty_tags": "cross_region_alignment,high_density,multi_hop_visual",
+    "tag_notes": "P1。蓝盒用黄色隔条划格，登记格内主要套管色及是否可辨金属头。右下蓝绿混格若按纯蓝邻格读，会换颜色组合与资格。每套跨三纵列各取一格且封端状态满足题设，输出完整套数；左盖空模位剔除。",
+    "authored_status": "draft",
+    "authored_ref": "ZB-FERRULES-0318-v1 | outputs/authoring_ZB-FERRULES-0318-v1"
+  },
+  "mode": "local_sqlite_transaction_user_supplied_img_path",
+  "sha256": "aff2b1f3c72ba5ea1e6c66b7c8c10427d0f814c6a7365778db85b94b83dcdacc"
+}

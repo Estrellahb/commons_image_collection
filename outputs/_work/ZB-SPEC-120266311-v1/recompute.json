@@ -1,0 +1,1085 @@
+{
+  "question_id": "ZB-SPEC-120266311-v1",
+  "image_size": [
+    3870,
+    3081
+  ],
+  "thresholds": {
+    "D_NEAR": 735.0,
+    "D_MAX": 1465.0,
+    "endpoint_error_px": 15.0,
+    "error_bound_px": 30.0
+  },
+  "blocks": [
+    {
+      "id": "A1",
+      "group": "A",
+      "taxon": "TENEBRIO / molitor, L.",
+      "C": 12,
+      "S": 12,
+      "B": 0,
+      "L": 0,
+      "WX": 0,
+      "X": 2,
+      "cx": 2385,
+      "cy": 1138,
+      "bbox": [
+        2095,
+        935,
+        580,
+        405
+      ]
+    },
+    {
+      "id": "A2",
+      "group": "A",
+      "taxon": "TENEBRIO / obscurus, F.",
+      "C": 3,
+      "S": 3,
+      "B": 3,
+      "L": 0,
+      "WX": 0,
+      "X": 0,
+      "cx": 2385,
+      "cy": 1478,
+      "bbox": [
+        2170,
+        1375,
+        430,
+        205
+      ]
+    },
+    {
+      "id": "A3",
+      "group": "A",
+      "taxon": "HELOPS / caeruleus L.",
+      "C": 14,
+      "S": 14,
+      "B": 0,
+      "L": 0,
+      "WX": 0,
+      "X": 2,
+      "cx": 2385,
+      "cy": 2122,
+      "bbox": [
+        2095,
+        1645,
+        580,
+        955
+      ]
+    },
+    {
+      "id": "A4",
+      "group": "A",
+      "taxon": "LAGRIA / atripes Muls. & Guil.",
+      "C": 11,
+      "S": 11,
+      "B": 0,
+      "L": 0,
+      "WX": 0,
+      "X": 2,
+      "cx": 2845,
+      "cy": 920,
+      "bbox": [
+        2685,
+        700,
+        320,
+        440
+      ]
+    },
+    {
+      "id": "A5",
+      "group": "A",
+      "taxon": "PSEUDOCISTELA / ceramboides, L.",
+      "C": 9,
+      "S": 9,
+      "B": 1,
+      "L": 0,
+      "WX": 0,
+      "X": 0,
+      "cx": 2840,
+      "cy": 2585,
+      "bbox": [
+        2685,
+        2305,
+        310,
+        560
+      ]
+    },
+    {
+      "id": "B1",
+      "group": "B",
+      "taxon": "PRIONYCHUS / ater, F.",
+      "C": 12,
+      "S": 12,
+      "B": 2,
+      "L": 8,
+      "WX": 1,
+      "X": 0,
+      "cx": 3175,
+      "cy": 1020,
+      "bbox": [
+        3020,
+        650,
+        310,
+        740
+      ]
+    },
+    {
+      "id": "B2",
+      "group": "B",
+      "taxon": "PRIONYCHUS / melanarius Germ.",
+      "C": 9,
+      "S": 9,
+      "B": 4,
+      "L": 1,
+      "WX": 1,
+      "X": 0,
+      "cx": 3170,
+      "cy": 1725,
+      "bbox": [
+        3015,
+        1455,
+        310,
+        540
+      ]
+    },
+    {
+      "id": "B3",
+      "group": "B",
+      "taxon": "TETRATOMA / desmaresti, Lt.",
+      "C": 5,
+      "S": 10,
+      "B": 3,
+      "L": 0,
+      "WX": 0,
+      "X": 0,
+      "cx": 3488,
+      "cy": 775,
+      "bbox": [
+        3350,
+        685,
+        275,
+        180
+      ]
+    },
+    {
+      "id": "B4",
+      "group": "B",
+      "taxon": "MELANDRYA / caraboides, L.",
+      "C": 10,
+      "S": 10,
+      "B": 2,
+      "L": 0,
+      "WX": 0,
+      "X": 0,
+      "cx": 3508,
+      "cy": 1835,
+      "bbox": [
+        3345,
+        1455,
+        325,
+        760
+      ]
+    },
+    {
+      "id": "B5",
+      "group": "B",
+      "taxon": "PHLOIOTRYA / vaudoueri Muls.",
+      "C": 12,
+      "S": 12,
+      "B": 2,
+      "L": 0,
+      "WX": 0,
+      "X": 2,
+      "cx": 3508,
+      "cy": 2585,
+      "bbox": [
+        3345,
+        2305,
+        325,
+        560
+      ]
+    }
+  ],
+  "baseline": {
+    "fields": {
+      "q1_sum_C": 97,
+      "q1_sum_S": 102,
+      "q1_sum_B": 17,
+      "q1_sum_L": 9,
+      "q1_sum_WX": 2,
+      "q1_sum_X": 8,
+      "q2_edges": 12,
+      "q2_near_edges": 2,
+      "q3_total_plans": 35,
+      "q3_M_plans": 14,
+      "q3_N_plans": 21,
+      "q4_M_min_c0": 57,
+      "q4_M_ties_c0": 1,
+      "q4_N_min_c0": 68,
+      "q4_N_ties_c0": 1,
+      "q5_M_min_c1": 73,
+      "q5_M_ties_c1": 1,
+      "q5_N_min_c1": 65,
+      "q5_N_ties_c1": 2,
+      "q6_winner_w0": "M",
+      "q6_winner_w1": "N",
+      "q6_reversal": 1,
+      "q6_w1_canonical_plan": "A2-B1;A4-B3"
+    },
+    "canonical_answer": "97,102,17,9,2,8|12,2|35,14,21|57,1,68,1|73,1,65,2|M,N,1,A2-B1;A4-B3",
+    "edges": [
+      {
+        "a": "A1",
+        "b": "B2",
+        "dist": 980.2,
+        "near": false,
+        "walk": 30,
+        "b_sum": 4
+      },
+      {
+        "a": "A1",
+        "b": "B3",
+        "dist": 1161.2,
+        "near": false,
+        "walk": 30,
+        "b_sum": 3
+      },
+      {
+        "a": "A2",
+        "b": "B1",
+        "dist": 913.16,
+        "near": false,
+        "walk": 30,
+        "b_sum": 5
+      },
+      {
+        "a": "A2",
+        "b": "B2",
+        "dist": 822.94,
+        "near": false,
+        "walk": 30,
+        "b_sum": 7
+      },
+      {
+        "a": "A2",
+        "b": "B3",
+        "dist": 1307.98,
+        "near": false,
+        "walk": 30,
+        "b_sum": 6
+      },
+      {
+        "a": "A2",
+        "b": "B4",
+        "dist": 1178.38,
+        "near": false,
+        "walk": 30,
+        "b_sum": 5
+      },
+      {
+        "a": "A3",
+        "b": "B2",
+        "dist": 879.68,
+        "near": false,
+        "walk": 30,
+        "b_sum": 4
+      },
+      {
+        "a": "A4",
+        "b": "B2",
+        "dist": 868.13,
+        "near": false,
+        "walk": 30,
+        "b_sum": 4
+      },
+      {
+        "a": "A4",
+        "b": "B3",
+        "dist": 659.15,
+        "near": true,
+        "walk": 10,
+        "b_sum": 3
+      },
+      {
+        "a": "A5",
+        "b": "B2",
+        "dist": 921.14,
+        "near": false,
+        "walk": 30,
+        "b_sum": 5
+      },
+      {
+        "a": "A5",
+        "b": "B4",
+        "dist": 1004.35,
+        "near": false,
+        "walk": 30,
+        "b_sum": 3
+      },
+      {
+        "a": "A5",
+        "b": "B5",
+        "dist": 668.0,
+        "near": true,
+        "walk": 10,
+        "b_sum": 3
+      }
+    ],
+    "M": {
+      "count": 14,
+      "min_c0": 57,
+      "ties_c0": 1,
+      "best_c0": [
+        "A4-B3;A5-B5"
+      ],
+      "min_c1": 73,
+      "ties_c1": 1,
+      "best_c1": [
+        "A4-B3;A5-B5"
+      ]
+    },
+    "N": {
+      "count": 21,
+      "min_c0": 68,
+      "ties_c0": 1,
+      "best_c0": [
+        "A2-B2;A4-B3"
+      ],
+      "min_c1": 65,
+      "ties_c1": 2,
+      "best_c1": [
+        "A2-B1;A4-B3",
+        "A2-B1;A5-B5"
+      ]
+    },
+    "distance_margins": {
+      "D_NEAR": 735.0,
+      "margin_near_px": 63.76,
+      "closest_near": {
+        "edge": "A1-B1",
+        "dist": 798.76,
+        "b_sum": 2
+      },
+      "D_MAX": 1465.0,
+      "margin_max_px": 109.09,
+      "closest_max": {
+        "edge": "A3-B1",
+        "dist": 1355.91,
+        "b_sum": 2
+      }
+    }
+  },
+  "label_shift_check": {
+    "description": "Uniform +25 px y-shift including species label strips",
+    "all_fields_identical": true
+  },
+  "perturbation_check": {
+    "trials": 10000,
+    "endpoint_radial_noise_px": 15.0,
+    "pair_error_bound_px": 30.0,
+    "all_fields_stable_count": 10000,
+    "stability_rate": 1.0
+  },
+  "counterfactuals": [
+    {
+      "id": "CF1_A5_miss_pin",
+      "description": "漏看 A5 (ceramboides) 最右下角唯一 1 张下端插针卡（B_A5: 1 -> 0）",
+      "mechanism": "A5-B5 与 A5-B4 失效，M 组失去唯一双近距方案，工况 0/1 均由 N 胜，rev: 1 -> 0",
+      "fields": {
+        "q1_sum_C": 97,
+        "q1_sum_S": 102,
+        "q1_sum_B": 16,
+        "q1_sum_L": 9,
+        "q1_sum_WX": 2,
+        "q1_sum_X": 8,
+        "q2_edges": 10,
+        "q2_near_edges": 1,
+        "q3_total_plans": 21,
+        "q3_M_plans": 5,
+        "q3_N_plans": 16,
+        "q4_M_min_c0": 77,
+        "q4_M_ties_c0": 1,
+        "q4_N_min_c0": 68,
+        "q4_N_ties_c0": 1,
+        "q5_M_min_c1": 85,
+        "q5_M_ties_c1": 1,
+        "q5_N_min_c1": 64,
+        "q5_N_ties_c1": 1,
+        "q6_winner_w0": "N",
+        "q6_winner_w1": "N",
+        "q6_reversal": 0,
+        "q6_w1_canonical_plan": "A2-B1;A4-B3"
+      },
+      "canonical_answer": "97,102,16,9,2,8|10,1|21,5,16|77,1,68,1|85,1,64,1|N,N,0,A2-B1;A4-B3",
+      "changed_fields": {
+        "q1_sum_B": {
+          "baseline": 17,
+          "alternative": 16
+        },
+        "q2_edges": {
+          "baseline": 12,
+          "alternative": 10
+        },
+        "q2_near_edges": {
+          "baseline": 2,
+          "alternative": 1
+        },
+        "q3_total_plans": {
+          "baseline": 35,
+          "alternative": 21
+        },
+        "q3_M_plans": {
+          "baseline": 14,
+          "alternative": 5
+        },
+        "q3_N_plans": {
+          "baseline": 21,
+          "alternative": 16
+        },
+        "q4_M_min_c0": {
+          "baseline": 57,
+          "alternative": 77
+        },
+        "q5_M_min_c1": {
+          "baseline": 73,
+          "alternative": 85
+        },
+        "q5_N_min_c1": {
+          "baseline": 65,
+          "alternative": 64
+        },
+        "q5_N_ties_c1": {
+          "baseline": 2,
+          "alternative": 1
+        },
+        "q6_winner_w0": {
+          "baseline": "M",
+          "alternative": "N"
+        },
+        "q6_reversal": {
+          "baseline": 1,
+          "alternative": 0
+        }
+      },
+      "changed_field_count": 12,
+      "flips_reversal": true
+    },
+    {
+      "id": "CF2_B5_miss_1pin",
+      "description": "漏看 B5 (vaudoueri) 第 3 行外侧 1 张下端插针卡（B_B5: 2 -> 1）",
+      "mechanism": "A5-B5 失效，M 组失去双近距最优方案，两工况均由 N 胜，rev: 1 -> 0",
+      "fields": {
+        "q1_sum_C": 97,
+        "q1_sum_S": 102,
+        "q1_sum_B": 16,
+        "q1_sum_L": 9,
+        "q1_sum_WX": 2,
+        "q1_sum_X": 8,
+        "q2_edges": 11,
+        "q2_near_edges": 1,
+        "q3_total_plans": 26,
+        "q3_M_plans": 9,
+        "q3_N_plans": 17,
+        "q4_M_min_c0": 75,
+        "q4_M_ties_c0": 1,
+        "q4_N_min_c0": 68,
+        "q4_N_ties_c0": 1,
+        "q5_M_min_c1": 85,
+        "q5_M_ties_c1": 1,
+        "q5_N_min_c1": 64,
+        "q5_N_ties_c1": 1,
+        "q6_winner_w0": "N",
+        "q6_winner_w1": "N",
+        "q6_reversal": 0,
+        "q6_w1_canonical_plan": "A2-B1;A4-B3"
+      },
+      "canonical_answer": "97,102,16,9,2,8|11,1|26,9,17|75,1,68,1|85,1,64,1|N,N,0,A2-B1;A4-B3",
+      "changed_fields": {
+        "q1_sum_B": {
+          "baseline": 17,
+          "alternative": 16
+        },
+        "q2_edges": {
+          "baseline": 12,
+          "alternative": 11
+        },
+        "q2_near_edges": {
+          "baseline": 2,
+          "alternative": 1
+        },
+        "q3_total_plans": {
+          "baseline": 35,
+          "alternative": 26
+        },
+        "q3_M_plans": {
+          "baseline": 14,
+          "alternative": 9
+        },
+        "q3_N_plans": {
+          "baseline": 21,
+          "alternative": 17
+        },
+        "q4_M_min_c0": {
+          "baseline": 57,
+          "alternative": 75
+        },
+        "q5_M_min_c1": {
+          "baseline": 73,
+          "alternative": 85
+        },
+        "q5_N_min_c1": {
+          "baseline": 65,
+          "alternative": 64
+        },
+        "q5_N_ties_c1": {
+          "baseline": 2,
+          "alternative": 1
+        },
+        "q6_winner_w0": {
+          "baseline": "M",
+          "alternative": "N"
+        },
+        "q6_reversal": {
+          "baseline": 1,
+          "alternative": 0
+        }
+      },
+      "changed_field_count": 12,
+      "flips_reversal": true
+    },
+    {
+      "id": "CF3_B3_cards_eq_bugs",
+      "description": "将 B3 (desmaresti) 5 张纸卡误计为 5 只虫体（忽略 3 虫卡与 4 虫卡，S_B3: 10 -> 5）",
+      "mechanism": "A4-B3;A5-B5 虫体总数由 42 跌至 37 落入 N 组，两工况均由 N 胜，rev: 1 -> 0",
+      "fields": {
+        "q1_sum_C": 97,
+        "q1_sum_S": 97,
+        "q1_sum_B": 17,
+        "q1_sum_L": 9,
+        "q1_sum_WX": 2,
+        "q1_sum_X": 8,
+        "q2_edges": 12,
+        "q2_near_edges": 2,
+        "q3_total_plans": 35,
+        "q3_M_plans": 6,
+        "q3_N_plans": 29,
+        "q4_M_min_c0": 81,
+        "q4_M_ties_c0": 1,
+        "q4_N_min_c0": 57,
+        "q4_N_ties_c0": 1,
+        "q5_M_min_c1": 85,
+        "q5_M_ties_c1": 1,
+        "q5_N_min_c1": 60,
+        "q5_N_ties_c1": 1,
+        "q6_winner_w0": "N",
+        "q6_winner_w1": "N",
+        "q6_reversal": 0,
+        "q6_w1_canonical_plan": "A2-B1;A4-B3"
+      },
+      "canonical_answer": "97,97,17,9,2,8|12,2|35,6,29|81,1,57,1|85,1,60,1|N,N,0,A2-B1;A4-B3",
+      "changed_fields": {
+        "q1_sum_S": {
+          "baseline": 102,
+          "alternative": 97
+        },
+        "q3_M_plans": {
+          "baseline": 14,
+          "alternative": 6
+        },
+        "q3_N_plans": {
+          "baseline": 21,
+          "alternative": 29
+        },
+        "q4_M_min_c0": {
+          "baseline": 57,
+          "alternative": 81
+        },
+        "q4_N_min_c0": {
+          "baseline": 68,
+          "alternative": 57
+        },
+        "q5_M_min_c1": {
+          "baseline": 73,
+          "alternative": 85
+        },
+        "q5_N_min_c1": {
+          "baseline": 65,
+          "alternative": 60
+        },
+        "q5_N_ties_c1": {
+          "baseline": 2,
+          "alternative": 1
+        },
+        "q6_winner_w0": {
+          "baseline": "M",
+          "alternative": "N"
+        },
+        "q6_reversal": {
+          "baseline": 1,
+          "alternative": 0
+        }
+      },
+      "changed_field_count": 10,
+      "flips_reversal": true
+    },
+    {
+      "id": "CF4_B3_miss_1pin",
+      "description": "漏看 B3 (desmaresti) 1 张下端插针卡（B_B3: 3 -> 2）",
+      "mechanism": "A4-B3 与 A1-B3 失效，M 组失去双近距方案，两工况均由 N 胜，rev: 1 -> 0",
+      "fields": {
+        "q1_sum_C": 97,
+        "q1_sum_S": 102,
+        "q1_sum_B": 16,
+        "q1_sum_L": 9,
+        "q1_sum_WX": 2,
+        "q1_sum_X": 8,
+        "q2_edges": 10,
+        "q2_near_edges": 1,
+        "q3_total_plans": 19,
+        "q3_M_plans": 5,
+        "q3_N_plans": 14,
+        "q4_M_min_c0": 81,
+        "q4_M_ties_c0": 1,
+        "q4_N_min_c0": 69,
+        "q4_N_ties_c0": 1,
+        "q5_M_min_c1": 84,
+        "q5_M_ties_c1": 1,
+        "q5_N_min_c1": 64,
+        "q5_N_ties_c1": 1,
+        "q6_winner_w0": "N",
+        "q6_winner_w1": "N",
+        "q6_reversal": 0,
+        "q6_w1_canonical_plan": "A2-B1;A5-B5"
+      },
+      "canonical_answer": "97,102,16,9,2,8|10,1|19,5,14|81,1,69,1|84,1,64,1|N,N,0,A2-B1;A5-B5",
+      "changed_fields": {
+        "q1_sum_B": {
+          "baseline": 17,
+          "alternative": 16
+        },
+        "q2_edges": {
+          "baseline": 12,
+          "alternative": 10
+        },
+        "q2_near_edges": {
+          "baseline": 2,
+          "alternative": 1
+        },
+        "q3_total_plans": {
+          "baseline": 35,
+          "alternative": 19
+        },
+        "q3_M_plans": {
+          "baseline": 14,
+          "alternative": 5
+        },
+        "q3_N_plans": {
+          "baseline": 21,
+          "alternative": 14
+        },
+        "q4_M_min_c0": {
+          "baseline": 57,
+          "alternative": 81
+        },
+        "q4_N_min_c0": {
+          "baseline": 68,
+          "alternative": 69
+        },
+        "q5_M_min_c1": {
+          "baseline": 73,
+          "alternative": 84
+        },
+        "q5_N_min_c1": {
+          "baseline": 65,
+          "alternative": 64
+        },
+        "q5_N_ties_c1": {
+          "baseline": 2,
+          "alternative": 1
+        },
+        "q6_winner_w0": {
+          "baseline": "M",
+          "alternative": "N"
+        },
+        "q6_reversal": {
+          "baseline": 1,
+          "alternative": 0
+        },
+        "q6_w1_canonical_plan": {
+          "baseline": "A2-B1;A4-B3",
+          "alternative": "A2-B1;A5-B5"
+        }
+      },
+      "changed_field_count": 14,
+      "flips_reversal": true
+    },
+    {
+      "id": "CF5_B1_row4_all3_pins",
+      "description": "误判 B1 (ater) 第 4 行全 3 张均为下端插针（B_B1: 2 -> 3）",
+      "mechanism": "近距边 A4-B1 (344.8 px) 等 3 条边突增，M 组获得 A4-B1;A5-B5 两工况均胜，rev: 1 -> 0",
+      "fields": {
+        "q1_sum_C": 97,
+        "q1_sum_S": 102,
+        "q1_sum_B": 18,
+        "q1_sum_L": 9,
+        "q1_sum_WX": 2,
+        "q1_sum_X": 8,
+        "q2_edges": 15,
+        "q2_near_edges": 3,
+        "q3_total_plans": 63,
+        "q3_M_plans": 33,
+        "q3_N_plans": 30,
+        "q4_M_min_c0": 57,
+        "q4_M_ties_c0": 1,
+        "q4_N_min_c0": 68,
+        "q4_N_ties_c0": 1,
+        "q5_M_min_c1": 56,
+        "q5_M_ties_c1": 1,
+        "q5_N_min_c1": 57,
+        "q5_N_ties_c1": 1,
+        "q6_winner_w0": "M",
+        "q6_winner_w1": "M",
+        "q6_reversal": 0,
+        "q6_w1_canonical_plan": "A4-B1;A5-B5"
+      },
+      "canonical_answer": "97,102,18,9,2,8|15,3|63,33,30|57,1,68,1|56,1,57,1|M,M,0,A4-B1;A5-B5",
+      "changed_fields": {
+        "q1_sum_B": {
+          "baseline": 17,
+          "alternative": 18
+        },
+        "q2_edges": {
+          "baseline": 12,
+          "alternative": 15
+        },
+        "q2_near_edges": {
+          "baseline": 2,
+          "alternative": 3
+        },
+        "q3_total_plans": {
+          "baseline": 35,
+          "alternative": 63
+        },
+        "q3_M_plans": {
+          "baseline": 14,
+          "alternative": 33
+        },
+        "q3_N_plans": {
+          "baseline": 21,
+          "alternative": 30
+        },
+        "q5_M_min_c1": {
+          "baseline": 73,
+          "alternative": 56
+        },
+        "q5_N_min_c1": {
+          "baseline": 65,
+          "alternative": 57
+        },
+        "q5_N_ties_c1": {
+          "baseline": 2,
+          "alternative": 1
+        },
+        "q6_winner_w1": {
+          "baseline": "N",
+          "alternative": "M"
+        },
+        "q6_reversal": {
+          "baseline": 1,
+          "alternative": 0
+        },
+        "q6_w1_canonical_plan": {
+          "baseline": "A2-B1;A4-B3",
+          "alternative": "A4-B1;A5-B5"
+        }
+      },
+      "changed_field_count": 12,
+      "flips_reversal": true
+    },
+    {
+      "id": "CF6_A2_miss_all_pins",
+      "description": "按常规忽略 A2 (obscurus) 全部 3 张下端插针（B_A2: 3 -> 0）",
+      "mechanism": "A2-B1 与 A2-B4 失效，N 组失去含 B1 代码的工况 1 最优方案，两工况均由 M 胜，rev: 1 -> 0",
+      "fields": {
+        "q1_sum_C": 97,
+        "q1_sum_S": 102,
+        "q1_sum_B": 14,
+        "q1_sum_L": 9,
+        "q1_sum_WX": 2,
+        "q1_sum_X": 8,
+        "q2_edges": 10,
+        "q2_near_edges": 2,
+        "q3_total_plans": 23,
+        "q3_M_plans": 14,
+        "q3_N_plans": 9,
+        "q4_M_min_c0": 57,
+        "q4_M_ties_c0": 1,
+        "q4_N_min_c0": 68,
+        "q4_N_ties_c0": 1,
+        "q5_M_min_c1": 70,
+        "q5_M_ties_c1": 1,
+        "q5_N_min_c1": 74,
+        "q5_N_ties_c1": 2,
+        "q6_winner_w0": "M",
+        "q6_winner_w1": "M",
+        "q6_reversal": 0,
+        "q6_w1_canonical_plan": "A4-B3;A5-B5"
+      },
+      "canonical_answer": "97,102,14,9,2,8|10,2|23,14,9|57,1,68,1|70,1,74,2|M,M,0,A4-B3;A5-B5",
+      "changed_fields": {
+        "q1_sum_B": {
+          "baseline": 17,
+          "alternative": 14
+        },
+        "q2_edges": {
+          "baseline": 12,
+          "alternative": 10
+        },
+        "q3_total_plans": {
+          "baseline": 35,
+          "alternative": 23
+        },
+        "q3_N_plans": {
+          "baseline": 21,
+          "alternative": 9
+        },
+        "q5_M_min_c1": {
+          "baseline": 73,
+          "alternative": 70
+        },
+        "q5_N_min_c1": {
+          "baseline": 65,
+          "alternative": 74
+        },
+        "q6_winner_w1": {
+          "baseline": "N",
+          "alternative": "M"
+        },
+        "q6_reversal": {
+          "baseline": 1,
+          "alternative": 0
+        },
+        "q6_w1_canonical_plan": {
+          "baseline": "A2-B1;A4-B3",
+          "alternative": "A4-B3;A5-B5"
+        }
+      },
+      "changed_field_count": 9,
+      "flips_reversal": true
+    },
+    {
+      "id": "CF7_B2_miss_WX_and_pin",
+      "description": "漏看 B2 (melanarius) 第 2 行中卡隐藏 WX 代码及第 2 行右卡下端插针（WX:1->0, L:1->0, B:4->3）",
+      "mechanism": "改变 sum_B、sum_L、sum_WX 与两工况 1 最优代价",
+      "fields": {
+        "q1_sum_C": 97,
+        "q1_sum_S": 102,
+        "q1_sum_B": 16,
+        "q1_sum_L": 8,
+        "q1_sum_WX": 1,
+        "q1_sum_X": 8,
+        "q2_edges": 12,
+        "q2_near_edges": 2,
+        "q3_total_plans": 35,
+        "q3_M_plans": 14,
+        "q3_N_plans": 21,
+        "q4_M_min_c0": 57,
+        "q4_M_ties_c0": 1,
+        "q4_N_min_c0": 68,
+        "q4_N_ties_c0": 1,
+        "q5_M_min_c1": 72,
+        "q5_M_ties_c1": 1,
+        "q5_N_min_c1": 64,
+        "q5_N_ties_c1": 2,
+        "q6_winner_w0": "M",
+        "q6_winner_w1": "N",
+        "q6_reversal": 1,
+        "q6_w1_canonical_plan": "A2-B1;A4-B3"
+      },
+      "canonical_answer": "97,102,16,8,1,8|12,2|35,14,21|57,1,68,1|72,1,64,2|M,N,1,A2-B1;A4-B3",
+      "changed_fields": {
+        "q1_sum_B": {
+          "baseline": 17,
+          "alternative": 16
+        },
+        "q1_sum_L": {
+          "baseline": 9,
+          "alternative": 8
+        },
+        "q1_sum_WX": {
+          "baseline": 2,
+          "alternative": 1
+        },
+        "q5_M_min_c1": {
+          "baseline": 73,
+          "alternative": 72
+        },
+        "q5_N_min_c1": {
+          "baseline": 65,
+          "alternative": 64
+        }
+      },
+      "changed_field_count": 5,
+      "flips_reversal": false
+    },
+    {
+      "id": "CF8_B1_WK_as_WX",
+      "description": "将 B1 (ater) 首卡右上角 WK 误读为 WX（WX_B1: 1 -> 2）",
+      "mechanism": "改变 sum_WX (2 -> 3) 及工况 1 N 组最小代价 (65 -> 61)",
+      "fields": {
+        "q1_sum_C": 97,
+        "q1_sum_S": 102,
+        "q1_sum_B": 17,
+        "q1_sum_L": 9,
+        "q1_sum_WX": 3,
+        "q1_sum_X": 8,
+        "q2_edges": 12,
+        "q2_near_edges": 2,
+        "q3_total_plans": 35,
+        "q3_M_plans": 14,
+        "q3_N_plans": 21,
+        "q4_M_min_c0": 57,
+        "q4_M_ties_c0": 1,
+        "q4_N_min_c0": 68,
+        "q4_N_ties_c0": 1,
+        "q5_M_min_c1": 73,
+        "q5_M_ties_c1": 1,
+        "q5_N_min_c1": 61,
+        "q5_N_ties_c1": 2,
+        "q6_winner_w0": "M",
+        "q6_winner_w1": "N",
+        "q6_reversal": 1,
+        "q6_w1_canonical_plan": "A2-B1;A4-B3"
+      },
+      "canonical_answer": "97,102,17,9,3,8|12,2|35,14,21|57,1,68,1|73,1,61,2|M,N,1,A2-B1;A4-B3",
+      "changed_fields": {
+        "q1_sum_WX": {
+          "baseline": 2,
+          "alternative": 3
+        },
+        "q5_N_min_c1": {
+          "baseline": 65,
+          "alternative": 61
+        }
+      },
+      "changed_field_count": 2,
+      "flips_reversal": false
+    },
+    {
+      "id": "CF9_B4_miss_pins",
+      "description": "漏看 B4 (caraboides) 第 4 行 2 张下端插针（B_B4: 2 -> 0）",
+      "mechanism": "使 A5-B4 失效，改变 sum_B、E、P、P_M、P_N 及工况 1 代价",
+      "fields": {
+        "q1_sum_C": 97,
+        "q1_sum_S": 102,
+        "q1_sum_B": 15,
+        "q1_sum_L": 9,
+        "q1_sum_WX": 2,
+        "q1_sum_X": 8,
+        "q2_edges": 11,
+        "q2_near_edges": 2,
+        "q3_total_plans": 30,
+        "q3_M_plans": 10,
+        "q3_N_plans": 20,
+        "q4_M_min_c0": 57,
+        "q4_M_ties_c0": 1,
+        "q4_N_min_c0": 68,
+        "q4_N_ties_c0": 1,
+        "q5_M_min_c1": 71,
+        "q5_M_ties_c1": 1,
+        "q5_N_min_c1": 63,
+        "q5_N_ties_c1": 2,
+        "q6_winner_w0": "M",
+        "q6_winner_w1": "N",
+        "q6_reversal": 1,
+        "q6_w1_canonical_plan": "A2-B1;A4-B3"
+      },
+      "canonical_answer": "97,102,15,9,2,8|11,2|30,10,20|57,1,68,1|71,1,63,2|M,N,1,A2-B1;A4-B3",
+      "changed_fields": {
+        "q1_sum_B": {
+          "baseline": 17,
+          "alternative": 15
+        },
+        "q2_edges": {
+          "baseline": 12,
+          "alternative": 11
+        },
+        "q3_total_plans": {
+          "baseline": 35,
+          "alternative": 30
+        },
+        "q3_M_plans": {
+          "baseline": 14,
+          "alternative": 10
+        },
+        "q3_N_plans": {
+          "baseline": 21,
+          "alternative": 20
+        },
+        "q5_M_min_c1": {
+          "baseline": 73,
+          "alternative": 71
+        },
+        "q5_N_min_c1": {
+          "baseline": 65,
+          "alternative": 63
+        }
+      },
+      "changed_field_count": 7,
+      "flips_reversal": false
+    },
+    {
+      "id": "CF10_A3_guess_16",
+      "description": "按 4x4 满排补猜 A3 (caeruleus) 为 16 卡 16 虫（忽略底排中空，C/S: 14 -> 16）",
+      "mechanism": "改变 sum_C、sum_S 及 M/N 分组边界（A2-B1;A3-B2 由 N 组移入 M 组）",
+      "fields": {
+        "q1_sum_C": 99,
+        "q1_sum_S": 104,
+        "q1_sum_B": 17,
+        "q1_sum_L": 9,
+        "q1_sum_WX": 2,
+        "q1_sum_X": 8,
+        "q2_edges": 12,
+        "q2_near_edges": 2,
+        "q3_total_plans": 35,
+        "q3_M_plans": 15,
+        "q3_N_plans": 20,
+        "q4_M_min_c0": 57,
+        "q4_M_ties_c0": 1,
+        "q4_N_min_c0": 68,
+        "q4_N_ties_c0": 1,
+        "q5_M_min_c1": 73,
+        "q5_M_ties_c1": 1,
+        "q5_N_min_c1": 65,
+        "q5_N_ties_c1": 2,
+        "q6_winner_w0": "M",
+        "q6_winner_w1": "N",
+        "q6_reversal": 1,
+        "q6_w1_canonical_plan": "A2-B1;A4-B3"
+      },
+      "canonical_answer": "99,104,17,9,2,8|12,2|35,15,20|57,1,68,1|73,1,65,2|M,N,1,A2-B1;A4-B3",
+      "changed_fields": {
+        "q1_sum_C": {
+          "baseline": 97,
+          "alternative": 99
+        },
+        "q1_sum_S": {
+          "baseline": 102,
+          "alternative": 104
+        },
+        "q3_M_plans": {
+          "baseline": 14,
+          "alternative": 15
+        },
+        "q3_N_plans": {
+          "baseline": 21,
+          "alternative": 20
+        }
+      },
+      "changed_field_count": 4,
+      "flips_reversal": false
+    }
+  ]
+}

@@ -1,0 +1,5484 @@
+{
+  "schema_version": 2,
+  "summary": {
+    "needs_review": 15,
+    "blocked": 5
+  },
+  "duplicate_scene_groups": {},
+  "shared_source_asset_groups": {},
+  "video_source_groups": {},
+  "items": [
+    {
+      "id": "shelf-11640",
+      "blockers": [],
+      "review": [
+        "native_geometry_unknown: 文件大小不能证明未放大",
+        "task_category_granularity_pending: 品牌/大类标签不能默认等于SKU",
+        "active_objects_unknown: 不默认背景和全部标注都参与求解",
+        "native_roi_readability_pending:candidate-object",
+        "critical_readability_pending:candidate-object",
+        "chinese_text_coverage_unknown",
+        "human_check_pending:source_fidelity",
+        "human_check_pending:annotation_correct",
+        "human_check_pending:critical_evidence_visible",
+        "human_check_pending:no_answer_leakage",
+        "human_check_pending:counting_rules_clear",
+        "multi_region_dependencies_unproven",
+        "wrong_pair_to_answer_effect_unproven",
+        "bypass_review_pending_or_failed",
+        "platform_points_expected_1_to_3"
+      ],
+      "advisory": [
+        "object_count_is_annotation_box_count_not_proven_physical_instances",
+        "local_color_pairs_and_box_overlaps_are_candidates_not_difficulty_or_occlusion_proof"
+      ],
+      "metrics": {
+        "object_count": 92,
+        "objects_per_MP": 47.916666666666664,
+        "class_count": 91,
+        "known_fraction": 1.0,
+        "median_bbox_short_px": 44.0,
+        "nearcolor_pair_count": 12,
+        "nearcolor_neighbor_fraction": 0.12,
+        "bbox_overlap_pair_count": 0,
+        "active_object_count": null,
+        "active_objects_per_submitted_MP": null,
+        "active_entity_count": null,
+        "active_fraction_of_annotated_objects": null,
+        "inactive_annotated_count": null,
+        "background_object_count": null,
+        "active_objects_per_region_MP": null,
+        "han_text_coverage": null,
+        "annotated_occlusion_fraction": null,
+        "distinct_dependency_regions": null,
+        "effective_counterfactuals": null,
+        "width": 1200,
+        "height": 1600,
+        "mode": "RGB",
+        "exif_orientation": 1,
+        "frame_count": 1,
+        "submitted_width": 1200,
+        "submitted_height": 1600,
+        "native_width": null,
+        "native_height": null,
+        "global_640_proxy": {
+          "contrast_p90_p10": 85.0,
+          "gray_entropy_bits": 6.912684694416235,
+          "edge_fraction_16": 0.09073995564831724
+        },
+        "known_class_count": 91,
+        "repeated_classes": 1,
+        "spatial_entropy_4x4": 0.951698413205603,
+        "p10_bbox_short_px": 33.0,
+        "edge_touching_count": 0,
+        "annotation_complete": null,
+        "occlusion_annotation_count": 0,
+        "different_class_neighbor_pairs": 100,
+        "duplicate_bbox_candidate_count": 0,
+        "active_nearcolor_pair_count": null
+      },
+      "source": {
+        "kind": "real_photo",
+        "url": "https://huggingface.co/datasets/shelfwise-by-form/SKUs_on_shelves_PL",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "authorization": "verified",
+        "attribution": "ShelfWise by FORM, SKUs_on_shelves_PL, v1.0 (2024)",
+        "scene_id": "ShelfWise:11640"
+      },
+      "difficulty_status": "not_evaluated",
+      "annotation_provenance": "publisher_coco_unmodified",
+      "geometry": {
+        "kind": "unknown",
+        "submitted_size_px": [
+          1200,
+          1600
+        ],
+        "native_size_px": null,
+        "native_size_evidence": "unknown",
+        "panels": []
+      },
+      "preview": "001.jpg",
+      "nearcolor_pairs": [
+        {
+          "a": "1982659",
+          "b": "1982655",
+          "deltaE76": 10.956234040014875
+        },
+        {
+          "a": "1982662",
+          "b": "1982660",
+          "deltaE76": 8.913086298167299
+        },
+        {
+          "a": "1982670",
+          "b": "1982657",
+          "deltaE76": 10.426879722915205
+        },
+        {
+          "a": "1982685",
+          "b": "1982682",
+          "deltaE76": 11.4406116880782
+        },
+        {
+          "a": "1982696",
+          "b": "1982654",
+          "deltaE76": 5.928951531975852
+        },
+        {
+          "a": "1982706",
+          "b": "1982705",
+          "deltaE76": 10.368509372425667
+        },
+        {
+          "a": "1982714",
+          "b": "1982663",
+          "deltaE76": 9.982050988284167
+        },
+        {
+          "a": "1982721",
+          "b": "1982667",
+          "deltaE76": 7.336666085747571
+        },
+        {
+          "a": "1982724",
+          "b": "1982651",
+          "deltaE76": 10.804379206158812
+        },
+        {
+          "a": "1982725",
+          "b": "1982681",
+          "deltaE76": 8.455215016024606
+        },
+        {
+          "a": "1982726",
+          "b": "1982722",
+          "deltaE76": 10.16819254453763
+        },
+        {
+          "a": "1982731",
+          "b": "1982658",
+          "deltaE76": 11.68548919777568
+        }
+      ],
+      "overlap_candidates": [],
+      "duplicate_bbox_candidates": [],
+      "roi_metrics": [
+        {
+          "id": "candidate-object",
+          "file": "001_roi1.png",
+          "submitted_crop_size_px": [
+            61,
+            165
+          ],
+          "feature_width_native_px": null,
+          "native_readability_reviewed": null,
+          "pixel_metric_basis": "submitted_pixels",
+          "contrast_p90_p10": 100.0,
+          "gray_entropy_bits": 7.119034709774062,
+          "edge_fraction_16": 0.14640273311897106
+        }
+      ],
+      "platform_points": [],
+      "decision": "needs_review"
+    },
+    {
+      "id": "shelf-12051",
+      "blockers": [],
+      "review": [
+        "native_geometry_unknown: 文件大小不能证明未放大",
+        "task_category_granularity_pending: 品牌/大类标签不能默认等于SKU",
+        "active_objects_unknown: 不默认背景和全部标注都参与求解",
+        "native_roi_readability_pending:candidate-object",
+        "critical_readability_pending:candidate-object",
+        "chinese_text_coverage_unknown",
+        "human_check_pending:source_fidelity",
+        "human_check_pending:annotation_correct",
+        "human_check_pending:critical_evidence_visible",
+        "human_check_pending:no_answer_leakage",
+        "human_check_pending:counting_rules_clear",
+        "multi_region_dependencies_unproven",
+        "wrong_pair_to_answer_effect_unproven",
+        "bypass_review_pending_or_failed",
+        "platform_points_expected_1_to_3"
+      ],
+      "advisory": [
+        "object_count_is_annotation_box_count_not_proven_physical_instances",
+        "local_color_pairs_and_box_overlaps_are_candidates_not_difficulty_or_occlusion_proof"
+      ],
+      "metrics": {
+        "object_count": 103,
+        "objects_per_MP": 53.645833333333336,
+        "class_count": 102,
+        "known_fraction": 1.0,
+        "median_bbox_short_px": 46.0,
+        "nearcolor_pair_count": 15,
+        "nearcolor_neighbor_fraction": 0.1485148514851485,
+        "bbox_overlap_pair_count": 0,
+        "active_object_count": null,
+        "active_objects_per_submitted_MP": null,
+        "active_entity_count": null,
+        "active_fraction_of_annotated_objects": null,
+        "inactive_annotated_count": null,
+        "background_object_count": null,
+        "active_objects_per_region_MP": null,
+        "han_text_coverage": null,
+        "annotated_occlusion_fraction": null,
+        "distinct_dependency_regions": null,
+        "effective_counterfactuals": null,
+        "width": 1200,
+        "height": 1600,
+        "mode": "RGB",
+        "exif_orientation": 1,
+        "frame_count": 1,
+        "submitted_width": 1200,
+        "submitted_height": 1600,
+        "native_width": null,
+        "native_height": null,
+        "global_640_proxy": {
+          "contrast_p90_p10": 140.0,
+          "gray_entropy_bits": 7.452017131818894,
+          "edge_fraction_16": 0.11032154969997392
+        },
+        "known_class_count": 102,
+        "repeated_classes": 1,
+        "spatial_entropy_4x4": 0.905369469734239,
+        "p10_bbox_short_px": 38.0,
+        "edge_touching_count": 3,
+        "annotation_complete": null,
+        "occlusion_annotation_count": 0,
+        "different_class_neighbor_pairs": 101,
+        "duplicate_bbox_candidate_count": 0,
+        "active_nearcolor_pair_count": null
+      },
+      "source": {
+        "kind": "real_photo",
+        "url": "https://huggingface.co/datasets/shelfwise-by-form/SKUs_on_shelves_PL",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "authorization": "verified",
+        "attribution": "ShelfWise by FORM, SKUs_on_shelves_PL, v1.0 (2024)",
+        "scene_id": "ShelfWise:12051"
+      },
+      "difficulty_status": "not_evaluated",
+      "annotation_provenance": "publisher_coco_unmodified",
+      "geometry": {
+        "kind": "unknown",
+        "submitted_size_px": [
+          1200,
+          1600
+        ],
+        "native_size_px": null,
+        "native_size_evidence": "unknown",
+        "panels": []
+      },
+      "preview": "002.jpg",
+      "nearcolor_pairs": [
+        {
+          "a": "1365791",
+          "b": "1365785",
+          "deltaE76": 8.558841034480345
+        },
+        {
+          "a": "1365792",
+          "b": "1365788",
+          "deltaE76": 8.40350369734041
+        },
+        {
+          "a": "1365793",
+          "b": "1365770",
+          "deltaE76": 4.7237794845857595
+        },
+        {
+          "a": "1365799",
+          "b": "1365775",
+          "deltaE76": 10.807095368612195
+        },
+        {
+          "a": "1365802",
+          "b": "1365772",
+          "deltaE76": 3.01703598962349
+        },
+        {
+          "a": "1365802",
+          "b": "1365790",
+          "deltaE76": 11.103199631446055
+        },
+        {
+          "a": "1365814",
+          "b": "1365783",
+          "deltaE76": 8.724810890470298
+        },
+        {
+          "a": "1365833",
+          "b": "1365821",
+          "deltaE76": 11.246548276170898
+        },
+        {
+          "a": "1365844",
+          "b": "1365836",
+          "deltaE76": 10.698345511102115
+        },
+        {
+          "a": "1365852",
+          "b": "1365816",
+          "deltaE76": 8.913043505602001
+        },
+        {
+          "a": "1365854",
+          "b": "1365836",
+          "deltaE76": 7.981369101369501
+        },
+        {
+          "a": "1365857",
+          "b": "1365801",
+          "deltaE76": 7.44635224945925
+        },
+        {
+          "a": "1365863",
+          "b": "1365852",
+          "deltaE76": 10.909969023091428
+        },
+        {
+          "a": "1365867",
+          "b": "1365808",
+          "deltaE76": 11.657205293749811
+        },
+        {
+          "a": "1365872",
+          "b": "1365811",
+          "deltaE76": 8.32906631093498
+        }
+      ],
+      "overlap_candidates": [],
+      "duplicate_bbox_candidates": [],
+      "roi_metrics": [
+        {
+          "id": "candidate-object",
+          "file": "002_roi1.png",
+          "submitted_crop_size_px": [
+            53,
+            182
+          ],
+          "feature_width_native_px": null,
+          "native_readability_reviewed": null,
+          "pixel_metric_basis": "submitted_pixels",
+          "contrast_p90_p10": 94.0,
+          "gray_entropy_bits": 7.102460646101736,
+          "edge_fraction_16": 0.30539959070157946
+        }
+      ],
+      "platform_points": [],
+      "decision": "needs_review"
+    },
+    {
+      "id": "shelf-12747",
+      "blockers": [],
+      "review": [
+        "native_geometry_unknown: 文件大小不能证明未放大",
+        "task_category_granularity_pending: 品牌/大类标签不能默认等于SKU",
+        "active_objects_unknown: 不默认背景和全部标注都参与求解",
+        "native_roi_readability_pending:candidate-object",
+        "critical_readability_pending:candidate-object",
+        "chinese_text_coverage_unknown",
+        "human_check_pending:source_fidelity",
+        "human_check_pending:annotation_correct",
+        "human_check_pending:critical_evidence_visible",
+        "human_check_pending:no_answer_leakage",
+        "human_check_pending:counting_rules_clear",
+        "multi_region_dependencies_unproven",
+        "wrong_pair_to_answer_effect_unproven",
+        "bypass_review_pending_or_failed",
+        "platform_points_expected_1_to_3"
+      ],
+      "advisory": [
+        "object_count_is_annotation_box_count_not_proven_physical_instances",
+        "local_color_pairs_and_box_overlaps_are_candidates_not_difficulty_or_occlusion_proof"
+      ],
+      "metrics": {
+        "object_count": 88,
+        "objects_per_MP": 45.833333333333336,
+        "class_count": 87,
+        "known_fraction": 0.9886363636363636,
+        "median_bbox_short_px": 57.5,
+        "nearcolor_pair_count": 28,
+        "nearcolor_neighbor_fraction": 0.1830065359477124,
+        "bbox_overlap_pair_count": 4,
+        "active_object_count": null,
+        "active_objects_per_submitted_MP": null,
+        "active_entity_count": null,
+        "active_fraction_of_annotated_objects": null,
+        "inactive_annotated_count": null,
+        "background_object_count": null,
+        "active_objects_per_region_MP": null,
+        "han_text_coverage": null,
+        "annotated_occlusion_fraction": null,
+        "distinct_dependency_regions": null,
+        "effective_counterfactuals": null,
+        "width": 1200,
+        "height": 1600,
+        "mode": "RGB",
+        "exif_orientation": 1,
+        "frame_count": 1,
+        "submitted_width": 1200,
+        "submitted_height": 1600,
+        "native_width": null,
+        "native_height": null,
+        "global_640_proxy": {
+          "contrast_p90_p10": 164.0,
+          "gray_entropy_bits": 7.684674257293229,
+          "edge_fraction_16": 0.13930504826506654
+        },
+        "known_class_count": 87,
+        "repeated_classes": 0,
+        "spatial_entropy_4x4": 0.9137527993432593,
+        "p10_bbox_short_px": 36.7,
+        "edge_touching_count": 2,
+        "annotation_complete": null,
+        "occlusion_annotation_count": 0,
+        "different_class_neighbor_pairs": 153,
+        "duplicate_bbox_candidate_count": 0,
+        "active_nearcolor_pair_count": null
+      },
+      "source": {
+        "kind": "real_photo",
+        "url": "https://huggingface.co/datasets/shelfwise-by-form/SKUs_on_shelves_PL",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "authorization": "verified",
+        "attribution": "ShelfWise by FORM, SKUs_on_shelves_PL, v1.0 (2024)",
+        "scene_id": "ShelfWise:12747"
+      },
+      "difficulty_status": "not_evaluated",
+      "annotation_provenance": "publisher_coco_unmodified",
+      "geometry": {
+        "kind": "unknown",
+        "submitted_size_px": [
+          1200,
+          1600
+        ],
+        "native_size_px": null,
+        "native_size_evidence": "unknown",
+        "panels": []
+      },
+      "preview": "003.jpg",
+      "nearcolor_pairs": [
+        {
+          "a": "596311",
+          "b": "596308",
+          "deltaE76": 8.945805412387372
+        },
+        {
+          "a": "596320",
+          "b": "596319",
+          "deltaE76": 5.371604396242834
+        },
+        {
+          "a": "596336",
+          "b": "596312",
+          "deltaE76": 10.85127690598975
+        },
+        {
+          "a": "596337",
+          "b": "596325",
+          "deltaE76": 9.074332750062405
+        },
+        {
+          "a": "596337",
+          "b": "596326",
+          "deltaE76": 4.891748120798956
+        },
+        {
+          "a": "596339",
+          "b": "596307",
+          "deltaE76": 8.272628224056195
+        },
+        {
+          "a": "596340",
+          "b": "596339",
+          "deltaE76": 4.303730476962219
+        },
+        {
+          "a": "596346",
+          "b": "596332",
+          "deltaE76": 8.564678986420438
+        },
+        {
+          "a": "596348",
+          "b": "596325",
+          "deltaE76": 5.135972623010605
+        },
+        {
+          "a": "596348",
+          "b": "596346",
+          "deltaE76": 9.874640455827308
+        },
+        {
+          "a": "596349",
+          "b": "596323",
+          "deltaE76": 7.7716010754514295
+        },
+        {
+          "a": "596352",
+          "b": "596307",
+          "deltaE76": 5.817105970773953
+        },
+        {
+          "a": "596352",
+          "b": "596319",
+          "deltaE76": 8.847634148860688
+        },
+        {
+          "a": "596352",
+          "b": "596320",
+          "deltaE76": 6.154951369977965
+        },
+        {
+          "a": "596354",
+          "b": "596325",
+          "deltaE76": 10.924212639848413
+        },
+        {
+          "a": "596356",
+          "b": "596315",
+          "deltaE76": 8.546948766928523
+        },
+        {
+          "a": "596358",
+          "b": "596319",
+          "deltaE76": 8.242556802731563
+        },
+        {
+          "a": "596371",
+          "b": "596341",
+          "deltaE76": 5.852629637262741
+        },
+        {
+          "a": "596372",
+          "b": "596330",
+          "deltaE76": 6.658985775759409
+        },
+        {
+          "a": "596375",
+          "b": "596352",
+          "deltaE76": 1.4679662830956022
+        },
+        {
+          "a": "596375",
+          "b": "596356",
+          "deltaE76": 11.244203024194334
+        },
+        {
+          "a": "596382",
+          "b": "596366",
+          "deltaE76": 7.822726104530938
+        },
+        {
+          "a": "596382",
+          "b": "596375",
+          "deltaE76": 11.641820913332733
+        },
+        {
+          "a": "596383",
+          "b": "596352",
+          "deltaE76": 10.492829377601007
+        },
+        {
+          "a": "596383",
+          "b": "596356",
+          "deltaE76": 7.761609473680193
+        },
+        {
+          "a": "596383",
+          "b": "596375",
+          "deltaE76": 9.264982712263471
+        },
+        {
+          "a": "596386",
+          "b": "596379",
+          "deltaE76": 9.157237101796893
+        },
+        {
+          "a": "596391",
+          "b": "596367",
+          "deltaE76": 7.914843766597807
+        }
+      ],
+      "overlap_candidates": [
+        {
+          "a": "596324",
+          "b": "596321",
+          "iom": 0.4919278252611586,
+          "iou": 0.04825337680484397
+        },
+        {
+          "a": "596371",
+          "b": "596329",
+          "iom": 0.3920412675018423,
+          "iou": 0.07483998030526834
+        },
+        {
+          "a": "596391",
+          "b": "596390",
+          "iom": 0.1623196448390677,
+          "iou": 0.08371493989696623
+        },
+        {
+          "a": "596392",
+          "b": "596391",
+          "iom": 0.23636363636363636,
+          "iou": 0.1322314049586777
+        }
+      ],
+      "duplicate_bbox_candidates": [],
+      "roi_metrics": [
+        {
+          "id": "candidate-object",
+          "file": "003_roi1.png",
+          "submitted_crop_size_px": [
+            125,
+            158
+          ],
+          "feature_width_native_px": null,
+          "native_readability_reviewed": null,
+          "pixel_metric_basis": "submitted_pixels",
+          "contrast_p90_p10": 93.0,
+          "gray_entropy_bits": 6.898816779526912,
+          "edge_fraction_16": 0.1525103909019048
+        }
+      ],
+      "platform_points": [],
+      "decision": "needs_review"
+    },
+    {
+      "id": "shelf-13366",
+      "blockers": [],
+      "review": [
+        "native_geometry_unknown: 文件大小不能证明未放大",
+        "task_category_granularity_pending: 品牌/大类标签不能默认等于SKU",
+        "active_objects_unknown: 不默认背景和全部标注都参与求解",
+        "native_roi_readability_pending:candidate-object",
+        "critical_readability_pending:candidate-object",
+        "chinese_text_coverage_unknown",
+        "human_check_pending:source_fidelity",
+        "human_check_pending:annotation_correct",
+        "human_check_pending:critical_evidence_visible",
+        "human_check_pending:no_answer_leakage",
+        "human_check_pending:counting_rules_clear",
+        "multi_region_dependencies_unproven",
+        "wrong_pair_to_answer_effect_unproven",
+        "bypass_review_pending_or_failed",
+        "platform_points_expected_1_to_3"
+      ],
+      "advisory": [
+        "object_count_is_annotation_box_count_not_proven_physical_instances",
+        "local_color_pairs_and_box_overlaps_are_candidates_not_difficulty_or_occlusion_proof"
+      ],
+      "metrics": {
+        "object_count": 104,
+        "objects_per_MP": 54.166666666666664,
+        "class_count": 34,
+        "known_fraction": 1.0,
+        "median_bbox_short_px": 49.0,
+        "nearcolor_pair_count": 60,
+        "nearcolor_neighbor_fraction": 0.3015075376884422,
+        "bbox_overlap_pair_count": 0,
+        "active_object_count": null,
+        "active_objects_per_submitted_MP": null,
+        "active_entity_count": null,
+        "active_fraction_of_annotated_objects": null,
+        "inactive_annotated_count": null,
+        "background_object_count": null,
+        "active_objects_per_region_MP": null,
+        "han_text_coverage": null,
+        "annotated_occlusion_fraction": null,
+        "distinct_dependency_regions": null,
+        "effective_counterfactuals": null,
+        "width": 1200,
+        "height": 1600,
+        "mode": "RGB",
+        "exif_orientation": 1,
+        "frame_count": 1,
+        "submitted_width": 1200,
+        "submitted_height": 1600,
+        "native_width": null,
+        "native_height": null,
+        "global_640_proxy": {
+          "contrast_p90_p10": 198.0,
+          "gray_entropy_bits": 7.82332798151836,
+          "edge_fraction_16": 0.19612085833550744
+        },
+        "known_class_count": 34,
+        "repeated_classes": 30,
+        "spatial_entropy_4x4": 0.880138906693167,
+        "p10_bbox_short_px": 27.3,
+        "edge_touching_count": 2,
+        "annotation_complete": null,
+        "occlusion_annotation_count": 0,
+        "different_class_neighbor_pairs": 199,
+        "duplicate_bbox_candidate_count": 0,
+        "active_nearcolor_pair_count": null
+      },
+      "source": {
+        "kind": "real_photo",
+        "url": "https://huggingface.co/datasets/shelfwise-by-form/SKUs_on_shelves_PL",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "authorization": "verified",
+        "attribution": "ShelfWise by FORM, SKUs_on_shelves_PL, v1.0 (2024)",
+        "scene_id": "ShelfWise:13366"
+      },
+      "difficulty_status": "not_evaluated",
+      "annotation_provenance": "publisher_coco_unmodified",
+      "geometry": {
+        "kind": "unknown",
+        "submitted_size_px": [
+          1200,
+          1600
+        ],
+        "native_size_px": null,
+        "native_size_evidence": "unknown",
+        "panels": []
+      },
+      "preview": "004.jpg",
+      "nearcolor_pairs": [
+        {
+          "a": "782993",
+          "b": "782974",
+          "deltaE76": 10.108135725301594
+        },
+        {
+          "a": "782993",
+          "b": "782975",
+          "deltaE76": 9.725248487160691
+        },
+        {
+          "a": "782994",
+          "b": "782975",
+          "deltaE76": 6.855282103872258
+        },
+        {
+          "a": "782995",
+          "b": "782976",
+          "deltaE76": 4.341633648405095
+        },
+        {
+          "a": "782995",
+          "b": "782977",
+          "deltaE76": 1.448281373639275
+        },
+        {
+          "a": "782996",
+          "b": "782977",
+          "deltaE76": 0.96552826570448
+        },
+        {
+          "a": "783014",
+          "b": "782997",
+          "deltaE76": 11.766103889521046
+        },
+        {
+          "a": "783029",
+          "b": "783011",
+          "deltaE76": 8.438336548352181
+        },
+        {
+          "a": "783029",
+          "b": "783014",
+          "deltaE76": 8.021977565161267
+        },
+        {
+          "a": "783031",
+          "b": "783014",
+          "deltaE76": 11.034201106326906
+        },
+        {
+          "a": "783032",
+          "b": "783016",
+          "deltaE76": 4.776454793244017
+        },
+        {
+          "a": "783032",
+          "b": "783017",
+          "deltaE76": 6.586012556805847
+        },
+        {
+          "a": "783033",
+          "b": "783017",
+          "deltaE76": 10.9312190798222
+        },
+        {
+          "a": "783033",
+          "b": "783018",
+          "deltaE76": 11.981194049077756
+        },
+        {
+          "a": "783034",
+          "b": "783018",
+          "deltaE76": 8.703158341077318
+        },
+        {
+          "a": "783034",
+          "b": "783019",
+          "deltaE76": 9.329366284807826
+        },
+        {
+          "a": "783036",
+          "b": "783019",
+          "deltaE76": 8.498983810755252
+        },
+        {
+          "a": "783039",
+          "b": "783026",
+          "deltaE76": 8.624008185607405
+        },
+        {
+          "a": "783040",
+          "b": "783026",
+          "deltaE76": 8.224923012237605
+        },
+        {
+          "a": "783040",
+          "b": "783027",
+          "deltaE76": 10.112617202290615
+        },
+        {
+          "a": "783041",
+          "b": "783026",
+          "deltaE76": 3.1309727950982933
+        },
+        {
+          "a": "783041",
+          "b": "783027",
+          "deltaE76": 2.4463808362572115
+        },
+        {
+          "a": "783041",
+          "b": "783028",
+          "deltaE76": 2.4365643093832308
+        },
+        {
+          "a": "783042",
+          "b": "783027",
+          "deltaE76": 6.200557295993635
+        },
+        {
+          "a": "783042",
+          "b": "783028",
+          "deltaE76": 4.407200626035185
+        },
+        {
+          "a": "783043",
+          "b": "783028",
+          "deltaE76": 3.4315752056380964
+        },
+        {
+          "a": "783048",
+          "b": "783047",
+          "deltaE76": 3.8621316899919003
+        },
+        {
+          "a": "783053",
+          "b": "783052",
+          "deltaE76": 2.0668482334073097
+        },
+        {
+          "a": "783055",
+          "b": "783050",
+          "deltaE76": 2.683817760038335
+        },
+        {
+          "a": "783055",
+          "b": "783051",
+          "deltaE76": 8.496643743465825
+        },
+        {
+          "a": "783056",
+          "b": "783051",
+          "deltaE76": 5.5816108482316755
+        },
+        {
+          "a": "783056",
+          "b": "783052",
+          "deltaE76": 5.409505244610683
+        },
+        {
+          "a": "783057",
+          "b": "783052",
+          "deltaE76": 4.881548022794376
+        },
+        {
+          "a": "783057",
+          "b": "783053",
+          "deltaE76": 3.7308789502293602
+        },
+        {
+          "a": "783058",
+          "b": "783053",
+          "deltaE76": 4.201939494168731
+        },
+        {
+          "a": "783058",
+          "b": "783054",
+          "deltaE76": 4.262505312351267
+        },
+        {
+          "a": "783058",
+          "b": "783057",
+          "deltaE76": 1.4925359027843164
+        },
+        {
+          "a": "783059",
+          "b": "783031",
+          "deltaE76": 4.618991596774284
+        },
+        {
+          "a": "783059",
+          "b": "783055",
+          "deltaE76": 9.17833975726053
+        },
+        {
+          "a": "783060",
+          "b": "783055",
+          "deltaE76": 7.681889352995873
+        },
+        {
+          "a": "783060",
+          "b": "783056",
+          "deltaE76": 9.908538976751858
+        },
+        {
+          "a": "783060",
+          "b": "783057",
+          "deltaE76": 10.573146917953412
+        },
+        {
+          "a": "783061",
+          "b": "783056",
+          "deltaE76": 10.394500554261535
+        },
+        {
+          "a": "783061",
+          "b": "783057",
+          "deltaE76": 10.937460347401126
+        },
+        {
+          "a": "783061",
+          "b": "783058",
+          "deltaE76": 10.295494655358311
+        },
+        {
+          "a": "783062",
+          "b": "783057",
+          "deltaE76": 10.78893466241969
+        },
+        {
+          "a": "783062",
+          "b": "783058",
+          "deltaE76": 10.213314183005611
+        },
+        {
+          "a": "783063",
+          "b": "783059",
+          "deltaE76": 1.900705708126354
+        },
+        {
+          "a": "783064",
+          "b": "783059",
+          "deltaE76": 7.11037611108828
+        },
+        {
+          "a": "783064",
+          "b": "783060",
+          "deltaE76": 6.6381546023966
+        },
+        {
+          "a": "783065",
+          "b": "783060",
+          "deltaE76": 7.661333601188083
+        },
+        {
+          "a": "783065",
+          "b": "783061",
+          "deltaE76": 5.993050995415925
+        },
+        {
+          "a": "783065",
+          "b": "783064",
+          "deltaE76": 1.3183927019921802
+        },
+        {
+          "a": "783066",
+          "b": "783060",
+          "deltaE76": 7.844865436027676
+        },
+        {
+          "a": "783066",
+          "b": "783061",
+          "deltaE76": 6.060518996559585
+        },
+        {
+          "a": "783067",
+          "b": "783061",
+          "deltaE76": 4.852188747374791
+        },
+        {
+          "a": "783067",
+          "b": "783062",
+          "deltaE76": 4.406639231456104
+        },
+        {
+          "a": "783067",
+          "b": "783066",
+          "deltaE76": 1.3879279215739613
+        },
+        {
+          "a": "783069",
+          "b": "783068",
+          "deltaE76": 2.725817066678658
+        },
+        {
+          "a": "783070",
+          "b": "783069",
+          "deltaE76": 3.044610599203246
+        }
+      ],
+      "overlap_candidates": [],
+      "duplicate_bbox_candidates": [],
+      "roi_metrics": [
+        {
+          "id": "candidate-object",
+          "file": "004_roi1.png",
+          "submitted_crop_size_px": [
+            63,
+            152
+          ],
+          "feature_width_native_px": null,
+          "native_readability_reviewed": null,
+          "pixel_metric_basis": "submitted_pixels",
+          "contrast_p90_p10": 157.0,
+          "gray_entropy_bits": 7.0977630956582285,
+          "edge_fraction_16": 0.29613983207477423
+        }
+      ],
+      "platform_points": [],
+      "decision": "needs_review"
+    },
+    {
+      "id": "shelf-13491",
+      "blockers": [],
+      "review": [
+        "native_geometry_unknown: 文件大小不能证明未放大",
+        "visible_bbox_clipping_applied: 核查边缘目标口径；原标注文件未改",
+        "task_category_granularity_pending: 品牌/大类标签不能默认等于SKU",
+        "active_objects_unknown: 不默认背景和全部标注都参与求解",
+        "native_roi_readability_pending:candidate-object",
+        "critical_readability_pending:candidate-object",
+        "chinese_text_coverage_unknown",
+        "human_check_pending:source_fidelity",
+        "human_check_pending:annotation_correct",
+        "human_check_pending:critical_evidence_visible",
+        "human_check_pending:no_answer_leakage",
+        "human_check_pending:counting_rules_clear",
+        "multi_region_dependencies_unproven",
+        "wrong_pair_to_answer_effect_unproven",
+        "bypass_review_pending_or_failed",
+        "platform_points_expected_1_to_3"
+      ],
+      "advisory": [
+        "object_count_is_annotation_box_count_not_proven_physical_instances",
+        "local_color_pairs_and_box_overlaps_are_candidates_not_difficulty_or_occlusion_proof"
+      ],
+      "metrics": {
+        "object_count": 99,
+        "objects_per_MP": 51.5625,
+        "class_count": 22,
+        "known_fraction": 1.0,
+        "median_bbox_short_px": 58.0,
+        "nearcolor_pair_count": 15,
+        "nearcolor_neighbor_fraction": 0.3,
+        "bbox_overlap_pair_count": 5,
+        "active_object_count": null,
+        "active_objects_per_submitted_MP": null,
+        "active_entity_count": null,
+        "active_fraction_of_annotated_objects": null,
+        "inactive_annotated_count": null,
+        "background_object_count": null,
+        "active_objects_per_region_MP": null,
+        "han_text_coverage": null,
+        "annotated_occlusion_fraction": null,
+        "distinct_dependency_regions": null,
+        "effective_counterfactuals": null,
+        "width": 1600,
+        "height": 1200,
+        "mode": "RGB",
+        "exif_orientation": 1,
+        "frame_count": 1,
+        "submitted_width": 1600,
+        "submitted_height": 1200,
+        "native_width": null,
+        "native_height": null,
+        "global_640_proxy": {
+          "contrast_p90_p10": 194.0,
+          "gray_entropy_bits": 7.691299020399713,
+          "edge_fraction_16": 0.17524458648578137
+        },
+        "known_class_count": 22,
+        "repeated_classes": 18,
+        "spatial_entropy_4x4": 0.9958203664056462,
+        "p10_bbox_short_px": 48.0,
+        "edge_touching_count": 6,
+        "annotation_complete": null,
+        "occlusion_annotation_count": 0,
+        "different_class_neighbor_pairs": 50,
+        "duplicate_bbox_candidate_count": 0,
+        "active_nearcolor_pair_count": null
+      },
+      "source": {
+        "kind": "real_photo",
+        "url": "https://huggingface.co/datasets/shelfwise-by-form/SKUs_on_shelves_PL",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "authorization": "verified",
+        "attribution": "ShelfWise by FORM, SKUs_on_shelves_PL, v1.0 (2024)",
+        "scene_id": "ShelfWise:13491"
+      },
+      "difficulty_status": "not_evaluated",
+      "annotation_provenance": "publisher_coco_unmodified",
+      "geometry": {
+        "kind": "unknown",
+        "submitted_size_px": [
+          1600,
+          1200
+        ],
+        "native_size_px": null,
+        "native_size_evidence": "unknown",
+        "panels": []
+      },
+      "preview": "005.jpg",
+      "bbox_adjustments": [
+        {
+          "id": "713363",
+          "original": [
+            1541,
+            448,
+            61,
+            170
+          ],
+          "visible": [
+            1541,
+            448,
+            59,
+            170
+          ]
+        }
+      ],
+      "nearcolor_pairs": [
+        {
+          "a": "713352",
+          "b": "713351",
+          "deltaE76": 6.823305987075303
+        },
+        {
+          "a": "713363",
+          "b": "713348",
+          "deltaE76": 7.238026575952221
+        },
+        {
+          "a": "713363",
+          "b": "713361",
+          "deltaE76": 3.4207831213210436
+        },
+        {
+          "a": "713367",
+          "b": "713358",
+          "deltaE76": 4.937058522554389
+        },
+        {
+          "a": "713393",
+          "b": "713341",
+          "deltaE76": 5.158929513214343
+        },
+        {
+          "a": "713395",
+          "b": "713351",
+          "deltaE76": 7.791723668317633
+        },
+        {
+          "a": "713399",
+          "b": "713362",
+          "deltaE76": 10.207138175304067
+        },
+        {
+          "a": "713404",
+          "b": "713392",
+          "deltaE76": 10.76149484405681
+        },
+        {
+          "a": "713404",
+          "b": "713396",
+          "deltaE76": 10.522469309757922
+        },
+        {
+          "a": "713407",
+          "b": "713382",
+          "deltaE76": 7.59514620571334
+        },
+        {
+          "a": "713408",
+          "b": "713386",
+          "deltaE76": 3.3209238933234597
+        },
+        {
+          "a": "713409",
+          "b": "713402",
+          "deltaE76": 7.257786327539317
+        },
+        {
+          "a": "713411",
+          "b": "713363",
+          "deltaE76": 3.3472349896771374
+        },
+        {
+          "a": "713412",
+          "b": "713410",
+          "deltaE76": 3.177111106523665
+        },
+        {
+          "a": "713412",
+          "b": "713411",
+          "deltaE76": 4.007610418040667
+        }
+      ],
+      "overlap_candidates": [
+        {
+          "a": "713360",
+          "b": "713342",
+          "iom": 0.2898550724637681,
+          "iou": 0.14327855035819637
+        },
+        {
+          "a": "713395",
+          "b": "713366",
+          "iom": 0.20641539695268646,
+          "iou": 0.08484968354430379
+        },
+        {
+          "a": "713401",
+          "b": "713397",
+          "iom": 0.2589928057553957,
+          "iou": 0.11392405063291139
+        },
+        {
+          "a": "713411",
+          "b": "713361",
+          "iom": 0.3684210526315789,
+          "iou": 0.12986524600438734
+        },
+        {
+          "a": "713414",
+          "b": "713401",
+          "iom": 0.352112676056338,
+          "iou": 0.17437145174371452
+        }
+      ],
+      "duplicate_bbox_candidates": [],
+      "roi_metrics": [
+        {
+          "id": "candidate-object",
+          "file": "005_roi1.png",
+          "submitted_crop_size_px": [
+            103,
+            188
+          ],
+          "feature_width_native_px": null,
+          "native_readability_reviewed": null,
+          "pixel_metric_basis": "submitted_pixels",
+          "contrast_p90_p10": 146.0,
+          "gray_entropy_bits": 6.85719130630505,
+          "edge_fraction_16": 0.07282045945313109
+        }
+      ],
+      "platform_points": [],
+      "decision": "needs_review"
+    },
+    {
+      "id": "shelf-13494",
+      "blockers": [],
+      "review": [
+        "native_geometry_unknown: 文件大小不能证明未放大",
+        "task_category_granularity_pending: 品牌/大类标签不能默认等于SKU",
+        "active_objects_unknown: 不默认背景和全部标注都参与求解",
+        "native_roi_readability_pending:candidate-object",
+        "critical_readability_pending:candidate-object",
+        "chinese_text_coverage_unknown",
+        "human_check_pending:source_fidelity",
+        "human_check_pending:annotation_correct",
+        "human_check_pending:critical_evidence_visible",
+        "human_check_pending:no_answer_leakage",
+        "human_check_pending:counting_rules_clear",
+        "multi_region_dependencies_unproven",
+        "wrong_pair_to_answer_effect_unproven",
+        "bypass_review_pending_or_failed",
+        "platform_points_expected_1_to_3"
+      ],
+      "advisory": [
+        "object_count_is_annotation_box_count_not_proven_physical_instances",
+        "local_color_pairs_and_box_overlaps_are_candidates_not_difficulty_or_occlusion_proof"
+      ],
+      "metrics": {
+        "object_count": 118,
+        "objects_per_MP": 61.458333333333336,
+        "class_count": 38,
+        "known_fraction": 0.940677966101695,
+        "median_bbox_short_px": 54.0,
+        "nearcolor_pair_count": 18,
+        "nearcolor_neighbor_fraction": 0.14173228346456693,
+        "bbox_overlap_pair_count": 2,
+        "active_object_count": null,
+        "active_objects_per_submitted_MP": null,
+        "active_entity_count": null,
+        "active_fraction_of_annotated_objects": null,
+        "inactive_annotated_count": null,
+        "background_object_count": null,
+        "active_objects_per_region_MP": null,
+        "han_text_coverage": null,
+        "annotated_occlusion_fraction": null,
+        "distinct_dependency_regions": null,
+        "effective_counterfactuals": null,
+        "width": 1200,
+        "height": 1600,
+        "mode": "RGB",
+        "exif_orientation": 1,
+        "frame_count": 1,
+        "submitted_width": 1200,
+        "submitted_height": 1600,
+        "native_width": null,
+        "native_height": null,
+        "global_640_proxy": {
+          "contrast_p90_p10": 181.0,
+          "gray_entropy_bits": 7.884615391002349,
+          "edge_fraction_16": 0.2143816853639447
+        },
+        "known_class_count": 38,
+        "repeated_classes": 26,
+        "spatial_entropy_4x4": 0.9709272904973184,
+        "p10_bbox_short_px": 39.7,
+        "edge_touching_count": 3,
+        "annotation_complete": null,
+        "occlusion_annotation_count": 0,
+        "different_class_neighbor_pairs": 127,
+        "duplicate_bbox_candidate_count": 0,
+        "active_nearcolor_pair_count": null
+      },
+      "source": {
+        "kind": "real_photo",
+        "url": "https://huggingface.co/datasets/shelfwise-by-form/SKUs_on_shelves_PL",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "authorization": "verified",
+        "attribution": "ShelfWise by FORM, SKUs_on_shelves_PL, v1.0 (2024)",
+        "scene_id": "ShelfWise:13494"
+      },
+      "difficulty_status": "not_evaluated",
+      "annotation_provenance": "publisher_coco_unmodified",
+      "geometry": {
+        "kind": "unknown",
+        "submitted_size_px": [
+          1200,
+          1600
+        ],
+        "native_size_px": null,
+        "native_size_evidence": "unknown",
+        "panels": []
+      },
+      "preview": "006.jpg",
+      "nearcolor_pairs": [
+        {
+          "a": "2045755",
+          "b": "2045746",
+          "deltaE76": 11.388499777103256
+        },
+        {
+          "a": "2045760",
+          "b": "2045743",
+          "deltaE76": 4.279809624518769
+        },
+        {
+          "a": "2045762",
+          "b": "2045745",
+          "deltaE76": 8.579108605420597
+        },
+        {
+          "a": "2045769",
+          "b": "2045746",
+          "deltaE76": 4.194888731409262
+        },
+        {
+          "a": "2045798",
+          "b": "2045739",
+          "deltaE76": 6.152159845586889
+        },
+        {
+          "a": "2045808",
+          "b": "2045741",
+          "deltaE76": 2.042269005364756
+        },
+        {
+          "a": "2045810",
+          "b": "2045755",
+          "deltaE76": 9.862518304238773
+        },
+        {
+          "a": "2045811",
+          "b": "2045748",
+          "deltaE76": 8.704493969220117
+        },
+        {
+          "a": "2045812",
+          "b": "2045780",
+          "deltaE76": 0.6138607690662593
+        },
+        {
+          "a": "2045813",
+          "b": "2045763",
+          "deltaE76": 11.97732070446761
+        },
+        {
+          "a": "2045814",
+          "b": "2045775",
+          "deltaE76": 11.565814100799699
+        },
+        {
+          "a": "2045826",
+          "b": "2045783",
+          "deltaE76": 6.167701172942275
+        },
+        {
+          "a": "2045837",
+          "b": "2045791",
+          "deltaE76": 3.2019749152000276
+        },
+        {
+          "a": "2045838",
+          "b": "2045824",
+          "deltaE76": 6.8322129449496245
+        },
+        {
+          "a": "2045848",
+          "b": "2045761",
+          "deltaE76": 3.990451459039577
+        },
+        {
+          "a": "2045849",
+          "b": "2045802",
+          "deltaE76": 10.218678782501067
+        },
+        {
+          "a": "2045851",
+          "b": "2045763",
+          "deltaE76": 4.641880072422166
+        },
+        {
+          "a": "2045851",
+          "b": "2045838",
+          "deltaE76": 5.427433335015045
+        }
+      ],
+      "overlap_candidates": [
+        {
+          "a": "2045797",
+          "b": "2045765",
+          "iom": 0.16261998870694522,
+          "iou": 0.08820826952526799
+        },
+        {
+          "a": "2045851",
+          "b": "2045813",
+          "iom": 0.2595078299776286,
+          "iou": 0.10263670146876659
+        }
+      ],
+      "duplicate_bbox_candidates": [],
+      "roi_metrics": [
+        {
+          "id": "candidate-object",
+          "file": "006_roi1.png",
+          "submitted_crop_size_px": [
+            71,
+            171
+          ],
+          "feature_width_native_px": null,
+          "native_readability_reviewed": null,
+          "pixel_metric_basis": "submitted_pixels",
+          "contrast_p90_p10": 165.0,
+          "gray_entropy_bits": 7.634283526171796,
+          "edge_fraction_16": 0.3076539101497504
+        }
+      ],
+      "platform_points": [],
+      "decision": "needs_review"
+    },
+    {
+      "id": "shelf-16067",
+      "blockers": [],
+      "review": [
+        "native_geometry_unknown: 文件大小不能证明未放大",
+        "task_category_granularity_pending: 品牌/大类标签不能默认等于SKU",
+        "active_objects_unknown: 不默认背景和全部标注都参与求解",
+        "native_roi_readability_pending:candidate-object",
+        "critical_readability_pending:candidate-object",
+        "chinese_text_coverage_unknown",
+        "human_check_pending:source_fidelity",
+        "human_check_pending:annotation_correct",
+        "human_check_pending:critical_evidence_visible",
+        "human_check_pending:no_answer_leakage",
+        "human_check_pending:counting_rules_clear",
+        "multi_region_dependencies_unproven",
+        "wrong_pair_to_answer_effect_unproven",
+        "bypass_review_pending_or_failed",
+        "platform_points_expected_1_to_3"
+      ],
+      "advisory": [
+        "object_count_is_annotation_box_count_not_proven_physical_instances",
+        "local_color_pairs_and_box_overlaps_are_candidates_not_difficulty_or_occlusion_proof"
+      ],
+      "metrics": {
+        "object_count": 107,
+        "objects_per_MP": 55.729166666666664,
+        "class_count": 50,
+        "known_fraction": 0.9906542056074766,
+        "median_bbox_short_px": 57.0,
+        "nearcolor_pair_count": 12,
+        "nearcolor_neighbor_fraction": 0.19047619047619047,
+        "bbox_overlap_pair_count": 0,
+        "active_object_count": null,
+        "active_objects_per_submitted_MP": null,
+        "active_entity_count": null,
+        "active_fraction_of_annotated_objects": null,
+        "inactive_annotated_count": null,
+        "background_object_count": null,
+        "active_objects_per_region_MP": null,
+        "han_text_coverage": null,
+        "annotated_occlusion_fraction": null,
+        "distinct_dependency_regions": null,
+        "effective_counterfactuals": null,
+        "width": 1200,
+        "height": 1600,
+        "mode": "RGB",
+        "exif_orientation": 1,
+        "frame_count": 1,
+        "submitted_width": 1200,
+        "submitted_height": 1600,
+        "native_width": null,
+        "native_height": null,
+        "global_640_proxy": {
+          "contrast_p90_p10": 159.0,
+          "gray_entropy_bits": 7.660692027350237,
+          "edge_fraction_16": 0.18619064701278373
+        },
+        "known_class_count": 50,
+        "repeated_classes": 34,
+        "spatial_entropy_4x4": 0.9439212659743959,
+        "p10_bbox_short_px": 37.0,
+        "edge_touching_count": 7,
+        "annotation_complete": null,
+        "occlusion_annotation_count": 0,
+        "different_class_neighbor_pairs": 63,
+        "duplicate_bbox_candidate_count": 0,
+        "active_nearcolor_pair_count": null
+      },
+      "source": {
+        "kind": "real_photo",
+        "url": "https://huggingface.co/datasets/shelfwise-by-form/SKUs_on_shelves_PL",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "authorization": "verified",
+        "attribution": "ShelfWise by FORM, SKUs_on_shelves_PL, v1.0 (2024)",
+        "scene_id": "ShelfWise:16067"
+      },
+      "difficulty_status": "not_evaluated",
+      "annotation_provenance": "publisher_coco_unmodified",
+      "geometry": {
+        "kind": "unknown",
+        "submitted_size_px": [
+          1200,
+          1600
+        ],
+        "native_size_px": null,
+        "native_size_evidence": "unknown",
+        "panels": []
+      },
+      "preview": "007.jpg",
+      "nearcolor_pairs": [
+        {
+          "a": "1124245",
+          "b": "1124218",
+          "deltaE76": 11.86544807211464
+        },
+        {
+          "a": "1124246",
+          "b": "1124237",
+          "deltaE76": 3.4416061353771887
+        },
+        {
+          "a": "1124253",
+          "b": "1124248",
+          "deltaE76": 11.667548560383805
+        },
+        {
+          "a": "1124255",
+          "b": "1124208",
+          "deltaE76": 10.172086699740515
+        },
+        {
+          "a": "1124258",
+          "b": "1124230",
+          "deltaE76": 6.453914210423402
+        },
+        {
+          "a": "1124265",
+          "b": "1124247",
+          "deltaE76": 1.1527262767388644
+        },
+        {
+          "a": "1124290",
+          "b": "1124219",
+          "deltaE76": 3.5841136794105095
+        },
+        {
+          "a": "1124291",
+          "b": "1124288",
+          "deltaE76": 2.903042796326628
+        },
+        {
+          "a": "1124294",
+          "b": "1124215",
+          "deltaE76": 7.741992225735266
+        },
+        {
+          "a": "1124306",
+          "b": "1124305",
+          "deltaE76": 7.541264680190909
+        },
+        {
+          "a": "1124307",
+          "b": "1124215",
+          "deltaE76": 9.313109073369716
+        },
+        {
+          "a": "1124310",
+          "b": "1124272",
+          "deltaE76": 8.521888277525214
+        }
+      ],
+      "overlap_candidates": [],
+      "duplicate_bbox_candidates": [],
+      "roi_metrics": [
+        {
+          "id": "candidate-object",
+          "file": "007_roi1.png",
+          "submitted_crop_size_px": [
+            117,
+            74
+          ],
+          "feature_width_native_px": null,
+          "native_readability_reviewed": null,
+          "pixel_metric_basis": "submitted_pixels",
+          "contrast_p90_p10": 106.0,
+          "gray_entropy_bits": 7.170368575517191,
+          "edge_fraction_16": 0.2370802919708029
+        }
+      ],
+      "platform_points": [],
+      "decision": "needs_review"
+    },
+    {
+      "id": "shelf-16174",
+      "blockers": [],
+      "review": [
+        "native_geometry_unknown: 文件大小不能证明未放大",
+        "task_category_granularity_pending: 品牌/大类标签不能默认等于SKU",
+        "active_objects_unknown: 不默认背景和全部标注都参与求解",
+        "native_roi_readability_pending:candidate-object",
+        "critical_readability_pending:candidate-object",
+        "chinese_text_coverage_unknown",
+        "human_check_pending:source_fidelity",
+        "human_check_pending:annotation_correct",
+        "human_check_pending:critical_evidence_visible",
+        "human_check_pending:no_answer_leakage",
+        "human_check_pending:counting_rules_clear",
+        "multi_region_dependencies_unproven",
+        "wrong_pair_to_answer_effect_unproven",
+        "bypass_review_pending_or_failed",
+        "platform_points_expected_1_to_3"
+      ],
+      "advisory": [
+        "object_count_is_annotation_box_count_not_proven_physical_instances",
+        "local_color_pairs_and_box_overlaps_are_candidates_not_difficulty_or_occlusion_proof"
+      ],
+      "metrics": {
+        "object_count": 90,
+        "objects_per_MP": 46.875,
+        "class_count": 28,
+        "known_fraction": 0.9666666666666667,
+        "median_bbox_short_px": 74.0,
+        "nearcolor_pair_count": 16,
+        "nearcolor_neighbor_fraction": 0.25,
+        "bbox_overlap_pair_count": 2,
+        "active_object_count": null,
+        "active_objects_per_submitted_MP": null,
+        "active_entity_count": null,
+        "active_fraction_of_annotated_objects": null,
+        "inactive_annotated_count": null,
+        "background_object_count": null,
+        "active_objects_per_region_MP": null,
+        "han_text_coverage": null,
+        "annotated_occlusion_fraction": null,
+        "distinct_dependency_regions": null,
+        "effective_counterfactuals": null,
+        "width": 1200,
+        "height": 1600,
+        "mode": "RGB",
+        "exif_orientation": 1,
+        "frame_count": 1,
+        "submitted_width": 1200,
+        "submitted_height": 1600,
+        "native_width": null,
+        "native_height": null,
+        "global_640_proxy": {
+          "contrast_p90_p10": 156.0,
+          "gray_entropy_bits": 7.492434549771672,
+          "edge_fraction_16": 0.1833469214714323
+        },
+        "known_class_count": 28,
+        "repeated_classes": 23,
+        "spatial_entropy_4x4": 0.9845675107384524,
+        "p10_bbox_short_px": 47.8,
+        "edge_touching_count": 13,
+        "annotation_complete": null,
+        "occlusion_annotation_count": 0,
+        "different_class_neighbor_pairs": 64,
+        "duplicate_bbox_candidate_count": 0,
+        "active_nearcolor_pair_count": null
+      },
+      "source": {
+        "kind": "real_photo",
+        "url": "https://huggingface.co/datasets/shelfwise-by-form/SKUs_on_shelves_PL",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "authorization": "verified",
+        "attribution": "ShelfWise by FORM, SKUs_on_shelves_PL, v1.0 (2024)",
+        "scene_id": "ShelfWise:16174"
+      },
+      "difficulty_status": "not_evaluated",
+      "annotation_provenance": "publisher_coco_unmodified",
+      "geometry": {
+        "kind": "unknown",
+        "submitted_size_px": [
+          1200,
+          1600
+        ],
+        "native_size_px": null,
+        "native_size_evidence": "unknown",
+        "panels": []
+      },
+      "preview": "008.jpg",
+      "nearcolor_pairs": [
+        {
+          "a": "824824",
+          "b": "824819",
+          "deltaE76": 8.656827411543707
+        },
+        {
+          "a": "824826",
+          "b": "824803",
+          "deltaE76": 8.983886333535835
+        },
+        {
+          "a": "824828",
+          "b": "824803",
+          "deltaE76": 8.399599815444274
+        },
+        {
+          "a": "824828",
+          "b": "824822",
+          "deltaE76": 8.583407579281154
+        },
+        {
+          "a": "824848",
+          "b": "824842",
+          "deltaE76": 2.4034611768508203
+        },
+        {
+          "a": "824849",
+          "b": "824802",
+          "deltaE76": 5.0487045180142855
+        },
+        {
+          "a": "824855",
+          "b": "824842",
+          "deltaE76": 1.60541812678688
+        },
+        {
+          "a": "824862",
+          "b": "824848",
+          "deltaE76": 3.387873001224822
+        },
+        {
+          "a": "824862",
+          "b": "824855",
+          "deltaE76": 2.6321463173196538
+        },
+        {
+          "a": "824863",
+          "b": "824827",
+          "deltaE76": 6.533514573075971
+        },
+        {
+          "a": "824864",
+          "b": "824827",
+          "deltaE76": 7.954500584924869
+        },
+        {
+          "a": "824864",
+          "b": "824842",
+          "deltaE76": 8.63573170456985
+        },
+        {
+          "a": "824865",
+          "b": "824812",
+          "deltaE76": 2.424633551779567
+        },
+        {
+          "a": "824867",
+          "b": "824809",
+          "deltaE76": 10.235819397368454
+        },
+        {
+          "a": "824884",
+          "b": "824831",
+          "deltaE76": 9.488832248387425
+        },
+        {
+          "a": "824885",
+          "b": "824831",
+          "deltaE76": 9.43406078681553
+        }
+      ],
+      "overlap_candidates": [
+        {
+          "a": "824878",
+          "b": "824869",
+          "iom": 0.22448979591836735,
+          "iou": 0.05126498002663116
+        },
+        {
+          "a": "824879",
+          "b": "824854",
+          "iom": 0.1724137931034483,
+          "iou": 0.03536544291007073
+        }
+      ],
+      "duplicate_bbox_candidates": [],
+      "roi_metrics": [
+        {
+          "id": "candidate-object",
+          "file": "008_roi1.png",
+          "submitted_crop_size_px": [
+            147,
+            112
+          ],
+          "feature_width_native_px": null,
+          "native_readability_reviewed": null,
+          "pixel_metric_basis": "submitted_pixels",
+          "contrast_p90_p10": 128.0,
+          "gray_entropy_bits": 7.468111710184034,
+          "edge_fraction_16": 0.228779576968992
+        }
+      ],
+      "platform_points": [],
+      "decision": "needs_review"
+    },
+    {
+      "id": "shelf-17567",
+      "blockers": [],
+      "review": [
+        "native_geometry_unknown: 文件大小不能证明未放大",
+        "task_category_granularity_pending: 品牌/大类标签不能默认等于SKU",
+        "active_objects_unknown: 不默认背景和全部标注都参与求解",
+        "native_roi_readability_pending:candidate-object",
+        "critical_readability_pending:candidate-object",
+        "chinese_text_coverage_unknown",
+        "human_check_pending:source_fidelity",
+        "human_check_pending:annotation_correct",
+        "human_check_pending:critical_evidence_visible",
+        "human_check_pending:no_answer_leakage",
+        "human_check_pending:counting_rules_clear",
+        "multi_region_dependencies_unproven",
+        "wrong_pair_to_answer_effect_unproven",
+        "bypass_review_pending_or_failed",
+        "platform_points_expected_1_to_3"
+      ],
+      "advisory": [
+        "object_count_is_annotation_box_count_not_proven_physical_instances",
+        "local_color_pairs_and_box_overlaps_are_candidates_not_difficulty_or_occlusion_proof"
+      ],
+      "metrics": {
+        "object_count": 96,
+        "objects_per_MP": 34.72222222222222,
+        "class_count": 60,
+        "known_fraction": 0.8541666666666666,
+        "median_bbox_short_px": 74.5,
+        "nearcolor_pair_count": 20,
+        "nearcolor_neighbor_fraction": 0.12345679012345678,
+        "bbox_overlap_pair_count": 0,
+        "active_object_count": null,
+        "active_objects_per_submitted_MP": null,
+        "active_entity_count": null,
+        "active_fraction_of_annotated_objects": null,
+        "inactive_annotated_count": null,
+        "background_object_count": null,
+        "active_objects_per_region_MP": null,
+        "han_text_coverage": null,
+        "annotated_occlusion_fraction": null,
+        "distinct_dependency_regions": null,
+        "effective_counterfactuals": null,
+        "width": 1440,
+        "height": 1920,
+        "mode": "RGB",
+        "exif_orientation": 1,
+        "frame_count": 1,
+        "submitted_width": 1440,
+        "submitted_height": 1920,
+        "native_width": null,
+        "native_height": null,
+        "global_640_proxy": {
+          "contrast_p90_p10": 182.0,
+          "gray_entropy_bits": 7.758367029959876,
+          "edge_fraction_16": 0.2843024393425515
+        },
+        "known_class_count": 60,
+        "repeated_classes": 14,
+        "spatial_entropy_4x4": 0.9617587941657375,
+        "p10_bbox_short_px": 49.0,
+        "edge_touching_count": 25,
+        "annotation_complete": null,
+        "occlusion_annotation_count": 0,
+        "different_class_neighbor_pairs": 162,
+        "duplicate_bbox_candidate_count": 0,
+        "active_nearcolor_pair_count": null
+      },
+      "source": {
+        "kind": "real_photo",
+        "url": "https://huggingface.co/datasets/shelfwise-by-form/SKUs_on_shelves_PL",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "authorization": "verified",
+        "attribution": "ShelfWise by FORM, SKUs_on_shelves_PL, v1.0 (2024)",
+        "scene_id": "ShelfWise:17567"
+      },
+      "difficulty_status": "not_evaluated",
+      "annotation_provenance": "publisher_coco_unmodified",
+      "geometry": {
+        "kind": "unknown",
+        "submitted_size_px": [
+          1440,
+          1920
+        ],
+        "native_size_px": null,
+        "native_size_evidence": "unknown",
+        "panels": []
+      },
+      "preview": "009.jpg",
+      "nearcolor_pairs": [
+        {
+          "a": "51414",
+          "b": "51413",
+          "deltaE76": 7.712583501644668
+        },
+        {
+          "a": "51415",
+          "b": "51414",
+          "deltaE76": 6.360619943755369
+        },
+        {
+          "a": "51416",
+          "b": "51414",
+          "deltaE76": 8.266255221808699
+        },
+        {
+          "a": "51416",
+          "b": "51415",
+          "deltaE76": 3.3769506122723745
+        },
+        {
+          "a": "51431",
+          "b": "51430",
+          "deltaE76": 3.1054941031637417
+        },
+        {
+          "a": "51432",
+          "b": "51431",
+          "deltaE76": 1.5094717520122733
+        },
+        {
+          "a": "51435",
+          "b": "51419",
+          "deltaE76": 10.73050739658602
+        },
+        {
+          "a": "51440",
+          "b": "51439",
+          "deltaE76": 5.082162678665979
+        },
+        {
+          "a": "51441",
+          "b": "51423",
+          "deltaE76": 8.438519350986875
+        },
+        {
+          "a": "51443",
+          "b": "51442",
+          "deltaE76": 7.97001446003842
+        },
+        {
+          "a": "51451",
+          "b": "51450",
+          "deltaE76": 6.505302827521667
+        },
+        {
+          "a": "51452",
+          "b": "51450",
+          "deltaE76": 4.5444001252921415
+        },
+        {
+          "a": "51455",
+          "b": "51435",
+          "deltaE76": 6.160149137026105
+        },
+        {
+          "a": "51456",
+          "b": "51435",
+          "deltaE76": 7.090780049322799
+        },
+        {
+          "a": "51458",
+          "b": "51457",
+          "deltaE76": 9.585282401524813
+        },
+        {
+          "a": "51485",
+          "b": "51467",
+          "deltaE76": 9.174404445387841
+        },
+        {
+          "a": "51497",
+          "b": "51496",
+          "deltaE76": 3.1529589063585823
+        },
+        {
+          "a": "51498",
+          "b": "51472",
+          "deltaE76": 8.764215319312195
+        },
+        {
+          "a": "51502",
+          "b": "51481",
+          "deltaE76": 10.209985576627703
+        },
+        {
+          "a": "51503",
+          "b": "51482",
+          "deltaE76": 11.144445190925335
+        }
+      ],
+      "overlap_candidates": [],
+      "duplicate_bbox_candidates": [],
+      "roi_metrics": [
+        {
+          "id": "candidate-object",
+          "file": "009_roi1.png",
+          "submitted_crop_size_px": [
+            127,
+            377
+          ],
+          "feature_width_native_px": null,
+          "native_readability_reviewed": null,
+          "pixel_metric_basis": "submitted_pixels",
+          "contrast_p90_p10": 139.0,
+          "gray_entropy_bits": 7.670866661682346,
+          "edge_fraction_16": 0.2732588657694165
+        }
+      ],
+      "platform_points": [],
+      "decision": "needs_review"
+    },
+    {
+      "id": "shelf-18049",
+      "blockers": [],
+      "review": [
+        "native_geometry_unknown: 文件大小不能证明未放大",
+        "task_category_granularity_pending: 品牌/大类标签不能默认等于SKU",
+        "active_objects_unknown: 不默认背景和全部标注都参与求解",
+        "native_roi_readability_pending:candidate-object",
+        "critical_readability_pending:candidate-object",
+        "chinese_text_coverage_unknown",
+        "human_check_pending:source_fidelity",
+        "human_check_pending:annotation_correct",
+        "human_check_pending:critical_evidence_visible",
+        "human_check_pending:no_answer_leakage",
+        "human_check_pending:counting_rules_clear",
+        "multi_region_dependencies_unproven",
+        "wrong_pair_to_answer_effect_unproven",
+        "bypass_review_pending_or_failed",
+        "platform_points_expected_1_to_3"
+      ],
+      "advisory": [
+        "object_count_is_annotation_box_count_not_proven_physical_instances",
+        "local_color_pairs_and_box_overlaps_are_candidates_not_difficulty_or_occlusion_proof"
+      ],
+      "metrics": {
+        "object_count": 98,
+        "objects_per_MP": 59.07600308641975,
+        "class_count": 45,
+        "known_fraction": 0.9387755102040817,
+        "median_bbox_short_px": 63.5,
+        "nearcolor_pair_count": 43,
+        "nearcolor_neighbor_fraction": 0.20476190476190476,
+        "bbox_overlap_pair_count": 18,
+        "active_object_count": null,
+        "active_objects_per_submitted_MP": null,
+        "active_entity_count": null,
+        "active_fraction_of_annotated_objects": null,
+        "inactive_annotated_count": null,
+        "background_object_count": null,
+        "active_objects_per_region_MP": null,
+        "han_text_coverage": null,
+        "annotated_occlusion_fraction": null,
+        "distinct_dependency_regions": null,
+        "effective_counterfactuals": null,
+        "width": 1152,
+        "height": 1440,
+        "mode": "RGB",
+        "exif_orientation": 1,
+        "frame_count": 1,
+        "submitted_width": 1152,
+        "submitted_height": 1440,
+        "native_width": null,
+        "native_height": null,
+        "global_640_proxy": {
+          "contrast_p90_p10": 174.0,
+          "gray_entropy_bits": 7.82573045924569,
+          "edge_fraction_16": 0.23802368665623166
+        },
+        "known_class_count": 45,
+        "repeated_classes": 22,
+        "spatial_entropy_4x4": 0.9833347332646378,
+        "p10_bbox_short_px": 31.0,
+        "edge_touching_count": 17,
+        "annotation_complete": null,
+        "occlusion_annotation_count": 0,
+        "different_class_neighbor_pairs": 210,
+        "duplicate_bbox_candidate_count": 0,
+        "active_nearcolor_pair_count": null
+      },
+      "source": {
+        "kind": "real_photo",
+        "url": "https://huggingface.co/datasets/shelfwise-by-form/SKUs_on_shelves_PL",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "authorization": "verified",
+        "attribution": "ShelfWise by FORM, SKUs_on_shelves_PL, v1.0 (2024)",
+        "scene_id": "ShelfWise:18049"
+      },
+      "difficulty_status": "not_evaluated",
+      "annotation_provenance": "publisher_coco_unmodified",
+      "geometry": {
+        "kind": "unknown",
+        "submitted_size_px": [
+          1152,
+          1440
+        ],
+        "native_size_px": null,
+        "native_size_evidence": "unknown",
+        "panels": []
+      },
+      "preview": "010.jpg",
+      "nearcolor_pairs": [
+        {
+          "a": "537536",
+          "b": "537535",
+          "deltaE76": 11.620761336301854
+        },
+        {
+          "a": "537539",
+          "b": "537538",
+          "deltaE76": 3.369873299830161
+        },
+        {
+          "a": "537549",
+          "b": "537534",
+          "deltaE76": 10.536774039192707
+        },
+        {
+          "a": "537550",
+          "b": "537534",
+          "deltaE76": 10.963008367345413
+        },
+        {
+          "a": "537550",
+          "b": "537535",
+          "deltaE76": 10.731154761161312
+        },
+        {
+          "a": "537550",
+          "b": "537549",
+          "deltaE76": 4.055780128934777
+        },
+        {
+          "a": "537552",
+          "b": "537536",
+          "deltaE76": 8.42352742636442
+        },
+        {
+          "a": "537552",
+          "b": "537537",
+          "deltaE76": 10.426570808201287
+        },
+        {
+          "a": "537556",
+          "b": "537540",
+          "deltaE76": 11.665880604429145
+        },
+        {
+          "a": "537591",
+          "b": "537589",
+          "deltaE76": 10.625572361182453
+        },
+        {
+          "a": "537600",
+          "b": "537547",
+          "deltaE76": 8.786408283521368
+        },
+        {
+          "a": "537600",
+          "b": "537548",
+          "deltaE76": 9.546330317034286
+        },
+        {
+          "a": "537603",
+          "b": "537602",
+          "deltaE76": 6.147022082006794
+        },
+        {
+          "a": "537604",
+          "b": "537586",
+          "deltaE76": 7.485106628336878
+        },
+        {
+          "a": "537608",
+          "b": "537554",
+          "deltaE76": 11.557711764430703
+        },
+        {
+          "a": "537614",
+          "b": "537613",
+          "deltaE76": 10.625271094032746
+        },
+        {
+          "a": "537616",
+          "b": "537615",
+          "deltaE76": 6.595315645262032
+        },
+        {
+          "a": "537617",
+          "b": "537615",
+          "deltaE76": 5.88702020660644
+        },
+        {
+          "a": "537617",
+          "b": "537616",
+          "deltaE76": 9.146474886197158
+        },
+        {
+          "a": "537618",
+          "b": "537616",
+          "deltaE76": 7.521861454086593
+        },
+        {
+          "a": "537618",
+          "b": "537617",
+          "deltaE76": 10.959432145542538
+        },
+        {
+          "a": "537619",
+          "b": "537617",
+          "deltaE76": 10.44362518042693
+        },
+        {
+          "a": "537619",
+          "b": "537618",
+          "deltaE76": 5.434990224600387
+        },
+        {
+          "a": "537620",
+          "b": "537617",
+          "deltaE76": 10.724854729030438
+        },
+        {
+          "a": "537620",
+          "b": "537618",
+          "deltaE76": 0.9649445367500685
+        },
+        {
+          "a": "537620",
+          "b": "537619",
+          "deltaE76": 4.76612785223552
+        },
+        {
+          "a": "537621",
+          "b": "537619",
+          "deltaE76": 3.045658434293261
+        },
+        {
+          "a": "537621",
+          "b": "537620",
+          "deltaE76": 6.416360456766045
+        },
+        {
+          "a": "537623",
+          "b": "537593",
+          "deltaE76": 8.428239777211651
+        },
+        {
+          "a": "537623",
+          "b": "537594",
+          "deltaE76": 10.602466624775577
+        },
+        {
+          "a": "537623",
+          "b": "537597",
+          "deltaE76": 7.459316231997818
+        },
+        {
+          "a": "537623",
+          "b": "537616",
+          "deltaE76": 7.902950933609404
+        },
+        {
+          "a": "537624",
+          "b": "537615",
+          "deltaE76": 11.516693275973077
+        },
+        {
+          "a": "537624",
+          "b": "537616",
+          "deltaE76": 10.264137407910178
+        },
+        {
+          "a": "537624",
+          "b": "537617",
+          "deltaE76": 11.227065097697539
+        },
+        {
+          "a": "537624",
+          "b": "537623",
+          "deltaE76": 9.98466936941437
+        },
+        {
+          "a": "537625",
+          "b": "537616",
+          "deltaE76": 5.284851976611782
+        },
+        {
+          "a": "537625",
+          "b": "537617",
+          "deltaE76": 6.5868550821920815
+        },
+        {
+          "a": "537625",
+          "b": "537618",
+          "deltaE76": 5.113800480391242
+        },
+        {
+          "a": "537625",
+          "b": "537619",
+          "deltaE76": 5.823138206924307
+        },
+        {
+          "a": "537627",
+          "b": "537619",
+          "deltaE76": 10.547882886759547
+        },
+        {
+          "a": "537627",
+          "b": "537620",
+          "deltaE76": 11.939697169612682
+        },
+        {
+          "a": "537628",
+          "b": "537619",
+          "deltaE76": 11.59765075464795
+        }
+      ],
+      "overlap_candidates": [
+        {
+          "a": "537608",
+          "b": "537607",
+          "iom": 0.18181818181818182,
+          "iou": 0.09262435677530018
+        },
+        {
+          "a": "537609",
+          "b": "537608",
+          "iom": 0.2711864406779661,
+          "iou": 0.12300261622056752
+        },
+        {
+          "a": "537610",
+          "b": "537609",
+          "iom": 0.23728813559322035,
+          "iou": 0.09570850782060919
+        },
+        {
+          "a": "537611",
+          "b": "537610",
+          "iom": 0.27137042062415195,
+          "iou": 0.14892032762472077
+        },
+        {
+          "a": "537612",
+          "b": "537611",
+          "iom": 0.345679012345679,
+          "iou": 0.1929371231696813
+        },
+        {
+          "a": "537614",
+          "b": "537613",
+          "iom": 0.8928571428571429,
+          "iou": 0.2422145328719723
+        },
+        {
+          "a": "537616",
+          "b": "537615",
+          "iom": 0.35064935064935066,
+          "iou": 0.15807639208467555
+        },
+        {
+          "a": "537617",
+          "b": "537616",
+          "iom": 0.2694651628160815,
+          "iou": 0.1354998056120932
+        },
+        {
+          "a": "537618",
+          "b": "537617",
+          "iom": 0.2976190476190476,
+          "iou": 0.16127214851122568
+        },
+        {
+          "a": "537619",
+          "b": "537618",
+          "iom": 0.4027777777777778,
+          "iou": 0.22233063841650405
+        },
+        {
+          "a": "537620",
+          "b": "537619",
+          "iom": 0.3917929292929293,
+          "iou": 0.21098796491466648
+        },
+        {
+          "a": "537621",
+          "b": "537620",
+          "iom": 0.3857319498951669,
+          "iou": 0.22992373261552265
+        },
+        {
+          "a": "537622",
+          "b": "537621",
+          "iom": 0.4536142815335089,
+          "iou": 0.23783037324024703
+        },
+        {
+          "a": "537624",
+          "b": "537623",
+          "iom": 0.26858660130718953,
+          "iou": 0.14169953233766514
+        },
+        {
+          "a": "537625",
+          "b": "537624",
+          "iom": 0.32222222222222224,
+          "iou": 0.1540796963946869
+        },
+        {
+          "a": "537626",
+          "b": "537625",
+          "iom": 0.31101190476190477,
+          "iou": 0.1645021645021645
+        },
+        {
+          "a": "537627",
+          "b": "537626",
+          "iom": 0.324,
+          "iou": 0.17304953315398006
+        },
+        {
+          "a": "537628",
+          "b": "537627",
+          "iom": 0.2320675105485232,
+          "iou": 0.13000168833361472
+        }
+      ],
+      "duplicate_bbox_candidates": [],
+      "roi_metrics": [
+        {
+          "id": "candidate-object",
+          "file": "010_roi1.png",
+          "submitted_crop_size_px": [
+            119,
+            283
+          ],
+          "feature_width_native_px": null,
+          "native_readability_reviewed": null,
+          "pixel_metric_basis": "submitted_pixels",
+          "contrast_p90_p10": 170.0,
+          "gray_entropy_bits": 7.620433007059194,
+          "edge_fraction_16": 0.21288385709164775
+        }
+      ],
+      "platform_points": [],
+      "decision": "needs_review"
+    },
+    {
+      "id": "shelf-22835",
+      "blockers": [],
+      "review": [
+        "native_geometry_unknown: 文件大小不能证明未放大",
+        "visible_bbox_clipping_applied: 核查边缘目标口径；原标注文件未改",
+        "task_category_granularity_pending: 品牌/大类标签不能默认等于SKU",
+        "active_objects_unknown: 不默认背景和全部标注都参与求解",
+        "native_roi_readability_pending:213696",
+        "native_roi_readability_pending:213796",
+        "native_roi_readability_pending:213763",
+        "native_roi_readability_pending:price-tag",
+        "human_check_pending:annotation_correct",
+        "human_check_pending:no_answer_leakage",
+        "human_check_pending:counting_rules_clear",
+        "bypass_review_pending_or_failed"
+      ],
+      "advisory": [
+        "object_count_is_annotation_box_count_not_proven_physical_instances",
+        "local_color_pairs_and_box_overlaps_are_candidates_not_difficulty_or_occlusion_proof"
+      ],
+      "metrics": {
+        "object_count": 133,
+        "objects_per_MP": 69.27083333333333,
+        "class_count": 69,
+        "known_fraction": 1.0,
+        "median_bbox_short_px": 82.0,
+        "nearcolor_pair_count": 81,
+        "nearcolor_neighbor_fraction": 0.28825622775800713,
+        "bbox_overlap_pair_count": 0,
+        "active_object_count": null,
+        "active_objects_per_submitted_MP": null,
+        "active_entity_count": null,
+        "active_fraction_of_annotated_objects": null,
+        "inactive_annotated_count": null,
+        "background_object_count": null,
+        "active_objects_per_region_MP": null,
+        "han_text_coverage": 0.0,
+        "annotated_occlusion_fraction": null,
+        "distinct_dependency_regions": 3,
+        "effective_counterfactuals": 2,
+        "width": 1200,
+        "height": 1600,
+        "mode": "RGB",
+        "exif_orientation": 1,
+        "frame_count": 1,
+        "submitted_width": 1200,
+        "submitted_height": 1600,
+        "native_width": null,
+        "native_height": null,
+        "global_640_proxy": {
+          "contrast_p90_p10": 163.0,
+          "gray_entropy_bits": 7.8291683953937605,
+          "edge_fraction_16": 0.3134441038351161
+        },
+        "known_class_count": 69,
+        "repeated_classes": 44,
+        "spatial_entropy_4x4": 0.9885314970303503,
+        "p10_bbox_short_px": 39.0,
+        "edge_touching_count": 14,
+        "annotation_complete": null,
+        "occlusion_annotation_count": 0,
+        "different_class_neighbor_pairs": 281,
+        "duplicate_bbox_candidate_count": 0,
+        "active_nearcolor_pair_count": null
+      },
+      "source": {
+        "kind": "real_photo",
+        "url": "https://huggingface.co/datasets/shelfwise-by-form/SKUs_on_shelves_PL",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "authorization": "verified",
+        "attribution": "ShelfWise by FORM, SKUs_on_shelves_PL, v1.0 (2024)",
+        "scene_id": "ShelfWise:22835"
+      },
+      "difficulty_status": "not_evaluated",
+      "annotation_provenance": "publisher_coco_unmodified",
+      "geometry": {
+        "kind": "unknown",
+        "submitted_size_px": [
+          1200,
+          1600
+        ],
+        "native_size_px": null,
+        "native_size_evidence": "unknown",
+        "panels": []
+      },
+      "preview": "011.jpg",
+      "bbox_adjustments": [
+        {
+          "id": "213800",
+          "original": [
+            1148,
+            268,
+            53,
+            118
+          ],
+          "visible": [
+            1148,
+            268,
+            52,
+            118
+          ]
+        }
+      ],
+      "nearcolor_pairs": [
+        {
+          "a": "213702",
+          "b": "213700",
+          "deltaE76": 5.266559010625098
+        },
+        {
+          "a": "213709",
+          "b": "213703",
+          "deltaE76": 7.0349670572966785
+        },
+        {
+          "a": "213711",
+          "b": "213707",
+          "deltaE76": 6.439907208304155
+        },
+        {
+          "a": "213718",
+          "b": "213700",
+          "deltaE76": 5.090208474608436
+        },
+        {
+          "a": "213720",
+          "b": "213718",
+          "deltaE76": 10.7247683410073
+        },
+        {
+          "a": "213726",
+          "b": "213707",
+          "deltaE76": 7.365916036791318
+        },
+        {
+          "a": "213726",
+          "b": "213725",
+          "deltaE76": 9.989626373021018
+        },
+        {
+          "a": "213730",
+          "b": "213729",
+          "deltaE76": 3.2690660184495806
+        },
+        {
+          "a": "213732",
+          "b": "213697",
+          "deltaE76": 10.4690195317792
+        },
+        {
+          "a": "213733",
+          "b": "213700",
+          "deltaE76": 8.881959694893649
+        },
+        {
+          "a": "213737",
+          "b": "213698",
+          "deltaE76": 7.265190004052813
+        },
+        {
+          "a": "213740",
+          "b": "213711",
+          "deltaE76": 8.425448373848097
+        },
+        {
+          "a": "213744",
+          "b": "213711",
+          "deltaE76": 8.42879677421729
+        },
+        {
+          "a": "213744",
+          "b": "213717",
+          "deltaE76": 3.5284898484468754
+        },
+        {
+          "a": "213745",
+          "b": "213718",
+          "deltaE76": 7.262417117584803
+        },
+        {
+          "a": "213745",
+          "b": "213724",
+          "deltaE76": 10.303994561623588
+        },
+        {
+          "a": "213746",
+          "b": "213732",
+          "deltaE76": 9.356580213463824
+        },
+        {
+          "a": "213747",
+          "b": "213714",
+          "deltaE76": 11.530062501323492
+        },
+        {
+          "a": "213747",
+          "b": "213719",
+          "deltaE76": 11.748017202043373
+        },
+        {
+          "a": "213748",
+          "b": "213743",
+          "deltaE76": 7.94257528486331
+        },
+        {
+          "a": "213752",
+          "b": "213721",
+          "deltaE76": 8.648780893354486
+        },
+        {
+          "a": "213753",
+          "b": "213725",
+          "deltaE76": 5.444717374528819
+        },
+        {
+          "a": "213756",
+          "b": "213702",
+          "deltaE76": 8.365670266627648
+        },
+        {
+          "a": "213756",
+          "b": "213733",
+          "deltaE76": 11.046006506548116
+        },
+        {
+          "a": "213763",
+          "b": "213696",
+          "deltaE76": 5.632305471697034
+        },
+        {
+          "a": "213763",
+          "b": "213713",
+          "deltaE76": 11.887113514982765
+        },
+        {
+          "a": "213765",
+          "b": "213704",
+          "deltaE76": 11.606686090070754
+        },
+        {
+          "a": "213768",
+          "b": "213702",
+          "deltaE76": 11.145836702794215
+        },
+        {
+          "a": "213768",
+          "b": "213719",
+          "deltaE76": 11.603713975982137
+        },
+        {
+          "a": "213768",
+          "b": "213756",
+          "deltaE76": 5.803007095827355
+        },
+        {
+          "a": "213769",
+          "b": "213717",
+          "deltaE76": 4.141451387777582
+        },
+        {
+          "a": "213771",
+          "b": "213734",
+          "deltaE76": 7.689977216095738
+        },
+        {
+          "a": "213773",
+          "b": "213697",
+          "deltaE76": 10.765835323244172
+        },
+        {
+          "a": "213773",
+          "b": "213732",
+          "deltaE76": 10.710462962100937
+        },
+        {
+          "a": "213775",
+          "b": "213742",
+          "deltaE76": 6.399516222692932
+        },
+        {
+          "a": "213776",
+          "b": "213701",
+          "deltaE76": 10.6730265014899
+        },
+        {
+          "a": "213776",
+          "b": "213703",
+          "deltaE76": 6.5674794144466375
+        },
+        {
+          "a": "213776",
+          "b": "213709",
+          "deltaE76": 4.605629755304973
+        },
+        {
+          "a": "213776",
+          "b": "213742",
+          "deltaE76": 7.4463188714833715
+        },
+        {
+          "a": "213779",
+          "b": "213734",
+          "deltaE76": 7.442514147712762
+        },
+        {
+          "a": "213779",
+          "b": "213757",
+          "deltaE76": 2.6025597787408223
+        },
+        {
+          "a": "213779",
+          "b": "213771",
+          "deltaE76": 5.526613162898743
+        },
+        {
+          "a": "213781",
+          "b": "213703",
+          "deltaE76": 5.457964092950806
+        },
+        {
+          "a": "213781",
+          "b": "213709",
+          "deltaE76": 3.48016781048559
+        },
+        {
+          "a": "213784",
+          "b": "213750",
+          "deltaE76": 2.8422132220709435
+        },
+        {
+          "a": "213787",
+          "b": "213703",
+          "deltaE76": 11.122017493935406
+        },
+        {
+          "a": "213787",
+          "b": "213709",
+          "deltaE76": 5.479160747490694
+        },
+        {
+          "a": "213787",
+          "b": "213781",
+          "deltaE76": 8.882258450294056
+        },
+        {
+          "a": "213788",
+          "b": "213707",
+          "deltaE76": 10.958088768578648
+        },
+        {
+          "a": "213788",
+          "b": "213717",
+          "deltaE76": 11.458513508995186
+        },
+        {
+          "a": "213788",
+          "b": "213744",
+          "deltaE76": 8.924466935916785
+        },
+        {
+          "a": "213791",
+          "b": "213715",
+          "deltaE76": 11.5995944776713
+        },
+        {
+          "a": "213793",
+          "b": "213784",
+          "deltaE76": 4.946768483502914
+        },
+        {
+          "a": "213794",
+          "b": "213775",
+          "deltaE76": 11.562516023247287
+        },
+        {
+          "a": "213795",
+          "b": "213709",
+          "deltaE76": 10.344605094861983
+        },
+        {
+          "a": "213798",
+          "b": "213794",
+          "deltaE76": 3.4558220274423608
+        },
+        {
+          "a": "213799",
+          "b": "213789",
+          "deltaE76": 8.941220696588676
+        },
+        {
+          "a": "213801",
+          "b": "213743",
+          "deltaE76": 5.266127663398091
+        },
+        {
+          "a": "213803",
+          "b": "213753",
+          "deltaE76": 6.522660300681847
+        },
+        {
+          "a": "213804",
+          "b": "213712",
+          "deltaE76": 5.907458513029717
+        },
+        {
+          "a": "213808",
+          "b": "213709",
+          "deltaE76": 8.028947731909664
+        },
+        {
+          "a": "213808",
+          "b": "213776",
+          "deltaE76": 10.334683695289808
+        },
+        {
+          "a": "213808",
+          "b": "213798",
+          "deltaE76": 6.199354947851777
+        },
+        {
+          "a": "213809",
+          "b": "213786",
+          "deltaE76": 4.979981803443963
+        },
+        {
+          "a": "213810",
+          "b": "213800",
+          "deltaE76": 8.04821341211021
+        },
+        {
+          "a": "213810",
+          "b": "213802",
+          "deltaE76": 6.014326858854692
+        },
+        {
+          "a": "213811",
+          "b": "213771",
+          "deltaE76": 11.015288896655276
+        },
+        {
+          "a": "213811",
+          "b": "213779",
+          "deltaE76": 8.834104623178412
+        },
+        {
+          "a": "213812",
+          "b": "213712",
+          "deltaE76": 9.431579766443733
+        },
+        {
+          "a": "213813",
+          "b": "213729",
+          "deltaE76": 4.20103389120997
+        },
+        {
+          "a": "213814",
+          "b": "213795",
+          "deltaE76": 7.039053857282517
+        },
+        {
+          "a": "213818",
+          "b": "213706",
+          "deltaE76": 10.171189563194055
+        },
+        {
+          "a": "213819",
+          "b": "213816",
+          "deltaE76": 2.6818584572549224
+        },
+        {
+          "a": "213820",
+          "b": "213706",
+          "deltaE76": 11.261096374768064
+        },
+        {
+          "a": "213820",
+          "b": "213717",
+          "deltaE76": 4.783546991150711
+        },
+        {
+          "a": "213820",
+          "b": "213744",
+          "deltaE76": 6.980299656037577
+        },
+        {
+          "a": "213821",
+          "b": "213712",
+          "deltaE76": 8.29003711558442
+        },
+        {
+          "a": "213821",
+          "b": "213812",
+          "deltaE76": 11.283572846520881
+        },
+        {
+          "a": "213823",
+          "b": "213709",
+          "deltaE76": 7.407347115310224
+        },
+        {
+          "a": "213823",
+          "b": "213795",
+          "deltaE76": 9.821164712146643
+        },
+        {
+          "a": "213828",
+          "b": "213827",
+          "deltaE76": 1.850507684174202
+        }
+      ],
+      "overlap_candidates": [],
+      "duplicate_bbox_candidates": [],
+      "roi_metrics": [
+        {
+          "id": "213696",
+          "file": "011_roi1.png",
+          "submitted_crop_size_px": [
+            87,
+            118
+          ],
+          "feature_width_native_px": null,
+          "native_readability_reviewed": null,
+          "pixel_metric_basis": "submitted_pixels",
+          "contrast_p90_p10": 128.0,
+          "gray_entropy_bits": 7.340861989826799,
+          "edge_fraction_16": 0.29241895016480546
+        },
+        {
+          "id": "213796",
+          "file": "011_roi2.png",
+          "submitted_crop_size_px": [
+            86,
+            114
+          ],
+          "feature_width_native_px": null,
+          "native_readability_reviewed": null,
+          "pixel_metric_basis": "submitted_pixels",
+          "contrast_p90_p10": 168.0,
+          "gray_entropy_bits": 7.692599205455059,
+          "edge_fraction_16": 0.46552967848309973
+        },
+        {
+          "id": "213763",
+          "file": "011_roi3.png",
+          "submitted_crop_size_px": [
+            89,
+            96
+          ],
+          "feature_width_native_px": null,
+          "native_readability_reviewed": null,
+          "pixel_metric_basis": "submitted_pixels",
+          "contrast_p90_p10": 101.0,
+          "gray_entropy_bits": 7.220159998059905,
+          "edge_fraction_16": 0.34922794770159143
+        },
+        {
+          "id": "price-tag",
+          "file": "011_roi4.png",
+          "submitted_crop_size_px": [
+            61,
+            40
+          ],
+          "feature_width_native_px": null,
+          "native_readability_reviewed": null,
+          "pixel_metric_basis": "submitted_pixels",
+          "contrast_p90_p10": 210.0,
+          "gray_entropy_bits": 7.096556339742535,
+          "edge_fraction_16": 0.32370788867964007
+        }
+      ],
+      "reasoning_metrics": {
+        "node_count": 11,
+        "max_depth": 5,
+        "branch_nodes": 1,
+        "join_nodes": 3,
+        "multi_visual_join_nodes": 3,
+        "output_count": 1,
+        "outputs_with_visual_ancestry": 1,
+        "output_visual_coverage": 1.0,
+        "state_nodes": 0,
+        "parameter_nodes": 3,
+        "output_evidence_regions": {
+          "reversal": [
+            "213696",
+            "213763",
+            "213796",
+            "price-tag"
+          ]
+        }
+      },
+      "measurement_margins": [
+        {
+          "id": "correct-origin",
+          "ratio": 2.9,
+          "unit": "px"
+        },
+        {
+          "id": "wrong-origin-control",
+          "ratio": 3.0,
+          "unit": "px"
+        }
+      ],
+      "platform_points": [
+        {
+          "xy": [
+            770.5,
+            332.0
+          ],
+          "label": "起点身份，作者关键点"
+        },
+        {
+          "xy": [
+            629.0,
+            492.0
+          ],
+          "label": "黑胡椒目标，作者关键点"
+        },
+        {
+          "xy": [
+            856,
+            408
+          ],
+          "label": "空托下黄价签，作者关键点"
+        }
+      ],
+      "decision": "needs_review"
+    },
+    {
+      "id": "shelf-24693",
+      "blockers": [],
+      "review": [
+        "native_geometry_unknown: 文件大小不能证明未放大",
+        "task_category_granularity_pending: 品牌/大类标签不能默认等于SKU",
+        "active_objects_unknown: 不默认背景和全部标注都参与求解",
+        "native_roi_readability_pending:candidate-object",
+        "critical_readability_pending:candidate-object",
+        "chinese_text_coverage_unknown",
+        "human_check_pending:source_fidelity",
+        "human_check_pending:annotation_correct",
+        "human_check_pending:critical_evidence_visible",
+        "human_check_pending:no_answer_leakage",
+        "human_check_pending:counting_rules_clear",
+        "multi_region_dependencies_unproven",
+        "wrong_pair_to_answer_effect_unproven",
+        "bypass_review_pending_or_failed",
+        "platform_points_expected_1_to_3"
+      ],
+      "advisory": [
+        "object_count_is_annotation_box_count_not_proven_physical_instances",
+        "local_color_pairs_and_box_overlaps_are_candidates_not_difficulty_or_occlusion_proof"
+      ],
+      "metrics": {
+        "object_count": 93,
+        "objects_per_MP": 18.9208984375,
+        "class_count": 91,
+        "known_fraction": 1.0,
+        "median_bbox_short_px": 74.0,
+        "nearcolor_pair_count": 30,
+        "nearcolor_neighbor_fraction": 0.2830188679245283,
+        "bbox_overlap_pair_count": 0,
+        "active_object_count": null,
+        "active_objects_per_submitted_MP": null,
+        "active_entity_count": null,
+        "active_fraction_of_annotated_objects": null,
+        "inactive_annotated_count": null,
+        "background_object_count": null,
+        "active_objects_per_region_MP": null,
+        "han_text_coverage": null,
+        "annotated_occlusion_fraction": null,
+        "distinct_dependency_regions": null,
+        "effective_counterfactuals": null,
+        "width": 1920,
+        "height": 2560,
+        "mode": "RGB",
+        "exif_orientation": 1,
+        "frame_count": 1,
+        "submitted_width": 1920,
+        "submitted_height": 2560,
+        "native_width": null,
+        "native_height": null,
+        "global_640_proxy": {
+          "contrast_p90_p10": 87.0,
+          "gray_entropy_bits": 6.9438767755049415,
+          "edge_fraction_16": 0.08396490999217324
+        },
+        "known_class_count": 91,
+        "repeated_classes": 2,
+        "spatial_entropy_4x4": 0.9271512976885099,
+        "p10_bbox_short_px": 48.0,
+        "edge_touching_count": 3,
+        "annotation_complete": null,
+        "occlusion_annotation_count": 0,
+        "different_class_neighbor_pairs": 106,
+        "duplicate_bbox_candidate_count": 0,
+        "active_nearcolor_pair_count": null
+      },
+      "source": {
+        "kind": "real_photo",
+        "url": "https://huggingface.co/datasets/shelfwise-by-form/SKUs_on_shelves_PL",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "authorization": "verified",
+        "attribution": "ShelfWise by FORM, SKUs_on_shelves_PL, v1.0 (2024)",
+        "scene_id": "ShelfWise:24693"
+      },
+      "difficulty_status": "not_evaluated",
+      "annotation_provenance": "publisher_coco_unmodified",
+      "geometry": {
+        "kind": "unknown",
+        "submitted_size_px": [
+          1920,
+          2560
+        ],
+        "native_size_px": null,
+        "native_size_evidence": "unknown",
+        "panels": []
+      },
+      "preview": "012.jpg",
+      "nearcolor_pairs": [
+        {
+          "a": "532720",
+          "b": "532707",
+          "deltaE76": 2.58092805190637
+        },
+        {
+          "a": "532731",
+          "b": "532712",
+          "deltaE76": 8.179176535622359
+        },
+        {
+          "a": "532733",
+          "b": "532721",
+          "deltaE76": 8.601352661372754
+        },
+        {
+          "a": "532741",
+          "b": "532727",
+          "deltaE76": 8.069646297813204
+        },
+        {
+          "a": "532742",
+          "b": "532738",
+          "deltaE76": 11.520445962464596
+        },
+        {
+          "a": "532744",
+          "b": "532735",
+          "deltaE76": 10.831546383257443
+        },
+        {
+          "a": "532747",
+          "b": "532725",
+          "deltaE76": 7.726786050340647
+        },
+        {
+          "a": "532748",
+          "b": "532729",
+          "deltaE76": 11.161903241221742
+        },
+        {
+          "a": "532751",
+          "b": "532738",
+          "deltaE76": 8.454888134657379
+        },
+        {
+          "a": "532752",
+          "b": "532749",
+          "deltaE76": 11.483060000388969
+        },
+        {
+          "a": "532754",
+          "b": "532718",
+          "deltaE76": 11.76976462260342
+        },
+        {
+          "a": "532754",
+          "b": "532728",
+          "deltaE76": 6.829210533991152
+        },
+        {
+          "a": "532756",
+          "b": "532723",
+          "deltaE76": 9.951663279304766
+        },
+        {
+          "a": "532757",
+          "b": "532723",
+          "deltaE76": 4.395034769210897
+        },
+        {
+          "a": "532759",
+          "b": "532726",
+          "deltaE76": 11.379479283514486
+        },
+        {
+          "a": "532762",
+          "b": "532705",
+          "deltaE76": 1.2070705671192037
+        },
+        {
+          "a": "532762",
+          "b": "532734",
+          "deltaE76": 8.987784941341378
+        },
+        {
+          "a": "532763",
+          "b": "532718",
+          "deltaE76": 10.165060756967186
+        },
+        {
+          "a": "532768",
+          "b": "532732",
+          "deltaE76": 11.371222063282898
+        },
+        {
+          "a": "532769",
+          "b": "532768",
+          "deltaE76": 7.9972942422102244
+        },
+        {
+          "a": "532774",
+          "b": "532764",
+          "deltaE76": 9.391011037097512
+        },
+        {
+          "a": "532777",
+          "b": "532744",
+          "deltaE76": 9.662984857963245
+        },
+        {
+          "a": "532777",
+          "b": "532759",
+          "deltaE76": 11.370087684009503
+        },
+        {
+          "a": "532779",
+          "b": "532728",
+          "deltaE76": 8.425553910256617
+        },
+        {
+          "a": "532785",
+          "b": "532724",
+          "deltaE76": 9.502183234917606
+        },
+        {
+          "a": "532785",
+          "b": "532739",
+          "deltaE76": 9.728121584639535
+        },
+        {
+          "a": "532787",
+          "b": "532717",
+          "deltaE76": 5.0159652926308125
+        },
+        {
+          "a": "532790",
+          "b": "532788",
+          "deltaE76": 11.432094256822422
+        },
+        {
+          "a": "532792",
+          "b": "532738",
+          "deltaE76": 3.076921500301048
+        },
+        {
+          "a": "532796",
+          "b": "532753",
+          "deltaE76": 11.856164861347168
+        }
+      ],
+      "overlap_candidates": [],
+      "duplicate_bbox_candidates": [],
+      "roi_metrics": [
+        {
+          "id": "candidate-object",
+          "file": "012_roi1.png",
+          "submitted_crop_size_px": [
+            170,
+            229
+          ],
+          "feature_width_native_px": null,
+          "native_readability_reviewed": null,
+          "pixel_metric_basis": "submitted_pixels",
+          "contrast_p90_p10": 68.0,
+          "gray_entropy_bits": 6.6719272419163005,
+          "edge_fraction_16": 0.05761609067788952
+        }
+      ],
+      "platform_points": [],
+      "decision": "needs_review"
+    },
+    {
+      "id": "shelf-27065",
+      "blockers": [],
+      "review": [
+        "native_geometry_unknown: 文件大小不能证明未放大",
+        "task_category_granularity_pending: 品牌/大类标签不能默认等于SKU",
+        "active_objects_unknown: 不默认背景和全部标注都参与求解",
+        "native_roi_readability_pending:candidate-object",
+        "critical_readability_pending:candidate-object",
+        "chinese_text_coverage_unknown",
+        "human_check_pending:source_fidelity",
+        "human_check_pending:annotation_correct",
+        "human_check_pending:critical_evidence_visible",
+        "human_check_pending:no_answer_leakage",
+        "human_check_pending:counting_rules_clear",
+        "multi_region_dependencies_unproven",
+        "wrong_pair_to_answer_effect_unproven",
+        "bypass_review_pending_or_failed",
+        "platform_points_expected_1_to_3"
+      ],
+      "advisory": [
+        "object_count_is_annotation_box_count_not_proven_physical_instances",
+        "local_color_pairs_and_box_overlaps_are_candidates_not_difficulty_or_occlusion_proof"
+      ],
+      "metrics": {
+        "object_count": 196,
+        "objects_per_MP": 116.14814814814815,
+        "class_count": 17,
+        "known_fraction": 0.8571428571428571,
+        "median_bbox_short_px": 48.5,
+        "nearcolor_pair_count": 31,
+        "nearcolor_neighbor_fraction": 0.25,
+        "bbox_overlap_pair_count": 110,
+        "active_object_count": null,
+        "active_objects_per_submitted_MP": null,
+        "active_entity_count": null,
+        "active_fraction_of_annotated_objects": null,
+        "inactive_annotated_count": null,
+        "background_object_count": null,
+        "active_objects_per_region_MP": null,
+        "han_text_coverage": null,
+        "annotated_occlusion_fraction": null,
+        "distinct_dependency_regions": null,
+        "effective_counterfactuals": null,
+        "width": 1125,
+        "height": 1500,
+        "mode": "RGB",
+        "exif_orientation": 1,
+        "frame_count": 1,
+        "submitted_width": 1125,
+        "submitted_height": 1500,
+        "native_width": null,
+        "native_height": null,
+        "global_640_proxy": {
+          "contrast_p90_p10": 152.0,
+          "gray_entropy_bits": 7.451923337686555,
+          "edge_fraction_16": 0.16803743803809026
+        },
+        "known_class_count": 17,
+        "repeated_classes": 16,
+        "spatial_entropy_4x4": 0.8420845169337525,
+        "p10_bbox_short_px": 32.5,
+        "edge_touching_count": 5,
+        "annotation_complete": null,
+        "occlusion_annotation_count": 0,
+        "different_class_neighbor_pairs": 124,
+        "duplicate_bbox_candidate_count": 0,
+        "active_nearcolor_pair_count": null
+      },
+      "source": {
+        "kind": "real_photo",
+        "url": "https://huggingface.co/datasets/shelfwise-by-form/SKUs_on_shelves_PL",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "authorization": "verified",
+        "attribution": "ShelfWise by FORM, SKUs_on_shelves_PL, v1.0 (2024)",
+        "scene_id": "ShelfWise:27065"
+      },
+      "difficulty_status": "not_evaluated",
+      "annotation_provenance": "publisher_coco_unmodified",
+      "geometry": {
+        "kind": "unknown",
+        "submitted_size_px": [
+          1125,
+          1500
+        ],
+        "native_size_px": null,
+        "native_size_evidence": "unknown",
+        "panels": []
+      },
+      "preview": "013.jpg",
+      "nearcolor_pairs": [
+        {
+          "a": "783092",
+          "b": "783088",
+          "deltaE76": 11.262858302172987
+        },
+        {
+          "a": "783093",
+          "b": "783089",
+          "deltaE76": 7.313227847966756
+        },
+        {
+          "a": "783094",
+          "b": "783090",
+          "deltaE76": 6.409181447432364
+        },
+        {
+          "a": "783094",
+          "b": "783091",
+          "deltaE76": 5.616962419609958
+        },
+        {
+          "a": "783095",
+          "b": "783089",
+          "deltaE76": 5.791759319076957
+        },
+        {
+          "a": "783095",
+          "b": "783090",
+          "deltaE76": 7.293131497116753
+        },
+        {
+          "a": "783096",
+          "b": "783089",
+          "deltaE76": 11.793373363759118
+        },
+        {
+          "a": "783096",
+          "b": "783090",
+          "deltaE76": 7.550530035529237
+        },
+        {
+          "a": "783096",
+          "b": "783091",
+          "deltaE76": 8.921567159568582
+        },
+        {
+          "a": "783097",
+          "b": "783090",
+          "deltaE76": 7.4437989811649565
+        },
+        {
+          "a": "783097",
+          "b": "783091",
+          "deltaE76": 7.125674477784848
+        },
+        {
+          "a": "783154",
+          "b": "783077",
+          "deltaE76": 5.747084437832686
+        },
+        {
+          "a": "783154",
+          "b": "783078",
+          "deltaE76": 5.817913526957406
+        },
+        {
+          "a": "783154",
+          "b": "783079",
+          "deltaE76": 6.087592615082348
+        },
+        {
+          "a": "783158",
+          "b": "783139",
+          "deltaE76": 10.137091514957675
+        },
+        {
+          "a": "783158",
+          "b": "783140",
+          "deltaE76": 10.245951552800147
+        },
+        {
+          "a": "783160",
+          "b": "783140",
+          "deltaE76": 11.151124749134777
+        },
+        {
+          "a": "783172",
+          "b": "783144",
+          "deltaE76": 6.013778107175252
+        },
+        {
+          "a": "783172",
+          "b": "783145",
+          "deltaE76": 5.339615216929055
+        },
+        {
+          "a": "783172",
+          "b": "783146",
+          "deltaE76": 5.530549309941592
+        },
+        {
+          "a": "783189",
+          "b": "783073",
+          "deltaE76": 11.030062003088839
+        },
+        {
+          "a": "783196",
+          "b": "783184",
+          "deltaE76": 5.568694708098919
+        },
+        {
+          "a": "783197",
+          "b": "783196",
+          "deltaE76": 4.472272588032673
+        },
+        {
+          "a": "783211",
+          "b": "783210",
+          "deltaE76": 6.493550756564546
+        },
+        {
+          "a": "783213",
+          "b": "783208",
+          "deltaE76": 8.690211886270365
+        },
+        {
+          "a": "783214",
+          "b": "783205",
+          "deltaE76": 3.364341519941144
+        },
+        {
+          "a": "783219",
+          "b": "783212",
+          "deltaE76": 8.109392424822321
+        },
+        {
+          "a": "783246",
+          "b": "783157",
+          "deltaE76": 10.950468623352394
+        },
+        {
+          "a": "783255",
+          "b": "783196",
+          "deltaE76": 10.127473266611203
+        },
+        {
+          "a": "783255",
+          "b": "783197",
+          "deltaE76": 10.50597380130239
+        },
+        {
+          "a": "783255",
+          "b": "783210",
+          "deltaE76": 8.83592175171686
+        }
+      ],
+      "overlap_candidates": [
+        {
+          "a": "783073",
+          "b": "783072",
+          "iom": 0.2434186801298233,
+          "iou": 0.13679197487080758
+        },
+        {
+          "a": "783075",
+          "b": "783074",
+          "iom": 0.16561844863731656,
+          "iou": 0.08639125151883353
+        },
+        {
+          "a": "783076",
+          "b": "783075",
+          "iom": 0.31679478220358726,
+          "iou": 0.15956822715006452
+        },
+        {
+          "a": "783078",
+          "b": "783077",
+          "iom": 0.2821869488536155,
+          "iou": 0.15814183345688165
+        },
+        {
+          "a": "783079",
+          "b": "783078",
+          "iom": 0.3050847457627119,
+          "iou": 0.17060533299633515
+        },
+        {
+          "a": "783082",
+          "b": "783080",
+          "iom": 0.2411504424778761,
+          "iou": 0.10588692442199339
+        },
+        {
+          "a": "783084",
+          "b": "783082",
+          "iom": 0.18518518518518517,
+          "iou": 0.09052183173588925
+        },
+        {
+          "a": "783086",
+          "b": "783085",
+          "iom": 0.15898617511520738,
+          "iou": 0.08438646555238484
+        },
+        {
+          "a": "783087",
+          "b": "783086",
+          "iom": 0.23214285714285715,
+          "iou": 0.1284257488846399
+        },
+        {
+          "a": "783089",
+          "b": "783088",
+          "iom": 0.18518518518518517,
+          "iou": 0.08521870286576169
+        },
+        {
+          "a": "783111",
+          "b": "783102",
+          "iom": 0.16619831393014853,
+          "iou": 0.06451612903225806
+        },
+        {
+          "a": "783120",
+          "b": "783119",
+          "iom": 0.9358974358974359,
+          "iou": 0.43012539658558696
+        },
+        {
+          "a": "783121",
+          "b": "783120",
+          "iom": 0.41933432266270937,
+          "iou": 0.2158681654479974
+        },
+        {
+          "a": "783122",
+          "b": "783121",
+          "iom": 0.46109815560737755,
+          "iou": 0.2513869625520111
+        },
+        {
+          "a": "783123",
+          "b": "783122",
+          "iom": 0.4666666666666667,
+          "iou": 0.22285923395950233
+        },
+        {
+          "a": "783124",
+          "b": "783123",
+          "iom": 0.4125159642401022,
+          "iou": 0.23732549595885377
+        },
+        {
+          "a": "783125",
+          "b": "783124",
+          "iom": 0.40425531914893614,
+          "iou": 0.22722574929868597
+        },
+        {
+          "a": "783126",
+          "b": "783125",
+          "iom": 0.41502495403204626,
+          "iou": 0.23585609792506343
+        },
+        {
+          "a": "783127",
+          "b": "783126",
+          "iom": 0.32175102599179206,
+          "iou": 0.1691842900302115
+        },
+        {
+          "a": "783128",
+          "b": "783127",
+          "iom": 0.4,
+          "iou": 0.2295964125560538
+        },
+        {
+          "a": "783129",
+          "b": "783128",
+          "iom": 0.4090625,
+          "iou": 0.24796362947527942
+        },
+        {
+          "a": "783130",
+          "b": "783129",
+          "iom": 0.5312868949232585,
+          "iou": 0.3147403392201434
+        },
+        {
+          "a": "783131",
+          "b": "783130",
+          "iom": 0.41304347826086957,
+          "iou": 0.23354358725537766
+        },
+        {
+          "a": "783132",
+          "b": "783131",
+          "iom": 0.5503432494279176,
+          "iou": 0.37622213531482207
+        },
+        {
+          "a": "783133",
+          "b": "783132",
+          "iom": 0.4658385093167702,
+          "iou": 0.3004369992716679
+        },
+        {
+          "a": "783134",
+          "b": "783133",
+          "iom": 0.36369770580296895,
+          "iou": 0.1965001822821728
+        },
+        {
+          "a": "783135",
+          "b": "783134",
+          "iom": 0.4676113360323887,
+          "iou": 0.3026200873362445
+        },
+        {
+          "a": "783137",
+          "b": "783136",
+          "iom": 0.6201680672268908,
+          "iou": 0.3003255561584373
+        },
+        {
+          "a": "783138",
+          "b": "783137",
+          "iom": 0.49444444444444446,
+          "iou": 0.2760677642567406
+        },
+        {
+          "a": "783139",
+          "b": "783138",
+          "iom": 0.3891402714932127,
+          "iou": 0.2403193612774451
+        },
+        {
+          "a": "783140",
+          "b": "783139",
+          "iom": 0.38009049773755654,
+          "iou": 0.23454327881930595
+        },
+        {
+          "a": "783141",
+          "b": "783140",
+          "iom": 0.3952941176470588,
+          "iou": 0.23288051011921265
+        },
+        {
+          "a": "783142",
+          "b": "783141",
+          "iom": 0.3979565772669221,
+          "iou": 0.23581050401089754
+        },
+        {
+          "a": "783143",
+          "b": "783142",
+          "iom": 0.4634146341463415,
+          "iou": 0.2655227312931187
+        },
+        {
+          "a": "783144",
+          "b": "783143",
+          "iom": 0.5026242667489966,
+          "iou": 0.270836799201464
+        },
+        {
+          "a": "783145",
+          "b": "783144",
+          "iom": 0.45137789040228066,
+          "iou": 0.23238747553816047
+        },
+        {
+          "a": "783146",
+          "b": "783145",
+          "iom": 0.3750395945517897,
+          "iou": 0.20782868176233105
+        },
+        {
+          "a": "783147",
+          "b": "783146",
+          "iom": 0.47619047619047616,
+          "iou": 0.2577914582531743
+        },
+        {
+          "a": "783148",
+          "b": "783147",
+          "iom": 0.3868131868131868,
+          "iou": 0.17913486005089058
+        },
+        {
+          "a": "783149",
+          "b": "783148",
+          "iom": 0.15737704918032788,
+          "iou": 0.07729468599033816
+        },
+        {
+          "a": "783150",
+          "b": "783149",
+          "iom": 0.64,
+          "iou": 0.28816061411278415
+        },
+        {
+          "a": "783151",
+          "b": "783150",
+          "iom": 0.23255813953488372,
+          "iou": 0.11482254697286012
+        },
+        {
+          "a": "783157",
+          "b": "783156",
+          "iom": 0.3275186899252403,
+          "iou": 0.1795822760101503
+        },
+        {
+          "a": "783159",
+          "b": "783158",
+          "iom": 0.43534883720930234,
+          "iou": 0.27209302325581397
+        },
+        {
+          "a": "783160",
+          "b": "783159",
+          "iom": 0.45098039215686275,
+          "iou": 0.2304460245636716
+        },
+        {
+          "a": "783162",
+          "b": "783161",
+          "iom": 0.2397163120567376,
+          "iou": 0.09362880886426593
+        },
+        {
+          "a": "783163",
+          "b": "783162",
+          "iom": 0.20020222446916078,
+          "iou": 0.10711387611576954
+        },
+        {
+          "a": "783164",
+          "b": "783163",
+          "iom": 0.15470171890798787,
+          "iou": 0.08181818181818182
+        },
+        {
+          "a": "783165",
+          "b": "783164",
+          "iom": 0.2877176015473888,
+          "iou": 0.12678457276795227
+        },
+        {
+          "a": "783169",
+          "b": "783167",
+          "iom": 0.24735449735449735,
+          "iou": 0.06446053085143054
+        },
+        {
+          "a": "783169",
+          "b": "783168",
+          "iom": 0.42857142857142855,
+          "iou": 0.10975609756097561
+        },
+        {
+          "a": "783170",
+          "b": "783168",
+          "iom": 0.1620775969962453,
+          "iou": 0.06711583311738792
+        },
+        {
+          "a": "783171",
+          "b": "783170",
+          "iom": 0.1797175866495507,
+          "iou": 0.09735744089012517
+        },
+        {
+          "a": "783172",
+          "b": "783167",
+          "iom": 0.39665523156089194,
+          "iou": 0.17582208705569283
+        },
+        {
+          "a": "783175",
+          "b": "783156",
+          "iom": 0.1943181818181818,
+          "iou": 0.08090844570617459
+        },
+        {
+          "a": "783176",
+          "b": "783157",
+          "iom": 0.19393939393939394,
+          "iou": 0.07950310559006211
+        },
+        {
+          "a": "783176",
+          "b": "783175",
+          "iom": 0.4431818181818182,
+          "iou": 0.2635135135135135
+        },
+        {
+          "a": "783181",
+          "b": "783180",
+          "iom": 0.23715415019762845,
+          "iou": 0.13086150490730644
+        },
+        {
+          "a": "783187",
+          "b": "783186",
+          "iom": 0.2,
+          "iou": 0.07079646017699115
+        },
+        {
+          "a": "783188",
+          "b": "783186",
+          "iom": 0.2920634920634921,
+          "iou": 0.15037593984962405
+        },
+        {
+          "a": "783189",
+          "b": "783188",
+          "iom": 0.32126984126984126,
+          "iou": 0.11079483249397855
+        },
+        {
+          "a": "783190",
+          "b": "783187",
+          "iom": 0.453125,
+          "iou": 0.2152399802078179
+        },
+        {
+          "a": "783191",
+          "b": "783185",
+          "iom": 0.5037037037037037,
+          "iou": 0.12445664607641271
+        },
+        {
+          "a": "783191",
+          "b": "783190",
+          "iom": 0.26666666666666666,
+          "iou": 0.1258741258741259
+        },
+        {
+          "a": "783192",
+          "b": "783184",
+          "iom": 0.21843971631205675,
+          "iou": 0.04366316983271903
+        },
+        {
+          "a": "783193",
+          "b": "783188",
+          "iom": 0.4222222222222222,
+          "iou": 0.11286490156143925
+        },
+        {
+          "a": "783193",
+          "b": "783189",
+          "iom": 0.46083476272155516,
+          "iou": 0.23471170646476414
+        },
+        {
+          "a": "783194",
+          "b": "783184",
+          "iom": 0.5925925925925926,
+          "iou": 0.11624671510279797
+        },
+        {
+          "a": "783194",
+          "b": "783193",
+          "iom": 0.5185185185185185,
+          "iou": 0.11764705882352941
+        },
+        {
+          "a": "783195",
+          "b": "783184",
+          "iom": 0.25,
+          "iou": 0.0502283105022831
+        },
+        {
+          "a": "783195",
+          "b": "783193",
+          "iom": 0.5369318181818182,
+          "iou": 0.134185303514377
+        },
+        {
+          "a": "783200",
+          "b": "783199",
+          "iom": 0.43678784590341835,
+          "iou": 0.20335985853227231
+        },
+        {
+          "a": "783201",
+          "b": "783200",
+          "iom": 0.5154639175257731,
+          "iou": 0.33167495854063017
+        },
+        {
+          "a": "783203",
+          "b": "783202",
+          "iom": 0.49873737373737376,
+          "iou": 0.1270368782161235
+        },
+        {
+          "a": "783204",
+          "b": "783203",
+          "iom": 0.4935064935064935,
+          "iou": 0.29816631130063964
+        },
+        {
+          "a": "783206",
+          "b": "783205",
+          "iom": 0.4189189189189189,
+          "iou": 0.18002581015199312
+        },
+        {
+          "a": "783207",
+          "b": "783206",
+          "iom": 0.5135135135135135,
+          "iou": 0.3269945819611176
+        },
+        {
+          "a": "783209",
+          "b": "783208",
+          "iom": 0.5373134328358209,
+          "iou": 0.2723146747352496
+        },
+        {
+          "a": "783214",
+          "b": "783213",
+          "iom": 0.325,
+          "iou": 0.14458183946733005
+        },
+        {
+          "a": "783215",
+          "b": "783214",
+          "iom": 0.3333333333333333,
+          "iou": 0.06826185101580136
+        },
+        {
+          "a": "783216",
+          "b": "783214",
+          "iom": 0.40062597809076683,
+          "iou": 0.14635739954263313
+        },
+        {
+          "a": "783218",
+          "b": "783217",
+          "iom": 0.3389423076923077,
+          "iou": 0.19943422913719944
+        },
+        {
+          "a": "783219",
+          "b": "783215",
+          "iom": 0.20634920634920634,
+          "iou": 0.04482758620689655
+        },
+        {
+          "a": "783219",
+          "b": "783218",
+          "iom": 0.35714285714285715,
+          "iou": 0.10204081632653061
+        },
+        {
+          "a": "783222",
+          "b": "783220",
+          "iom": 0.35377358490566035,
+          "iou": 0.17505835278426143
+        },
+        {
+          "a": "783223",
+          "b": "783222",
+          "iom": 0.33143467426130296,
+          "iou": 0.19211721007016097
+        },
+        {
+          "a": "783224",
+          "b": "783221",
+          "iom": 0.3137254901960784,
+          "iou": 0.14657804921860967
+        },
+        {
+          "a": "783225",
+          "b": "783224",
+          "iom": 0.405997693194925,
+          "iou": 0.2402730375426621
+        },
+        {
+          "a": "783228",
+          "b": "783226",
+          "iom": 0.2865013774104683,
+          "iou": 0.1593259287629261
+        },
+        {
+          "a": "783229",
+          "b": "783228",
+          "iom": 0.23655913978494625,
+          "iou": 0.1259198691741619
+        },
+        {
+          "a": "783230",
+          "b": "783227",
+          "iom": 0.2631578947368421,
+          "iou": 0.1483050847457627
+        },
+        {
+          "a": "783231",
+          "b": "783230",
+          "iom": 0.2982456140350877,
+          "iou": 0.15414507772020725
+        },
+        {
+          "a": "783233",
+          "b": "783232",
+          "iom": 0.3829787234042553,
+          "iou": 0.2113172106128199
+        },
+        {
+          "a": "783234",
+          "b": "783233",
+          "iom": 0.2864583333333333,
+          "iou": 0.16524787180771155
+        },
+        {
+          "a": "783241",
+          "b": "783240",
+          "iom": 0.17073170731707318,
+          "iou": 0.09292035398230089
+        },
+        {
+          "a": "783245",
+          "b": "783244",
+          "iom": 0.8214285714285714,
+          "iou": 0.445260347129506
+        },
+        {
+          "a": "783247",
+          "b": "783246",
+          "iom": 0.44475524475524475,
+          "iou": 0.12207293666026871
+        },
+        {
+          "a": "783252",
+          "b": "783251",
+          "iom": 0.4318181818181818,
+          "iou": 0.2543381259295984
+        },
+        {
+          "a": "783253",
+          "b": "783251",
+          "iom": 0.48863636363636365,
+          "iou": 0.14470896173501185
+        },
+        {
+          "a": "783253",
+          "b": "783252",
+          "iom": 0.21460506706408347,
+          "iou": 0.06460296096904442
+        },
+        {
+          "a": "783254",
+          "b": "783196",
+          "iom": 0.2781201848998459,
+          "iou": 0.15327459929943743
+        },
+        {
+          "a": "783255",
+          "b": "783197",
+          "iom": 0.18955434563420046,
+          "iou": 0.07075649228453143
+        },
+        {
+          "a": "783255",
+          "b": "783254",
+          "iom": 0.33031587057010786,
+          "iou": 0.13458369300792591
+        },
+        {
+          "a": "783256",
+          "b": "783255",
+          "iom": 0.44155844155844154,
+          "iou": 0.16309748158300497
+        },
+        {
+          "a": "783257",
+          "b": "783210",
+          "iom": 0.16393442622950818,
+          "iou": 0.06916119879411244
+        },
+        {
+          "a": "783257",
+          "b": "783256",
+          "iom": 0.6015132408575031,
+          "iou": 0.2720532319391635
+        },
+        {
+          "a": "783259",
+          "b": "783258",
+          "iom": 0.26,
+          "iou": 0.08552631578947369
+        },
+        {
+          "a": "783260",
+          "b": "783258",
+          "iom": 0.24352941176470588,
+          "iou": 0.07629929966826392
+        },
+        {
+          "a": "783262",
+          "b": "783212",
+          "iom": 0.29375696767001114,
+          "iou": 0.1702471329349055
+        },
+        {
+          "a": "783262",
+          "b": "783246",
+          "iom": 0.1722723543888433,
+          "iou": 0.06527820951196767
+        }
+      ],
+      "duplicate_bbox_candidates": [],
+      "roi_metrics": [
+        {
+          "id": "candidate-object",
+          "file": "013_roi1.png",
+          "submitted_crop_size_px": [
+            107,
+            119
+          ],
+          "feature_width_native_px": null,
+          "native_readability_reviewed": null,
+          "pixel_metric_basis": "submitted_pixels",
+          "contrast_p90_p10": 96.0,
+          "gray_entropy_bits": 6.222690214932905,
+          "edge_fraction_16": 0.11759112519809825
+        }
+      ],
+      "platform_points": [],
+      "decision": "needs_review"
+    },
+    {
+      "id": "shelf-7138",
+      "blockers": [],
+      "review": [
+        "native_geometry_unknown: 文件大小不能证明未放大",
+        "task_category_granularity_pending: 品牌/大类标签不能默认等于SKU",
+        "active_objects_unknown: 不默认背景和全部标注都参与求解",
+        "native_roi_readability_pending:candidate-object",
+        "critical_readability_pending:candidate-object",
+        "chinese_text_coverage_unknown",
+        "human_check_pending:source_fidelity",
+        "human_check_pending:annotation_correct",
+        "human_check_pending:critical_evidence_visible",
+        "human_check_pending:no_answer_leakage",
+        "human_check_pending:counting_rules_clear",
+        "multi_region_dependencies_unproven",
+        "wrong_pair_to_answer_effect_unproven",
+        "bypass_review_pending_or_failed",
+        "platform_points_expected_1_to_3"
+      ],
+      "advisory": [
+        "object_count_is_annotation_box_count_not_proven_physical_instances",
+        "local_color_pairs_and_box_overlaps_are_candidates_not_difficulty_or_occlusion_proof"
+      ],
+      "metrics": {
+        "object_count": 95,
+        "objects_per_MP": 49.479166666666664,
+        "class_count": 48,
+        "known_fraction": 0.8947368421052632,
+        "median_bbox_short_px": 85.0,
+        "nearcolor_pair_count": 17,
+        "nearcolor_neighbor_fraction": 0.1650485436893204,
+        "bbox_overlap_pair_count": 0,
+        "active_object_count": null,
+        "active_objects_per_submitted_MP": null,
+        "active_entity_count": null,
+        "active_fraction_of_annotated_objects": null,
+        "inactive_annotated_count": null,
+        "background_object_count": null,
+        "active_objects_per_region_MP": null,
+        "han_text_coverage": null,
+        "annotated_occlusion_fraction": null,
+        "distinct_dependency_regions": null,
+        "effective_counterfactuals": null,
+        "width": 1200,
+        "height": 1600,
+        "mode": "RGB",
+        "exif_orientation": 1,
+        "frame_count": 1,
+        "submitted_width": 1200,
+        "submitted_height": 1600,
+        "native_width": null,
+        "native_height": null,
+        "global_640_proxy": {
+          "contrast_p90_p10": 201.0,
+          "gray_entropy_bits": 7.883252228549582,
+          "edge_fraction_16": 0.30435853117662404
+        },
+        "known_class_count": 48,
+        "repeated_classes": 20,
+        "spatial_entropy_4x4": 0.9848654642666882,
+        "p10_bbox_short_px": 58.8,
+        "edge_touching_count": 8,
+        "annotation_complete": null,
+        "occlusion_annotation_count": 0,
+        "different_class_neighbor_pairs": 103,
+        "duplicate_bbox_candidate_count": 0,
+        "active_nearcolor_pair_count": null
+      },
+      "source": {
+        "kind": "real_photo",
+        "url": "https://huggingface.co/datasets/shelfwise-by-form/SKUs_on_shelves_PL",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "authorization": "verified",
+        "attribution": "ShelfWise by FORM, SKUs_on_shelves_PL, v1.0 (2024)",
+        "scene_id": "ShelfWise:7138"
+      },
+      "difficulty_status": "not_evaluated",
+      "annotation_provenance": "publisher_coco_unmodified",
+      "geometry": {
+        "kind": "unknown",
+        "submitted_size_px": [
+          1200,
+          1600
+        ],
+        "native_size_px": null,
+        "native_size_evidence": "unknown",
+        "panels": []
+      },
+      "preview": "014.jpg",
+      "nearcolor_pairs": [
+        {
+          "a": "1208028",
+          "b": "1208020",
+          "deltaE76": 9.638863728407044
+        },
+        {
+          "a": "1208050",
+          "b": "1208032",
+          "deltaE76": 11.75330048102831
+        },
+        {
+          "a": "1208058",
+          "b": "1208054",
+          "deltaE76": 8.001441631964724
+        },
+        {
+          "a": "1208060",
+          "b": "1208022",
+          "deltaE76": 2.6997040983796246
+        },
+        {
+          "a": "1208074",
+          "b": "1208017",
+          "deltaE76": 10.082412159900256
+        },
+        {
+          "a": "1208076",
+          "b": "1208072",
+          "deltaE76": 10.251256373366376
+        },
+        {
+          "a": "1208077",
+          "b": "1208036",
+          "deltaE76": 9.384944154591262
+        },
+        {
+          "a": "1208082",
+          "b": "1208024",
+          "deltaE76": 6.1169830208366
+        },
+        {
+          "a": "1208083",
+          "b": "1208016",
+          "deltaE76": 10.078284362003412
+        },
+        {
+          "a": "1208083",
+          "b": "1208026",
+          "deltaE76": 8.731137758864755
+        },
+        {
+          "a": "1208084",
+          "b": "1208025",
+          "deltaE76": 5.795267727122446
+        },
+        {
+          "a": "1208087",
+          "b": "1208035",
+          "deltaE76": 6.414885814429015
+        },
+        {
+          "a": "1208089",
+          "b": "1208027",
+          "deltaE76": 10.173923975021498
+        },
+        {
+          "a": "1208090",
+          "b": "1208086",
+          "deltaE76": 11.425331535442783
+        },
+        {
+          "a": "1208092",
+          "b": "1208061",
+          "deltaE76": 10.694763616131786
+        },
+        {
+          "a": "1208093",
+          "b": "1208053",
+          "deltaE76": 9.860118579737263
+        },
+        {
+          "a": "1208097",
+          "b": "1208079",
+          "deltaE76": 7.03203679283385
+        }
+      ],
+      "overlap_candidates": [],
+      "duplicate_bbox_candidates": [],
+      "roi_metrics": [
+        {
+          "id": "candidate-object",
+          "file": "014_roi1.png",
+          "submitted_crop_size_px": [
+            95,
+            147
+          ],
+          "feature_width_native_px": null,
+          "native_readability_reviewed": null,
+          "pixel_metric_basis": "submitted_pixels",
+          "contrast_p90_p10": 126.0,
+          "gray_entropy_bits": 7.436782354051893,
+          "edge_fraction_16": 0.2210704998555331
+        }
+      ],
+      "platform_points": [],
+      "decision": "needs_review"
+    },
+    {
+      "id": "ZB10-06",
+      "blockers": [
+        "real_image_requirement_not_met"
+      ],
+      "review": [
+        "native_geometry_unknown: 文件大小不能证明未放大",
+        "source_permission_evidence_missing",
+        "objects_missing: 不把边缘数当目标数",
+        "native_roi_readability_pending:key-1",
+        "critical_readability_pending:key-1",
+        "native_roi_readability_pending:key-2",
+        "critical_readability_pending:key-2",
+        "native_roi_readability_pending:key-3",
+        "critical_readability_pending:key-3",
+        "chinese_text_coverage_unknown",
+        "human_check_pending:source_fidelity",
+        "human_check_pending:annotation_correct",
+        "human_check_pending:critical_evidence_visible",
+        "human_check_pending:no_answer_leakage",
+        "human_check_pending:counting_rules_clear",
+        "multi_region_dependencies_unproven",
+        "wrong_pair_to_answer_effect_unproven",
+        "bypass_review_pending_or_failed"
+      ],
+      "advisory": [],
+      "metrics": {
+        "object_count": null,
+        "objects_per_MP": null,
+        "class_count": null,
+        "known_fraction": null,
+        "median_bbox_short_px": null,
+        "nearcolor_pair_count": null,
+        "nearcolor_neighbor_fraction": null,
+        "bbox_overlap_pair_count": null,
+        "active_object_count": null,
+        "active_objects_per_submitted_MP": null,
+        "active_entity_count": null,
+        "active_fraction_of_annotated_objects": null,
+        "inactive_annotated_count": null,
+        "background_object_count": null,
+        "active_objects_per_region_MP": null,
+        "han_text_coverage": null,
+        "annotated_occlusion_fraction": null,
+        "distinct_dependency_regions": null,
+        "effective_counterfactuals": null,
+        "width": 2720,
+        "height": 1920,
+        "mode": "RGB",
+        "exif_orientation": 1,
+        "frame_count": 1,
+        "submitted_width": 2720,
+        "submitted_height": 1920,
+        "native_width": null,
+        "native_height": null,
+        "global_640_proxy": {
+          "contrast_p90_p10": 244.0,
+          "gray_entropy_bits": 5.329750599266111,
+          "edge_fraction_16": 0.1332039177928474
+        }
+      },
+      "source": {
+        "kind": "synthetic_schematic",
+        "authorization": "pending",
+        "author_record": "/Users/hepeize/Work/cowork/outputs/ZeroBench_batch10_20261126/iteration_v2/cases/ZB10-06/author.json"
+      },
+      "difficulty_status": "nonconforming_or_unknown_tools",
+      "annotation_provenance": "unknown",
+      "geometry": {
+        "kind": "unknown",
+        "submitted_size_px": [
+          2720,
+          1920
+        ],
+        "native_size_px": null,
+        "native_size_evidence": "unknown",
+        "panels": []
+      },
+      "preview": "015.jpg",
+      "roi_metrics": [
+        {
+          "id": "key-1",
+          "file": "015_roi1.png",
+          "submitted_crop_size_px": [
+            130,
+            130
+          ],
+          "feature_width_native_px": null,
+          "native_readability_reviewed": null,
+          "pixel_metric_basis": "submitted_pixels",
+          "contrast_p90_p10": 70.10000000000036,
+          "gray_entropy_bits": 5.456199257469658,
+          "edge_fraction_16": 0.09147286821705426
+        },
+        {
+          "id": "key-2",
+          "file": "015_roi2.png",
+          "submitted_crop_size_px": [
+            130,
+            130
+          ],
+          "feature_width_native_px": null,
+          "native_readability_reviewed": null,
+          "pixel_metric_basis": "submitted_pixels",
+          "contrast_p90_p10": 229.0,
+          "gray_entropy_bits": 2.675635329880623,
+          "edge_fraction_16": 0.08920691711389386
+        },
+        {
+          "id": "key-3",
+          "file": "015_roi3.png",
+          "submitted_crop_size_px": [
+            130,
+            130
+          ],
+          "feature_width_native_px": null,
+          "native_readability_reviewed": null,
+          "pixel_metric_basis": "submitted_pixels",
+          "contrast_p90_p10": 40.0,
+          "gray_entropy_bits": 4.682185205127363,
+          "edge_fraction_16": 0.08404889683959452
+        }
+      ],
+      "platform_points": [
+        {
+          "xy": [
+            270,
+            957
+          ],
+          "label": "Panel A 2D 近邻细胞 C05"
+        },
+        {
+          "xy": [
+            1508,
+            374
+          ],
+          "label": "Panel B Z-slice 焦面峰 C05 (z=12)"
+        },
+        {
+          "xy": [
+            895,
+            932
+          ],
+          "label": "Panel A 消融关键细胞 C21"
+        }
+      ],
+      "evaluation_counts": {
+        "correct": null,
+        "incorrect": 1,
+        "timeout": null,
+        "infra_error": null,
+        "partial": null,
+        "content_invalid": null
+      },
+      "decision": "blocked"
+    },
+    {
+      "id": "ZB10-09",
+      "blockers": [
+        "real_image_requirement_not_met"
+      ],
+      "review": [
+        "native_geometry_unknown: 文件大小不能证明未放大",
+        "source_permission_evidence_missing",
+        "objects_missing: 不把边缘数当目标数",
+        "native_roi_readability_pending:key-1",
+        "critical_readability_pending:key-1",
+        "native_roi_readability_pending:key-2",
+        "critical_readability_pending:key-2",
+        "native_roi_readability_pending:key-3",
+        "critical_readability_pending:key-3",
+        "chinese_text_coverage_unknown",
+        "human_check_pending:source_fidelity",
+        "human_check_pending:annotation_correct",
+        "human_check_pending:critical_evidence_visible",
+        "human_check_pending:no_answer_leakage",
+        "human_check_pending:counting_rules_clear",
+        "multi_region_dependencies_unproven",
+        "wrong_pair_to_answer_effect_unproven",
+        "bypass_review_pending_or_failed"
+      ],
+      "advisory": [],
+      "metrics": {
+        "object_count": null,
+        "objects_per_MP": null,
+        "class_count": null,
+        "known_fraction": null,
+        "median_bbox_short_px": null,
+        "nearcolor_pair_count": null,
+        "nearcolor_neighbor_fraction": null,
+        "bbox_overlap_pair_count": null,
+        "active_object_count": null,
+        "active_objects_per_submitted_MP": null,
+        "active_entity_count": null,
+        "active_fraction_of_annotated_objects": null,
+        "inactive_annotated_count": null,
+        "background_object_count": null,
+        "active_objects_per_region_MP": null,
+        "han_text_coverage": null,
+        "annotated_occlusion_fraction": null,
+        "distinct_dependency_regions": null,
+        "effective_counterfactuals": null,
+        "width": 2760,
+        "height": 1980,
+        "mode": "RGB",
+        "exif_orientation": 1,
+        "frame_count": 1,
+        "submitted_width": 2760,
+        "submitted_height": 1980,
+        "native_width": null,
+        "native_height": null,
+        "global_640_proxy": {
+          "contrast_p90_p10": 27.0,
+          "gray_entropy_bits": 3.0143610722536867,
+          "edge_fraction_16": 0.11005745019363222
+        }
+      },
+      "source": {
+        "kind": "synthetic_schematic",
+        "authorization": "pending",
+        "author_record": "/Users/hepeize/Work/cowork/outputs/ZeroBench_batch10_20261126/iteration_v2/cases/ZB10-09/author.json"
+      },
+      "difficulty_status": "nonconforming_or_unknown_tools",
+      "annotation_provenance": "unknown",
+      "geometry": {
+        "kind": "unknown",
+        "submitted_size_px": [
+          2760,
+          1980
+        ],
+        "native_size_px": null,
+        "native_size_evidence": "unknown",
+        "panels": []
+      },
+      "preview": "016.jpg",
+      "roi_metrics": [
+        {
+          "id": "key-1",
+          "file": "016_roi1.png",
+          "submitted_crop_size_px": [
+            130,
+            130
+          ],
+          "feature_width_native_px": null,
+          "native_readability_reviewed": null,
+          "pixel_metric_basis": "submitted_pixels",
+          "contrast_p90_p10": 61.0,
+          "gray_entropy_bits": 0.9731421312179199,
+          "edge_fraction_16": 0.06004770423375075
+        },
+        {
+          "id": "key-2",
+          "file": "016_roi2.png",
+          "submitted_crop_size_px": [
+            130,
+            130
+          ],
+          "feature_width_native_px": null,
+          "native_readability_reviewed": null,
+          "pixel_metric_basis": "submitted_pixels",
+          "contrast_p90_p10": 10.0,
+          "gray_entropy_bits": 0.8448303700299509,
+          "edge_fraction_16": 0.055515802027429936
+        },
+        {
+          "id": "key-3",
+          "file": "016_roi3.png",
+          "submitted_crop_size_px": [
+            130,
+            130
+          ],
+          "feature_width_native_px": null,
+          "native_readability_reviewed": null,
+          "pixel_metric_basis": "submitted_pixels",
+          "contrast_p90_p10": 23.0,
+          "gray_entropy_bits": 0.7533566026192954,
+          "edge_fraction_16": 0.05447227191413238
+        }
+      ],
+      "platform_points": [
+        {
+          "xy": [
+            1088,
+            802
+          ],
+          "label": "星标止回阀 V30→V06"
+        },
+        {
+          "xy": [
+            828,
+            1088
+          ],
+          "label": "先导锁存阀 L1 (V10–V25)"
+        },
+        {
+          "xy": [
+            1088,
+            1296
+          ],
+          "label": "最优改造常闭阀 V16–V23"
+        }
+      ],
+      "evaluation_counts": {
+        "correct": null,
+        "incorrect": 0,
+        "timeout": null,
+        "infra_error": null,
+        "partial": null,
+        "content_invalid": null
+      },
+      "decision": "blocked"
+    },
+    {
+      "id": "ZB10-10",
+      "blockers": [
+        "real_image_requirement_not_met"
+      ],
+      "review": [
+        "native_geometry_unknown: 文件大小不能证明未放大",
+        "source_permission_evidence_missing",
+        "objects_missing: 不把边缘数当目标数",
+        "native_roi_readability_pending:key-1",
+        "critical_readability_pending:key-1",
+        "native_roi_readability_pending:key-2",
+        "critical_readability_pending:key-2",
+        "native_roi_readability_pending:key-3",
+        "critical_readability_pending:key-3",
+        "chinese_text_coverage_unknown",
+        "human_check_pending:source_fidelity",
+        "human_check_pending:annotation_correct",
+        "human_check_pending:critical_evidence_visible",
+        "human_check_pending:no_answer_leakage",
+        "human_check_pending:counting_rules_clear",
+        "multi_region_dependencies_unproven",
+        "wrong_pair_to_answer_effect_unproven",
+        "bypass_review_pending_or_failed"
+      ],
+      "advisory": [],
+      "metrics": {
+        "object_count": null,
+        "objects_per_MP": null,
+        "class_count": null,
+        "known_fraction": null,
+        "median_bbox_short_px": null,
+        "nearcolor_pair_count": null,
+        "nearcolor_neighbor_fraction": null,
+        "bbox_overlap_pair_count": null,
+        "active_object_count": null,
+        "active_objects_per_submitted_MP": null,
+        "active_entity_count": null,
+        "active_fraction_of_annotated_objects": null,
+        "inactive_annotated_count": null,
+        "background_object_count": null,
+        "active_objects_per_region_MP": null,
+        "han_text_coverage": null,
+        "annotated_occlusion_fraction": null,
+        "distinct_dependency_regions": null,
+        "effective_counterfactuals": null,
+        "width": 2760,
+        "height": 1980,
+        "mode": "RGB",
+        "exif_orientation": 1,
+        "frame_count": 1,
+        "submitted_width": 2760,
+        "submitted_height": 1980,
+        "native_width": null,
+        "native_height": null,
+        "global_640_proxy": {
+          "contrast_p90_p10": 39.0,
+          "gray_entropy_bits": 3.4041448719337777,
+          "edge_fraction_16": 0.11319512773246525
+        }
+      },
+      "source": {
+        "kind": "synthetic_schematic",
+        "authorization": "pending",
+        "author_record": "/Users/hepeize/Work/cowork/outputs/ZeroBench_batch10_20261126/iteration_v2/cases/ZB10-10/author.json"
+      },
+      "difficulty_status": "nonconforming_or_unknown_tools",
+      "annotation_provenance": "unknown",
+      "geometry": {
+        "kind": "unknown",
+        "submitted_size_px": [
+          2760,
+          1980
+        ],
+        "native_size_px": null,
+        "native_size_evidence": "unknown",
+        "panels": []
+      },
+      "preview": "017.jpg",
+      "roi_metrics": [
+        {
+          "id": "key-1",
+          "file": "017_roi1.png",
+          "submitted_crop_size_px": [
+            130,
+            130
+          ],
+          "feature_width_native_px": null,
+          "native_readability_reviewed": null,
+          "pixel_metric_basis": "submitted_pixels",
+          "contrast_p90_p10": 215.0,
+          "gray_entropy_bits": 2.21599366320313,
+          "edge_fraction_16": 0.08479427549194991
+        },
+        {
+          "id": "key-2",
+          "file": "017_roi2.png",
+          "submitted_crop_size_px": [
+            130,
+            130
+          ],
+          "feature_width_native_px": null,
+          "native_readability_reviewed": null,
+          "pixel_metric_basis": "submitted_pixels",
+          "contrast_p90_p10": 174.0,
+          "gray_entropy_bits": 1.6746475088904638,
+          "edge_fraction_16": 0.07078115682766846
+        },
+        {
+          "id": "key-3",
+          "file": "017_roi3.png",
+          "submitted_crop_size_px": [
+            130,
+            130
+          ],
+          "feature_width_native_px": null,
+          "native_readability_reviewed": null,
+          "pixel_metric_basis": "submitted_pixels",
+          "contrast_p90_p10": 215.0,
+          "gray_entropy_bits": 1.7815296370324838,
+          "edge_fraction_16": 0.07254025044722719
+        }
+      ],
+      "platform_points": [
+        {
+          "xy": [
+            503,
+            606
+          ],
+          "label": "E5 输出缺口 n'=E"
+        },
+        {
+          "xy": [
+            1533,
+            1065
+          ],
+          "label": "第1轮过载冷却瓦片 B01"
+        },
+        {
+          "xy": [
+            1449,
+            813
+          ],
+          "label": "最优组合锚点瓦片 B20"
+        }
+      ],
+      "evaluation_counts": {
+        "correct": null,
+        "incorrect": 2,
+        "timeout": null,
+        "infra_error": null,
+        "partial": null,
+        "content_invalid": null
+      },
+      "decision": "blocked"
+    },
+    {
+      "id": "ZBN-05",
+      "blockers": [
+        "real_image_requirement_not_met"
+      ],
+      "review": [
+        "native_geometry_unknown: 文件大小不能证明未放大",
+        "source_permission_evidence_missing",
+        "objects_missing: 不把边缘数当目标数",
+        "native_roi_readability_pending:key-1",
+        "critical_readability_pending:key-1",
+        "native_roi_readability_pending:key-2",
+        "critical_readability_pending:key-2",
+        "native_roi_readability_pending:key-3",
+        "critical_readability_pending:key-3",
+        "chinese_text_coverage_unknown",
+        "human_check_pending:source_fidelity",
+        "human_check_pending:annotation_correct",
+        "human_check_pending:critical_evidence_visible",
+        "human_check_pending:no_answer_leakage",
+        "human_check_pending:counting_rules_clear",
+        "multi_region_dependencies_unproven",
+        "wrong_pair_to_answer_effect_unproven",
+        "bypass_review_pending_or_failed"
+      ],
+      "advisory": [],
+      "metrics": {
+        "object_count": null,
+        "objects_per_MP": null,
+        "class_count": null,
+        "known_fraction": null,
+        "median_bbox_short_px": null,
+        "nearcolor_pair_count": null,
+        "nearcolor_neighbor_fraction": null,
+        "bbox_overlap_pair_count": null,
+        "active_object_count": null,
+        "active_objects_per_submitted_MP": null,
+        "active_entity_count": null,
+        "active_fraction_of_annotated_objects": null,
+        "inactive_annotated_count": null,
+        "background_object_count": null,
+        "active_objects_per_region_MP": null,
+        "han_text_coverage": null,
+        "annotated_occlusion_fraction": null,
+        "distinct_dependency_regions": null,
+        "effective_counterfactuals": null,
+        "width": 2760,
+        "height": 1960,
+        "mode": "RGB",
+        "exif_orientation": 1,
+        "frame_count": 1,
+        "submitted_width": 2760,
+        "submitted_height": 1960,
+        "native_width": null,
+        "native_height": null,
+        "global_640_proxy": {
+          "contrast_p90_p10": 166.0,
+          "gray_entropy_bits": 5.787160770218623,
+          "edge_fraction_16": 0.08144979707806202
+        }
+      },
+      "source": {
+        "kind": "simulated_observation",
+        "authorization": "pending",
+        "author_record": "/Users/hepeize/Work/cowork/outputs/ZeroBench_niche_domains_20261126/cases/ZBN-05/author.json"
+      },
+      "difficulty_status": "not_evaluated",
+      "annotation_provenance": "unknown",
+      "geometry": {
+        "kind": "unknown",
+        "submitted_size_px": [
+          2760,
+          1960
+        ],
+        "native_size_px": null,
+        "native_size_evidence": "unknown",
+        "panels": []
+      },
+      "preview": "018.jpg",
+      "roi_metrics": [
+        {
+          "id": "key-1",
+          "file": "018_roi1.png",
+          "submitted_crop_size_px": [
+            130,
+            130
+          ],
+          "feature_width_native_px": null,
+          "native_readability_reviewed": null,
+          "pixel_metric_basis": "submitted_pixels",
+          "contrast_p90_p10": 10.0,
+          "gray_entropy_bits": 4.304933551969269,
+          "edge_fraction_16": 0.009809183064997019
+        },
+        {
+          "id": "key-2",
+          "file": "018_roi2.png",
+          "submitted_crop_size_px": [
+            130,
+            130
+          ],
+          "feature_width_native_px": null,
+          "native_readability_reviewed": null,
+          "pixel_metric_basis": "submitted_pixels",
+          "contrast_p90_p10": 25.0,
+          "gray_entropy_bits": 4.782543155840494,
+          "edge_fraction_16": 0.02435897435897436
+        },
+        {
+          "id": "key-3",
+          "file": "018_roi3.png",
+          "submitted_crop_size_px": [
+            130,
+            130
+          ],
+          "feature_width_native_px": null,
+          "native_readability_reviewed": null,
+          "pixel_metric_basis": "submitted_pixels",
+          "contrast_p90_p10": 24.0,
+          "gray_entropy_bits": 4.712106240179925,
+          "edge_fraction_16": 0.017680381633870007
+        }
+      ],
+      "platform_points": [
+        {
+          "xy": [
+            1272,
+            475
+          ],
+          "label": "L13边缘热微笑主带(2168bp)"
+        },
+        {
+          "xy": [
+            916,
+            877
+          ],
+          "label": "L9共迁移2x亮带(477+476bp)"
+        },
+        {
+          "xy": [
+            648,
+            1226
+          ],
+          "label": "L6染料前沿上方141bp与隐匿44bp守恒"
+        }
+      ],
+      "decision": "blocked"
+    },
+    {
+      "id": "ZBN-07",
+      "blockers": [
+        "real_image_requirement_not_met"
+      ],
+      "review": [
+        "native_geometry_unknown: 文件大小不能证明未放大",
+        "source_permission_evidence_missing",
+        "objects_missing: 不把边缘数当目标数",
+        "native_roi_readability_pending:key-1",
+        "critical_readability_pending:key-1",
+        "native_roi_readability_pending:key-2",
+        "critical_readability_pending:key-2",
+        "native_roi_readability_pending:key-3",
+        "critical_readability_pending:key-3",
+        "chinese_text_coverage_unknown",
+        "human_check_pending:source_fidelity",
+        "human_check_pending:annotation_correct",
+        "human_check_pending:critical_evidence_visible",
+        "human_check_pending:no_answer_leakage",
+        "human_check_pending:counting_rules_clear",
+        "multi_region_dependencies_unproven",
+        "wrong_pair_to_answer_effect_unproven",
+        "bypass_review_pending_or_failed"
+      ],
+      "advisory": [],
+      "metrics": {
+        "object_count": null,
+        "objects_per_MP": null,
+        "class_count": null,
+        "known_fraction": null,
+        "median_bbox_short_px": null,
+        "nearcolor_pair_count": null,
+        "nearcolor_neighbor_fraction": null,
+        "bbox_overlap_pair_count": null,
+        "active_object_count": null,
+        "active_objects_per_submitted_MP": null,
+        "active_entity_count": null,
+        "active_fraction_of_annotated_objects": null,
+        "inactive_annotated_count": null,
+        "background_object_count": null,
+        "active_objects_per_region_MP": null,
+        "han_text_coverage": null,
+        "annotated_occlusion_fraction": null,
+        "distinct_dependency_regions": null,
+        "effective_counterfactuals": null,
+        "width": 2760,
+        "height": 1980,
+        "mode": "RGB",
+        "exif_orientation": 1,
+        "frame_count": 1,
+        "submitted_width": 2760,
+        "submitted_height": 1980,
+        "native_width": null,
+        "native_height": null,
+        "global_640_proxy": {
+          "contrast_p90_p10": 232.0,
+          "gray_entropy_bits": 4.183114124233026,
+          "edge_fraction_16": 0.11457979847242851
+        }
+      },
+      "source": {
+        "kind": "simulated_observation",
+        "authorization": "pending",
+        "author_record": "/Users/hepeize/Work/cowork/outputs/ZeroBench_niche_domains_20261126/cases/ZBN-07/author.json"
+      },
+      "difficulty_status": "not_evaluated",
+      "annotation_provenance": "unknown",
+      "geometry": {
+        "kind": "unknown",
+        "submitted_size_px": [
+          2760,
+          1980
+        ],
+        "native_size_px": null,
+        "native_size_evidence": "unknown",
+        "panels": []
+      },
+      "preview": "019.jpg",
+      "roi_metrics": [
+        {
+          "id": "key-1",
+          "file": "019_roi1.png",
+          "submitted_crop_size_px": [
+            130,
+            130
+          ],
+          "feature_width_native_px": null,
+          "native_readability_reviewed": null,
+          "pixel_metric_basis": "submitted_pixels",
+          "contrast_p90_p10": 0.0,
+          "gray_entropy_bits": 0.4059631599388769,
+          "edge_fraction_16": 0.015951103160405485
+        },
+        {
+          "id": "key-2",
+          "file": "019_roi2.png",
+          "submitted_crop_size_px": [
+            130,
+            130
+          ],
+          "feature_width_native_px": null,
+          "native_readability_reviewed": null,
+          "pixel_metric_basis": "submitted_pixels",
+          "contrast_p90_p10": 154.0,
+          "gray_entropy_bits": 1.4765791562341954,
+          "edge_fraction_16": 0.07942754919499105
+        },
+        {
+          "id": "key-3",
+          "file": "019_roi3.png",
+          "submitted_crop_size_px": [
+            130,
+            130
+          ],
+          "feature_width_native_px": null,
+          "native_readability_reviewed": null,
+          "pixel_metric_basis": "submitted_pixels",
+          "contrast_p90_p10": 11.0,
+          "gray_entropy_bits": 2.0821483945977044,
+          "edge_fraction_16": 0.06800834824090637
+        }
+      ],
+      "platform_points": [
+        {
+          "xy": [
+            421,
+            1419
+          ],
+          "label": "L03 冷竞争非特异伪带 * (35 mm)"
+        },
+        {
+          "xy": [
+            1252,
+            677
+          ],
+          "label": "V3 反互补链新增 TF-A (108..117)"
+        },
+        {
+          "xy": [
+            1495,
+            1322
+          ],
+          "label": "M08 (−链 TF-B 螺旋协同位点)"
+        }
+      ],
+      "decision": "blocked"
+    },
+    {
+      "id": "ZBN-08",
+      "blockers": [],
+      "review": [
+        "native_geometry_unknown: 文件大小不能证明未放大",
+        "source_permission_evidence_missing",
+        "mixed_panels_require_separate_provenance_and_sample_consistency_review",
+        "objects_missing: 不把边缘数当目标数",
+        "native_roi_readability_pending:key-1",
+        "critical_readability_pending:key-1",
+        "native_roi_readability_pending:key-2",
+        "critical_readability_pending:key-2",
+        "native_roi_readability_pending:key-3",
+        "critical_readability_pending:key-3",
+        "chinese_text_coverage_unknown",
+        "human_check_pending:source_fidelity",
+        "human_check_pending:annotation_correct",
+        "human_check_pending:critical_evidence_visible",
+        "human_check_pending:no_answer_leakage",
+        "human_check_pending:counting_rules_clear",
+        "multi_region_dependencies_unproven",
+        "wrong_pair_to_answer_effect_unproven",
+        "bypass_review_pending_or_failed"
+      ],
+      "advisory": [],
+      "metrics": {
+        "object_count": null,
+        "objects_per_MP": null,
+        "class_count": null,
+        "known_fraction": null,
+        "median_bbox_short_px": null,
+        "nearcolor_pair_count": null,
+        "nearcolor_neighbor_fraction": null,
+        "bbox_overlap_pair_count": null,
+        "active_object_count": null,
+        "active_objects_per_submitted_MP": null,
+        "active_entity_count": null,
+        "active_fraction_of_annotated_objects": null,
+        "inactive_annotated_count": null,
+        "background_object_count": null,
+        "active_objects_per_region_MP": null,
+        "han_text_coverage": null,
+        "annotated_occlusion_fraction": null,
+        "distinct_dependency_regions": null,
+        "effective_counterfactuals": null,
+        "width": 2760,
+        "height": 1980,
+        "mode": "RGB",
+        "exif_orientation": 1,
+        "frame_count": 1,
+        "submitted_width": 2760,
+        "submitted_height": 1980,
+        "native_width": null,
+        "native_height": null,
+        "global_640_proxy": {
+          "contrast_p90_p10": 68.0,
+          "gray_entropy_bits": 4.100098263468769,
+          "edge_fraction_16": 0.15352281040412946
+        }
+      },
+      "source": {
+        "kind": "mixed_composite",
+        "authorization": "pending",
+        "author_record": "/Users/hepeize/Work/cowork/outputs/ZeroBench_niche_domains_20261126/cases/ZBN-08/author.json",
+        "panel_note": "真实金相+计算谱图；须按面板核同一样品假设及许可"
+      },
+      "difficulty_status": "not_evaluated",
+      "annotation_provenance": "unknown",
+      "geometry": {
+        "kind": "unknown",
+        "submitted_size_px": [
+          2760,
+          1980
+        ],
+        "native_size_px": null,
+        "native_size_evidence": "unknown",
+        "panels": []
+      },
+      "preview": "020.jpg",
+      "roi_metrics": [
+        {
+          "id": "key-1",
+          "file": "020_roi1.png",
+          "submitted_crop_size_px": [
+            130,
+            130
+          ],
+          "feature_width_native_px": null,
+          "native_readability_reviewed": null,
+          "pixel_metric_basis": "submitted_pixels",
+          "contrast_p90_p10": 0.0,
+          "gray_entropy_bits": 0.4595047315788447,
+          "edge_fraction_16": 0.018962432915921288
+        },
+        {
+          "id": "key-2",
+          "file": "020_roi2.png",
+          "submitted_crop_size_px": [
+            130,
+            130
+          ],
+          "feature_width_native_px": null,
+          "native_readability_reviewed": null,
+          "pixel_metric_basis": "submitted_pixels",
+          "contrast_p90_p10": 0.0,
+          "gray_entropy_bits": 0.5381672423277006,
+          "edge_fraction_16": 0.03729874776386404
+        },
+        {
+          "id": "key-3",
+          "file": "020_roi3.png",
+          "submitted_crop_size_px": [
+            130,
+            130
+          ],
+          "feature_width_native_px": null,
+          "native_readability_reviewed": null,
+          "pixel_metric_basis": "submitted_pixels",
+          "contrast_p90_p10": 177.0,
+          "gray_entropy_bits": 2.4592827416131273,
+          "edge_fraction_16": 0.1169051878354204
+        }
+      ],
+      "platform_points": [
+        {
+          "xy": [
+            1250,
+            774
+          ],
+          "label": "P14 高角 Cu-Kα1/Kα2 2:1 双峰 (62.629°/62.802°)"
+        },
+        {
+          "xy": [
+            358,
+            338
+          ],
+          "label": "Fd-3m d-滑移消光检查窗 (200) 21.17°"
+        },
+        {
+          "xy": [
+            2205,
+            947
+          ],
+          "label": "彩色金相面积分数标尺 f1_obs=0.4285"
+        }
+      ],
+      "decision": "needs_review"
+    }
+  ],
+  "limitations": [
+    "没有模型调用、下载或依赖安装；没有单一难度总分",
+    "未知字段为null，不是0或自动通过",
+    "框数是标注量，参与数是作者登记子集；都需实体和分类审核",
+    "框重叠不是遮挡，近色只作局部候选；没有实际遮挡标注时遮挡率未知",
+    "同源和视频分组只依赖显式元数据，不是视觉去重或相邻帧检测",
+    "native声明与人工复核字段不是程序独立证明，需审查引用证据"
+  ]
+}

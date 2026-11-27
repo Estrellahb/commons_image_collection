@@ -1,0 +1,11 @@
+{
+  "version": "v1",
+  "image_path": "outputs/authoring_ZB-FERRULES-0318-v1/zb-hardware-106783997.jpg",
+  "image_sha256": "aff2b1f3c72ba5ea1e6c66b7c8c10427d0f814c6a7365778db85b94b83dcdacc",
+  "prompt_sha256": "d889c263b4ddd4a3816c644eea9499ddcf8777aab03ad40edeca0abf20523268",
+  "conditions": "3 independent agents, fresh context, tools available, public image and prompt only",
+  "target_difficulty": "medium",
+  "freeze_time_utc": "2026-11-26",
+  "public_revision": 2,
+  "revision_reason": "作者原生像素复核修正下框内缘坐标；BC阈值1650px使全部边判定稳健"
+}

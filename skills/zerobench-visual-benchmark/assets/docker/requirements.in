@@ -1,0 +1,17 @@
+numpy>=2,<3
+scipy>=1.14,<2
+pillow>=11,<13
+opencv-python-headless>=4.10,<5
+matplotlib>=3.9,<4
+scikit-image>=0.24,<1
+pandas>=2.2,<4
+sympy>=1.13,<2
+networkx>=3.3,<4
+rdkit>=2024.9,<2027
+requests>=2.32,<3
+beautifulsoup4>=4.12,<5
+lxml>=5,<7
+imageio>=2.36,<3
+pytesseract>=0.3.13,<1
+pypdf>=5,<7
+python-chess>=1.999,<2

@@ -1,0 +1,29 @@
+{
+  "frozen_version": "ZB-TRANSIT-172600032-v2",
+  "inputs": ["prompt.txt", "未修改的采集库 JPG"],
+  "input_digests": "frozen.sha256",
+  "protocol": "三次分别用新上下文，在只提供冻结题面和干净原图的条件下独立试答，工具开放。以五问分别核对每个数值、航班号、顺序和完整撤下清单。",
+  "counts": {"correct": 3, "incorrect": 0, "timeout": 0, "infra_error": 0, "partial": 0},
+  "trials": [
+    {
+      "agent": "blind_sch_v2_one",
+      "answer": [[2,5,6,1,4,4],[4,10,3],[10,1,["DL9427","UA9791","DL9184","SK556"]],[140,1,["DL9427","UA9791","CI9293","CI9225"]],[8,[["CI9225",160],["CI9291",135],["CI9293",160],["DL9351",115],["DL9427",175],["EI603",135],["UA9791",175],["VY8379",135]]]],
+      "readback": "四屏各 31 行。FR421、AA6902、EJU7843、EZY2180 的 Gate 不合格。C 屏 BA429/D16、CZ7603/D25，D 屏 BA431/D18。另核对 C5、B17、C11、D18 的跨屏双占用。",
+      "correct_questions": [true,true,true,true,true],
+      "wrong_fields": []
+    },
+    {
+      "agent": "blind_sch_v2_two",
+      "answer": [[2,5,6,1,4,4],[4,10,3],[10,1,["DL9427","UA9791","DL9184","SK556"]],[140,1,["DL9427","UA9791","CI9293","CI9225"]],[8,[["CI9225",160],["CI9291",135],["CI9293",160],["DL9351",115],["DL9427",175],["EI603",135],["UA9791",175],["VY8379",135]]]],
+      "readback": "A DL9427/D82 09:45，B UA9791/B35/T3 09:50。C CI9293/C15 10:35，D CI9225/C11 11:35，B DL9351 同用 C11。核对 C5、B17、D18 的重复及四条 Gate 不合格记录。逐行撤下重算。",
+      "correct_questions": [true,true,true,true,true],
+      "wrong_fields": []
+    },
+    {
+      "agent": "blind_sch_v2_three",
+      "answer": [[2,5,6,1,4,4],[4,10,3],[10,1,["DL9427","UA9791","DL9184","SK556"]],[140,1,["DL9427","UA9791","CI9293","CI9225"]],[8,[["CI9225",160],["CI9291",135],["CI9293",160],["DL9351",115],["DL9427",175],["EI603",135],["UA9791",175],["VY8379",135]]]],
+      "correct_questions": [true,true,true,true,true],
+      "wrong_fields": []
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "checked_at": "2026-11-26T19:01:00.091537+08:00",
+  "python_scripts_ast": "passed",
+  "relative_markdown_links": "all_exist",
+  "embedded_api_keys": "none_detected",
+  "model_api_calls": 0,
+  "runtime_receipt": "local_runtime_receipt.json"
+}

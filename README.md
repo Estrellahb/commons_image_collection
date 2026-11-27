@@ -144,3 +144,22 @@ Swagger UI 和 `/openapi.json` 可直接打开，业务接口仍按原有规则�
 - `PATCH /api/tags` 可提交 `{"id":1,"authored_status":"authored","authored_ref":"ZB-001 | outputs/题目材料"}`，也可用 `file_url` 或 `path` 三选一定位。省略字段会保留原值，空字符串可清空。批量接口同样支持这两个字段。
 - `/api/images`、`/api/queue`、`/api/archive` 和 `POST /api/claims` 的下一条领取模式支持按出题状态筛选。`?authored_status=` 和 `?authored=0` 只选未出题，`?authored=1` 只选已出题，`?authored_status=draft` 只选出题中。省略筛选参数时匹配所有出题状态。
 - AI 和人工出题可使用 `POST /api/claims?authored=0`，请求体为 `{"next":true,"claimer":"作者名"}`，原子领取未出题图片。请求体也可传 `"authored_status":""`。领取后标记 `draft`，完成后写入 `authored` 和题目引用。
+
+## 视觉出题与直调评测入口
+
+如需基于本项目采集库直接出题、审阅并与模型评测，请查看 [ZeroBench 视觉出题与评测 Skill](skills/zerobench-visual-benchmark/SKILL.md) 及 [Skill 使用说明](skills/README.md)。
+
+在项目根目录 `.env`（或环境变量）中补充 OpenAI 兼容接口配置即可用于 `gpt-6.2-sol / max` 4 次纯模型直调评测：
+
+```dotenv
+OPENAI_BASE_URL=https://你的接口地址/v1
+OPENAI_API_KEY=你的API密钥
+```
+
+常用单题评测命令（产物与过程文件放 `outputs/_work/<题号>/`，最终交付目录 `outputs/authoring_<题号>/` 仅保留 `干净原图文件 + author_record.html`）：
+
+```bash
+python3 skills/zerobench-visual-benchmark/scripts/eval_trials.py \
+  --case outputs/authoring_<题号> \
+  --out outputs/_work/<题号>/eval_4x.json
+```

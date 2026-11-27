@@ -1,0 +1,5 @@
+RCSB PDB 高分辨率多链蛋白复合物界面结构可视化数据集
+样本数量: 20
+来源接口: https://search.rcsb.org/rcsbsearch/v2/query 与 https://files.rcsb.org/download/{pdb_id}.pdb
+许可协议: CC0 1.0 Public Domain Dedication（PDB Archive 公有领域声明）
+渲染与标注说明: 基于 Model 1 解析各蛋白链残基序列并精确计算链间重原子 <= 4.2 A 接触对，使用 NumPy Z-buffer + Pillow 2x 超采样绘制主界面 0° 与正交 +90° 双视角图；图像严格标注 Data Render · RCSB PDB (CC0) 且不泄露接触对数答案。

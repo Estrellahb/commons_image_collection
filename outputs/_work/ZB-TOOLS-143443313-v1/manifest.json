@@ -1,0 +1,1026 @@
+{
+  "items": [
+    {
+      "id": "ZB-TOOLS-143443313-v1",
+      "image": "public/image.jpg",
+      "require_real": true,
+      "allow_data_rendering": false,
+      "min_native_short_px": 1080,
+      "source": {
+        "kind": "real_photo",
+        "url": "https://commons.wikimedia.org/wiki/File:Miniature_bit_set_with_wrench_for_carrying_on_belt.jpg",
+        "asset_url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Miniature_bit_set_with_wrench_for_carrying_on_belt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "license": "CC BY 4.0",
+        "authorization": "verified",
+        "attribution": "Pittigrilli, Miniature bit set with wrench for carrying on belt, Wikimedia Commons",
+        "scene_id": "commons:143443313:miniature-bit-set",
+        "source_page_id": 143443313,
+        "same_scene_page_ids": [
+          143443313,
+          145653915
+        ],
+        "native_dimensions": [
+          4032,
+          3024
+        ],
+        "collection_transform": "Lossy JPEG re-encoding. EXIF orientation applied; only color-related metadata kept.",
+        "authoring_transform": "逐字节复制现有采集文件",
+        "evidence": "author/source.json"
+      },
+      "annotation_provenance": "author_checked_native_visible_bboxes_slot_print_classes",
+      "objects": [
+        {
+          "id": "A01",
+          "bbox": [
+            966,
+            518,
+            224,
+            236
+          ],
+          "category": "plus"
+        },
+        {
+          "id": "A02",
+          "bbox": [
+            1290,
+            501,
+            196,
+            220
+          ],
+          "category": "plus"
+        },
+        {
+          "id": "A03",
+          "bbox": [
+            1569,
+            515,
+            183,
+            210
+          ],
+          "category": "plus"
+        },
+        {
+          "id": "A04",
+          "bbox": [
+            1847,
+            483,
+            231,
+            240
+          ],
+          "category": "plus"
+        },
+        {
+          "id": "A05",
+          "bbox": [
+            2125,
+            500,
+            217,
+            208
+          ],
+          "category": "asterisk"
+        },
+        {
+          "id": "A06",
+          "bbox": [
+            2392,
+            463,
+            250,
+            241
+          ],
+          "category": "asterisk"
+        },
+        {
+          "id": "A07",
+          "bbox": [
+            2660,
+            485,
+            249,
+            219
+          ],
+          "category": "asterisk"
+        },
+        {
+          "id": "A08",
+          "bbox": [
+            2923,
+            485,
+            317,
+            211
+          ],
+          "category": "asterisk"
+        },
+        {
+          "id": "A09",
+          "bbox": [
+            3214,
+            475,
+            346,
+            212
+          ],
+          "category": "minus"
+        },
+        {
+          "id": "A10",
+          "bbox": [
+            3450,
+            461,
+            315,
+            214
+          ],
+          "category": "minus"
+        },
+        {
+          "id": "B01",
+          "bbox": [
+            995,
+            829,
+            212,
+            231
+          ],
+          "category": "minus"
+        },
+        {
+          "id": "B02",
+          "bbox": [
+            1303,
+            855,
+            183,
+            213
+          ],
+          "category": "minus"
+        },
+        {
+          "id": "B03",
+          "bbox": [
+            1580,
+            849,
+            211,
+            228
+          ],
+          "category": "hex"
+        },
+        {
+          "id": "B04",
+          "bbox": [
+            1865,
+            829,
+            198,
+            238
+          ],
+          "category": "hex"
+        },
+        {
+          "id": "B05",
+          "bbox": [
+            2124,
+            818,
+            254,
+            242
+          ],
+          "category": "hex"
+        },
+        {
+          "id": "B06",
+          "bbox": [
+            2369,
+            800,
+            309,
+            251
+          ],
+          "category": "hex"
+        },
+        {
+          "id": "B07",
+          "bbox": [
+            2648,
+            833,
+            260,
+            199
+          ],
+          "category": "star"
+        },
+        {
+          "id": "B08",
+          "bbox": [
+            2922,
+            812,
+            292,
+            192
+          ],
+          "category": "star"
+        },
+        {
+          "id": "B09",
+          "bbox": [
+            3195,
+            802,
+            340,
+            202
+          ],
+          "category": "star"
+        },
+        {
+          "id": "B10",
+          "bbox": [
+            3470,
+            791,
+            369,
+            207
+          ],
+          "category": "star"
+        },
+        {
+          "id": "C01",
+          "bbox": [
+            978,
+            1198,
+            251,
+            189
+          ],
+          "category": "star"
+        },
+        {
+          "id": "C02",
+          "bbox": [
+            1301,
+            1198,
+            199,
+            185
+          ],
+          "category": "star"
+        },
+        {
+          "id": "C03",
+          "bbox": [
+            1598,
+            1147,
+            211,
+            197
+          ],
+          "category": "star"
+        },
+        {
+          "id": "C04",
+          "bbox": [
+            1876,
+            1164,
+            209,
+            180
+          ],
+          "category": "star-dot"
+        },
+        {
+          "id": "C05",
+          "bbox": [
+            2154,
+            1151,
+            253,
+            187
+          ],
+          "category": "star-dot"
+        },
+        {
+          "id": "C06",
+          "bbox": [
+            2402,
+            1147,
+            273,
+            187
+          ],
+          "category": "star-dot"
+        },
+        {
+          "id": "C07",
+          "bbox": [
+            2681,
+            1131,
+            286,
+            195
+          ],
+          "category": "star-dot"
+        },
+        {
+          "id": "C08",
+          "bbox": [
+            2940,
+            1113,
+            305,
+            185
+          ],
+          "category": "star-dot"
+        },
+        {
+          "id": "C09",
+          "bbox": [
+            3198,
+            1096,
+            314,
+            199
+          ],
+          "category": "star-dot"
+        },
+        {
+          "id": "C10",
+          "bbox": [
+            3469,
+            1095,
+            345,
+            197
+          ],
+          "category": "star-dot"
+        },
+        {
+          "id": "L",
+          "bbox": [
+            940,
+            1759,
+            473,
+            436
+          ],
+          "category": "ratchet_head"
+        },
+        {
+          "id": "R",
+          "bbox": [
+            3351,
+            1405,
+            533,
+            193
+          ],
+          "category": "loose_metal_piece"
+        }
+      ],
+      "critical_rois": [
+        {
+          "id": "a_left",
+          "bbox": [
+            925,
+            395,
+            1210,
+            365
+          ],
+          "feature": "A01–A04 的槽标和基环，两个 +2 槽的色环不同",
+          "human_readable": true
+        },
+        {
+          "id": "a_right",
+          "bbox": [
+            2085,
+            383,
+            1695,
+            355
+          ],
+          "feature": "A05–A10 的槽标和基环，A08 是右段黄环候选",
+          "human_readable": true
+        },
+        {
+          "id": "b_left",
+          "bbox": [
+            940,
+            722,
+            1410,
+            365
+          ],
+          "feature": "B01–B05，B01 黄环、B02 蓝环、B03–B05 六边形",
+          "human_readable": true
+        },
+        {
+          "id": "b_right",
+          "bbox": [
+            2325,
+            689,
+            1555,
+            385
+          ],
+          "feature": "B06–B10，六边形及星标槽，橙红基环、蓝环",
+          "human_readable": true
+        },
+        {
+          "id": "c_left",
+          "bbox": [
+            935,
+            1020,
+            1450,
+            382
+          ],
+          "feature": "C01–C05 的实心或带白点星，和 C04、C05 实物工作端",
+          "human_readable": true
+        },
+        {
+          "id": "c_right",
+          "bbox": [
+            2285,
+            995,
+            1605,
+            432
+          ],
+          "feature": "C06–C10 的槽标和实际工作端，追踪斜伸批头至原槽",
+          "human_readable": true
+        },
+        {
+          "id": "blade",
+          "bbox": [
+            2370,
+            1025,
+            310,
+            355
+          ],
+          "feature": "C06 星标下的真实宽直刃",
+          "human_readable": true
+        },
+        {
+          "id": "anchor_l",
+          "bbox": [
+            925,
+            1710,
+            510,
+            500
+          ],
+          "feature": "L，扳手头部大黑盘外缘",
+          "human_readable": true
+        },
+        {
+          "id": "anchor_r",
+          "bbox": [
+            3280,
+            1360,
+            640,
+            300
+          ],
+          "feature": "R，独立短金属件右端银色端面",
+          "human_readable": true
+        }
+      ],
+      "ocr": {
+        "han_bboxes": [],
+        "reviewed": true,
+        "method": "全图和原生槽标目视检查。题目只用数字和几何符号。"
+      },
+      "platform_points": [
+        {
+          "xy": [
+            2614,
+            1243
+          ],
+          "label": "C06 实际单片宽直刃，控制下排资格"
+        },
+        {
+          "xy": [
+            1173,
+            958
+          ],
+          "label": "B01 黄色基环外弧，旁有红色反光"
+        },
+        {
+          "xy": [
+            3798,
+            1508
+          ],
+          "label": "独立短金属件的银色端面中心，定义右端距离"
+        }
+      ],
+      "human_checks": {
+        "source_fidelity": true,
+        "annotation_correct": true,
+        "critical_evidence_visible": true,
+        "no_answer_leakage": true,
+        "counting_rules_clear": true
+      },
+      "task": {
+        "uses_distance": true,
+        "dependencies": [
+          {
+            "roi_id": "a_left",
+            "parameter": "上排左段槽中心、色环和积分数字",
+            "output": "LA"
+          },
+          {
+            "roi_id": "a_left",
+            "parameter": "上排左段槽中心、色环和积分数字",
+            "output": "AB"
+          },
+          {
+            "roi_id": "a_left",
+            "parameter": "上排左段槽中心、色环和积分数字",
+            "output": "joint_max"
+          },
+          {
+            "roi_id": "a_right",
+            "parameter": "上排右段槽中心、色环和积分数字",
+            "output": "LA"
+          },
+          {
+            "roi_id": "a_right",
+            "parameter": "上排右段槽中心、色环和积分数字",
+            "output": "AB"
+          },
+          {
+            "roi_id": "a_right",
+            "parameter": "上排右段槽中心、色环和积分数字",
+            "output": "pairs"
+          },
+          {
+            "roi_id": "b_left",
+            "parameter": "B01 色环和左段六边标、槽中心、积分数字",
+            "output": "AB"
+          },
+          {
+            "roi_id": "b_left",
+            "parameter": "B01 色环和左段六边标、槽中心、积分数字",
+            "output": "BC"
+          },
+          {
+            "roi_id": "b_left",
+            "parameter": "B01 色环和左段六边标、槽中心、积分数字",
+            "output": "pairs"
+          },
+          {
+            "roi_id": "b_right",
+            "parameter": "中排右段色环和六边标、槽中心、积分数字",
+            "output": "AB"
+          },
+          {
+            "roi_id": "b_right",
+            "parameter": "中排右段色环和六边标、槽中心、积分数字",
+            "output": "BC"
+          },
+          {
+            "roi_id": "b_right",
+            "parameter": "中排右段色环和六边标、槽中心、积分数字",
+            "output": "M_min"
+          },
+          {
+            "roi_id": "b_right",
+            "parameter": "中排右段色环和六边标、槽中心、积分数字",
+            "output": "N_min"
+          },
+          {
+            "roi_id": "c_left",
+            "parameter": "下排左段白点星、实物端部、槽中心和积分数字",
+            "output": "CR"
+          },
+          {
+            "roi_id": "c_left",
+            "parameter": "下排左段白点星、实物端部、槽中心和积分数字",
+            "output": "BC"
+          },
+          {
+            "roi_id": "c_left",
+            "parameter": "下排左段白点星、实物端部、槽中心和积分数字",
+            "output": "pairs"
+          },
+          {
+            "roi_id": "c_right",
+            "parameter": "下排右段白点星、实物端部、槽中心和积分数字",
+            "output": "CR"
+          },
+          {
+            "roi_id": "c_right",
+            "parameter": "下排右段白点星、实物端部、槽中心和积分数字",
+            "output": "BC"
+          },
+          {
+            "roi_id": "c_right",
+            "parameter": "下排右段白点星、实物端部、槽中心和积分数字",
+            "output": "joint_max"
+          },
+          {
+            "roi_id": "c_right",
+            "parameter": "下排右段白点星、实物端部、槽中心和积分数字",
+            "output": "ticket2"
+          },
+          {
+            "roi_id": "blade",
+            "parameter": "C06 的实际直刃状态",
+            "output": "CR"
+          },
+          {
+            "roi_id": "blade",
+            "parameter": "C06 的实际直刃状态",
+            "output": "pairs"
+          },
+          {
+            "roi_id": "blade",
+            "parameter": "C06 的实际直刃状态",
+            "output": "M_min"
+          },
+          {
+            "roi_id": "blade",
+            "parameter": "C06 的实际直刃状态",
+            "output": "joint_max"
+          },
+          {
+            "roi_id": "blade",
+            "parameter": "C06 的实际直刃状态",
+            "output": "ticket1"
+          },
+          {
+            "roi_id": "anchor_l",
+            "parameter": "棘轮圆盘的投影横坐标",
+            "output": "LA"
+          },
+          {
+            "roi_id": "anchor_l",
+            "parameter": "棘轮圆盘的投影横坐标",
+            "output": "pairs"
+          },
+          {
+            "roi_id": "anchor_r",
+            "parameter": "独立短金属件端面的投影横坐标",
+            "output": "CR"
+          },
+          {
+            "roi_id": "anchor_r",
+            "parameter": "独立短金属件端面的投影横坐标",
+            "output": "pairs"
+          }
+        ],
+        "measurements": [
+          {
+            "id": "LA_nearest",
+            "margin": 127.5,
+            "error_bound": 30,
+            "unit": "px",
+            "error_method": "横坐标绝对差的误差上界为两端误差之和。槽标中心 ±10 px，实物端点中心 ±20 px。",
+            "evidence": "author/qa_review.md 与 recompute.json / closest_thresholds",
+            "closest_pair": [
+              "L",
+              "A08"
+            ]
+          },
+          {
+            "id": "AB_nearest",
+            "margin": 85.0,
+            "error_bound": 20,
+            "unit": "px",
+            "error_method": "横坐标绝对差的误差上界为两端误差之和。槽标中心 ±10 px，实物端点中心 ±20 px。",
+            "evidence": "author/qa_review.md 与 recompute.json / closest_thresholds",
+            "closest_pair": [
+              "A06",
+              "B01"
+            ]
+          },
+          {
+            "id": "BC_nearest",
+            "margin": 60.5,
+            "error_bound": 20,
+            "unit": "px",
+            "error_method": "横坐标绝对差的误差上界为两端误差之和。槽标中心 ±10 px，实物端点中心 ±20 px。",
+            "evidence": "author/qa_review.md 与 recompute.json / closest_thresholds",
+            "closest_pair": [
+              "B05",
+              "C10"
+            ]
+          },
+          {
+            "id": "CR_nearest",
+            "margin": 132,
+            "error_bound": 30,
+            "unit": "px",
+            "error_method": "横坐标绝对差的误差上界为两端误差之和。槽标中心 ±10 px，实物端点中心 ±20 px。",
+            "evidence": "author/qa_review.md 与 recompute.json / closest_thresholds",
+            "closest_pair": [
+              "C05",
+              "R"
+            ]
+          }
+        ],
+        "counterfactuals": [
+          {
+            "field": "CR",
+            "baseline": 5,
+            "alternative": 6,
+            "verified": true,
+            "evidence": "recompute.json / alternatives / flat_blade_accepted",
+            "scenario": "flat_blade_accepted"
+          },
+          {
+            "field": "pairs",
+            "baseline": 1692,
+            "alternative": 2858,
+            "verified": true,
+            "evidence": "recompute.json / alternatives / flat_blade_accepted",
+            "scenario": "flat_blade_accepted"
+          },
+          {
+            "field": "joint_max",
+            "baseline": 3,
+            "alternative": 1,
+            "verified": true,
+            "evidence": "recompute.json / alternatives / flat_blade_accepted",
+            "scenario": "flat_blade_accepted"
+          },
+          {
+            "field": "ticket1",
+            "baseline": "010610",
+            "alternative": "030806",
+            "verified": true,
+            "evidence": "recompute.json / alternatives / flat_blade_accepted",
+            "scenario": "flat_blade_accepted"
+          },
+          {
+            "field": "AB",
+            "baseline": 25,
+            "alternative": 23,
+            "verified": true,
+            "evidence": "recompute.json / alternatives / reflected_red_at_B01",
+            "scenario": "reflected_red_at_B01"
+          },
+          {
+            "field": "pairs",
+            "baseline": 1692,
+            "alternative": 1588,
+            "verified": true,
+            "evidence": "recompute.json / alternatives / reflected_red_at_B01",
+            "scenario": "reflected_red_at_B01"
+          }
+        ],
+        "bypass_review": "passed",
+        "reasoning_graph": {
+          "nodes": [
+            {
+              "id": "a_left",
+              "kind": "visual",
+              "roi_id": "a_left"
+            },
+            {
+              "id": "a_right",
+              "kind": "visual",
+              "roi_id": "a_right"
+            },
+            {
+              "id": "b_left",
+              "kind": "visual",
+              "roi_id": "b_left"
+            },
+            {
+              "id": "b_right",
+              "kind": "visual",
+              "roi_id": "b_right"
+            },
+            {
+              "id": "c_left",
+              "kind": "visual",
+              "roi_id": "c_left"
+            },
+            {
+              "id": "c_right",
+              "kind": "visual",
+              "roi_id": "c_right"
+            },
+            {
+              "id": "blade",
+              "kind": "visual",
+              "roi_id": "blade"
+            },
+            {
+              "id": "anchor_l",
+              "kind": "visual",
+              "roi_id": "anchor_l"
+            },
+            {
+              "id": "anchor_r",
+              "kind": "visual",
+              "roi_id": "anchor_r"
+            },
+            {
+              "id": "A_eligible",
+              "kind": "parameter"
+            },
+            {
+              "id": "B_eligible",
+              "kind": "parameter"
+            },
+            {
+              "id": "C_eligible",
+              "kind": "parameter"
+            },
+            {
+              "id": "Lx",
+              "kind": "measure"
+            },
+            {
+              "id": "Rx",
+              "kind": "measure"
+            },
+            {
+              "id": "LA_edges",
+              "kind": "state"
+            },
+            {
+              "id": "AB_edges",
+              "kind": "state"
+            },
+            {
+              "id": "BC_edges",
+              "kind": "state"
+            },
+            {
+              "id": "CR_edges",
+              "kind": "state"
+            },
+            {
+              "id": "slot_numbers",
+              "kind": "parameter"
+            },
+            {
+              "id": "ticket_set",
+              "kind": "aggregate"
+            },
+            {
+              "id": "disjoint_pairs",
+              "kind": "aggregate"
+            },
+            {
+              "id": "score_both_modes",
+              "kind": "parameter"
+            },
+            {
+              "id": "optimize_MN",
+              "kind": "optimize"
+            },
+            {
+              "id": "optimize_joint",
+              "kind": "optimize"
+            },
+            {
+              "id": "Q1",
+              "kind": "output"
+            },
+            {
+              "id": "Q2",
+              "kind": "output"
+            },
+            {
+              "id": "Q3",
+              "kind": "output"
+            },
+            {
+              "id": "Q4",
+              "kind": "output"
+            },
+            {
+              "id": "Q5",
+              "kind": "output"
+            }
+          ],
+          "edges": [
+            [
+              "a_left",
+              "A_eligible"
+            ],
+            [
+              "a_right",
+              "A_eligible"
+            ],
+            [
+              "b_left",
+              "B_eligible"
+            ],
+            [
+              "b_right",
+              "B_eligible"
+            ],
+            [
+              "c_left",
+              "C_eligible"
+            ],
+            [
+              "c_right",
+              "C_eligible"
+            ],
+            [
+              "blade",
+              "C_eligible"
+            ],
+            [
+              "anchor_l",
+              "Lx"
+            ],
+            [
+              "anchor_r",
+              "Rx"
+            ],
+            [
+              "A_eligible",
+              "LA_edges"
+            ],
+            [
+              "Lx",
+              "LA_edges"
+            ],
+            [
+              "C_eligible",
+              "CR_edges"
+            ],
+            [
+              "Rx",
+              "CR_edges"
+            ],
+            [
+              "LA_edges",
+              "AB_edges"
+            ],
+            [
+              "B_eligible",
+              "AB_edges"
+            ],
+            [
+              "B_eligible",
+              "BC_edges"
+            ],
+            [
+              "CR_edges",
+              "BC_edges"
+            ],
+            [
+              "a_left",
+              "slot_numbers"
+            ],
+            [
+              "a_right",
+              "slot_numbers"
+            ],
+            [
+              "b_left",
+              "slot_numbers"
+            ],
+            [
+              "b_right",
+              "slot_numbers"
+            ],
+            [
+              "c_left",
+              "slot_numbers"
+            ],
+            [
+              "c_right",
+              "slot_numbers"
+            ],
+            [
+              "AB_edges",
+              "ticket_set"
+            ],
+            [
+              "BC_edges",
+              "ticket_set"
+            ],
+            [
+              "ticket_set",
+              "disjoint_pairs"
+            ],
+            [
+              "slot_numbers",
+              "score_both_modes"
+            ],
+            [
+              "disjoint_pairs",
+              "score_both_modes"
+            ],
+            [
+              "score_both_modes",
+              "optimize_MN"
+            ],
+            [
+              "score_both_modes",
+              "optimize_joint"
+            ],
+            [
+              "LA_edges",
+              "Q1"
+            ],
+            [
+              "AB_edges",
+              "Q1"
+            ],
+            [
+              "BC_edges",
+              "Q1"
+            ],
+            [
+              "CR_edges",
+              "Q1"
+            ],
+            [
+              "ticket_set",
+              "Q2"
+            ],
+            [
+              "disjoint_pairs",
+              "Q3"
+            ],
+            [
+              "optimize_MN",
+              "Q4"
+            ],
+            [
+              "optimize_joint",
+              "Q5"
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

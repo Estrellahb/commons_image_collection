@@ -1,0 +1,6 @@
+interface:
+  display_name: "ZeroBench 视觉出题与评测"
+  short_description: "SQLite 台账选图、视觉联合推理出题、HTML 单题交付审阅与 4 次直调评测"
+  default_prompt: "使用 $zerobench-visual-benchmark 从采集台账选图出题，按「干净原图 + author_record.html」交付并审阅，使用 gpt-6.2-sol / max 直调 4 次评测难度与有限返修。"
+policy:
+  allow_implicit_invocation: true

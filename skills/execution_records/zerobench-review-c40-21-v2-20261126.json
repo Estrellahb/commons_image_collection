@@ -1,0 +1,455 @@
+{
+  "schema_version": "1.0",
+  "checked_at": "2026-11-26T10:48:39.847855+00:00",
+  "case": "/Users/hepeize/Work/cowork/outputs/ZeroBench_C40_20261126/cases/C40-21/v2",
+  "id": "C40-21",
+  "version": "v2",
+  "status": "blocked",
+  "machine_blockers": 1,
+  "counts": {
+    "pass": 15,
+    "needs_review": 4,
+    "blocked": 1
+  },
+  "checks": [
+    {
+      "code": "public_scope",
+      "status": "pass",
+      "message": "Public and author material were separated before semantic checks",
+      "evidence": {
+        "primary": "/Users/hepeize/Work/cowork/outputs/ZeroBench_C40_20261126/cases/C40-21/v2/author.json",
+        "author": "/Users/hepeize/Work/cowork/outputs/ZeroBench_C40_20261126/cases/C40-21/v2/author.json",
+        "public_exposure_basis": "fallback allowlist; prompt/options/candidates only, title and answer fields are not assumed public",
+        "public_keys_checked": [
+          "prompt"
+        ],
+        "not_scanned_for_public_leaks": [
+          "private facts.json",
+          "author answers/CoT",
+          "source provenance",
+          "code comments",
+          "unrendered Python literals"
+        ]
+      }
+    },
+    {
+      "code": "prompt",
+      "status": "pass",
+      "message": "Public prompt is present",
+      "evidence": {
+        "characters": 1049
+      }
+    },
+    {
+      "code": "candidate_winner_label",
+      "status": "pass",
+      "message": "No explicit winner label found in the checked public candidate fields; image text remains unverified",
+      "evidence": {}
+    },
+    {
+      "code": "tie_and_empty_contract",
+      "status": "needs_review",
+      "message": "Check tie, empty feasible set/path and no-winner branches; wording presence does not prove every branch is defined",
+      "evidence": {
+        "tie_wording_present": true,
+        "empty_wording_present": false,
+        "public_rule_conventions": {}
+      }
+    },
+    {
+      "code": "language_false_positive_policy",
+      "status": "pass",
+      "message": "Ordinary 忽略/真实/唯一/混淆 wording, source IDs in private provenance, and author facts are not automatically rejected",
+      "evidence": {}
+    },
+    {
+      "code": "main_image",
+      "status": "pass",
+      "message": "Read main-image dimensions; this is not a clarity or native-resolution proof",
+      "evidence": {
+        "path": "/Users/hepeize/Work/cowork/outputs/ZeroBench_C40_20261126/cases/C40-21/v2/main.png",
+        "dimensions": [
+          1792,
+          1805
+        ],
+        "method": "PNG_header"
+      }
+    },
+    {
+      "code": "native_resolution",
+      "status": "blocked",
+      "message": "Native raster dimensions checked against the declared local profile; enlarging/compositing the main image does not change them",
+      "evidence": {
+        "rasters": [
+          {
+            "path": "/Users/hepeize/Work/cowork/outputs/ZeroBench_C40_20261126/cases/C40-21/v2/raw.tif",
+            "dimensions": [
+              696,
+              520
+            ],
+            "method": "installed_Pillow",
+            "meets_conservative_profile": false
+          }
+        ],
+        "exceptions": "Only an explicit applicable requirement/waiver can change the profile; scientific subject alone is not a waiver."
+      }
+    },
+    {
+      "code": "source_license_and_fidelity",
+      "status": "needs_review",
+      "message": "Verify source bytes, license/attribution and whether each panel is observation, data rendering or simulated measurement; metadata declarations alone are not proof",
+      "evidence": {
+        "source": {
+          "kind": "real_observation",
+          "dataset": "BBBC039",
+          "record": "IXMtest_A22_s8_w1E2AFE190-831D-4D9C-961E-3AA2ECB3599D",
+          "url": "https://bbbc.broadinstitute.org/BBBC039",
+          "license": "CC0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": "Broad Bioimage Benchmark Collection; Caicedo et al. 2018",
+          "normalization": {
+            "low": 136.0,
+            "high": 1512.0,
+            "method": "linear clip p1..p99.8 to uint8; floor"
+          },
+          "native_dimensions": [
+            696,
+            520
+          ],
+          "annotation": "Publisher instance masks used only to place sampling anchors; hidden mask boundaries are not queried",
+          "modifications": "Linear display window for 16bit source if applicable; nearest-neighbor magnification; hollow anchor markers, labels and calibration legend only; original 41x41 context crops displayed with declared 90deg rotations/mirrors only, no synthetic cells",
+          "dedup": "New record IDs; no source record reuse among C40-21..30. BBBC038 brightfield images selected to avoid known BBBC039 fluorescence overlap."
+        },
+        "image_provenance": {
+          "nature": "real_observation",
+          "real_observation": true,
+          "no_generative_edit": true,
+          "annotations_added": true,
+          "reference_crop_gallery": true
+        }
+      }
+    },
+    {
+      "code": "platform_point_count",
+      "status": "pass",
+      "message": "Platform key-point count is 1–3",
+      "evidence": {
+        "count": 3
+      }
+    },
+    {
+      "code": "platform_point_coordinate",
+      "status": "pass",
+      "message": "Pixel coordinate is finite and within known bounds; target alignment still requires viewing",
+      "evidence": {
+        "index": 0,
+        "xy": [
+          981,
+          508
+        ]
+      }
+    },
+    {
+      "code": "platform_point_coordinate",
+      "status": "pass",
+      "message": "Pixel coordinate is finite and within known bounds; target alignment still requires viewing",
+      "evidence": {
+        "index": 1,
+        "xy": [
+          1531,
+          1680
+        ]
+      }
+    },
+    {
+      "code": "platform_point_coordinate",
+      "status": "pass",
+      "message": "Pixel coordinate is finite and within known bounds; target alignment still requires viewing",
+      "evidence": {
+        "index": 2,
+        "xy": [
+          301,
+          1680
+        ]
+      }
+    },
+    {
+      "code": "author_solution_image",
+      "status": "pass",
+      "message": "Two author-written solution sections are required; mere presence does not establish full evidence coverage",
+      "evidence": {
+        "section": "image",
+        "characters": 1101
+      }
+    },
+    {
+      "code": "author_solution_reasoning",
+      "status": "pass",
+      "message": "Two author-written solution sections are required; mere presence does not establish full evidence coverage",
+      "evidence": {
+        "section": "reasoning",
+        "characters": 707
+      }
+    },
+    {
+      "code": "question_type",
+      "status": "pass",
+      "message": "Check against the stored eight-category mapping; no live platform was accessed",
+      "evidence": {
+        "question_type": "空间变换",
+        "canonical_type": null
+      }
+    },
+    {
+      "code": "author_answer",
+      "status": "pass",
+      "message": "Author answer exists; correctness and unique-match semantics require review",
+      "evidence": {}
+    },
+    {
+      "code": "stored_answer_consistency",
+      "status": "pass",
+      "message": "Compared stored answer strings only; no oracle executed, no scientific correctness inferred",
+      "evidence": {
+        "same_string": true
+      }
+    },
+    {
+      "code": "oracle_presence",
+      "status": "pass",
+      "message": "Oracle presence recorded only; this checker never imports or runs it",
+      "evidence": {
+        "present": true
+      }
+    },
+    {
+      "code": "evaluation_evidence",
+      "status": "needs_review",
+      "message": "Receipts were classified; confirm requested trial count, content validity, final answer and tool/trace integrity before accepting failures",
+      "evidence": {
+        "machine_correct": 4
+      }
+    },
+    {
+      "code": "human_evidence_review",
+      "status": "needs_review",
+      "message": "Machine checks cannot establish these necessary conditions",
+      "evidence": [
+        "View native key ROIs and final image at 100%; establish readability, occlusion, similar-color identity, Chinese-text extent and point-to-evidence alignment.",
+        "Trace each required image observation to parameter choice, constraints and requested output; lawful full transcription or pixel registration is not cheating.",
+        "Review source licenses and panel provenance, actual measurements versus simulated assays, scientific labels and public physical assumptions.",
+        "Independently review facts-to-pixels, every empty/tie/boundary branch, answer formatting and GT. This tool does not execute an oracle.",
+        "Review measurement error propagation and feasible-set/optimal-winner stability; inspect actual counterfactual recomputation, not a claimed pass flag.",
+        "If an error is claimed, distinguish corrected intermediate reads from the final adopted facts, and exclude content defects, protocol mismatches, interruptions and service failures."
+      ]
+    }
+  ],
+  "metadata": {
+    "input_schema": {
+      "primary": "/Users/hepeize/Work/cowork/outputs/ZeroBench_C40_20261126/cases/C40-21/v2/author.json",
+      "author": "/Users/hepeize/Work/cowork/outputs/ZeroBench_C40_20261126/cases/C40-21/v2/author.json",
+      "public_exposure_basis": "fallback allowlist; prompt/options/candidates only, title and answer fields are not assumed public",
+      "public_keys_checked": [
+        "prompt"
+      ],
+      "not_scanned_for_public_leaks": [
+        "private facts.json",
+        "author answers/CoT",
+        "source provenance",
+        "code comments",
+        "unrendered Python literals"
+      ]
+    },
+    "image": {
+      "main_path": "/Users/hepeize/Work/cowork/outputs/ZeroBench_C40_20261126/cases/C40-21/v2/main.png",
+      "main_dimensions": [
+        1792,
+        1805
+      ],
+      "declared_source_kind": "real_observation",
+      "native_rasters": [
+        {
+          "path": "/Users/hepeize/Work/cowork/outputs/ZeroBench_C40_20261126/cases/C40-21/v2/raw.tif",
+          "dimensions": [
+            696,
+            520
+          ],
+          "method": "installed_Pillow",
+          "meets_conservative_profile": false
+        }
+      ],
+      "declared_native_dimensions": [
+        696,
+        520
+      ],
+      "profile": {
+        "min_short_px": 1080,
+        "min_long_px": 1920,
+        "status": "local conservative equivalent-1080p screening, not a verified live platform enum"
+      }
+    },
+    "evaluation": {
+      "id": "C40-21",
+      "version": "v2",
+      "records": [
+        {
+          "path": "/Users/hepeize/Work/cowork/outputs/ZeroBench_C40_20261126/evaluation/group3_v2/attempts/r1-C40-21.json",
+          "round": 1,
+          "classification": "machine_correct",
+          "status": "completed",
+          "invalid_reason": null,
+          "invalid_detail": null,
+          "machine_grade": "correct",
+          "requested_model": "gpt-6.2-sol",
+          "provider_models": [
+            "gpt-6.2-sol"
+          ],
+          "requested_effort": "max",
+          "provider_efforts": [
+            "max"
+          ],
+          "model_echo_matches": true,
+          "effort_echo_matches": true,
+          "tools_declared_available": true,
+          "tools_available": [
+            "run_python",
+            "inspect_image",
+            "view_local_image",
+            "fetch_url",
+            "search_web"
+          ],
+          "observed_tool_counts": {
+            "run_python": 5
+          },
+          "trace_exists": true,
+          "seconds": 488.93,
+          "carried_seconds": 0.0,
+          "timeout_seconds": 1800
+        },
+        {
+          "path": "/Users/hepeize/Work/cowork/outputs/ZeroBench_C40_20261126/evaluation/group3_v2/attempts/r2-C40-21.json",
+          "round": 2,
+          "classification": "machine_correct",
+          "status": "completed",
+          "invalid_reason": null,
+          "invalid_detail": null,
+          "machine_grade": "correct",
+          "requested_model": "gpt-6.2-sol",
+          "provider_models": [
+            "gpt-6.2-sol"
+          ],
+          "requested_effort": "max",
+          "provider_efforts": [
+            "max"
+          ],
+          "model_echo_matches": true,
+          "effort_echo_matches": true,
+          "tools_declared_available": true,
+          "tools_available": [
+            "run_python",
+            "inspect_image",
+            "view_local_image",
+            "fetch_url",
+            "search_web"
+          ],
+          "observed_tool_counts": {
+            "run_python": 5
+          },
+          "trace_exists": true,
+          "seconds": 324.75,
+          "carried_seconds": 0.0,
+          "timeout_seconds": 1800
+        },
+        {
+          "path": "/Users/hepeize/Work/cowork/outputs/ZeroBench_C40_20261126/evaluation/group3_v2/attempts/r3-C40-21.json",
+          "round": 3,
+          "classification": "machine_correct",
+          "status": "completed",
+          "invalid_reason": null,
+          "invalid_detail": null,
+          "machine_grade": "correct",
+          "requested_model": "gpt-6.2-sol",
+          "provider_models": [
+            "gpt-6.2-sol"
+          ],
+          "requested_effort": "max",
+          "provider_efforts": [
+            "max"
+          ],
+          "model_echo_matches": true,
+          "effort_echo_matches": true,
+          "tools_declared_available": true,
+          "tools_available": [
+            "run_python",
+            "inspect_image",
+            "view_local_image",
+            "fetch_url",
+            "search_web"
+          ],
+          "observed_tool_counts": {
+            "run_python": 7,
+            "view_local_image": 1
+          },
+          "trace_exists": true,
+          "seconds": 158.78,
+          "carried_seconds": 0.0,
+          "timeout_seconds": 1800
+        },
+        {
+          "path": "/Users/hepeize/Work/cowork/outputs/ZeroBench_C40_20261126/evaluation/group3_v2/attempts/r4-C40-21.json",
+          "round": 4,
+          "classification": "machine_correct",
+          "status": "completed",
+          "invalid_reason": null,
+          "invalid_detail": null,
+          "machine_grade": "correct",
+          "requested_model": "gpt-6.2-sol",
+          "provider_models": [
+            "gpt-6.2-sol"
+          ],
+          "requested_effort": "max",
+          "provider_efforts": [
+            "max"
+          ],
+          "model_echo_matches": true,
+          "effort_echo_matches": true,
+          "tools_declared_available": true,
+          "tools_available": [
+            "run_python",
+            "inspect_image",
+            "view_local_image",
+            "fetch_url",
+            "search_web"
+          ],
+          "observed_tool_counts": {
+            "run_python": 7
+          },
+          "trace_exists": true,
+          "seconds": 130.35,
+          "carried_seconds": 0.0,
+          "timeout_seconds": 1800
+        }
+      ],
+      "counts": {
+        "machine_correct": 4
+      },
+      "completed_rounds": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "policy": "Latest receipt files only; history not double-counted. Missing/stopped/timeout/transport/partial is not a model error. Available but unused tools remain enabled."
+    }
+  },
+  "platform_accepted": false,
+  "difficulty_proven": false,
+  "side_effects": {
+    "oracle_executed": false,
+    "model_api_called": false,
+    "network_used": false,
+    "dependencies_installed": false,
+    "case_files_modified": false
+  },
+  "meaning": "blocked means a concrete local schema/reference/profile conflict; needs_review means unknown or incomplete evidence. pass applies only to the named limited check, never whole-case approval."
+}

@@ -1,0 +1,57 @@
+{
+  "question_id": "ZB-TOOLS-151686260-v1",
+  "frozen_version": "v1",
+  "tools_enabled": true,
+  "ground_truth_answer": "20,23,18,16,14|12,3|28,16,12|20,1,23,1|32,1,31,1|M,N,1,H3-H5;H4-H7",
+  "total_fields": 20,
+  "summary": {
+    "valid_trials": 3,
+    "exact_correct": 1,
+    "exact_incorrect": 2,
+    "timeout": 0,
+    "infra_error": 0,
+    "partial": 0
+  },
+  "trials": [
+    {
+      "trial_id": "trial_1",
+      "conversation_id": "d5f215a1-21a5-44d0-9867-33a58d2a1993",
+      "status": "valid_complete",
+      "answer": "20,23,18,16,14|12,3|28,16,12|20,1,23,1|32,1,31,1|M,N,1,H3-H5;H4-H7",
+      "exact_match": true,
+      "correct_fields": 20,
+      "wrong_fields": [],
+      "attribution": "全部 12 钩视觉事实表（含 H1=2, H3=3, H4=2、H5–H12 蓝柄 20 把与后方红柄 15 把、USA=18,16,14 及全部钩心坐标）与 6 问计算均完全正确。"
+    },
+    {
+      "trial_id": "trial_2",
+      "conversation_id": "53b7166f-b10c-4163-bb32-1cfac63444b5",
+      "status": "valid_complete",
+      "answer": "19,21,18,16,14|11,3|24,6,18|27,1,21,1|39,1,27,1|N,N,0,H3-H6;H4-H7",
+      "exact_match": false,
+      "correct_fields": 7,
+      "wrong_fields": [
+        "q1_sum_blue", "q1_sum_red", "q2_edges", "q3_total_plans", "q3_M_plans", "q3_N_plans",
+        "q4_M_min_c0", "q4_N_min_c0", "q5_M_min_c1", "q5_N_min_c1",
+        "q6_winner_w0", "q6_reversal", "q6_w1_canonical_plan"
+      ],
+      "reproduced_by_solver": true,
+      "reproduction_counterfactual": "CF4_H1_H4_red_1_and_H6_blue_2",
+      "attribution": "预期视觉误读：漏看 H1(28mm) 与 H4(22mm) 紧贴叠挂的第 2 把红柄（误读为各 1 把），且把 H6(19mm) 叠挂的 3 把蓝柄误读为 2 把。将其最终采用的事实表代入作者 solver.py 可 100% 逐字段复现其末答，直接导致 M/N 分组边界移动、工况 0/1 赢家均变为 N、反转位由 1 翻转为 0。"
+    },
+    {
+      "trial_id": "trial_3",
+      "conversation_id": "be89af81-6790-4b9d-8e7a-7853a6bce5ee",
+      "status": "valid_complete",
+      "answer": "20,21,18,16,14|11,3|24,16,8|20,1,23,1|30,1,29,1|M,N,1,H3-H5;H4-H7",
+      "exact_match": false,
+      "correct_fields": 14,
+      "wrong_fields": [
+        "q1_sum_red", "q2_edges", "q3_total_plans", "q3_N_plans", "q5_M_min_c1", "q5_N_min_c1"
+      ],
+      "reproduced_by_solver": true,
+      "reproduction_counterfactual": "CF3_H1_H4_red_single_1",
+      "attribution": "预期视觉误读：正确读出 H3=3 及全部 B 组蓝柄/红柄/USA，但漏看 H1(28mm) 与 H4(22mm) 紧贴叠挂的第 2 把红柄（误读为各 1 把）。代入作者 solver.py 可 100% 逐字段复现其末答，导致红柄总数少 2（21 vs 23）、兼容边 H1-H5 缺失（E: 11 vs 12, P: 24 vs 28, P_N: 8 vs 12），且工况 1 漏计 H4 的 A 组重载加罚（C1_M: 30 vs 32, C1_N: 29 vs 31）。"
+    }
+  ]
+}

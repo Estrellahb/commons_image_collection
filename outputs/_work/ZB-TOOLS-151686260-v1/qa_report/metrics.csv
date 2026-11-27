@@ -1,0 +1,2 @@
+﻿id,decision,difficulty_status,width,height,object_count,class_count,known_fraction,median_bbox_short_px,nearcolor_pair_count,bbox_overlap_pair_count,distinct_dependency_regions,effective_counterfactuals,blockers,review,advisory
+ZB-TOOLS-151686260-v1,authoring_candidate,documented_failure_evidence_requires_human_acceptance,4716,3144,20,14,1.0,310.0,33,15,6,5,[],[],[]

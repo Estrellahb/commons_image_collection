@@ -1,0 +1,2 @@
+﻿id,decision,difficulty_status,width,height,object_count,class_count,known_fraction,median_bbox_short_px,nearcolor_pair_count,bbox_overlap_pair_count,distinct_dependency_regions,effective_counterfactuals,blockers,review,advisory
+ZB-0244-v3,authoring_candidate,no_complete_failure_recorded,2000,1333,22,3,1.0,175.0,12,2,6,2,[],[],[]

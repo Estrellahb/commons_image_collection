@@ -1,0 +1,407 @@
+{
+  "items": [
+    {
+      "id": "ZB-FERRULES-0318-v1",
+      "image": "../../../img/居家场景/工具五金/zb-hardware-106783997.jpg",
+      "require_real": true,
+      "allow_data_rendering": false,
+      "min_native_short_px": 1080,
+      "source": {
+        "kind": "real_photo",
+        "url": "https://commons.wikimedia.org/wiki/File:Dornbirn-wire_ferrules-01ASD.jpg",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "authorization": "verified",
+        "scene_id": "commons:106783997",
+        "verification_basis": "来源与许可.jsonl matching original page_id, author, license and native dimensions",
+        "live_page_check": "HTTP 429 rate limited; source snapshot metadata retained in source.json"
+      },
+      "annotation_provenance": "manual_author_fact_table",
+      "objects": [
+        {
+          "id": "A1",
+          "bbox": [
+            2290,
+            150,
+            450,
+            740
+          ],
+          "category": "B"
+        },
+        {
+          "id": "A2",
+          "bbox": [
+            2300,
+            890,
+            450,
+            640
+          ],
+          "category": "R"
+        },
+        {
+          "id": "A3",
+          "bbox": [
+            2310,
+            1530,
+            450,
+            710
+          ],
+          "category": "R,Y"
+        },
+        {
+          "id": "A4",
+          "bbox": [
+            2320,
+            2240,
+            440,
+            310
+          ],
+          "category": "excluded_A4"
+        },
+        {
+          "id": "A5",
+          "bbox": [
+            2330,
+            2550,
+            440,
+            395
+          ],
+          "category": "excluded_A5"
+        },
+        {
+          "id": "B1",
+          "bbox": [
+            2775,
+            140,
+            445,
+            730
+          ],
+          "category": "Y"
+        },
+        {
+          "id": "B2",
+          "bbox": [
+            2780,
+            870,
+            450,
+            1030
+          ],
+          "category": "K"
+        },
+        {
+          "id": "B3",
+          "bbox": [
+            2785,
+            1900,
+            450,
+            350
+          ],
+          "category": "W"
+        },
+        {
+          "id": "B4",
+          "bbox": [
+            2790,
+            2250,
+            450,
+            695
+          ],
+          "category": "W"
+        },
+        {
+          "id": "C1",
+          "bbox": [
+            3250,
+            125,
+            485,
+            375
+          ],
+          "category": "excluded_C1"
+        },
+        {
+          "id": "C2",
+          "bbox": [
+            3250,
+            500,
+            485,
+            1050
+          ],
+          "category": "R"
+        },
+        {
+          "id": "C3",
+          "bbox": [
+            3250,
+            1550,
+            485,
+            1395
+          ],
+          "category": "B,G"
+        }
+      ],
+      "critical_rois": [
+        {
+          "id": "roi_A3",
+          "bbox": [
+            2310,
+            1530,
+            450,
+            710
+          ],
+          "human_readable": true
+        },
+        {
+          "id": "roi_B3_B4",
+          "bbox": [
+            2785,
+            1850,
+            450,
+            450
+          ],
+          "human_readable": true
+        },
+        {
+          "id": "roi_C3",
+          "bbox": [
+            3250,
+            1500,
+            485,
+            1400
+          ],
+          "human_readable": true
+        }
+      ],
+      "ocr": {
+        "han_bboxes": [],
+        "reviewed": true
+      },
+      "platform_points": [
+        {
+          "xy": [
+            2460,
+            1870
+          ],
+          "label": "A3内红黄混色端子隔间，决定颜色集合"
+        },
+        {
+          "xy": [
+            3010,
+            2235
+          ],
+          "label": "B3与B4之间的黄色分隔板，决定两个白灰隔间"
+        },
+        {
+          "xy": [
+            3500,
+            2200
+          ],
+          "label": "C3同一长隔间内同时可见蓝色和绿色端子"
+        }
+      ],
+      "human_checks": {
+        "source_fidelity": true,
+        "annotation_correct": true,
+        "critical_evidence_visible": true,
+        "no_answer_leakage": true,
+        "counting_rules_clear": true
+      },
+      "task": {
+        "uses_distance": true,
+        "dependencies": [
+          {
+            "roi_id": "roi_A3",
+            "parameter": "A3_colors",
+            "output": "relay_and_plan_set"
+          },
+          {
+            "roi_id": "roi_B3_B4",
+            "parameter": "B3_B4_boundary",
+            "output": "B_column_identity_and_plan_set"
+          },
+          {
+            "roi_id": "roi_C3",
+            "parameter": "C3_colors",
+            "output": "relay_and_plan_set"
+          }
+        ],
+        "measurements": [
+          {
+            "id": "all_AB_pairs",
+            "margin": 135,
+            "error_bound": 40,
+            "unit": "px",
+            "error_method": "两个隔间参考y各±20px，差值误差≤40px",
+            "evidence": "independent_verification.json"
+          },
+          {
+            "id": "all_BC_pairs",
+            "margin": 77.5,
+            "error_bound": 40,
+            "unit": "px",
+            "error_method": "两个隔间参考y各±20px，差值误差≤40px",
+            "evidence": "independent_verification.json"
+          }
+        ],
+        "counterfactuals": [
+          {
+            "field": "C3_colors_and_mode1_plan",
+            "baseline": "B,G; mode1 canonical A1B/B1Y/C2R;A2R/B3W/C3G, cost31",
+            "alternative": "B only; mode1 canonical A1B/B1Y/C2R;A2R/B3W/C3B, cost37, relay13, plan13",
+            "verified": true,
+            "evidence": "recompute.json"
+          },
+          {
+            "field": "A3_colors_and_plan_count",
+            "baseline": "R,Y; relay22, plan28",
+            "alternative": "Y only; relay16, plan20",
+            "verified": true,
+            "evidence": "recompute.json"
+          }
+        ],
+        "bypass_review": "passed",
+        "reasoning_graph": {
+          "nodes": [
+            {
+              "id": "roi_A3",
+              "kind": "visual",
+              "roi_id": "roi_A3"
+            },
+            {
+              "id": "A3_colors",
+              "kind": "parameter"
+            },
+            {
+              "id": "roi_B3_B4",
+              "kind": "visual",
+              "roi_id": "roi_B3_B4"
+            },
+            {
+              "id": "B3_B4_boundary",
+              "kind": "parameter"
+            },
+            {
+              "id": "roi_C3",
+              "kind": "visual",
+              "roi_id": "roi_C3"
+            },
+            {
+              "id": "C3_colors",
+              "kind": "parameter"
+            },
+            {
+              "id": "distances",
+              "kind": "measure"
+            },
+            {
+              "id": "edges",
+              "kind": "aggregate"
+            },
+            {
+              "id": "relays",
+              "kind": "aggregate"
+            },
+            {
+              "id": "plans",
+              "kind": "optimize"
+            },
+            {
+              "id": "mode0",
+              "kind": "output"
+            },
+            {
+              "id": "mode1",
+              "kind": "output"
+            },
+            {
+              "id": "changed",
+              "kind": "output"
+            }
+          ],
+          "edges": [
+            [
+              "roi_A3",
+              "A3_colors"
+            ],
+            [
+              "roi_B3_B4",
+              "B3_B4_boundary"
+            ],
+            [
+              "roi_C3",
+              "C3_colors"
+            ],
+            [
+              "roi_A3",
+              "distances"
+            ],
+            [
+              "roi_B3_B4",
+              "distances"
+            ],
+            [
+              "distances",
+              "edges"
+            ],
+            [
+              "roi_C3",
+              "edges"
+            ],
+            [
+              "edges",
+              "relays"
+            ],
+            [
+              "relays",
+              "plans"
+            ],
+            [
+              "plans",
+              "mode0"
+            ],
+            [
+              "plans",
+              "mode1"
+            ],
+            [
+              "mode0",
+              "changed"
+            ],
+            [
+              "mode1",
+              "changed"
+            ],
+            [
+              "A3_colors",
+              "relays"
+            ],
+            [
+              "B3_B4_boundary",
+              "distances"
+            ],
+            [
+              "C3_colors",
+              "relays"
+            ],
+            [
+              "B3_B4_boundary",
+              "plans"
+            ]
+          ]
+        }
+      },
+      "evaluation": {
+        "tools_enabled": true,
+        "frozen_version": "r2",
+        "trajectory": "blind_trials.json and blind_evidence/",
+        "gt_review": "blind_trials.json: three trials, 18/18 fields each",
+        "failure_attribution": "blind_trials.json: no incorrect complete answer",
+        "counts": {
+          "correct": 3,
+          "incorrect": 0,
+          "timeout": 0,
+          "infra_error": 0,
+          "partial": 0
+        }
+      }
+    }
+  ]
+}

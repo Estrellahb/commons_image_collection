@@ -1,0 +1,2 @@
+﻿id,decision,difficulty_status,width,height,object_count,class_count,known_fraction,median_bbox_short_px,nearcolor_pair_count,bbox_overlap_pair_count,distinct_dependency_regions,effective_counterfactuals,blockers,review,advisory
+ZB-0230-v1,authoring_candidate,not_evaluated,1200,1600,11,8,1.0,180.0,0,0,4,1,[],[],[]

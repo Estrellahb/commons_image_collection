@@ -1,0 +1,49 @@
+{
+  "checked_at": "2026-11-26T19:01:00.091382+08:00",
+  "docker_context": "colima-harbor-parity",
+  "image": "zerobench/tools:20261126-v1",
+  "image_storage_host_path": "/Users/hepeize/.colima/_lima/_disks/colima-harbor-parity/datadisk",
+  "storage_on_portssd": false,
+  "desktop_disk": "/Volumes/PortSSD/Docker/DockerDesktop/Docker.raw",
+  "active_default_context_unchanged": "desktop-linux",
+  "model_tests_started": 0,
+  "build_status": "success",
+  "build_network": "direct HTTPS; broken client proxy overridden only for build",
+  "python_dependency_lock": "zerobench-visual-benchmark/assets/docker/requirements.lock.txt",
+  "build_provenance": "Initial resolution used requirements.in; successful pip freeze promoted to default requirements.lock.txt for future builds.",
+  "runtime_adapter_verification": "completed",
+  "actual_operations": {
+    "image_processing": {
+      "width": 1960,
+      "height": 1600,
+      "edge_pixels": 249455,
+      "mean_intensity": 162.22546875,
+      "persistent_marker": "first-tool-call"
+    },
+    "second_call": {
+      "persistent_file_read": true,
+      "image_write_denied_errno": 13,
+      "sympy_roots": [
+        "2",
+        "3"
+      ],
+      "graph_distance": 4,
+      "rdkit_atom_count": 4,
+      "ocr": "ZERO 123",
+      "public_https_status": 200,
+      "ffmpeg": "ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers",
+      "pdftoppm": "pdftoppm version 25.03.0"
+    },
+    "exec_seconds": [
+      0.743,
+      2.234
+    ],
+    "bounded_timeout_seconds": 1.672,
+    "timeout_cleanup_confirmed": true,
+    "temporary_container_removed": true,
+    "trial_artifacts": "/Users/hepeize/.local/share/zerobench-runtime/trials/unified-runtime-check-01"
+  },
+  "debug_note": "Initial verification required errno EROFS but Unix permissions denied first with EACCES=13. Accepted both valid denial errors; Docker inspect independently confirms the image bind is RW=false. Original failed verification receipt retained.",
+  "existing_runner_integrated": false,
+  "colima_retained_reason": "Local reusable image is stored here; existing unrelated healthy env-world service also running."
+}

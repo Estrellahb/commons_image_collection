@@ -1,0 +1,136 @@
+{
+  "reviewer": "author main agent",
+  "time": "2026-11-26T15:15:44.103225+00:00",
+  "opened_native_rois": [
+    "001_roi1.png",
+    "001_roi2.png",
+    "001_roi3.png",
+    "001_roi4.png",
+    "001_roi5.png",
+    "001_roi6.png"
+  ],
+  "nearcolor_pair_review": [
+    {
+      "a": "A5",
+      "b": "A4",
+      "deltaE76": 4.738739984170624,
+      "review": "已按qa_notes.md对应对象对逐项核对原生斑纹"
+    },
+    {
+      "a": "B4",
+      "b": "A2",
+      "deltaE76": 1.7448106490188091,
+      "review": "已按qa_notes.md对应对象对逐项核对原生斑纹"
+    },
+    {
+      "a": "B4",
+      "b": "A3",
+      "deltaE76": 3.085381410016886,
+      "review": "已按qa_notes.md对应对象对逐项核对原生斑纹"
+    },
+    {
+      "a": "B4",
+      "b": "A4",
+      "deltaE76": 10.35736243350701,
+      "review": "已按qa_notes.md对应对象对逐项核对原生斑纹"
+    },
+    {
+      "a": "B4",
+      "b": "B3",
+      "deltaE76": 7.984063579272368,
+      "review": "已按qa_notes.md对应对象对逐项核对原生斑纹"
+    },
+    {
+      "a": "B5",
+      "b": "A5",
+      "deltaE76": 10.81727143135051,
+      "review": "已按qa_notes.md对应对象对逐项核对原生斑纹"
+    },
+    {
+      "a": "B5",
+      "b": "B4",
+      "deltaE76": 1.5475466342819297,
+      "review": "已按qa_notes.md对应对象对逐项核对原生斑纹"
+    },
+    {
+      "a": "C3",
+      "b": "B4",
+      "deltaE76": 9.025374568940153,
+      "review": "已按qa_notes.md对应对象对逐项核对原生斑纹"
+    },
+    {
+      "a": "C4",
+      "b": "B4",
+      "deltaE76": 7.007094262539255,
+      "review": "已按qa_notes.md对应对象对逐项核对原生斑纹"
+    },
+    {
+      "a": "C4",
+      "b": "B5",
+      "deltaE76": 5.813764081883172,
+      "review": "已按qa_notes.md对应对象对逐项核对原生斑纹"
+    },
+    {
+      "a": "C5",
+      "b": "C4",
+      "deltaE76": 4.836490801037411,
+      "review": "已按qa_notes.md对应对象对逐项核对原生斑纹"
+    },
+    {
+      "a": "D2",
+      "b": "D1",
+      "deltaE76": 11.897958248705578,
+      "review": "已按qa_notes.md对应对象对逐项核对原生斑纹"
+    }
+  ],
+  "overlap_review": [
+    {
+      "a": "D4",
+      "b": "D3",
+      "iom": 0.18163809523809524,
+      "review": "已检查D列原生ROI，胸部和主斑归属可追溯"
+    },
+    {
+      "a": "D6",
+      "b": "D5",
+      "iom": 0.1657142857142857,
+      "review": "已检查D列原生ROI，胸部和主斑归属可追溯"
+    }
+  ],
+  "resolved_reviews": [
+    "critical_readability_pending:column_A",
+    "critical_readability_pending:column_B",
+    "critical_readability_pending:column_C",
+    "critical_readability_pending:column_D",
+    "critical_readability_pending:lower_boundary",
+    "critical_readability_pending:A5_small_spots",
+    "ocr_human_review_pending",
+    "human_check_pending:source_fidelity",
+    "human_check_pending:annotation_correct",
+    "human_check_pending:critical_evidence_visible",
+    "human_check_pending:no_answer_leakage",
+    "human_check_pending:counting_rules_clear",
+    "bypass_review_pending_or_failed"
+  ],
+  "evidence": [
+    "qa_notes.md",
+    "measurement.md",
+    "facts.json",
+    "independent_verification.json"
+  ],
+  "human_checks": {
+    "source_fidelity": true,
+    "annotation_correct": true,
+    "critical_evidence_visible": true,
+    "no_answer_leakage": true,
+    "counting_rules_clear": true
+  },
+  "text_review": {
+    "rounds": 2,
+    "han_coverage": 0,
+    "method": "逐列标签与原生裁图人工双检，未运行OCR模型"
+  },
+  "privacy_and_watermark": "已逐列看图，人脸与遮挡题证水印均未见",
+  "version": "ZB-0244-v3",
+  "revision_review": "原图与ROI相同，C4.F按新增公开口径由H0推导。对照新事实表与题面再次确认。"
+}

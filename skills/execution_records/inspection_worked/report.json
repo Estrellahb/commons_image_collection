@@ -1,0 +1,409 @@
+{
+  "schema_version": 2,
+  "summary": {
+    "needs_review": 2
+  },
+  "duplicate_scene_groups": {
+    "ShelfWise:13062": [
+      "C40-01-source-13062",
+      "C40-01-v2-composite"
+    ]
+  },
+  "shared_source_asset_groups": {
+    "ShelfWise:13062": [
+      "C40-01-source-13062",
+      "C40-01-v2-composite"
+    ]
+  },
+  "video_source_groups": {},
+  "items": [
+    {
+      "id": "C40-01-source-13062",
+      "blockers": [],
+      "review": [
+        "task_category_granularity_pending: 品牌/大类标签不能默认等于SKU",
+        "critical_readability_pending:sample-product",
+        "chinese_text_coverage_unknown",
+        "human_check_pending:source_fidelity",
+        "human_check_pending:annotation_correct",
+        "human_check_pending:critical_evidence_visible",
+        "human_check_pending:no_answer_leakage",
+        "human_check_pending:counting_rules_clear",
+        "reasoning_graph_missing",
+        "multi_region_dependencies_unproven",
+        "wrong_pair_to_answer_effect_unproven",
+        "bypass_review_pending_or_failed",
+        "platform_points_expected_1_to_3"
+      ],
+      "advisory": [
+        "object_count_is_annotation_box_count_not_proven_physical_instances",
+        "local_color_pairs_and_box_overlaps_are_candidates_not_difficulty_or_occlusion_proof",
+        "class_coverage_below_0.85"
+      ],
+      "metrics": {
+        "object_count": 118,
+        "objects_per_MP": 61.458333333333336,
+        "class_count": 8,
+        "known_fraction": 0.7033898305084746,
+        "median_bbox_short_px": 47.0,
+        "nearcolor_pair_count": 0,
+        "nearcolor_neighbor_fraction": 0.0,
+        "bbox_overlap_pair_count": 0,
+        "active_object_count": 18,
+        "active_objects_per_submitted_MP": 9.375,
+        "active_entity_count": 18,
+        "active_fraction_of_annotated_objects": 0.15254237288135594,
+        "inactive_annotated_count": 100,
+        "background_object_count": null,
+        "active_objects_per_region_MP": 9.375,
+        "han_text_coverage": null,
+        "annotated_occlusion_fraction": null,
+        "distinct_dependency_regions": null,
+        "effective_counterfactuals": null,
+        "width": 1200,
+        "height": 1600,
+        "mode": "RGB",
+        "exif_orientation": 1,
+        "frame_count": 1,
+        "submitted_width": 1200,
+        "submitted_height": 1600,
+        "native_width": 1200,
+        "native_height": 1600,
+        "global_640_proxy": {
+          "contrast_p90_p10": 178.0,
+          "gray_entropy_bits": 7.83643453320134,
+          "edge_fraction_16": 0.19713018523349857
+        },
+        "known_class_count": 8,
+        "repeated_classes": 8,
+        "spatial_entropy_4x4": 0.9628494092328423,
+        "p10_bbox_short_px": 37.0,
+        "edge_touching_count": 4,
+        "annotation_complete": null,
+        "median_active_bbox_short_px": 55.5,
+        "active_known_class_count": 5,
+        "occlusion_annotation_count": 0,
+        "different_class_neighbor_pairs": 64,
+        "duplicate_bbox_candidate_count": 0,
+        "active_nearcolor_pair_count": 0
+      },
+      "source": {
+        "kind": "real_photo",
+        "url": "https://huggingface.co/datasets/shelfwise-by-form/SKUs_on_shelves_PL",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "authorization": "verified",
+        "attribution": "ShelfWise by FORM",
+        "scene_id": "ShelfWise:13062",
+        "source_asset_id": "ShelfWise:13062"
+      },
+      "difficulty_status": "not_evaluated",
+      "annotation_provenance": "publisher_coco; active IDs from frozen C40-01/v2 facts",
+      "geometry": {
+        "kind": "native",
+        "submitted_size_px": [
+          1200,
+          1600
+        ],
+        "native_size_px": [
+          1200,
+          1600
+        ],
+        "native_size_evidence": "author_native_declaration",
+        "panels": []
+      },
+      "preview": "001.jpg",
+      "nearcolor_pairs": [],
+      "overlap_candidates": [],
+      "duplicate_bbox_candidates": [],
+      "roi_metrics": [
+        {
+          "id": "sample-product",
+          "file": "001_roi1.png",
+          "submitted_crop_size_px": [
+            55,
+            168
+          ],
+          "feature_width_native_px": null,
+          "native_readability_reviewed": null,
+          "pixel_metric_basis": "submitted_pixels",
+          "contrast_p90_p10": 114.0,
+          "gray_entropy_bits": 7.456533475181082,
+          "edge_fraction_16": 0.34249876759599057
+        }
+      ],
+      "platform_points": [],
+      "decision": "needs_review"
+    },
+    {
+      "id": "C40-01-v2-composite",
+      "blockers": [],
+      "review": [
+        "mixed_panels_require_separate_provenance_and_sample_consistency_review",
+        "task_category_granularity_pending: 品牌/大类标签不能默认等于SKU",
+        "native_roi_readability_pending:sample-product",
+        "critical_readability_pending:sample-product",
+        "chinese_text_coverage_unknown",
+        "human_check_pending:source_fidelity",
+        "human_check_pending:annotation_correct",
+        "human_check_pending:critical_evidence_visible",
+        "human_check_pending:no_answer_leakage",
+        "human_check_pending:counting_rules_clear",
+        "reasoning_graph_missing",
+        "multi_region_dependencies_unproven",
+        "wrong_pair_to_answer_effect_unproven",
+        "bypass_review_pending_or_failed",
+        "platform_points_expected_1_to_3"
+      ],
+      "advisory": [
+        "montage_canvas_is_not_native_resolution_or_independent_scenes",
+        "native_resolution_below_profile: 以关键特征原生像素复审，不用放大补像素",
+        "object_count_is_annotation_box_count_not_proven_physical_instances",
+        "local_color_pairs_and_box_overlaps_are_candidates_not_difficulty_or_occlusion_proof",
+        "class_coverage_below_0.85"
+      ],
+      "metrics": {
+        "object_count": 118,
+        "objects_per_MP": 37.62755102040816,
+        "class_count": 8,
+        "known_fraction": 0.7033898305084746,
+        "median_bbox_short_px": 47.0,
+        "nearcolor_pair_count": 0,
+        "nearcolor_neighbor_fraction": 0.0,
+        "bbox_overlap_pair_count": 0,
+        "active_object_count": 18,
+        "active_objects_per_submitted_MP": 5.739795918367347,
+        "active_entity_count": 18,
+        "active_fraction_of_annotated_objects": 0.15254237288135594,
+        "inactive_annotated_count": 100,
+        "background_object_count": null,
+        "active_objects_per_region_MP": 9.375,
+        "han_text_coverage": null,
+        "annotated_occlusion_fraction": null,
+        "distinct_dependency_regions": null,
+        "effective_counterfactuals": null,
+        "width": 1960,
+        "height": 1600,
+        "mode": "RGB",
+        "exif_orientation": 1,
+        "frame_count": 1,
+        "submitted_width": 1960,
+        "submitted_height": 1600,
+        "native_width": null,
+        "native_height": null,
+        "global_640_proxy": {
+          "contrast_p90_p10": 208.0,
+          "gray_entropy_bits": 6.012866184500367,
+          "edge_fraction_16": 0.1498835078965754
+        },
+        "known_class_count": 8,
+        "repeated_classes": 8,
+        "spatial_entropy_4x4": 0.8109194768274259,
+        "p10_bbox_short_px": 37.0,
+        "edge_touching_count": 4,
+        "annotation_complete": null,
+        "median_active_bbox_short_px": 55.5,
+        "active_known_class_count": 5,
+        "occlusion_annotation_count": 0,
+        "different_class_neighbor_pairs": 64,
+        "duplicate_bbox_candidate_count": 0,
+        "active_nearcolor_pair_count": 0
+      },
+      "source": {
+        "kind": "mixed_composite",
+        "url": "https://huggingface.co/datasets/shelfwise-by-form/SKUs_on_shelves_PL",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "authorization": "verified",
+        "attribution": "ShelfWise by FORM",
+        "scene_id": "ShelfWise:13062",
+        "source_asset_id": "ShelfWise:13062"
+      },
+      "difficulty_status": "not_evaluated",
+      "annotation_provenance": "publisher_coco; active IDs from frozen C40-01/v2 facts",
+      "geometry": {
+        "kind": "montage",
+        "submitted_size_px": [
+          1960,
+          1600
+        ],
+        "native_size_px": null,
+        "native_size_evidence": "unknown",
+        "panels": [
+          {
+            "id": "main-photo",
+            "native_size_px": [
+              1200,
+              1600
+            ],
+            "native_size_evidence": "source_file",
+            "source_crop_xywh": [
+              0,
+              0,
+              1200,
+              1600
+            ],
+            "output_xywh": [
+              0,
+              0,
+              1200,
+              1600
+            ],
+            "scale_xy": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "id": "ref-A",
+            "native_size_px": [
+              1600,
+              1200
+            ],
+            "native_size_evidence": "source_file",
+            "source_crop_xywh": [
+              868,
+              746,
+              59,
+              138
+            ],
+            "output_xywh": [
+              1295,
+              115,
+              59,
+              138
+            ],
+            "scale_xy": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "id": "ref-B",
+            "native_size_px": [
+              1600,
+              1200
+            ],
+            "native_size_evidence": "source_file",
+            "source_crop_xywh": [
+              1112,
+              746,
+              55,
+              138
+            ],
+            "output_xywh": [
+              1295,
+              360,
+              55,
+              138
+            ],
+            "scale_xy": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "id": "ref-C",
+            "native_size_px": [
+              1600,
+              1200
+            ],
+            "native_size_evidence": "source_file",
+            "source_crop_xywh": [
+              927,
+              745,
+              61,
+              141
+            ],
+            "output_xywh": [
+              1295,
+              605,
+              61,
+              141
+            ],
+            "scale_xy": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "id": "ref-D",
+            "native_size_px": [
+              1200,
+              1600
+            ],
+            "native_size_evidence": "source_file",
+            "source_crop_xywh": [
+              16,
+              302,
+              78,
+              210
+            ],
+            "output_xywh": [
+              1295,
+              850,
+              74,
+              200
+            ],
+            "scale_xy": [
+              0.9487179487179487,
+              0.9523809523809523
+            ]
+          },
+          {
+            "id": "ref-E",
+            "native_size_px": [
+              1600,
+              1200
+            ],
+            "native_size_evidence": "source_file",
+            "source_crop_xywh": [
+              989,
+              744,
+              55,
+              139
+            ],
+            "output_xywh": [
+              1295,
+              1095,
+              55,
+              139
+            ],
+            "scale_xy": [
+              1.0,
+              1.0
+            ]
+          }
+        ]
+      },
+      "preview": "002.jpg",
+      "nearcolor_pairs": [],
+      "overlap_candidates": [],
+      "duplicate_bbox_candidates": [],
+      "roi_metrics": [
+        {
+          "id": "sample-product",
+          "file": "002_roi1.png",
+          "submitted_crop_size_px": [
+            55,
+            168
+          ],
+          "feature_width_native_px": null,
+          "native_readability_reviewed": null,
+          "pixel_metric_basis": "submitted_pixels",
+          "contrast_p90_p10": 120.0,
+          "gray_entropy_bits": 7.4660801519464,
+          "edge_fraction_16": 0.3403078271347976
+        }
+      ],
+      "platform_points": [],
+      "decision": "needs_review"
+    }
+  ],
+  "limitations": [
+    "没有模型调用、下载或依赖安装；没有单一难度总分",
+    "未知字段为null，不是0或自动通过",
+    "框数是标注量，参与数是作者登记子集；都需实体和分类审核",
+    "框重叠不是遮挡，近色只作局部候选；没有实际遮挡标注时遮挡率未知",
+    "同源和视频分组只依赖显式元数据，不是视觉去重或相邻帧检测",
+    "native声明与人工复核字段不是程序独立证明，需审查引用证据"
+  ]
+}

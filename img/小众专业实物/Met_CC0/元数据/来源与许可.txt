@@ -1,0 +1,4 @@
+The Metropolitan Museum of Art Open Access Collection (CC0 1.0)
+Policy: https://www.metmuseum.org/about-the-met/policies-and-documents/open-access
+API: https://collectionapi.metmuseum.org/public/collection/v1/objects
+All saved items verified isPublicDomain=true via object API.

@@ -1,0 +1,96 @@
+[
+  {
+    "change": null,
+    "independent_answer_questions_3_to_6": [
+      138,
+      864,
+      [
+        1,
+        1,
+        2,
+        [
+          1,
+          1,
+          1,
+          1,
+          3,
+          3,
+          4,
+          4
+        ]
+      ],
+      [
+        12,
+        14,
+        1,
+        [
+          2,
+          2,
+          4,
+          4,
+          4,
+          5,
+          5,
+          6
+        ]
+      ]
+    ],
+    "equal": true
+  },
+  {
+    "change": [
+      "A5",
+      "F",
+      1
+    ],
+    "independent_answer_questions_3_to_6": [
+      145,
+      1296,
+      [
+        1,
+        1,
+        2,
+        [
+          1,
+          1,
+          1,
+          1,
+          3,
+          3,
+          4,
+          4
+        ]
+      ],
+      [
+        12,
+        13,
+        1,
+        [
+          2,
+          2,
+          4,
+          4,
+          5,
+          5,
+          5,
+          6
+        ]
+      ]
+    ],
+    "equal": true
+  },
+  {
+    "change": [
+      "C4",
+      "H",
+      1
+    ],
+    "independent_answer_questions_3_to_6": [
+      138,
+      0,
+      null,
+      null
+    ],
+    "equal": true
+  }
+]

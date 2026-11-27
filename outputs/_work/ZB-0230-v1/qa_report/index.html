@@ -1,0 +1,120 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><title>ZeroBench 图片质检</title><style>body{font:16px system-ui;margin:30px;background:#f4f4f1;color:#202020}article{background:white;margin:22px 0;padding:24px;border:1px solid #ddd;overflow:auto}img{max-width:48%;float:left;margin:0 24px 16px 0}pre{white-space:pre-wrap;font-size:13px}h1{font-size:28px}</style><h1>图片与题目证据质检</h1><p>代理指标用于筛选，不证明难度。缺失值不会自动通过；判定与试答证据分开。</p><article><h2>ZB-0230-v1 · authoring_candidate</h2><img src="001.jpg" loading="lazy"><pre>{
+  &quot;id&quot;: &quot;ZB-0230-v1&quot;,
+  &quot;blockers&quot;: [],
+  &quot;review&quot;: [],
+  &quot;advisory&quot;: [],
+  &quot;metrics&quot;: {
+    &quot;width&quot;: 1200,
+    &quot;height&quot;: 1600,
+    &quot;mode&quot;: &quot;RGB&quot;,
+    &quot;exif_orientation&quot;: 1,
+    &quot;frame_count&quot;: 1,
+    &quot;global_640_proxy&quot;: {
+      &quot;contrast_p90_p10&quot;: 124.0,
+      &quot;gray_entropy_bits&quot;: 7.498467484184834,
+      &quot;edge_fraction_16&quot;: 0.291728085050874
+    },
+    &quot;object_count&quot;: 11,
+    &quot;objects_per_MP&quot;: 5.729166666666667,
+    &quot;class_count&quot;: 8,
+    &quot;known_fraction&quot;: 1.0,
+    &quot;repeated_classes&quot;: 3,
+    &quot;spatial_entropy_4x4&quot;: 0.8194033592047789,
+    &quot;median_bbox_short_px&quot;: 180.0,
+    &quot;p10_bbox_short_px&quot;: 145.0,
+    &quot;edge_touching_count&quot;: 1,
+    &quot;nearcolor_pair_count&quot;: 0,
+    &quot;different_class_neighbor_pairs&quot;: 10,
+    &quot;nearcolor_neighbor_fraction&quot;: 0.0,
+    &quot;bbox_overlap_pair_count&quot;: 0,
+    &quot;han_text_coverage&quot;: 0.0,
+    &quot;distinct_dependency_regions&quot;: 4,
+    &quot;effective_counterfactuals&quot;: 1
+  },
+  &quot;source&quot;: {
+    &quot;kind&quot;: &quot;real_photo&quot;,
+    &quot;url&quot;: &quot;https://commons.wikimedia.org/wiki/File:Spice_Bazaar_18283738.jpg&quot;,
+    &quot;license_url&quot;: &quot;https://creativecommons.org/licenses/by/2.0/&quot;,
+    &quot;authorization&quot;: &quot;verified&quot;,
+    &quot;scene_id&quot;: &quot;commons:1613524&quot;
+  },
+  &quot;difficulty_status&quot;: &quot;not_evaluated&quot;,
+  &quot;annotation_provenance&quot;: &quot;manual_sample_regions&quot;,
+  &quot;preview&quot;: &quot;001.jpg&quot;,
+  &quot;nearcolor_pairs&quot;: [],
+  &quot;overlap_candidates&quot;: [],
+  &quot;roi_metrics&quot;: [
+    {
+      &quot;id&quot;: &quot;A&quot;,
+      &quot;file&quot;: &quot;001_roi1.png&quot;,
+      &quot;contrast_p90_p10&quot;: 105.0,
+      &quot;gray_entropy_bits&quot;: 7.206724145006634,
+      &quot;edge_fraction_16&quot;: 0.054217199558985664
+    },
+    {
+      &quot;id&quot;: &quot;B&quot;,
+      &quot;file&quot;: &quot;001_roi2.png&quot;,
+      &quot;contrast_p90_p10&quot;: 120.0,
+      &quot;gray_entropy_bits&quot;: 7.304386179766236,
+      &quot;edge_fraction_16&quot;: 0.05579048453399825
+    },
+    {
+      &quot;id&quot;: &quot;C&quot;,
+      &quot;file&quot;: &quot;001_roi3.png&quot;,
+      &quot;contrast_p90_p10&quot;: 122.0,
+      &quot;gray_entropy_bits&quot;: 7.445895486012254,
+      &quot;edge_fraction_16&quot;: 0.30705014938799113
+    },
+    {
+      &quot;id&quot;: &quot;D&quot;,
+      &quot;file&quot;: &quot;001_roi4.png&quot;,
+      &quot;contrast_p90_p10&quot;: 119.0,
+      &quot;gray_entropy_bits&quot;: 7.405555479644418,
+      &quot;edge_fraction_16&quot;: 0.2527180748483747
+    }
+  ],
+  &quot;reasoning_metrics&quot;: {
+    &quot;node_count&quot;: 8,
+    &quot;max_depth&quot;: 5,
+    &quot;branch_nodes&quot;: 0,
+    &quot;join_nodes&quot;: 1,
+    &quot;multi_visual_join_nodes&quot;: 1,
+    &quot;output_count&quot;: 1,
+    &quot;outputs_with_visual_ancestry&quot;: 1,
+    &quot;output_visual_coverage&quot;: 1.0,
+    &quot;state_nodes&quot;: 1,
+    &quot;parameter_nodes&quot;: 1,
+    &quot;output_evidence_regions&quot;: {
+      &quot;out&quot;: [
+        &quot;A&quot;,
+        &quot;B&quot;,
+        &quot;C&quot;,
+        &quot;D&quot;
+      ]
+    }
+  },
+  &quot;platform_points&quot;: [
+    {
+      &quot;xy&quot;: [
+        100,
+        767
+      ],
+      &quot;label&quot;: &quot;C1 多色颗粒，区别于右侧纯色胡椒&quot;
+    },
+    {
+      &quot;xy&quot;: [
+        513,
+        635
+      ],
+      &quot;label&quot;: &quot;白胡椒标牌与其后方白色颗粒&quot;
+    },
+    {
+      &quot;xy&quot;: [
+        460,
+        1020
+      ],
+      &quot;label&quot;: &quot;ORANGE TEA 标牌指向前排茶料&quot;
+    }
+  ],
+  &quot;decision&quot;: &quot;authoring_candidate&quot;
+}</pre></article></html>

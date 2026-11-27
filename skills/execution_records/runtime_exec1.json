@@ -1,0 +1,14 @@
+{
+  "exit_code": 0,
+  "status": "completed",
+  "output": "{\"width\": 1960, \"height\": 1600, \"edge_pixels\": 249455, \"mean_intensity\": 162.22546875, \"persistent_marker\": \"first-tool-call\"}\n",
+  "output_bytes": 127,
+  "saved_log_bytes": 127,
+  "output_truncated": false,
+  "reader_errors": [],
+  "stdout_log": "/Users/hepeize/.local/share/zerobench-runtime/trials/unified-runtime-check-01/logs/20261126T185929-7449f734a6.stdout.txt",
+  "code_log": "/Users/hepeize/.local/share/zerobench-runtime/trials/unified-runtime-check-01/logs/20261126T185929-7449f734a6.py",
+  "seconds": 0.743,
+  "effective_timeout_seconds": 30.0,
+  "state_scope": "new Python process; persistent trial files"
+}

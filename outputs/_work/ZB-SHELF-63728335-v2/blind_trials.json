@@ -1,0 +1,57 @@
+{
+  "question_id": "ZB-SHELF-63728335-v2",
+  "frozen_version": "v2",
+  "tools_enabled": true,
+  "ground_truth_answer": "32,14,5,2,766,642|8,4|14,12,2|638,1,610,1|510,2,534,1|N,M,1,A2-B1;A4-B3",
+  "total_fields": 23,
+  "hardening_history": {
+    "v1_valid_trials": 3,
+    "v1_exact_correct": 3,
+    "v1_conversation_ids": [
+      "6f385462-4e7a-475e-91c7-0a2fd01c1f1d",
+      "6749fd99-813d-40ed-bb0b-9724398f1a10",
+      "65243a04-cde7-4bf9-b524-96d656e9cd68"
+    ],
+    "v1_to_v2_changes": "移除题面中所有布局网格与干扰签提示，新增电子价签双口径（Kr Pr/Stk 与 floor(Pr/kg)）、中层 B1/B2 绿底白钥匙孔营养标识计数（含 B2 底层右罐倒置图标）与 A3 竖叠列翘起米金色易撕耳片计数（第 1、5 罐），并使工况 1 的 M 组出现 2 组并列最优。"
+  },
+  "summary": {
+    "valid_trials": 3,
+    "exact_correct": 3,
+    "exact_incorrect": 0,
+    "timeout": 0,
+    "infra_error": 0,
+    "partial": 0
+  },
+  "trials": [
+    {
+      "trial_id": "trial_1",
+      "conversation_id": "fd1ba391-4f2e-44a6-931c-5d72fe5cc04e",
+      "status": "valid_complete",
+      "answer": "32,14,5,2,766,642|8,4|14,12,2|638,1,610,1|510,2,534,1|N,M,1,A2-B1;A4-B3",
+      "exact_match": true,
+      "correct_fields": 23,
+      "wrong_fields": [],
+      "attribution": "独立裁剪放大量测全部 7 货位（N=32, E=14, K=5, tab_A3=2）、5 张清晰双口径电子价签（p10=766, kg=642，正确排除 13.10 肝酱签与红下箭头 14.80 签）及跨层水平中心，23/23 字段全对，无歧义。"
+    },
+    {
+      "trial_id": "trial_2",
+      "conversation_id": "e6340a72-68f8-4e6e-92c9-baa3f4e0e8c1",
+      "status": "valid_complete",
+      "answer": "32,14,5,2,766,642|8,4|14,12,2|638,1,610,1|510,2,534,1|N,M,1,A2-B1;A4-B3",
+      "exact_match": true,
+      "correct_fields": 23,
+      "wrong_fields": [],
+      "attribution": "独立复核全部货位朝向（含 A3 第 4 罐背面、A4 仅右上正立、B3 仅前左/中左正立）、B2 底层右罐倒置绿色钥匙孔与 A3 第 1/5 罐翘起耳片，23/23 字段全对，无歧义。"
+    },
+    {
+      "trial_id": "trial_3",
+      "conversation_id": "ca3984a0-e462-418b-9780-24f19a0c14fe",
+      "status": "valid_complete",
+      "answer": "32,14,5,2,766,642|8,4|14,12,2|638,1,610,1|510,2,534,1|N,M,1,A2-B1;A4-B3",
+      "exact_match": true,
+      "correct_fields": 23,
+      "wrong_fields": [],
+      "attribution": "独立识别全部 7 货位视觉属性、5 张双口径价签与 8 条兼容边/14 组方案，准确捕获工况 1 下 M 组并列数 2（A2-B1;A4-B3 与 A2-B2;A4-B3）与反转位 1，23/23 字段全对，无歧义。"
+    }
+  ]
+}

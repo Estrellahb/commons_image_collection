@@ -1,0 +1,622 @@
+{
+  "schema_version": 1,
+  "summary": {
+    "authoring_candidate": 1
+  },
+  "duplicate_scene_groups": {},
+  "items": [
+    {
+      "id": "ZB-TRANSIT-172600032-v2",
+      "blockers": [],
+      "review": [],
+      "advisory": [],
+      "metrics": {
+        "width": 4032,
+        "height": 3024,
+        "mode": "RGB",
+        "exif_orientation": 1,
+        "frame_count": 1,
+        "global_640_proxy": {
+          "contrast_p90_p10": 166.0,
+          "gray_entropy_bits": 7.476981689122914,
+          "edge_fraction_16": 0.20104683015914426
+        },
+        "object_count": 124,
+        "objects_per_MP": 10.169963046947174,
+        "class_count": 3,
+        "known_fraction": 1.0,
+        "repeated_classes": 3,
+        "spatial_entropy_4x4": 0.5866186517406194,
+        "median_bbox_short_px": 26.0,
+        "p10_bbox_short_px": 25.0,
+        "edge_touching_count": 0,
+        "nearcolor_pair_count": 84,
+        "different_class_neighbor_pairs": 84,
+        "nearcolor_neighbor_fraction": 1.0,
+        "bbox_overlap_pair_count": 0,
+        "han_text_coverage": 0.0,
+        "distinct_dependency_regions": 8,
+        "effective_counterfactuals": 3
+      },
+      "source": {
+        "kind": "real_photo",
+        "url": "https://commons.wikimedia.org/wiki/File:Amsterdam_Airport_Schiphol_-_Flights_departures_board_2025-08-13.jpg",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "authorization": "verified",
+        "scene_id": "commons:172600032:schiphol-departures-2025-08-13",
+        "attribution": "Sebleouf, CC BY-SA 4.0",
+        "native_resolution": [
+          4032,
+          3024
+        ],
+        "ingest_transform": "Lossy JPEG re-encoding. EXIF orientation applied; only color-related metadata kept.",
+        "license_evidence": "source_page.html",
+        "dedup_evidence": "qa_notes.md"
+      },
+      "difficulty_status": "no_complete_failure_recorded",
+      "annotation_provenance": "人工逐行抄录，行框见本目录构建脚本",
+      "preview": "001.jpg",
+      "nearcolor_pairs": [
+        {
+          "a": "UA071",
+          "b": "DL9281",
+          "deltaE76": 7.624472610860896
+        },
+        {
+          "a": "KL0713",
+          "b": "UA071",
+          "deltaE76": 4.86050001322568
+        },
+        {
+          "a": "DL9235",
+          "b": "UA071",
+          "deltaE76": 7.437627519004708
+        },
+        {
+          "a": "UA9791",
+          "b": "KL0713",
+          "deltaE76": 7.552273467429433
+        },
+        {
+          "a": "UA9791",
+          "b": "DL9235",
+          "deltaE76": 5.571389229587762
+        },
+        {
+          "a": "EZY2162",
+          "b": "UA9791",
+          "deltaE76": 6.488035119391318
+        },
+        {
+          "a": "ET1217",
+          "b": "CI9291",
+          "deltaE76": 5.36296832772929
+        },
+        {
+          "a": "ET1217",
+          "b": "CZ7644",
+          "deltaE76": 5.888694012660674
+        },
+        {
+          "a": "ET1217",
+          "b": "MH5653",
+          "deltaE76": 3.4838136708407332
+        },
+        {
+          "a": "AF8243",
+          "b": "ET1217",
+          "deltaE76": 4.713985451270164
+        },
+        {
+          "a": "AI8542",
+          "b": "DL9543",
+          "deltaE76": 4.616219780507983
+        },
+        {
+          "a": "AI8542",
+          "b": "SK6818",
+          "deltaE76": 6.356784794675266
+        },
+        {
+          "a": "AI8542",
+          "b": "CI9597",
+          "deltaE76": 5.217568849183204
+        },
+        {
+          "a": "BT618",
+          "b": "AI8542",
+          "deltaE76": 4.730036864249114
+        },
+        {
+          "a": "FR421",
+          "b": "DL9290",
+          "deltaE76": 1.8840771516451942
+        },
+        {
+          "a": "FR421",
+          "b": "DL9617",
+          "deltaE76": 5.466405877143532
+        },
+        {
+          "a": "FR421",
+          "b": "DL9315",
+          "deltaE76": 5.337370108670231
+        },
+        {
+          "a": "FB462",
+          "b": "FR421",
+          "deltaE76": 4.807186338548908
+        },
+        {
+          "a": "AF3208",
+          "b": "UA9791",
+          "deltaE76": 6.187580569806593
+        },
+        {
+          "a": "DL9207",
+          "b": "UA9791",
+          "deltaE76": 0.8984805873652485
+        },
+        {
+          "a": "GA9764",
+          "b": "ET1217",
+          "deltaE76": 2.5378980170139567
+        },
+        {
+          "a": "SK552",
+          "b": "ET1217",
+          "deltaE76": 2.498982773637166
+        },
+        {
+          "a": "AA6902",
+          "b": "CI9597",
+          "deltaE76": 3.1496889241554418
+        },
+        {
+          "a": "AA6902",
+          "b": "AI8542",
+          "deltaE76": 6.3834234361317455
+        },
+        {
+          "a": "AA6902",
+          "b": "LO266",
+          "deltaE76": 6.013706532090296
+        },
+        {
+          "a": "CI9293",
+          "b": "AI8542",
+          "deltaE76": 4.238884388442516
+        },
+        {
+          "a": "CI9293",
+          "b": "AA6902",
+          "deltaE76": 5.564024335646687
+        },
+        {
+          "a": "SQ323",
+          "b": "SK6730",
+          "deltaE76": 3.4163129870847584
+        },
+        {
+          "a": "SQ323",
+          "b": "VS3946",
+          "deltaE76": 3.7299212224111105
+        },
+        {
+          "a": "UA021",
+          "b": "DL9315",
+          "deltaE76": 7.515067918251649
+        },
+        {
+          "a": "UA021",
+          "b": "FR421",
+          "deltaE76": 6.6967222528692005
+        },
+        {
+          "a": "EJU7843",
+          "b": "DL9315",
+          "deltaE76": 8.802613844604437
+        },
+        {
+          "a": "EJU7843",
+          "b": "FB462",
+          "deltaE76": 8.492076999539382
+        },
+        {
+          "a": "EJU7843",
+          "b": "UA021",
+          "deltaE76": 5.003042736728925
+        },
+        {
+          "a": "CI9230",
+          "b": "FR421",
+          "deltaE76": 5.819491936476436
+        },
+        {
+          "a": "CI9230",
+          "b": "FB462",
+          "deltaE76": 7.019768076897049
+        },
+        {
+          "a": "CI9230",
+          "b": "AF3208",
+          "deltaE76": 5.819491936476436
+        },
+        {
+          "a": "CI9230",
+          "b": "EJU7843",
+          "deltaE76": 4.179648313690135
+        },
+        {
+          "a": "SK556",
+          "b": "CI9230",
+          "deltaE76": 4.428968884873056
+        },
+        {
+          "a": "UA947",
+          "b": "VY8379",
+          "deltaE76": 9.3874448984694
+        },
+        {
+          "a": "UA947",
+          "b": "VS3944",
+          "deltaE76": 5.975396676805439
+        },
+        {
+          "a": "UA947",
+          "b": "CZ7603",
+          "deltaE76": 9.478811329095983
+        },
+        {
+          "a": "UA947",
+          "b": "VS3951",
+          "deltaE76": 4.163206616207699
+        },
+        {
+          "a": "TK1952",
+          "b": "UA947",
+          "deltaE76": 4.163206616207699
+        },
+        {
+          "a": "TG7853",
+          "b": "CZ7603",
+          "deltaE76": 9.478811329095983
+        },
+        {
+          "a": "TG7853",
+          "b": "GA9764",
+          "deltaE76": 5.975396676805439
+        },
+        {
+          "a": "TG7853",
+          "b": "SK552",
+          "deltaE76": 9.060694941071713
+        },
+        {
+          "a": "TG7853",
+          "b": "TK1952",
+          "deltaE76": 4.163206616207699
+        },
+        {
+          "a": "VS7166",
+          "b": "TG7853",
+          "deltaE76": 4.282858299645025
+        },
+        {
+          "a": "EZY2180",
+          "b": "IB5235",
+          "deltaE76": 4.850270812861502
+        },
+        {
+          "a": "EZY2180",
+          "b": "CZ7650",
+          "deltaE76": 6.6724830668214725
+        },
+        {
+          "a": "EZY2180",
+          "b": "VS7152",
+          "deltaE76": 5.027397138140189
+        },
+        {
+          "a": "EZY2180",
+          "b": "B60032",
+          "deltaE76": 3.792096372440571
+        },
+        {
+          "a": "UA9203",
+          "b": "CZ7650",
+          "deltaE76": 9.722920294864094
+        },
+        {
+          "a": "UA9203",
+          "b": "VS7152",
+          "deltaE76": 4.888402530971402
+        },
+        {
+          "a": "UA9203",
+          "b": "DL9329",
+          "deltaE76": 9.585898996762308
+        },
+        {
+          "a": "UA9203",
+          "b": "EZY2180",
+          "deltaE76": 4.570525534447323
+        },
+        {
+          "a": "OU451",
+          "b": "VS7152",
+          "deltaE76": 4.7147875177012795
+        },
+        {
+          "a": "OU451",
+          "b": "DL9329",
+          "deltaE76": 6.5337496622738795
+        },
+        {
+          "a": "OU451",
+          "b": "KQ1585",
+          "deltaE76": 4.192942364899498
+        },
+        {
+          "a": "BA8452",
+          "b": "OU451",
+          "deltaE76": 4.051883865159961
+        },
+        {
+          "a": "DL9165",
+          "b": "AA6902",
+          "deltaE76": 3.5866849347425385
+        },
+        {
+          "a": "SK6652",
+          "b": "AA6902",
+          "deltaE76": 3.436422940787554
+        },
+        {
+          "a": "KC904",
+          "b": "AA6902",
+          "deltaE76": 3.759721518331015
+        },
+        {
+          "a": "KC904",
+          "b": "CI9293",
+          "deltaE76": 5.856168062558767
+        },
+        {
+          "a": "KC904",
+          "b": "VS3942",
+          "deltaE76": 2.8833576058617068
+        },
+        {
+          "a": "KC904",
+          "b": "SK6652",
+          "deltaE76": 3.1292649373721613
+        },
+        {
+          "a": "CI9225",
+          "b": "KC904",
+          "deltaE76": 3.7189578613644256
+        },
+        {
+          "a": "QF8146",
+          "b": "VS3752",
+          "deltaE76": 9.60137172095971
+        },
+        {
+          "a": "QF8146",
+          "b": "SK6752",
+          "deltaE76": 6.566759104791678
+        },
+        {
+          "a": "QF8146",
+          "b": "CI9225",
+          "deltaE76": 5.894534637036801
+        },
+        {
+          "a": "BA431",
+          "b": "QF8146",
+          "deltaE76": 5.816774635071897
+        },
+        {
+          "a": "RO362",
+          "b": "SK6752",
+          "deltaE76": 4.297241715698675
+        },
+        {
+          "a": "RO362",
+          "b": "SK822",
+          "deltaE76": 6.773116509491826
+        },
+        {
+          "a": "RO362",
+          "b": "IB5969",
+          "deltaE76": 4.816983862335666
+        },
+        {
+          "a": "RO362",
+          "b": "BA431",
+          "deltaE76": 3.438264045789496
+        },
+        {
+          "a": "RM1652",
+          "b": "RO362",
+          "deltaE76": 3.6396247597774405
+        },
+        {
+          "a": "LY338",
+          "b": "AY4133",
+          "deltaE76": 3.713262616875304
+        },
+        {
+          "a": "LY338",
+          "b": "DL9184",
+          "deltaE76": 5.465643134414143
+        },
+        {
+          "a": "LY338",
+          "b": "VS3946",
+          "deltaE76": 3.993078082397133
+        },
+        {
+          "a": "LY338",
+          "b": "SK6836",
+          "deltaE76": 3.935746014193406
+        },
+        {
+          "a": "VS3952",
+          "b": "SQ323",
+          "deltaE76": 6.978394822075801
+        },
+        {
+          "a": "VS3952",
+          "b": "LY338",
+          "deltaE76": 3.901437003597154
+        },
+        {
+          "a": "KQ1187",
+          "b": "SQ323",
+          "deltaE76": 4.221628698575259
+        }
+      ],
+      "overlap_candidates": [],
+      "roi_metrics": [
+        {
+          "id": "A",
+          "file": "001_roi1.png",
+          "contrast_p90_p10": 132.0,
+          "gray_entropy_bits": 6.870913687224341,
+          "edge_fraction_16": 0.10714177456624487
+        },
+        {
+          "id": "B",
+          "file": "001_roi2.png",
+          "contrast_p90_p10": 132.0,
+          "gray_entropy_bits": 6.961247119213654,
+          "edge_fraction_16": 0.10879058368049266
+        },
+        {
+          "id": "C",
+          "file": "001_roi3.png",
+          "contrast_p90_p10": 129.0,
+          "gray_entropy_bits": 6.791547517580764,
+          "edge_fraction_16": 0.08958656511308317
+        },
+        {
+          "id": "D",
+          "file": "001_roi4.png",
+          "contrast_p90_p10": 121.0,
+          "gray_entropy_bits": 6.8025189999515305,
+          "edge_fraction_16": 0.07586394652129877
+        },
+        {
+          "id": "B-help",
+          "file": "001_roi5.png",
+          "contrast_p90_p10": 39.0,
+          "gray_entropy_bits": 5.8520821745498735,
+          "edge_fraction_16": 0.0978756898259516
+        },
+        {
+          "id": "B-gate",
+          "file": "001_roi6.png",
+          "contrast_p90_p10": 47.0,
+          "gray_entropy_bits": 6.025309748312007,
+          "edge_fraction_16": 0.10563320983496127
+        },
+        {
+          "id": "D-gate",
+          "file": "001_roi7.png",
+          "contrast_p90_p10": 42.0,
+          "gray_entropy_bits": 5.833641439972512,
+          "edge_fraction_16": 0.06782108337014967
+        },
+        {
+          "id": "C-heathrow",
+          "file": "001_roi8.png",
+          "contrast_p90_p10": 55.0,
+          "gray_entropy_bits": 5.955017088344456,
+          "edge_fraction_16": 0.11138238022494312
+        }
+      ],
+      "reasoning_metrics": {
+        "node_count": 16,
+        "max_depth": 6,
+        "branch_nodes": 9,
+        "join_nodes": 8,
+        "multi_visual_join_nodes": 8,
+        "output_count": 5,
+        "outputs_with_visual_ancestry": 5,
+        "output_visual_coverage": 1.0,
+        "state_nodes": 4,
+        "parameter_nodes": 1,
+        "output_evidence_regions": {
+          "q1": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "q2": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "q3": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "q4": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "q5": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        }
+      },
+      "platform_points": [
+        {
+          "xy": [
+            1887,
+            1372
+          ],
+          "label": "B 屏 T3 位于 UA9791 的 Zurich 行。正上方 DL9235 的 Help 格为空。"
+        },
+        {
+          "xy": [
+            2157,
+            1770
+          ],
+          "label": "B 屏 DL9351 的 Gate 为 C11。它不进入候选对，但计入拥挤费。"
+        },
+        {
+          "xy": [
+            3704,
+            1957
+          ],
+          "label": "D 屏 CI9225 也用 C11。与 B 屏的记录共同决定这行的拥挤费。"
+        }
+      ],
+      "evaluation_counts": {
+        "correct": 3,
+        "incorrect": 0,
+        "timeout": 0,
+        "infra_error": 0,
+        "partial": 0
+      },
+      "decision": "authoring_candidate"
+    }
+  ],
+  "limitations": [
+    "没有模型调用；指标不是难度证明",
+    "同场景分组只依赖显式scene_id，不是视觉去重",
+    "人工复核字段是声明，需审查其证据"
+  ]
+}

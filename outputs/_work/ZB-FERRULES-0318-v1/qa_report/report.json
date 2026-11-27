@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "summary": {
+    "authoring_candidate": 1
+  },
+  "duplicate_scene_groups": {},
+  "items": [
+    {
+      "id": "ZB-FERRULES-0318-v1",
+      "blockers": [],
+      "review": [],
+      "advisory": [],
+      "metrics": {
+        "width": 4409,
+        "height": 3185,
+        "mode": "RGB",
+        "exif_orientation": 1,
+        "frame_count": 1,
+        "global_640_proxy": {
+          "contrast_p90_p10": 183.0,
+          "gray_entropy_bits": 7.781185731867042,
+          "edge_fraction_16": 0.18474971961413483
+        },
+        "object_count": 12,
+        "objects_per_MP": 0.854538650605138,
+        "class_count": 10,
+        "known_fraction": 1.0,
+        "repeated_classes": 2,
+        "spatial_entropy_4x4": 0.6721804688852168,
+        "median_bbox_short_px": 450.0,
+        "p10_bbox_short_px": 352.5,
+        "edge_touching_count": 0,
+        "nearcolor_pair_count": 0,
+        "different_class_neighbor_pairs": 26,
+        "nearcolor_neighbor_fraction": 0.0,
+        "bbox_overlap_pair_count": 0,
+        "han_text_coverage": 0.0,
+        "distinct_dependency_regions": 3,
+        "effective_counterfactuals": 2
+      },
+      "source": {
+        "kind": "real_photo",
+        "url": "https://commons.wikimedia.org/wiki/File:Dornbirn-wire_ferrules-01ASD.jpg",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "authorization": "verified",
+        "scene_id": "commons:106783997",
+        "verification_basis": "来源与许可.jsonl matching original page_id, author, license and native dimensions",
+        "live_page_check": "HTTP 429 rate limited; source snapshot metadata retained in source.json"
+      },
+      "difficulty_status": "no_complete_failure_recorded",
+      "annotation_provenance": "manual_author_fact_table",
+      "preview": "001.jpg",
+      "nearcolor_pairs": [],
+      "overlap_candidates": [],
+      "roi_metrics": [
+        {
+          "id": "roi_A3",
+          "file": "001_roi1.png",
+          "contrast_p90_p10": 200.0,
+          "gray_entropy_bits": 7.73182704866824,
+          "edge_fraction_16": 0.14525272795685437
+        },
+        {
+          "id": "roi_B3_B4",
+          "file": "001_roi2.png",
+          "contrast_p90_p10": 210.0,
+          "gray_entropy_bits": 7.587896501212066,
+          "edge_fraction_16": 0.10269240287057659
+        },
+        {
+          "id": "roi_C3",
+          "file": "001_roi3.png",
+          "contrast_p90_p10": 177.0,
+          "gray_entropy_bits": 7.771954640999991,
+          "edge_fraction_16": 0.06887395243028799
+        }
+      ],
+      "reasoning_metrics": {
+        "node_count": 13,
+        "max_depth": 8,
+        "branch_nodes": 5,
+        "join_nodes": 5,
+        "multi_visual_join_nodes": 5,
+        "output_count": 3,
+        "outputs_with_visual_ancestry": 3,
+        "output_visual_coverage": 1.0,
+        "state_nodes": 0,
+        "parameter_nodes": 3,
+        "output_evidence_regions": {
+          "mode0": [
+            "roi_A3",
+            "roi_B3_B4",
+            "roi_C3"
+          ],
+          "mode1": [
+            "roi_A3",
+            "roi_B3_B4",
+            "roi_C3"
+          ],
+          "changed": [
+            "roi_A3",
+            "roi_B3_B4",
+            "roi_C3"
+          ]
+        }
+      },
+      "measurement_margins": [
+        {
+          "id": "all_AB_pairs",
+          "ratio": 3.375,
+          "unit": "px"
+        },
+        {
+          "id": "all_BC_pairs",
+          "ratio": 1.9375,
+          "unit": "px"
+        }
+      ],
+      "platform_points": [
+        {
+          "xy": [
+            2460,
+            1870
+          ],
+          "label": "A3内红黄混色端子隔间，决定颜色集合"
+        },
+        {
+          "xy": [
+            3010,
+            2235
+          ],
+          "label": "B3与B4之间的黄色分隔板，决定两个白灰隔间"
+        },
+        {
+          "xy": [
+            3500,
+            2200
+          ],
+          "label": "C3同一长隔间内同时可见蓝色和绿色端子"
+        }
+      ],
+      "evaluation_counts": {
+        "correct": 3,
+        "incorrect": 0,
+        "timeout": 0,
+        "infra_error": 0,
+        "partial": 0
+      },
+      "decision": "authoring_candidate"
+    }
+  ],
+  "limitations": [
+    "没有模型调用；指标不是难度证明",
+    "同场景分组只依赖显式scene_id，不是视觉去重",
+    "人工复核字段是声明，需审查其证据"
+  ]
+}

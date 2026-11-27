@@ -1,0 +1,39 @@
+{
+  "viewports": [
+    {
+      "width": 1440,
+      "same_embedded_original": true,
+      "marker_geometry": "passed",
+      "layout": "passed"
+    },
+    {
+      "width": 430,
+      "same_embedded_original": true,
+      "marker_geometry": "passed",
+      "layout": "passed"
+    }
+  ],
+  "copy_fields": [
+    "question_id",
+    "title",
+    "question_types",
+    "image_major",
+    "image_minor",
+    "difficulty",
+    "native_size",
+    "source",
+    "artist",
+    "license",
+    "modifications",
+    "platform_points",
+    "prompt",
+    "thinking",
+    "cot_image_understanding",
+    "cot_reasoning",
+    "response",
+    "qa_summary"
+  ],
+  "network_requests": [],
+  "page_errors": [],
+  "fallback_copy": "passed"
+}

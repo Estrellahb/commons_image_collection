@@ -1,0 +1,1489 @@
+{
+  "version": "ZB-FERRULES-0318-v1",
+  "baseline": {
+    "compartment_counts": [
+      5,
+      4,
+      3
+    ],
+    "A3_colors": [
+      "R",
+      "Y"
+    ],
+    "C3_colors": [
+      "B",
+      "G"
+    ],
+    "distance_A2_B3_px": 865,
+    "distance_B4_C2_px": 1532.5,
+    "ab_edges": [
+      [
+        "A1",
+        "B1"
+      ],
+      [
+        "A1",
+        "B2"
+      ],
+      [
+        "A2",
+        "B1"
+      ],
+      [
+        "A2",
+        "B2"
+      ],
+      [
+        "A2",
+        "B3"
+      ],
+      [
+        "A3",
+        "B2"
+      ],
+      [
+        "A3",
+        "B3"
+      ],
+      [
+        "A3",
+        "B4"
+      ]
+    ],
+    "bc_edges": [
+      [
+        "B1",
+        "C2"
+      ],
+      [
+        "B2",
+        "C2"
+      ],
+      [
+        "B2",
+        "C3"
+      ],
+      [
+        "B3",
+        "C2"
+      ],
+      [
+        "B3",
+        "C3"
+      ],
+      [
+        "B4",
+        "C2"
+      ],
+      [
+        "B4",
+        "C3"
+      ]
+    ],
+    "ab_count": 8,
+    "bc_count": 7,
+    "relay_count": 22,
+    "plan_count": 28,
+    "optimum": {
+      "0": {
+        "cost": 30,
+        "count": 1,
+        "canonical": "A1B/B2K/C2R;A2R/B3W/C3B",
+        "all_winners": [
+          "A1B/B2K/C2R;A2R/B3W/C3B"
+        ]
+      },
+      "1": {
+        "cost": 31,
+        "count": 1,
+        "canonical": "A1B/B1Y/C2R;A2R/B3W/C3G",
+        "all_winners": [
+          "A1B/B1Y/C2R;A2R/B3W/C3G"
+        ]
+      }
+    },
+    "canonical_changed": 1,
+    "relays": [
+      {
+        "code": "A1B/B1Y/C2R",
+        "ids": [
+          "A1",
+          "B1",
+          "C2"
+        ],
+        "colors": [
+          "B",
+          "Y",
+          "R"
+        ]
+      },
+      {
+        "code": "A1B/B2K/C2R",
+        "ids": [
+          "A1",
+          "B2",
+          "C2"
+        ],
+        "colors": [
+          "B",
+          "K",
+          "R"
+        ]
+      },
+      {
+        "code": "A1B/B2K/C3G",
+        "ids": [
+          "A1",
+          "B2",
+          "C3"
+        ],
+        "colors": [
+          "B",
+          "K",
+          "G"
+        ]
+      },
+      {
+        "code": "A2R/B2K/C3B",
+        "ids": [
+          "A2",
+          "B2",
+          "C3"
+        ],
+        "colors": [
+          "R",
+          "K",
+          "B"
+        ]
+      },
+      {
+        "code": "A2R/B2K/C3G",
+        "ids": [
+          "A2",
+          "B2",
+          "C3"
+        ],
+        "colors": [
+          "R",
+          "K",
+          "G"
+        ]
+      },
+      {
+        "code": "A2R/B3W/C3B",
+        "ids": [
+          "A2",
+          "B3",
+          "C3"
+        ],
+        "colors": [
+          "R",
+          "W",
+          "B"
+        ]
+      },
+      {
+        "code": "A2R/B3W/C3G",
+        "ids": [
+          "A2",
+          "B3",
+          "C3"
+        ],
+        "colors": [
+          "R",
+          "W",
+          "G"
+        ]
+      },
+      {
+        "code": "A3Y/B2K/C2R",
+        "ids": [
+          "A3",
+          "B2",
+          "C2"
+        ],
+        "colors": [
+          "Y",
+          "K",
+          "R"
+        ]
+      },
+      {
+        "code": "A3R/B2K/C3B",
+        "ids": [
+          "A3",
+          "B2",
+          "C3"
+        ],
+        "colors": [
+          "R",
+          "K",
+          "B"
+        ]
+      },
+      {
+        "code": "A3R/B2K/C3G",
+        "ids": [
+          "A3",
+          "B2",
+          "C3"
+        ],
+        "colors": [
+          "R",
+          "K",
+          "G"
+        ]
+      },
+      {
+        "code": "A3Y/B2K/C3B",
+        "ids": [
+          "A3",
+          "B2",
+          "C3"
+        ],
+        "colors": [
+          "Y",
+          "K",
+          "B"
+        ]
+      },
+      {
+        "code": "A3Y/B2K/C3G",
+        "ids": [
+          "A3",
+          "B2",
+          "C3"
+        ],
+        "colors": [
+          "Y",
+          "K",
+          "G"
+        ]
+      },
+      {
+        "code": "A3Y/B3W/C2R",
+        "ids": [
+          "A3",
+          "B3",
+          "C2"
+        ],
+        "colors": [
+          "Y",
+          "W",
+          "R"
+        ]
+      },
+      {
+        "code": "A3R/B3W/C3B",
+        "ids": [
+          "A3",
+          "B3",
+          "C3"
+        ],
+        "colors": [
+          "R",
+          "W",
+          "B"
+        ]
+      },
+      {
+        "code": "A3R/B3W/C3G",
+        "ids": [
+          "A3",
+          "B3",
+          "C3"
+        ],
+        "colors": [
+          "R",
+          "W",
+          "G"
+        ]
+      },
+      {
+        "code": "A3Y/B3W/C3B",
+        "ids": [
+          "A3",
+          "B3",
+          "C3"
+        ],
+        "colors": [
+          "Y",
+          "W",
+          "B"
+        ]
+      },
+      {
+        "code": "A3Y/B3W/C3G",
+        "ids": [
+          "A3",
+          "B3",
+          "C3"
+        ],
+        "colors": [
+          "Y",
+          "W",
+          "G"
+        ]
+      },
+      {
+        "code": "A3Y/B4W/C2R",
+        "ids": [
+          "A3",
+          "B4",
+          "C2"
+        ],
+        "colors": [
+          "Y",
+          "W",
+          "R"
+        ]
+      },
+      {
+        "code": "A3R/B4W/C3B",
+        "ids": [
+          "A3",
+          "B4",
+          "C3"
+        ],
+        "colors": [
+          "R",
+          "W",
+          "B"
+        ]
+      },
+      {
+        "code": "A3R/B4W/C3G",
+        "ids": [
+          "A3",
+          "B4",
+          "C3"
+        ],
+        "colors": [
+          "R",
+          "W",
+          "G"
+        ]
+      },
+      {
+        "code": "A3Y/B4W/C3B",
+        "ids": [
+          "A3",
+          "B4",
+          "C3"
+        ],
+        "colors": [
+          "Y",
+          "W",
+          "B"
+        ]
+      },
+      {
+        "code": "A3Y/B4W/C3G",
+        "ids": [
+          "A3",
+          "B4",
+          "C3"
+        ],
+        "colors": [
+          "Y",
+          "W",
+          "G"
+        ]
+      }
+    ],
+    "plans": [
+      {
+        "code": "A1B/B1Y/C2R;A2R/B3W/C3B",
+        "cost": {
+          "0": 34,
+          "1": 37
+        }
+      },
+      {
+        "code": "A1B/B1Y/C2R;A2R/B3W/C3G",
+        "cost": {
+          "0": 36,
+          "1": 31
+        }
+      },
+      {
+        "code": "A1B/B1Y/C2R;A3R/B3W/C3B",
+        "cost": {
+          "0": 35,
+          "1": 38
+        }
+      },
+      {
+        "code": "A1B/B1Y/C2R;A3R/B3W/C3G",
+        "cost": {
+          "0": 37,
+          "1": 32
+        }
+      },
+      {
+        "code": "A1B/B1Y/C2R;A3R/B4W/C3B",
+        "cost": {
+          "0": 36,
+          "1": 39
+        }
+      },
+      {
+        "code": "A1B/B1Y/C2R;A3R/B4W/C3G",
+        "cost": {
+          "0": 38,
+          "1": 33
+        }
+      },
+      {
+        "code": "A1B/B1Y/C2R;A3Y/B3W/C3B",
+        "cost": {
+          "0": 37,
+          "1": 39
+        }
+      },
+      {
+        "code": "A1B/B1Y/C2R;A3Y/B3W/C3G",
+        "cost": {
+          "0": 39,
+          "1": 33
+        }
+      },
+      {
+        "code": "A1B/B1Y/C2R;A3Y/B4W/C3B",
+        "cost": {
+          "0": 38,
+          "1": 40
+        }
+      },
+      {
+        "code": "A1B/B1Y/C2R;A3Y/B4W/C3G",
+        "cost": {
+          "0": 40,
+          "1": 34
+        }
+      },
+      {
+        "code": "A1B/B2K/C2R;A2R/B3W/C3B",
+        "cost": {
+          "0": 30,
+          "1": 40
+        }
+      },
+      {
+        "code": "A1B/B2K/C2R;A2R/B3W/C3G",
+        "cost": {
+          "0": 32,
+          "1": 34
+        }
+      },
+      {
+        "code": "A1B/B2K/C2R;A3R/B3W/C3B",
+        "cost": {
+          "0": 31,
+          "1": 41
+        }
+      },
+      {
+        "code": "A1B/B2K/C2R;A3R/B3W/C3G",
+        "cost": {
+          "0": 33,
+          "1": 35
+        }
+      },
+      {
+        "code": "A1B/B2K/C2R;A3R/B4W/C3B",
+        "cost": {
+          "0": 32,
+          "1": 42
+        }
+      },
+      {
+        "code": "A1B/B2K/C2R;A3R/B4W/C3G",
+        "cost": {
+          "0": 34,
+          "1": 36
+        }
+      },
+      {
+        "code": "A1B/B2K/C2R;A3Y/B3W/C3B",
+        "cost": {
+          "0": 33,
+          "1": 42
+        }
+      },
+      {
+        "code": "A1B/B2K/C2R;A3Y/B3W/C3G",
+        "cost": {
+          "0": 35,
+          "1": 36
+        }
+      },
+      {
+        "code": "A1B/B2K/C2R;A3Y/B4W/C3B",
+        "cost": {
+          "0": 34,
+          "1": 43
+        }
+      },
+      {
+        "code": "A1B/B2K/C2R;A3Y/B4W/C3G",
+        "cost": {
+          "0": 36,
+          "1": 37
+        }
+      },
+      {
+        "code": "A1B/B2K/C3G;A3Y/B3W/C2R",
+        "cost": {
+          "0": 35,
+          "1": 36
+        }
+      },
+      {
+        "code": "A1B/B2K/C3G;A3Y/B4W/C2R",
+        "cost": {
+          "0": 36,
+          "1": 37
+        }
+      },
+      {
+        "code": "A2R/B2K/C3B;A3Y/B3W/C2R",
+        "cost": {
+          "0": 35,
+          "1": 38
+        }
+      },
+      {
+        "code": "A2R/B2K/C3B;A3Y/B4W/C2R",
+        "cost": {
+          "0": 36,
+          "1": 39
+        }
+      },
+      {
+        "code": "A2R/B2K/C3G;A3Y/B3W/C2R",
+        "cost": {
+          "0": 37,
+          "1": 32
+        }
+      },
+      {
+        "code": "A2R/B2K/C3G;A3Y/B4W/C2R",
+        "cost": {
+          "0": 38,
+          "1": 33
+        }
+      },
+      {
+        "code": "A2R/B3W/C3B;A3Y/B2K/C2R",
+        "cost": {
+          "0": 35,
+          "1": 38
+        }
+      },
+      {
+        "code": "A2R/B3W/C3G;A3Y/B2K/C2R",
+        "cost": {
+          "0": 37,
+          "1": 32
+        }
+      }
+    ]
+  },
+  "counterfactuals": {
+    "C3_misread_as_blue_only": {
+      "changed_input": {
+        "C3": [
+          "B"
+        ]
+      },
+      "changed_fields": {
+        "relay_count": {
+          "baseline": 22,
+          "alternative": 13
+        },
+        "plan_count": {
+          "baseline": 28,
+          "alternative": 13
+        },
+        "optimum": {
+          "baseline": {
+            "0": {
+              "cost": 30,
+              "count": 1,
+              "canonical": "A1B/B2K/C2R;A2R/B3W/C3B",
+              "all_winners": [
+                "A1B/B2K/C2R;A2R/B3W/C3B"
+              ]
+            },
+            "1": {
+              "cost": 31,
+              "count": 1,
+              "canonical": "A1B/B1Y/C2R;A2R/B3W/C3G",
+              "all_winners": [
+                "A1B/B1Y/C2R;A2R/B3W/C3G"
+              ]
+            }
+          },
+          "alternative": {
+            "0": {
+              "cost": 30,
+              "count": 1,
+              "canonical": "A1B/B2K/C2R;A2R/B3W/C3B",
+              "all_winners": [
+                "A1B/B2K/C2R;A2R/B3W/C3B"
+              ]
+            },
+            "1": {
+              "cost": 37,
+              "count": 1,
+              "canonical": "A1B/B1Y/C2R;A2R/B3W/C3B",
+              "all_winners": [
+                "A1B/B1Y/C2R;A2R/B3W/C3B"
+              ]
+            }
+          }
+        }
+      },
+      "result": {
+        "compartment_counts": [
+          5,
+          4,
+          3
+        ],
+        "A3_colors": [
+          "R",
+          "Y"
+        ],
+        "C3_colors": [
+          "B"
+        ],
+        "distance_A2_B3_px": 865,
+        "distance_B4_C2_px": 1532.5,
+        "ab_edges": [
+          [
+            "A1",
+            "B1"
+          ],
+          [
+            "A1",
+            "B2"
+          ],
+          [
+            "A2",
+            "B1"
+          ],
+          [
+            "A2",
+            "B2"
+          ],
+          [
+            "A2",
+            "B3"
+          ],
+          [
+            "A3",
+            "B2"
+          ],
+          [
+            "A3",
+            "B3"
+          ],
+          [
+            "A3",
+            "B4"
+          ]
+        ],
+        "bc_edges": [
+          [
+            "B1",
+            "C2"
+          ],
+          [
+            "B2",
+            "C2"
+          ],
+          [
+            "B2",
+            "C3"
+          ],
+          [
+            "B3",
+            "C2"
+          ],
+          [
+            "B3",
+            "C3"
+          ],
+          [
+            "B4",
+            "C2"
+          ],
+          [
+            "B4",
+            "C3"
+          ]
+        ],
+        "ab_count": 8,
+        "bc_count": 7,
+        "relay_count": 13,
+        "plan_count": 13,
+        "optimum": {
+          "0": {
+            "cost": 30,
+            "count": 1,
+            "canonical": "A1B/B2K/C2R;A2R/B3W/C3B",
+            "all_winners": [
+              "A1B/B2K/C2R;A2R/B3W/C3B"
+            ]
+          },
+          "1": {
+            "cost": 37,
+            "count": 1,
+            "canonical": "A1B/B1Y/C2R;A2R/B3W/C3B",
+            "all_winners": [
+              "A1B/B1Y/C2R;A2R/B3W/C3B"
+            ]
+          }
+        },
+        "canonical_changed": 1,
+        "relays": [
+          {
+            "code": "A1B/B1Y/C2R",
+            "ids": [
+              "A1",
+              "B1",
+              "C2"
+            ],
+            "colors": [
+              "B",
+              "Y",
+              "R"
+            ]
+          },
+          {
+            "code": "A1B/B2K/C2R",
+            "ids": [
+              "A1",
+              "B2",
+              "C2"
+            ],
+            "colors": [
+              "B",
+              "K",
+              "R"
+            ]
+          },
+          {
+            "code": "A2R/B2K/C3B",
+            "ids": [
+              "A2",
+              "B2",
+              "C3"
+            ],
+            "colors": [
+              "R",
+              "K",
+              "B"
+            ]
+          },
+          {
+            "code": "A2R/B3W/C3B",
+            "ids": [
+              "A2",
+              "B3",
+              "C3"
+            ],
+            "colors": [
+              "R",
+              "W",
+              "B"
+            ]
+          },
+          {
+            "code": "A3Y/B2K/C2R",
+            "ids": [
+              "A3",
+              "B2",
+              "C2"
+            ],
+            "colors": [
+              "Y",
+              "K",
+              "R"
+            ]
+          },
+          {
+            "code": "A3R/B2K/C3B",
+            "ids": [
+              "A3",
+              "B2",
+              "C3"
+            ],
+            "colors": [
+              "R",
+              "K",
+              "B"
+            ]
+          },
+          {
+            "code": "A3Y/B2K/C3B",
+            "ids": [
+              "A3",
+              "B2",
+              "C3"
+            ],
+            "colors": [
+              "Y",
+              "K",
+              "B"
+            ]
+          },
+          {
+            "code": "A3Y/B3W/C2R",
+            "ids": [
+              "A3",
+              "B3",
+              "C2"
+            ],
+            "colors": [
+              "Y",
+              "W",
+              "R"
+            ]
+          },
+          {
+            "code": "A3R/B3W/C3B",
+            "ids": [
+              "A3",
+              "B3",
+              "C3"
+            ],
+            "colors": [
+              "R",
+              "W",
+              "B"
+            ]
+          },
+          {
+            "code": "A3Y/B3W/C3B",
+            "ids": [
+              "A3",
+              "B3",
+              "C3"
+            ],
+            "colors": [
+              "Y",
+              "W",
+              "B"
+            ]
+          },
+          {
+            "code": "A3Y/B4W/C2R",
+            "ids": [
+              "A3",
+              "B4",
+              "C2"
+            ],
+            "colors": [
+              "Y",
+              "W",
+              "R"
+            ]
+          },
+          {
+            "code": "A3R/B4W/C3B",
+            "ids": [
+              "A3",
+              "B4",
+              "C3"
+            ],
+            "colors": [
+              "R",
+              "W",
+              "B"
+            ]
+          },
+          {
+            "code": "A3Y/B4W/C3B",
+            "ids": [
+              "A3",
+              "B4",
+              "C3"
+            ],
+            "colors": [
+              "Y",
+              "W",
+              "B"
+            ]
+          }
+        ],
+        "plans": [
+          {
+            "code": "A1B/B1Y/C2R;A2R/B3W/C3B",
+            "cost": {
+              "0": 34,
+              "1": 37
+            }
+          },
+          {
+            "code": "A1B/B1Y/C2R;A3R/B3W/C3B",
+            "cost": {
+              "0": 35,
+              "1": 38
+            }
+          },
+          {
+            "code": "A1B/B1Y/C2R;A3R/B4W/C3B",
+            "cost": {
+              "0": 36,
+              "1": 39
+            }
+          },
+          {
+            "code": "A1B/B1Y/C2R;A3Y/B3W/C3B",
+            "cost": {
+              "0": 37,
+              "1": 39
+            }
+          },
+          {
+            "code": "A1B/B1Y/C2R;A3Y/B4W/C3B",
+            "cost": {
+              "0": 38,
+              "1": 40
+            }
+          },
+          {
+            "code": "A1B/B2K/C2R;A2R/B3W/C3B",
+            "cost": {
+              "0": 30,
+              "1": 40
+            }
+          },
+          {
+            "code": "A1B/B2K/C2R;A3R/B3W/C3B",
+            "cost": {
+              "0": 31,
+              "1": 41
+            }
+          },
+          {
+            "code": "A1B/B2K/C2R;A3R/B4W/C3B",
+            "cost": {
+              "0": 32,
+              "1": 42
+            }
+          },
+          {
+            "code": "A1B/B2K/C2R;A3Y/B3W/C3B",
+            "cost": {
+              "0": 33,
+              "1": 42
+            }
+          },
+          {
+            "code": "A1B/B2K/C2R;A3Y/B4W/C3B",
+            "cost": {
+              "0": 34,
+              "1": 43
+            }
+          },
+          {
+            "code": "A2R/B2K/C3B;A3Y/B3W/C2R",
+            "cost": {
+              "0": 35,
+              "1": 38
+            }
+          },
+          {
+            "code": "A2R/B2K/C3B;A3Y/B4W/C2R",
+            "cost": {
+              "0": 36,
+              "1": 39
+            }
+          },
+          {
+            "code": "A2R/B3W/C3B;A3Y/B2K/C2R",
+            "cost": {
+              "0": 35,
+              "1": 38
+            }
+          }
+        ]
+      }
+    },
+    "A3_misread_as_yellow_only": {
+      "changed_input": {
+        "A3": [
+          "Y"
+        ]
+      },
+      "changed_fields": {
+        "relay_count": {
+          "baseline": 22,
+          "alternative": 16
+        },
+        "plan_count": {
+          "baseline": 28,
+          "alternative": 20
+        }
+      },
+      "result": {
+        "compartment_counts": [
+          5,
+          4,
+          3
+        ],
+        "A3_colors": [
+          "Y"
+        ],
+        "C3_colors": [
+          "B",
+          "G"
+        ],
+        "distance_A2_B3_px": 865,
+        "distance_B4_C2_px": 1532.5,
+        "ab_edges": [
+          [
+            "A1",
+            "B1"
+          ],
+          [
+            "A1",
+            "B2"
+          ],
+          [
+            "A2",
+            "B1"
+          ],
+          [
+            "A2",
+            "B2"
+          ],
+          [
+            "A2",
+            "B3"
+          ],
+          [
+            "A3",
+            "B2"
+          ],
+          [
+            "A3",
+            "B3"
+          ],
+          [
+            "A3",
+            "B4"
+          ]
+        ],
+        "bc_edges": [
+          [
+            "B1",
+            "C2"
+          ],
+          [
+            "B2",
+            "C2"
+          ],
+          [
+            "B2",
+            "C3"
+          ],
+          [
+            "B3",
+            "C2"
+          ],
+          [
+            "B3",
+            "C3"
+          ],
+          [
+            "B4",
+            "C2"
+          ],
+          [
+            "B4",
+            "C3"
+          ]
+        ],
+        "ab_count": 8,
+        "bc_count": 7,
+        "relay_count": 16,
+        "plan_count": 20,
+        "optimum": {
+          "0": {
+            "cost": 30,
+            "count": 1,
+            "canonical": "A1B/B2K/C2R;A2R/B3W/C3B",
+            "all_winners": [
+              "A1B/B2K/C2R;A2R/B3W/C3B"
+            ]
+          },
+          "1": {
+            "cost": 31,
+            "count": 1,
+            "canonical": "A1B/B1Y/C2R;A2R/B3W/C3G",
+            "all_winners": [
+              "A1B/B1Y/C2R;A2R/B3W/C3G"
+            ]
+          }
+        },
+        "canonical_changed": 1,
+        "relays": [
+          {
+            "code": "A1B/B1Y/C2R",
+            "ids": [
+              "A1",
+              "B1",
+              "C2"
+            ],
+            "colors": [
+              "B",
+              "Y",
+              "R"
+            ]
+          },
+          {
+            "code": "A1B/B2K/C2R",
+            "ids": [
+              "A1",
+              "B2",
+              "C2"
+            ],
+            "colors": [
+              "B",
+              "K",
+              "R"
+            ]
+          },
+          {
+            "code": "A1B/B2K/C3G",
+            "ids": [
+              "A1",
+              "B2",
+              "C3"
+            ],
+            "colors": [
+              "B",
+              "K",
+              "G"
+            ]
+          },
+          {
+            "code": "A2R/B2K/C3B",
+            "ids": [
+              "A2",
+              "B2",
+              "C3"
+            ],
+            "colors": [
+              "R",
+              "K",
+              "B"
+            ]
+          },
+          {
+            "code": "A2R/B2K/C3G",
+            "ids": [
+              "A2",
+              "B2",
+              "C3"
+            ],
+            "colors": [
+              "R",
+              "K",
+              "G"
+            ]
+          },
+          {
+            "code": "A2R/B3W/C3B",
+            "ids": [
+              "A2",
+              "B3",
+              "C3"
+            ],
+            "colors": [
+              "R",
+              "W",
+              "B"
+            ]
+          },
+          {
+            "code": "A2R/B3W/C3G",
+            "ids": [
+              "A2",
+              "B3",
+              "C3"
+            ],
+            "colors": [
+              "R",
+              "W",
+              "G"
+            ]
+          },
+          {
+            "code": "A3Y/B2K/C2R",
+            "ids": [
+              "A3",
+              "B2",
+              "C2"
+            ],
+            "colors": [
+              "Y",
+              "K",
+              "R"
+            ]
+          },
+          {
+            "code": "A3Y/B2K/C3B",
+            "ids": [
+              "A3",
+              "B2",
+              "C3"
+            ],
+            "colors": [
+              "Y",
+              "K",
+              "B"
+            ]
+          },
+          {
+            "code": "A3Y/B2K/C3G",
+            "ids": [
+              "A3",
+              "B2",
+              "C3"
+            ],
+            "colors": [
+              "Y",
+              "K",
+              "G"
+            ]
+          },
+          {
+            "code": "A3Y/B3W/C2R",
+            "ids": [
+              "A3",
+              "B3",
+              "C2"
+            ],
+            "colors": [
+              "Y",
+              "W",
+              "R"
+            ]
+          },
+          {
+            "code": "A3Y/B3W/C3B",
+            "ids": [
+              "A3",
+              "B3",
+              "C3"
+            ],
+            "colors": [
+              "Y",
+              "W",
+              "B"
+            ]
+          },
+          {
+            "code": "A3Y/B3W/C3G",
+            "ids": [
+              "A3",
+              "B3",
+              "C3"
+            ],
+            "colors": [
+              "Y",
+              "W",
+              "G"
+            ]
+          },
+          {
+            "code": "A3Y/B4W/C2R",
+            "ids": [
+              "A3",
+              "B4",
+              "C2"
+            ],
+            "colors": [
+              "Y",
+              "W",
+              "R"
+            ]
+          },
+          {
+            "code": "A3Y/B4W/C3B",
+            "ids": [
+              "A3",
+              "B4",
+              "C3"
+            ],
+            "colors": [
+              "Y",
+              "W",
+              "B"
+            ]
+          },
+          {
+            "code": "A3Y/B4W/C3G",
+            "ids": [
+              "A3",
+              "B4",
+              "C3"
+            ],
+            "colors": [
+              "Y",
+              "W",
+              "G"
+            ]
+          }
+        ],
+        "plans": [
+          {
+            "code": "A1B/B1Y/C2R;A2R/B3W/C3B",
+            "cost": {
+              "0": 34,
+              "1": 37
+            }
+          },
+          {
+            "code": "A1B/B1Y/C2R;A2R/B3W/C3G",
+            "cost": {
+              "0": 36,
+              "1": 31
+            }
+          },
+          {
+            "code": "A1B/B1Y/C2R;A3Y/B3W/C3B",
+            "cost": {
+              "0": 37,
+              "1": 39
+            }
+          },
+          {
+            "code": "A1B/B1Y/C2R;A3Y/B3W/C3G",
+            "cost": {
+              "0": 39,
+              "1": 33
+            }
+          },
+          {
+            "code": "A1B/B1Y/C2R;A3Y/B4W/C3B",
+            "cost": {
+              "0": 38,
+              "1": 40
+            }
+          },
+          {
+            "code": "A1B/B1Y/C2R;A3Y/B4W/C3G",
+            "cost": {
+              "0": 40,
+              "1": 34
+            }
+          },
+          {
+            "code": "A1B/B2K/C2R;A2R/B3W/C3B",
+            "cost": {
+              "0": 30,
+              "1": 40
+            }
+          },
+          {
+            "code": "A1B/B2K/C2R;A2R/B3W/C3G",
+            "cost": {
+              "0": 32,
+              "1": 34
+            }
+          },
+          {
+            "code": "A1B/B2K/C2R;A3Y/B3W/C3B",
+            "cost": {
+              "0": 33,
+              "1": 42
+            }
+          },
+          {
+            "code": "A1B/B2K/C2R;A3Y/B3W/C3G",
+            "cost": {
+              "0": 35,
+              "1": 36
+            }
+          },
+          {
+            "code": "A1B/B2K/C2R;A3Y/B4W/C3B",
+            "cost": {
+              "0": 34,
+              "1": 43
+            }
+          },
+          {
+            "code": "A1B/B2K/C2R;A3Y/B4W/C3G",
+            "cost": {
+              "0": 36,
+              "1": 37
+            }
+          },
+          {
+            "code": "A1B/B2K/C3G;A3Y/B3W/C2R",
+            "cost": {
+              "0": 35,
+              "1": 36
+            }
+          },
+          {
+            "code": "A1B/B2K/C3G;A3Y/B4W/C2R",
+            "cost": {
+              "0": 36,
+              "1": 37
+            }
+          },
+          {
+            "code": "A2R/B2K/C3B;A3Y/B3W/C2R",
+            "cost": {
+              "0": 35,
+              "1": 38
+            }
+          },
+          {
+            "code": "A2R/B2K/C3B;A3Y/B4W/C2R",
+            "cost": {
+              "0": 36,
+              "1": 39
+            }
+          },
+          {
+            "code": "A2R/B2K/C3G;A3Y/B3W/C2R",
+            "cost": {
+              "0": 37,
+              "1": 32
+            }
+          },
+          {
+            "code": "A2R/B2K/C3G;A3Y/B4W/C2R",
+            "cost": {
+              "0": 38,
+              "1": 33
+            }
+          },
+          {
+            "code": "A2R/B3W/C3B;A3Y/B2K/C2R",
+            "cost": {
+              "0": 35,
+              "1": 38
+            }
+          },
+          {
+            "code": "A2R/B3W/C3G;A3Y/B2K/C2R",
+            "cost": {
+              "0": 37,
+              "1": 32
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,284 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><title>ZeroBench 图片质检</title><style>body{font:16px system-ui;margin:30px;background:#f4f4f1;color:#202020}article{background:white;margin:22px 0;padding:24px;border:1px solid #ddd;overflow:auto}img{max-width:48%;float:left;margin:0 24px 16px 0}pre{white-space:pre-wrap;font-size:13px}h1{font-size:28px}</style><h1>图片与题目证据质检</h1><p>代理指标用于筛选，不证明难度。缺失值不会自动通过；判定与试答证据分开。</p><article><h2>ZB-0235-v2 · authoring_candidate</h2><img src="001.jpg" loading="lazy"><pre>{
+  &quot;id&quot;: &quot;ZB-0235-v2&quot;,
+  &quot;blockers&quot;: [],
+  &quot;review&quot;: [],
+  &quot;advisory&quot;: [],
+  &quot;metrics&quot;: {
+    &quot;width&quot;: 1650,
+    &quot;height&quot;: 2320,
+    &quot;mode&quot;: &quot;RGB&quot;,
+    &quot;exif_orientation&quot;: 1,
+    &quot;frame_count&quot;: 1,
+    &quot;global_640_proxy&quot;: {
+      &quot;contrast_p90_p10&quot;: 164.0,
+      &quot;gray_entropy_bits&quot;: 7.803819851823131,
+      &quot;edge_fraction_16&quot;: 0.18063495067133434
+    },
+    &quot;object_count&quot;: 20,
+    &quot;objects_per_MP&quot;: 5.2246603970741905,
+    &quot;class_count&quot;: 17,
+    &quot;known_fraction&quot;: 1.0,
+    &quot;repeated_classes&quot;: 3,
+    &quot;spatial_entropy_4x4&quot;: 0.8460459299447972,
+    &quot;median_bbox_short_px&quot;: 260.5,
+    &quot;p10_bbox_short_px&quot;: 220.9,
+    &quot;edge_touching_count&quot;: 6,
+    &quot;nearcolor_pair_count&quot;: 6,
+    &quot;different_class_neighbor_pairs&quot;: 61,
+    &quot;nearcolor_neighbor_fraction&quot;: 0.09836065573770492,
+    &quot;bbox_overlap_pair_count&quot;: 12,
+    &quot;han_text_coverage&quot;: 0.0,
+    &quot;distinct_dependency_regions&quot;: 7,
+    &quot;effective_counterfactuals&quot;: 3
+  },
+  &quot;source&quot;: {
+    &quot;kind&quot;: &quot;real_photo&quot;,
+    &quot;scene_id&quot;: &quot;wikimedia-commons:16268679&quot;,
+    &quot;authorization&quot;: &quot;verified&quot;,
+    &quot;url&quot;: &quot;https://commons.wikimedia.org/wiki/File:Spices_for_sale_in_the_Morocco.jpg&quot;,
+    &quot;license_url&quot;: &quot;https://creativecommons.org/licenses/by/3.0/de/deed.en&quot;,
+    &quot;author&quot;: &quot;High Contrast&quot;,
+    &quot;license&quot;: &quot;CC BY 3.0 de&quot;,
+    &quot;native_size&quot;: [
+      1650,
+      2320
+    ],
+    &quot;evidence&quot;: &quot;source.json, source_page.html&quot;
+  },
+  &quot;difficulty_status&quot;: &quot;no_complete_failure_recorded&quot;,
+  &quot;annotation_provenance&quot;: &quot;author_manual_native_pixels&quot;,
+  &quot;preview&quot;: &quot;001.jpg&quot;,
+  &quot;nearcolor_pairs&quot;: [
+    {
+      &quot;a&quot;: &quot;R4&quot;,
+      &quot;b&quot;: &quot;R2&quot;,
+      &quot;deltaE76&quot;: 8.191638477938318
+    },
+    {
+      &quot;a&quot;: &quot;R4&quot;,
+      &quot;b&quot;: &quot;R3&quot;,
+      &quot;deltaE76&quot;: 7.885079711096355
+    },
+    {
+      &quot;a&quot;: &quot;R5&quot;,
+      &quot;b&quot;: &quot;R3&quot;,
+      &quot;deltaE76&quot;: 9.949598603839329
+    },
+    {
+      &quot;a&quot;: &quot;E2&quot;,
+      &quot;b&quot;: &quot;R3&quot;,
+      &quot;deltaE76&quot;: 7.095173932364968
+    },
+    {
+      &quot;a&quot;: &quot;E2&quot;,
+      &quot;b&quot;: &quot;R5&quot;,
+      &quot;deltaE76&quot;: 9.469027092682673
+    },
+    {
+      &quot;a&quot;: &quot;E5&quot;,
+      &quot;b&quot;: &quot;E1&quot;,
+      &quot;deltaE76&quot;: 7.976755889841115
+    }
+  ],
+  &quot;overlap_candidates&quot;: [
+    {
+      &quot;a&quot;: &quot;R4&quot;,
+      &quot;b&quot;: &quot;R3&quot;,
+      &quot;iom&quot;: 0.18679245283018867
+    },
+    {
+      &quot;a&quot;: &quot;R5&quot;,
+      &quot;b&quot;: &quot;R4&quot;,
+      &quot;iom&quot;: 0.1694915254237288
+    },
+    {
+      &quot;a&quot;: &quot;E2&quot;,
+      &quot;b&quot;: &quot;R3&quot;,
+      &quot;iom&quot;: 0.22459893048128343
+    },
+    {
+      &quot;a&quot;: &quot;E2&quot;,
+      &quot;b&quot;: &quot;R4&quot;,
+      &quot;iom&quot;: 0.2276056338028169
+    },
+    {
+      &quot;a&quot;: &quot;E2&quot;,
+      &quot;b&quot;: &quot;R5&quot;,
+      &quot;iom&quot;: 0.18711746921318487
+    },
+    {
+      &quot;a&quot;: &quot;E3&quot;,
+      &quot;b&quot;: &quot;R1&quot;,
+      &quot;iom&quot;: 0.33523525280898875
+    },
+    {
+      &quot;a&quot;: &quot;E3&quot;,
+      &quot;b&quot;: &quot;R2&quot;,
+      &quot;iom&quot;: 0.22208567415730338
+    },
+    {
+      &quot;a&quot;: &quot;E4&quot;,
+      &quot;b&quot;: &quot;R2&quot;,
+      &quot;iom&quot;: 0.22114232459060046
+    },
+    {
+      &quot;a&quot;: &quot;E4&quot;,
+      &quot;b&quot;: &quot;R4&quot;,
+      &quot;iom&quot;: 0.18688524590163935
+    },
+    {
+      &quot;a&quot;: &quot;E4&quot;,
+      &quot;b&quot;: &quot;E3&quot;,
+      &quot;iom&quot;: 0.1875
+    },
+    {
+      &quot;a&quot;: &quot;E5&quot;,
+      &quot;b&quot;: &quot;R1&quot;,
+      &quot;iom&quot;: 0.17763984915147707
+    },
+    {
+      &quot;a&quot;: &quot;E5&quot;,
+      &quot;b&quot;: &quot;E1&quot;,
+      &quot;iom&quot;: 0.6213662790697675
+    }
+  ],
+  &quot;roi_metrics&quot;: [
+    {
+      &quot;id&quot;: &quot;upper_tips&quot;,
+      &quot;file&quot;: &quot;001_roi1.png&quot;,
+      &quot;contrast_p90_p10&quot;: 129.0,
+      &quot;gray_entropy_bits&quot;: 7.319150043336711,
+      &quot;edge_fraction_16&quot;: 0.032187814142995666
+    },
+    {
+      &quot;id&quot;: &quot;upper_names&quot;,
+      &quot;file&quot;: &quot;001_roi2.png&quot;,
+      &quot;contrast_p90_p10&quot;: 181.0,
+      &quot;gray_entropy_bits&quot;: 7.78198494658494,
+      &quot;edge_fraction_16&quot;: 0.05427581129992025
+    },
+    {
+      &quot;id&quot;: &quot;lower_tips&quot;,
+      &quot;file&quot;: &quot;001_roi3.png&quot;,
+      &quot;contrast_p90_p10&quot;: 114.0,
+      &quot;gray_entropy_bits&quot;: 7.158538294031377,
+      &quot;edge_fraction_16&quot;: 0.05042097782488768
+    },
+    {
+      &quot;id&quot;: &quot;lower_names&quot;,
+      &quot;file&quot;: &quot;001_roi4.png&quot;,
+      &quot;contrast_p90_p10&quot;: 175.0,
+      &quot;gray_entropy_bits&quot;: 7.7598846979632246,
+      &quot;edge_fraction_16&quot;: 0.04809669975130509
+    },
+    {
+      &quot;id&quot;: &quot;rear_lids&quot;,
+      &quot;file&quot;: &quot;001_roi5.png&quot;,
+      &quot;contrast_p90_p10&quot;: 135.0,
+      &quot;gray_entropy_bits&quot;: 7.569004509181893,
+      &quot;edge_fraction_16&quot;: 0.0474932166640968
+    },
+    {
+      &quot;id&quot;: &quot;front_lids&quot;,
+      &quot;file&quot;: &quot;001_roi6.png&quot;,
+      &quot;contrast_p90_p10&quot;: 136.0,
+      &quot;gray_entropy_bits&quot;: 7.597187829011402,
+      &quot;edge_fraction_16&quot;: 0.052047775111831
+    },
+    {
+      &quot;id&quot;: &quot;blocked_lid&quot;,
+      &quot;file&quot;: &quot;001_roi7.png&quot;,
+      &quot;contrast_p90_p10&quot;: 185.0,
+      &quot;gray_entropy_bits&quot;: 7.5109997947099,
+      &quot;edge_fraction_16&quot;: 0.06662357126387562
+    }
+  ],
+  &quot;reasoning_metrics&quot;: {
+    &quot;node_count&quot;: 17,
+    &quot;max_depth&quot;: 6,
+    &quot;branch_nodes&quot;: 5,
+    &quot;join_nodes&quot;: 7,
+    &quot;multi_visual_join_nodes&quot;: 7,
+    &quot;output_count&quot;: 4,
+    &quot;outputs_with_visual_ancestry&quot;: 4,
+    &quot;output_visual_coverage&quot;: 1.0,
+    &quot;state_nodes&quot;: 2,
+    &quot;parameter_nodes&quot;: 2,
+    &quot;output_evidence_regions&quot;: {
+      &quot;same_name&quot;: [
+        &quot;lower_names&quot;,
+        &quot;upper_names&quot;
+      ],
+      &quot;counts&quot;: [
+        &quot;blocked_lid&quot;,
+        &quot;front_lids&quot;,
+        &quot;lower_names&quot;,
+        &quot;lower_tips&quot;,
+        &quot;rear_lids&quot;,
+        &quot;upper_names&quot;,
+        &quot;upper_tips&quot;
+      ],
+      &quot;optima&quot;: [
+        &quot;blocked_lid&quot;,
+        &quot;front_lids&quot;,
+        &quot;lower_names&quot;,
+        &quot;lower_tips&quot;,
+        &quot;rear_lids&quot;,
+        &quot;upper_names&quot;,
+        &quot;upper_tips&quot;
+      ],
+      &quot;representative_edges&quot;: [
+        &quot;blocked_lid&quot;,
+        &quot;front_lids&quot;,
+        &quot;lower_names&quot;,
+        &quot;lower_tips&quot;,
+        &quot;rear_lids&quot;,
+        &quot;upper_names&quot;,
+        &quot;upper_tips&quot;
+      ]
+    }
+  },
+  &quot;measurement_margins&quot;: [
+    {
+      &quot;id&quot;: &quot;bands&quot;,
+      &quot;ratio&quot;: 2.4583333333333335,
+      &quot;unit&quot;: &quot;px&quot;
+    },
+    {
+      &quot;id&quot;: &quot;window&quot;,
+      &quot;ratio&quot;: 1.125,
+      &quot;unit&quot;: &quot;px&quot;
+    }
+  ],
+  &quot;platform_points&quot;: [
+    {
+      &quot;xy&quot;: [
+        1247,
+        718
+      ],
+      &quot;label&quot;: &quot;上排第 5 罐正面的 CURCUMA，与下排左端同名。&quot;
+    },
+    {
+      &quot;xy&quot;: [
+        325,
+        1519
+      ],
+      &quot;label&quot;: &quot;下排第 1 罐正面的 CURCUMA，沿罐口上溯到本罐锥尖。&quot;
+    },
+    {
+      &quot;xy&quot;: [
+        1135,
+        1690
+      ],
+      &quot;label&quot;: &quot;白牌遮在右后方灰褐块罐的盖顶前，牌缘不可用作盖缘坐标。&quot;
+    }
+  ],
+  &quot;evaluation_counts&quot;: {
+    &quot;correct&quot;: 3,
+    &quot;incorrect&quot;: 0,
+    &quot;timeout&quot;: 0,
+    &quot;infra_error&quot;: 0,
+    &quot;partial&quot;: 0
+  },
+  &quot;decision&quot;: &quot;authoring_candidate&quot;
+}</pre></article></html>

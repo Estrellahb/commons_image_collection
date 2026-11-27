@@ -1,0 +1,9 @@
+{
+  "version": "v1",
+  "image_path": "outputs/authoring_ZB-FERRULES-0318-v1/zb-hardware-106783997.jpg",
+  "image_sha256": "aff2b1f3c72ba5ea1e6c66b7c8c10427d0f814c6a7365778db85b94b83dcdacc",
+  "prompt_sha256": "77d70d63f46524369823db8af68d415ed54c1b487267bb3aa4c51932cd3648bd",
+  "conditions": "3 independent agents, fresh context, tools available, public image and prompt only",
+  "target_difficulty": "medium",
+  "freeze_time_utc": "2026-11-26"
+}

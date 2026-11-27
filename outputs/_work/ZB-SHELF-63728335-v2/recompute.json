@@ -1,0 +1,896 @@
+{
+  "question_id": "ZB-SHELF-63728335-v2",
+  "image_size": [
+    4032,
+    3024
+  ],
+  "thresholds": {
+    "D_NEAR": 720.0,
+    "D_MAX": 2050.0,
+    "endpoint_error_px": 30.0,
+    "error_bound_px": 60.0
+  },
+  "bays": [
+    {
+      "id": "A1",
+      "group": "A",
+      "brand": "Stabburet",
+      "N": 2,
+      "E": 0,
+      "p10": 150,
+      "kg": 135,
+      "K": 0,
+      "tab": 0,
+      "has_tag": 0,
+      "cx": 525,
+      "cy": 1030,
+      "bbox": [
+        120,
+        860,
+        810,
+        340
+      ]
+    },
+    {
+      "id": "A2",
+      "group": "A",
+      "brand": "KING OSCAR",
+      "N": 4,
+      "E": 2,
+      "p10": 122,
+      "kg": 122,
+      "K": 0,
+      "tab": 0,
+      "has_tag": 1,
+      "cx": 1255,
+      "cy": 850,
+      "bbox": [
+        830,
+        410,
+        850,
+        850
+      ]
+    },
+    {
+      "id": "A3",
+      "group": "A",
+      "brand": "KING OSCAR",
+      "N": 6,
+      "E": 1,
+      "p10": 139,
+      "kg": 126,
+      "K": 0,
+      "tab": 2,
+      "has_tag": 1,
+      "cx": 1915,
+      "cy": 790,
+      "bbox": [
+        1610,
+        350,
+        610,
+        880
+      ]
+    },
+    {
+      "id": "A4",
+      "group": "A",
+      "brand": "Stabburet",
+      "N": 4,
+      "E": 3,
+      "p10": 139,
+      "kg": 126,
+      "K": 0,
+      "tab": 0,
+      "has_tag": 1,
+      "cx": 3426,
+      "cy": 860,
+      "bbox": [
+        2820,
+        440,
+        1212,
+        850
+      ]
+    },
+    {
+      "id": "B1",
+      "group": "B",
+      "brand": "Stabburet",
+      "N": 4,
+      "E": 2,
+      "p10": 150,
+      "kg": 135,
+      "K": 2,
+      "tab": 0,
+      "has_tag": 0,
+      "cx": 1025,
+      "cy": 1930,
+      "bbox": [
+        590,
+        1620,
+        870,
+        620
+      ]
+    },
+    {
+      "id": "B2",
+      "group": "B",
+      "brand": "Stabburet",
+      "N": 6,
+      "E": 2,
+      "p10": 169,
+      "kg": 153,
+      "K": 3,
+      "tab": 0,
+      "has_tag": 1,
+      "cx": 1810,
+      "cy": 1940,
+      "bbox": [
+        1380,
+        1520,
+        860,
+        860
+      ]
+    },
+    {
+      "id": "B3",
+      "group": "B",
+      "brand": "Stabburet",
+      "N": 6,
+      "E": 4,
+      "p10": 197,
+      "kg": 115,
+      "K": 0,
+      "tab": 0,
+      "has_tag": 1,
+      "cx": 2970,
+      "cy": 2040,
+      "bbox": [
+        2220,
+        1460,
+        1500,
+        1080
+      ]
+    }
+  ],
+  "baseline": {
+    "fields": {
+      "q1_sum_N": 32,
+      "q1_sum_E": 14,
+      "q1_sum_K": 5,
+      "q1_tab_A3": 2,
+      "q1_sum_P10": 766,
+      "q1_sum_KG": 642,
+      "q2_edges": 8,
+      "q2_near_edges": 4,
+      "q3_total_plans": 14,
+      "q3_M_plans": 12,
+      "q3_N_plans": 2,
+      "q4_M_min_c0": 638,
+      "q4_M_ties_c0": 1,
+      "q4_N_min_c0": 610,
+      "q4_N_ties_c0": 1,
+      "q5_M_min_c1": 510,
+      "q5_M_ties_c1": 2,
+      "q5_N_min_c1": 534,
+      "q5_N_ties_c1": 1,
+      "q6_winner_w0": "N",
+      "q6_winner_w1": "M",
+      "q6_reversal": 1,
+      "q6_w1_canonical_plan": "A2-B1;A4-B3"
+    },
+    "canonical_answer": "32,14,5,2,766,642|8,4|14,12,2|638,1,610,1|510,2,534,1|N,M,1,A2-B1;A4-B3",
+    "edges": [
+      {
+        "a": "A2",
+        "b": "B1",
+        "dx": 230,
+        "near": true,
+        "walk": 15,
+        "e_sum": 4
+      },
+      {
+        "a": "A2",
+        "b": "B2",
+        "dx": 555,
+        "near": true,
+        "walk": 15,
+        "e_sum": 4
+      },
+      {
+        "a": "A2",
+        "b": "B3",
+        "dx": 1715,
+        "near": false,
+        "walk": 45,
+        "e_sum": 6
+      },
+      {
+        "a": "A3",
+        "b": "B1",
+        "dx": 890,
+        "near": false,
+        "walk": 45,
+        "e_sum": 3
+      },
+      {
+        "a": "A3",
+        "b": "B2",
+        "dx": 105,
+        "near": true,
+        "walk": 15,
+        "e_sum": 3
+      },
+      {
+        "a": "A3",
+        "b": "B3",
+        "dx": 1055,
+        "near": false,
+        "walk": 45,
+        "e_sum": 5
+      },
+      {
+        "a": "A4",
+        "b": "B2",
+        "dx": 1616,
+        "near": false,
+        "walk": 45,
+        "e_sum": 5
+      },
+      {
+        "a": "A4",
+        "b": "B3",
+        "dx": 456,
+        "near": true,
+        "walk": 15,
+        "e_sum": 7
+      }
+    ],
+    "M": {
+      "count": 12,
+      "min_c0": 638,
+      "ties_c0": 1,
+      "best_c0": [
+        "A2-B1;A4-B3"
+      ],
+      "min_c1": 510,
+      "ties_c1": 2,
+      "best_c1": [
+        "A2-B1;A4-B3",
+        "A2-B2;A4-B3"
+      ]
+    },
+    "N": {
+      "count": 2,
+      "min_c0": 610,
+      "ties_c0": 1,
+      "best_c0": [
+        "A2-B1;A3-B2"
+      ],
+      "min_c1": 534,
+      "ties_c1": 1,
+      "best_c1": [
+        "A2-B1;A3-B2"
+      ]
+    },
+    "distance_margins": {
+      "D_NEAR": 720.0,
+      "margin_near_px": 165.0,
+      "closest_near": {
+        "edge": "A2-B2",
+        "dx": 555,
+        "e_sum": 4,
+        "g_a": 2,
+        "g_b": 4
+      },
+      "D_MAX": 2050.0,
+      "margin_max_px": 335.0,
+      "closest_max": {
+        "edge": "A2-B3",
+        "dx": 1715,
+        "e_sum": 6,
+        "g_a": 2,
+        "g_b": 2
+      }
+    }
+  },
+  "a4_shift_check": {
+    "description": "Shift A4 center +124 px to yellow tray logo center (x=3550)",
+    "all_fields_identical": true,
+    "distance_margins": {
+      "D_NEAR": 720.0,
+      "margin_near_px": 140.0,
+      "closest_near": {
+        "edge": "A4-B3",
+        "dx": 580,
+        "e_sum": 7,
+        "g_a": 1,
+        "g_b": 2
+      },
+      "D_MAX": 2050.0,
+      "margin_max_px": 310.0,
+      "closest_max": {
+        "edge": "A4-B2",
+        "dx": 1740,
+        "e_sum": 5,
+        "g_a": 1,
+        "g_b": 4
+      }
+    }
+  },
+  "perturbation_check": {
+    "trials": 10000,
+    "endpoint_noise_px": 30.0,
+    "pair_error_bound_px": 60.0,
+    "all_fields_stable_count": 10000,
+    "stability_rate": 1.0
+  },
+  "counterfactuals": [
+    {
+      "id": "CF1_B3_cross_shelf_139",
+      "description": "串层把中层红杠 13.90 kr (126.36/kg) 误读为下方 B3 价格",
+      "mechanism": "降低 M 组工况 0 购样代价 58，使 M 组两工况均胜，rev: 1 -> 0",
+      "fields": {
+        "q1_sum_N": 32,
+        "q1_sum_E": 14,
+        "q1_sum_K": 5,
+        "q1_tab_A3": 2,
+        "q1_sum_P10": 708,
+        "q1_sum_KG": 653,
+        "q2_edges": 8,
+        "q2_near_edges": 4,
+        "q3_total_plans": 14,
+        "q3_M_plans": 12,
+        "q3_N_plans": 2,
+        "q4_M_min_c0": 580,
+        "q4_M_ties_c0": 1,
+        "q4_N_min_c0": 610,
+        "q4_N_ties_c0": 1,
+        "q5_M_min_c1": 521,
+        "q5_M_ties_c1": 2,
+        "q5_N_min_c1": 534,
+        "q5_N_ties_c1": 1,
+        "q6_winner_w0": "M",
+        "q6_winner_w1": "M",
+        "q6_reversal": 0,
+        "q6_w1_canonical_plan": "A2-B1;A4-B3"
+      },
+      "canonical_answer": "32,14,5,2,708,653|8,4|14,12,2|580,1,610,1|521,2,534,1|M,M,0,A2-B1;A4-B3",
+      "changed_fields": {
+        "q1_sum_P10": {
+          "baseline": 766,
+          "alternative": 708
+        },
+        "q1_sum_KG": {
+          "baseline": 642,
+          "alternative": 653
+        },
+        "q4_M_min_c0": {
+          "baseline": 638,
+          "alternative": 580
+        },
+        "q5_M_min_c1": {
+          "baseline": 510,
+          "alternative": 521
+        },
+        "q6_winner_w0": {
+          "baseline": "N",
+          "alternative": "M"
+        },
+        "q6_reversal": {
+          "baseline": 1,
+          "alternative": 0
+        }
+      },
+      "changed_field_count": 6,
+      "flips_reversal": true
+    },
+    {
+      "id": "CF2_B3_arrow_tag_148",
+      "description": "忽略红向下箭头把下层 14.80 kr (87.06/kg) 误归给 B3",
+      "mechanism": "降低 M 组两工况代价，使 M 组两工况均胜，rev: 1 -> 0",
+      "fields": {
+        "q1_sum_N": 32,
+        "q1_sum_E": 14,
+        "q1_sum_K": 5,
+        "q1_tab_A3": 2,
+        "q1_sum_P10": 717,
+        "q1_sum_KG": 614,
+        "q2_edges": 8,
+        "q2_near_edges": 4,
+        "q3_total_plans": 14,
+        "q3_M_plans": 12,
+        "q3_N_plans": 2,
+        "q4_M_min_c0": 589,
+        "q4_M_ties_c0": 1,
+        "q4_N_min_c0": 610,
+        "q4_N_ties_c0": 1,
+        "q5_M_min_c1": 482,
+        "q5_M_ties_c1": 2,
+        "q5_N_min_c1": 534,
+        "q5_N_ties_c1": 1,
+        "q6_winner_w0": "M",
+        "q6_winner_w1": "M",
+        "q6_reversal": 0,
+        "q6_w1_canonical_plan": "A2-B1;A4-B3"
+      },
+      "canonical_answer": "32,14,5,2,717,614|8,4|14,12,2|589,1,610,1|482,2,534,1|M,M,0,A2-B1;A4-B3",
+      "changed_fields": {
+        "q1_sum_P10": {
+          "baseline": 766,
+          "alternative": 717
+        },
+        "q1_sum_KG": {
+          "baseline": 642,
+          "alternative": 614
+        },
+        "q4_M_min_c0": {
+          "baseline": 638,
+          "alternative": 589
+        },
+        "q5_M_min_c1": {
+          "baseline": 510,
+          "alternative": 482
+        },
+        "q6_winner_w0": {
+          "baseline": "N",
+          "alternative": "M"
+        },
+        "q6_reversal": {
+          "baseline": 1,
+          "alternative": 0
+        }
+      },
+      "changed_field_count": 6,
+      "flips_reversal": true
+    },
+    {
+      "id": "CF3_B2_leverpostei_131",
+      "description": "将下层 13.10 kr (65.50/kg, LEVERPOSTEI) 误归给中层 B2",
+      "mechanism": "同时改变 sum_P10、sum_KG 及两工况最小代价",
+      "fields": {
+        "q1_sum_N": 32,
+        "q1_sum_E": 14,
+        "q1_sum_K": 5,
+        "q1_tab_A3": 2,
+        "q1_sum_P10": 728,
+        "q1_sum_KG": 554,
+        "q2_edges": 8,
+        "q2_near_edges": 4,
+        "q3_total_plans": 14,
+        "q3_M_plans": 12,
+        "q3_N_plans": 2,
+        "q4_M_min_c0": 602,
+        "q4_M_ties_c0": 1,
+        "q4_N_min_c0": 572,
+        "q4_N_ties_c0": 1,
+        "q5_M_min_c1": 422,
+        "q5_M_ties_c1": 1,
+        "q5_N_min_c1": 446,
+        "q5_N_ties_c1": 1,
+        "q6_winner_w0": "N",
+        "q6_winner_w1": "M",
+        "q6_reversal": 1,
+        "q6_w1_canonical_plan": "A2-B2;A4-B3"
+      },
+      "canonical_answer": "32,14,5,2,728,554|8,4|14,12,2|602,1,572,1|422,1,446,1|N,M,1,A2-B2;A4-B3",
+      "changed_fields": {
+        "q1_sum_P10": {
+          "baseline": 766,
+          "alternative": 728
+        },
+        "q1_sum_KG": {
+          "baseline": 642,
+          "alternative": 554
+        },
+        "q4_M_min_c0": {
+          "baseline": 638,
+          "alternative": 602
+        },
+        "q4_N_min_c0": {
+          "baseline": 610,
+          "alternative": 572
+        },
+        "q5_M_min_c1": {
+          "baseline": 510,
+          "alternative": 422
+        },
+        "q5_M_ties_c1": {
+          "baseline": 2,
+          "alternative": 1
+        },
+        "q5_N_min_c1": {
+          "baseline": 534,
+          "alternative": 446
+        },
+        "q6_w1_canonical_plan": {
+          "baseline": "A2-B1;A4-B3",
+          "alternative": "A2-B2;A4-B3"
+        }
+      },
+      "changed_field_count": 8,
+      "flips_reversal": false
+    },
+    {
+      "id": "CF4_A3_miss_back_can",
+      "description": "漏看 A3 第 4 罐背面营养表朝前（E_A3: 1 -> 0）",
+      "mechanism": "使 A3-B1 与 A3-B2 失效，N 组方案归零，rev: 1 -> 0",
+      "fields": {
+        "q1_sum_N": 32,
+        "q1_sum_E": 13,
+        "q1_sum_K": 5,
+        "q1_tab_A3": 2,
+        "q1_sum_P10": 766,
+        "q1_sum_KG": 642,
+        "q2_edges": 6,
+        "q2_near_edges": 3,
+        "q3_total_plans": 7,
+        "q3_M_plans": 7,
+        "q3_N_plans": 0,
+        "q4_M_min_c0": 638,
+        "q4_M_ties_c0": 1,
+        "q4_N_min_c0": null,
+        "q4_N_ties_c0": 0,
+        "q5_M_min_c1": 504,
+        "q5_M_ties_c1": 2,
+        "q5_N_min_c1": null,
+        "q5_N_ties_c1": 0,
+        "q6_winner_w0": "M",
+        "q6_winner_w1": "M",
+        "q6_reversal": 0,
+        "q6_w1_canonical_plan": "A2-B1;A4-B3"
+      },
+      "canonical_answer": "32,13,5,2,766,642|6,3|7,7,0|638,1,None,0|504,2,None,0|M,M,0,A2-B1;A4-B3",
+      "changed_fields": {
+        "q1_sum_E": {
+          "baseline": 14,
+          "alternative": 13
+        },
+        "q2_edges": {
+          "baseline": 8,
+          "alternative": 6
+        },
+        "q2_near_edges": {
+          "baseline": 4,
+          "alternative": 3
+        },
+        "q3_total_plans": {
+          "baseline": 14,
+          "alternative": 7
+        },
+        "q3_M_plans": {
+          "baseline": 12,
+          "alternative": 7
+        },
+        "q3_N_plans": {
+          "baseline": 2,
+          "alternative": 0
+        },
+        "q4_N_min_c0": {
+          "baseline": 610,
+          "alternative": null
+        },
+        "q4_N_ties_c0": {
+          "baseline": 1,
+          "alternative": 0
+        },
+        "q5_M_min_c1": {
+          "baseline": 510,
+          "alternative": 504
+        },
+        "q5_N_min_c1": {
+          "baseline": 534,
+          "alternative": null
+        },
+        "q5_N_ties_c1": {
+          "baseline": 1,
+          "alternative": 0
+        },
+        "q6_winner_w0": {
+          "baseline": "N",
+          "alternative": "M"
+        },
+        "q6_reversal": {
+          "baseline": 1,
+          "alternative": 0
+        }
+      },
+      "changed_field_count": 13,
+      "flips_reversal": true
+    },
+    {
+      "id": "CF5_A4_all_inverted",
+      "description": "漏看 A4 右上正立罐而误判 4 罐全倒置（E_A4: 3 -> 4, G_A4 = 0）",
+      "mechanism": "A4 失效导致 M 组失去最优方案，两工况均由 N 胜，rev: 1 -> 0",
+      "fields": {
+        "q1_sum_N": 32,
+        "q1_sum_E": 15,
+        "q1_sum_K": 5,
+        "q1_tab_A3": 2,
+        "q1_sum_P10": 766,
+        "q1_sum_KG": 642,
+        "q2_edges": 6,
+        "q2_near_edges": 3,
+        "q3_total_plans": 6,
+        "q3_M_plans": 4,
+        "q3_N_plans": 2,
+        "q4_M_min_c0": 668,
+        "q4_M_ties_c0": 1,
+        "q4_N_min_c0": 610,
+        "q4_N_ties_c0": 1,
+        "q5_M_min_c1": 574,
+        "q5_M_ties_c1": 3,
+        "q5_N_min_c1": 540,
+        "q5_N_ties_c1": 1,
+        "q6_winner_w0": "N",
+        "q6_winner_w1": "N",
+        "q6_reversal": 0,
+        "q6_w1_canonical_plan": "A2-B1;A3-B2"
+      },
+      "canonical_answer": "32,15,5,2,766,642|6,3|6,4,2|668,1,610,1|574,3,540,1|N,N,0,A2-B1;A3-B2",
+      "changed_fields": {
+        "q1_sum_E": {
+          "baseline": 14,
+          "alternative": 15
+        },
+        "q2_edges": {
+          "baseline": 8,
+          "alternative": 6
+        },
+        "q2_near_edges": {
+          "baseline": 4,
+          "alternative": 3
+        },
+        "q3_total_plans": {
+          "baseline": 14,
+          "alternative": 6
+        },
+        "q3_M_plans": {
+          "baseline": 12,
+          "alternative": 4
+        },
+        "q4_M_min_c0": {
+          "baseline": 638,
+          "alternative": 668
+        },
+        "q5_M_min_c1": {
+          "baseline": 510,
+          "alternative": 574
+        },
+        "q5_M_ties_c1": {
+          "baseline": 2,
+          "alternative": 3
+        },
+        "q5_N_min_c1": {
+          "baseline": 534,
+          "alternative": 540
+        },
+        "q6_winner_w1": {
+          "baseline": "M",
+          "alternative": "N"
+        },
+        "q6_reversal": {
+          "baseline": 1,
+          "alternative": 0
+        },
+        "q6_w1_canonical_plan": {
+          "baseline": "A2-B1;A4-B3",
+          "alternative": "A2-B1;A3-B2"
+        }
+      },
+      "changed_field_count": 12,
+      "flips_reversal": true
+    },
+    {
+      "id": "CF6_B2_miss_botR_keyhole",
+      "description": "漏看 B2 最下层右罐倒置露出的绿色钥匙孔图标（K_B2: 3 -> 2）",
+      "mechanism": "改变 sum_K (5 -> 4) 及工况 1 中 N 组最小代价 (534 -> 552)",
+      "fields": {
+        "q1_sum_N": 32,
+        "q1_sum_E": 14,
+        "q1_sum_K": 4,
+        "q1_tab_A3": 2,
+        "q1_sum_P10": 766,
+        "q1_sum_KG": 642,
+        "q2_edges": 8,
+        "q2_near_edges": 4,
+        "q3_total_plans": 14,
+        "q3_M_plans": 12,
+        "q3_N_plans": 2,
+        "q4_M_min_c0": 638,
+        "q4_M_ties_c0": 1,
+        "q4_N_min_c0": 610,
+        "q4_N_ties_c0": 1,
+        "q5_M_min_c1": 510,
+        "q5_M_ties_c1": 1,
+        "q5_N_min_c1": 552,
+        "q5_N_ties_c1": 1,
+        "q6_winner_w0": "N",
+        "q6_winner_w1": "M",
+        "q6_reversal": 1,
+        "q6_w1_canonical_plan": "A2-B1;A4-B3"
+      },
+      "canonical_answer": "32,14,4,2,766,642|8,4|14,12,2|638,1,610,1|510,1,552,1|N,M,1,A2-B1;A4-B3",
+      "changed_fields": {
+        "q1_sum_K": {
+          "baseline": 5,
+          "alternative": 4
+        },
+        "q5_M_ties_c1": {
+          "baseline": 2,
+          "alternative": 1
+        },
+        "q5_N_min_c1": {
+          "baseline": 534,
+          "alternative": 552
+        }
+      },
+      "changed_field_count": 3,
+      "flips_reversal": false
+    },
+    {
+      "id": "CF7_A3_miss_top_peel_tab",
+      "description": "仅看到 A3 第 5 罐而漏看第 1 罐右侧翘起米色耳片（tab_A3: 2 -> 1）",
+      "mechanism": "改变 tab_A3 (2 -> 1) 及工况 1 中 N 组最小代价 (534 -> 526)",
+      "fields": {
+        "q1_sum_N": 32,
+        "q1_sum_E": 14,
+        "q1_sum_K": 5,
+        "q1_tab_A3": 1,
+        "q1_sum_P10": 766,
+        "q1_sum_KG": 642,
+        "q2_edges": 8,
+        "q2_near_edges": 4,
+        "q3_total_plans": 14,
+        "q3_M_plans": 12,
+        "q3_N_plans": 2,
+        "q4_M_min_c0": 638,
+        "q4_M_ties_c0": 1,
+        "q4_N_min_c0": 610,
+        "q4_N_ties_c0": 1,
+        "q5_M_min_c1": 510,
+        "q5_M_ties_c1": 2,
+        "q5_N_min_c1": 526,
+        "q5_N_ties_c1": 1,
+        "q6_winner_w0": "N",
+        "q6_winner_w1": "M",
+        "q6_reversal": 1,
+        "q6_w1_canonical_plan": "A2-B1;A4-B3"
+      },
+      "canonical_answer": "32,14,5,1,766,642|8,4|14,12,2|638,1,610,1|510,2,526,1|N,M,1,A2-B1;A4-B3",
+      "changed_fields": {
+        "q1_tab_A3": {
+          "baseline": 2,
+          "alternative": 1
+        },
+        "q5_N_min_c1": {
+          "baseline": 534,
+          "alternative": 526
+        }
+      },
+      "changed_field_count": 2,
+      "flips_reversal": false
+    },
+    {
+      "id": "CF8_B2_miss_bottom_row",
+      "description": "漏看 B2 最下层 2 罐倒置（E_B2: 2 -> 0）",
+      "mechanism": "使 A2-B2 与 A3-B2 失效，两工况均由 M 胜，rev: 1 -> 0",
+      "fields": {
+        "q1_sum_N": 32,
+        "q1_sum_E": 12,
+        "q1_sum_K": 5,
+        "q1_tab_A3": 2,
+        "q1_sum_P10": 766,
+        "q1_sum_KG": 642,
+        "q2_edges": 6,
+        "q2_near_edges": 2,
+        "q3_total_plans": 8,
+        "q3_M_plans": 6,
+        "q3_N_plans": 2,
+        "q4_M_min_c0": 638,
+        "q4_M_ties_c0": 1,
+        "q4_N_min_c0": 640,
+        "q4_N_ties_c0": 1,
+        "q5_M_min_c1": 498,
+        "q5_M_ties_c1": 1,
+        "q5_N_min_c1": 536,
+        "q5_N_ties_c1": 1,
+        "q6_winner_w0": "M",
+        "q6_winner_w1": "M",
+        "q6_reversal": 0,
+        "q6_w1_canonical_plan": "A2-B1;A4-B3"
+      },
+      "canonical_answer": "32,12,5,2,766,642|6,2|8,6,2|638,1,640,1|498,1,536,1|M,M,0,A2-B1;A4-B3",
+      "changed_fields": {
+        "q1_sum_E": {
+          "baseline": 14,
+          "alternative": 12
+        },
+        "q2_edges": {
+          "baseline": 8,
+          "alternative": 6
+        },
+        "q2_near_edges": {
+          "baseline": 4,
+          "alternative": 2
+        },
+        "q3_total_plans": {
+          "baseline": 14,
+          "alternative": 8
+        },
+        "q3_M_plans": {
+          "baseline": 12,
+          "alternative": 6
+        },
+        "q4_N_min_c0": {
+          "baseline": 610,
+          "alternative": 640
+        },
+        "q5_M_min_c1": {
+          "baseline": 510,
+          "alternative": 498
+        },
+        "q5_M_ties_c1": {
+          "baseline": 2,
+          "alternative": 1
+        },
+        "q5_N_min_c1": {
+          "baseline": 534,
+          "alternative": 536
+        },
+        "q6_winner_w0": {
+          "baseline": "N",
+          "alternative": "M"
+        },
+        "q6_reversal": {
+          "baseline": 1,
+          "alternative": 0
+        }
+      },
+      "changed_field_count": 11,
+      "flips_reversal": true
+    },
+    {
+      "id": "CF9_B3_miss_back_left",
+      "description": "漏看 B3 后排左罐倒置（E_B3: 4 -> 3）",
+      "mechanism": "改变 sum_E (14 -> 13) 及工况 1 中 N 组最小代价 (534 -> 528)",
+      "fields": {
+        "q1_sum_N": 32,
+        "q1_sum_E": 13,
+        "q1_sum_K": 5,
+        "q1_tab_A3": 2,
+        "q1_sum_P10": 766,
+        "q1_sum_KG": 642,
+        "q2_edges": 8,
+        "q2_near_edges": 4,
+        "q3_total_plans": 14,
+        "q3_M_plans": 12,
+        "q3_N_plans": 2,
+        "q4_M_min_c0": 638,
+        "q4_M_ties_c0": 1,
+        "q4_N_min_c0": 610,
+        "q4_N_ties_c0": 1,
+        "q5_M_min_c1": 510,
+        "q5_M_ties_c1": 2,
+        "q5_N_min_c1": 528,
+        "q5_N_ties_c1": 1,
+        "q6_winner_w0": "N",
+        "q6_winner_w1": "M",
+        "q6_reversal": 1,
+        "q6_w1_canonical_plan": "A2-B1;A4-B3"
+      },
+      "canonical_answer": "32,13,5,2,766,642|8,4|14,12,2|638,1,610,1|510,2,528,1|N,M,1,A2-B1;A4-B3",
+      "changed_fields": {
+        "q1_sum_E": {
+          "baseline": 14,
+          "alternative": 13
+        },
+        "q5_N_min_c1": {
+          "baseline": 534,
+          "alternative": 528
+        }
+      },
+      "changed_field_count": 2,
+      "flips_reversal": false
+    }
+  ]
+}

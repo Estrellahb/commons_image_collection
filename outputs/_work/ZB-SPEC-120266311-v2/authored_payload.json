@@ -1,0 +1,9 @@
+{
+  "id": 247,
+  "question_types": ["counting", "localization_measurement", "robust_ocr", "complex_instruction"],
+  "difficulty": "medium",
+  "difficulty_tags": ["cross_region_alignment", "high_density", "high_similarity", "multi_hop_visual"],
+  "tag_notes": "P1。ZB-SPEC-120266311-v2 已定稿。右侧 4 栏 12 个指定鞘翅目物种块（132 张纸卡 / 137 只甲虫）的微观装帧属性——含 24 张下端插针（A5 hirta 与 A6 ceramboides 各仅右下角单卡下针）、B5 desmaresti 多虫卡（5 卡 10 虫）、B1 murina 第 1 行第 3 卡隐藏 ♂、B2/B3 双字母墨水代码（9 张含 2 张 WX，区分 WK）及正射平面欧氏测距——共同决定 20 条兼容边（5 近距）、92 个合法方案与两工况赢家反转（N->M，工况 1 两族均并列 2）。本地质检 authoring_candidate，经 v1->v2 提难后三次独立盲答 3/3 全对，登记 medium。",
+  "authored_status": "authored",
+  "authored_ref": "ZB-SPEC-120266311-v2 | outputs/authoring_ZB-SPEC-120266311-v2"
+}

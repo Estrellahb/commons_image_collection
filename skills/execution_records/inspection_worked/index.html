@@ -1,0 +1,379 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><title>ZeroBench 图片质检</title><style>body{font:16px system-ui;margin:30px;background:#f4f4f1;color:#202020}article{background:white;margin:22px 0;padding:24px;border:1px solid #ddd;overflow:auto}img{max-width:48%;float:left;margin:0 24px 16px 0}pre{white-space:pre-wrap;font-size:13px}h1{font-size:28px}</style><h1>图片与题目证据质检</h1><p>代理指标用于筛选，不证明难度。缺失值不会自动通过；判定与试答证据分开。</p><article><h2>C40-01-source-13062 · needs_review</h2><img src="001.jpg" loading="lazy"><pre>{
+  &quot;id&quot;: &quot;C40-01-source-13062&quot;,
+  &quot;blockers&quot;: [],
+  &quot;review&quot;: [
+    &quot;task_category_granularity_pending: 品牌/大类标签不能默认等于SKU&quot;,
+    &quot;critical_readability_pending:sample-product&quot;,
+    &quot;chinese_text_coverage_unknown&quot;,
+    &quot;human_check_pending:source_fidelity&quot;,
+    &quot;human_check_pending:annotation_correct&quot;,
+    &quot;human_check_pending:critical_evidence_visible&quot;,
+    &quot;human_check_pending:no_answer_leakage&quot;,
+    &quot;human_check_pending:counting_rules_clear&quot;,
+    &quot;reasoning_graph_missing&quot;,
+    &quot;multi_region_dependencies_unproven&quot;,
+    &quot;wrong_pair_to_answer_effect_unproven&quot;,
+    &quot;bypass_review_pending_or_failed&quot;,
+    &quot;platform_points_expected_1_to_3&quot;
+  ],
+  &quot;advisory&quot;: [
+    &quot;object_count_is_annotation_box_count_not_proven_physical_instances&quot;,
+    &quot;local_color_pairs_and_box_overlaps_are_candidates_not_difficulty_or_occlusion_proof&quot;,
+    &quot;class_coverage_below_0.85&quot;
+  ],
+  &quot;metrics&quot;: {
+    &quot;object_count&quot;: 118,
+    &quot;objects_per_MP&quot;: 61.458333333333336,
+    &quot;class_count&quot;: 8,
+    &quot;known_fraction&quot;: 0.7033898305084746,
+    &quot;median_bbox_short_px&quot;: 47.0,
+    &quot;nearcolor_pair_count&quot;: 0,
+    &quot;nearcolor_neighbor_fraction&quot;: 0.0,
+    &quot;bbox_overlap_pair_count&quot;: 0,
+    &quot;active_object_count&quot;: 18,
+    &quot;active_objects_per_submitted_MP&quot;: 9.375,
+    &quot;active_entity_count&quot;: 18,
+    &quot;active_fraction_of_annotated_objects&quot;: 0.15254237288135594,
+    &quot;inactive_annotated_count&quot;: 100,
+    &quot;background_object_count&quot;: null,
+    &quot;active_objects_per_region_MP&quot;: 9.375,
+    &quot;han_text_coverage&quot;: null,
+    &quot;annotated_occlusion_fraction&quot;: null,
+    &quot;distinct_dependency_regions&quot;: null,
+    &quot;effective_counterfactuals&quot;: null,
+    &quot;width&quot;: 1200,
+    &quot;height&quot;: 1600,
+    &quot;mode&quot;: &quot;RGB&quot;,
+    &quot;exif_orientation&quot;: 1,
+    &quot;frame_count&quot;: 1,
+    &quot;submitted_width&quot;: 1200,
+    &quot;submitted_height&quot;: 1600,
+    &quot;native_width&quot;: 1200,
+    &quot;native_height&quot;: 1600,
+    &quot;global_640_proxy&quot;: {
+      &quot;contrast_p90_p10&quot;: 178.0,
+      &quot;gray_entropy_bits&quot;: 7.83643453320134,
+      &quot;edge_fraction_16&quot;: 0.19713018523349857
+    },
+    &quot;known_class_count&quot;: 8,
+    &quot;repeated_classes&quot;: 8,
+    &quot;spatial_entropy_4x4&quot;: 0.9628494092328423,
+    &quot;p10_bbox_short_px&quot;: 37.0,
+    &quot;edge_touching_count&quot;: 4,
+    &quot;annotation_complete&quot;: null,
+    &quot;median_active_bbox_short_px&quot;: 55.5,
+    &quot;active_known_class_count&quot;: 5,
+    &quot;occlusion_annotation_count&quot;: 0,
+    &quot;different_class_neighbor_pairs&quot;: 64,
+    &quot;duplicate_bbox_candidate_count&quot;: 0,
+    &quot;active_nearcolor_pair_count&quot;: 0
+  },
+  &quot;source&quot;: {
+    &quot;kind&quot;: &quot;real_photo&quot;,
+    &quot;url&quot;: &quot;https://huggingface.co/datasets/shelfwise-by-form/SKUs_on_shelves_PL&quot;,
+    &quot;license_url&quot;: &quot;https://creativecommons.org/licenses/by/4.0/&quot;,
+    &quot;authorization&quot;: &quot;verified&quot;,
+    &quot;attribution&quot;: &quot;ShelfWise by FORM&quot;,
+    &quot;scene_id&quot;: &quot;ShelfWise:13062&quot;,
+    &quot;source_asset_id&quot;: &quot;ShelfWise:13062&quot;
+  },
+  &quot;difficulty_status&quot;: &quot;not_evaluated&quot;,
+  &quot;annotation_provenance&quot;: &quot;publisher_coco; active IDs from frozen C40-01/v2 facts&quot;,
+  &quot;geometry&quot;: {
+    &quot;kind&quot;: &quot;native&quot;,
+    &quot;submitted_size_px&quot;: [
+      1200,
+      1600
+    ],
+    &quot;native_size_px&quot;: [
+      1200,
+      1600
+    ],
+    &quot;native_size_evidence&quot;: &quot;author_native_declaration&quot;,
+    &quot;panels&quot;: []
+  },
+  &quot;preview&quot;: &quot;001.jpg&quot;,
+  &quot;nearcolor_pairs&quot;: [],
+  &quot;overlap_candidates&quot;: [],
+  &quot;duplicate_bbox_candidates&quot;: [],
+  &quot;roi_metrics&quot;: [
+    {
+      &quot;id&quot;: &quot;sample-product&quot;,
+      &quot;file&quot;: &quot;001_roi1.png&quot;,
+      &quot;submitted_crop_size_px&quot;: [
+        55,
+        168
+      ],
+      &quot;feature_width_native_px&quot;: null,
+      &quot;native_readability_reviewed&quot;: null,
+      &quot;pixel_metric_basis&quot;: &quot;submitted_pixels&quot;,
+      &quot;contrast_p90_p10&quot;: 114.0,
+      &quot;gray_entropy_bits&quot;: 7.456533475181082,
+      &quot;edge_fraction_16&quot;: 0.34249876759599057
+    }
+  ],
+  &quot;platform_points&quot;: [],
+  &quot;decision&quot;: &quot;needs_review&quot;
+}</pre></article><article><h2>C40-01-v2-composite · needs_review</h2><img src="002.jpg" loading="lazy"><pre>{
+  &quot;id&quot;: &quot;C40-01-v2-composite&quot;,
+  &quot;blockers&quot;: [],
+  &quot;review&quot;: [
+    &quot;mixed_panels_require_separate_provenance_and_sample_consistency_review&quot;,
+    &quot;task_category_granularity_pending: 品牌/大类标签不能默认等于SKU&quot;,
+    &quot;native_roi_readability_pending:sample-product&quot;,
+    &quot;critical_readability_pending:sample-product&quot;,
+    &quot;chinese_text_coverage_unknown&quot;,
+    &quot;human_check_pending:source_fidelity&quot;,
+    &quot;human_check_pending:annotation_correct&quot;,
+    &quot;human_check_pending:critical_evidence_visible&quot;,
+    &quot;human_check_pending:no_answer_leakage&quot;,
+    &quot;human_check_pending:counting_rules_clear&quot;,
+    &quot;reasoning_graph_missing&quot;,
+    &quot;multi_region_dependencies_unproven&quot;,
+    &quot;wrong_pair_to_answer_effect_unproven&quot;,
+    &quot;bypass_review_pending_or_failed&quot;,
+    &quot;platform_points_expected_1_to_3&quot;
+  ],
+  &quot;advisory&quot;: [
+    &quot;montage_canvas_is_not_native_resolution_or_independent_scenes&quot;,
+    &quot;native_resolution_below_profile: 以关键特征原生像素复审，不用放大补像素&quot;,
+    &quot;object_count_is_annotation_box_count_not_proven_physical_instances&quot;,
+    &quot;local_color_pairs_and_box_overlaps_are_candidates_not_difficulty_or_occlusion_proof&quot;,
+    &quot;class_coverage_below_0.85&quot;
+  ],
+  &quot;metrics&quot;: {
+    &quot;object_count&quot;: 118,
+    &quot;objects_per_MP&quot;: 37.62755102040816,
+    &quot;class_count&quot;: 8,
+    &quot;known_fraction&quot;: 0.7033898305084746,
+    &quot;median_bbox_short_px&quot;: 47.0,
+    &quot;nearcolor_pair_count&quot;: 0,
+    &quot;nearcolor_neighbor_fraction&quot;: 0.0,
+    &quot;bbox_overlap_pair_count&quot;: 0,
+    &quot;active_object_count&quot;: 18,
+    &quot;active_objects_per_submitted_MP&quot;: 5.739795918367347,
+    &quot;active_entity_count&quot;: 18,
+    &quot;active_fraction_of_annotated_objects&quot;: 0.15254237288135594,
+    &quot;inactive_annotated_count&quot;: 100,
+    &quot;background_object_count&quot;: null,
+    &quot;active_objects_per_region_MP&quot;: 9.375,
+    &quot;han_text_coverage&quot;: null,
+    &quot;annotated_occlusion_fraction&quot;: null,
+    &quot;distinct_dependency_regions&quot;: null,
+    &quot;effective_counterfactuals&quot;: null,
+    &quot;width&quot;: 1960,
+    &quot;height&quot;: 1600,
+    &quot;mode&quot;: &quot;RGB&quot;,
+    &quot;exif_orientation&quot;: 1,
+    &quot;frame_count&quot;: 1,
+    &quot;submitted_width&quot;: 1960,
+    &quot;submitted_height&quot;: 1600,
+    &quot;native_width&quot;: null,
+    &quot;native_height&quot;: null,
+    &quot;global_640_proxy&quot;: {
+      &quot;contrast_p90_p10&quot;: 208.0,
+      &quot;gray_entropy_bits&quot;: 6.012866184500367,
+      &quot;edge_fraction_16&quot;: 0.1498835078965754
+    },
+    &quot;known_class_count&quot;: 8,
+    &quot;repeated_classes&quot;: 8,
+    &quot;spatial_entropy_4x4&quot;: 0.8109194768274259,
+    &quot;p10_bbox_short_px&quot;: 37.0,
+    &quot;edge_touching_count&quot;: 4,
+    &quot;annotation_complete&quot;: null,
+    &quot;median_active_bbox_short_px&quot;: 55.5,
+    &quot;active_known_class_count&quot;: 5,
+    &quot;occlusion_annotation_count&quot;: 0,
+    &quot;different_class_neighbor_pairs&quot;: 64,
+    &quot;duplicate_bbox_candidate_count&quot;: 0,
+    &quot;active_nearcolor_pair_count&quot;: 0
+  },
+  &quot;source&quot;: {
+    &quot;kind&quot;: &quot;mixed_composite&quot;,
+    &quot;url&quot;: &quot;https://huggingface.co/datasets/shelfwise-by-form/SKUs_on_shelves_PL&quot;,
+    &quot;license_url&quot;: &quot;https://creativecommons.org/licenses/by/4.0/&quot;,
+    &quot;authorization&quot;: &quot;verified&quot;,
+    &quot;attribution&quot;: &quot;ShelfWise by FORM&quot;,
+    &quot;scene_id&quot;: &quot;ShelfWise:13062&quot;,
+    &quot;source_asset_id&quot;: &quot;ShelfWise:13062&quot;
+  },
+  &quot;difficulty_status&quot;: &quot;not_evaluated&quot;,
+  &quot;annotation_provenance&quot;: &quot;publisher_coco; active IDs from frozen C40-01/v2 facts&quot;,
+  &quot;geometry&quot;: {
+    &quot;kind&quot;: &quot;montage&quot;,
+    &quot;submitted_size_px&quot;: [
+      1960,
+      1600
+    ],
+    &quot;native_size_px&quot;: null,
+    &quot;native_size_evidence&quot;: &quot;unknown&quot;,
+    &quot;panels&quot;: [
+      {
+        &quot;id&quot;: &quot;main-photo&quot;,
+        &quot;native_size_px&quot;: [
+          1200,
+          1600
+        ],
+        &quot;native_size_evidence&quot;: &quot;source_file&quot;,
+        &quot;source_crop_xywh&quot;: [
+          0,
+          0,
+          1200,
+          1600
+        ],
+        &quot;output_xywh&quot;: [
+          0,
+          0,
+          1200,
+          1600
+        ],
+        &quot;scale_xy&quot;: [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;ref-A&quot;,
+        &quot;native_size_px&quot;: [
+          1600,
+          1200
+        ],
+        &quot;native_size_evidence&quot;: &quot;source_file&quot;,
+        &quot;source_crop_xywh&quot;: [
+          868,
+          746,
+          59,
+          138
+        ],
+        &quot;output_xywh&quot;: [
+          1295,
+          115,
+          59,
+          138
+        ],
+        &quot;scale_xy&quot;: [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;ref-B&quot;,
+        &quot;native_size_px&quot;: [
+          1600,
+          1200
+        ],
+        &quot;native_size_evidence&quot;: &quot;source_file&quot;,
+        &quot;source_crop_xywh&quot;: [
+          1112,
+          746,
+          55,
+          138
+        ],
+        &quot;output_xywh&quot;: [
+          1295,
+          360,
+          55,
+          138
+        ],
+        &quot;scale_xy&quot;: [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;ref-C&quot;,
+        &quot;native_size_px&quot;: [
+          1600,
+          1200
+        ],
+        &quot;native_size_evidence&quot;: &quot;source_file&quot;,
+        &quot;source_crop_xywh&quot;: [
+          927,
+          745,
+          61,
+          141
+        ],
+        &quot;output_xywh&quot;: [
+          1295,
+          605,
+          61,
+          141
+        ],
+        &quot;scale_xy&quot;: [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;ref-D&quot;,
+        &quot;native_size_px&quot;: [
+          1200,
+          1600
+        ],
+        &quot;native_size_evidence&quot;: &quot;source_file&quot;,
+        &quot;source_crop_xywh&quot;: [
+          16,
+          302,
+          78,
+          210
+        ],
+        &quot;output_xywh&quot;: [
+          1295,
+          850,
+          74,
+          200
+        ],
+        &quot;scale_xy&quot;: [
+          0.9487179487179487,
+          0.9523809523809523
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;ref-E&quot;,
+        &quot;native_size_px&quot;: [
+          1600,
+          1200
+        ],
+        &quot;native_size_evidence&quot;: &quot;source_file&quot;,
+        &quot;source_crop_xywh&quot;: [
+          989,
+          744,
+          55,
+          139
+        ],
+        &quot;output_xywh&quot;: [
+          1295,
+          1095,
+          55,
+          139
+        ],
+        &quot;scale_xy&quot;: [
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  &quot;preview&quot;: &quot;002.jpg&quot;,
+  &quot;nearcolor_pairs&quot;: [],
+  &quot;overlap_candidates&quot;: [],
+  &quot;duplicate_bbox_candidates&quot;: [],
+  &quot;roi_metrics&quot;: [
+    {
+      &quot;id&quot;: &quot;sample-product&quot;,
+      &quot;file&quot;: &quot;002_roi1.png&quot;,
+      &quot;submitted_crop_size_px&quot;: [
+        55,
+        168
+      ],
+      &quot;feature_width_native_px&quot;: null,
+      &quot;native_readability_reviewed&quot;: null,
+      &quot;pixel_metric_basis&quot;: &quot;submitted_pixels&quot;,
+      &quot;contrast_p90_p10&quot;: 120.0,
+      &quot;gray_entropy_bits&quot;: 7.4660801519464,
+      &quot;edge_fraction_16&quot;: 0.3403078271347976
+    }
+  ],
+  &quot;platform_points&quot;: [],
+  &quot;decision&quot;: &quot;needs_review&quot;
+}</pre></article></html>

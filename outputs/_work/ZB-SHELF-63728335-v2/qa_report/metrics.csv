@@ -1,0 +1,2 @@
+﻿id,decision,difficulty_status,width,height,object_count,class_count,known_fraction,median_bbox_short_px,nearcolor_pair_count,bbox_overlap_pair_count,distinct_dependency_regions,effective_counterfactuals,blockers,review,advisory
+ZB-SHELF-63728335-v2,authoring_candidate,no_complete_failure_recorded,4032,3024,14,14,1.0,315.0,3,2,6,5,[],[],[]

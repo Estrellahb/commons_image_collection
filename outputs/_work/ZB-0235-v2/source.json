@@ -1,0 +1,30 @@
+{
+  "page_id": 16268679,
+  "category": "公共场景/市场摊位",
+  "file": "img/公共场景/市场摊位/zb-market-16268679.jpg",
+  "title": "File:Spices for sale in the Morocco.jpg",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Spices_for_sale_in_the_Morocco.jpg",
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Spices_for_sale_in_the_Morocco.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "source_bytes": 2971377,
+  "source_width": 1650,
+  "source_height": 2320,
+  "width": 1650,
+  "height": 2320,
+  "bytes": 1428495,
+  "limit_bytes": 5000000,
+  "preferred_bytes": 5000000,
+  "license": {
+    "Credit": "Own work",
+    "Artist": "High Contrast",
+    "LicenseShortName": "CC BY 3.0 de",
+    "UsageTerms": "Creative Commons Attribution 3.0 de",
+    "AttributionRequired": "true",
+    "LicenseUrl": "https://creativecommons.org/licenses/by/3.0/de/deed.en",
+    "Restrictions": ""
+  },
+  "modifications": "Lossy JPEG re-encoding. EXIF orientation applied; only color-related metadata kept.",
+  "resized": false,
+  "kind": "real_photo",
+  "scene_id": "wikimedia-commons:16268679",
+  "checked": "官方文件页核对高分辨率、作者与许可；本地项目排除记录和既有题包未命中。入库版 JPEG 历史重编码；本题逐字节使用入库文件。"
+}

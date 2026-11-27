@@ -1,0 +1,22 @@
+{
+  "checks": [
+    {
+      "viewport": 1320,
+      "images": 2,
+      "marker_count": 3,
+      "copy_fields": 15,
+      "clipboard": "actual_clipboard_plain_text"
+    },
+    {
+      "viewport": 390,
+      "images": 2,
+      "marker_count": 3,
+      "copy_fields": 15,
+      "clipboard": "actual_clipboard_plain_text"
+    }
+  ],
+  "qa_index_opened": true,
+  "embedded_Chinese_font_loaded": true,
+  "browser_version": "159.0.8154.6",
+  "sha256": "5cdf17a2424a5d04acf6df4f930f1911fbac568b74f1ce5f6cd0ec32a0b03fe3"
+}

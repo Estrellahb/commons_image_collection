@@ -1,4 +1,0 @@
-interface:
-  display_name: "ZeroBench 视觉联合推理出题"
-  short_description: "按论文和实测选图，将元素测距、多属性对应与联合优化写成递进视觉题"
-  default_prompt: "使用 $zerobench-visual-authoring 设计或返修一道 ZeroBench 高难视觉题，让图中对象及其距离决定参数和可行方案，配齐打点、递进小问和可复算的作者解答。"

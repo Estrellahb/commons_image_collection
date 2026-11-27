@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZeroBench 作者填报记录 · ZB-SHELF-63728335-v2</title>
+<style>
+  :root {
+    --bg: #f5f6f8;
+    --card: #ffffff;
+    --ink: #18202c;
+    --muted: #526071;
+    --border: #dce2ea;
+    --accent: #1d4ed8;
+    --accent-soft: #eff6ff;
+    --ok: #15803d;
+    --ok-bg: #dcfce7;
+    --err: #b91c1c;
+    --err-bg: #fee2e2;
+    --warn: #b45309;
+    --warn-bg: #fef3c7;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 28px 20px 64px;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    line-height: 1.65;
+  }
+  .wrap { max-width: 1280px; margin: 0 auto; }
+  header {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+    color: #fff;
+    padding: 24px 28px;
+    border-radius: 14px;
+    margin-bottom: 22px;
+    box-shadow: 0 6px 24px rgba(15, 23, 42, 0.14);
+  }
+  header h1 { margin: 0 0 6px; font-size: 24px; letter-spacing: 0.2px; }
+  header p { margin: 0; opacity: 0.9; font-size: 14px; }
+  section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  }
+  .sec-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    border-bottom: 2px solid var(--accent-soft);
+    padding-bottom: 10px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+  h2 { margin: 0; font-size: 19px; color: #0f172a; }
+  h3 { margin: 18px 0 10px; font-size: 15.5px; color: #1e293b; }
+  .btn-copy {
+    appearance: none;
+    border: 1px solid var(--accent);
+    background: var(--accent);
+    color: #fff;
+    border-radius: 7px;
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.08s ease;
+  }
+  .btn-copy:hover { background: #1e40af; }
+  .btn-copy:active { transform: scale(0.98); }
+  .btn-copy.copied { background: var(--ok); border-color: var(--ok); }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 10px 18px;
+  }
+  .meta-item {
+    padding: 10px 12px;
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 13.5px;
+  }
+  .meta-item .k { display: block; color: var(--muted); font-size: 12px; margin-bottom: 2px; }
+  .meta-item .v { font-weight: 600; word-break: break-all; }
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    align-items: start;
+  }
+  @media (max-width: 900px) {
+    .compare-grid { grid-template-columns: 1fr; }
+  }
+  figure { margin: 0; }
+  figcaption {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+  .img-stage {
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: #111;
+    line-height: 0;
+  }
+  .img-stage img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .img-stage svg.overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  .copy-box {
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 14px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "PingFang SC", "Microsoft YaHei", monospace;
+  }
+  .answer-box {
+    background: #eff6ff;
+    border: 2px solid #93c5fd;
+    color: #1e3a8a;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 14px 18px;
+    border-radius: 8px;
+    word-break: break-all;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  .table-wrap { overflow-x: auto; margin-top: 10px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { background: #f1f5f9; font-weight: 700; white-space: nowrap; }
+  tr.baseline-row { background: #f0fdf4; }
+  td.flip-cell { background: #fef2f2; color: var(--err); }
+  .badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  .badge.ok { background: var(--ok-bg); color: var(--ok); }
+  .badge.err { background: var(--err-bg); color: var(--err); }
+  .badge.warn { background: var(--warn-bg); color: var(--warn); }
+  ul.clean { margin: 8px 0 0; padding-left: 20px; font-size: 14px; }
+  ul.clean li { margin-bottom: 6px; }
+  code {
+    background: #f1f5f9;
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-size: 12.5px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>ZeroBench 视觉联合推理作者填报页 · ZB-SHELF-63728335-v2</h1>
+  <p>挪威超市鲭鱼罐头货架跨层陈列稽核、双口径电子价签核验与两工况调度反转（离线平台填报版 · 登记难度 medium）</p>
+</header>
+
+<!-- 1. 基本信息 -->
+<section id="sec-basic">
+  <div class="sec-head">
+    <h2>一、基本信息</h2>
+    <button class="btn-copy" data-target="copy-basic">复制基本信息</button>
+  </div>
+  <div class="meta-grid">
+    <div class="meta-item"><span class="k">题号</span><span class="v">ZB-SHELF-63728335-v2</span></div>
+    <div class="meta-item"><span class="k">题名</span><span class="v">挪威超市鲭鱼罐头货架跨层陈列稽核与两工况联合调度反转</span></div>
+    <div class="meta-item"><span class="k">一级题型 / 候选题型</span><span class="v">计数聚合链（主）；抗干扰文本读取、定位度量、复杂指令遵循</span></div>
+    <div class="meta-item"><span class="k">图片大类与小类</span><span class="v">实拍密集场景照 · 公共场景 / 超市货架（真实照片 real_photo）</span></div>
+    <div class="meta-item"><span class="k">原图尺寸与文件</span><span class="v">4032 × 3024 px（EXIF=1，RGB JPEG，zb-shelf-63728335.jpg）</span></div>
+    <div class="meta-item"><span class="k">来源页与资产编号</span><span class="v">Wikimedia Commons Page ID 63728335 · File:Mackerel_in_tomato_sauce,_etc.,_product_aisle-shop_shelves_in_Meny_Supermarket,_Bergen_Storsenter_Shopping_Mall,_Bergen,_Norway,_2017-10-23.jpg</span></div>
+    <div class="meta-item"><span class="k">作者署名</span><span class="v">Wolfmann</span></div>
+    <div class="meta-item"><span class="k">许可协议</span><span class="v">CC BY-SA 4.0（https://creativecommons.org/licenses/by-sa/4.0）</span></div>
+  </div>
+  <textarea id="copy-basic" hidden>题号：ZB-SHELF-63728335-v2
+题名：挪威超市鲭鱼罐头货架跨层陈列稽核与两工况联合调度反转
+题型：计数聚合链（兼抗干扰文本读取、定位度量、复杂指令遵循）
+图片类别：实拍密集场景照 / 公共场景-超市货架（真实照片）
+原图尺寸：4032×3024 px（zb-shelf-63728335.jpg）
+来源：https://commons.wikimedia.org/wiki/File:Mackerel_in_tomato_sauce,_etc.,_product_aisle-shop_shelves_in_Meny_Supermarket,_Bergen_Storsenter_Shopping_Mall,_Bergen,_Norway,_2017-10-23.jpg
+作者：Wolfmann
+许可：CC BY-SA 4.0（https://creativecommons.org/licenses/by-sa/4.0）</textarea>
+</section>
+
+<!-- 2. 原图与打点对照 -->
+<section id="sec-images">
+  <div class="sec-head">
+    <h2>二、原图与打点对照</h2>
+    <button class="btn-copy" data-target="copy-points">复制打点坐标说明</button>
+  </div>
+  <div class="compare-grid">
+    <figure>
+      <figcaption>左：干净原图（上传平台主图，4032 × 3024 px 未修改）</figcaption>
+      <div class="img-stage">
+        <img src="zb-shelf-63728335.jpg" alt="干净原图 zb-shelf-63728335.jpg" width="4032" height="3024">
+      </div>
+    </figure>
+    <figure>
+      <figcaption>右：同画幅叠加 3 个关键打点（SVG viewBox 0 0 4032 3024 精确缩放对齐）</figcaption>
+      <div class="img-stage">
+        <img src="zb-shelf-63728335.jpg" alt="打点对照图 zb-shelf-63728335.jpg" width="4032" height="3024">
+        <svg class="overlay" viewBox="0 0 4032 3024" xmlns="http://www.w3.org/2000/svg" aria-label="关键打点标注">
+          
+      <g>
+        <circle cx="2070" cy="940" r="82" fill="none" stroke="#ffffff" stroke-width="24" opacity="0.95"/>
+        <circle cx="2070" cy="940" r="82" fill="none" stroke="#f59e0b" stroke-width="13"/>
+        <line x1="1952" y1="940" x2="2028" y2="940" stroke="#f59e0b" stroke-width="9"/>
+        <line x1="2112" y1="940" x2="2188" y2="940" stroke="#f59e0b" stroke-width="9"/>
+        <line x1="2070" y1="822" x2="2070" y2="898" stroke="#f59e0b" stroke-width="9"/>
+        <line x1="2070" y1="982" x2="2070" y2="1058" stroke="#f59e0b" stroke-width="9"/>
+        <circle cx="2070" cy="940" r="15" fill="#f59e0b" stroke="#ffffff" stroke-width="6"/>
+        <circle cx="2162" cy="848" r="62" fill="#f59e0b" stroke="#ffffff" stroke-width="11"/>
+        <text x="2162" y="873" text-anchor="middle" fill="#ffffff" font-size="74" font-weight="700" font-family="system-ui, sans-serif">1</text>
+      </g>
+
+      <g>
+        <circle cx="1828" cy="2272" r="82" fill="none" stroke="#ffffff" stroke-width="24" opacity="0.95"/>
+        <circle cx="1828" cy="2272" r="82" fill="none" stroke="#0284c7" stroke-width="13"/>
+        <line x1="1710" y1="2272" x2="1786" y2="2272" stroke="#0284c7" stroke-width="9"/>
+        <line x1="1870" y1="2272" x2="1946" y2="2272" stroke="#0284c7" stroke-width="9"/>
+        <line x1="1828" y1="2154" x2="1828" y2="2230" stroke="#0284c7" stroke-width="9"/>
+        <line x1="1828" y1="2314" x2="1828" y2="2390" stroke="#0284c7" stroke-width="9"/>
+        <circle cx="1828" cy="2272" r="15" fill="#0284c7" stroke="#ffffff" stroke-width="6"/>
+        <circle cx="1920" cy="2180" r="62" fill="#0284c7" stroke="#ffffff" stroke-width="11"/>
+        <text x="1920" y="2205" text-anchor="middle" fill="#ffffff" font-size="74" font-weight="700" font-family="system-ui, sans-serif">2</text>
+      </g>
+
+      <g>
+        <circle cx="2760" cy="2700" r="82" fill="none" stroke="#ffffff" stroke-width="24" opacity="0.95"/>
+        <circle cx="2760" cy="2700" r="82" fill="none" stroke="#e11d48" stroke-width="13"/>
+        <line x1="2642" y1="2700" x2="2718" y2="2700" stroke="#e11d48" stroke-width="9"/>
+        <line x1="2802" y1="2700" x2="2878" y2="2700" stroke="#e11d48" stroke-width="9"/>
+        <line x1="2760" y1="2582" x2="2760" y2="2658" stroke="#e11d48" stroke-width="9"/>
+        <line x1="2760" y1="2742" x2="2760" y2="2818" stroke="#e11d48" stroke-width="9"/>
+        <circle cx="2760" cy="2700" r="15" fill="#e11d48" stroke="#ffffff" stroke-width="6"/>
+        <circle cx="2852" cy="2608" r="62" fill="#e11d48" stroke="#ffffff" stroke-width="11"/>
+        <text x="2852" y="2633" text-anchor="middle" fill="#ffffff" font-size="74" font-weight="700" font-family="system-ui, sans-serif">3</text>
+      </g>
+        </svg>
+      </div>
+    </figure>
+  </div>
+  <h3>关键打点清单（以原图左上角为原点，单位 px）</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>点编号</th><th>原图像素坐标 (x, y)</th><th>点类型</th><th>证据说明</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>#1</strong></td><td><code>(2070, 940)</code><br><small>51.34%, 31.08%</small></td><td>作者关键证据点</td><td><strong>A3 竖叠列第 4 罐背面翻转及第 1、5 罐翘起耳片</strong><br>A3 左侧 6 罐竖叠列中第 4 罐反面朝前露出完整营养成分表（E_A3 = 1），且第 1 罐与第 5 罐右侧均明显露出向上翘起的半圆形米金色铝膜易撕耳片（tab_A3 = 2）。漏看第 4 罐背面翻转会使 A3-B1/A3-B2 失效且 N 组归零（反转位 1→0）；漏看第 1 罐耳片会改变 tab_A3 与工况 1 N 组最优值（534→526）。</td></tr><tr><td><strong>#2</strong></td><td><code>(1828, 2272)</code><br><small>45.34%, 75.13%</small></td><td>作者关键证据点</td><td><strong>B2 底层右罐倒置露出的绿色钥匙孔图标</strong><br>B2 为 3×2 共 6 罐，底层 2 罐倒置（E_B2 = 2），其中底层右罐倒置后在左下角完整清晰露出第 3 处绿底白钥匙孔圆形图标（K_B2 = 3，与 B1 的 2 处合为 sum_K = 5）。漏看底层倒置会使反转位翻转为 0；漏看该倒置钥匙孔会令 sum_K 变为 4、工况 1 M 组并列数由 2 降为 1 且 N 组代价由 534 升至 552。</td></tr><tr><td><strong>#3</strong></td><td><code>(2760, 2700)</code><br><small>68.45%, 89.29%</small></td><td>作者关键证据点</td><td><strong>下层红杠 B3 真实双口径电子价签（19.70 kr / 115.88 kr/kg）</strong><br>下层红杠处该签品名明确为 STABBUR-MAKRELL TOMAT/PEPPER 170G（p10 = 197，kg = 115），须排除上方中层红杠属于 A4 的 13.90 签、左侧 13.10 的 LEVERPOSTEI 肝酱签，以及右侧带红色向下箭头指向下层的 14.80 签。串层误读 13.90 或误读 ↓14.80 均会直接将反转位由 1 翻转为 0。</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <textarea id="copy-points" hidden>点1：(2070, 940) [51.34%, 31.08%] | 作者关键证据点 | A3 竖叠列第 4 罐背面营养表翻转（E_A3=1）及第 1、5 罐右侧翘起米金色易撕耳片（tab_A3=2），漏看第 4 罐使 N 组归零并翻转反转位。
+点2：(1828, 2272) [45.34%, 75.13%] | 作者关键证据点 | B2 底层右罐倒置露出的左下角绿色钥匙孔图标（K_B2=3，sum_K=5），决定工况 1 M 组并列数 2 与 N 组最小代价 534。
+点3：(2760, 2700) [68.45%, 89.29%] | 作者关键证据点 | 下层红杠 B3 真实双口径电子价签 19.70 kr / 115.88 kr/kg（须排除 13.10 肝酱签、红下箭头 14.80 签与上方 13.90 签），错配直接消灭两工况赢家反转。</textarea>
+</section>
+
+<!-- 3. 题目 (prompt) -->
+<section id="sec-prompt">
+  <div class="sec-head">
+    <h2>三、题目（prompt）</h2>
+    <button class="btn-copy" data-target="copy-prompt">复制题目正文</button>
+  </div>
+  <div class="copy-box" id="copy-prompt">请仅依据所给超市罐头货架原图（尺寸 4032×3024 px，以原图左上角为坐标原点，x 向右、y 向下），完成下列跨层陈列稽核、电子价签双口径核验与两工况联合调度计算。
+
+一、考察货位与统计范围
+仅考察上层红杠与中层红杠之间（上层 A 组）以及中层红杠与下层红杠之间（中层 B 组）共 7 个鲭鱼罐头陈列位（排除最左侧玻璃瓶、最右侧白色圆盒及最下层敞口大箱）：
+- 上层 A 组（从左到右依次编号 A1–A4）：
+  1. A1（最左黄色陈列位）：仅计底部黄色纸托内正面竖立的罐头（不含上方平叠罐）。
+  2. A2（左中红色纸托圆形罐）：计红纸托内前排可见圆形罐头。
+  3. A3（中部蓝白花纹罐）：仅计左侧竖直平叠的一整列罐头（不含右侧蓝底竖立展陈罐）。
+  4. A4（右侧宽黄纸托蓝带罐）：计宽黄纸托内每层露出的最前排罐面。
+- 中层 B 组（从左到右依次编号 B1–B3）：
+  5. B1（中左橙红角标黄纸托）：计黄纸托内正面竖立的最前排罐头（不含最左上角平放在盒顶的散罐）。
+  6. B2（中中天蓝角标黄纸托）：计黄纸托内正面竖立的最前排罐头。
+  7. B3（中右红边大椭圆罐大黄托）：计大黄托内平放的每一叠最顶面罐头。
+
+二、单货位视觉属性定义
+对每个货位 i ∈ {A1, A2, A3, A4, B1, B2, B3}，逐项读取以下属性：
+1. 考察罐数 N_i：上述范围内实际可见的考察罐数量。
+2. 异常罐数 E_i：考察罐中“罐体上下颠倒（倒置约 180°）”或“未以正面品牌主画面朝前”的罐数；其余正立且正面朝前者为正常罐数 G_i = N_i - E_i。
+3. 品牌：根据罐面印字区分为 KING OSCAR 或 Stabburet。
+4. 绿底白钥匙孔营养标识可见数 K_i：仅对中层盒内竖立货位 B1、B2 统计（其余货位记 0），统计该货位考察罐中肉眼可见完整绿底白钥匙孔圆形图标（无论正立或倒置）的罐数。
+5. 翘起易撕耳片数 tab_i：仅对 A3 竖叠列统计（其余货位记 0），统计该列中右侧明显露出向上翘起半圆形米金色易撕铝膜耳片的罐数。
+6. 电子价签双口径单价（整型）：
+   - 货架红杠上的白色电子价签默认归属其上方货架对应品名与规格的商品；若价签印字明确为其他层级商品或带有指向他层的标识，不得错配。
+   - 请为 A2、A3、A4、B2、B3 这 5 个具清晰电子价签的货位分别读取两项整型价格：
+     (a) 单罐价 p10_i（单位：0.1 克朗，即 Kr Pr/Stk 数值 × 10 取整，如 12.20 记 122）；
+     (b) 公斤价 kg_i（单位：克朗/公斤，取左侧 Pr/kg 数值的整数部分，直接舍去小数位，如 126.36 记 126）。
+   - 最左端 A1、B1 因对应左侧价签斜拍反光/品名规格不清，统一不读签，按默认基准 p10 = 150、kg = 135 计。
+7. 货位水平中心 cx_i（单位 px）：取各货位上述考察范围的水平像素中心横坐标；跨层水平像素投影距离定义为 dx(a, b) = |cx_a - cx_b|（单位 px）。
+
+三、兼容边、合法方案与两工况代价规则
+1. 跨层兼容边：跨层货位对 (a, b)（a ∈ A，b ∈ B）成为兼容边，当且仅当同时满足：
+   (1) 水平投影距离 dx(a, b) ≤ 2050 px；
+   (2) 两货位异常罐数之和 E_a + E_b ≥ 3；
+   (3) 两货位均至少保留 1 罐正常罐（G_a ≥ 1 且 G_b ≥ 1）。
+   其中 dx(a, b) ≤ 720 px 称为“近距边”，720 &lt; dx(a, b) ≤ 2050 px 称为“中距边”。
+2. 合法两对采样方案：两条兼容边组成的无序集合 S = {(a1, b1), (a2, b2)}，满足端点互不复用（a1 ≠ a2 且 b1 ≠ b2），且所选两个上层货位 {a1, a2} 中至少有 1 个为 KING OSCAR 品牌。
+3. 异常覆盖分组：记方案所选 4 个货位的异常罐总数为 E_tot = E_{a1} + E_{a2} + E_{b1} + E_{b2}：
+   - 高异常整顿组 M：E_tot ≥ 8；
+   - 轻异常整顿组 N：E_tot ≤ 7。
+4. 两工况代价（均为精确整数，越小越优）：
+   - 动线费 walk(e)：近距边为 15，中距边为 45。
+   - 工况 0（常规购样与动线成本）：
+     C_0(S) = (p10_{a1} + p10_{a2} + p10_{b1} + p10_{b2}) + walk(e1) + walk(e2)。
+   - 工况 1（公斤单价折算与精细稽核成本）：记全 7 货位异常总罐数为 sum_E，方案未覆盖异常罐数为 (sum_E - E_tot)：
+     C_1(S) = (kg_{a1} + kg_{a2} + kg_{b1} + kg_{b2}) + walk(e1) + walk(e2) + 6 × (sum_E - E_tot) - 18 × (K_{b1} + K_{b2}) + 8 × (tab_{a1} + tab_{a2})。
+5. 赢家与并列规则：各工况下比较 M 组与 N 组最小代价，严格更小者为赢家（某组无合法方案则另一组胜；相等记 TIE）。两工况赢家均为 M 或 N 且不同时反转位为 1，否则为 0。方案规范编码写为 “a1-b1;a2-b2”（按 A 组编号升序），并列取字典序最小者。
+
+四、请依次作答以下 6 个小问
+1. 全货位盘点：依次输出全 7 货位考察总罐数 sum_N、异常总罐数 sum_E、B1 与 B2 可见绿色钥匙孔总罐数 sum_K、A3 翘起易撕耳片罐数 tab_A3，以及 5 个清晰价签货位（A2、A3、A4、B2、B3）的整型单罐价总和 sum_P10 与公斤价整数总和 sum_KG。
+2. 跨层兼容边：输出兼容边总数 E 与近距边条数 E_near。
+3. 合法方案计数：输出合法两对方案总数 P、M 组合法方案数 P_M 与 N 组合法方案数 P_N。
+4. 工况 0 优化：输出 M 组最小代价、M 组并列方案数、N 组最小代价、N 组并列方案数。
+5. 工况 1 优化：输出 M 组最小代价、M 组并列方案数、N 组最小代价、N 组并列方案数。
+6. 赢家反转与代表方案：输出工况 0 赢家、工况 1 赢家、反转位（0 或 1），以及工况 1 赢家组最小代价的规范代表方案编码。
+
+输出格式要求：所有计数与代价均为精确整数，无容差；请在回复最后单独一行按以下 6 段竖线分隔格式给出最终答案（段内用英文逗号分隔，不加空格）：
+FINAL_ANSWER: sum_N,sum_E,sum_K,tab_A3,sum_P10,sum_KG|E,E_near|P,P_M,P_N|C0_M,ties0_M,C0_N,ties0_N|C1_M,ties1_M,C1_N,ties1_N|W0,W1,rev,a1-b1;a2-b2</div>
+</section>
+
+<!-- 4. 出题思路 (thinking) -->
+<section id="sec-thinking">
+  <div class="sec-head">
+    <h2>四、出题思路（thinking）</h2>
+    <button class="btn-copy" data-target="copy-thinking">复制出题思路</button>
+  </div>
+  <div class="copy-box" id="copy-thinking">1. 关键视觉区别（四重跨区图证联锁）：
+- 跨层双口径电子价签归属与干扰排错：货架红杠电子价签默认归属其上方货架对应品名商品。A4 的 13.90 kr / 126.36 kr/kg 价签悬挂在中层红杠上、正位于 B3 大托上方，极易串层误归 B3；下层红杠右侧的 13.10 kr / 65.50 kr/kg 印字为 LEVERPOSTEI 200G（对应最下层肝酱箱而非 B2），最右端 14.80 kr / 87.06 kr/kg 左侧带红色向下箭头（指向下层货位而非 B3），唯独 16.90 / 153.64 归属 B2、19.70 / 115.88（STABBUR-MAKRELL TOMAT/PEPPER 170G）归属 B3。
+- 局部朝向异常与“全员倒置”反例辨析：A3 左侧 6 罐竖叠列中第 4 罐以背面营养成分表朝前（E_A3 = 1）；A4 宽黄托 4 罐中 3 罐倒置，但右上角 1 罐保持正立（G_A4 = 1，使 A4 保留合法资格）；B2 底层 2 罐倒置（E_B2 = 2）；B3 3×2 顶面罐中仅前左与中左正立，后左与右侧整列 3 罐均倒置（E_B3 = 4）。
+- 原生微距细粒度标志核验：B1 仅右侧两罐正立可见 2 处绿底白钥匙孔图标（K_B1 = 2），B2 除顶排 2 罐正立可见外，最下层右罐虽倒置但在左下角清晰露出倒置绿色钥匙孔（中右罐被纸托遮挡不完整，故 K_B2 = 3，合 sum_K = 5）；A3 竖叠列右侧第 1 罐（顶罐）与第 5 罐均明显露出向上翘起的半圆形米金色铝膜易撕耳片（tab_A3 = 2）。
+- 跨层水平像素投影测距：dx(a, b) = |cx_a - cx_b| 划定近距（≤720 px）与上限（≤2050 px）边界，距两处阈值最小余量分别达 165 px 与 335 px（两点差误差上界 60 px，R = 2.75 与 5.58），10,000 次联合扰动与 A4 替代锚点测试稳定率 100%。
+
+2. 改变的关系、参数与约束：
+- A3 的背面异常罐（E_A3 = 1）决定 A3-B1 与 A3-B2 满足 E_a + E_b ≥ 3；漏看该罐会直接使 N 组全部 2 个合法方案归零。
+- A4 右上唯一正立罐（G_A4 = 1）决定 A4 是否满足“至少保留 1 罐正常罐”的兼容边前提；误判 4 罐全倒置会令 A4-B2 与 A4-B3 失效，使 M 组失去最优方案，两工况均由 N 组胜出。
+- B3 真实高单罐价（p10 = 197）与低公斤价（kg = 115，因 170g 大规格）的反向剪刀差，叠加未覆盖异常罐罚分与绿色钥匙孔抵扣，是驱动工况 0（N 胜，610 &lt; 638）向工况 1（M 胜，510 &lt; 534）发生赢家反转的核心机制；串层读 13.90 或误读 ↓14.80 均会消灭该反转。
+- B2 底层右罐的倒置绿色钥匙孔（K_B2 = 3）使工况 1 下 M 组两方案 A2-B1;A4-B3 与 A2-B2;A4-B3 精确打成 510 分并列（ties1_M = 2），并直接决定 N 组最优值 534；A3 的 2 处翘起耳片（tab_A3 = 2）对含 A3 的方案叠加 +16 罚分，直接改变 N 组工况 1 最优值。
+
+3. 受影响的可判分字段与明确定义的 9 组反事实复算验证：
+- 标准正确读法：盘点=32/14/5/2/766/642，E=8(4)，P=14(M=12,N=2)，工况 0: M=638/N=610→N，工况 1: M=510(并列2)/N=534→M，rev=1（规范方案 A2-B1;A4-B3）。
+- 对以下 9 组明确限定修改条件的有图面依据易混读法（其余未提及属性均保持标准值）逐一独立重算：
+  (1) CF1_B3_cross_shelf_139：仅将 B3 电子价签误串层读为上方中层红杠 13.90 kr / 126.36 kr/kg（p10_B3: 197→139，kg_B3: 115→126） → 盘点=32/14/5/2/708/653，E=8(4)，P=14(M=12,N=2)，工况 0: M=580/N=610→M，工况 1: M=521(并列2)/N=534→M，rev=0（共 6/23 字段变化）。
+  (2) CF2_B3_arrow_tag_148：仅忽略红向下箭头将下层 14.80 kr / 87.06 kr/kg 干扰签误归给 B3（p10_B3: 197→148，kg_B3: 115→87） → 盘点=32/14/5/2/717/614，E=8(4)，P=14(M=12,N=2)，工况 0: M=589/N=610→M，工况 1: M=482(并列2)/N=534→M，rev=0（共 6/23 字段变化）。
+  (3) CF3_B2_leverpostei_131：仅将下层 13.10 kr / 65.50 kr/kg（LEVERPOSTEI 肝酱签）误归给中层 B2（p10_B2: 169→131，kg_B2: 153→65） → 盘点=32/14/5/2/728/554，E=8(4)，P=14(M=12,N=2)，工况 0: M=602/N=572→N，工况 1: M=422(并列1)/N=446→M，rev=1（共 8/23 字段变化）。
+  (4) CF4_A3_miss_back_can：仅漏看 A3 第 4 罐背面营养表朝前（E_A3: 1→0，G_A3: 5→6） → 盘点=32/13/5/2/766/642，E=6(3)，P=7(M=7,N=0)，工况 0: M=638/N=None→M，工况 1: M=504(并列2)/N=None→M，rev=0（共 13/23 字段变化）。
+  (5) CF5_A4_all_inverted：仅漏看 A4 右上角唯一正立罐而误判 4 罐全倒置（E_A4: 3→4，G_A4: 1→0） → 盘点=32/15/5/2/766/642，E=6(3)，P=6(M=4,N=2)，工况 0: M=668/N=610→N，工况 1: M=574(并列3)/N=540→N，rev=0（共 12/23 字段变化）。
+  (6) CF6_B2_miss_botR_keyhole：仅漏看 B2 最下层右罐倒置后露出的绿色钥匙孔图标（K_B2: 3→2） → 盘点=32/14/4/2/766/642，E=8(4)，P=14(M=12,N=2)，工况 0: M=638/N=610→N，工况 1: M=510(并列1)/N=552→M，rev=1（共 3/23 字段变化）。
+  (7) CF7_A3_miss_top_peel_tab：仅看到 A3 第 5 罐而漏看第 1 罐右侧翘起的米金色易撕耳片（tab_A3: 2→1） → 盘点=32/14/5/1/766/642，E=8(4)，P=14(M=12,N=2)，工况 0: M=638/N=610→N，工况 1: M=510(并列2)/N=526→M，rev=1（共 2/23 字段变化）。
+  (8) CF8_B2_miss_bottom_row：仅漏看 B2 最下层 2 罐倒置（E_B2: 2→0，G_B2: 4→6） → 盘点=32/12/5/2/766/642，E=6(2)，P=8(M=6,N=2)，工况 0: M=638/N=640→M，工况 1: M=498(并列1)/N=536→M，rev=0（共 11/23 字段变化）。
+  (9) CF9_B3_miss_back_left：仅漏看 B3 后排左罐倒置（E_B3: 4→3，G_B3: 2→3） → 盘点=32/13/5/2/766/642，E=8(4)，P=14(M=12,N=2)，工况 0: M=638/N=610→N，工况 1: M=510(并列2)/N=528→M，rev=1（共 2/23 字段变化）。
+- 汇总：上述显式定义的 9 组反事实读法均改变 2–13 个可判分字段，其中 5/9 组（CF1、CF2、CF4、CF5、CF8）直接将两工况赢家反转位由 1 翻转为 0，其余 4 组（CF3、CF6、CF7、CF9）分别改变单价/公斤价汇总、绿色钥匙孔汇总、翘起耳片数、工况 1 并列数与代表方案编码。</div>
+</section>
+
+<!-- 5. 图像识别 (cot_image_understanding) -->
+<section id="sec-cot-img">
+  <div class="sec-head">
+    <h2>五、图像识别（cot_image_understanding）</h2>
+    <button class="btn-copy" data-target="copy-cot-img">复制图像识别正文</button>
+  </div>
+  <div class="copy-box" id="copy-cot-img">按原图（4032×3024 px，左上角为原点，x 向右、y 向下）仅考察上层红杠至中层红杠（上层 A 组 A1–A4）与中层红杠至下层红杠（中层 B 组 B1–B3）共 7 个鲭鱼罐头陈列位，排除最左侧玻璃瓶、最右侧白色圆盒与最下层敞口大箱：
+
+一、上层 A 组（从左到右 A1–A4）
+1. A1（最左黄色纸托）：底部黄色纸托内可见 2 罐正面竖立罐头（左罐 Peppermakrell i rapsolje，右罐 Filet，不含上方平叠罐），均正立且正面朝前 → N_A1 = 2，E_A1 = 0，G_A1 = 2；品牌 Stabburet；不统计 K 与 tab（均为 0）；按题意不读左端斜拍签，采用默认单价 p10 = 150、kg = 135；水平中心 cx_A1 ≈ 525 px。
+2. A2（左中红色纸托圆形罐）：前排可见 2×2 共 4 个红黄圆罐（KING OSCAR MAKRELL I TOMAT 100g）。上排 2 罐正立、下排 2 罐上下倒置 180° → N_A2 = 4，E_A2 = 2，G_A2 = 2；品牌 KING OSCAR；K = 0，tab = 0；下方中层红杠对应电子价签为 “KING O. MAKRELL GROV | Pr/kg 122.00 | Kr Pr/Stk 12.20” → p10_A2 = 122，kg_A2 = 122；cx_A2 ≈ 1255 px。
+3. A3（中部蓝白花纹罐左侧竖叠列）：左侧竖直平叠一整列共 6 罐（不含右侧蓝底竖立展陈罐，KING OSCAR SKINNFRI MAKRELLFILET 110g）。自上而下第 1、2、3、5、6 罐均以正面品牌主画面朝前，唯独第 4 罐反面朝前露出完整白色背景营养成分表（NÆRINGSINNHOLD PER 100 g）→ N_A3 = 6，E_A3 = 1，G_A3 = 5；品牌 KING OSCAR；K = 0；沿该列右侧边缘核查，第 1 罐（顶罐）与第 5 罐右侧均清晰露出向上翘起的半圆形米金色铝膜易撕耳片 → tab_A3 = 2；下方中层红杠电子价签为 “KING O. MAKRELL TOMAT 110G | Pr/kg 126.36 | Kr Pr/Stk 13.90” → p10_A3 = 139，kg_A3 = 126（舍去小数）；cx_A3 ≈ 1915 px。易混点：漏看第 4 罐背面翻转，或仅看到第 5 罐耳片而漏看顶罐第 1 罐耳片。
+4. A4（右侧宽黄纸托蓝带罐）：上下两层宽黄纸托每层露出 2 个最前排罐面，共 4 罐（Stabburet）。左上、左下、右下 3 罐蓝色 “Stabbur-Makrell” 条带与文字均倒置 180°，唯独右上角 1 罐为正立（可见正立 OMEGA-3 徽章与正立红色 Stabburet 标志）→ N_A4 = 4，E_A4 = 3，G_A4 = 1；品牌 Stabburet；K = 0，tab = 0；下方中层红杠悬挂的电子价签为 “STABBUR-MAKRELL FILET 110G | Pr/kg 126.36 | Kr Pr/Stk 13.90” → p10_A4 = 139，kg_A4 = 126；cx_A4 ≈ 3426 px。易混点：误以为 4 罐全倒置而令 G_A4 = 0。
+
+二、中层 B 组（从左到右 B1–B3）
+5. B1（中左橙红角标黄纸托）：黄纸托内正面竖立最前排为 2×2 共 4 罐（不含左上角平放盒顶的散罐，Stabbur-Makrell Grovhakket i salsa）。左列上下 2 罐倒置、右列上下 2 罐正立 → N_B1 = 4，E_B1 = 2，G_B1 = 2；品牌 Stabburet；右列 2 个正立罐右上角均清晰可见完整绿底白钥匙孔圆形图标，左列 2 罐倒置处被纸托边缘遮挡未见 → K_B1 = 2；tab = 0；按题意采用默认单价 p10 = 150、kg = 135；cx_B1 ≈ 1025 px。
+6. B2（中中天蓝角标黄纸托）：黄纸托内正面竖立最前排为 3 行×2 列共 6 罐（Stabbur-Makrell Grovhakket i tomatsaus）。上排 2 罐与中排 2 罐均正立，最下排 2 罐上下倒置 180° → N_B2 = 6，E_B2 = 2，G_B2 = 4；品牌 Stabburet；核查绿底白钥匙孔图标：上排左罐右上角（可见 1）、上排右罐右上角（可见 2）、中排左罐右上角被右侧纸托遮挡（不可见）、中排右罐右上角被黄色纸箱立壁裁切遮挡（不完整/不可见）、下排左罐左下角被黄色纸托折翼遮挡（不可见）、下排右罐虽倒置但在其左下角完整清晰露出倒置绿底白钥匙孔圆形图标（可见 3）→ K_B2 = 3；tab = 0；下方下层红杠最左电子价签为 “STABBUR-MAKRELL GROVHAKKET 110G | Pr/kg 153.64 | Kr Pr/Stk 16.90” → p10_B2 = 169，kg_B2 = 153；cx_B2 ≈ 1810 px。易混点：漏看下排 2 罐倒置，漏看下排右罐倒置露出的第 3 处绿色钥匙孔，或误将右侧相邻的 “LEVERPOSTEI 200G / 13.10” 肝酱签归给 B2。
+7. B3（中右红边大椭圆罐大黄托）：大黄托内平放 3 行×2 列共 6 叠，计最顶面 6 罐（Stabbur-Makrell Filet i tomatsaus med pepper 170g）。左列前排与中排 2 罐正面正立（白字 Stabbur-Makrell 正向可读），左列后排 1 罐及右列前、中、后 3 罐均上下倒置 180° → N_B3 = 6，E_B3 = 4，G_B3 = 2；品牌 Stabburet；K = 0，tab = 0；排除上方中层红杠属于 A4 的 13.90 签、排除下层红杠 13.10 肝酱签、排除最右带红色向下箭头指向下层的 14.80 签，B3 真实归属签为下层红杠 “STABBUR-MAKRELL TOMAT/PEPPER 170G | Pr/kg 115.88 | Kr Pr/Stk 19.70” → p10_B3 = 197，kg_B3 = 115；cx_B3 ≈ 2970 px。易混点：漏看后排左罐倒置，或串层错读 13.90 / 误读红下箭头 14.80 干扰签。
+
+三、盘点汇总
+- 全 7 货位考察总罐数 sum_N = 2 + 4 + 6 + 4 + 4 + 6 + 6 = 32；
+- 全 7 货位异常总罐数 sum_E = 0 + 2 + 1 + 3 + 2 + 2 + 4 = 14；
+- B1 与 B2 可见绿色钥匙孔总罐数 sum_K = 2 + 3 = 5；
+- A3 翘起易撕耳片罐数 tab_A3 = 2；
+- 5 个清晰价签货位（A2, A3, A4, B2, B3）整型单罐价总和 sum_P10 = 122 + 139 + 139 + 169 + 197 = 766；
+- 5 个清晰价签货位公斤价整数总和 sum_KG = 122 + 126 + 126 + 153 + 115 = 642。</div>
+  <h3>A1–A4 与 B1–B3 逐货位核验事实表（供审题人快速核对）</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>货位</th><th>层级</th><th>品牌</th><th>N_i</th><th>E_i</th><th>G_i</th><th>K_i</th><th>tab_i</th><th>p10 / kg</th><th>水平中心 cx</th><th>关键图证备注</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>A1</strong></td><td>A 组</td><td>Stabburet</td><td>2</td><td>0</td><td>2</td><td>0</td><td>0</td><td>150 / 135 (默认基准)</td><td>525 px</td><td>默认基准签（不计入5清晰签）</td></tr><tr><td><strong>A2</strong></td><td>A 组</td><td>KING OSCAR</td><td>4</td><td>2</td><td>2</td><td>0</td><td>0</td><td>122 / 122 (清晰签)</td><td>1255 px</td><td>12.20 kr / 122.00/kg</td></tr><tr><td><strong>A3</strong></td><td>A 组</td><td>KING OSCAR</td><td>6</td><td>1</td><td>5</td><td>0</td><td>2</td><td>139 / 126 (清晰签)</td><td>1915 px</td><td>13.90 kr / 126.36/kg；第4罐背面，第1/5罐耳片</td></tr><tr><td><strong>A4</strong></td><td>A 组</td><td>Stabburet</td><td>4</td><td>3</td><td>1</td><td>0</td><td>0</td><td>139 / 126 (清晰签)</td><td>3426 px</td><td>13.90 kr / 126.36/kg；仅右上1罐正立</td></tr><tr><td><strong>B1</strong></td><td>B 组</td><td>Stabburet</td><td>4</td><td>2</td><td>2</td><td>2</td><td>0</td><td>150 / 135 (默认基准)</td><td>1025 px</td><td>默认基准签（不含盒顶散罐）；右列2处钥匙孔</td></tr><tr><td><strong>B2</strong></td><td>B 组</td><td>Stabburet</td><td>6</td><td>2</td><td>4</td><td>3</td><td>0</td><td>169 / 153 (清晰签)</td><td>1810 px</td><td>16.90 kr / 153.64/kg；底层右罐倒置钥匙孔</td></tr><tr><td><strong>B3</strong></td><td>B 组</td><td>Stabburet</td><td>6</td><td>4</td><td>2</td><td>0</td><td>0</td><td>197 / 115 (清晰签)</td><td>2970 px</td><td>19.70 kr / 115.88/kg；前左/中左正立，其余4罐倒置</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 6. 题目推理 (cot_reasoning) -->
+<section id="sec-cot-reason">
+  <div class="sec-head">
+    <h2>六、题目推理（cot_reasoning）</h2>
+    <button class="btn-copy" data-target="copy-cot-reason">复制题目推理正文</button>
+  </div>
+  <div class="copy-box" id="copy-cot-reason">一、小问 1（全货位盘点）
+由图像识别逐货位事实表直接求和：
+- sum_N = 32，sum_E = 14，sum_K = 5，tab_A3 = 2，sum_P10 = 766，sum_KG = 642。
+
+二、小问 2（跨层水平测距与兼容边筛选）
+计算全部 4×3 = 12 对跨层货位对的水平像素投影距离 dx(a, b) = |cx_a - cx_b|，核验阈值余量（单货位中心误差上界 e = 30 px，两点差总误差上界 2e = 60 px）：
+- 距近距阈值 720 px 最近的两对为 A2-B2（555 px，余量 165 px）与 A3-B1（890 px，余量 170 px），最小余量 165 px，R = 165 / 60 = 2.75 &gt; 1；
+- 距上限阈值 2050 px 最近的两对为 A2-B3（1715 px，余量 335 px）与 A4-B1（2401 px，余量 351 px），最小余量 335 px，R = 335 / 60 = 5.58 &gt; 1。
+所有 12 对分类完全稳健。逐对检验 3 项兼容条件（dx ≤ 2050、E_a + E_b ≥ 3、G_a ≥ 1 且 G_b ≥ 1）：
+- 剔除 4 对：A1-B1（dx=500，但 E和=0+2=2 &lt; 3）、A1-B2（dx=1285，E和=0+2=2 &lt; 3）、A1-B3（dx=2445 &gt; 2050）、A4-B1（dx=2401 &gt; 2050）。
+- 保留 E = 8 条兼容边，其中近距边（dx ≤ 720，walk = 15）共 E_near = 4 条，中距边（720 &lt; dx ≤ 2050，walk = 45）共 4 条：
+  1. 近距边（4 条）：A2-B1（dx=230，E和=4）、A2-B2（dx=555，E和=4）、A3-B2（dx=105，E和=3）、A4-B3（dx=456，E和=7）。
+  2. 中距边（4 条）：A2-B3（dx=1715，E和=6）、A3-B1（dx=890，E和=3）、A3-B3（dx=1055，E和=5）、A4-B2（dx=1616，E和=5）。
+
+三、小问 3（完整合法两对方案计数与分组）
+从 8 条兼容边中无序任选两条端点互不复用（a1 ≠ a2 且 b1 ≠ b2）的边，且要求 {a1, a2} 中至少含 1 个 KING OSCAR 货位（A 组可用货位中仅 A2、A3 为 KING OSCAR，A4 为 Stabburet；因仅 A2、A3、A4 存在兼容边，任意两不同上层货位组合 {A2,A3}、{A2,A4}、{A3,A4} 均自动至少含 1 个 KING OSCAR）。按上层货位对枚举并按 A 组编号升序去重：
+1. 上层选 {A2, A3}（2 种匹配）：
+   - A2-B1;A3-B2：E_tot = 2+1+2+2 = 7 ≤ 7 → N 组；
+   - A2-B2;A3-B1：E_tot = 2+1+2+2 = 7 ≤ 7 → N 组；
+   - A2-B1;A3-B3：E_tot = 2+1+2+4 = 9 ≥ 8 → M 组；
+   - A2-B2;A3-B3：E_tot = 2+1+2+4 = 9 ≥ 8 → M 组；
+   - A2-B3;A3-B1：E_tot = 2+1+4+2 = 9 ≥ 8 → M 组；
+   - A2-B3;A3-B2：E_tot = 2+1+4+2 = 9 ≥ 8 → M 组。
+   （小计 6 种：M 组 4 种，N 组 2 种。）
+2. 上层选 {A2, A4}（A4 可连 B2、B3）：
+   - A2-B1;A4-B2：E_tot = 2+3+2+2 = 9 → M 组；
+   - A2-B1;A4-B3：E_tot = 2+3+2+4 = 11 → M 组；
+   - A2-B2;A4-B3：E_tot = 2+3+2+4 = 11 → M 组；
+   - A2-B3;A4-B2：E_tot = 2+3+4+2 = 11 → M 组。
+   （小计 4 种：全属 M 组。）
+3. 上层选 {A3, A4}（A4 可连 B2、B3）：
+   - A3-B1;A4-B2：E_tot = 1+3+2+2 = 8 → M 组；
+   - A3-B1;A4-B3：E_tot = 1+3+2+4 = 10 → M 组；
+   - A3-B2;A4-B3：E_tot = 1+3+2+4 = 10 → M 组；
+   - A3-B3;A4-B2：E_tot = 1+3+4+2 = 10 → M 组。
+   （小计 4 种：全属 M 组。）
+合计：合法方案总数 P = 6 + 4 + 4 = 14，其中 M 组 P_M = 12，N 组 P_N = 2。
+
+四、小问 4（工况 0 优化与并列）
+公式 C_0(S) = sum(p10) + walk(e1) + walk(e2)：
+- M 组（12 种）：
+  * A2-B1;A4-B3：p10 = 122+139+150+197 = 608，walk = 15+15 = 30 → C_0 = 638（唯一最小）；
+  * A2-B1;A4-B2：p10 = 122+139+150+169 = 580，walk = 15+45 = 60 → C_0 = 640；
+  * A2-B2;A4-B3：p10 = 122+139+169+197 = 627，walk = 15+15 = 30 → C_0 = 657；
+  * 其余 9 种 M 组方案 C_0 ∈ [668, 734]。
+  故 C0_M = 638，ties0_M = 1。
+- N 组（2 种）：
+  * A2-B1;A3-B2：p10 = 122+139+150+169 = 580，walk = 15+15 = 30 → C_0 = 610（唯一最小）；
+  * A2-B2;A3-B1：p10 = 580，walk = 15+45 = 60 → C_0 = 640。
+  故 C0_N = 610，ties0_N = 1。
+
+五、小问 5（工况 1 优化与并列）
+公式 C_1(S) = sum(kg) + walk + 6×(14 - E_tot) - 18×(K_{b1} + K_{b2}) + 8×(tab_{a1} + tab_{a2})：
+- M 组（12 种）：
+  * A2-B1;A4-B3：kg = 122+126+135+115 = 498，walk = 30，未覆盖 3×6 = +18，钥匙孔 (2+0)×(-18) = -36，耳片 0 → C_1 = 498 + 30 + 18 - 36 + 0 = 510；
+  * A2-B2;A4-B3：kg = 122+126+153+115 = 516，walk = 30，未覆盖 3×6 = +18，钥匙孔 (3+0)×(-18) = -54，耳片 0 → C_1 = 516 + 30 + 18 - 54 + 0 = 510；
+  * 次优为 A2-B1;A4-B2（536+60+30-90+0 = 536）与 A3-B2;A4-B3（520+30+24-54+16 = 536）；其余 8 种 C_1 ∈ [566, 598]。
+  故 C1_M = 510，ties1_M = 2（并列最优：A2-B1;A4-B3 与 A2-B2;A4-B3）。
+- N 组（2 种）：
+  * A2-B1;A3-B2：kg = 122+126+135+153 = 536，walk = 30，未覆盖 7×6 = +42，钥匙孔 (2+3)×(-18) = -90，耳片 (0+2)×8 = +16 → C_1 = 536 + 30 + 42 - 90 + 16 = 534（唯一最小）；
+  * A2-B2;A3-B1：同上仅 walk 增至 60 → C_1 = 564。
+  故 C1_N = 534，ties1_N = 1。
+
+六、小问 6（赢家反转与规范代表方案）
+- 工况 0：N 组 610 &lt; M 组 638，赢家 W0 = N；
+- 工况 1：M 组 510 &lt; N 组 534，赢家 W1 = M；
+- 两工况赢家由 N 反转为 M，反转位 rev = 1；
+- 工况 1 赢家组（M 组）2 个并列最优方案 A2-B1;A4-B3 与 A2-B2;A4-B3 按字典序取最小，规范代表方案编码为 A2-B1;A4-B3。
+
+最终标准答案：
+32,14,5,2,766,642|8,4|14,12,2|638,1,610,1|510,2,534,1|N,M,1,A2-B1;A4-B3</div>
+</section>
+
+<!-- 7. 标准答案 (response) -->
+<section id="sec-response">
+  <div class="sec-head">
+    <h2>七、标准答案（response）与逐字段判分口径</h2>
+    <button class="btn-copy" data-target="copy-response">复制标准答案</button>
+  </div>
+  <div class="answer-box" id="copy-response">32,14,5,2,766,642|8,4|14,12,2|638,1,610,1|510,2,534,1|N,M,1,A2-B1;A4-B3</div>
+  <h3>逐字段判分口径（共 23 个可判分字段）</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>字段键名</th><th>标准真值</th><th>单位</th><th>判分方法</th><th>容差</th><th>字段说明</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>q1_sum_N</code></td><td><strong>32</strong></td><td>罐</td><td>精确整数</td><td>0</td><td>小问 1：全 7 货位考察总罐数</td></tr>
+<tr><td><code>q1_sum_E</code></td><td><strong>14</strong></td><td>罐</td><td>精确整数</td><td>0</td><td>小问 1：全 7 货位异常总罐数</td></tr>
+<tr><td><code>q1_sum_K</code></td><td><strong>5</strong></td><td>罐</td><td>精确整数</td><td>0</td><td>小问 1：B1 与 B2 可见完整绿色钥匙孔总罐数</td></tr>
+<tr><td><code>q1_tab_A3</code></td><td><strong>2</strong></td><td>罐</td><td>精确整数</td><td>0</td><td>小问 1：A3 竖叠列右侧翘起易撕耳片罐数</td></tr>
+<tr><td><code>q1_sum_P10</code></td><td><strong>766</strong></td><td>0.1 克朗</td><td>精确整数</td><td>0</td><td>小问 1：5 个清晰价签货位整型单罐价总和</td></tr>
+<tr><td><code>q1_sum_KG</code></td><td><strong>642</strong></td><td>克朗/公斤</td><td>精确整数</td><td>0</td><td>小问 1：5 个清晰价签货位公斤价整数部分总和</td></tr>
+<tr><td><code>q2_edges</code></td><td><strong>8</strong></td><td>条</td><td>精确整数</td><td>0</td><td>小问 2：跨层兼容边总数</td></tr>
+<tr><td><code>q2_near_edges</code></td><td><strong>4</strong></td><td>条</td><td>精确整数</td><td>0</td><td>小问 2：近距兼容边数（dx ≤ 720 px）</td></tr>
+<tr><td><code>q3_total_plans</code></td><td><strong>14</strong></td><td>种</td><td>精确整数</td><td>0</td><td>小问 3：合法无序两对采样方案总数</td></tr>
+<tr><td><code>q3_M_plans</code></td><td><strong>12</strong></td><td>种</td><td>精确整数</td><td>0</td><td>小问 3：高异常整顿组 M（E_tot ≥ 8）方案数</td></tr>
+<tr><td><code>q3_N_plans</code></td><td><strong>2</strong></td><td>种</td><td>精确整数</td><td>0</td><td>小问 3：轻异常整顿组 N（E_tot ≤ 7）方案数</td></tr>
+<tr><td><code>q4_M_min_c0</code></td><td><strong>638</strong></td><td>代价点</td><td>精确整数</td><td>0</td><td>小问 4：工况 0 下 M 组最小代价</td></tr>
+<tr><td><code>q4_M_ties_c0</code></td><td><strong>1</strong></td><td>种</td><td>精确整数</td><td>0</td><td>小问 4：工况 0 下 M 组最优并列方案数</td></tr>
+<tr><td><code>q4_N_min_c0</code></td><td><strong>610</strong></td><td>代价点</td><td>精确整数</td><td>0</td><td>小问 4：工况 0 下 N 组最小代价</td></tr>
+<tr><td><code>q4_N_ties_c0</code></td><td><strong>1</strong></td><td>种</td><td>精确整数</td><td>0</td><td>小问 4：工况 0 下 N 组最优并列方案数</td></tr>
+<tr><td><code>q5_M_min_c1</code></td><td><strong>510</strong></td><td>代价点</td><td>精确整数</td><td>0</td><td>小问 5：工况 1 下 M 组最小代价</td></tr>
+<tr><td><code>q5_M_ties_c1</code></td><td><strong>2</strong></td><td>种</td><td>精确整数</td><td>0</td><td>小问 5：工况 1 下 M 组最优并列方案数</td></tr>
+<tr><td><code>q5_N_min_c1</code></td><td><strong>534</strong></td><td>代价点</td><td>精确整数</td><td>0</td><td>小问 5：工况 1 下 N 组最小代价</td></tr>
+<tr><td><code>q5_N_ties_c1</code></td><td><strong>1</strong></td><td>种</td><td>精确整数</td><td>0</td><td>小问 5：工况 1 下 N 组最优并列方案数</td></tr>
+<tr><td><code>q6_winner_w0</code></td><td><strong>N</strong></td><td>组别</td><td>精确枚举（M/N/TIE）</td><td>无</td><td>小问 6：工况 0 赢家</td></tr>
+<tr><td><code>q6_winner_w1</code></td><td><strong>M</strong></td><td>组别</td><td>精确枚举（M/N/TIE）</td><td>无</td><td>小问 6：工况 1 赢家</td></tr>
+<tr><td><code>q6_reversal</code></td><td><strong>1</strong></td><td>位</td><td>精确整数（0/1）</td><td>0</td><td>小问 6：两工况赢家反转位</td></tr>
+<tr><td><code>q6_w1_canonical_plan</code></td><td><strong>A2-B1;A4-B3</strong></td><td>编码</td><td>精确规范字符串</td><td>无</td><td>小问 6：工况 1 赢家组字典序最小最优方案</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 8. 质检与复算摘要 -->
+<section id="sec-qa">
+  <div class="sec-head">
+    <h2>八、质检与复算摘要</h2>
+    <button class="btn-copy" data-target="copy-qa">复制质检摘要</button>
+  </div>
+  <ul class="clean">
+    <li><strong>离线指标质检结论</strong>：<span class="badge ok">decision = authoring_candidate</span>（阻断项 <code>0</code>、待复核项 <code>0</code>、提醒项 <code>0</code>）；<code>difficulty_status = no_complete_failure_recorded</code>（经 v1→v2 一轮提难后仍 3/3 全对，按实测诚实登记难度为 <code>medium</code>）。</li>
+    <li><strong>原图与密集/近色/重叠统计</strong>：原图 <code>4032×3024 px</code>（EXIF=1，RGB），中文覆盖率 <code>0.0%</code>，无真人人脸隐私及水印遮挡；登记 <code>14</code> 个对象（<code>14</code> 类），近色异类邻居 <code>3</code> 对、边界框投影重叠候选 <code>2</code> 对（中层红杠价签视觉投影叠压下方货位，构成串层错配核心陷阱），6 个原生 ROI 裁图均经人工逐张复核清晰可辨。</li>
+    <li><strong>多层联合推理图与测距稳健性</strong>：作者登记推理 DAG 含 <code>20</code> 节点、最大深度 <code>6</code> 层、<code>10</code> 个多视觉源合流节点，6 个小问输出视觉祖先覆盖率 <code>100%</code>。水平投影测距单货位误差上界 <code>30 px</code>（两点差上界 <code>60 px</code>），近距阈值 <code>720 px</code> 最小余量 <code>165 px</code>（<code>R = 2.75</code>），上限阈值 <code>2050 px</code> 最小余量 <code>335 px</code>（<code>R = 5.58</code>）；<code>10,000</code> 次联合随机扰动与 <code>A4</code> 右移 <code>+124 px</code> 替代锚点测试，全部 23 字段稳定率均为 <code>100%</code>。</li>
+    <li><strong>防绕过审查（passed）</strong>：v2 彻底移除布局维度与干扰签提示，去图无法获取任何罐数、倒置、钥匙孔、耳片、双口径价签与中心坐标；关键图证横跨全图宽 <code>x ∈ [120, 4032]</code> 及上/中两层红杠，单一大裁图无法覆盖。</li>
+  </ul>
+
+  <h3>反事实复算差异对照（solver.py 独立重算，共 9 组）</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>读法编号</th><th>图面误读假设</th><th>E / K / tab</th><th>P10 / KG</th><th>边(近) · 方案(M/N)</th><th>工况 0 最小代价→赢家</th><th>工况 1 最小代价→赢家</th><th>反转位</th><th>工况 1 代表方案</th></tr>
+      </thead>
+      <tbody>
+        <tr class='baseline-row'><td><strong>标准正确读法</strong></td><td>原生微距复核全部 7 货位与 5 张双口径价签</td><td>14 / 5 / 2</td><td>766 / 642</td><td>8 (4) · 14 (12/2)</td><td>M=638, N=610 → N</td><td>M=510(×2), N=534 → M</td><td><strong>1</strong></td><td><code>A2-B1;A4-B3</code></td></tr><tr><td><code>CF1_B3_cross_shelf_139</code></td><td>串层把中层红杠 13.90 kr (126.36/kg) 误读为下方 B3 价格</td><td>14 / 5 / 2</td><td>708 / 653</td><td>8 (4) · 14 (12/2)</td><td>M=580, N=610 → M</td><td>M=521(×2), N=534 → M</td><td class='flip-cell'><strong>0</strong></td><td><code>A2-B1;A4-B3</code></td></tr><tr><td><code>CF2_B3_arrow_tag_148</code></td><td>忽略红向下箭头把下层 14.80 kr (87.06/kg) 误归给 B3</td><td>14 / 5 / 2</td><td>717 / 614</td><td>8 (4) · 14 (12/2)</td><td>M=589, N=610 → M</td><td>M=482(×2), N=534 → M</td><td class='flip-cell'><strong>0</strong></td><td><code>A2-B1;A4-B3</code></td></tr><tr><td><code>CF3_B2_leverpostei_131</code></td><td>将下层 13.10 kr (65.50/kg, LEVERPOSTEI) 误归给中层 B2</td><td>14 / 5 / 2</td><td>728 / 554</td><td>8 (4) · 14 (12/2)</td><td>M=602, N=572 → N</td><td>M=422(×1), N=446 → M</td><td><strong>1</strong></td><td><code>A2-B2;A4-B3</code></td></tr><tr><td><code>CF4_A3_miss_back_can</code></td><td>漏看 A3 第 4 罐背面营养表朝前（E_A3: 1 -&gt; 0）</td><td>13 / 5 / 2</td><td>766 / 642</td><td>6 (3) · 7 (7/0)</td><td>M=638, N=None → M</td><td>M=504(×2), N=None → M</td><td class='flip-cell'><strong>0</strong></td><td><code>A2-B1;A4-B3</code></td></tr><tr><td><code>CF5_A4_all_inverted</code></td><td>漏看 A4 右上正立罐而误判 4 罐全倒置（E_A4: 3 -&gt; 4, G_A4 = 0）</td><td>15 / 5 / 2</td><td>766 / 642</td><td>6 (3) · 6 (4/2)</td><td>M=668, N=610 → N</td><td>M=574(×3), N=540 → N</td><td class='flip-cell'><strong>0</strong></td><td><code>A2-B1;A3-B2</code></td></tr><tr><td><code>CF6_B2_miss_botR_keyhole</code></td><td>漏看 B2 最下层右罐倒置露出的绿色钥匙孔图标（K_B2: 3 -&gt; 2）</td><td>14 / 4 / 2</td><td>766 / 642</td><td>8 (4) · 14 (12/2)</td><td>M=638, N=610 → N</td><td>M=510(×1), N=552 → M</td><td><strong>1</strong></td><td><code>A2-B1;A4-B3</code></td></tr><tr><td><code>CF7_A3_miss_top_peel_tab</code></td><td>仅看到 A3 第 5 罐而漏看第 1 罐右侧翘起米色耳片（tab_A3: 2 -&gt; 1）</td><td>14 / 5 / 1</td><td>766 / 642</td><td>8 (4) · 14 (12/2)</td><td>M=638, N=610 → N</td><td>M=510(×2), N=526 → M</td><td><strong>1</strong></td><td><code>A2-B1;A4-B3</code></td></tr><tr><td><code>CF8_B2_miss_bottom_row</code></td><td>漏看 B2 最下层 2 罐倒置（E_B2: 2 -&gt; 0）</td><td>12 / 5 / 2</td><td>766 / 642</td><td>6 (2) · 8 (6/2)</td><td>M=638, N=640 → M</td><td>M=498(×1), N=536 → M</td><td class='flip-cell'><strong>0</strong></td><td><code>A2-B1;A4-B3</code></td></tr><tr><td><code>CF9_B3_miss_back_left</code></td><td>漏看 B3 后排左罐倒置（E_B3: 4 -&gt; 3）</td><td>13 / 5 / 2</td><td>766 / 642</td><td>8 (4) · 14 (12/2)</td><td>M=638, N=610 → N</td><td>M=510(×2), N=528 → M</td><td><strong>1</strong></td><td><code>A2-B1;A4-B3</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>定稿前 3 次独立盲答试答摘要（冻结题面 v2 + 干净原图，工具开放）</h3>
+  <p style="font-size:13.5px; margin:6px 0 8px;">先期对 v1 做 3 次独立盲答 <strong>3/3</strong> 全对，随后执行一轮提难升级为 v2（去除全部布局与干扰签提示，新增双口径价签 <code>Pr/kg</code>、<code>B1/B2</code> 绿色钥匙孔含 <code>B2</code> 底层倒置图标及 <code>A3</code> 翘起耳片）。对冻结 v2 进行新一轮 3 次独立盲答：有效完整试答 <strong>3 / 3</strong>（超时 0、工具故障 0、残缺答案 0），整题完全正确 <strong>3 / 3</strong>（全部 23/23 字段精确命中），未发现题面歧义、图证不清或判分问题；按规范如实登记难度为 <code>medium</code>。</p>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>轮次</th><th>判分结果</th><th>提交末答</th><th>错答字段</th><th>核验说明</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>trial_1</strong></td><td><span class='badge ok'>整题正确 (23/23)</span></td><td><code>32,14,5,2,766,642|8,4|14,12,2|638,1,610,1|510,2,534,1|N,M,1,A2-B1;A4-B3</code></td><td>无</td><td>独立裁剪放大量测全部 7 货位（N=32, E=14, K=5, tab_A3=2）、5 张清晰双口径电子价签（p10=766, kg=642，正确排除 13.10 肝酱签与红下箭头 14.80 签）及跨层水平中心，23/23 字段全对，无歧义。</td></tr><tr><td><strong>trial_2</strong></td><td><span class='badge ok'>整题正确 (23/23)</span></td><td><code>32,14,5,2,766,642|8,4|14,12,2|638,1,610,1|510,2,534,1|N,M,1,A2-B1;A4-B3</code></td><td>无</td><td>独立复核全部货位朝向（含 A3 第 4 罐背面、A4 仅右上正立、B3 仅前左/中左正立）、B2 底层右罐倒置绿色钥匙孔与 A3 第 1/5 罐翘起耳片，23/23 字段全对，无歧义。</td></tr><tr><td><strong>trial_3</strong></td><td><span class='badge ok'>整题正确 (23/23)</span></td><td><code>32,14,5,2,766,642|8,4|14,12,2|638,1,610,1|510,2,534,1|N,M,1,A2-B1;A4-B3</code></td><td>无</td><td>独立识别全部 7 货位视觉属性、5 张双口径价签与 8 条兼容边/14 组方案，准确捕获工况 1 下 M 组并列数 2（A2-B1;A4-B3 与 A2-B2;A4-B3）与反转位 1，23/23 字段全对，无歧义。</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <textarea id="copy-qa" hidden>离线质检：decision=authoring_candidate（0阻断/0待审/0提醒），原图 4032×3024 px（EXIF=1，中文覆盖 0.0%，无真人隐私及水印），14 对象、3 近色异类对、2 投影重叠对，6 个原生 ROI 均人工复核可读。
+测距稳健性：单端点误差上界 30 px（两点差上界 60 px），720 px 阈值余量 165 px（R=2.75），2050 px 阈值余量 335 px（R=5.58），10000 次联合扰动与 A4 右移 +124 px 替代锚点测试全部 23 字段稳定率 100%。
+反事实复算：对 CF1–CF9 共 9 组显式限定条件的易混读法逐一重算（其余属性不变），全部 9 组均改变 2–13 个可判分字段；其中 5/9 组（CF1、CF2、CF4、CF5、CF8）直接将反转位由 1 翻转为 0，其余 4 组（CF3、CF6、CF7、CF9）分别改变单价/公斤价汇总、绿色钥匙孔、耳片数、工况 1 并列数与代表方案。
+三次独立盲答（冻结 v2 + 干净原图，工具开放）：经 v1→v2 提难后，有效 3/3，整题全对 3/3（23/23 字段零歧义精确命中），无超时/故障/残缺，按实测诚实登记难度 medium。</textarea>
+</section>
+
+</div>
+
+<script>
+(function() {
+  function fallbackCopy(text) {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.focus();
+    ta.select();
+    let ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+    document.body.removeChild(ta);
+    return ok;
+  }
+
+  document.querySelectorAll('.btn-copy').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      const id = btn.getAttribute('data-target');
+      const el = document.getElementById(id);
+      if (!el) return;
+      const text = (el.tagName === 'TEXTAREA' || el.tagName === 'INPUT') ? el.value : el.innerText;
+      const done = function() {
+        const orig = btn.textContent;
+        btn.textContent = '已复制 ✓';
+        btn.classList.add('copied');
+        setTimeout(function() {
+          btn.textContent = orig;
+          btn.classList.remove('copied');
+        }, 1600);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done).catch(function() {
+          if (fallbackCopy(text)) done();
+        });
+      } else {
+        if (fallbackCopy(text)) done();
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>

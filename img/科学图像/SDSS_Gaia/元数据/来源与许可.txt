@@ -1,0 +1,6 @@
+SDSS DR18 Optical Cutouts + Gaia DR3 Astrometric Cross-Match
+SDSS Image Use Policy (CC BY): https://www.sdss.org/collaboration/image-use-policy/
+Credit: Sloan Digital Sky Survey (www.sdss.org)
+SDSS Cutout Service: https://skyserver.sdss.org/dr18/SkyServerWS/ImgCutout/getjpeg
+SDSS SQL Search: https://skyserver.sdss.org/dr18/SkyServerWS/SearchTools/SqlSearch
+Gaia DR3 TAP (CC BY 4.0 IGO): https://gaia.ari.uni-heidelberg.de/tap/sync

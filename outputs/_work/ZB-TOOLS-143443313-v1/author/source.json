@@ -1,0 +1,122 @@
+{
+  "scene_id": "commons:143443313:miniature-bit-set",
+  "entries": [
+    {
+      "page_id": 143443313,
+      "category": "居家场景/工具五金",
+      "file": "images/居家场景/工具五金/zb-hardware-143443313.png",
+      "title": "File:Miniature bit set with wrench for carrying on belt.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Miniature_bit_set_with_wrench_for_carrying_on_belt.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Miniature_bit_set_with_wrench_for_carrying_on_belt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "source_bytes": 3311207,
+      "source_width": 4032,
+      "source_height": 3024,
+      "width": 3131,
+      "height": 2348,
+      "bytes": 9964135,
+      "limit_bytes": 20000000,
+      "preferred_bytes": 10000000,
+      "license": {
+        "Credit": "Own work",
+        "Artist": "Pittigrilli",
+        "LicenseShortName": "CC BY 4.0",
+        "UsageTerms": "Creative Commons Attribution 4.0",
+        "AttributionRequired": "true",
+        "LicenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "Restrictions": ""
+      },
+      "modifications": "Resized with Lanczos to fit the size limit. EXIF orientation applied; only color-related metadata kept.",
+      "resized": true
+    },
+    {
+      "page_id": 143443313,
+      "category": "居家场景/工具五金",
+      "file": "img/居家场景/工具五金/zb-hardware-143443313.jpg",
+      "title": "File:Miniature bit set with wrench for carrying on belt.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Miniature_bit_set_with_wrench_for_carrying_on_belt.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Miniature_bit_set_with_wrench_for_carrying_on_belt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "source_bytes": 3311207,
+      "source_width": 4032,
+      "source_height": 3024,
+      "width": 4032,
+      "height": 3024,
+      "bytes": 3078057,
+      "limit_bytes": 5000000,
+      "preferred_bytes": 5000000,
+      "license": {
+        "Credit": "Own work",
+        "Artist": "Pittigrilli",
+        "LicenseShortName": "CC BY 4.0",
+        "UsageTerms": "Creative Commons Attribution 4.0",
+        "AttributionRequired": "true",
+        "LicenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "Restrictions": ""
+      },
+      "modifications": "Lossy JPEG re-encoding. EXIF orientation applied; only color-related metadata kept.",
+      "resized": false
+    },
+    {
+      "page_id": 145653915,
+      "category": "居家场景/工具五金",
+      "file": "img/居家场景/工具五金/zb-hardware-145653915.jpg",
+      "title": "File:Miniature bit set with wrench, for carrying on belt (white background, added ruler).jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Miniature_bit_set_with_wrench,_for_carrying_on_belt_(white_background,_added_ruler).jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/3/37/Miniature_bit_set_with_wrench%2C_for_carrying_on_belt_%28white_background%2C_added_ruler%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "source_bytes": 4566997,
+      "source_width": 3688,
+      "source_height": 2851,
+      "width": 3688,
+      "height": 2851,
+      "bytes": 3084772,
+      "limit_bytes": 5000000,
+      "preferred_bytes": 5000000,
+      "license": {
+        "Credit": "Own work",
+        "Artist": "File:Miniature bit set with wrench for carrying on belt.jpg : Pittigrilli derivative work: Pittigrilli",
+        "LicenseShortName": "CC BY 4.0",
+        "UsageTerms": "Creative Commons Attribution 4.0",
+        "AttributionRequired": "true",
+        "LicenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "Restrictions": ""
+      },
+      "modifications": "Lossy JPEG re-encoding. EXIF orientation applied; only color-related metadata kept.",
+      "resized": false
+    }
+  ],
+  "asset_page_verification": {
+    "url": "https://commons.wikimedia.org/wiki/File:Miniature_bit_set_with_wrench_for_carrying_on_belt.jpg",
+    "http_status": 200,
+    "retrieved_utc": "2026-11-26T10:03:26.718895+00:00",
+    "page_sha256": "5dda7e0aa505713d2194e55f2f000d89a1e892974202606a2762a06f9cdf5d28",
+    "verified_strings": [
+      "Pittigrilli",
+      "Creative Commons Attribution 4.0 International"
+    ],
+    "native_dimensions": [
+      4032,
+      3024
+    ]
+  },
+  "public_image_sha256": "bbb114d54700f206dd885f821d49b4f4f3d9e76d491cae7cd87c26c116c2d4ed",
+  "ledger_sha256": "796d3b19f09a7fe23b9b7356db2e66f128e09b93943340e309e851ce1d9bf0e8",
+  "deduplication": {
+    "database_initial_queue_counts": {
+      "unwritten": 415,
+      "authored": 0,
+      "draft": 0,
+      "discarded": 0
+    },
+    "img_claims_initial_count": 0,
+    "same_scene_queue_ids": [
+      107,
+      316
+    ],
+    "same_scene_page_ids": [
+      143443313,
+      145653915
+    ],
+    "local_skill_examples_match": false,
+    "separate_exclusion_list_present": false,
+    "scope": "检索本项目技能包中的例题、manifest、数据库以及本机可查文件名。历史引用的外部难题300排除清单未随项目提供，无法核对该外部清单。"
+  }
+}

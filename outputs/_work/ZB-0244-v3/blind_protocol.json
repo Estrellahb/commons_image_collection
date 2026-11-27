@@ -1,0 +1,13 @@
+{
+  "frozen_version": "ZB-0244-v3",
+  "time": "2026-11-26T15:13:31.417029+00:00",
+  "input_directory": "/tmp/zb0244-public-v3",
+  "tools_enabled": true,
+  "contexts": "fork_turns=none",
+  "required_valid_attempts": 3,
+  "public_files": [
+    "prompt.txt",
+    "original.jpg"
+  ],
+  "parent_version_trial_counts_not_in_denominator": true
+}

@@ -1,0 +1,28 @@
+{
+  "before": {
+    "id": 244,
+    "file_url": "https://commons.wikimedia.org/wiki/File:JJ_Joicey_cabinet_Haslemere_Educational_Museum_drawer_no_14.jpg",
+    "category": "小众专业实物/珠宝·矿物·标本",
+    "claimed_by": "",
+    "question_types": "counting,localization_measurement,topology_tracking",
+    "difficulty": "hard",
+    "difficulty_tags": "cross_region_alignment,high_similarity,multi_hop_visual",
+    "tag_notes": "P1。ZB-0244-v1 已冻结作者稿，26件蝴蝶的前翅浅斑F、后翅暖色H与横带共同决定路线。原图2000×1333，官方CC BY-SA 4.0。本地图片质检authoring_candidate，双路线360组、最小代价3、并列16。浏览器工具禁止本地file协议，实际HTML渲染及系统剪贴板验收待完成，按临停要求清空草稿并释放；续作材料 outputs/_work/ZB-0244-v1。",
+    "authored_status": "",
+    "authored_ref": ""
+  },
+  "after": {
+    "id": 244,
+    "file_url": "https://commons.wikimedia.org/wiki/File:JJ_Joicey_cabinet_Haslemere_Educational_Museum_drawer_no_14.jpg",
+    "category": "小众专业实物/珠宝·矿物·标本",
+    "claimed_by": "codex-ZB-0244-v2",
+    "question_types": "counting,localization_measurement,topology_tracking",
+    "difficulty": "hard",
+    "difficulty_tags": "cross_region_alignment,high_similarity,multi_hop_visual",
+    "tag_notes": "P1。ZB-0244-v1 已冻结作者稿，26件蝴蝶的前翅浅斑F、后翅暖色H与横带共同决定路线。原图2000×1333，官方CC BY-SA 4.0。本地图片质检authoring_candidate，双路线360组、最小代价3、并列16。浏览器工具禁止本地file协议，实际HTML渲染及系统剪贴板验收待完成，按临停要求清空草稿并释放；续作材料 outputs/_work/ZB-0244-v1。",
+    "authored_status": "draft",
+    "authored_ref": "ZB-0244-v2 | outputs/authoring_ZB-0244-v2"
+  },
+  "method": "SQLite BEGIN IMMEDIATE atomic claim then draft",
+  "timestamp": "2026-11-26T14:32:31.255284+00:00"
+}

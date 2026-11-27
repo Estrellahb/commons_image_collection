@@ -1,0 +1,7 @@
+{
+  "parent_version": "ZB-0244-v2",
+  "public_change": "增加先判H及H=0时统一F=0的规则。",
+  "reason": "旧版第三次有效试答的C4暗灰绿斑判读分歧。",
+  "baseline_answer_change": false,
+  "requires_three_new_valid_blind_attempts": true
+}

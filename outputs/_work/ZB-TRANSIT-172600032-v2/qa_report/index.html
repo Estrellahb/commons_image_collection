@@ -1,0 +1,608 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><title>ZeroBench 图片质检</title><style>body{font:16px system-ui;margin:30px;background:#f4f4f1;color:#202020}article{background:white;margin:22px 0;padding:24px;border:1px solid #ddd;overflow:auto}img{max-width:48%;float:left;margin:0 24px 16px 0}pre{white-space:pre-wrap;font-size:13px}h1{font-size:28px}</style><h1>图片与题目证据质检</h1><p>代理指标用于筛选，不证明难度。缺失值不会自动通过；判定与试答证据分开。</p><article><h2>ZB-TRANSIT-172600032-v2 · authoring_candidate</h2><img src="001.jpg" loading="lazy"><pre>{
+  &quot;id&quot;: &quot;ZB-TRANSIT-172600032-v2&quot;,
+  &quot;blockers&quot;: [],
+  &quot;review&quot;: [],
+  &quot;advisory&quot;: [],
+  &quot;metrics&quot;: {
+    &quot;width&quot;: 4032,
+    &quot;height&quot;: 3024,
+    &quot;mode&quot;: &quot;RGB&quot;,
+    &quot;exif_orientation&quot;: 1,
+    &quot;frame_count&quot;: 1,
+    &quot;global_640_proxy&quot;: {
+      &quot;contrast_p90_p10&quot;: 166.0,
+      &quot;gray_entropy_bits&quot;: 7.476981689122914,
+      &quot;edge_fraction_16&quot;: 0.20104683015914426
+    },
+    &quot;object_count&quot;: 124,
+    &quot;objects_per_MP&quot;: 10.169963046947174,
+    &quot;class_count&quot;: 3,
+    &quot;known_fraction&quot;: 1.0,
+    &quot;repeated_classes&quot;: 3,
+    &quot;spatial_entropy_4x4&quot;: 0.5866186517406194,
+    &quot;median_bbox_short_px&quot;: 26.0,
+    &quot;p10_bbox_short_px&quot;: 25.0,
+    &quot;edge_touching_count&quot;: 0,
+    &quot;nearcolor_pair_count&quot;: 84,
+    &quot;different_class_neighbor_pairs&quot;: 84,
+    &quot;nearcolor_neighbor_fraction&quot;: 1.0,
+    &quot;bbox_overlap_pair_count&quot;: 0,
+    &quot;han_text_coverage&quot;: 0.0,
+    &quot;distinct_dependency_regions&quot;: 8,
+    &quot;effective_counterfactuals&quot;: 3
+  },
+  &quot;source&quot;: {
+    &quot;kind&quot;: &quot;real_photo&quot;,
+    &quot;url&quot;: &quot;https://commons.wikimedia.org/wiki/File:Amsterdam_Airport_Schiphol_-_Flights_departures_board_2025-08-13.jpg&quot;,
+    &quot;license_url&quot;: &quot;https://creativecommons.org/licenses/by-sa/4.0&quot;,
+    &quot;authorization&quot;: &quot;verified&quot;,
+    &quot;scene_id&quot;: &quot;commons:172600032:schiphol-departures-2025-08-13&quot;,
+    &quot;attribution&quot;: &quot;Sebleouf, CC BY-SA 4.0&quot;,
+    &quot;native_resolution&quot;: [
+      4032,
+      3024
+    ],
+    &quot;ingest_transform&quot;: &quot;Lossy JPEG re-encoding. EXIF orientation applied; only color-related metadata kept.&quot;,
+    &quot;license_evidence&quot;: &quot;source_page.html&quot;,
+    &quot;dedup_evidence&quot;: &quot;qa_notes.md&quot;
+  },
+  &quot;difficulty_status&quot;: &quot;no_complete_failure_recorded&quot;,
+  &quot;annotation_provenance&quot;: &quot;人工逐行抄录，行框见本目录构建脚本&quot;,
+  &quot;preview&quot;: &quot;001.jpg&quot;,
+  &quot;nearcolor_pairs&quot;: [
+    {
+      &quot;a&quot;: &quot;UA071&quot;,
+      &quot;b&quot;: &quot;DL9281&quot;,
+      &quot;deltaE76&quot;: 7.624472610860896
+    },
+    {
+      &quot;a&quot;: &quot;KL0713&quot;,
+      &quot;b&quot;: &quot;UA071&quot;,
+      &quot;deltaE76&quot;: 4.86050001322568
+    },
+    {
+      &quot;a&quot;: &quot;DL9235&quot;,
+      &quot;b&quot;: &quot;UA071&quot;,
+      &quot;deltaE76&quot;: 7.437627519004708
+    },
+    {
+      &quot;a&quot;: &quot;UA9791&quot;,
+      &quot;b&quot;: &quot;KL0713&quot;,
+      &quot;deltaE76&quot;: 7.552273467429433
+    },
+    {
+      &quot;a&quot;: &quot;UA9791&quot;,
+      &quot;b&quot;: &quot;DL9235&quot;,
+      &quot;deltaE76&quot;: 5.571389229587762
+    },
+    {
+      &quot;a&quot;: &quot;EZY2162&quot;,
+      &quot;b&quot;: &quot;UA9791&quot;,
+      &quot;deltaE76&quot;: 6.488035119391318
+    },
+    {
+      &quot;a&quot;: &quot;ET1217&quot;,
+      &quot;b&quot;: &quot;CI9291&quot;,
+      &quot;deltaE76&quot;: 5.36296832772929
+    },
+    {
+      &quot;a&quot;: &quot;ET1217&quot;,
+      &quot;b&quot;: &quot;CZ7644&quot;,
+      &quot;deltaE76&quot;: 5.888694012660674
+    },
+    {
+      &quot;a&quot;: &quot;ET1217&quot;,
+      &quot;b&quot;: &quot;MH5653&quot;,
+      &quot;deltaE76&quot;: 3.4838136708407332
+    },
+    {
+      &quot;a&quot;: &quot;AF8243&quot;,
+      &quot;b&quot;: &quot;ET1217&quot;,
+      &quot;deltaE76&quot;: 4.713985451270164
+    },
+    {
+      &quot;a&quot;: &quot;AI8542&quot;,
+      &quot;b&quot;: &quot;DL9543&quot;,
+      &quot;deltaE76&quot;: 4.616219780507983
+    },
+    {
+      &quot;a&quot;: &quot;AI8542&quot;,
+      &quot;b&quot;: &quot;SK6818&quot;,
+      &quot;deltaE76&quot;: 6.356784794675266
+    },
+    {
+      &quot;a&quot;: &quot;AI8542&quot;,
+      &quot;b&quot;: &quot;CI9597&quot;,
+      &quot;deltaE76&quot;: 5.217568849183204
+    },
+    {
+      &quot;a&quot;: &quot;BT618&quot;,
+      &quot;b&quot;: &quot;AI8542&quot;,
+      &quot;deltaE76&quot;: 4.730036864249114
+    },
+    {
+      &quot;a&quot;: &quot;FR421&quot;,
+      &quot;b&quot;: &quot;DL9290&quot;,
+      &quot;deltaE76&quot;: 1.8840771516451942
+    },
+    {
+      &quot;a&quot;: &quot;FR421&quot;,
+      &quot;b&quot;: &quot;DL9617&quot;,
+      &quot;deltaE76&quot;: 5.466405877143532
+    },
+    {
+      &quot;a&quot;: &quot;FR421&quot;,
+      &quot;b&quot;: &quot;DL9315&quot;,
+      &quot;deltaE76&quot;: 5.337370108670231
+    },
+    {
+      &quot;a&quot;: &quot;FB462&quot;,
+      &quot;b&quot;: &quot;FR421&quot;,
+      &quot;deltaE76&quot;: 4.807186338548908
+    },
+    {
+      &quot;a&quot;: &quot;AF3208&quot;,
+      &quot;b&quot;: &quot;UA9791&quot;,
+      &quot;deltaE76&quot;: 6.187580569806593
+    },
+    {
+      &quot;a&quot;: &quot;DL9207&quot;,
+      &quot;b&quot;: &quot;UA9791&quot;,
+      &quot;deltaE76&quot;: 0.8984805873652485
+    },
+    {
+      &quot;a&quot;: &quot;GA9764&quot;,
+      &quot;b&quot;: &quot;ET1217&quot;,
+      &quot;deltaE76&quot;: 2.5378980170139567
+    },
+    {
+      &quot;a&quot;: &quot;SK552&quot;,
+      &quot;b&quot;: &quot;ET1217&quot;,
+      &quot;deltaE76&quot;: 2.498982773637166
+    },
+    {
+      &quot;a&quot;: &quot;AA6902&quot;,
+      &quot;b&quot;: &quot;CI9597&quot;,
+      &quot;deltaE76&quot;: 3.1496889241554418
+    },
+    {
+      &quot;a&quot;: &quot;AA6902&quot;,
+      &quot;b&quot;: &quot;AI8542&quot;,
+      &quot;deltaE76&quot;: 6.3834234361317455
+    },
+    {
+      &quot;a&quot;: &quot;AA6902&quot;,
+      &quot;b&quot;: &quot;LO266&quot;,
+      &quot;deltaE76&quot;: 6.013706532090296
+    },
+    {
+      &quot;a&quot;: &quot;CI9293&quot;,
+      &quot;b&quot;: &quot;AI8542&quot;,
+      &quot;deltaE76&quot;: 4.238884388442516
+    },
+    {
+      &quot;a&quot;: &quot;CI9293&quot;,
+      &quot;b&quot;: &quot;AA6902&quot;,
+      &quot;deltaE76&quot;: 5.564024335646687
+    },
+    {
+      &quot;a&quot;: &quot;SQ323&quot;,
+      &quot;b&quot;: &quot;SK6730&quot;,
+      &quot;deltaE76&quot;: 3.4163129870847584
+    },
+    {
+      &quot;a&quot;: &quot;SQ323&quot;,
+      &quot;b&quot;: &quot;VS3946&quot;,
+      &quot;deltaE76&quot;: 3.7299212224111105
+    },
+    {
+      &quot;a&quot;: &quot;UA021&quot;,
+      &quot;b&quot;: &quot;DL9315&quot;,
+      &quot;deltaE76&quot;: 7.515067918251649
+    },
+    {
+      &quot;a&quot;: &quot;UA021&quot;,
+      &quot;b&quot;: &quot;FR421&quot;,
+      &quot;deltaE76&quot;: 6.6967222528692005
+    },
+    {
+      &quot;a&quot;: &quot;EJU7843&quot;,
+      &quot;b&quot;: &quot;DL9315&quot;,
+      &quot;deltaE76&quot;: 8.802613844604437
+    },
+    {
+      &quot;a&quot;: &quot;EJU7843&quot;,
+      &quot;b&quot;: &quot;FB462&quot;,
+      &quot;deltaE76&quot;: 8.492076999539382
+    },
+    {
+      &quot;a&quot;: &quot;EJU7843&quot;,
+      &quot;b&quot;: &quot;UA021&quot;,
+      &quot;deltaE76&quot;: 5.003042736728925
+    },
+    {
+      &quot;a&quot;: &quot;CI9230&quot;,
+      &quot;b&quot;: &quot;FR421&quot;,
+      &quot;deltaE76&quot;: 5.819491936476436
+    },
+    {
+      &quot;a&quot;: &quot;CI9230&quot;,
+      &quot;b&quot;: &quot;FB462&quot;,
+      &quot;deltaE76&quot;: 7.019768076897049
+    },
+    {
+      &quot;a&quot;: &quot;CI9230&quot;,
+      &quot;b&quot;: &quot;AF3208&quot;,
+      &quot;deltaE76&quot;: 5.819491936476436
+    },
+    {
+      &quot;a&quot;: &quot;CI9230&quot;,
+      &quot;b&quot;: &quot;EJU7843&quot;,
+      &quot;deltaE76&quot;: 4.179648313690135
+    },
+    {
+      &quot;a&quot;: &quot;SK556&quot;,
+      &quot;b&quot;: &quot;CI9230&quot;,
+      &quot;deltaE76&quot;: 4.428968884873056
+    },
+    {
+      &quot;a&quot;: &quot;UA947&quot;,
+      &quot;b&quot;: &quot;VY8379&quot;,
+      &quot;deltaE76&quot;: 9.3874448984694
+    },
+    {
+      &quot;a&quot;: &quot;UA947&quot;,
+      &quot;b&quot;: &quot;VS3944&quot;,
+      &quot;deltaE76&quot;: 5.975396676805439
+    },
+    {
+      &quot;a&quot;: &quot;UA947&quot;,
+      &quot;b&quot;: &quot;CZ7603&quot;,
+      &quot;deltaE76&quot;: 9.478811329095983
+    },
+    {
+      &quot;a&quot;: &quot;UA947&quot;,
+      &quot;b&quot;: &quot;VS3951&quot;,
+      &quot;deltaE76&quot;: 4.163206616207699
+    },
+    {
+      &quot;a&quot;: &quot;TK1952&quot;,
+      &quot;b&quot;: &quot;UA947&quot;,
+      &quot;deltaE76&quot;: 4.163206616207699
+    },
+    {
+      &quot;a&quot;: &quot;TG7853&quot;,
+      &quot;b&quot;: &quot;CZ7603&quot;,
+      &quot;deltaE76&quot;: 9.478811329095983
+    },
+    {
+      &quot;a&quot;: &quot;TG7853&quot;,
+      &quot;b&quot;: &quot;GA9764&quot;,
+      &quot;deltaE76&quot;: 5.975396676805439
+    },
+    {
+      &quot;a&quot;: &quot;TG7853&quot;,
+      &quot;b&quot;: &quot;SK552&quot;,
+      &quot;deltaE76&quot;: 9.060694941071713
+    },
+    {
+      &quot;a&quot;: &quot;TG7853&quot;,
+      &quot;b&quot;: &quot;TK1952&quot;,
+      &quot;deltaE76&quot;: 4.163206616207699
+    },
+    {
+      &quot;a&quot;: &quot;VS7166&quot;,
+      &quot;b&quot;: &quot;TG7853&quot;,
+      &quot;deltaE76&quot;: 4.282858299645025
+    },
+    {
+      &quot;a&quot;: &quot;EZY2180&quot;,
+      &quot;b&quot;: &quot;IB5235&quot;,
+      &quot;deltaE76&quot;: 4.850270812861502
+    },
+    {
+      &quot;a&quot;: &quot;EZY2180&quot;,
+      &quot;b&quot;: &quot;CZ7650&quot;,
+      &quot;deltaE76&quot;: 6.6724830668214725
+    },
+    {
+      &quot;a&quot;: &quot;EZY2180&quot;,
+      &quot;b&quot;: &quot;VS7152&quot;,
+      &quot;deltaE76&quot;: 5.027397138140189
+    },
+    {
+      &quot;a&quot;: &quot;EZY2180&quot;,
+      &quot;b&quot;: &quot;B60032&quot;,
+      &quot;deltaE76&quot;: 3.792096372440571
+    },
+    {
+      &quot;a&quot;: &quot;UA9203&quot;,
+      &quot;b&quot;: &quot;CZ7650&quot;,
+      &quot;deltaE76&quot;: 9.722920294864094
+    },
+    {
+      &quot;a&quot;: &quot;UA9203&quot;,
+      &quot;b&quot;: &quot;VS7152&quot;,
+      &quot;deltaE76&quot;: 4.888402530971402
+    },
+    {
+      &quot;a&quot;: &quot;UA9203&quot;,
+      &quot;b&quot;: &quot;DL9329&quot;,
+      &quot;deltaE76&quot;: 9.585898996762308
+    },
+    {
+      &quot;a&quot;: &quot;UA9203&quot;,
+      &quot;b&quot;: &quot;EZY2180&quot;,
+      &quot;deltaE76&quot;: 4.570525534447323
+    },
+    {
+      &quot;a&quot;: &quot;OU451&quot;,
+      &quot;b&quot;: &quot;VS7152&quot;,
+      &quot;deltaE76&quot;: 4.7147875177012795
+    },
+    {
+      &quot;a&quot;: &quot;OU451&quot;,
+      &quot;b&quot;: &quot;DL9329&quot;,
+      &quot;deltaE76&quot;: 6.5337496622738795
+    },
+    {
+      &quot;a&quot;: &quot;OU451&quot;,
+      &quot;b&quot;: &quot;KQ1585&quot;,
+      &quot;deltaE76&quot;: 4.192942364899498
+    },
+    {
+      &quot;a&quot;: &quot;BA8452&quot;,
+      &quot;b&quot;: &quot;OU451&quot;,
+      &quot;deltaE76&quot;: 4.051883865159961
+    },
+    {
+      &quot;a&quot;: &quot;DL9165&quot;,
+      &quot;b&quot;: &quot;AA6902&quot;,
+      &quot;deltaE76&quot;: 3.5866849347425385
+    },
+    {
+      &quot;a&quot;: &quot;SK6652&quot;,
+      &quot;b&quot;: &quot;AA6902&quot;,
+      &quot;deltaE76&quot;: 3.436422940787554
+    },
+    {
+      &quot;a&quot;: &quot;KC904&quot;,
+      &quot;b&quot;: &quot;AA6902&quot;,
+      &quot;deltaE76&quot;: 3.759721518331015
+    },
+    {
+      &quot;a&quot;: &quot;KC904&quot;,
+      &quot;b&quot;: &quot;CI9293&quot;,
+      &quot;deltaE76&quot;: 5.856168062558767
+    },
+    {
+      &quot;a&quot;: &quot;KC904&quot;,
+      &quot;b&quot;: &quot;VS3942&quot;,
+      &quot;deltaE76&quot;: 2.8833576058617068
+    },
+    {
+      &quot;a&quot;: &quot;KC904&quot;,
+      &quot;b&quot;: &quot;SK6652&quot;,
+      &quot;deltaE76&quot;: 3.1292649373721613
+    },
+    {
+      &quot;a&quot;: &quot;CI9225&quot;,
+      &quot;b&quot;: &quot;KC904&quot;,
+      &quot;deltaE76&quot;: 3.7189578613644256
+    },
+    {
+      &quot;a&quot;: &quot;QF8146&quot;,
+      &quot;b&quot;: &quot;VS3752&quot;,
+      &quot;deltaE76&quot;: 9.60137172095971
+    },
+    {
+      &quot;a&quot;: &quot;QF8146&quot;,
+      &quot;b&quot;: &quot;SK6752&quot;,
+      &quot;deltaE76&quot;: 6.566759104791678
+    },
+    {
+      &quot;a&quot;: &quot;QF8146&quot;,
+      &quot;b&quot;: &quot;CI9225&quot;,
+      &quot;deltaE76&quot;: 5.894534637036801
+    },
+    {
+      &quot;a&quot;: &quot;BA431&quot;,
+      &quot;b&quot;: &quot;QF8146&quot;,
+      &quot;deltaE76&quot;: 5.816774635071897
+    },
+    {
+      &quot;a&quot;: &quot;RO362&quot;,
+      &quot;b&quot;: &quot;SK6752&quot;,
+      &quot;deltaE76&quot;: 4.297241715698675
+    },
+    {
+      &quot;a&quot;: &quot;RO362&quot;,
+      &quot;b&quot;: &quot;SK822&quot;,
+      &quot;deltaE76&quot;: 6.773116509491826
+    },
+    {
+      &quot;a&quot;: &quot;RO362&quot;,
+      &quot;b&quot;: &quot;IB5969&quot;,
+      &quot;deltaE76&quot;: 4.816983862335666
+    },
+    {
+      &quot;a&quot;: &quot;RO362&quot;,
+      &quot;b&quot;: &quot;BA431&quot;,
+      &quot;deltaE76&quot;: 3.438264045789496
+    },
+    {
+      &quot;a&quot;: &quot;RM1652&quot;,
+      &quot;b&quot;: &quot;RO362&quot;,
+      &quot;deltaE76&quot;: 3.6396247597774405
+    },
+    {
+      &quot;a&quot;: &quot;LY338&quot;,
+      &quot;b&quot;: &quot;AY4133&quot;,
+      &quot;deltaE76&quot;: 3.713262616875304
+    },
+    {
+      &quot;a&quot;: &quot;LY338&quot;,
+      &quot;b&quot;: &quot;DL9184&quot;,
+      &quot;deltaE76&quot;: 5.465643134414143
+    },
+    {
+      &quot;a&quot;: &quot;LY338&quot;,
+      &quot;b&quot;: &quot;VS3946&quot;,
+      &quot;deltaE76&quot;: 3.993078082397133
+    },
+    {
+      &quot;a&quot;: &quot;LY338&quot;,
+      &quot;b&quot;: &quot;SK6836&quot;,
+      &quot;deltaE76&quot;: 3.935746014193406
+    },
+    {
+      &quot;a&quot;: &quot;VS3952&quot;,
+      &quot;b&quot;: &quot;SQ323&quot;,
+      &quot;deltaE76&quot;: 6.978394822075801
+    },
+    {
+      &quot;a&quot;: &quot;VS3952&quot;,
+      &quot;b&quot;: &quot;LY338&quot;,
+      &quot;deltaE76&quot;: 3.901437003597154
+    },
+    {
+      &quot;a&quot;: &quot;KQ1187&quot;,
+      &quot;b&quot;: &quot;SQ323&quot;,
+      &quot;deltaE76&quot;: 4.221628698575259
+    }
+  ],
+  &quot;overlap_candidates&quot;: [],
+  &quot;roi_metrics&quot;: [
+    {
+      &quot;id&quot;: &quot;A&quot;,
+      &quot;file&quot;: &quot;001_roi1.png&quot;,
+      &quot;contrast_p90_p10&quot;: 132.0,
+      &quot;gray_entropy_bits&quot;: 6.870913687224341,
+      &quot;edge_fraction_16&quot;: 0.10714177456624487
+    },
+    {
+      &quot;id&quot;: &quot;B&quot;,
+      &quot;file&quot;: &quot;001_roi2.png&quot;,
+      &quot;contrast_p90_p10&quot;: 132.0,
+      &quot;gray_entropy_bits&quot;: 6.961247119213654,
+      &quot;edge_fraction_16&quot;: 0.10879058368049266
+    },
+    {
+      &quot;id&quot;: &quot;C&quot;,
+      &quot;file&quot;: &quot;001_roi3.png&quot;,
+      &quot;contrast_p90_p10&quot;: 129.0,
+      &quot;gray_entropy_bits&quot;: 6.791547517580764,
+      &quot;edge_fraction_16&quot;: 0.08958656511308317
+    },
+    {
+      &quot;id&quot;: &quot;D&quot;,
+      &quot;file&quot;: &quot;001_roi4.png&quot;,
+      &quot;contrast_p90_p10&quot;: 121.0,
+      &quot;gray_entropy_bits&quot;: 6.8025189999515305,
+      &quot;edge_fraction_16&quot;: 0.07586394652129877
+    },
+    {
+      &quot;id&quot;: &quot;B-help&quot;,
+      &quot;file&quot;: &quot;001_roi5.png&quot;,
+      &quot;contrast_p90_p10&quot;: 39.0,
+      &quot;gray_entropy_bits&quot;: 5.8520821745498735,
+      &quot;edge_fraction_16&quot;: 0.0978756898259516
+    },
+    {
+      &quot;id&quot;: &quot;B-gate&quot;,
+      &quot;file&quot;: &quot;001_roi6.png&quot;,
+      &quot;contrast_p90_p10&quot;: 47.0,
+      &quot;gray_entropy_bits&quot;: 6.025309748312007,
+      &quot;edge_fraction_16&quot;: 0.10563320983496127
+    },
+    {
+      &quot;id&quot;: &quot;D-gate&quot;,
+      &quot;file&quot;: &quot;001_roi7.png&quot;,
+      &quot;contrast_p90_p10&quot;: 42.0,
+      &quot;gray_entropy_bits&quot;: 5.833641439972512,
+      &quot;edge_fraction_16&quot;: 0.06782108337014967
+    },
+    {
+      &quot;id&quot;: &quot;C-heathrow&quot;,
+      &quot;file&quot;: &quot;001_roi8.png&quot;,
+      &quot;contrast_p90_p10&quot;: 55.0,
+      &quot;gray_entropy_bits&quot;: 5.955017088344456,
+      &quot;edge_fraction_16&quot;: 0.11138238022494312
+    }
+  ],
+  &quot;reasoning_metrics&quot;: {
+    &quot;node_count&quot;: 16,
+    &quot;max_depth&quot;: 6,
+    &quot;branch_nodes&quot;: 9,
+    &quot;join_nodes&quot;: 8,
+    &quot;multi_visual_join_nodes&quot;: 8,
+    &quot;output_count&quot;: 5,
+    &quot;outputs_with_visual_ancestry&quot;: 5,
+    &quot;output_visual_coverage&quot;: 1.0,
+    &quot;state_nodes&quot;: 4,
+    &quot;parameter_nodes&quot;: 1,
+    &quot;output_evidence_regions&quot;: {
+      &quot;q1&quot;: [
+        &quot;A&quot;,
+        &quot;B&quot;,
+        &quot;C&quot;,
+        &quot;D&quot;
+      ],
+      &quot;q2&quot;: [
+        &quot;A&quot;,
+        &quot;B&quot;,
+        &quot;C&quot;,
+        &quot;D&quot;
+      ],
+      &quot;q3&quot;: [
+        &quot;A&quot;,
+        &quot;B&quot;,
+        &quot;C&quot;,
+        &quot;D&quot;
+      ],
+      &quot;q4&quot;: [
+        &quot;A&quot;,
+        &quot;B&quot;,
+        &quot;C&quot;,
+        &quot;D&quot;
+      ],
+      &quot;q5&quot;: [
+        &quot;A&quot;,
+        &quot;B&quot;,
+        &quot;C&quot;,
+        &quot;D&quot;
+      ]
+    }
+  },
+  &quot;platform_points&quot;: [
+    {
+      &quot;xy&quot;: [
+        1887,
+        1372
+      ],
+      &quot;label&quot;: &quot;B 屏 T3 位于 UA9791 的 Zurich 行。正上方 DL9235 的 Help 格为空。&quot;
+    },
+    {
+      &quot;xy&quot;: [
+        2157,
+        1770
+      ],
+      &quot;label&quot;: &quot;B 屏 DL9351 的 Gate 为 C11。它不进入候选对，但计入拥挤费。&quot;
+    },
+    {
+      &quot;xy&quot;: [
+        3704,
+        1957
+      ],
+      &quot;label&quot;: &quot;D 屏 CI9225 也用 C11。与 B 屏的记录共同决定这行的拥挤费。&quot;
+    }
+  ],
+  &quot;evaluation_counts&quot;: {
+    &quot;correct&quot;: 3,
+    &quot;incorrect&quot;: 0,
+    &quot;timeout&quot;: 0,
+    &quot;infra_error&quot;: 0,
+    &quot;partial&quot;: 0
+  },
+  &quot;decision&quot;: &quot;authoring_candidate&quot;
+}</pre></article></html>

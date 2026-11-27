@@ -1,0 +1,220 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><title>ZeroBench 图片质检</title><style>body{font:16px system-ui;margin:30px;background:#f4f4f1;color:#202020}article{background:white;margin:22px 0;padding:24px;border:1px solid #ddd;overflow:auto}img{max-width:48%;float:left;margin:0 24px 16px 0}pre{white-space:pre-wrap;font-size:13px}h1{font-size:28px}</style><h1>图片与题目证据质检</h1><p>代理指标用于筛选，不证明难度。缺失值不会自动通过；判定与试答证据分开。</p><article><h2>ZB-SHELF-63728335-v2 · authoring_candidate</h2><img src="001.jpg" loading="lazy"><pre>{
+  &quot;id&quot;: &quot;ZB-SHELF-63728335-v2&quot;,
+  &quot;blockers&quot;: [],
+  &quot;review&quot;: [],
+  &quot;advisory&quot;: [],
+  &quot;metrics&quot;: {
+    &quot;width&quot;: 4032,
+    &quot;height&quot;: 3024,
+    &quot;mode&quot;: &quot;RGB&quot;,
+    &quot;exif_orientation&quot;: 1,
+    &quot;frame_count&quot;: 1,
+    &quot;global_640_proxy&quot;: {
+      &quot;contrast_p90_p10&quot;: 170.0,
+      &quot;gray_entropy_bits&quot;: 7.761901672661865,
+      &quot;edge_fraction_16&quot;: 0.21868314636055308
+    },
+    &quot;object_count&quot;: 14,
+    &quot;objects_per_MP&quot;: 1.1482216343327454,
+    &quot;class_count&quot;: 14,
+    &quot;known_fraction&quot;: 1.0,
+    &quot;repeated_classes&quot;: 0,
+    &quot;spatial_entropy_4x4&quot;: 0.7375530162286867,
+    &quot;median_bbox_short_px&quot;: 315.0,
+    &quot;p10_bbox_short_px&quot;: 216.0,
+    &quot;edge_touching_count&quot;: 1,
+    &quot;nearcolor_pair_count&quot;: 3,
+    &quot;different_class_neighbor_pairs&quot;: 30,
+    &quot;nearcolor_neighbor_fraction&quot;: 0.1,
+    &quot;bbox_overlap_pair_count&quot;: 2,
+    &quot;han_text_coverage&quot;: 0.0,
+    &quot;distinct_dependency_regions&quot;: 6,
+    &quot;effective_counterfactuals&quot;: 5
+  },
+  &quot;source&quot;: {
+    &quot;kind&quot;: &quot;real_photo&quot;,
+    &quot;url&quot;: &quot;https://commons.wikimedia.org/wiki/File:Mackerel_in_tomato_sauce,_etc.,_product_aisle-shop_shelves_in_Meny_Supermarket,_Bergen_Storsenter_Shopping_Mall,_Bergen,_Norway,_2017-10-23.jpg&quot;,
+    &quot;license_url&quot;: &quot;https://creativecommons.org/licenses/by-sa/4.0&quot;,
+    &quot;authorization&quot;: &quot;verified&quot;,
+    &quot;scene_id&quot;: &quot;commons:63728335&quot;
+  },
+  &quot;difficulty_status&quot;: &quot;no_complete_failure_recorded&quot;,
+  &quot;annotation_provenance&quot;: &quot;author_manual_bbox&quot;,
+  &quot;preview&quot;: &quot;001.jpg&quot;,
+  &quot;nearcolor_pairs&quot;: [
+    {
+      &quot;a&quot;: &quot;tag_A3_1390&quot;,
+      &quot;b&quot;: &quot;A3_bay&quot;,
+      &quot;deltaE76&quot;: 6.48643970273929
+    },
+    {
+      &quot;a&quot;: &quot;tag_distract_1310&quot;,
+      &quot;b&quot;: &quot;tag_B2_1690&quot;,
+      &quot;deltaE76&quot;: 9.12533939149181
+    },
+    {
+      &quot;a&quot;: &quot;tag_B3_1970&quot;,
+      &quot;b&quot;: &quot;tag_distract_1310&quot;,
+      &quot;deltaE76&quot;: 6.337075497043111
+    }
+  ],
+  &quot;overlap_candidates&quot;: [
+    {
+      &quot;a&quot;: &quot;tag_A3_1390&quot;,
+      &quot;b&quot;: &quot;B2_bay&quot;,
+      &quot;iom&quot;: 0.38095238095238093
+    },
+    {
+      &quot;a&quot;: &quot;tag_A4_1390&quot;,
+      &quot;b&quot;: &quot;B3_bay&quot;,
+      &quot;iom&quot;: 1.0
+    }
+  ],
+  &quot;roi_metrics&quot;: [
+    {
+      &quot;id&quot;: &quot;r1_A2_red_round&quot;,
+      &quot;file&quot;: &quot;001_roi1.png&quot;,
+      &quot;contrast_p90_p10&quot;: 135.0,
+      &quot;gray_entropy_bits&quot;: 7.276330084664329,
+      &quot;edge_fraction_16&quot;: 0.08376560088799849
+    },
+    {
+      &quot;id&quot;: &quot;r2_A3_back_and_tabs&quot;,
+      &quot;file&quot;: &quot;001_roi2.png&quot;,
+      &quot;contrast_p90_p10&quot;: 165.0,
+      &quot;gray_entropy_bits&quot;: 7.754385642226207,
+      &quot;edge_fraction_16&quot;: 0.1477538050092402
+    },
+    {
+      &quot;id&quot;: &quot;r3_A4_top_right&quot;,
+      &quot;file&quot;: &quot;001_roi3.png&quot;,
+      &quot;contrast_p90_p10&quot;: 156.0,
+      &quot;gray_entropy_bits&quot;: 6.946013397987954,
+      &quot;edge_fraction_16&quot;: 0.03257433122211586
+    },
+    {
+      &quot;id&quot;: &quot;r4_B1_B2_keyholes&quot;,
+      &quot;file&quot;: &quot;001_roi4.png&quot;,
+      &quot;contrast_p90_p10&quot;: 145.0,
+      &quot;gray_entropy_bits&quot;: 7.664641378903133,
+      &quot;edge_fraction_16&quot;: 0.09409023724227773
+    },
+    {
+      &quot;id&quot;: &quot;r5_B3_pepper_3x2&quot;,
+      &quot;file&quot;: &quot;001_roi5.png&quot;,
+      &quot;contrast_p90_p10&quot;: 159.0,
+      &quot;gray_entropy_bits&quot;: 7.590949792614737,
+      &quot;edge_fraction_16&quot;: 0.0675239863819251
+    },
+    {
+      &quot;id&quot;: &quot;r6_tags_lower_rail&quot;,
+      &quot;file&quot;: &quot;001_roi6.png&quot;,
+      &quot;contrast_p90_p10&quot;: 156.0,
+      &quot;gray_entropy_bits&quot;: 7.648191708014701,
+      &quot;edge_fraction_16&quot;: 0.06622455221657082
+    }
+  ],
+  &quot;reasoning_metrics&quot;: {
+    &quot;node_count&quot;: 20,
+    &quot;max_depth&quot;: 6,
+    &quot;branch_nodes&quot;: 13,
+    &quot;join_nodes&quot;: 10,
+    &quot;multi_visual_join_nodes&quot;: 10,
+    &quot;output_count&quot;: 6,
+    &quot;outputs_with_visual_ancestry&quot;: 6,
+    &quot;output_visual_coverage&quot;: 1.0,
+    &quot;state_nodes&quot;: 1,
+    &quot;parameter_nodes&quot;: 3,
+    &quot;output_evidence_regions&quot;: {
+      &quot;out_q1&quot;: [
+        &quot;r1_A2_red_round&quot;,
+        &quot;r2_A3_back_and_tabs&quot;,
+        &quot;r3_A4_top_right&quot;,
+        &quot;r4_B1_B2_keyholes&quot;,
+        &quot;r5_B3_pepper_3x2&quot;,
+        &quot;r6_tags_lower_rail&quot;
+      ],
+      &quot;out_q2&quot;: [
+        &quot;r1_A2_red_round&quot;,
+        &quot;r2_A3_back_and_tabs&quot;,
+        &quot;r3_A4_top_right&quot;,
+        &quot;r4_B1_B2_keyholes&quot;,
+        &quot;r5_B3_pepper_3x2&quot;
+      ],
+      &quot;out_q3&quot;: [
+        &quot;r1_A2_red_round&quot;,
+        &quot;r2_A3_back_and_tabs&quot;,
+        &quot;r3_A4_top_right&quot;,
+        &quot;r4_B1_B2_keyholes&quot;,
+        &quot;r5_B3_pepper_3x2&quot;
+      ],
+      &quot;out_q4&quot;: [
+        &quot;r1_A2_red_round&quot;,
+        &quot;r2_A3_back_and_tabs&quot;,
+        &quot;r3_A4_top_right&quot;,
+        &quot;r4_B1_B2_keyholes&quot;,
+        &quot;r5_B3_pepper_3x2&quot;,
+        &quot;r6_tags_lower_rail&quot;
+      ],
+      &quot;out_q5&quot;: [
+        &quot;r1_A2_red_round&quot;,
+        &quot;r2_A3_back_and_tabs&quot;,
+        &quot;r3_A4_top_right&quot;,
+        &quot;r4_B1_B2_keyholes&quot;,
+        &quot;r5_B3_pepper_3x2&quot;,
+        &quot;r6_tags_lower_rail&quot;
+      ],
+      &quot;out_q6&quot;: [
+        &quot;r1_A2_red_round&quot;,
+        &quot;r2_A3_back_and_tabs&quot;,
+        &quot;r3_A4_top_right&quot;,
+        &quot;r4_B1_B2_keyholes&quot;,
+        &quot;r5_B3_pepper_3x2&quot;,
+        &quot;r6_tags_lower_rail&quot;
+      ]
+    }
+  },
+  &quot;measurement_margins&quot;: [
+    {
+      &quot;id&quot;: &quot;dx_near_720&quot;,
+      &quot;ratio&quot;: 2.75,
+      &quot;unit&quot;: &quot;px&quot;
+    },
+    {
+      &quot;id&quot;: &quot;dx_max_2050&quot;,
+      &quot;ratio&quot;: 5.583333333333333,
+      &quot;unit&quot;: &quot;px&quot;
+    }
+  ],
+  &quot;platform_points&quot;: [
+    {
+      &quot;xy&quot;: [
+        2070,
+        940
+      ],
+      &quot;label&quot;: &quot;A3 左侧竖叠列第 4 罐背面翻转及第 1、5 罐右侧翘起米金色易撕耳片，作者关键证据点&quot;
+    },
+    {
+      &quot;xy&quot;: [
+        1828,
+        2272
+      ],
+      &quot;label&quot;: &quot;B2 底层右罐倒置露出的左下角绿色钥匙孔图标（B2 共见 3 处绿色钥匙孔），作者关键证据点&quot;
+    },
+    {
+      &quot;xy&quot;: [
+        2760,
+        2700
+      ],
+      &quot;label&quot;: &quot;下层红杠 B3 真实价签 19.70 kr / 115.88 kr/kg（须排除 13.10 肝酱签、红下箭头 14.80 签与上方 13.90 签），作者关键证据点&quot;
+    }
+  ],
+  &quot;evaluation_counts&quot;: {
+    &quot;correct&quot;: 3,
+    &quot;incorrect&quot;: 0,
+    &quot;timeout&quot;: 0,
+    &quot;infra_error&quot;: 0,
+    &quot;partial&quot;: 0
+  },
+  &quot;decision&quot;: &quot;authoring_candidate&quot;
+}</pre></article></html>

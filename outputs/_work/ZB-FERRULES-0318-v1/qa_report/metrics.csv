@@ -1,0 +1,2 @@
+﻿id,decision,difficulty_status,width,height,object_count,class_count,known_fraction,median_bbox_short_px,nearcolor_pair_count,bbox_overlap_pair_count,distinct_dependency_regions,effective_counterfactuals,blockers,review,advisory
+ZB-FERRULES-0318-v1,authoring_candidate,no_complete_failure_recorded,4409,3185,12,10,1.0,450.0,0,0,3,2,[],[],[]

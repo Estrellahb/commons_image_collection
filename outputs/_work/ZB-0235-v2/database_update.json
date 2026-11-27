@@ -1,0 +1,12 @@
+{
+  "id": 235,
+  "file_url": "https://commons.wikimedia.org/wiki/File:Spices_for_sale_in_the_Morocco.jpg",
+  "category": "公共场景/市场摊位",
+  "claimed_by": "ZeroBench-Codex-ZB-0235-v2",
+  "question_types": "counting,localization_measurement,robust_ocr",
+  "difficulty": "medium",
+  "difficulty_tags": "cross_region_alignment,high_similarity,multi_hop_visual,occlusion_overlap",
+  "tag_notes": "P1。上下两排银色罐以罐名确定两条跨列同名边，锥尖横向投影距离分档；金色罐的盖顶与内容决定参照窗口和双工况代价。白牌遮盖顶的灰褐罐排除。定稿 ZB-0235-v2，完整方案 23 种，本地质检 authoring_candidate，三次独立盲答全部正确，登记 medium。",
+  "authored_status": "authored",
+  "authored_ref": "ZB-0235-v2 | outputs/authoring_ZB-0235-v2"
+}
